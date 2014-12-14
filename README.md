@@ -1,9 +1,4 @@
-[![Build Status](https://travis-ci.org/Gizra/haskala.svg)](https://travis-ci.org/Gizra/haskala)
-
-# Drupal 7 - Install Profile Haskala
-
-This is a starting base to create Drupal 7 websites using an install profile.
-
+[![Build Status](https://magnum.travis-ci.com/Gizra/haskala.svg?token=p2M1EeCrd3dY32WxWj3X&branch=master)](https://magnum.travis-ci.com/Gizra/haskala)
 
 ## Installation
 
