@@ -58,13 +58,3 @@ script:
   - sleep 5
 
   - ./bin/behat --tags=~@wip
-
-
-  # Run WebTests ---------------------------------------------------------------
-  - drush @haskala -y en simpletest
-
-  # Add the tests here. Use the group name, classname or the file.
-  # Example:
-  - drush @haskala test-run "haskala:demo"
-
-  # End Run WebTests -----------------------------------------------------------
