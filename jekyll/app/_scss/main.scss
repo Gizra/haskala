@@ -56,105 +56,157 @@ a:visited { color: #a0a; }
 /*****************************************************************************/
 
 .site {
+  color: #615f59;
   font-size: 115%;
-  text-align: justify;
-  width: 42em;
+  width: 60em;
   margin: 3em auto 2em;
   line-height: 1.5em;
 }
 
-.header a {
-  font-weight: bold;
+a {
   text-decoration: none;
 }
 
+.header a {
+  font-weight: bold;
+}
+
 .title {
-  display: inline-block;
+  font-size: 64px;
   margin-bottom: 2em;
 }
 
-.title a {
-  color: #a00;
+.title a , .title a:hover {
+  color: #615f59;
 }
 
-.title a:hover {
-  color: #000;
+.nav-bar li {
+  display: inline-block;
 }
 
-.header a.extra {
-  color: #aaa;
-  margin-left: 1em;
-}
-
-.header a.extra:hover {
-  color: #000;
-}
-
-.meta {
-  color: #aaa;
-}
-
-.footer {
+footer {
   font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
   margin-top: 2em;
   overflow: hidden;
-}
 
-.footer .contact {
-  float: left;
-  margin-right: 3em;
-}
+  .icons-nav {
+    border-bottom: 1px solid #817f7a;
 
-.footer .contact a {
-  color: #8085C1;
-}
+    li {
+      width: 168px;
 
-.footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
-}
+      a {
+        display: block;
 
-.footer .rss img {
-  border: 0;
+        .icon {
+          display: block;
+          background: url(../images/sprites.png) no-repeat;
+          height: 55px;
+          margin: 0 auto;
+        }
+
+        &:hover {
+          span {
+            color: #7dbad7;
+          }
+
+          .icon {
+            &.books {
+              background-position: 0 -50px;
+            }
+
+            &.digital-books {
+              background-position: -50px -50px;
+            }
+
+            &.people {
+              background-position: -100px -50px;
+            }
+
+            &.places {
+              background-position: -150px -50px;
+            }
+          }
+        }
+      }
+    }
+
+    .icon-text {
+      display: inline-block;
+      margin-top: 55px;
+    }
+
+    .books-icon .icon {
+      background-position: 0 0;
+      width: 28px;
+      height: 37px;
+    }
+
+    .digital-books-icon .icon{
+      background-position: -50px 0;
+      width: 28px;
+      height: 36px;
+    }
+
+    .people-icon .icon{
+      background-position: -100px 0;
+      width: 36px;
+      height: 35px;
+    }
+
+    .places-icon .icon{
+      background-position: -150px 0;
+      width: 23px;
+      height: 34px;
+    }
+
+
+  }
+
+  .login-area{
+    padding-top: 7px;
+
+    a {
+      color: #7dbad7;
+    }
+  }
 }
 
 /*****************************************************************************/
 /*
-/* Posts
+/* Home page
 /*
 /*****************************************************************************/
 
-/* standard */
-.post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
+.front {
+  text-align: center;
 }
 
-.post ul, .post ol {
-  margin-left: 1.35em;
+.tags-cloud-wrapper {
+  border-top: 1px solid #7dbad7;
+
+  h2 {
+    color: #7dbad7;
+    font-weight: bold;
+  }
+
+  .tags-cloud {
+    padding-top: 18px;
+
+    li {
+      display: inline-block;
+      font-size: 19px;
+      background-color: #7dbad7;
+      border-radius: 10px;
+      padding: 2px 12px;
+      margin-bottom: 5px;
+      white-space: nowrap;
+    }
+
+    a {
+      color: #ffffff;
+    }
+  }
 }
 
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
-}
 
-.post pre code {
-  border: none;
-}
-
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
-}
-
-.post pre.terminal code {
-  background-color: #333;
-}

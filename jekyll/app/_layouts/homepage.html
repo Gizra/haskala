@@ -12,37 +12,56 @@
   <!-- endbuild -->
 
 </head>
-<body>
+<body class="front">
 
 <div class="site">
-  <div class="header">
-    <nav class="top_navigation">
+  <header>
+    <nav class="top_navigation nav-bar">
       <ul>
-        <li>BOOKS</li>
-        <li>PEOPLE</li>
-        <li>PLACES</li>
+        <li><a href="books">BOOKS</a></li>
+        <li><a href="people">PEOPLE</a></li>
+        <li><a href="places">PLACES</a></li>
         <li class="search"><span></span></li>
       </ul>
     </nav>
     <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-  </div>
+  </header>
 
   {{ content }}
 
-  <div class="footer">
-    <div class="contact">
-      <p>
-        Gizra<br />
-        <a href="mailto:amitai@gizra.com">amitai@gizra.com</a>
-      </p>
+  <footer>
+    <nav class="icons-nav nav-bar">
+      <ul>
+        <li class="books-icon">
+          <a href="#">
+            <span class="icon books"></span>
+            <span class="icon-text">BOOKS</span>
+          </a>
+        </li>
+        <li class="digital-books-icon">
+          <a href="#">
+            <span class="icon digital-books"></span>
+            <span class="icon-text">DIGITAL BOOKS</span>
+          </a>
+        </li>
+        <li class="people-icon">
+          <a href="#">
+            <span class="icon people"></span>
+            <span class="icon-text">PEOPLE</span>
+          </a>
+        </li>
+        <li class="places-icon">
+          <a href="#">
+            <span class="icon places"></span>
+            <span class="icon-text">PLACES</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="login-area">
+      <a href="/user/login">+  LOGIN  +</a>
     </div>
-    <div class="contact">
-      <p>
-        <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-        <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-      </p>
-    </div>
-  </div>
+  </footer>
 </div>
 
 <!-- build:js(app) /js/scripts.js -->
