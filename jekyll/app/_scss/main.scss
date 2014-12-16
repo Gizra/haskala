@@ -34,20 +34,7 @@ a:visited { color: #a0a; }
 /* Home
 /*
 /*****************************************************************************/
-.posts {
-  list-style-type: none;
-  margin-bottom: 2em;
-}
 
-.posts li {
-  line-height: 1.75em;
-}
-
-.posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
-}
 
 /*****************************************************************************/
 /*
@@ -58,7 +45,7 @@ a:visited { color: #a0a; }
 .site {
   color: #615f59;
   font-size: 115%;
-  width: 60em;
+  max-width: 950px;
   margin: 3em auto 2em;
   line-height: 1.5em;
 }
@@ -91,17 +78,23 @@ footer {
 
   .icons-nav {
     border-bottom: 1px solid #817f7a;
+    padding-bottom: 40px;
 
     li {
       width: 168px;
+      margin-right: 30px; /* LTR */
+
+      &.last{
+        margin-right: 0;
+      }
 
       a {
         display: block;
+        color: #615f59;
 
         .icon {
           display: block;
           background: url(../images/sprites.png) no-repeat;
-          height: 55px;
           margin: 0 auto;
         }
 
@@ -133,7 +126,7 @@ footer {
 
     .icon-text {
       display: inline-block;
-      margin-top: 55px;
+      margin-top: 20px;
     }
 
     .books-icon .icon {
@@ -182,12 +175,61 @@ footer {
   text-align: center;
 }
 
-.tags-cloud-wrapper {
-  border-top: 1px solid #7dbad7;
+.search-wrapper{
+  margin-bottom: 50px;
 
-  h2 {
+  form {
+    max-width: 810px;
+    margin: 0 auto;
+
+    input {
+      border: 1px solid #615f59;
+    }
+    .hp-search-text {
+      border-radius: 20px 0 0 20px;
+      width: 710px;
+      padding: 25px 10px 18px 15px;
+      background-color: transparent;
+    }
+
+    .hp-search-submit {
+      position: relative;
+      left: -7px;
+      border-radius: 0 20px 20px 0;
+      background-color: #615f59;
+      padding: 25px 0 18px;
+      width: 55px;
+      height: 100%;
+
+      &:hover {
+        background-color: #d8bf82;
+      }
+    }
+  }
+}
+
+.tags-cloud-wrapper {
+  margin-bottom: 75px;
+
+  h3 {
     color: #7dbad7;
     font-weight: bold;
+
+    &:before, &:after {
+      content: '';
+      display: inline-block;
+      border-bottom: 1px solid #7dbad7;
+      width: 37%;
+      padding-top: 10px;
+    }
+
+    &:before {
+      float: left;
+    }
+
+    &:after {
+      float: right;
+    }
   }
 
   .tags-cloud {
@@ -201,6 +243,10 @@ footer {
       padding: 2px 12px;
       margin-bottom: 5px;
       white-space: nowrap;
+
+      &:hover {
+        background-color: #d8bf82;
+      }
     }
 
     a {
