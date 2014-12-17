@@ -16,7 +16,9 @@
 html, body { height: 100%; }
 
 body {
-  background-color: #FFF;
+  background: white url(../images/site_background.jpg) no-repeat center top;
+  background-size: 100%;
+  overflow: hidden;
   font: 14px Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
@@ -70,10 +72,12 @@ a:visited { color: $lightBlue; }
 
       li {
         width: 168px;
-        margin-right: 30px; /* LTR */
+        padding-right: 28px; /* LTR */
+        background: url(../images/bullet.png) no-repeat right 10px top 28px ;
 
         &.last {
-          margin-right: 0;
+          padding-right: 0;
+          background: none;
         }
 
         a {
