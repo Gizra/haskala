@@ -47,15 +47,16 @@ a:visited { color: $lightBlue; }
   header {
 
     a {
-      font-weight: bold;
+      color: $darkgray;
     }
 
     .top-navigation {
       margin-bottom: 6px;
 
-      a {
-          color: white;
+      li {
+        padding: 0 15px;
       }
+
     }
   }
 
