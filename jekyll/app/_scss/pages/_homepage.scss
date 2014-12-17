@@ -3,20 +3,26 @@
 
   .title {
     font-size: 64px;
-    margin-bottom: 2em;
+    line-height: 1;
+    margin-bottom: 45px;
 
     a,
     a:hover {
-      color: #615f59;
+      color: $darkgray;
     }
   }
 
+  .main-content {
+    margin-bottom: 35px;
+  }
+
   .search-wrapper{
-    margin-bottom: 50px;
+    margin-bottom: 47px;
 
     form {
       position: relative;
-      max-width: 810px;
+      left: -10px;
+      max-width: 834px;
       margin: 0 auto;
 
       input {
@@ -42,18 +48,18 @@
         position: absolute;
         border-radius: 0 24px 24px 0;
         background: #615f59 url(/images/search.png) no-repeat center;
-        width: 55px;
+        width: 58px;
 
 
         &:hover {
-          background-color: #d8bf82;
+          background-color: $orange;
         }
       }
     }
   }
 
   .tags-cloud-wrapper {
-    margin-bottom: 75px;
+    margin-bottom: 70px;
 
     h3 {
       color: $lightBlue;
@@ -78,19 +84,21 @@
     }
 
     .tags-cloud {
-      padding-top: 18px;
+      padding-top: 8px;
+      max-width: 815px;
+      margin: 0 auto;
 
       li {
         display: inline-block;
-        font-size: 19px;
         background-color: $lightBlue;
         border-radius: 10px;
-        padding: 2px 12px;
+        padding: 2px 16px;
         margin-bottom: 5px;
         white-space: nowrap;
+        line-height: 1.3;
 
         &:hover {
-          background-color: #d8bf82;
+          background-color: $orange;
         }
       }
 
