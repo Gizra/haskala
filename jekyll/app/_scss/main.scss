@@ -108,6 +108,28 @@ a:visited { color: $lightBlue; }
       }
 
     }
+
+    .site-name {
+      font-family: bell_mtbold;
+      font-size: 64px;
+      font-weight: bold;
+      line-height: 1;
+      margin-bottom: 6px;
+      letter-spacing: 12px;
+
+      a,
+      a:hover {
+        color: $darkgray;
+      }
+    }
+
+    hr {
+      width: 17%;
+      height: 4px;
+      background-color: $darkgray;
+      margin: 0 auto 33px;
+      border: none;
+    }
   }
 
   .nav-bar li {
