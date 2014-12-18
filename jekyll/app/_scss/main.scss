@@ -1,5 +1,6 @@
 @import 'variables.scss';
 @import 'pages/homepage.scss';
+@import "pages/singlebook.scss";
 
 @font-face {
   font-family: 'gillsans_lightregular';
@@ -92,6 +93,10 @@ a:visited { color: $lightBlue; }
         &.last {
           padding-right: 5px;
         }
+
+        &.active a {
+          color: $lightBlue;
+        }
         
         &.search {
           width: 30px;
@@ -134,6 +139,30 @@ a:visited { color: $lightBlue; }
 
   .nav-bar li {
     display: inline-block;
+  }
+
+  .hr-title {
+    color: $lightBlue;
+    font-family: bell_mtbold;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    &:before,
+    &:after {
+      content: '';
+      display: inline-block;
+      border-bottom: 1px solid $lightBlue;
+      width: 38%;
+      padding-top: 10px;
+    }
+
+    &:before {
+      float: left;
+    }
+
+    &:after {
+      float: right;
+    }
   }
 
   footer {

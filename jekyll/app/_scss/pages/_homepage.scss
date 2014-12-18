@@ -50,30 +50,6 @@
   .tags-cloud-wrapper {
     margin-bottom: 70px;
 
-    h3 {
-      color: $lightBlue;
-      font-family: bell_mtbold;
-      font-weight: bold;
-      letter-spacing: 1px;
-
-      &:before,
-      &:after {
-        content: '';
-        display: inline-block;
-        border-bottom: 1px solid $lightBlue;
-        width: 38%;
-        padding-top: 10px;
-      }
-
-      &:before {
-        float: left;
-      }
-
-      &:after {
-        float: right;
-      }
-    }
-
     .tags-cloud {
       padding-top: 8px;
       max-width: 815px;
