@@ -16,53 +16,13 @@
 
 <div class="site">
   <header>
-    <nav class="top-navigation nav-bar">
-      <ul>
-        <li><a href="books">BOOKS</a></li>
-        <li><a href="people">PEOPLE</a></li>
-        <li><a href="places">PLACES</a></li>
-        <li class="search"><span></span></li>
-      </ul>
-    </nav>
-    <h1 class="title"><a href="/">HASKALA</a></h1>
-    <hr>
+    {% include header.html %}
   </header>
 
   {{ content }}
 
-  <footer>
-    <nav class="icons-nav nav-bar">
-      <ul>
-        <li class="books-icon">
-          <a href="#">
-            <span class="icon books"></span>
-            <span class="icon-text">BOOKS</span>
-          </a>
-        </li>
-        <li class="digital-books-icon">
-          <a href="#">
-            <span class="icon digital-books"></span>
-            <span class="icon-text">DIGITAL BOOKS</span>
-          </a>
-        </li>
-        <li class="people-icon">
-          <a href="#">
-            <span class="icon people"></span>
-            <span class="icon-text">PEOPLE</span>
-          </a>
-        </li>
-        <li class="places-icon last">
-          <a href="#">
-            <span class="icon places"></span>
-            <span class="icon-text">PLACES</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <div class="login-area">
-      <a href="/user/login">+ &nbsp; LOGIN &nbsp; +</a>
-    </div>
-  </footer>
+  {% include footer.html %}
+
 </div>
 
 <!-- build:js(app) /js/scripts.js -->

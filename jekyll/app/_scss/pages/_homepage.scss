@@ -2,9 +2,12 @@
   text-align: center;
 
   .title {
+    font-family: bell_mtbold;
     font-size: 64px;
+    font-weight: bold;
     line-height: 1;
-    margin-bottom: 7px;
+    margin-bottom: 6px;
+    letter-spacing: 12px;
 
     a,
     a:hover {
@@ -13,18 +16,19 @@
   }
 
   hr {
-    width: 14%;
-    height: 3px;
-    color: $darkgray;
-    margin: 0 auto 36px;
+    width: 17%;
+    height: 4px;
+    background-color: $darkgray;
+    margin: 0 auto 33px;
+    border: none;
   }
 
   .main-content {
-    margin-bottom: 35px;
+    margin-bottom: 36px;
   }
 
   .search-wrapper{
-    margin-bottom: 47px;
+    margin-bottom: 46px;
 
     form {
       position: relative;
@@ -70,7 +74,9 @@
 
     h3 {
       color: $lightBlue;
+      font-family: bell_mtbold;
       font-weight: bold;
+      letter-spacing: 1px;
 
       &:before,
       &:after {
@@ -99,7 +105,7 @@
         display: inline-block;
         background-color: $lightBlue;
         border-radius: 10px;
-        padding: 2px 16px;
+        padding: 2px 18px;
         margin: 0 2px 5px;
         white-space: nowrap;
         line-height: 1.3;
