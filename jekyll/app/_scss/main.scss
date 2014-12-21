@@ -43,7 +43,7 @@ html, body { height: 100%; }
 body {
   background: white url(../images/site_background.jpg) no-repeat center top;
   //background-size: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   font: 14px open_sansregular;
   font-size: small;
   text-align: center;
@@ -62,7 +62,7 @@ a:visited { color: $lightBlue; }
 .site {
   color: $darkgray;
   max-width: 950px;
-  margin: 20px auto 14px;
+  margin: 17px auto 14px;
   line-height: 1.7em;
 
   a {
@@ -80,7 +80,7 @@ a:visited { color: $lightBlue; }
     }
 
     .top-navigation {
-      margin-bottom: 25px;
+      margin-bottom: 27px;
       font-family: bell_mtbold;
 
       li {
@@ -144,10 +144,10 @@ a:visited { color: $lightBlue; }
     .icons-nav {
       font-family: bell_mtbold;
       border-bottom: 1px solid #817f7a;
-      padding-bottom: 37px;
+      padding-bottom: 35px;
 
       li {
-        width: 168px;
+        width: 165px;
         padding-right: 28px; /* LTR */
         background: url(../images/bullet.png) no-repeat right 10px top 28px ;
 
@@ -164,6 +164,7 @@ a:visited { color: $lightBlue; }
             display: block;
             background: url(../images/sprites.png) no-repeat;
             margin: 0 auto;
+            height: 37px;
           }
 
           &:hover {
@@ -172,6 +173,8 @@ a:visited { color: $lightBlue; }
             }
 
             .icon {
+              height: 37px;
+
               &.books {
                 background-position: 0 -50px;
               }
@@ -194,31 +197,31 @@ a:visited { color: $lightBlue; }
 
       .icon-text {
         display: inline-block;
-        margin-top: 14px;
+        margin-top: 13px;
       }
 
       .books-icon .icon {
         background-position: 0 0;
         width: 28px;
-        height: 37px;
+        /*height: 37px;*/
       }
 
       .digital-books-icon .icon {
         background-position: -50px 0;
         width: 28px;
-        height: 36px;
+        /*height: 36px;*/
       }
 
       .people-icon .icon {
         background-position: -100px 0;
         width: 36px;
-        height: 35px;
+        /*height: 35px;*/
       }
 
       .places-icon .icon {
         background-position: -150px 0;
         width: 23px;
-        height: 34px;
+        /*height: 34px;*/
       }
 
     }
