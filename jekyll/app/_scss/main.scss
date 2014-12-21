@@ -3,14 +3,16 @@
 @import "pages/singlebook.scss";
 
 @font-face {
-  font-family: 'gillsans_lightregular';
-  src: url('../fonts/gillsans_light-webfont.eot');
-  src: url('../fonts/gillsans_light-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/gillsans_light-webfont.woff') format('woff'),
-  url('../fonts/gillsans_light-webfont.ttf') format('truetype'),
-  url('../fonts/gillsans_light-webfont.svg#gillsans_lightregular') format('svg');
+  font-family: 'open_sansregular';
+  src: url('opensans-regular-webfont.eot');
+  src: url('opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('opensans-regular-webfont.woff2') format('woff2'),
+  url('opensans-regular-webfont.woff') format('woff'),
+  url('opensans-regular-webfont.ttf') format('truetype'),
+  url('opensans-regular-webfont.svg#open_sansregular') format('svg');
   font-weight: normal;
   font-style: normal;
+
 }
 
 @font-face {
@@ -42,8 +44,8 @@ html, body { height: 100%; }
 body {
   background: white url(../images/site_background.jpg) no-repeat center top;
   //background-size: 100%;
-  overflow: hidden;
-  font: 14px gillsans_lightregular;
+  overflow-x: hidden;
+  font: 14px open_sansregular;
   font-size: small;
   text-align: center;
 }
@@ -61,7 +63,7 @@ a:visited { color: $lightBlue; }
 .site {
   color: $darkgray;
   max-width: 950px;
-  margin: 20px auto 14px;
+  margin: 17px auto 14px;
   line-height: 1.7em;
 
   a {
@@ -79,7 +81,7 @@ a:visited { color: $lightBlue; }
     }
 
     .top-navigation {
-      margin-bottom: 25px;
+      margin-bottom: 27px;
       font-family: bell_mtbold;
 
       li {
@@ -120,7 +122,7 @@ a:visited { color: $lightBlue; }
       font-weight: bold;
       line-height: 1;
       margin-bottom: 6px;
-      letter-spacing: 12px;
+      letter-spacing: 11.4px;
 
       a,
       a:hover {
@@ -172,10 +174,10 @@ a:visited { color: $lightBlue; }
     .icons-nav {
       font-family: bell_mtbold;
       border-bottom: 1px solid #817f7a;
-      padding-bottom: 36px;
+      padding-bottom: 35px;
 
       li {
-        width: 168px;
+        width: 165px;
         padding-right: 28px; /* LTR */
         background: url(../images/bullet.png) no-repeat right 10px top 28px ;
 
@@ -192,6 +194,7 @@ a:visited { color: $lightBlue; }
             display: block;
             background: url(../images/sprites.png) no-repeat;
             margin: 0 auto;
+            height: 37px;
           }
 
           &:hover {
@@ -200,6 +203,8 @@ a:visited { color: $lightBlue; }
             }
 
             .icon {
+              height: 37px;
+
               &.books {
                 background-position: 0 -50px;
               }
@@ -222,40 +227,51 @@ a:visited { color: $lightBlue; }
 
       .icon-text {
         display: inline-block;
-        margin-top: 14px;
+        margin-top: 13px;
       }
 
       .books-icon .icon {
         background-position: 0 0;
         width: 28px;
-        height: 37px;
+        /*height: 37px;*/
       }
 
       .digital-books-icon .icon {
         background-position: -50px 0;
         width: 28px;
-        height: 36px;
+        /*height: 36px;*/
       }
 
       .people-icon .icon {
         background-position: -100px 0;
         width: 36px;
-        height: 35px;
+        /*height: 35px;*/
       }
 
       .places-icon .icon {
         background-position: -150px 0;
         width: 23px;
-        height: 34px;
+        /*height: 34px;*/
       }
 
     }
 
     .login-area {
-      padding-top: 7px;
+      padding-top: 9px;
+      letter-spacing: 0px;
 
       a {
         color: $lightBlue;
+        font: 16px bell_mtbold;
+        font-weight: bold;
+
+        &:before,
+        &:after {
+          padding: 0 10px;
+          content: '+';
+          font-size: 12px;
+          font-weight: bold;
+        }
       }
     }
   }
