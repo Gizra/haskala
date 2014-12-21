@@ -115,7 +115,7 @@ a:visited { color: $lightBlue; }
       font-weight: bold;
       line-height: 1;
       margin-bottom: 6px;
-      letter-spacing: 12px;
+      letter-spacing: 11.4px;
 
       a,
       a:hover {
@@ -142,7 +142,7 @@ a:visited { color: $lightBlue; }
     .icons-nav {
       font-family: bell_mtbold;
       border-bottom: 1px solid #817f7a;
-      padding-bottom: 36px;
+      padding-bottom: 37px;
 
       li {
         width: 168px;
@@ -222,10 +222,21 @@ a:visited { color: $lightBlue; }
     }
 
     .login-area {
-      padding-top: 7px;
+      padding-top: 9px;
+      letter-spacing: 0px;
 
       a {
         color: $lightBlue;
+        font: 16px bell_mtbold;
+        font-weight: bold;
+
+        &:before,
+        &:after {
+          padding: 0 10px;
+          content: '+';
+          font-size: 12px;
+          font-weight: bold;
+        }
       }
     }
   }
