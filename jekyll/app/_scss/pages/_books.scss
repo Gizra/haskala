@@ -1,0 +1,47 @@
+.page-books {
+
+  background-image: url(../images/singlebook_1280.jpg);
+
+  .site {
+
+    li {
+      display: inline-block;
+      padding-right: 6px;
+    }
+
+    .books-filter {
+      margin-top: 52px;
+      font-weight: bold;
+      letter-spacing: 0.45px;
+
+      .results-message {
+        margin-bottom: 42px;
+      }
+
+      li {
+        font: 24px bell_mtbold;
+
+        &:after {
+          content: '.';
+          /*font-size: 50px;*/
+          font-weight: bold;
+          vertical-align: bottom;
+          padding-left: 8px;
+        }
+
+        &.last:after {
+          content: '';
+          padding-left: 0;
+        }
+
+        a {
+          color: $darkgray;
+        }
+      }
+    }
+
+    .books-by-letter {
+      text-align: left;
+    }
+  }
+}
