@@ -138,6 +138,49 @@
 
     footer {
       margin-top: 20px;
+
+      .bottom-nav {
+
+        ul {
+          padding-top: 25px;
+        }
+
+        li {
+          float: left;
+          padding: 0px 23px 0px 0px;
+
+          &:after {
+            content: '.';
+            /*font-size: 50px;*/
+            font-weight: bold;
+            vertical-align: bottom;
+            padding-left: 23px;
+          }
+
+          &.last:after {
+            content: '';
+            padding-left: 0;
+          }
+
+          &.first {
+            padding-left: 23px;
+          }
+        }
+
+        &:before,
+        &:after {
+          margin-top: 25px;
+          padding: 0;
+        }
+
+        &:before {
+          float: left;
+        }
+
+        &:after {
+          float: right;
+        }
+      }
     }
   }
 }

@@ -233,46 +233,53 @@ a:visited { color: $lightBlue; }
       .books-icon .icon {
         background-position: 0 0;
         width: 28px;
-        /*height: 37px;*/
       }
 
       .digital-books-icon .icon {
         background-position: -50px 0;
         width: 28px;
-        /*height: 36px;*/
       }
 
       .people-icon .icon {
         background-position: -100px 0;
         width: 36px;
-        /*height: 35px;*/
       }
 
       .places-icon .icon {
         background-position: -150px 0;
         width: 23px;
-        /*height: 34px;*/
       }
 
     }
 
-    .login-area {
-      padding-top: 9px;
-      letter-spacing: 0px;
+    .bottom-nav {
+      display: inline-block;
+
+      ul {
+        padding-top: 9px;
+        letter-spacing: 0px;
+        display: inline-block;
+      }
+
+      li {
+        display: inline-block;
+      }
 
       a {
         color: $lightBlue;
         font: 16px bell_mtbold;
         font-weight: bold;
-
-        &:before,
-        &:after {
-          padding: 0 10px;
-          content: '+';
-          font-size: 12px;
-          font-weight: bold;
-        }
       }
+
+      &:before,
+      &:after {
+        padding: 0 10px;
+        content: '+';
+        font-size: 12px;
+        font-weight: bold;
+        color: $lightBlue;
+      }
+
     }
   }
 }
