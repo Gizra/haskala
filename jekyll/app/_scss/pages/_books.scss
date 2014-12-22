@@ -6,42 +6,130 @@
 
     li {
       display: inline-block;
-      padding-right: 6px;
     }
 
     .books-filter {
       margin-top: 52px;
       font-weight: bold;
       letter-spacing: 0.45px;
+      margin-bottom: 60px;
 
       .results-message {
         margin-bottom: 42px;
       }
 
-      li {
-        font: 24px bell_mtbold;
+      nav {
+            margin-bottom: 10px;
 
-        &:after {
-          content: '.';
-          /*font-size: 50px;*/
-          font-weight: bold;
-          vertical-align: bottom;
-          padding-left: 8px;
+
+
+        li {
+          font: 24px bell_mtbold;
+
+          &:after {
+            content: '.';
+            font-weight: bold;
+            vertical-align: bottom;
+
+          }
+
+          a {
+            color: $darkgray;
+          }
         }
 
-        &.last:after {
-          content: '';
-          padding-left: 0;
+        &.eng {
+          li {
+            padding-right: 6px;
+            letter-spacing: 0.8px;
+
+            &:after {
+              padding-left: 8px;
+            }
+
+            &.last {
+              padding: 0;
+
+              &:after {
+                content: '';
+                padding-left: 0;
+              }
+            }
+          }
         }
 
-        a {
-          color: $darkgray;
+        &.he {
+          direction: rtl;
+
+          li {
+            font: 26px Alef;
+            padding-left: 6px;
+            letter-spacing: 1.6px;
+
+            &:after {
+              padding-right: 8px;
+            }
+
+            &.last {
+              padding: 0;
+
+              &:after {
+                content: '';
+                padding-right: 0;
+              }
+            }
+          }
         }
       }
     }
 
-    .books-by-letter {
-      text-align: left;
+    .books-list {
+      max-width: 723px;
+      margin: 0 auto;
+
+      .letter-wrapper{
+        clear: both;
+        margin-bottom: 57px;
+
+        &:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+      }
+
+      .letter {
+        float: left;
+        width: 117px;
+        text-align: right;
+        font: 60px bell_mtbold;
+
+        span {
+          width: 74px;
+          padding-top: 7px;
+          line-height: 0.8;
+          float: right;
+          text-align: center;
+          border-bottom: 2px solid $darkgray;
+        }
+      }
+
+      .books-by-letter {
+        text-align: left;
+        float: left;
+        margin-left: 34px;
+        font: 11px open_sanslight;
+        font-weight: bold;
+        line-height: 2.41;
+      }
+    }
+
+    footer {
+      margin-top: 120px;
+
+      .bottom-nav ul{
+        padding-top: 25px;
+      }
     }
   }
 }
