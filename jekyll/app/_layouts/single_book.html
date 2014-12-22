@@ -12,27 +12,32 @@
   <!-- endbuild -->
 
 </head>
-<body class="front">
+<body class="page-single-book">
 
 <div class="site">
   <header>
     {% include header.html %}
+    <nav class="bread-crumbs">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="books">Books</a></li>
+        <li class="last"><a href="#">name of book</a></li>
+      </ul>
+    </nav>
   </header>
 
   {{ content }}
 
   <footer>
     {% include footer.html %}
-    <div class="login-area">
-      <nav class="bottom-nav">
-        <ul>
-          <li><a href="/user/login">LOGIN</a></li>
-        </ul>
-      </nav>
-
-    </div>
+    <nav class="bottom-nav">
+      <ul>
+        <li class="first"><a href="#">Add a book</a></li>
+        <li><a href="#">Add a book series</a></li>
+        <li class="last"><a href="#">Add a person</a></li>
+      </ul>
+    </nav>
   </footer>
-
 
 </div>
 

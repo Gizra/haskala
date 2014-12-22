@@ -1,8 +1,34 @@
----
-layout: homepage
-title: Haskala
----
-  <section>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Haskala</title>
+  <meta name="viewport" content="width=device-width">
+
+  <!-- build:css({app,.tmp}) /css/main.css -->
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+  <!-- endbuild -->
+
+</head>
+<body class="front">
+
+<div class="site">
+  <header>
+    <nav class="top-navigation nav-bar">
+      <ul>
+        <li><a href="books">BOOKS</a></li>
+        <li><a href="people">PEOPLE</a></li>
+        <li><a href="places">PLACES</a></li>
+        <li class="search"><span></span></li>
+      </ul>
+    </nav>
+    <h1 class="title"><a href="/">HASKALA</a></h1>
+    <hr>
+  </header>
+
+    <section>
     <div class="main-content">
       <p> A few words about this site, who are we and what can be found here,</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt vehicula arcu, congue volutpat massa scelerisque ut. Nunc luctus nec libero ut luctus. Nunc dictum sagittis dui vitae blandit. Nulla ut erat vitae arcu faucibus egestas feugiat a eros. Cras nec nibh vitae tellus dictum suscipit a non dui. Phasellus at mattis urna. Integer odio arcu, commodo et condimentum vitae, volutpat ut mi.  </p>
@@ -15,7 +41,7 @@ title: Haskala
     </form>
   </section>
   <section class="tags-cloud-wrapper">
-    <h3 class="hr-title">TAG CLOUD BY TOPICS</h3>
+    <h3>TAG CLOUD BY TOPICS</h3>
     <div class="tags-cloud">
       <nav class="nav-bar">
         <ul>
@@ -52,3 +78,47 @@ title: Haskala
       </nav>
     </div>
   </section>
+
+
+  <footer>
+  <nav class="icons-nav nav-bar">
+    <ul>
+      <li class="books-icon">
+        <a href="#">
+          <span class="icon books"></span>
+          <span class="icon-text">BOOKS</span>
+        </a>
+      </li>
+      <li class="digital-books-icon">
+        <a href="#">
+          <span class="icon digital-books"></span>
+          <span class="icon-text">DIGITAL BOOKS</span>
+        </a>
+      </li>
+      <li class="people-icon">
+        <a href="#">
+          <span class="icon people"></span>
+          <span class="icon-text">PEOPLE</span>
+        </a>
+      </li>
+      <li class="places-icon last">
+        <a href="#">
+          <span class="icon places"></span>
+          <span class="icon-text">PLACES</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="login-area">
+    <a href="/user/login">+ &nbsp; LOGIN &nbsp; +</a>
+  </div>
+</footer>
+
+
+</div>
+
+<!-- build:js(app) /js/scripts.js -->
+<script src="/js/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>

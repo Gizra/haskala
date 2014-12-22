@@ -1,0 +1,187 @@
+.page-single-book {
+
+  background-image: url(../images/singlebook_1280.jpg);
+
+  .site {
+
+    hr {
+      margin-bottom: 11px;
+    }
+
+    .bread-crumbs {
+
+      li {
+        display: inline;
+        font-weight: bold;
+
+        &:after {
+          content: ' >';
+        }
+      }
+    }
+
+    .hr-title {
+      margin: 14px 0 62px;
+      font-size: 24px;
+      letter-spacing: 2px;
+
+      &:before, &:after {
+        width: 45%;
+      }
+    }
+
+    .main-content {
+      margin-top: 30px;
+      text-align: left;
+
+      .top-details {
+
+        padding: 0 21px 53px;
+        border-bottom: 2px solid $darkgray;
+        margin-bottom: 30px;
+
+        .title {
+          font-size: 31px;
+          font-weight: normal;
+          line-height: 1.06;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+
+
+      }
+
+      .field{
+        clear: both;
+        line-height: 1.84;
+
+        .field-label {
+          display: inline-block;
+          font-size: 16px;
+
+          &.type-label {
+            font-size: 18px;
+          }
+        }
+
+        .content {
+          display: inline-block;
+        }
+      }
+
+      .details-navigation {
+
+        font-family: bell_mtbold;
+        letter-spacing: 0.2px;
+        padding-bottom: 15px;
+
+        ul{
+          height: 25px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          li {
+            display: list-item;
+            list-style-type: disc;
+            margin: 0 12px;
+            float: left;
+            font-size: 14px;
+
+            &.first
+            {
+              list-style-type: none;
+            }
+
+            &.active a {
+              color: $lightBlue;
+            }
+
+            a {
+              color: $darkgray;
+              font-size: 20px;
+            }
+          }
+        }
+
+      }
+
+      .fields-group {
+
+        clear: both;
+        border-top: 1px solid $darkgray;
+        padding: 7px 21px 4px;
+        margin-top: 55px;
+
+        .fields-group-name {
+          font: 24px bell_mtbold;
+          color: $lightBlue;
+          text-transform: uppercase;
+          letter-spacing: 0.7px;
+          width: 267px;
+          display: inline-block;
+          vertical-align: top;
+
+        }
+
+        .fields {
+          display: inline-block;
+          width: 60%;
+          margin-top: -4px;
+          font-size: 16px;
+
+          .content {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    footer {
+      margin-top: 20px;
+
+      .bottom-nav {
+
+        ul {
+          padding-top: 25px;
+        }
+
+        li {
+          float: left;
+          padding: 0px 23px 0px 0px;
+
+          &:after {
+            content: '.';
+            /*font-size: 50px;*/
+            font-weight: bold;
+            vertical-align: bottom;
+            padding-left: 23px;
+            color: $lightBlue;
+          }
+
+          &.last:after {
+            content: '';
+            padding-left: 0;
+          }
+
+          &.first {
+            padding-left: 23px;
+          }
+        }
+
+        &:before,
+        &:after {
+          margin-top: 25px;
+          padding: 0;
+        }
+
+        &:before {
+          float: left;
+        }
+
+        &:after {
+          float: right;
+        }
+      }
+    }
+  }
+}
