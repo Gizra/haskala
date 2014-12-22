@@ -41,7 +41,7 @@
 html, body { height: 100%; }
 
 body {
-  background: white url(../images/site_background.jpg) no-repeat center top;
+  background: white url('../images/site_background.jpg') no-repeat center top;
   //background-size: 100%;
   overflow-x: hidden;
   font: 14px open_sansregular;
@@ -98,7 +98,7 @@ a:visited { color: $lightBlue; }
         &.search {
           width: 30px;
           height: 30px;
-          background: url("../images/top_search.png") no-repeat center bottom;
+          background: url('../images/top_search.png') no-repeat center bottom;
           padding-left: 0px;
 
           span a {
@@ -149,7 +149,7 @@ a:visited { color: $lightBlue; }
       li {
         width: 165px;
         padding-right: 28px; /* LTR */
-        background: url(../images/bullet.png) no-repeat right 10px top 28px ;
+        background: url('../images/bullet.png') no-repeat right 10px top 28px ;
 
         &.last {
           padding-right: 0;
@@ -162,7 +162,7 @@ a:visited { color: $lightBlue; }
 
           .icon {
             display: block;
-            background: url(../images/sprites.png) no-repeat;
+            background: url('../images/sprites.png') no-repeat;
             margin: 0 auto;
             height: 37px;
           }
