@@ -1,0 +1,125 @@
+.front {
+  text-align: center;
+
+  .main-content {
+    font-weight: bold;
+    letter-spacing: -0.4px;
+    margin-bottom: 36px;
+  }
+
+  .search {
+
+    form {
+      position: relative;
+      max-width: 784px;
+      margin: 0 auto;
+      padding-right: 28px;
+
+      input {
+        height: 48px;
+        display: inline-block;
+        vertical-align: top;
+        color: $darkgray;
+        font-weight: bold;
+        letter-spacing: -0.98px;
+      }
+
+      ::-webkit-input-placeholder {
+        color: $darkgray;
+      }
+
+      :-moz-placeholder { /* Firefox 18- */
+        color: $darkgray;
+      }
+
+      ::-moz-placeholder {  /* Firefox 19+ */
+        color: $darkgray;
+      }
+
+      :-ms-input-placeholder {
+        color: $darkgray;
+      }
+
+      .search-text {
+        border: 1px solid #615f59;
+        border-radius: 24px;
+        height: 46px;
+        width: 100%;
+        padding: 0 10px 0 15px;
+        background-color: rgba(255,255,255, 0.2);
+
+      }
+
+      .search-submit {
+        border: 0px solid #615f59;
+        right: -2px;
+        top: 0;
+        position: absolute;
+        border-radius: 0 24px 24px 0;
+        background: #615f59 url('../images/search.png') no-repeat center;
+        width: 58px;
+
+
+        &:hover {
+          background-color: $orange;
+        }
+      }
+    }
+  }
+
+  .tags-cloud-wrapper {
+    margin-bottom: 71px;
+
+    h3 {
+      color: $lightBlue;
+      font-family: bell_mtbold;
+      font-weight: bold;
+      letter-spacing: 1px;
+
+      &:before,
+      &:after {
+        content: '';
+        display: inline-block;
+        border-bottom: 1px solid $lightBlue;
+        width: 38%;
+        padding-top: 12px;
+      }
+
+      &:before {
+        float: left;
+      }
+
+      &:after {
+        float: right;
+      }
+    }
+
+    .tags-cloud {
+      padding-top: 9px;
+      max-width: 815px;
+      margin: 0 auto;
+
+      li {
+        display: inline-block;
+        background-color: $lightBlue;
+        border-radius: 10px;
+        padding: 2px 18px;
+        margin: 0 2px 4px;
+        font-size: 11px;
+        font-weight: bold;
+        white-space: nowrap;
+        line-height: 1.5;
+
+        &:hover {
+          background-color: $orange;
+        }
+      }
+
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+
