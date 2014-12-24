@@ -65,11 +65,22 @@ a {
 
       li {
 
+        &:after {
+          content: '.';
+          margin-left: 16px;
+        }
+
+        &.last, &.search {
+          &:after {
+            content: none;
+          }
+        }
+
         &:first-child {
           margin-left: 0;
         }
 
-        margin-left: 30px;
+        margin-left: 11px;
         letter-spacing: 1px;
         text-transform: uppercase;
         vertical-align: middle;
@@ -99,6 +110,13 @@ a {
 
       a, a:hover {
         color: $darkgray;
+      }
+
+      a span {
+        font-size: 35px;
+        display: block;
+        text-transform: none;
+        letter-spacing: 11.2px;
       }
     }
 
@@ -174,7 +192,8 @@ a {
 
       .icon-text {
         display: inline-block;
-        margin-top: 14px;
+        margin-top: 13px;
+        letter-spacing: -0.2px;
       }
 
       .books-icon .icon {
@@ -200,20 +219,19 @@ a {
     }
 
     .login-area {
-      padding-top: 9px;
-      letter-spacing: 0px;
+      padding-top: 6px;
+
 
       a {
         color: $lightBlue;
-        font: 16px bell_mtbold;
-        font-weight: bold;
+        font: 15px bell_mtbold;
+        letter-spacing: -0.5px;
 
         &:before,
         &:after {
-          padding: 0 10px;
+          padding: 0 13px;
           content: '+';
           font-size: 12px;
-          font-weight: bold;
         }
       }
     }
