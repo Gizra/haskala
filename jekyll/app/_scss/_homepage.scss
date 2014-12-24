@@ -83,6 +83,10 @@
         border-bottom: 1px solid $lightBlue;
         width: 38%;
         padding-top: 12px;
+
+        @media (max-width: 850px) {
+          display: none;
+        }
       }
 
       &:before {

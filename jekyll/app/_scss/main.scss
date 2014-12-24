@@ -21,6 +21,7 @@ body {
   font-size: small;
   text-align: center;
   color: $darkgray;
+  padding: 0 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -58,10 +59,6 @@ a {
     .top-navigation {
       margin-bottom: 16px;
       font-family: bell_mtbold;
-
-      ul {
-        margin-left: -30px;
-      }
 
       li {
 
@@ -106,7 +103,6 @@ a {
       line-height: 1;
       margin-bottom: 6px;
       letter-spacing: 10.3px;
-      margin-left: 10px;
 
       a, a:hover {
         color: $darkgray;
@@ -117,6 +113,15 @@ a {
         display: block;
         text-transform: none;
         letter-spacing: 11.2px;
+      }
+
+      @media (max-width: 400px) {
+        font-size: 35px;
+
+        a span {
+          font-size: 15px;
+          letter-spacing: 9.5px;
+        }
       }
     }
 
@@ -143,8 +148,19 @@ a {
 
       li {
         width: 165px;
-        padding-right: 28px; /* LTR */
+        padding-right: 28px;
         background: url('../images/bullet.png') no-repeat right 10px top 28px ;
+
+        @media (max-width: 750px) {
+          width: 45%;
+          background: none;
+          padding: 0;
+          margin-bottom: 30px;
+        }
+
+        @media (max-width: 400px) {
+          width: 100%;
+        }
 
         &.last {
           padding-right: 0;
