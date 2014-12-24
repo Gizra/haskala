@@ -362,7 +362,7 @@ module.exports = function (grunt) {
     'jekyll:check',
     'compass:server',
     'jshint:all',
-    'csslint:check'
+    //'csslint:check'
   ]);
 
   grunt.registerTask('build', [
@@ -374,10 +374,10 @@ module.exports = function (grunt) {
     'concat',
     'autoprefixer:dist',
     'cssmin',
-    'uglify',
+    // 'uglify',
     'imagemin',
     'svgmin',
-    'filerev',
+    //'filerev',
     'usemin',
     'htmlmin'
     ]);
