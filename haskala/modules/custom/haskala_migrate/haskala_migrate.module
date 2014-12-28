@@ -19,27 +19,22 @@ function haskala_migrate_hello_world() {
  * Implements hook_migrate_api().
  */
 function haskala_migrate_migrate_api() {
-  $classes = array(
-    'HaskalaMigrateCreateContent',
+
+  $migrations = array(
+    // Nodes.
+
+    // Terms.
+    'HaskalaCityTermsMigrate',
+
+    // Users.
+
   );
 
-  $migrations = array();
-  foreach ($classes as $class_name) {
-    $migrations[$class_name] = array(
-      'class_name' => $class_name,
-      'group_name' => HASKALA_DEMO_MIGRATION_GROUP,
-    );
+
+  $api['api'] = 2;
+  foreach ($migrations as $migration) {
+    $api['migrations'][$migration] = array('class_name' => $migration);
   }
-
-  $api = array(
-    'api'        => 2,
-    'groups'     => array(
-      HASKALA_DEMO_MIGRATION_GROUP => array(
-        'title' => t('Demo content'),
-      ),
-    ),
-    'migrations' => $migrations,
-  );
 
   return $api;
 }
