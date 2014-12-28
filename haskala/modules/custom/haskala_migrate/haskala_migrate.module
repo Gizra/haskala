@@ -33,7 +33,9 @@ function haskala_migrate_migrate_api() {
 
   $api['api'] = 2;
   foreach ($migrations as $migration) {
-    $api['migrations'][$migration] = array('class_name' => $migration);
+    $api['migrations'][$migration] = array(
+      'class_name' => $migration,
+    );
   }
 
   return $api;

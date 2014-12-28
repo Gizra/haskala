@@ -5,5 +5,6 @@
  */
 class HaskalaCityTermsMigrate extends HaskalaMigration {
   public $entityType = 'taxonomy_term';
-  public $bundle = 'city';
+  public $bundle = 'cities';
 }
+
