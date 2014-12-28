@@ -1,74 +1,50 @@
+@import 'fonts.scss';
 @import 'variables.scss';
-@import 'pages/homepage.scss';
-@import "pages/singlebook.scss";
 
-@font-face {
-  font-family: 'open_sansregular';
-  src: url('opensans-regular-webfont.eot');
-  src: url('opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
-  url('opensans-regular-webfont.woff2') format('woff2'),
-  url('opensans-regular-webfont.woff') format('woff'),
-  url('opensans-regular-webfont.ttf') format('truetype'),
-  url('opensans-regular-webfont.svg#open_sansregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+@import 'homepage.scss';
+@import 'singlebook';
 
-}
-
-@font-face {
-  font-family: 'bell_mtbold';
-  src: url('../fonts/bellb-webfont.eot');
-  src: url('../fonts/bellb-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/bellb-webfont.woff2') format('woff2'),
-  url('../fonts/bellb-webfont.woff') format('woff'),
-  url('../fonts/bellb-webfont.ttf') format('truetype'),
-  url('../fonts/bellb-webfont.svg#bell_mtbold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/*****************************************************************************/
-/*
-/* Common
-/*
-/*****************************************************************************/
-
-/* Global Reset */
 * {
   margin: 0;
   padding: 0;
 }
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+}
 
 body {
-  background: white url(../images/site_background.jpg) no-repeat center top;
-  //background-size: 100%;
+  background: white url('../images/site_background.jpg') no-repeat center top;
+  background-size: 100%;
   overflow-x: hidden;
   font: 14px open_sansregular;
   font-size: small;
   text-align: center;
+  color: $darkgray;
+  padding: 0 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+  font-size: 100%;
+  text-transform: uppercase;
+}
 
-h1 { margin-bottom: 1em; }
-p { margin: 0; }
+p {
+  margin: 0;
+}
 
-a         { color: $lightBlue; }
-a:hover   { color: $lightBlue; }
-a:visited { color: $lightBlue; }
+a, a:hover, a:visited {
+  color: $lightBlue;
+}
 
-.site {
-  color: $darkgray;
+a {
+  text-decoration: none;
+}
+
+.wrapper {
   max-width: 950px;
   margin: 17px auto 14px;
   line-height: 1.7em;
-
-  a {
-    text-decoration: none;
-  }
 
   header {
 
@@ -81,39 +57,43 @@ a:visited { color: $lightBlue; }
     }
 
     .top-navigation {
-      margin-bottom: 27px;
+      margin-bottom: 16px;
       font-family: bell_mtbold;
 
       li {
-        padding: 0 15px;
+
+        &:after {
+          content: '.';
+          margin-left: 16px;
+        }
+
+        &.last, &.search {
+          &:after {
+            content: none;
+          }
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        margin-left: 11px;
         letter-spacing: 1px;
+        text-transform: uppercase;
+        vertical-align: middle;
 
-        &.first {
-          padding-left: 0px;
-        }
-
-        &.last {
-          padding-right: 5px;
-        }
-
-        &.active a {
-          color: $lightBlue;
-        }
-        
         &.search {
-          width: 30px;
-          height: 30px;
-          background: url("../images/top_search.png") no-repeat center bottom;
-          padding-left: 0px;
+          margin-left: 15px;
+          margin-top: 4px;
 
-          span a {
+          a {
+            width: 30px;
+            height: 30px;
+            background: url('../images/top_search.png') no-repeat center bottom;
             display: inline-block;
-            width: 100%;
-            height: 22px;
           }
         }
       }
-
     }
 
     .site-name {
@@ -122,11 +102,26 @@ a:visited { color: $lightBlue; }
       font-weight: bold;
       line-height: 1;
       margin-bottom: 6px;
-      letter-spacing: 11.4px;
+      letter-spacing: 10.3px;
 
-      a,
-      a:hover {
+      a, a:hover {
         color: $darkgray;
+      }
+
+      a span {
+        font-size: 35px;
+        display: block;
+        text-transform: none;
+        letter-spacing: 11.2px;
+      }
+
+      @media (max-width: 400px) {
+        font-size: 35px;
+
+        a span {
+          font-size: 15px;
+          letter-spacing: 9.5px;
+        }
       }
     }
 
@@ -178,8 +173,19 @@ a:visited { color: $lightBlue; }
 
       li {
         width: 165px;
-        padding-right: 28px; /* LTR */
-        background: url(../images/bullet.png) no-repeat right 10px top 28px ;
+        padding-right: 28px;
+        background: url('../images/bullet.png') no-repeat right 10px top 28px ;
+
+        @media (max-width: 750px) {
+          width: 45%;
+          background: none;
+          padding: 0;
+          margin-bottom: 30px;
+        }
+
+        @media (max-width: 400px) {
+          width: 100%;
+        }
 
         &.last {
           padding-right: 0;
@@ -192,7 +198,7 @@ a:visited { color: $lightBlue; }
 
           .icon {
             display: block;
-            background: url(../images/sprites.png) no-repeat;
+            background: url('../images/sprites.png') no-repeat;
             margin: 0 auto;
             height: 37px;
           }
@@ -228,6 +234,7 @@ a:visited { color: $lightBlue; }
       .icon-text {
         display: inline-block;
         margin-top: 13px;
+        letter-spacing: -0.2px;
       }
 
       .books-icon .icon {
@@ -279,7 +286,24 @@ a:visited { color: $lightBlue; }
         font-weight: bold;
         color: $lightBlue;
       }
+    }
 
+    .login-area {
+      padding-top: 6px;
+
+
+      a {
+        color: $lightBlue;
+        font: 15px bell_mtbold;
+        letter-spacing: -0.5px;
+
+        &:before,
+        &:after {
+          padding: 0 13px;
+          content: '+';
+          font-size: 12px;
+        }
+      }
     }
   }
 }

@@ -14,30 +14,15 @@
 </head>
 <body class="front">
 
-<div class="site">
-  <header>
-    {% include header.html %}
-  </header>
+  <div class="wrapper">
+    <header>
+      {% include header.html %}
+    </header>
 
-  {{ content }}
+    {{ content }}
 
-  <footer>
     {% include footer.html %}
-    <div class="login-area">
-      <nav class="bottom-nav">
-        <ul>
-          <li><a href="/user/login">LOGIN</a></li>
-        </ul>
-      </nav>
+  </div>
 
-    </div>
-  </footer>
-
-
-</div>
-
-<!-- build:js(app) /js/scripts.js -->
-<script src="/js/main.js"></script>
-<!-- endbuild -->
 </body>
 </html>
