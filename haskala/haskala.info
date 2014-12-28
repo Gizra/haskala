@@ -37,6 +37,7 @@ dependencies[] = entity_token
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = module_filter
+dependencies[] = migrate
 dependencies[] = pathauto
 dependencies[] = reldate
 dependencies[] = strongarm
@@ -50,4 +51,4 @@ dependencies[] = views_bulk_operations
 ; haskala modules ------------------------------------------------------------
 ; Add here haskala modules that should be anebled when installing the
 ; haskala profile.
-dependencies[] = haskala_demo
+dependencies[] = haskala_migrate

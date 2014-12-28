@@ -1,0 +1,45 @@
+<?php
+/**
+ * @file
+ * Module to migratenstrate the Haskala profile.
+ */
+
+
+/**
+ * Dummy function so we can use this in tests.
+ *
+ * @return string
+ *   Returns hard coded string "Hello world!".
+ */
+function haskala_migrate_hello_world() {
+  return 'Hello world!';
+}
+
+/**
+ * Implements hook_migrate_api().
+ */
+function haskala_migrate_migrate_api() {
+  $classes = array(
+    'HaskalaMigrateCreateContent',
+  );
+
+  $migrations = array();
+  foreach ($classes as $class_name) {
+    $migrations[$class_name] = array(
+      'class_name' => $class_name,
+      'group_name' => HASKALA_DEMO_MIGRATION_GROUP,
+    );
+  }
+
+  $api = array(
+    'api'        => 2,
+    'groups'     => array(
+      HASKALA_DEMO_MIGRATION_GROUP => array(
+        'title' => t('Demo content'),
+      ),
+    ),
+    'migrations' => $migrations,
+  );
+
+  return $api;
+}
