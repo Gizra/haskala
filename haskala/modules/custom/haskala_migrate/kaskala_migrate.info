@@ -1,11 +1,11 @@
-name = Haskala demo module
+name = Haskala migrate module
 description = "Demonstrates the functionality of the Haskala profile"
-package = Haskala - Demo
+package = Haskala - Migrate
 core = 7.x
 version = "7.x-1.x-dev"
 core = "7.x"
 
 ; Test files
-files[] = haskala_demo.test
+files[] = haskala_migrate.test
 files[] = includes/CreateEntity.inc
 files[] = includes/CreateContent.inc

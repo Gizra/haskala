@@ -7,15 +7,15 @@
 /**
  * Implements hook_install().
  */
-function haskala_demo_install() {
-  haskala_demo_install_content_type();
+function haskala_migrate_install() {
+  haskala_migrate_install_content_type();
 }
 
 
 /**
  * Helper to create the demo content type.
  */
-function haskala_demo_install_content_type() {
+function haskala_migrate_install_content_type() {
   $types = array(
     array(
       'type' => 'haskala_content',

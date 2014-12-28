@@ -7,7 +7,7 @@
 /**
  * Tests for the get info functionality.
  */
-class HaskalaDemoTest extends DrupalWebTestCase {
+class HaskalaMigrateTest extends DrupalWebTestCase {
   /**
    * Get the test info.
    *
@@ -16,9 +16,9 @@ class HaskalaDemoTest extends DrupalWebTestCase {
    */
   public static function getInfo() {
     return array(
-      'name' => 'Haskala - Demo',
-      'description' => 'Test the Haskala Demo module.',
-      'group' => 'haskala:demo',
+      'name' => 'Haskala - Migrate',
+      'description' => 'Test the Haskala Migrate module.',
+      'group' => 'haskala:migrate',
     );
   }
 
@@ -26,7 +26,7 @@ class HaskalaDemoTest extends DrupalWebTestCase {
    * Setup the test environment.
    */
   public function setUp() {
-    $modules = array('haskala_demo');
+    $modules = array('haskala_migrate');
     parent::setUp($modules);
   }
 
@@ -35,7 +35,7 @@ class HaskalaDemoTest extends DrupalWebTestCase {
    */
   public function testHelloWorld() {
     $expected = 'Hello world!';
-    $result = haskala_demo_hello_world();
+    $result = haskala_migrate_hello_world();
 
     $this->assertEqual($expected, $result);
   }

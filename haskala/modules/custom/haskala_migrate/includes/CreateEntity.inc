@@ -5,9 +5,9 @@
  */
 
 /**
- * Class HaskalaDemoCreateEntity
+ * Class HaskalaMigrateCreateEntity
  */
-abstract class HaskalaDemoCreateEntity extends Migration {
+abstract class HaskalaMigrateCreateEntity extends Migration {
   /**
    * Supported entity types
    *
@@ -24,13 +24,13 @@ abstract class HaskalaDemoCreateEntity extends Migration {
    */
   public function __construct() {
     parent::__construct(
-      MigrateGroup::getInstance(HASKALA_DEMO_MIGRATION_GROUP)
+      MigrateGroup::getInstance(HASKALA_Migrate_MIGRATION_GROUP)
     );
 
     // Make sure we can use it for node and term only.
     if (!$this->isEntityTypeSupported($this->entityType)) {
       throw new Exception(format_string(
-        'HaskalaDemoCreateEntity does not support @type',
+        'HaskalaMigrateCreateEntity does not support @type',
         array('@type' => $this->entityType))
       );
     }
@@ -78,7 +78,7 @@ abstract class HaskalaDemoCreateEntity extends Migration {
     );
 
     // Create a MigrateSource object.
-    $csv_path = drupal_get_path('module', 'haskala_demo') . '/csv';
+    $csv_path = drupal_get_path('module', 'haskala_migrate') . '/csv';
     $this->source = new MigrateSourceCSV(
       $csv_path . '/' . $this->entityType . '/' . $this->bundle . '.csv',
       $this->csvColumns,
