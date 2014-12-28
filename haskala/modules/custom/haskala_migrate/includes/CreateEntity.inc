@@ -24,7 +24,7 @@ abstract class HaskalaMigrateCreateEntity extends Migration {
    */
   public function __construct() {
     parent::__construct(
-      MigrateGroup::getInstance(HASKALA_Migrate_MIGRATION_GROUP)
+      MigrateGroup::getInstance(HASKALA_MIGRATE_MIGRATION_GROUP)
     );
 
     // Make sure we can use it for node and term only.
