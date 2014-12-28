@@ -8,7 +8,7 @@
 abstract class HaskalaMigration extends Migration {
 
   public function __construct() {
-    parent::__construct();
+    parent::__construct(MigrateGroup::getInstance('haskala'));
 
     // Make sure we can use it for node and term only.
     if (!in_array($this->entityType, array('node', 'taxonomy_term'))) {
