@@ -38,6 +38,7 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = module_filter
 dependencies[] = migrate
+dependencies[] = migrate_extras
 dependencies[] = pathauto
 dependencies[] = reldate
 dependencies[] = strongarm
