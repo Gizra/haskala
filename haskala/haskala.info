@@ -53,3 +53,4 @@ dependencies[] = views_bulk_operations
 ; Add here haskala modules that should be anebled when installing the
 ; haskala profile.
 dependencies[] = haskala_city
+dependencies[] = haskala_migrate

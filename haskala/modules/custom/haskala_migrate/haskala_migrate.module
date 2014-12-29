@@ -29,12 +29,18 @@ function haskala_migrate_migrate_api() {
     // Users.
 
   );
-
-
+  
   $api['api'] = 2;
+  $api['groups'] = array(
+    'haskala' => array(
+      'title' => t('Haskala'),
+      'default_format' => 'filtered_html',
+    ),
+  );
   foreach ($migrations as $migration) {
     $api['migrations'][$migration] = array(
       'class_name' => $migration,
+      'group_name' => 'haskala',
     );
   }
 
