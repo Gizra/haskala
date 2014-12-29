@@ -12,7 +12,7 @@
       margin-top: 52px;
       font-weight: bold;
       letter-spacing: 0.45px;
-      margin-bottom: 60px;
+      margin-bottom: 57px;
 
       .results-message {
         margin-bottom: 42px;
@@ -89,7 +89,7 @@
 
       .letter-wrapper{
         clear: both;
-        margin-bottom: 57px;
+        margin-bottom: 52px;
 
         &:after {
           content: '';
@@ -106,7 +106,7 @@
 
         span {
           width: 74px;
-          padding-top: 7px;
+          padding: 7px 0px 2px 0px;
           line-height: 0.8;
           float: right;
           text-align: center;
@@ -121,11 +121,12 @@
         font: 11px open_sanslight;
         font-weight: bold;
         line-height: 2.41;
+        letter-spacing: 1.2px;
       }
     }
 
     footer {
-      margin-top: 120px;
+      margin-top: 118px;
 
       .bottom-nav ul{
         padding-top: 25px;
