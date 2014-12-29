@@ -21,7 +21,7 @@
     }
 
     .hr-title {
-      margin: 14px 0 62px;
+      margin: 13px 0 62px;
       font-size: 24px;
       letter-spacing: 2px;
 
@@ -43,9 +43,15 @@
         .title {
           font-size: 31px;
           font-weight: normal;
-          line-height: 1.06;
+          line-height: 1.07;
           text-transform: uppercase;
-          margin-bottom: 10px;
+          margin-bottom: 12px;
+          letter-spacing: -0.4px;
+        }
+
+        .field {
+          line-height: 2.31;
+          letter-spacing: 0.4px;
         }
 
 
@@ -53,37 +59,42 @@
 
       .field{
         clear: both;
-        line-height: 1.84;
+        line-height: 2.2;
+        letter-spacing: 0.1px;
 
         .field-label {
           display: inline-block;
-          font-size: 16px;
 
           &.type-label {
-            font-size: 18px;
+            font-size: 16px;
+            line-height: 1.2;
           }
         }
 
         .content {
           display: inline-block;
+          font-weight: bold;
         }
       }
 
       .details-navigation {
 
         font-family: bell_mtbold;
-        letter-spacing: 0.2px;
+        letter-spacing: 0.46px;
         padding-bottom: 15px;
+        height: 26px;
 
         ul{
           height: 25px;
+          width: 97%;
           overflow: hidden;
           text-overflow: ellipsis;
+          float: left;
 
           li {
             display: list-item;
             list-style-type: disc;
-            margin: 0 12px;
+            margin: 0 13px;
             float: left;
             font-size: 14px;
 
@@ -98,18 +109,46 @@
 
             a {
               color: $darkgray;
-              font-size: 20px;
+              font-size: 19px;
             }
           }
         }
 
+        &:before, &:after {
+          background: url(../images/sprites.png) no-repeat center;
+          margin-top: 4px;
+        }
+
+        &:before {
+          content: " ";
+          background-position: -200px 0;
+          width: 9px;
+          height: 15px;
+          float: left;
+        }
+
+        &:before.disabled {
+          background-position: -200px -50px;
+        }
+
+        &:after {
+          content: " ";
+          background-position: -220px 0;
+          width: 9px;
+          height: 15px;
+          float: right;
+        }
+
+        &:after.disabled {
+          background-position: -220px -50px;
+        }
       }
 
       .fields-group {
 
         clear: both;
         border-top: 1px solid $darkgray;
-        padding: 7px 21px 4px;
+        padding: 7px 21px 2px;
         margin-top: 55px;
 
         .fields-group-name {
@@ -127,7 +166,7 @@
           display: inline-block;
           width: 60%;
           margin-top: -4px;
-          font-size: 16px;
+          font-size: 14px;
 
           .content {
             font-weight: bold;
@@ -141,50 +180,7 @@
 .not-front {
   .site {
     footer {
-      margin-top: 20px;
-
-      .bottom-nav {
-
-        ul {
-          padding-top: 25px;
-        }
-
-        li {
-          float: left;
-          padding: 0px 23px 0px 0px;
-
-          &:after {
-            content: '.';
-            font-weight: bold;
-            vertical-align: bottom;
-            padding-left: 23px;
-            color: $lightBlue;
-          }
-
-          &.last:after {
-            content: '';
-            padding-left: 0;
-          }
-
-          &.first {
-            padding-left: 23px;
-          }
-        }
-
-        &:before,
-        &:after {
-          margin-top: 25px;
-          padding: 0;
-        }
-
-        &:before {
-          float: left;
-        }
-
-        &:after {
-          float: right;
-        }
-      }
+      margin-top: 22px;
     }
   }
 }
