@@ -15,7 +15,7 @@ html, body {
 
 body {
   background: white url('../images/site_background.jpg') no-repeat center top;
-  background-size: 100%;
+  /*background-size: 100%;*/
   overflow-x: hidden;
   font: 14px open_sansregular;
   font-size: small;
@@ -263,28 +263,55 @@ a {
       display: inline-block;
 
       ul {
-        padding-top: 9px;
-        letter-spacing: 0px;
+        padding-top: 25px;
+        letter-spacing: -0.8px;
         display: inline-block;
       }
 
       li {
+        float: left;
+        padding: 0px 22px 0px 0px;
         display: inline-block;
+
+        &:after {
+          content: '.';
+          font-weight: bold;
+          vertical-align: bottom;
+          padding-left: 22px;
+          color: $lightBlue;
+        }
+
+        &.last:after {
+          content: '';
+          padding-left: 0;
+        }
+
+        &.first {
+          padding-left: 23px;
+        }
       }
 
       a {
         color: $lightBlue;
-        font: 16px bell_mtbold;
-        font-weight: bold;
+        font: 18px bell_mtbold;
       }
 
       &:before,
       &:after {
-        padding: 0 10px;
+        margin-top: 25px;
+        padding: 0;
         content: '+';
         font-size: 12px;
         font-weight: bold;
         color: $lightBlue;
+      }
+
+      &:before {
+        float: left;
+      }
+
+      &:after {
+        float: right;
       }
     }
 
