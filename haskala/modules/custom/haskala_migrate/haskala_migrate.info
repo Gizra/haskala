@@ -12,5 +12,4 @@ files[] = handlers/taxonomy_term/HaskalaCityTermsMigrate.php
 
 ; Test files
 files[] = haskala_migrate.test
-files[] = includes/CreateEntity.inc
-files[] = includes/CreateContent.inc
+
