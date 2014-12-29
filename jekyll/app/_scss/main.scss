@@ -15,7 +15,7 @@ html, body {
 
 body {
   background: white url('../images/site_background.jpg') no-repeat center top;
-  background-size: 100%;
+  /*background-size: 100%;*/
   overflow-x: hidden;
   font: 14px open_sansregular;
   font-size: small;
@@ -35,9 +35,6 @@ p {
 
 a, a:hover, a:visited {
   color: $lightBlue;
-}
-
-a {
   text-decoration: none;
 }
 
@@ -50,6 +47,8 @@ a {
 
     a {
       color: $darkgray;
+      display: inline-block;
+      padding: 0;
 
       &:hover {
         color: $lightBlue;
@@ -62,13 +61,13 @@ a {
 
       li {
 
-        &:after {
+        &:before {
           content: '.';
-          margin-left: 16px;
+          margin-right: 16px;
         }
 
-        &.last, &.search {
-          &:after {
+        &.first, &.last {
+          &:before {
             content: none;
           }
         }
@@ -82,7 +81,7 @@ a {
         text-transform: uppercase;
         vertical-align: middle;
 
-        &.search {
+        &.last {
           margin-left: 15px;
           margin-top: 4px;
 
@@ -91,6 +90,7 @@ a {
             height: 30px;
             background: url('../images/top_search.png') no-repeat center bottom;
             display: inline-block;
+            text-indent: 10000px;
           }
         }
       }

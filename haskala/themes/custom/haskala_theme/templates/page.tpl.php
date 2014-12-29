@@ -1,12 +1,10 @@
 <div class="wrapper">
   <header>
     <nav class="top-navigation nav-bar">
-      <ul>
-        <li class="first"><a href="#">Books</a></li>
-        <li><a href="#">People</a></li>
-        <li class="last"><a href="#">Places</a></li>
+      <?php print drupal_render(menu_tree('menu-top-menu'));  ?>
+      <!--<ul>
         <li class="search"><a href="#"></a></li>
-      </ul>
+      </ul>-->
     </nav>
     <h1 class="site-name"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><span>Library of the</span> Haskala</a></h1>
     <hr>
