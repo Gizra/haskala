@@ -80,18 +80,21 @@
       .details-navigation {
 
         font-family: bell_mtbold;
-        letter-spacing: 0.2px;
+        letter-spacing: 0.46px;
         padding-bottom: 15px;
+        height: 26px;
 
         ul{
           height: 25px;
+          width: 97%;
           overflow: hidden;
           text-overflow: ellipsis;
+          float: left;
 
           li {
             display: list-item;
             list-style-type: disc;
-            margin: 0 12px;
+            margin: 0 13px;
             float: left;
             font-size: 14px;
 
@@ -111,11 +114,34 @@
           }
         }
 
-        /*&:before {
-          content: "<";
-          font-weight: bold;
-        }*/
+        &:before, &:after {
+          background: url(../images/sprites.png) no-repeat center;
+          margin-top: 4px;
+        }
 
+        &:before {
+          content: " ";
+          background-position: -200px 0;
+          width: 9px;
+          height: 15px;
+          float: left;
+        }
+
+        &:before.disabled {
+          background-position: -200px -50px;
+        }
+
+        &:after {
+          content: " ";
+          background-position: -220px 0;
+          width: 9px;
+          height: 15px;
+          float: right;
+        }
+
+        &:after.disabled {
+          background-position: -220px -50px;
+        }
       }
 
       .fields-group {
