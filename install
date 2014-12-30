@@ -143,6 +143,9 @@ create_sites_default_files_directory
 # Enable the development modules.
 enable_development_modules
 
+# Rebuild the theme library.
+build_theme_library
+
 # Migrate content.
 import_content
 
