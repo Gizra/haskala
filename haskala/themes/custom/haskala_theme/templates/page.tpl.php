@@ -65,32 +65,7 @@
 
   <footer>
     <nav class="icons-nav nav-bar">
-      <ul>
-        <li class="books-icon">
-          <a href="#">
-            <span class="icon books"></span>
-            <span class="icon-text">BOOKS</span>
-          </a>
-        </li>
-        <li class="digital-books-icon">
-          <a href="#">
-            <span class="icon digital-books"></span>
-            <span class="icon-text">DIGITAL BOOKS</span>
-          </a>
-        </li>
-        <li class="people-icon">
-          <a href="#">
-            <span class="icon people"></span>
-            <span class="icon-text">PEOPLE</span>
-          </a>
-        </li>
-        <li class="places-icon last">
-          <a href="#">
-            <span class="icon places"></span>
-            <span class="icon-text">PLACES</span>
-          </a>
-        </li>
-      </ul>
+      <?php print drupal_render(menu_tree('menu-icons-menu'));  ?>
     </nav>
     <div class="login-area">
       <?php print drupal_render(menu_tree('user-menu'));  ?>
