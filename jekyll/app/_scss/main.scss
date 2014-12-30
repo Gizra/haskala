@@ -2,7 +2,20 @@
 @import 'variables.scss';
 
 @import 'homepage.scss';
+@import 'singlebook';
+@import "books";
 
+@font-face {
+  font-family: 'Alef';
+  src: url('../fonts/Alef-Bold.eot');
+  src: url('../fonts/Alef-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Alef-Bold.woff') format('woff'),
+  url('../fonts/Alef-Bold.ttf') format('truetype'),
+  url('../fonts/Alef-Bold.svg#alefbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+
+}
 
 * {
   margin: 0;
@@ -15,7 +28,7 @@ html, body {
 
 body {
   background: white url('../images/site_background.jpg') no-repeat center top;
-  background-size: 100%;
+  /*background-size: 100%;*/
   overflow-x: hidden;
   font: 14px open_sansregular;
   font-size: small;
@@ -35,11 +48,18 @@ p {
 
 a, a:hover, a:visited {
   color: $lightBlue;
-}
-
-a {
   text-decoration: none;
 }
+
+/* reset bootstrap */
+
+*, *:before, *:after {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* reset bootstrap */
 
 .wrapper {
   max-width: 950px;
@@ -50,6 +70,8 @@ a {
 
     a {
       color: $darkgray;
+      display: inline-block;
+      padding: 0;
 
       &:hover {
         color: $lightBlue;
@@ -62,13 +84,13 @@ a {
 
       li {
 
-        &:after {
+        &:before {
           content: '.';
-          margin-left: 16px;
+          margin-right: 16px;
         }
 
-        &.last, &.search {
-          &:after {
+        &.first, &.last {
+          &:before {
             content: none;
           }
         }
@@ -82,7 +104,7 @@ a {
         text-transform: uppercase;
         vertical-align: middle;
 
-        &.search {
+        &.last {
           margin-left: 15px;
           margin-top: 4px;
 
@@ -91,6 +113,7 @@ a {
             height: 30px;
             background: url('../images/top_search.png') no-repeat center bottom;
             display: inline-block;
+            text-indent: 10000px;
           }
         }
       }
@@ -138,8 +161,33 @@ a {
     display: inline-block;
   }
 
+  .hr-title {
+    color: $lightBlue;
+    font-family: bell_mtbold;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    &:before,
+    &:after {
+      content: '';
+      display: inline-block;
+      border-bottom: 1px solid $lightBlue;
+      width: 38%;
+      padding-top: 10px;
+    }
+
+    &:before {
+      float: left;
+    }
+
+    &:after {
+      float: right;
+    }
+  }
+
   footer {
     overflow: hidden;
+    clear: both;
 
     .icons-nav {
       font-family: bell_mtbold;
@@ -170,78 +218,139 @@ a {
         a {
           display: block;
           color: $darkgray;
+          display: inline-block;
+          letter-spacing: -0.2px;
+          padding: 0;
 
-          .icon {
+          &:before {
+            content: '';
             display: block;
             background: url('../images/sprites.png') no-repeat;
-            margin: 0 auto;
             height: 37px;
+            margin: 0px auto 13px;
           }
 
           &:hover {
-            span {
-              color: $lightBlue;
-            }
+            color: $lightBlue;
+            background-color: transparent;
+          }
+        }
 
-            .icon {
-              height: 37px;
+        &.first a {
 
-              &.books {
-                background-position: 0 -50px;
-              }
+          &:before {
+            background-position: 0 0;
+            width: 28px;
+          }
 
-              &.digital-books {
-                background-position: -50px -50px;
-              }
+          &:hover:before {
+            background-position: 0 -50px;
+          }
+        }
 
-              &.people {
-                background-position: -100px -50px;
-              }
+        &:nth-child(2) a {
+          &:before {
+            background-position: -50px 0;
+            width: 28px;
+          }
 
-              &.places {
-                background-position: -150px -50px;
-              }
-            }
+          &:hover:before {
+            background-position: -50px -50px;
+          }
+        }
+
+        &:nth-child(3) a {
+          &:before {
+            background-position: -100px 0;
+            width: 36px;
+          }
+
+          &:hover:before {
+            background-position: -100px -50px;
+          }
+        }
+
+        &.last a {
+          &:before {
+            background-position: -150px 0;
+            width: 23px;
+          }
+
+          &:hover:before {
+            background-position: -150px -50px;
           }
         }
       }
 
-      .icon-text {
+    }
+
+    .bottom-nav {
+      display: inline-block;
+
+      ul {
+        padding-top: 25px;
+        letter-spacing: -0.8px;
         display: inline-block;
-        margin-top: 13px;
-        letter-spacing: -0.2px;
       }
 
-      .books-icon .icon {
-        background-position: 0 0;
-        width: 28px;
+      li {
+        float: left;
+        padding: 0px 22px 0px 0px;
+        display: inline-block;
+
+        &:after {
+          content: '.';
+          font-weight: bold;
+          vertical-align: bottom;
+          padding-left: 22px;
+          color: $lightBlue;
+        }
+
+        &.last:after {
+          content: '';
+          padding-left: 0;
+        }
+
+        &.first {
+          padding-left: 23px;
+        }
       }
 
-      .digital-books-icon .icon {
-        background-position: -50px 0;
-        width: 28px;
+      a {
+        color: $lightBlue;
+        font: 18px bell_mtbold;
       }
 
-      .people-icon .icon {
-        background-position: -100px 0;
-        width: 36px;
+      &:before,
+      &:after {
+        margin-top: 25px;
+        padding: 0;
+        content: '+';
+        font-size: 12px;
+        font-weight: bold;
+        color: $lightBlue;
       }
 
-      .places-icon .icon {
-        background-position: -150px 0;
-        width: 23px;
+      &:before {
+        float: left;
       }
 
+      &:after {
+        float: right;
+      }
     }
 
     .login-area {
       padding-top: 6px;
+      text-transform: uppercase;
 
 
       a {
         color: $lightBlue;
         font: 15px bell_mtbold;
         letter-spacing: -0.5px;
+        padding: 0;
+        display: inline;
 
         &:before,
         &:after {
@@ -253,3 +362,6 @@ a {
     }
   }
 }
+
+
+
