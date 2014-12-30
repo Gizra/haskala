@@ -330,12 +330,15 @@ a, a:hover, a:visited {
 
     .login-area {
       padding-top: 6px;
+      text-transform: uppercase;
 
 
       a {
         color: $lightBlue;
         font: 15px bell_mtbold;
         letter-spacing: -0.5px;
+        padding: 0;
+        display: inline;
 
         &:before,
         &:after {

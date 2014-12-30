@@ -93,7 +93,7 @@
       </ul>
     </nav>
     <div class="login-area">
-      <a href="/user/login">LOGIN</a>
+      <?php print drupal_render(menu_tree('user-menu'));  ?>
     </div>
   </footer>
 
