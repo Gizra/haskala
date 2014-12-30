@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Haskala general feature.
  */
+
+include_once 'haskala_general.features.inc';

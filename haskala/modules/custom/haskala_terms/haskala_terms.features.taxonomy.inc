@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * haskala_city.features.taxonomy.inc
+ * haskala_terms.features.taxonomy.inc
  */
 
 /**
