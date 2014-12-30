@@ -1,25 +1,18 @@
 <?php
 /**
  * @file
+<<<<<<< HEAD
  * Module to migratenstrate the Haskala profile.
+=======
+ * Migration for the Haskala profile.
+>>>>>>> master
  */
 
-
-/**
- * Dummy function so we can use this in tests.
- *
- * @return string
- *   Returns hard coded string "Hello world!".
- */
-function haskala_migrate_hello_world() {
-  return 'Hello world!';
-}
 
 /**
  * Implements hook_migrate_api().
  */
 function haskala_migrate_migrate_api() {
-
   $migrations = array(
     // Nodes.
     'HaskalaPersonsMigrate',
@@ -38,6 +31,7 @@ function haskala_migrate_migrate_api() {
       'default_format' => 'filtered_html',
     ),
   );
+
   foreach ($migrations as $migration) {
     $api['migrations'][$migration] = array(
       'class_name' => $migration,

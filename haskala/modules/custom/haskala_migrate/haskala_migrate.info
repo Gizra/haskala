@@ -1,5 +1,5 @@
 name = Haskala migrate module
-description = "Demonstrates the functionality of the Haskala profile"
+description = "Migrate haskala content"
 package = "Haskala"
 core = 7.x
 dependencies[] = migrate
@@ -10,7 +10,4 @@ files[] = includes/haskala_migrate.entity.inc
 
 files[] = handlers/taxonomy_term/HaskalaCityTermsMigrate.php
 files[] = handlers/node/HaskalaPersonsMigrate.php
-
-; Test files
-files[] = haskala_migrate.test
 

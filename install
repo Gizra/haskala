@@ -143,10 +143,8 @@ create_sites_default_files_directory
 # Enable the development modules.
 enable_development_modules
 
-# Load demo content if required.
-if [ $DEMO_CONTENT ]; then
-  import_demo_content
-fi
+# Migrate content.
+import_content
 
 # Run post script (if any).
 run_post_script "install"

@@ -6,7 +6,6 @@ core = 7.x
 
 ; Core ------------------------------------------------------------------------
 dependencies[] = block
-;dependencies[] = color
 dependencies[] = comment
 dependencies[] = contextual
 dependencies[] = help
@@ -54,5 +53,8 @@ dependencies[] = views_bulk_operations
 ; haskala profile.
 dependencies[] = haskala_terms
 dependencies[] = haskala_migrate
+<<<<<<< HEAD
 dependencies[] = haskala_people
 
+=======
+>>>>>>> master

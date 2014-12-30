@@ -1,6 +1,10 @@
 .front {
   text-align: center;
 
+  .bread-crumbs {
+    display: none;
+  }
+
   .main-content {
     font-weight: bold;
     letter-spacing: -0.4px;
