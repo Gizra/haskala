@@ -3,22 +3,22 @@ api = 2
 
 ; Modules
 projects[admin_menu][subdir] = "contrib"
-projects[admin_menu][version] = "3.0-rc4"
+projects[admin_menu][version] = "3.0-rc5"
 
 projects[admin_views][subdir] = "contrib"
-projects[admin_views][version] = "1.2"
+projects[admin_views][version] = "1.3"
 
 projects[ckeditor][subdir] = "contrib"
 projects[ckeditor][version] = "1.x-dev"
 
 projects[context][subdir] = "contrib"
-projects[context][version] = "3.2"
+projects[context][version] = "3.5"
 
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.4"
+projects[ctools][version] = "1.5"
 
 projects[date][subdir] = "contrib"
-projects[date][version] = "2.7"
+projects[date][version] = "2.8"
 
 projects[diff][subdir] = "contrib"
 projects[diff][version] = "3.2"
@@ -32,7 +32,10 @@ projects[entityreference][subdir] = "contrib"
 projects[entityreference][version] = "1.1"
 
 projects[features][subdir] = "contrib"
-projects[features][version] = "2.0"
+projects[features][version] = "2.2"
+
+projects[jquery_update][subdir] = "contrib"
+projects[jquery_update][version] = "2.4"
 
 projects[module_filter][subdir] = "contrib"
 projects[module_filter][version] = "2.0-alpha2"
@@ -56,7 +59,7 @@ projects[transliteration][subdir] = contrib
 projects[transliteration][version] = "3.2"
 
 projects[views][subdir] = "contrib"
-projects[views][version] = "3.7"
+projects[views][version] = "3.8"
 
 projects[views_bulk_operations][subdir] = "contrib"
 projects[views_bulk_operations][version] = "3.2"

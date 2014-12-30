@@ -28,21 +28,17 @@ function haskala_install() {
   menu_rebuild();
 
   // THEMES
-  $theme_default = variable_get('theme_default', 'bartik');
-
   $theme_admin = 'seven';
   _haskala_install_save_theme($theme_admin, 1);
   variable_set('admin_theme', $theme_admin);
   variable_set('node_admin_theme', TRUE);
 
-  // TODO: Replace this with the site specific theme name when not Bartik!
-  $theme_haskala = $theme_default;
-  if ($theme_haskala !== $theme_default) {
-    _haskala_install_save_theme($theme_haskala, 1);
-    variable_set('theme_default', $theme_haskala);
-    // Disable Bartik
-    _haskala_install_save_theme($theme_default, 0);
-  }
+  $theme_haskala = 'haskala_theme';
+  _haskala_install_save_theme($theme_haskala, 1);
+  variable_set('theme_default', $theme_haskala);
+  // Disable Bartik
+  _haskala_install_save_theme('bartik', 0);
+
 
   // BLOCKS
   $admin_blocks = _haskala_install_get_admin_theme_blocks($theme_admin);

@@ -35,6 +35,7 @@ dependencies[] = entity
 dependencies[] = entity_token
 dependencies[] = entityreference
 dependencies[] = features
+dependencies[] = jquery_update
 dependencies[] = module_filter
 dependencies[] = pathauto
 dependencies[] = reldate
