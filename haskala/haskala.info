@@ -6,7 +6,6 @@ core = 7.x
 
 ; Core ------------------------------------------------------------------------
 dependencies[] = block
-;dependencies[] = color
 dependencies[] = comment
 dependencies[] = contextual
 dependencies[] = help
@@ -50,4 +49,5 @@ dependencies[] = views_bulk_operations
 ; haskala modules ------------------------------------------------------------
 ; Add here haskala modules that should be anebled when installing the
 ; haskala profile.
-dependencies[] = haskala_demo
+dependencies[] = haskala_terms
+dependencies[] = haskala_migrate

@@ -1,0 +1,10 @@
+name = Haskala migrate module
+description = "Migrate haskala content"
+package = "Haskala"
+core = 7.x
+dependencies[] = migrate
+dependencies[] = migrate_extras
+
+; Handlers
+files[] = includes/haskala_migrate.entity.inc
+files[] = handlers/taxonomy_term/HaskalaCityTermsMigrate.php
