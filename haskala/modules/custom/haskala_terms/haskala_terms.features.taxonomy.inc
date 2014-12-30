@@ -7,7 +7,7 @@
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function haskala_city_taxonomy_default_vocabularies() {
+function haskala_terms_taxonomy_default_vocabularies() {
   return array(
     'cities' => array(
       'name' => 'Cities',

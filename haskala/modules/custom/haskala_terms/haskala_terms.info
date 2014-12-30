@@ -1,4 +1,4 @@
-name = Haskala City
+name = Haskala Terms
 core = 7.x
 package = Haskala
 dependencies[] = features
