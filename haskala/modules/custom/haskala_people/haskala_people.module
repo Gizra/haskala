@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Haskala People feature.
+ */
+
+include_once 'haskala_people.features.inc';

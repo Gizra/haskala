@@ -54,3 +54,5 @@ dependencies[] = views_bulk_operations
 ; haskala profile.
 dependencies[] = haskala_terms
 dependencies[] = haskala_migrate
+dependencies[] = haskala_people
+
