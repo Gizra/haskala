@@ -3,12 +3,11 @@
  * @file
  * Contains \HaskalaPersonsMigrate.
  */
-class HaskalaPersonsMigrate extends GbMigration {
+class HaskalaPersonsMigrate extends HaskalaMigration {
   public $entityType = 'node';
   public $bundle = 'person';
 
   public $csvColumns = array(
-    array('title', 'Title'),
     array('field_hebrew_name', 'Name in Hebrew'),
     array('field_german_name', 'Name in German'),
     array('field_pseudonym', 'Pseudonym'),
@@ -24,9 +23,8 @@ class HaskalaPersonsMigrate extends GbMigration {
     'HaskalaCityTermsMigrate',
   );
 
-  public function __construct() {
-    parent::__construct();
-    $this->addFieldMapping('title', 'title');
+  public function __construct($arguments) {
+    parent::__construct($arguments);
     $this->addFieldMapping('field_hebrew_name', 'field_hebrew_name');
     $this->addFieldMapping('field_german_name', 'field_german_name');
     $this->addFieldMapping('field_pseudonym', 'field_pseudonym');
@@ -44,6 +42,13 @@ class HaskalaPersonsMigrate extends GbMigration {
       ->addFieldMapping('field_place_of_death', 'field_place_of_death')
       ->sourceMigration('HaskalaCityTermsMigrate');
 
-    $this->addFieldMapping('field_occupation', 'field_occupation');
+    $this
+      ->addFieldMapping('field_occupation', 'occupation_name')
+      ->separator(',');
+    $this->addFieldMapping('field_occupation:create_term')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_occupation:ignore_case')
+      ->defaultValue(TRUE);
+
   }
 }
