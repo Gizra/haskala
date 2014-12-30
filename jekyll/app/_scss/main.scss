@@ -2,7 +2,7 @@
 @import 'variables.scss';
 
 @import 'homepage.scss';
-
+@import 'singlebook';
 
 * {
   margin: 0;
@@ -138,8 +138,33 @@ a {
     display: inline-block;
   }
 
+  .hr-title {
+    color: $lightBlue;
+    font-family: bell_mtbold;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    &:before,
+    &:after {
+      content: '';
+      display: inline-block;
+      border-bottom: 1px solid $lightBlue;
+      width: 38%;
+      padding-top: 10px;
+    }
+
+    &:before {
+      float: left;
+    }
+
+    &:after {
+      float: right;
+    }
+  }
+
   footer {
     overflow: hidden;
+    clear: both;
 
     .icons-nav {
       font-family: bell_mtbold;
@@ -232,6 +257,62 @@ a {
         width: 23px;
       }
 
+    }
+
+    .bottom-nav {
+      display: inline-block;
+
+      ul {
+        padding-top: 25px;
+        letter-spacing: -0.8px;
+        display: inline-block;
+      }
+
+      li {
+        float: left;
+        padding: 0px 22px 0px 0px;
+        display: inline-block;
+
+        &:after {
+          content: '.';
+          font-weight: bold;
+          vertical-align: bottom;
+          padding-left: 22px;
+          color: $lightBlue;
+        }
+
+        &.last:after {
+          content: '';
+          padding-left: 0;
+        }
+
+        &.first {
+          padding-left: 23px;
+        }
+      }
+
+      a {
+        color: $lightBlue;
+        font: 18px bell_mtbold;
+      }
+
+      &:before,
+      &:after {
+        margin-top: 25px;
+        padding: 0;
+        content: '+';
+        font-size: 12px;
+        font-weight: bold;
+        color: $lightBlue;
+      }
+
+      &:before {
+        float: left;
+      }
+
+      &:after {
+        float: right;
+      }
     }
 
     .login-area {
