@@ -7,4 +7,7 @@ dependencies[] = migrate_extras
 
 ; Handlers
 files[] = includes/haskala_migrate.entity.inc
+
 files[] = handlers/taxonomy_term/HaskalaCityTermsMigrate.php
+files[] = handlers/node/HaskalaPeopleMigrate.php
+

@@ -37,6 +37,8 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = jquery_update
 dependencies[] = module_filter
+dependencies[] = migrate
+dependencies[] = migrate_extras
 dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = pathauto
@@ -54,4 +56,6 @@ dependencies[] = views_bulk_operations
 ; haskala profile.
 dependencies[] = haskala_terms
 dependencies[] = haskala_migrate
+dependencies[] = haskala_people
 dependencies[] = haskala_general
+
