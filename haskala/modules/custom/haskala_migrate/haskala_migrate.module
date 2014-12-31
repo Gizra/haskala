@@ -1,11 +1,7 @@
 <?php
 /**
  * @file
-<<<<<<< HEAD
- * Module to migratenstrate the Haskala profile.
-=======
  * Migration for the Haskala profile.
->>>>>>> master
  */
 
 

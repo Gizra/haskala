@@ -26,24 +26,41 @@ class HaskalaPersonsMigrate extends HaskalaMigration {
   public function __construct($arguments) {
     parent::__construct($arguments);
     $this->addFieldMapping('field_hebrew_name', 'field_hebrew_name');
+
     $this->addFieldMapping('field_german_name', 'field_german_name');
+
     $this->addFieldMapping('field_pseudonym', 'field_pseudonym');
+
     $this
       ->addFieldMapping('field_gender', 'field_gender')
       ->defaultValue(TRUE);
+    $this->addFieldMapping('field_gender:create_term')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_gender:ignore_case')
+      ->defaultValue(TRUE);
 
     $this->addFieldMapping('field_date_of_birth', 'field_date_of_birth');
+
     $this
       ->addFieldMapping('field_place_of_birth', 'field_place_of_birth')
-      ->sourceMigration('HaskalaCityTermsMigrate');
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_place_of_birth:create_term')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_place_of_birth:ignore_case')
+      ->defaultValue(TRUE);
 
     $this->addFieldMapping('field_date_of_death', 'field_date_of_death');
-    $this
-      ->addFieldMapping('field_place_of_death', 'field_place_of_death')
-      ->sourceMigration('HaskalaCityTermsMigrate');
 
     $this
-      ->addFieldMapping('field_occupation', 'occupation_name')
+      ->addFieldMapping('field_place_of_death', 'field_place_of_death')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_place_of_death:create_term')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_place_of_death:ignore_case')
+      ->defaultValue(TRUE);
+
+    $this
+      ->addFieldMapping('field_occupation', 'field_occupation')
       ->separator(',');
     $this->addFieldMapping('field_occupation:create_term')
       ->defaultValue(TRUE);
