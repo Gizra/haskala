@@ -25,6 +25,18 @@
 
       &:before, &:after {
         width: 45%;
+
+        @media (max-width: 1024px) {
+          width: 43%;
+        }
+
+        @media (max-width: 750px) {
+          width: 35%;
+        }
+
+        @media (max-width: 400px) {
+          width: 30%;
+        }
       }
     }
 
