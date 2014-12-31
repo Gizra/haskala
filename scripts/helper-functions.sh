@@ -357,3 +357,22 @@ function run_post_script {
   $POST_FUNCT_NAME
   echo
 }
+
+##
+# Build the theme library.
+##
+function build_theme_library {
+  echo -e "${LBLUE}> Build theme library.${RESTORE}"
+
+  # Build the dependencies.
+  cd $ROOT/jekyll
+  bundle install
+  npm install
+  grunt build
+  cd $ROOT
+
+  rm -rf haskala/libraries/haskala
+  mkdir haskala/libraries/haskala
+  rsync -avz --exclude '.git' jekyll/dist/ haskala/libraries/haskala
+  echo
+}

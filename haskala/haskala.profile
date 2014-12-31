@@ -32,6 +32,11 @@ function haskala_install_tasks() {
     'display' => FALSE,
   );
 
+  $tasks['haskala_set_variables'] = array(
+    'display_name' => st('Set variables'),
+    'display' => FALSE,
+  );
+
   // Run this as the last task!
   $tasks['haskala_setup_rebuild_permissions'] = array(
     'display_name' => st('Rebuild permissions'),
@@ -74,6 +79,13 @@ function haskala_setup_blocks() {
       ->condition('theme', $theme)
       ->execute();
   }
+}
+
+/**
+ * Task callback; Setup blocks.
+ */
+function haskala_set_variables() {
+  variable_set('site_frontpage', 'homepage');
 }
 
 /**
