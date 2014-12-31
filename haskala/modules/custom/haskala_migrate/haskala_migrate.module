@@ -11,7 +11,7 @@
 function haskala_migrate_migrate_api() {
   $migrations = array(
     // Nodes.
-    'HaskalaPersonsMigrate',
+    'HaskalaPeopleMigrate',
 
     // Terms.
     'HaskalaCityTermsMigrate',
