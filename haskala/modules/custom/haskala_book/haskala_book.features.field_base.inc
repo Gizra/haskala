@@ -637,13 +637,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_list_of_sources_mentioned_'
-  $field_bases['field_list_of_sources_mentioned_'] = array(
+  // Exported field_base: 'field_list_of_sources_mentioned'
+  $field_bases['field_list_of_sources_mentioned'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_list_of_sources_mentioned_',
+    'field_name' => 'field_list_of_sources_mentioned',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -1224,13 +1224,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_place_of_publication_as_it'
-  $field_bases['field_place_of_publication_as_it'] = array(
+  // Exported field_base: 'field_place_publication_in_book'
+  $field_bases['field_place_publication_in_book'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_place_of_publication_as_it',
+    'field_name' => 'field_place_publication_in_book',
     'foreign keys' => array(
       'tid' => array(
         'columns' => array(
@@ -1466,13 +1466,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_secondary_sources_used_by_'
-  $field_bases['field_secondary_sources_used_by_'] = array(
+  // Exported field_base: 'field_secondary_sources'
+  $field_bases['field_secondary_sources'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_secondary_sources_used_by_',
+    'field_name' => 'field_secondary_sources',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -1746,24 +1746,6 @@ function haskala_book_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_width',
-    'foreign keys' => array(),
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'number',
-    'settings' => array(
-      'decimal_separator' => '.',
-    ),
-    'translatable' => 0,
-    'type' => 'number_float',
-  );
-
-  // Exported field_base: 'field_width_of_book_in_cm'
-  $field_bases['field_width_of_book_in_cm'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_width_of_book_in_cm',
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,

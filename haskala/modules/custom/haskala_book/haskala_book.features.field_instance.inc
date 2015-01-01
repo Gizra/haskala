@@ -1056,8 +1056,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_list_of_sources_mentioned_'
-  $field_instances['node-book-field_list_of_sources_mentioned_'] = array(
+  // Exported field_instance: 'node-book-field_list_of_sources_mentioned'
+  $field_instances['node-book-field_list_of_sources_mentioned'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1068,7 +1068,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 33,
+        'weight' => 91,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1078,8 +1078,8 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_list_of_sources_mentioned_',
-    'label' => 'List of sources mentioned in the book',
+    'field_name' => 'field_list_of_sources_mentioned',
+    'label' => 'List of sources mentioned in the book',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1089,7 +1089,7 @@ function haskala_book_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 3,
       ),
       'type' => 'text_textarea',
       'weight' => 35,
@@ -2058,8 +2058,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_place_of_publication_as_it'
-  $field_instances['node-book-field_place_of_publication_as_it'] = array(
+  // Exported field_instance: 'node-book-field_place_publication_in_book'
+  $field_instances['node-book-field_place_publication_in_book'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -2070,7 +2070,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 57,
+        'weight' => 92,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2080,8 +2080,8 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_place_of_publication_as_it',
-    'label' => 'Place of publication as it appears in the book',
+    'field_name' => 'field_place_publication_in_book',
+    'label' => 'Place of publication as it appears in the book',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2430,8 +2430,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_secondary_sources_used_by_'
-  $field_instances['node-book-field_secondary_sources_used_by_'] = array(
+  // Exported field_instance: 'node-book-field_secondary_sources'
+  $field_instances['node-book-field_secondary_sources'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -2442,7 +2442,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 62,
+        'weight' => 93,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2452,8 +2452,8 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_secondary_sources_used_by_',
-    'label' => 'Secondary sources used by researchers',
+    'field_name' => 'field_secondary_sources',
+    'label' => 'Secondary sources used by researchers',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -2891,51 +2891,6 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_width_of_book_in_cm'
-  $field_instances['node-book-field_width_of_book_in_cm'] = array(
-    'bundle' => 'book',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 2,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_decimal',
-        'weight' => 69,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_width_of_book_in_cm',
-    'label' => 'Width of book, in cm',
-    'required' => FALSE,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 70,
-    ),
-  );
-
   // Exported field_instance: 'node-book-field_writer_of_preface'
   $field_instances['node-book-field_writer_of_preface'] = array(
     'bundle' => 'book',
@@ -3010,7 +2965,7 @@ function haskala_book_field_default_field_instances() {
   t('Last known edition');
   t('Library of Bar Ilan University catalog number');
   t('Link to digital book');
-  t('List of sources mentioned in the book');
+  t('List of sources mentioned in the book');
   t('Location of footnotes');
   t('Motto');
   t('Name of series');
@@ -3032,12 +2987,12 @@ function haskala_book_field_default_field_instances() {
   t('Number of pages');
   t('Number of preface');
   t('Number of volumes published');
-  t('Place of publication as it appears in the book');
+  t('Place of publication as it appears in the book');
   t('Preface title');
   t('References for editions');
   t('References for sources mentioned in the book');
   t('Role in book production');
-  t('Secondary sources used by researchers');
+  t('Secondary sources used by researchers');
   t('Target audience as described in the book');
   t('Text is presented as original');
   t('Title in Latin characters');
