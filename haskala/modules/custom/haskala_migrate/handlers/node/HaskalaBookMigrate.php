@@ -47,9 +47,9 @@ class HaskalaBookMigrate extends HaskalaMigration {
     array('field_motto', 'Motto'),
     array('field_publisher_name', 'Name of publisher'),
     array('field_name_of_series', 'Name of series'),
-    array('field_names_of_other_published_v', 'Names of other published volumes'),
-    array('field_national_library_of_berlin', 'National Library of Berlin catalog number'),
-    array('field_national_library_of_hebrew', 'National Library of Hebrew University catalog number'),
+    array('field_other_volumes', 'Names of other published volumes'),
+    array('field_berlin_library_id', 'National Library of Berlin catalog number'),
+    array('field_huji_library_id', 'National Library of Hebrew University catalog number'),
     array('field_book_structure_notes', 'Notes on book structure'),
     array('field_catalog_numbers_notes', 'Notes on catalog numbers'),
     array('field_dedications_notes', 'Notes on dedications'),
@@ -90,7 +90,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
     parent::__construct($arguments);
     $this
       ->addFieldMapping('field_alignment', 'field_alignment')
-    ->defaultValue(TRUE);
+    ->separator(',');
     $this->addFieldMapping('field_alignment:create_term')
       ->defaultValue(TRUE);
     $this->addFieldMapping('field_alignment:ignore_case')
@@ -108,7 +108,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_production_evidence', 'field_production_evidence');
 
     $this->addFieldMapping('field_fonts', 'field_fonts')
-      ->defaultValue(TRUE);
+      ->separator(',');
     $this->addFieldMapping('field_fonts:create_term')
       ->defaultValue(TRUE);
     $this->addFieldMapping('field_fonts:ignore_case')
@@ -132,14 +132,14 @@ class HaskalaBookMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_epilogue', 'field_epilogue');
 
     $this->addFieldMapping('field_language_in_book', 'field_language_in_book')
-      ->defaultValue(TRUE);
+      ->separator(',');
     $this->addFieldMapping('field_language_in_book:create_term')
       ->defaultValue(TRUE);
     $this->addFieldMapping('field_language_in_book:ignore_case')
       ->defaultValue(TRUE);
 
     $this->addFieldMapping('field_language_of_footnotes', 'field_language_of_footnotes')
-    ->defaultValue(TRUE);
+      ->separator(',');
     $this->addFieldMapping('field_language_of_footnotes:create_term')
       ->defaultValue(TRUE);
     $this->addFieldMapping('field_language_of_footnotes:ignore_case')
@@ -167,9 +167,9 @@ class HaskalaBookMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_name_of_series:ignore_case')
       ->defaultValue(TRUE);
 
-    $this->addFieldMapping('field_names_of_other_published_v', 'field_names_of_other_published_v');
-    $this->addFieldMapping('field_national_library_of_berlin', 'field_national_library_of_berlin');
-    $this->addFieldMapping('field_national_library_of_hebrew', 'field_national_library_of_hebrew');
+    $this->addFieldMapping('field_other_volumes', 'field_other_volumes');
+    $this->addFieldMapping('field_berlin_library_id', 'field_berlin_library_id');
+    $this->addFieldMapping('field_huji_library_id', 'field_huji_library_id');
     $this->addFieldMapping('field_book_structure_notes', 'field_book_structure_notes');
     $this->addFieldMapping('field_catalog_numbers_notes', 'field_catalog_numbers_notes');
     $this->addFieldMapping('field_dedications_notes', 'field_dedications_notes');
@@ -202,7 +202,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_title_in_latin_characters', 'field_title_in_latin_characters');
 
     $this->addFieldMapping('field_topic', 'field_topic')
-      ->defaultValue(TRUE);
+      ->separator(',');
     $this->addFieldMapping('field_topic:create_term')
       ->defaultValue(TRUE);
     $this->addFieldMapping('field_topic:ignore_case')
@@ -211,7 +211,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_total_number_of_editions', 'field_total_number_of_editions');
 
     $this->addFieldMapping('field_typography', 'field_typography')
-      ->defaultValue(TRUE);
+      ->separator(',');
     $this->addFieldMapping('field_typography:create_term')
       ->defaultValue(TRUE);
     $this->addFieldMapping('field_typography:ignore_case')

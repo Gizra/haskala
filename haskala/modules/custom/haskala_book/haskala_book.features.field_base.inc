@@ -776,13 +776,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_names_of_other_published_v'
-  $field_bases['field_names_of_other_published_v'] = array(
+  // Exported field_base: 'field_other_volumes'
+  $field_bases['field_other_volumes'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_names_of_other_published_v',
+    'field_name' => 'field_other_volumes',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -805,13 +805,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_national_library_of_berlin'
-  $field_bases['field_national_library_of_berlin'] = array(
+  // Exported field_base: 'field_berlin_library_id'
+  $field_bases['field_berlin_library_id'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_national_library_of_berlin',
+    'field_name' => 'field_berlin_library_id',
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
@@ -821,13 +821,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_national_library_of_hebrew'
-  $field_bases['field_national_library_of_hebrew'] = array(
+  // Exported field_base: 'field_huji_library_id'
+  $field_bases['field_huji_library_id'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_national_library_of_hebrew',
+    'field_name' => 'field_huji_library_id',
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
