@@ -533,13 +533,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_list_of_sources_mentioned'
-  $field_bases['field_list_of_sources_mentioned'] = array(
+  // Exported field_base: 'field_sources_mentioned'
+  $field_bases['field_sources_mentioned'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_list_of_sources_mentioned',
+    'field_name' => 'field_sources_mentioned',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -711,13 +711,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_notes_on_catalog_numbers'
-  $field_bases['field_notes_on_catalog_numbers'] = array(
+  // Exported field_base: 'field_catalog_numbers_notes'
+  $field_bases['field_catalog_numbers_notes'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_notes_on_catalog_numbers',
+    'field_name' => 'field_catalog_numbers_notes',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -738,13 +738,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_notes_on_dedications'
-  $field_bases['field_notes_on_dedications'] = array(
+  // Exported field_base: 'field_dedications_notes'
+  $field_bases['field_dedications_notes'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_notes_on_dedications',
+    'field_name' => 'field_dedications_notes',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -765,13 +765,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_notes_on_personal_addresse'
-  $field_bases['field_notes_on_personal_addresse'] = array(
+  // Exported field_base: 'field_personal_addresse_notes'
+  $field_bases['field_personal_addresse_notes'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_notes_on_personal_addresse',
+    'field_name' => 'field_personal_addresse_notes',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -792,13 +792,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_notes_on_preface'
-  $field_bases['field_notes_on_preface'] = array(
+  // Exported field_base: 'field_preface_notes'
+  $field_bases['field_preface_notes'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_notes_on_preface',
+    'field_name' => 'field_preface_notes',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -819,13 +819,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_notes_on_references'
-  $field_bases['field_notes_on_references'] = array(
+  // Exported field_base: 'field_references_notes'
+  $field_bases['field_references_notes'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_notes_on_references',
+    'field_name' => 'field_references_notes',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -846,13 +846,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_notes_on_target_audience'
-  $field_bases['field_notes_on_target_audience'] = array(
+  // Exported field_base: 'field_target_audience_notes'
+  $field_bases['field_target_audience_notes'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_notes_on_target_audience',
+    'field_name' => 'field_target_audience_notes',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -873,13 +873,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_notes_on_textual_models'
-  $field_bases['field_notes_on_textual_models'] = array(
+  // Exported field_base: 'field_textual_models_notes'
+  $field_bases['field_textual_models_notes'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_notes_on_textual_models',
+    'field_name' => 'field_textual_models_notes',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -900,13 +900,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_notes_on_volumes'
-  $field_bases['field_notes_on_volumes'] = array(
+  // Exported field_base: 'field_volumes_notes'
+  $field_bases['field_volumes_notes'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_notes_on_volumes',
+    'field_name' => 'field_volumes_notes',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -927,13 +927,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_number_of_examined_volume'
-  $field_bases['field_number_of_examined_volume'] = array(
+  // Exported field_base: 'field_examined_volume_number'
+  $field_bases['field_examined_volume_number'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_number_of_examined_volume',
+    'field_name' => 'field_examined_volume_number',
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
@@ -943,13 +943,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_number_of_languages'
-  $field_bases['field_number_of_languages'] = array(
+  // Exported field_base: 'field_languages_number'
+  $field_bases['field_languages_number'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_number_of_languages',
+    'field_name' => 'field_languages_number',
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
@@ -959,13 +959,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_number_of_pages'
-  $field_bases['field_number_of_pages'] = array(
+  // Exported field_base: 'field_pages_number'
+  $field_bases['field_pages_number'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_number_of_pages',
+    'field_name' => 'field_pages_number',
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
@@ -975,13 +975,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_number_of_preface'
-  $field_bases['field_number_of_preface'] = array(
+  // Exported field_base: 'field_preface_number'
+  $field_bases['field_preface_number'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_number_of_preface',
+    'field_name' => 'field_preface_number',
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
@@ -991,13 +991,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_number_of_volumes_publishe'
-  $field_bases['field_number_of_volumes_publishe'] = array(
+  // Exported field_base: 'field_volumes_published_number'
+  $field_bases['field_volumes_published_number'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_number_of_volumes_publishe',
+    'field_name' => 'field_volumes_published_number',
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
@@ -1033,13 +1033,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_place_publication_in_book'
-  $field_bases['field_place_publication_in_book'] = array(
+  // Exported field_base: 'field_publication_place'
+  $field_bases['field_publication_place'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_place_publication_in_book',
+    'field_name' => 'field_publication_place',
     'foreign keys' => array(
       'tid' => array(
         'columns' => array(
@@ -1332,13 +1332,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_references_for_sources_men'
-  $field_bases['field_references_for_sources_men'] = array(
+  // Exported field_base: 'field_sources_references'
+  $field_bases['field_sources_references'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_references_for_sources_men',
+    'field_name' => 'field_sources_references',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -1545,13 +1545,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_target_audience_as_describ'
-  $field_bases['field_target_audience_as_describ'] = array(
+  // Exported field_base: 'field_target_audience'
+  $field_bases['field_target_audience'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_target_audience_as_describ',
+    'field_name' => 'field_target_audience',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -1574,13 +1574,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_text_is_presented_as_origi'
-  $field_bases['field_text_is_presented_as_origi'] = array(
+  // Exported field_base: 'field_presented_as_original'
+  $field_bases['field_presented_as_original'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_text_is_presented_as_origi',
+    'field_name' => 'field_presented_as_original',
     'foreign keys' => array(),
     'indexes' => array(
       'value' => array(

@@ -884,8 +884,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_list_of_sources_mentioned'
-  $field_instances['node-book-field_list_of_sources_mentioned'] = array(
+  // Exported field_instance: 'node-book-field_sources_mentioned'
+  $field_instances['node-book-field_sources_mentioned'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -906,7 +906,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_list_of_sources_mentioned',
+    'field_name' => 'field_sources_mentioned',
     'label' => 'List of sources mentioned in the book',
     'required' => 0,
     'settings' => array(
@@ -1173,8 +1173,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_notes_on_catalog_numbers'
-  $field_instances['node-book-field_notes_on_catalog_numbers'] = array(
+  // Exported field_instance: 'node-book-field_catalog_numbers_notes'
+  $field_instances['node-book-field_catalog_numbers_notes'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1195,7 +1195,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_notes_on_catalog_numbers',
+    'field_name' => 'field_catalog_numbers_notes',
     'label' => 'Notes on catalog numbers',
     'required' => 0,
     'settings' => array(
@@ -1213,8 +1213,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_notes_on_dedications'
-  $field_instances['node-book-field_notes_on_dedications'] = array(
+  // Exported field_instance: 'node-book-field_dedications_notes'
+  $field_instances['node-book-field_dedications_notes'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1235,7 +1235,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_notes_on_dedications',
+    'field_name' => 'field_dedications_notes',
     'label' => 'Notes on dedications',
     'required' => 0,
     'settings' => array(
@@ -1253,8 +1253,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_notes_on_personal_addresse'
-  $field_instances['node-book-field_notes_on_personal_addresse'] = array(
+  // Exported field_instance: 'node-book-field_personal_addresse_notes'
+  $field_instances['node-book-field_personal_addresse_notes'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1275,7 +1275,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_notes_on_personal_addresse',
+    'field_name' => 'field_personal_addresse_notes',
     'label' => 'Notes on personal addresses',
     'required' => 0,
     'settings' => array(
@@ -1293,8 +1293,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_notes_on_preface'
-  $field_instances['node-book-field_notes_on_preface'] = array(
+  // Exported field_instance: 'node-book-field_preface_notes'
+  $field_instances['node-book-field_preface_notes'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1315,7 +1315,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_notes_on_preface',
+    'field_name' => 'field_preface_notes',
     'label' => 'Notes on preface',
     'required' => 0,
     'settings' => array(
@@ -1333,8 +1333,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_notes_on_references'
-  $field_instances['node-book-field_notes_on_references'] = array(
+  // Exported field_instance: 'node-book-field_references_notes'
+  $field_instances['node-book-field_references_notes'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1355,7 +1355,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_notes_on_references',
+    'field_name' => 'field_references_notes',
     'label' => 'Notes on references',
     'required' => 0,
     'settings' => array(
@@ -1373,8 +1373,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_notes_on_target_audience'
-  $field_instances['node-book-field_notes_on_target_audience'] = array(
+  // Exported field_instance: 'node-book-field_target_audience_notes'
+  $field_instances['node-book-field_target_audience_notes'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1395,7 +1395,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_notes_on_target_audience',
+    'field_name' => 'field_target_audience_notes',
     'label' => 'Notes on target audience',
     'required' => 0,
     'settings' => array(
@@ -1413,8 +1413,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_notes_on_textual_models'
-  $field_instances['node-book-field_notes_on_textual_models'] = array(
+  // Exported field_instance: 'node-book-field_textual_models_notes'
+  $field_instances['node-book-field_textual_models_notes'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1435,7 +1435,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_notes_on_textual_models',
+    'field_name' => 'field_textual_models_notes',
     'label' => 'Notes on textual models',
     'required' => 0,
     'settings' => array(
@@ -1453,8 +1453,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_notes_on_volumes'
-  $field_instances['node-book-field_notes_on_volumes'] = array(
+  // Exported field_instance: 'node-book-field_volumes_notes'
+  $field_instances['node-book-field_volumes_notes'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1475,7 +1475,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_notes_on_volumes',
+    'field_name' => 'field_volumes_notes',
     'label' => 'Notes on volumes',
     'required' => 0,
     'settings' => array(
@@ -1493,8 +1493,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_number_of_examined_volume'
-  $field_instances['node-book-field_number_of_examined_volume'] = array(
+  // Exported field_instance: 'node-book-field_examined_volume_number'
+  $field_instances['node-book-field_examined_volume_number'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1520,7 +1520,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_number_of_examined_volume',
+    'field_name' => 'field_examined_volume_number',
     'label' => 'Number of examined volume',
     'required' => 0,
     'settings' => array(
@@ -1539,8 +1539,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_number_of_languages'
-  $field_instances['node-book-field_number_of_languages'] = array(
+  // Exported field_instance: 'node-book-field_languages_number'
+  $field_instances['node-book-field_languages_number'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1566,7 +1566,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_number_of_languages',
+    'field_name' => 'field_languages_number',
     'label' => 'Number of languages',
     'required' => 0,
     'settings' => array(
@@ -1585,8 +1585,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_number_of_pages'
-  $field_instances['node-book-field_number_of_pages'] = array(
+  // Exported field_instance: 'node-book-field_pages_number'
+  $field_instances['node-book-field_pages_number'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1612,7 +1612,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_number_of_pages',
+    'field_name' => 'field_pages_number',
     'label' => 'Number of pages',
     'required' => 0,
     'settings' => array(
@@ -1631,8 +1631,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_number_of_preface'
-  $field_instances['node-book-field_number_of_preface'] = array(
+  // Exported field_instance: 'node-book-field_preface_number'
+  $field_instances['node-book-field_preface_number'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1658,7 +1658,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_number_of_preface',
+    'field_name' => 'field_preface_number',
     'label' => 'Number of preface',
     'required' => 0,
     'settings' => array(
@@ -1677,8 +1677,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_number_of_volumes_publishe'
-  $field_instances['node-book-field_number_of_volumes_publishe'] = array(
+  // Exported field_instance: 'node-book-field_volumes_published_number'
+  $field_instances['node-book-field_volumes_published_number'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1704,7 +1704,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_number_of_volumes_publishe',
+    'field_name' => 'field_volumes_published_number',
     'label' => 'Number of volumes published',
     'required' => 0,
     'settings' => array(
@@ -1766,8 +1766,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_place_publication_in_book'
-  $field_instances['node-book-field_place_publication_in_book'] = array(
+  // Exported field_instance: 'node-book-field_publication_place'
+  $field_instances['node-book-field_publication_place'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1788,7 +1788,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_place_publication_in_book',
+    'field_name' => 'field_publication_place',
     'label' => 'Place of publication as it appears in the book',
     'required' => 0,
     'settings' => array(
@@ -2221,8 +2221,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_references_for_sources_men'
-  $field_instances['node-book-field_references_for_sources_men'] = array(
+  // Exported field_instance: 'node-book-field_sources_references'
+  $field_instances['node-book-field_sources_references'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -2243,7 +2243,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_references_for_sources_men',
+    'field_name' => 'field_sources_references',
     'label' => 'References for sources mentioned in the book',
     'required' => 0,
     'settings' => array(
@@ -2556,8 +2556,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_target_audience_as_describ'
-  $field_instances['node-book-field_target_audience_as_describ'] = array(
+  // Exported field_instance: 'node-book-field_target_audience'
+  $field_instances['node-book-field_target_audience'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -2578,7 +2578,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_target_audience_as_describ',
+    'field_name' => 'field_target_audience',
     'label' => 'Target audience as described in the book',
     'required' => 0,
     'settings' => array(
@@ -2596,8 +2596,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_text_is_presented_as_origi'
-  $field_instances['node-book-field_text_is_presented_as_origi'] = array(
+  // Exported field_instance: 'node-book-field_presented_as_original'
+  $field_instances['node-book-field_presented_as_original'] = array(
     'bundle' => 'book',
     'default_value' => array(
       0 => array(
@@ -2622,7 +2622,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_text_is_presented_as_origi',
+    'field_name' => 'field_presented_as_original',
     'label' => 'Text is presented as original',
     'required' => 0,
     'settings' => array(
