@@ -121,7 +121,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_funders', 'field_funders');
     $this->addFieldMapping('field_printers', 'field_printers');
     $this->addFieldMapping('field_proofreaders', 'field_proofreaders');
-    $this->addFieldMapping('field_sellerss', 'field_sellerss');
+    $this->addFieldMapping('field_sellers', 'field_sellers');
     $this->addFieldMapping('field_subscribers', 'field_subscribers');
     $this->addFieldMapping('field_preface', 'field_preface');
     $this->addFieldMapping('field_table_of_conten', 'field_table_of_conten');
