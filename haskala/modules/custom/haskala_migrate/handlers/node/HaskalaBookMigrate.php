@@ -16,6 +16,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
     array('field_recommendations', 'Are there recommendations'),
     array('field_sources_mentione', 'Are there sources mentioned in the book itself'),
     array('field_thanks', 'Are there thanks'),
+    array('field_contemporary_references', 'Contemporary references to the book'),
     array('field_copy_of_book_used', 'Copy of book used'),
     array('field_production_evidence', 'Evidence about book production'),
     array('field_fonts', 'Fonts'),
@@ -38,6 +39,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
     array('field_language_in_book', 'Language in book'),
     array('field_language_of_footnotes', 'Language of footnotes'),
     array('field_last_known_edition', 'Last known edition'),
+    array('field_later_references', 'Later references to the book'),
     array('field_bar_ilan_library_id', 'Library of Bar Ilan University catalog number'),
     array('field_link_to_digital_book', 'Link to digital book'),
     array('field_sources_mentioned', 'List of sources mentioned in the book'),
@@ -101,6 +103,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_recommendations', 'field_recommendations');
     $this->addFieldMapping('field_sources_mentione', 'field_sources_mentione');
     $this->addFieldMapping('field_thanks', 'field_thanks');
+    $this->addFieldMapping('field_contemporary_references', 'field_contemporary_references');
     $this->addFieldMapping('field_copy_of_book_used', 'field_copy_of_book_used');
     $this->addFieldMapping('field_production_evidence', 'field_production_evidence');
 
@@ -143,6 +146,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
       ->defaultValue(TRUE);
 
     $this->addFieldMapping('field_last_known_edition', 'field_last_known_edition');
+    $this->addFieldMapping('field_later_references', 'field_later_references');
     $this->addFieldMapping('field_bar_ilan_library_id', 'field_bar_ilan_library_id');
     $this->addFieldMapping('field_link_to_digital_book', 'field_link_to_digital_book');
     $this->addFieldMapping('field_sources_mentioned', 'field_sources_mentioned');
@@ -218,5 +222,9 @@ class HaskalaBookMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_writer_of_preface', 'field_writer_of_preface');
     $this->addFieldMapping('field_publication_year_in_book', 'field_publication_year_in_book');
 
+  }
+
+  public function prepareRow($row) {
+    dpm($row);
   }
 }

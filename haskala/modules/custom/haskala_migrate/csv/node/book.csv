@@ -1,4 +1,4 @@
-Uniqe ID,Title,Alignment of text,Are there dedications,Are there illustrations/diagrams,Are there personal addresses,Are there rabbinical approbations,Are there recommendations,Are there sources mentioned in the book itself,Are there thanks,Contemporary references to the book,Copy of book used,Evidence about book production,Fonts,Format of publication date,Formatted display title,Frankfurt University Library catalog number,Full title,Gregorian year of publication as it appears in the book,Hebrew year of publication as it appears in the book,"Height of book, in cm",Is there a list of funders,Is there a list of printers,Is there a list of proofreaders,Is there a list of sellers,Is there a list of subscribers,Is there a preface,Is there a table of contents,Is there an appeal to sell subscriptions,Is there an epilogue,Language in book,Language of footnotes,Last known edition,Later references to the book,Library of Bar Ilan University catalog number,Link to digital book,,Location of footnotes,Motto,Name of publisher,Name of series,Names of other published volumes,National Library of Berlin catalog number,National Library of Hebrew University catalog number,Notes on book structure,Notes on catalog numbers,Notes on dedications,Notes on personal addresses,Notes on preface,Notes on references,Notes on target audience,Notes on textual models,Notes on volumes,Number of examined volume,Number of languages,Number of pages,Number of preface,Number of volumes published,Place of publication as it appears in the book,Preface title,References for editions,References for sources mentioned in the book,Role in book production,Secondary sources used by researchers,Target audience as described in the book,Text is presented as original,Title in Latin characters,Topic,Total number of editions,Typography,"Width of book, in cm",Writer of preface,Year of publication as it appears in the book
+Uniqe ID,Title,Alignment of text,Are there dedications,Are there illustrations/diagrams,Are there personal addresses,Are there rabbinical approbations,Are there recommendations,Are there sources mentioned in the book itself,Are there thanks,Contemporary references to the book,Copy of book used,Evidence about book production,Fonts,Format of publication date,Formatted display title,Frankfurt University Library catalog number,Full title,Gregorian year of publication as it appears in the book,Hebrew year of publication as it appears in the book,"Height of book, in cm",Is there a list of funders,Is there a list of printers,Is there a list of proofreaders,Is there a list of sellers,Is there a list of subscribers,Is there a preface,Is there a table of contents,Is there an appeal to sell subscriptions,Is there an epilogue,Language in book,Language of footnotes,Last known edition,Later references to the book,Library of Bar Ilan University catalog number,Link to digital book,List of sources mentioned in the book,Location of footnotes,Motto,Name of publisher,Name of series,Names of other published volumes,National Library of Berlin catalog number,National Library of Hebrew University catalog number,Notes on book structure,Notes on catalog numbers,Notes on dedications,Notes on personal addresses,Notes on preface,Notes on references,Notes on target audience,Notes on textual models,Notes on volumes,Number of examined volume,Number of languages,Number of pages,Number of preface,Number of volumes published,Place of publication as it appears in the book,Preface title,References for editions,References for sources mentioned in the book,Role in book production,Secondary sources used by researchers,Target audience as described in the book,Text is presented as original,Title in Latin characters,Topic,Total number of editions,Typography,"Width of book, in cm",Writer of preface,Year of publication as it appears in the book
 book1,Abhandlung von der Freiheit des Menschen,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 book2,Actenstücke zur Geschichte der Erhebung der Juden zu Bürgern der Republik Batavien,,,,,,,,,,,,"Gothic,Latin",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"AK: UB Rostock: CIc-1160.2
 
@@ -531,7 +531,7 @@ book109,Ueber die bürgerliche Verbesserung der Juden,,,,,,,,,,,,Gothic,,,,,,,,,
 AK: UB Frankfurt: MP 1095","את ספרו מקדיש דוידסון אל השליט וברור שפונה אליו בחיבורו. הוא גם פונה אל הקהל הלא יהודי הרחב. אך דומה כי גם אל היהודים, בתקווה לתקנם. הוא מדבר כביכול בשם 'היהודים' - בלשון 'אנחנו'.",הספר נכתב כהגנה על הענקת זכויות אזרח ליהודים.,,,,,,,,,,,,,,,,"Emancipation,Gender,Patriotism,Productivity,Professions and occupations,Religious tolerance/ intolerance",,consecutive,,,
 book110,"Ueber die, durch die neue Organisation der Judenschaften in den Preußischen Staaten nothwendig gewordene, Umbildung",,,,,,,,,,,,Gothic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Emancipation,Religious rites",,consecutive,,,
 book111,Unterthänigste Vorstellung an Seine Hoheit den Fürst Primas der Rheinischen Konföderation über Höchstdessen neue Stättigkeits- und Schutzordnung für die Judenschaft in Frankfurt am Main,,,,,,,,,,,,Gothic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"AK: Eichstädt Nr. 501., Anna Amalia: Ruppert 3515;  UB Rostock: CIc-1065.12; UB Braunschweig:  	2300-7491; Wolfenbüttel: M: Gv 784. Vgl. dazu: Bemerkungen über des Herrn Geh. Finanzrath's Israel Jakobsohn Unterthänigste Vorstellung an Se. Hoheit den Fürst Primas, der Rheinischen Conföderation. Höchst dessen neue Stättigkeits- und Schutz-Ordnung für die Judenschaft in Frankfurt am Main betreffend.. - o.O., 1808",,,,,,,,,,,,,,,,,,Emancipation,,consecutive,,,
-book112,Verein! der Mosaischen Geseze mit dem Talmud in zwey Abhandlungen,,,,,,,,,,,,Gothic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,AK: Stabi Berlin: Ez 16830, Göttingen: 8 RABB 444/15, Oldenburg: THEOL IV C 69,,,,,,,,,,,,,,,,,,"Bible,Halachah,Talmud",,consecutive,
+book112,Verein! der Mosaischen Geseze mit dem Talmud in zwey Abhandlungen,,,,,,,,,,,,Gothic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,AK: Stabi Berlin: Ez 16830; Göttingen: 8 RABB 444/15; Oldenburg: THEOL IV C 69,,,,,,,,,,,,,,,,,,"Bible,Halachah,Talmud",,consecutive,,,
 book113,Verteidigung der jüdischen Nation gegen die in den Provinzialblättern enthaltenen Angriffe,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 book114,Von dem Daseyn Gottes die selbst redende Vernunft,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 book115,Von den Krankheiten der Juden,,,,,,,,,,,,Gothic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Medicine,,consecutive,,,
@@ -669,7 +669,7 @@ book130,אהבת ציון,,,,,,,,,,,,Rashi font,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 וינוגרד 1993
 הספרייה הלאומית: R 8=44 A 496
 הס, שמחה בן יהושע (או שמחה בן יהושע מזאלאזיץ) - חמו של דובנא, הוא המחבר. יערי, א', תרביץ כ""ו עמ' 110 -112, מוכיח כי דובנא הוא המביא לדפוס, וכי הוא הרחיב את הקונטרס הקטן לידי ספר, בין היתר מתוך מגמות משכיליות.","בדברי ההקדמה הקצרים מדגיש דובנא כי כוונתו בעריכת הספר ובהדפסתו היתה, בין היתר, המשכילית ובידורית: הוא כותב שהספר יביא תועלת לא רק ""לכל הרוצה ללקבוע דירתו שם, וידע עד כמה תכבד עליו העבודה להכין לו צידה לדרך כמבואר בהקדמת המחבר"", כי אם גם ""תועלת גדול לטרודי הפרנסה יגיעי כח למצוא מרגוע לנפשם בעת נוחם ממלאכתם ו'''ימצאו בו קורת רוח ותענוגי נפלא בהוודע להם חידושים רבים''' אשר לא ידעו תמול שלשום בהצרף להם לשון הצח והמצוחצח אשר בו על כן קורא בו יחיל טובו ויתענג בו ורחב לבו"".",,,,,,,,,,,,,,,,Ahavat Tsiyon,Zion/Eretz Israel,,consecutive,,,
-book131,אוצר השרשים א,,,,,,,,,,,,"square with no punctuation,square with punctuation,Tsena u'rena font,Rashi font",,,,,,,,,,,,,,,,,,,,,"B43 בן-זאב.או תקס""ז",,,,,,אוצר השרשים,אוצר השרשים חלק ב', אוצר החלקים חלק ג',,,,"בבר אילן ראיתי חלק א' וב' בנפרד, וכרך משותף לשלושת החלקים. בלאומית יש שלושה כרכים נפרדים. כלומר, הספר יצא במקור בשלושה כרכים נפרדים.",,,,"טק:
+book131,אוצר השרשים א,,,,,,,,,,,,"square with no punctuation,square with punctuation,Tsena u'rena font,Rashi font",,,,,,,,,,,,,,,,,,,,,"B43 בן-זאב.או תקס""ז",,,,,,אוצר השרשים,אוצר השרשים חלק ב'; אוצר החלקים חלק ג',,,,"בבר אילן ראיתי חלק א' וב' בנפרד, וכרך משותף לשלושת החלקים. בלאומית יש שלושה כרכים נפרדים. כלומר, הספר יצא במקור בשלושה כרכים נפרדים.",,,,"טק:
 
 IUL
 
@@ -684,8 +684,8 @@ CR Rare book collection ‫ 492.42 בן-ז
 חלק ב: כולל עברית ואשכנזית מן אות מ עד אות ת. תקס""ח. רע דף.
 
 חלק ג: כולל אשכנזית ועברית למצוא איש איש מבוקשו מלה אשכנזית בהעתקת לשון עברית ... תקס""ז. קכ דף.
-עברית",,,,,,,,,,,,,,,,,Otsar ha-shorashim 1: Otsar ha-shorashim kolel shorshe ha-lashon ha-ʻIvrit ʻim pitron horaʼotehem ha-shonim ... ṿe-haʻataḳatam ... me-ʻIvrit le-Ashkenazit ume-Ashkenazit le-ʻIvrit,Acculturation,,consecutive,,
-book132,אוצר השרשים ב,,,,,,,,,,,,"square with no punctuation,square with punctuation,Tsena u'rena font,Rashi font",,,,,,,,,,,,,,,,,,,,,"B43 בן-זאב.או תקס""ז",,,,,,אוצר השרשים,אוצר החלקים חלק א', אוצר החלקים חלק ג',,,,"בבר אילן ראיתי חלק א' וב' בנפרד, וכרך משותף לשלושת החלקים. בלאומית יש שלושה כרכים נפרדים. כלומר, הספר יצא במקור בשלושה כרכים נפרדים.",,,,"טק:
+עברית",,,,,,,,,,,,,,,,,Otsar ha-shorashim 1: Otsar ha-shorashim kolel shorshe ha-lashon ha-ʻIvrit ʻim pitron horaʼotehem ha-shonim ... ṿe-haʻataḳatam ... me-ʻIvrit le-Ashkenazit ume-Ashkenazit le-ʻIvrit,Acculturation,,consecutive,,,
+book132,אוצר השרשים ב,,,,,,,,,,,,"square with no punctuation,square with punctuation,Tsena u'rena font,Rashi font",,,,,,,,,,,,,,,,,,,,,"B43 בן-זאב.או תקס""ז",,,,,,אוצר השרשים,אוצר החלקים חלק א'; אוצר החלקים חלק ג',,,,"בבר אילן ראיתי חלק א' וב' בנפרד, וכרך משותף לשלושת החלקים. בלאומית יש שלושה כרכים נפרדים. כלומר, הספר יצא במקור בשלושה כרכים נפרדים.",,,,"טק:
 
 IUL
 
@@ -709,8 +709,8 @@ Notes מילון. עברית ואשכנזית באותיות עבריות.
 חלק ג: כולל אשכנזית ועברית למצוא איש איש מבוקשו מלה אשכנזית בהעתקת לשון עברית ... תקס""ז. קכ דף.  
 ---------------------------------------------------------
 
-Language עברית",,,,,,,,,,,,,,,,,Otsar ha-shorashim 2: Otsar ha-shorashim ḥeleḳ sheni kolel ʻIvrit ṿe-Ashkenazit min ot m ʻad ot t,,,consecutive,,
-book133,אוצר השרשים ג,,,,,,,,,,,,"square with no punctuation,square with punctuation,Tsena u'rena font,Rashi font",,,,,,,,,,,,,,,,,,,,,"B43 בן-זאב.או תקס""ז",,,,,,אוצר השרשים,אוצר החלקים חלק א', אוצר החלקים חלק ב',,,,"בבר אילן ראיתי חלק א' וב' בנפרד, וכרך משותף לשלושת החלקים. בלאומית יש שלושה כרכים נפרדים. כלומר, הספר יצא במקור בשלושה כרכים נפרדים.",,,,"טק:
+Language עברית",,,,,,,,,,,,,,,,,Otsar ha-shorashim 2: Otsar ha-shorashim ḥeleḳ sheni kolel ʻIvrit ṿe-Ashkenazit min ot m ʻad ot t,,,consecutive,,,
+book133,אוצר השרשים ג,,,,,,,,,,,,"square with no punctuation,square with punctuation,Tsena u'rena font,Rashi font",,,,,,,,,,,,,,,,,,,,,"B43 בן-זאב.או תקס""ז",,,,,,אוצר השרשים,אוצר החלקים חלק א'; אוצר החלקים חלק ב',,,,"בבר אילן ראיתי חלק א' וב' בנפרד, וכרך משותף לשלושת החלקים. בלאומית יש שלושה כרכים נפרדים. כלומר, הספר יצא במקור בשלושה כרכים נפרדים.",,,,"טק:
 
 IUL
 
@@ -736,10 +736,10 @@ Notes מילון. עברית ואשכנזית באותיות עבריות.
 חלק ג: כולל אשכנזית ועברית למצוא איש איש מבוקשו מלה אשכנזית בהעתקת לשון עברית ... תקס""ז. קכ דף.  
 ---------------------------------------------------------
  
-Language עברית",,,,,,,,,,,,,,,,,Otsar ha-shorashim 3: Otsar ha-shorashim ḥeleḳ shelishi kolel Ashkenazit ṿe-ʻIvrit li-metso ish ish mevuḳasho milah ashkenazit be-ha-ʻataḳat lashon ʻIvrit,,,consecutive,,
-book134,"אור אסתר oder Beleuchtung der im Talmud von Babylon und Jerusalem, in den Targumim und Midraschim vorkommenden fremden besonders lateinischen Wörter",,,,,,,,,,,,"square with no punctuation,square with punctuation,Gothic,Latin,Rashi font",,,,,,,,,,,,,,,,,,,,,"A803 בונ.או תקע""ב",,,,,,,,,,,"בהקדמתו מביע שמעון בונדי את כוונתו להוציא חלק שני (שכנראה לא ראה אור): ""אם ישרת מחברתי בעיניכם גם זאת תודיעוני למען אוציא לנכון היום גם חלק השני המדבר ממלות יונית"".",,,,AK: WLB Stuttgart: Phil.oct.6932, UB Leipzig: Lit.jud. 942. Kopie erhalten,,,,,,,,,,,,,,,,,"Or Ester oder Beleuchtung der im Talmud von Babylon und Jerusalem, in den Targumim und Midraschim vorkommenden fremden, besonders lateinischen Wörter. Von Simon und Mardochai Bondi. Herausgegeben und besorgt von der Israelitischen Haupt- und Freischule zu Deßau, zum Besten dieser Anstalt.
+Language עברית",,,,,,,,,,,,,,,,,Otsar ha-shorashim 3: Otsar ha-shorashim ḥeleḳ shelishi kolel Ashkenazit ṿe-ʻIvrit li-metso ish ish mevuḳasho milah ashkenazit be-ha-ʻataḳat lashon ʻIvrit,,,consecutive,,,
+book134,"אור אסתר oder Beleuchtung der im Talmud von Babylon und Jerusalem, in den Targumim und Midraschim vorkommenden fremden besonders lateinischen Wörter",,,,,,,,,,,,"square with no punctuation,square with punctuation,Gothic,Latin,Rashi font",,,,,,,,,,,,,,,,,,,,,"A803 בונ.או תקע""ב",,,,,,,,,,,"בהקדמתו מביע שמעון בונדי את כוונתו להוציא חלק שני (שכנראה לא ראה אור): ""אם ישרת מחברתי בעיניכם גם זאת תודיעוני למען אוציא לנכון היום גם חלק השני המדבר ממלות יונית"".",,,,AK: WLB Stuttgart: Phil.oct.6932; UB Leipzig: Lit.jud. 942. Kopie erhalten,,,,,,,,,,,,,,,,,"Or Ester oder Beleuchtung der im Talmud von Babylon und Jerusalem, in den Targumim und Midraschim vorkommenden fremden, besonders lateinischen Wörter. Von Simon und Mardochai Bondi. Herausgegeben und besorgt von der Israelitischen Haupt- und Freischule zu Deßau, zum Besten dieser Anstalt.
 
-Or Ester ṿe-huʼ beʼur maspik le-milot zarot ... ba-talmud bavli vi-yerushalmi uva-midrashim uva-targumim ... bi-ferat me-leshonot Yeṿanit u-romit",Talmud,,consecutive,,
+Or Ester ṿe-huʼ beʼur maspik le-milot zarot ... ba-talmud bavli vi-yerushalmi uva-midrashim uva-targumim ... bi-ferat me-leshonot Yeṿanit u-romit",Talmud,,consecutive,,,
 book135,אור טוב,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"טק:
 
 Shavit und Ewers 1996
@@ -1356,17 +1356,17 @@ Additional Personal Name אפרים פישיל איש ירושלים
 
 Language עברית",,"בסגנון הוויכוח שב""כוזרי""","בעותק שבידי הספרים כרוכים יחד,
 אך ממידע ביבליוגרפי על הספר עולה כי הם נדפסו בנפרד: החלק הראשון בשנת תקנ""ט, והחלק השני בשנת תק""ס.",,,,,,,,,,,,,,Divre rivot 2,"Anatomy,Animals,Commandments,Kabbala,Philosophy,Religious beliefs,Translation",,consecutive,,,
-book173,דברי שלום ואמת א,,,,,,,,,,,,Rashi font,,,,,,,,,,,,,,,,,,,,,"C2 ויז.דב תקמ""ב",,,,,,דברי שלום ואמת,רב טוב לבית ישראל, עין משפט, רחובות,,,,,,,,,"וייזל פונה אל ""אחי ורבותי"" בעקבות כתב הסובלנות של יוזף השני, אשר ""צוה ליהודים להקים מדרשות ללמד בהן ילדי ישראל את הלשון האשכנזי על בוריה"" (כדברי וייזל), ועודד אותם ""ליסד מדרשות ולתקן כל התיקונים הצריכין לענין זה"" (עמ' [30], פרק ח').
+book173,דברי שלום ואמת א,,,,,,,,,,,,Rashi font,,,,,,,,,,,,,,,,,,,,,"C2 ויז.דב תקמ""ב",,,,,,דברי שלום ואמת,רב טוב לבית ישראל; עין משפט; רחובות,,,,,,,,,"וייזל פונה אל ""אחי ורבותי"" בעקבות כתב הסובלנות של יוזף השני, אשר ""צוה ליהודים להקים מדרשות ללמד בהן ילדי ישראל את הלשון האשכנזי על בוריה"" (כדברי וייזל), ועודד אותם ""ליסד מדרשות ולתקן כל התיקונים הצריכין לענין זה"" (עמ' [30], פרק ח').
 לאחר שהוא מחלק עצות מעשיות, כותב וייזל: ""ועוד יש כמה דברים וענינם שצריכין <ins>אנשים כמוכם</ins> להשגיח עליהן, אך ידעתי שתשגיחו על הכל בבינת לבבכם, ואולם האגרת הזאת היוצאת ראשונה, איננה רק מזכרת אהבה וחבה, <ins>בעבור מקצת מן ההמון שאינן מבינים עיקרי הדברים</ins> לשפוט מה הוא טוב באמת ומהו רע כפי האמת, ללמדם ולהורותם תכלית המעשים האלו שגזר עליהן המושל החכם הקיסר יר""ה, ולהודיעם שהוא לטוב להם ולבניהם לעולם, הן להצלחה הזמנית, הן להצלחה הנצחית, אבל <ins>לא כתבתיו לחכמים ולנבונים הנמצאים בכס המבינים מדעתם</ins> יותר מאשר אוכל להודיעם.
-ועתה <ins>אחי ורבותי ראשי הדור הזה וקציניו</ins>, אם אתם תמלאו את ידכם לתקן הדבר על אופניו כמצות המושל הטוב יר""ה, תתנו עליכם ברכה..."" (עמ' [33], פרק ח')",,,,,,,,,,,,,,,,Divre shalom ṿe-emet 1,"Apologetics,Manners,Morals",,consecutive,
+ועתה <ins>אחי ורבותי ראשי הדור הזה וקציניו</ins>, אם אתם תמלאו את ידכם לתקן הדבר על אופניו כמצות המושל הטוב יר""ה, תתנו עליכם ברכה..."" (עמ' [33], פרק ח')",,,,,,,,,,,,,,,,Divre shalom ṿe-emet 1,"Apologetics,Manners,Morals",,consecutive,,,
 book174,דברי שלום ואמת ב,,,,,,,,,,,,"square with no punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,דברי שלום ואמת,,,,,,,,,,"חיבור זה מופנה כתשובה אל <ins>ראשי קהילת טרייסט</ins>, כתגובה כביכול למכתב תמיכה ששלחו לו בעקבות הפולמוס סביב <ins>דברי שלום ואמת</ins> (כך בכותרת הספר ובסופו). בתוך הספר הוא פונה אל ""אחי ורבותי הקהל הקדוש שבטריעסט"" (עמ' [27]).
 
 אך החיבור גם מהווה תשובה (ואתגר) אל אותם <ins>רבנים שיצאו נגדו</ins>: ""אם יש בפיהם דבר, יבואו ויגידו, יכתבו דבריהם על ספר, יחוקו בעט ברזל ונוכחה יחדיו, מאהבת אחים... אהה! אחר שחשדתם אותי בכך, שאני מיסב לב ישראל אחור מן התורה, להוליכם בתהו לא דרך, היה לכם לחמול על בית ישראל, ללמד אותם דעת, שלא יכשלו במכשלה הזאת, ולהודיעם יתרון חכמת התורה על חכמות למודיות וטבעיות, שלא ילכדו ברשת הטמון להם. אך זאת לא עשיתם, אין עונה מכם דבר, העתיקו מכם מלין, לכן אדברה אני. לכו בנים שמעו לי, יראת ה' אלמדכם, האזינו דברי ותחי נפשיכם."" (עמ' [15- 16])
 
 ולקראת סוף הספר מאתגר באופן ישיר ומציב בפניהם <ins>אולטמטום</ins> (דברים אלה נכתבו באותיות בולטות, השונות משאר הטקסט): ""הנני משביע באלהי ישראל, לאותן שלשה רבני עמי, ששפכו עלי דברי איבה ודברי חמה, שיגידו ויתנו עידיהן במכתב ובדפוס, מה רעה או פשע מצאו במכתבנו דברי שלום ואמת? ומה הניא לבבם לחלל את כבודי בבתי כנסיות ובמקהלות ישראל... כי עד הנה לא שמענו מהם בענין זה דברי דעת ולא טענות אנשים, זולתי קול ענות ודברי נאצה. ואני איחל לזה מועד שלשה חדשים המתחילים מהיום, וכי יבואו דבריהם, ישפטו כל בית ישראל הדין עם מיחיבור זה מופנה כתשובה אל ראשי קהילת טרייסט, כתגובה כביכול למכתב תמיכה ששלחו לו בעקבות הפולמוס סביב דברי שלום ואמת (כך בכותרת הספר ובסופו). בתוך הספר הוא פונה אל ""אחי ורבותי הקהל הקדוש שבטריעסט"" (עמ' [27]).",,,,,,,,,,,,,,,,Divre shalom ṿe-emet 2,"Morals,Rabbinical establishment",,consecutive,,,
-book175,דברי שלום ואמת ג,,,,,,,,,,,,"square with punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,דברי שלום ואמת,דברי שלום ואמת, רב טוב לבית ישראל, רחובות,,,,,,,,,,,,,,,,,,,,,,,,,Divre shalom ṿe-emet 3,,,consecutive,
-book176,דברי שלום ואמת ד,,,,,,,,,,,,"square with no punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,"C2 ויז.דב תקמ""ב",,,,,,דברי שלום ואמת,דברי שלום ואמת, רב טוב לבית ישראל, עין משפט,,,,,,,,,"בדברי הפתיחה לספר פונה וייזל אל ""מורי ואחי"" (""שמעוני עוד מורי ואחי"") ומרמז על קהל היעד שלו בספר זה: ""אילו היה מגמתי לבד להצדיק את נפשי, ולהראות כי רבים אתי מחכמי ישראל, לא הייתי צריך להוסיף עוד דבר על המדובר במכתב השלישי [עין משפט]... אבל לפי שלא על הפרט הזה לבדו יצאתי, אלא בעבור הכלל כלו, ליישר לפניהם המסלה בסדר למוד תורתנו הקדושה, ובדרכי גדול הבנים, להודיעם אשר מצאה נפשי באלה..."" (עמ' ב/2)
-ובהמשך: ""...פרט אחר המחייבני להוציא גם המכתב הזה לאור. וזהו הדרשה הידועה שדרש רב אחד עלי ועל מכתבי...וחובה עלי להשיב על דבריו ולהסיר מעלי את תלונותיו."" (עמ' ג/1)",,,,,,,,,,,,,,,,Divre shalom ṿe-emet 4,"Edict of toleration,Manners,Morals",,consecutive,
+book175,דברי שלום ואמת ג,,,,,,,,,,,,"square with punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,דברי שלום ואמת,דברי שלום ואמת; רב טוב לבית ישראל; רחובות,,,,,,,,,,,,,,,,,,,,,,,,,Divre shalom ṿe-emet 3,,,consecutive,,,
+book176,דברי שלום ואמת ד,,,,,,,,,,,,"square with no punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,"C2 ויז.דב תקמ""ב",,,,,,דברי שלום ואמת,דברי שלום ואמת; רב טוב לבית ישראל; עין משפט,,,,,,,,,"בדברי הפתיחה לספר פונה וייזל אל ""מורי ואחי"" (""שמעוני עוד מורי ואחי"") ומרמז על קהל היעד שלו בספר זה: ""אילו היה מגמתי לבד להצדיק את נפשי, ולהראות כי רבים אתי מחכמי ישראל, לא הייתי צריך להוסיף עוד דבר על המדובר במכתב השלישי [עין משפט]... אבל לפי שלא על הפרט הזה לבדו יצאתי, אלא בעבור הכלל כלו, ליישר לפניהם המסלה בסדר למוד תורתנו הקדושה, ובדרכי גדול הבנים, להודיעם אשר מצאה נפשי באלה..."" (עמ' ב/2)
+ובהמשך: ""...פרט אחר המחייבני להוציא גם המכתב הזה לאור. וזהו הדרשה הידועה שדרש רב אחד עלי ועל מכתבי...וחובה עלי להשיב על דבריו ולהסיר מעלי את תלונותיו."" (עמ' ג/1)",,,,,,,,,,,,,,,,Divre shalom ṿe-emet 4,"Edict of toleration,Manners,Morals",,consecutive,,,
 book177,דרוש על השלום,,,,,,,,,,,,"square with no punctuation,Gothic,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"טק:
 
 IUL:
@@ -1551,7 +1551,7 @@ IUL
 פנייה ישירה לקורא בתוך טקסט ההקדמה.","מדובר במילון קצר המציג מילים המופיעות אצל ברטנורה ולקוחים משפות שונות. לצד כל מילה מופיעה המקבילה ב""לשון המשנה"", באיטלקית ו""דייטש"" או ""אשכנזית"" - דהיינו בגרמנית באותיות עבריות. כמו כן, מצוין המקום המדויק במשנה בו מופיעה המילה.",,,,,,,,,,,,,,,Haʻataḳah,"Mishna,Study of Languages",,"consecutive,parallel",,,
 book191,הפטרה לשחרית יום הכפורים,,,,,,,,,,,,"square with no punctuation,square with punctuation,Tsena u'rena font",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"בסוף הקדמתו, ולאחר שפירט כמה וכמה עניינים, מציין דוד פרידלענדר: 
 ""אין דער ווייטרן ענטוויקלונג דער שענהייט דיזר רעדן האט מאן דעם אנדעכ'טיגן לעזר ניכ'ט פ'ארגרייפ'ן וואללן. יע מעהר אונד יע טיפ'ר ער דעם אינהאלט דיזר ___ נאכ'דענקן ווירד, יע גרעסר ווירד דער נוטצן אונד דאס פ'רגניגן זיין, וועלכ'י ער ... ציהן קאן"".","אמנם הטקסט בספר זה לקוח מן הנביאים, אולם הוא נבחר בשל היותו חלק מן התפילה ביום הכיפורים, והמתרגם בהקדמתו ממקם אותו בהקשר זה (ועל כן מצוין כאן ""ליטורגיה"" כמודל טקסטואלי"").",,,,,,,,,,,,,,,Hafṭarah le-shaḥarit Yom Kipurim: (Yeshaʻyah ḳ. 57 p. 14 biz ḳ. 59),"Holidays,Religious beliefs,Theology",,parallel,,,
-book192,הפטרות מכל השנה א,,,,,,,,,,,,"square with no punctuation,square with punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,הפטרות מכל השנה,צווייטי אבליפרונג, דריטי אבליפרונג, פירטי אבליפרונג,,,,,,,,"טק:
+book192,הפטרות מכל השנה א,,,,,,,,,,,,"square with no punctuation,square with punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,הפטרות מכל השנה,צווייטי אבליפרונג; דריטי אבליפרונג; פירטי אבליפרונג,,,,,,,,"טק:
 
 IUL
 
@@ -1624,8 +1624,8 @@ Additional Personal Name ברוך לינדא (לינדויא)
 
 Language עברית
 
-גרמנית באותיות עבריות",,,"בספר שבידי נכרכו הכרך הראשון והשני שיצאו בתק""ן, והכרך השלישי והרביעי שיצאו בתקנ""א",,,,,,,,,,,,,,"Hafṭarot mi-kol ha-shanah 1: Hafṭarot mi-kol ha-shanah ʿim targum Ashkenazi u-veʾur, ersṭe abliferung",,,parallel,
-book193,הפטרות מכל השנה ב,,,,,,,,,,,,"square with no punctuation,square with punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,הפטרות מכל השנה,ערשטי אבליפרונג, דריטי אבליפרונג, פירטי אבליפרונג,,,,,,,,"טק:
+גרמנית באותיות עבריות",,,"בספר שבידי נכרכו הכרך הראשון והשני שיצאו בתק""ן, והכרך השלישי והרביעי שיצאו בתקנ""א",,,,,,,,,,,,,,"Hafṭarot mi-kol ha-shanah 1: Hafṭarot mi-kol ha-shanah ʿim targum Ashkenazi u-veʾur, ersṭe abliferung",,,parallel,,,
+book193,הפטרות מכל השנה ב,,,,,,,,,,,,"square with no punctuation,square with punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,הפטרות מכל השנה,ערשטי אבליפרונג; דריטי אבליפרונג; פירטי אבליפרונג,,,,,,,,"טק:
 
 IUL
 
@@ -1706,8 +1706,8 @@ Language עברית
 
 עותק נוסף במיקרופיש ממרכז תעוד בשויץ; וסימנו:
  
-1387 MIC",,,"בספר שבידי נכרכו הכרך הראשון והשני שיצאו בתק""ן, והכרך השלישי והרביעי שיצאו בתקנ""א",,,,,,,,,,,,,,"Hafṭarot mi-kol ha-shanah 2: Hafṭarot mi-kol ha-shanah ʿim targum Ashkenazi u-veʾur, tsṿeyṭe abliferung",,,parallel,
-book194,הפטרות מכל השנה ג,,,,,,,,,,,,"square with no punctuation,square with punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,הפטרות מכל השנה,ערשטי אבליפרונג, צווייטי אבליפרונג, פירטי אבליפרונג,,,,,,,,"טק:
+1387 MIC",,,"בספר שבידי נכרכו הכרך הראשון והשני שיצאו בתק""ן, והכרך השלישי והרביעי שיצאו בתקנ""א",,,,,,,,,,,,,,"Hafṭarot mi-kol ha-shanah 2: Hafṭarot mi-kol ha-shanah ʿim targum Ashkenazi u-veʾur, tsṿeyṭe abliferung",,,parallel,,,
+book194,הפטרות מכל השנה ג,,,,,,,,,,,,"square with no punctuation,square with punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,הפטרות מכל השנה,ערשטי אבליפרונג; צווייטי אבליפרונג; פירטי אבליפרונג,,,,,,,,"טק:
 
 IUL בספרייה לאומית תחת סיגנטורה: R 8= 23 V 3604
 
@@ -1774,8 +1774,8 @@ Language עברית גרמנית באותיות עבריות
 
 עותק נוסף במיקרופיש ממרכז תעוד בשויץ; וסימנו:
 
-1387 MIC",,,"בספר שבידי נכרכו הכרך הראשון והשני שיצאו בתק""ן, והכרך השלישי והרביעי שיצאו בתקנ""א",,,,,,,,,,,,,,"Hafṭarot mi-kol ha-shanah 3: Hafṭarot mi-kol ha-shanah ʿim targum Ashkenazi u-veʾur, driṭe abliferung",,,,
-book195,הפטרות מכל השנה ד,,,,,,,,,,,,"square with no punctuation,square with punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,הפטרות מכל השנה,ערשטי אבליפרונג, צווייטי אבליפרונג,  דריטי אבליפרונג,,,,,,,,"טק:
+1387 MIC",,,"בספר שבידי נכרכו הכרך הראשון והשני שיצאו בתק""ן, והכרך השלישי והרביעי שיצאו בתקנ""א",,,,,,,,,,,,,,"Hafṭarot mi-kol ha-shanah 3: Hafṭarot mi-kol ha-shanah ʿim targum Ashkenazi u-veʾur, driṭe abliferung",,,,,,
+book195,הפטרות מכל השנה ד,,,,,,,,,,,,"square with no punctuation,square with punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,הפטרות מכל השנה,ערשטי אבליפרונג; צווייטי אבליפרונג;  דריטי אבליפרונג,,,,,,,,"טק:
 
 IUL בספרייה לאומית תחת סיגנטורה: R 8= 23 V 3604 ורשומות ההערות: עברית ואשכנזית באותיות עבריות, עמוד מול עמוד. ‬ לכל חלק שער מיוחד נוסף לשער הכולל. ‬ עותק נוסף במיקרופיש ממרכז תעוד בשויץ; וסימנו 1387 MIC
 
@@ -1836,7 +1836,7 @@ Additional Personal Name ברוך לינדא (לינדויא)
 
 Language עברית
 
-גרמנית באותיות עבריות",,,"בספר שבידי נכרכו הכרך הראשון והשני שיצאו בתק""ן, והכרך השלישי והרביעי שיצאו בתקנ""א",,,,,,,,,,,,,,"Hafṭarot mi-kol ha-shanah 4: Hafṭarot mi-kol ha-shanah ʿim targum Ashkenazi u-veʾur, firṭe abliferung",,,parallel,
+גרמנית באותיות עבריות",,,"בספר שבידי נכרכו הכרך הראשון והשני שיצאו בתק""ן, והכרך השלישי והרביעי שיצאו בתקנ""א",,,,,,,,,,,,,,"Hafṭarot mi-kol ha-shanah 4: Hafṭarot mi-kol ha-shanah ʿim targum Ashkenazi u-veʾur, firṭe abliferung",,,parallel,,,
 book196,הפיוטים והפייטנים,,,,,,,,,,,,"square with no punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"טק:
 
 IUL
@@ -3010,7 +3010,7 @@ book285,משא בערב,,,,,,,,,,,,"square with no punctuation,square with punct
 הספר מסתיים בשיר קצר.",,,,,,,,,,,,,,,Masa be-ʻArav: hu sefer ha-ḳorot,"Anthropology,Customs,Geography,Oriental Jews,Rationalism,Sephardic Jews,Superstitions,Travels,Wanderings",,consecutive,,,
 book286,משלי אגור א,,,,,,,,,,,,"square with no punctuation,square with punctuation,Tsena u'rena font,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,ספר משלי אגור,,,,,,,,,Bibliography of the Hebrew Book,,,,,,,,,,,,,,,,,"Mishle Agur 1: Sefer Mishle Agur ḥeleḳ rishon oder Moralishes fabel-bukh medubar bo nikhbadot, le-daʻat musar haśkel ...","Animals,Education,Hebrew,Image of childhood,Morals",,parallel,,,
 book287,משלי אסף א,,,,,,,,,,,,"square with no punctuation,square with punctuation,Tsena u'rena font",,,,,,,,,,,,,,,,,,,,,"סטנ.מש תקמ""טC2",,,,,,משלי אסף,"משלי אסף - חלק ב', ברלין תקנ""ב; משלי אסף - חלק ג' (זמירות אסף) תקנ""ג",,,,,,,,Bibliography of the Hebrew Book,,בראש הספר מופיע שיר מליצי המהלל את סטנוב ואת סיפרו,,,,,,,,,,,,,,,Mishle Asaf 1,"Acculturation,Anatomy,Animals,Apologetics,Astronomy,Commandments,Customs,General knowledge,Morals,Natural history (zoology/botany/mineralogy),Optics,Physics,Religious beliefs",,top/bottom,,,
-book288,משלי אסף ב,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,משלי אסף,משלי אסף  - חלק א', משלי אסף - חלק ג': זמירות אסף,,,,,,,,Bibliography of the Hebrew Book,,,,,,,,,,,,,,,,,Mishle Asaf 2,"Apologetics,Astronomy,Morals",,,,
+book288,משלי אסף ב,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,משלי אסף,משלי אסף  - חלק א'; משלי אסף - חלק ג': זמירות אסף,,,,,,,,Bibliography of the Hebrew Book,,,,,,,,,,,,,,,,,Mishle Asaf 2,"Apologetics,Astronomy,Morals",,,,,
 book289,משלי אסף ג,,,,,,,,,,,,"square with no punctuation,square with punctuation,Gothic,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,משלי אסף,,,,,,,,,Bibliography of the Hebrew Book,,,,,,,,,,,,,,,,,Mishle Asaf 3,"Anatomy,Apologetics,Halachah,Morals",,top/bottom,,,
 book290,נבואת הילד,,,,,,,,,,,,"square with no punctuation,square with punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,"A124 נבו.יל תקמ""ט",,,,,,,,,,,,,,,"טק:
 
@@ -5004,7 +5004,7 @@ book424,ערוגת הבושם,,,,,,,,,,,,"square with no punctuation,Rashi font"
 IUL
 
 ספרייה לאומית: R 8= 37 A 1944.","ברלין פותח בקריאה אל ""הולכי על דרך, אלה בעלי משנה ותלמוד, המעיינים בדבר הלכה..."" ובהמשך, כשמביע את כוונתו להדפיס את הספר ""בשמים ראש"" והצורך במימון, כותב: ""אקרא אני אל כל לומדי תורת חסד ואמת... אקרא אני אל בעלי העיון הישר והחדוד האמיתי וההוראה המחוודת [או: המהוודת]... אקרא אני אל מאהבי התורה ולומדיה, הגבירים אנשי צדק החפצים לזכות הרבים...""","הטקסט הוא ""פרסומת"" לספר בשמים ראש שברלין מבקש להדפיס. זו למעשה פנייה להשגת מנויים מראש.",,,,,,,,,,,,,,,ʻArugat ha-bosem,Halachah,,consecutive,,,
-book425,עשרה מאמרות א,,,,,,,,,,,,"square with no punctuation,Latin",,,,,,,,,,,,,,,,,,,,,,,,,,,עשרה מאמרות,בינה לעיתים, צוף נובלות,,,,,,,,"טק:
+book425,עשרה מאמרות א,,,,,,,,,,,,"square with no punctuation,Latin",,,,,,,,,,,,,,,,,,,,,,,,,,,עשרה מאמרות,בינה לעיתים; צוף נובלות,,,,,,,,"טק:
 
 ראיתי את הספר באוסף שלום ב-31/12/06. המהדורות המקוריות של שלושת החלקים הראשונים של עשרה מאמרות, שיצאו בשנים שונות, כרוכים בעותק זה יחד.
 
@@ -5065,8 +5065,8 @@ Additional Personal Name לוריא, יצחק בן שלמה (אר""י)
 
 '''לאומית:'''
 
-S 59 A 4265",,,,,,,,,,,,,,ʿAsarah maʾamarot 1: Milḥamot H.,"Apologetics,Astronomy,Central historical figures,Extraterrestrial life,Optics,Philosophy,Physics,Utilitarism,World history",,consecutive,,
-book426,עשרה מאמרות ב,,,,,,,,,,,,square with no punctuation,,,,,,,,,,,,,,,,,,,,,,,,,,,עשרה מאמרות,מלחמות ה', צוף נובלות,,,,,,,,"טק:
+S 59 A 4265",,,,,,,,,,,,,,ʿAsarah maʾamarot 1: Milḥamot H.,"Apologetics,Astronomy,Central historical figures,Extraterrestrial life,Optics,Philosophy,Physics,Utilitarism,World history",,consecutive,,,
+book426,עשרה מאמרות ב,,,,,,,,,,,,square with no punctuation,,,,,,,,,,,,,,,,,,,,,,,,,,,עשרה מאמרות,מלחמות ה'; צוף נובלות,,,,,,,,"טק:
 
 ראיתי את הספר באוסף שלום ב-31/12/06. המהדורות המקוריות של שלושת החלקים הראשונים של עשרה מאמרות, שיצאו בשנים שונות, כרוכים בעותק זה יחד.
 
@@ -5127,8 +5127,8 @@ Additional Personal Name לוריא, יצחק בן שלמה (אר""י)
 
 '''לאומית:'''
 
-S 59 A 4265",,,,,,,,,,,,,,ʻAsarah maʼamarot 2: Binah le-ʻitim,Philosophy,,consecutive,,
-book427,עשרה מאמרות ג,,,,,,,,,,,,square with no punctuation,,,,,,,,,,,,,,,,,,,,,,,,,,,עשרה מאמרות,מלחמות ה', בינה לעיתים,,,,,,,,"טק:
+S 59 A 4265",,,,,,,,,,,,,,ʻAsarah maʼamarot 2: Binah le-ʻitim,Philosophy,,consecutive,,,
+book427,עשרה מאמרות ג,,,,,,,,,,,,square with no punctuation,,,,,,,,,,,,,,,,,,,,,,,,,,,עשרה מאמרות,מלחמות ה'; בינה לעיתים,,,,,,,,"טק:
 
 ראיתי את הספר באוסף שלום ב-31/12/06. המהדורות המקוריות של שלושת החלקים הראשונים של עשרה מאמרות, שיצאו בשנים שונות, כרוכים בעותק זה יחד.
 
@@ -5189,8 +5189,8 @@ Additional Personal Name לוריא, יצחק בן שלמה (אר""י)
 
 '''לאומית:'''
 
-S 59 A 4265",,,,,,,,,,,,,,ʻAsarah maʼamarot 3: Tsuf novlot noṭef mi-Novlot ḥokhmah,Kabbala,,consecutive,,
-book428,עשרה מאמרות ה,,,,,,,,,,,,square with no punctuation,,,,,,,,,,,,,,,,,,,,,,,,,,,עשרה מאמרות,מלחמות ה', בינה לעתים, צוף נובלות,,,,,,,,"טק:
+S 59 A 4265",,,,,,,,,,,,,,ʻAsarah maʼamarot 3: Tsuf novlot noṭef mi-Novlot ḥokhmah,Kabbala,,consecutive,,,
+book428,עשרה מאמרות ה,,,,,,,,,,,,square with no punctuation,,,,,,,,,,,,,,,,,,,,,,,,,,,עשרה מאמרות,מלחמות ה'; בינה לעתים; צוף נובלות,,,,,,,,"טק:
 
 IUL
 
@@ -5241,7 +5241,7 @@ Additional Personal Name לוריא, יצחק בן שלמה (אר""י)
 
 '''לאומית:'''
 
-S 59 A 4265",,,,,,,,,,,,,,ʻAsarah maʼamarot 5: ... ʻEn ha-ḳore,"Hebrew,Study of Languages",,consecutive,
+S 59 A 4265",,,,,,,,,,,,,,ʻAsarah maʼamarot 5: ... ʻEn ha-ḳore,"Hebrew,Study of Languages",,consecutive,,,
 book429,פירוש על חד גדיא,,,,,,,,,,,,Rashi font,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"נטלי:
 
 IUL
@@ -6402,26 +6402,26 @@ book506,תולדות נח אדער געשיכטע דער זינדפלוט,,,,,,,
 המחבר פונה גם ישירות אל הקוראים <ins>והקוראות</ins>, ומבקש מהם לא להתיחס אל הספר כאל סתם רומן מבדר, כלומר, ""לא לקרוא מהר ולזרוק"" אלא לקרוא בעיון כל קטע, פעמים או יותר, במטרה מוצהרת ללמוד ממנו מוסר. ""איך ווינשע דאס מאן ניכ'ט דיא צייט צו פ'רטרייבן זאנדערן זיא ניצליך אנצוווענדען זוכ'טע"".",באשר ל'ספרות מוסר' מציין המחבר לקראת סוף הקדמתו כי הוא משתמש במכוון ב'גייסטרייכ'ן אונד ערבויענדן שטיהל' וכי אחת ממטרותיו העיקריות היא לחנך להתנהגות מוסרית ראויה.,,,,,,,,,,,,,,,"Toldot Noaḥ oder Geshikhṭe der zindfluṭ: in tsṿelf gezengen, tsur erboyung und unṭerhalṭung an heyligen ruh- und fesṭṭagen","Bible,Central historical figures,False enlightenment,Important personalities in Jewish culture,Manners,Natural history (zoology/botany/mineralogy),Religious beliefs,Superstitions,World history",,consecutive,,,
 book507,תולדות רבנו החכם משה בן מנחם,,,,,,,,,,,,"square with no punctuation,square with punctuation,Gothic,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"ראו הקדמה - אייכל פרסם את מכתבו לרעו ברי""ל",,"AK: SBBPK: 167993
 טק: עבדתי על הספר להפוך אותו ל# ב2/11/08.",,,,,,,,,,,,,,,,,Toldot rabenu he-ḥakham Mosheh ben Menaḥem,Apologetics,,consecutive,,,
-book508,תורת לשון עברית א,,,,,,,,,,,,"square with no punctuation,square with punctuation,Latin,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,תורת לשון עברית,תורת לשון עברית - חלק ב, תורת לשון עברית - חלק ג,,,,"שער הספר שכולל את שלושת הספרים הכרוכים יחד הוא:
+book508,תורת לשון עברית א,,,,,,,,,,,,"square with no punctuation,square with punctuation,Latin,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,תורת לשון עברית,תורת לשון עברית - חלק ב; תורת לשון עברית - חלק ג,,,,"שער הספר שכולל את שלושת הספרים הכרוכים יחד הוא:
 
 '''תורת לשון עברית קצרה ובאר היטב מחזקת כל דקדוק הקריאה והכתיבה ודרכי לשון כפי משפט ההגיון, מפי ספרים וסופרים הראשונים התיכונים, האחרונים, והכל על סדר נכון, איש איש על מקומו למושבותיו, ועל דרך היותר נקל ומובן לתועלת התלמידים בבתי הספר אדער קורצגעפאסטע אונד דייטליכע עברישע שפראכלעהרע צום גברויך יידיש-דייטשר שולן אין דרייא טהיילן צוויטע פרבעסערטע אונד פרמעהרטע אויפלאגע'''
 
 מהקדמת המחבר למהדורה השניה, בעמ' [6], עולה כי במהדורה הראשונה יצאו כרכי הספר בנפרד.",,,,"טק:
 עשיתי נסיונות רבים לאתר את מהדורת 1802 הראשונה, אך ללא הועיל. המהדורה הראשונה אינה ניתנת להשגה בארץ, בגרמניה או באוסטריה. יחד עם אנדראס עשיתי חיפושים במרבית הספריות החשובות בעולם - אלה המצויינות בחלונית ""מספרים קטלוגיים"" וגם אחרות, כגון, Anhaltinische Landesbücherei שבדסאו,
 Bayerische StaatsBibliothek; Oxford OLIS and Bodleian Pre-1920 Catalogues. ככל הנראה, המהדורה הראשונה היתה קטנה ולכן לא נותרו ממנה עותקים, ורמז לכך ניתן ללמצוא בהקדמת המחבר למהדורה השניה (כאן, עמ' [6]), הטוען כי המהדורה הראשונה אזלה במהירות. גם העותק שבידי של מהדורת 1807 נדיר וצולם עבור פרוייקט הגיף הקודם, ככל הנראה בספריית המוזיאון הבריטי, אך המספר הקטלוגי על גבי העותק הזה מטושטש. לא הצלחתי לאתר ספר זה בקטלוג המקוון של  ספריית המוזיאון הבריטי. 
-נטלי: הספר בשלמותו נמצא באתר של ספריית פרנקפורט.",,"לאחר השער המשותף לשלושת הכרכים, מופיע בעמ' [4-5] שיר מליצי פרי עטו של המחבר (ראו פירוט בהקדמת המחבר).",,,,,,,,,,,,,,,Torat leshon ʻIvrit 1: Torat leshon ʻIvrit ḳetsarah u-vaʼer heṭev oder Ḳurtsgefasṭe und dayṭlikhe ebreyshe shprakhlehre,,,consecutive,,
-book509,תורת לשון עברית ב,,,,,,,,,,,,"square with no punctuation,square with punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,תורת לשון עברית,תורת לשון עברית - חלק א, תורת לשון עברית - חלק ג,,,,"שער הספר שכולל את שלושת הספרים הכרוכים יחד הוא:
+נטלי: הספר בשלמותו נמצא באתר של ספריית פרנקפורט.",,"לאחר השער המשותף לשלושת הכרכים, מופיע בעמ' [4-5] שיר מליצי פרי עטו של המחבר (ראו פירוט בהקדמת המחבר).",,,,,,,,,,,,,,,Torat leshon ʻIvrit 1: Torat leshon ʻIvrit ḳetsarah u-vaʼer heṭev oder Ḳurtsgefasṭe und dayṭlikhe ebreyshe shprakhlehre,,,consecutive,,,
+book509,תורת לשון עברית ב,,,,,,,,,,,,"square with no punctuation,square with punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,תורת לשון עברית,תורת לשון עברית - חלק א; תורת לשון עברית - חלק ג,,,,"שער הספר שכולל את שלושת הספרים הכרוכים יחד הוא:
 
 '''תורת לשון עברית קצרה ובאר היטב מחזקת כל דקדוק הקריאה והכתיבה ודרכי לשון כפי משפט ההגיון, מפי ספרים וסופרים הראשונים התיכונים, האחרונים, והכל על סדר נכון, איש איש על מקומו למושבותיו, ועל דרך היותר נקל ומובן לתועלת התלמידים בבתי הספר אדער קורצגעפאסטע אונד דייטליכע עברישע שפראכלעהרע צום גברויך יידיש-דייטשר שולן אין דרייא טהיילן צוויטע פרבעסערטע אונד פרמעהרטע אויפלאגע'''
 
 מהקדמת המחבר למהדורה השניה, בעמ' [6], עולה כי במהדורה הראשונה יצאו כרכי הספר בנפרד.",,,,"עשיתי נסיונות רבים לאתר את מהדורת 1802 הראשונה, אך ללא הועיל. המהדורה הראשונה אינה ניתנת להשגה בארץ, בגרמניה או באוסטריה. יחד עם אנדראס עשיתי חיפושים במרבית הספריות החשובות בעולם - אלה המצויינות בחלונית ""מספרים קטלוגיים"" וגם אחרות, כגון, Anhaltinische Landesbüchere שבדסאו,
-Bayerische StaatsBibliothek; Oxford OLIS and Bodleian Pre-1920 Catalogues. ככל הנראה, המהדורה הראשונה היתה קטנה ולכן לא נותרו ממנה עותקים, ורמז לכך ניתן ללמצוא בהקדמת המחבר למהדורה השניה (תורת לשון - חלק א', עמ' [6]), הטוען כי המהדורה הראשונה אזלה במהירות. גם העותק שבידי של מהדורת 1807 נדיר וצולם עבור פרוייקט הגיף הקודם, ככל הנראה בספריית המוזיאון הבריטי, אך המספר הקטלוגי על גבי העותק הזה מטושטש. לא הצלחתי לאתר ספר זה בקטלוג המקוון של  ספריית המוזיאון הבריטי.",,"לאחר השער המשותף לשלושת הכרכים, מופיע בעמ' [4-5] שיר מליצי פרי עטו של המחבר (ראו פירוט בהקדמת המחבר).",,,,,,,,,,,,,,,Torat leshon ʻIvrit 2: Torat leshon ʻIvrit ḳetsarah u-vaʼer heṭev oder Ḳurtsgefasṭe und dayṭlikhe ebreyshe shprakhlehre,,,consecutive,,
-book510,תורת לשון עברית ג,,,,,,,,,,,,"square with no punctuation,square with punctuation,Latin,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,תורת לשון עברית,תורת לשון עברית - חלק א, תורת לשון עברית - חלק ב,,,,"שער הספר שכולל את שלושת הספרים הכרוכים יחד הוא:
+Bayerische StaatsBibliothek; Oxford OLIS and Bodleian Pre-1920 Catalogues. ככל הנראה, המהדורה הראשונה היתה קטנה ולכן לא נותרו ממנה עותקים, ורמז לכך ניתן ללמצוא בהקדמת המחבר למהדורה השניה (תורת לשון - חלק א', עמ' [6]), הטוען כי המהדורה הראשונה אזלה במהירות. גם העותק שבידי של מהדורת 1807 נדיר וצולם עבור פרוייקט הגיף הקודם, ככל הנראה בספריית המוזיאון הבריטי, אך המספר הקטלוגי על גבי העותק הזה מטושטש. לא הצלחתי לאתר ספר זה בקטלוג המקוון של  ספריית המוזיאון הבריטי.",,"לאחר השער המשותף לשלושת הכרכים, מופיע בעמ' [4-5] שיר מליצי פרי עטו של המחבר (ראו פירוט בהקדמת המחבר).",,,,,,,,,,,,,,,Torat leshon ʻIvrit 2: Torat leshon ʻIvrit ḳetsarah u-vaʼer heṭev oder Ḳurtsgefasṭe und dayṭlikhe ebreyshe shprakhlehre,,,consecutive,,,
+book510,תורת לשון עברית ג,,,,,,,,,,,,"square with no punctuation,square with punctuation,Latin,Rashi font",,,,,,,,,,,,,,,,,,,,,,,,,,,תורת לשון עברית,תורת לשון עברית - חלק א; תורת לשון עברית - חלק ב,,,,"שער הספר שכולל את שלושת הספרים הכרוכים יחד הוא:
 
 '''תורת לשון עברית קצרה ובאר היטב מחזקת כל דקדוק הקריאה והכתיבה ודרכי לשון כפי משפט ההגיון, מפי ספרים וסופרים הראשונים התיכונים, האחרונים, והכל על סדר נכון, איש איש על מקומו למושבותיו, ועל דרך היותר נקל ומובן לתועלת התלמידים בבתי הספר אדער קורצגעפאסטע אונד דייטליכע עברישע שפראכלעהרע צום גברויך יידיש-דייטשר שולן אין דרייא טהיילן צוויטע פרבעסערטע אונד פרמעהרטע אויפלאגע'''
 
 מהקדמת המחבר למהדורה השניה, בעמ' [6], עולה כי במהדורה הראשונה יצאו כרכי הספר בנפרד.",,,,"עשיתי נסיונות רבים לאתר את מהדורת 1802 הראשונה, אך ללא הועיל. המהדורה הראשונה אינה ניתנת להשגה בארץ, בגרמניה או באוסטריה. יחד עם אנדראס עשיתי חיפושים במרבית הספריות החשובות בעולם - אלה המצויינות בחלונית ""מספרים קטלוגיים"" וגם אחרות, כגון, Anhaltinische Landesbüchere שבדסאו,
-Bayerische StaatsBibliothek; Oxford OLIS and Bodleian Pre-1920 Catalogues. ככל הנראה, המהדורה הראשונה היתה קטנה ולכן לא נותרו ממנה עותקים, ורמז לכך ניתן ללמצוא בהקדמת המחבר למהדורה השניה (תורת לשון - חלק א', עמ' [6]), הטוען כי המהדורה הראשונה אזלה במהירות. גם העותק שבידי של מהדורת 1807 נדיר וצולם עבור פרוייקט הגיף הקודם, ככל הנראה בספריית המוזיאון הבריטי, אך המספר הקטלוגי על גבי העותק הזה מטושטש. לא הצלחתי לאתר ספר זה בקטלוג המקוון של  ספריית המוזיאון הבריטי.",,"לאחר השער המשותף לשלושת הכרכים, מופיע בעמ' [4-5] שיר מליצי פרי עטו של המחבר (ראו פירוט בהקדמת המחבר).",,,,,,,,,,,,,,,Torat leshon ʻIvrit 3: Torat leshon ʻIvrit ḳetsarah u-vaʼer heṭev oder Ḳurtsgefasṭe und dayṭlikhe ebreyshe shprakhlehre,,,consecutive,,
+Bayerische StaatsBibliothek; Oxford OLIS and Bodleian Pre-1920 Catalogues. ככל הנראה, המהדורה הראשונה היתה קטנה ולכן לא נותרו ממנה עותקים, ורמז לכך ניתן ללמצוא בהקדמת המחבר למהדורה השניה (תורת לשון - חלק א', עמ' [6]), הטוען כי המהדורה הראשונה אזלה במהירות. גם העותק שבידי של מהדורת 1807 נדיר וצולם עבור פרוייקט הגיף הקודם, ככל הנראה בספריית המוזיאון הבריטי, אך המספר הקטלוגי על גבי העותק הזה מטושטש. לא הצלחתי לאתר ספר זה בקטלוג המקוון של  ספריית המוזיאון הבריטי.",,"לאחר השער המשותף לשלושת הכרכים, מופיע בעמ' [4-5] שיר מליצי פרי עטו של המחבר (ראו פירוט בהקדמת המחבר).",,,,,,,,,,,,,,,Torat leshon ʻIvrit 3: Torat leshon ʻIvrit ḳetsarah u-vaʼer heṭev oder Ḳurtsgefasṭe und dayṭlikhe ebreyshe shprakhlehre,,,consecutive,,,
 book511,תיקון סופרים,,,,,,,,,,,,"square with no punctuation,Rashi font",,,,,,,,,,,,,,,,,,,,,"שלמ.תק תקמ""__T114.1",,,,,,,,,,,,,,,"נטלי:
 
 IUL
