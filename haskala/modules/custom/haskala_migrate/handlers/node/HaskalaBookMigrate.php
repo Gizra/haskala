@@ -36,7 +36,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
     array('field_table_of_conten', 'Is there a table of contents'),
     array('field_subscription_appeal', 'Is there an appeal to sell subscriptions'),
     array('field_epilogue', 'Is there an epilogue'),
-    array('field_language_in_book', 'Language in book'),
+    array('field_language', 'Language in book'),
     array('field_language_of_footnotes', 'Language of footnotes'),
     array('field_last_known_edition', 'Last known edition'),
     array('field_later_references', 'Later references to the book'),
@@ -131,11 +131,11 @@ class HaskalaBookMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_subscription_appeal', 'field_subscription_appeal');
     $this->addFieldMapping('field_epilogue', 'field_epilogue');
 
-    $this->addFieldMapping('field_language_in_book', 'field_language_in_book')
+    $this->addFieldMapping('field_language', 'field_language')
       ->separator(',');
-    $this->addFieldMapping('field_language_in_book:create_term')
+    $this->addFieldMapping('field_language:create_term')
       ->defaultValue(TRUE);
-    $this->addFieldMapping('field_language_in_book:ignore_case')
+    $this->addFieldMapping('field_language:ignore_case')
       ->defaultValue(TRUE);
 
     $this->addFieldMapping('field_language_of_footnotes', 'field_language_of_footnotes')
