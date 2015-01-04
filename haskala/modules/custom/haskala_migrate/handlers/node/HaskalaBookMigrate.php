@@ -85,7 +85,6 @@ class HaskalaBookMigrate extends HaskalaMigration {
 
   public $dependencies = array(
     'HaskalaCityTermsMigrate',
-    'HaskalaBookTranslationMigrate'
   );
 
   public function __construct($arguments) {
@@ -223,9 +222,9 @@ class HaskalaBookMigrate extends HaskalaMigration {
     //Todo: field_writer_of_preface is entity refernce person node, but the csv column is empty.
     $this->addFieldMapping('field_writer_of_preface', 'field_writer_of_preface');
     $this->addFieldMapping('field_publication_year_in_book', 'field_publication_year_in_book');
-    $this
+    /*$this
       ->addFieldMapping('field_translations', 'field_translations')
-      ->sourceMigration('HaskalaBookTranslationMigrate');
+      ->sourceMigration('HaskalaBookTranslationMigrate');*/
 
   }
 
