@@ -32,6 +32,9 @@
   <?php print render($page['content']); ?>
 
   <footer>
+    <nav class="icons-nav nav-bar">
+      <?php print render($icons_menu);  ?>
+    </nav>
     <div class="login-area">
       <?php print render($user_menu);  ?>
     </div>
