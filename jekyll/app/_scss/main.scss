@@ -177,12 +177,12 @@ a, a:hover, a:visited {
     .icons-nav {
       font-family: bell_mtbold;
       border-bottom: 1px solid #817f7a;
-      padding-bottom: 35px;
+      padding-bottom: 33px;
 
       li {
         width: 165px;
-        padding-right: 28px;
-        background: url('../images/bullet.png') no-repeat right 10px top 28px ;
+        padding-right: 27px;
+        background: url('../images/bullet.png') no-repeat right 8px top 25px ;
 
         @media (max-width: 750px) {
           width: 45%;
@@ -201,7 +201,6 @@ a, a:hover, a:visited {
         }
 
         a {
-          display: block;
           color: $darkgray;
           display: inline-block;
           letter-spacing: -0.2px;
@@ -211,8 +210,8 @@ a, a:hover, a:visited {
             content: '';
             display: block;
             background: url('../images/sprites.png') no-repeat;
-            height: 37px;
-            margin: 0px auto 13px;
+            height: 50px;
+            margin: 0px auto;
           }
 
           &:hover {
@@ -273,8 +272,8 @@ a, a:hover, a:visited {
       display: inline-block;
 
       ul {
-        padding-top: 25px;
-        letter-spacing: -0.8px;
+        padding-top: 6px;
+        letter-spacing: -0.2px;
         display: inline-block;
       }
 
@@ -301,59 +300,15 @@ a, a:hover, a:visited {
         }
       }
 
-      a {
-        color: $lightBlue;
-        font: 18px bell_mtbold;
+      li.login.first {
+        padding-left: 11px;
       }
 
-      &:before,
-      &:after {
-        margin-top: 25px;
-        padding: 0;
-        content: '+';
-        font-size: 12px;
-        font-weight: bold;
-        color: $lightBlue;
-      }
+      li.login {
+        padding: 1px 15px 0px 0px;
 
-      &:before {
-        float: left;
-      }
-
-      &:after {
-        float: right;
-      }
-    }
-
-    .bottom-nav {
-      display: inline-block;
-
-      ul {
-        padding-top: 25px;
-        letter-spacing: -0.8px;
-        display: inline-block;
-      }
-
-      li {
-        float: left;
-        padding: 0px 22px 0px 0px;
-        display: inline-block;
-
-        &:after {
-          content: '.';
-          font-weight: bold;
-          vertical-align: bottom;
-          padding-left: 22px;
-          color: $lightBlue;
-        }
-
-        &.last:after {
-          content: '';
-          padding-left: 0;
-        }
-
-        &.first {
-          padding-left: 23px;
+        a {
+          font: 14px bell_mtbold;
         }
       }
 
@@ -364,7 +319,7 @@ a, a:hover, a:visited {
 
       &:before,
       &:after {
-        margin-top: 25px;
+        margin-top: 9px;
         padding: 0;
         content: '+';
         font-size: 12px;
