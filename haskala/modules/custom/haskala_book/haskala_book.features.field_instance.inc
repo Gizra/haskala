@@ -131,6 +131,46 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-book-field_berlin_library_id'
+  $field_instances['node-book-field_berlin_library_id'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 110,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_berlin_library_id',
+    'label' => 'National Library of Berlin catalog number',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 43,
+    ),
+  );
+
   // Exported field_instance: 'node-book-field_book_structure_notes'
   $field_instances['node-book-field_book_structure_notes'] = array(
     'bundle' => 'book',
@@ -847,6 +887,46 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-book-field_huji_library_id'
+  $field_instances['node-book-field_huji_library_id'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 111,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_huji_library_id',
+    'label' => 'National Library of Hebrew University catalog number',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 44,
+    ),
+  );
+
   // Exported field_instance: 'node-book-field_illustrations_diagrams'
   $field_instances['node-book-field_illustrations_diagrams'] = array(
     'bundle' => 'book',
@@ -1244,6 +1324,46 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_select',
       'weight' => 41,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_other_volumes'
+  $field_instances['node-book-field_other_volumes'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 40,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_other_volumes',
+    'label' => 'Names of other published volumes',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 42,
     ),
   );
 
@@ -2914,6 +3034,9 @@ function haskala_book_field_default_field_instances() {
   t('Motto');
   t('Name of publisher');
   t('Name of series');
+  t('Names of other published volumes');
+  t('National Library of Berlin catalog number');
+  t('National Library of Hebrew University catalog number');
   t('Notes on book structure');
   t('Notes on catalog numbers');
   t('Notes on personal addresses');
