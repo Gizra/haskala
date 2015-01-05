@@ -34,9 +34,6 @@ projects[entityreference][version] = "1.1"
 projects[features][subdir] = "contrib"
 projects[features][version] = "2.2"
 
-projects[inline_entity_form][subdir] = "contrib"
-projects[inline_entity_form][version] = "1.5"
-
 projects[jquery_update][subdir] = "contrib"
 projects[jquery_update][version] = "2.4"
 

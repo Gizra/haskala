@@ -1,9 +1,9 @@
 <?php
 /**
  * @file
- * Contains \HaskalaBookTranslationMigrate.
+ * Contains \HaskalaBookTranslationsMigrate.
  */
-class HaskalaBookTranslationMigrate extends HaskalaMigration {
+class HaskalaBookTranslationsMigrate extends HaskalaMigration {
   public $entityType = 'node';
   public $bundle = 'book_translation';
 
