@@ -14,7 +14,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_personal_address', 'Are there personal addresses'),
     array('field_rabbinical_approbations', 'Are there rabbinical approbations'),
     array('field_recommendations', 'Are there recommendations'),
-    array('field_sources_mentione', 'Are there sources mentioned in the book itself'),
+    array('field_sources_exist', 'Are there sources mentioned in the book itself'),
     array('field_thanks', 'Are there thanks'),
     array('field_contemporary_references', 'Contemporary references to the book'),
     array('field_copy_of_book_used', 'Copy of book used'),
@@ -42,7 +42,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_later_references', 'Later references to the book'),
     array('field_bar_ilan_library_id', 'Library of Bar Ilan University catalog number'),
     array('field_link_to_digital_book', 'Link to digital book'),
-    array('field_sources_mentioned', 'List of sources mentioned in the book'),
+    array('field_sources_list', 'List of sources mentioned in the book'),
     array('field_location_of_footnotes', 'Location of footnotes'),
     array('field_motto', 'Motto'),
     array('field_publisher_name', 'Name of publisher'),
@@ -101,7 +101,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_personal_address', 'field_personal_address');
     $this->addFieldMapping('field_rabbinical_approbations', 'field_rabbinical_approbations');
     $this->addFieldMapping('field_recommendations', 'field_recommendations');
-    $this->addFieldMapping('field_sources_mentione', 'field_sources_mentione');
+    $this->addFieldMapping('field_sources_exist', 'field_sources_exist');
     $this->addFieldMapping('field_thanks', 'field_thanks');
     $this->addFieldMapping('field_contemporary_references', 'field_contemporary_references');
     $this->addFieldMapping('field_copy_of_book_used', 'field_copy_of_book_used');
@@ -149,7 +149,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_later_references', 'field_later_references');
     $this->addFieldMapping('field_bar_ilan_library_id', 'field_bar_ilan_library_id');
     $this->addFieldMapping('field_link_to_digital_book', 'field_link_to_digital_book');
-    $this->addFieldMapping('field_sources_mentioned', 'field_sources_mentioned');
+    $this->addFieldMapping('field_sources_list', 'field_sources_list');
     $this->addFieldMapping('field_location_of_footnotes', 'field_location_of_footnotes');
     $this->addFieldMapping('field_motto', 'field_motto');
 

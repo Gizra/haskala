@@ -2243,8 +2243,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_sources_mentione'
-  $field_instances['node-book-field_sources_mentione'] = array(
+  // Exported field_instance: 'node-book-field_sources_exist'
+  $field_instances['node-book-field_sources_exist'] = array(
     'bundle' => 'book',
     'default_value' => array(
       0 => array(
@@ -2269,7 +2269,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_sources_mentione',
+    'field_name' => 'field_sources_exist',
     'label' => 'Are there sources mentioned in the book itself',
     'required' => 0,
     'settings' => array(
@@ -2286,8 +2286,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_sources_mentioned'
-  $field_instances['node-book-field_sources_mentioned'] = array(
+  // Exported field_instance: 'node-book-field_sources_list'
+  $field_instances['node-book-field_sources_list'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -2308,7 +2308,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_sources_mentioned',
+    'field_name' => 'field_sources_list',
     'label' => 'List of sources mentioned in the book',
     'required' => 0,
     'settings' => array(
