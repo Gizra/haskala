@@ -11,26 +11,20 @@ phantomcss.init({
   // mismatchTolerance: 1
 });
 
-casper.start('http://localhost:9000/#/login');
+casper.start('http://localhost:9000/');
 
 casper.viewport(1024, 768);
 
-casper.waitForSelector('.signin-body', function() {
-  this.echo('Verify login form');
-  phantomcss.screenshot('#login', 'login-form');
-});
 
 casper.then(function() {
-  // Login user.
-  this.fill('#login', {
-    'username': 'demo',
-    'password': '1234'
-  }, true);
-});
+  this.echo('Verify menu bar');
+  phantomcss.screenshot('.top-navigation', 'top-navigation');
 
-casper.waitForUrl('http://localhost:9000/#/dashboard/1/events', function() {
-  this.echo('Verify authors list in dashboard');
-  phantomcss.screenshot('.authors-list', 'authors-list');
+  this.echo('Verify site name');
+  phantomcss.screenshot('.site-name', 'site-name');
+
+  this.echo('Verify icons nav');
+  phantomcss.screenshot('.icons-nav', 'icons-nav');
 });
 
 casper.then( function now_check_the_screenshots(){

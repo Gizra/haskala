@@ -38,11 +38,10 @@ before_script:
   - cp travis.config.sh config.sh
   - ./install -dy
 
-  # Install client
-  - cd client
+  # Install Jekyll
+  - cd jekyll
   - npm install
   - bower install
-  - cp config.travis.json config.json
   - grunt serve > ~/grunt.log 2>&1 &
   - cd ..
 
@@ -76,7 +75,7 @@ script:
 
   # Run PhantomCSS tests.
   - cd phantomcss
-  - casperjs test dashboard.js
+  - casperjs test homepage.js
 
   # Upload failed images to imgur
   # - bash $TRAVIS_BUILD_DIR/imgur ./failures/login-form_0.fail.png
