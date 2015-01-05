@@ -10,50 +10,6 @@
 function haskala_book_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-book-body'
-  $field_instances['node-book-body'] = array(
-    'bundle' => 'book',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 2,
-    ),
-  );
-
   // Exported field_instance: 'node-book-field_alignment'
   $field_instances['node-book-field_alignment'] = array(
     'bundle' => 'book',
@@ -970,8 +926,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_language_in_book'
-  $field_instances['node-book-field_language_in_book'] = array(
+  // Exported field_instance: 'node-book-field_language'
+  $field_instances['node-book-field_language'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -982,7 +938,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 28,
+        'weight' => 112,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -992,8 +948,8 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_language_in_book',
-    'label' => 'Language in book',
+    'field_name' => 'field_language',
+    'label' => 'Language in book',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2992,6 +2948,238 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-book_translation-field_book'
+  $field_instances['node-book_translation-field_book'] = array(
+    'bundle' => 'book_translation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_book',
+    'label' => 'Translation of book',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance: 'node-book_translation-field_language'
+  $field_instances['node-book_translation-field_language'] = array(
+    'bundle' => 'book_translation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_language',
+    'label' => 'Language of translation',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance: 'node-book_translation-field_translation_city'
+  $field_instances['node-book_translation-field_translation_city'] = array(
+    'bundle' => 'book_translation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_translation_city',
+    'label' => 'City of translation',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 36,
+    ),
+  );
+
+  // Exported field_instance: 'node-book_translation-field_translation_references'
+  $field_instances['node-book_translation-field_translation_references'] = array(
+    'bundle' => 'book_translation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_translation_references',
+    'label' => 'References for translation',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 38,
+    ),
+  );
+
+  // Exported field_instance: 'node-book_translation-field_translation_year'
+  $field_instances['node-book_translation-field_translation_year'] = array(
+    'bundle' => 'book_translation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_translation_year',
+    'label' => 'Year of translation',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 35,
+    ),
+  );
+
+  // Exported field_instance: 'node-book_translation-field_translator'
+  $field_instances['node-book_translation-field_translator'] = array(
+    'bundle' => 'book_translation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_translator',
+    'label' => 'Translator of translation',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 37,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Alignment of text');
@@ -3002,7 +3190,7 @@ function haskala_book_field_default_field_instances() {
   t('Are there recommendations');
   t('Are there sources mentioned in the book itself');
   t('Are there thanks');
-  t('Body');
+  t('City of translation');
   t('Contemporary references to the book');
   t('Copy of book used');
   t('Evidence about book production');
@@ -3023,7 +3211,8 @@ function haskala_book_field_default_field_instances() {
   t('Is there a table of contents');
   t('Is there an appeal to sell subscriptions');
   t('Is there an epilogue');
-  t('Language in book');
+  t('Language in book');
+  t('Language of translation');
   t('Language of footnotes');
   t('Last known edition');
   t('Later references to the book');
@@ -3053,6 +3242,7 @@ function haskala_book_field_default_field_instances() {
   t('Number of volumes published');
   t('Place of publication as it appears in the book');
   t('Preface title');
+  t('References for translation');
   t('References for editions');
   t('References for sources mentioned in the book');
   t('Role in book production');
@@ -3062,9 +3252,12 @@ function haskala_book_field_default_field_instances() {
   t('Title in Latin characters');
   t('Topic');
   t('Total number of editions');
+  t('Translation of book');
+  t('Translator of translation');
   t('Typography');
   t('Width of book, in cm');
   t('Writer of preface');
+  t('Year of translation');
   t('Year of publication as it appears in the book');
 
   return $field_instances;

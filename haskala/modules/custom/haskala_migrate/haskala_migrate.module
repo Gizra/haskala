@@ -13,6 +13,7 @@ function haskala_migrate_migrate_api() {
     // Nodes.
     'HaskalaPeopleMigrate',
     'HaskalaBooksMigrate',
+    'HaskalaBookTranslationsMigrate',
 
     // Terms.
     'HaskalaCityTermsMigrate',
