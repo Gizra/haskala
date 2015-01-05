@@ -226,8 +226,4 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_publication_year_in_book', 'field_publication_year_in_book');
 
   }
-
-  public function prepareRow($row) {
-    dpm($row);
-  }
 }
