@@ -12,7 +12,7 @@ class HaskalaBookTranslationMigrate extends HaskalaMigration {
     array('field_language', 'Language of translation'),
     array('field_translation_year', 'Year of translation'),
     array('field_translation_city', 'City of translation'),
-    array('field_translator', 'Translator of translation'),
+    array('field_translator', 'Translator id'),
     array('field_translation_references', 'References for translation'),
 
   );
@@ -49,7 +49,4 @@ class HaskalaBookTranslationMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_translation_references', 'field_translation_references');
   }
 
-  public function prepareRow($row) {
-    dpm($row);
-  }
 }

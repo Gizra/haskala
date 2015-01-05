@@ -228,7 +228,4 @@ class HaskalaBookMigrate extends HaskalaMigration {
 
   }
 
-  public function prepareRow($row) {
-    dpm($row);
-  }
 }
