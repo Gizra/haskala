@@ -35,7 +35,6 @@ dependencies[] = entity
 dependencies[] = entity_token
 dependencies[] = entityreference
 dependencies[] = features
-dependencies[] = inline_entity_form
 dependencies[] = jquery_update
 dependencies[] = module_filter
 dependencies[] = migrate
