@@ -271,7 +271,6 @@ a, a:hover, a:visited {
           }
         }
       }
-
     }
 
     .bottom-nav {
@@ -280,7 +279,11 @@ a, a:hover, a:visited {
       margin-top: 0px;
 
       ul.bottom-nav-options {
-        display: none;
+        margin-top: 20px;
+
+        li {
+          padding: 1px 10px 0px 0px;
+        }
       }
 
       ul {
@@ -313,10 +316,12 @@ a, a:hover, a:visited {
       }
 
       li.login.first {
+        display: none;
         padding-left: 11px;
       }
 
       li.login {
+        display: none;
         padding: 1px 15px 0px 0px;
 
         a {
