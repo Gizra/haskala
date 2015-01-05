@@ -28,7 +28,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_hebrew_year', 'Hebrew year of publication as it appears in the book'),
     array('field_height', 'Height of book, in cm'),
     array('field_funders', 'Is there a list of funders'),
-    array('field_printers', 's there a list of printers'),
+    array('field_printers', 'Is there a list of printers'),
     array('field_proofreaders', 'Is there a list of proofreaders'),
     array('field_sellers', 'Is there a list of sellers'),
     array('field_subscribers', 'Is there a list of subscribers'),
