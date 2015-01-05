@@ -65,6 +65,7 @@ a, a:hover, a:visited {
 
     .top-navigation {
       margin-bottom: 16px;
+      margin-right: 34px;
       font-family: bell_mtbold;
 
       li {
@@ -110,7 +111,8 @@ a, a:hover, a:visited {
       font-weight: bold;
       line-height: 1;
       margin-bottom: 6px;
-      letter-spacing: 10.3px;
+      margin-left: 5px;
+      letter-spacing: 11.3px;
 
       a, a:hover {
         color: $darkgray;
@@ -137,11 +139,14 @@ a, a:hover, a:visited {
       width: 17%;
       height: 4px;
       background-color: $darkgray;
-      margin: 0 auto 33px;
+      margin: 0 auto 32px;
       border: none;
     }
   }
 
+  section.search {
+    padding-right: 3px;
+  }
   .nav-bar li {
     display: inline-block;
   }
@@ -182,7 +187,7 @@ a, a:hover, a:visited {
       li {
         width: 165px;
         padding-right: 27px;
-        background: url('../images/bullet.png') no-repeat right 8px top 25px ;
+        background: url('../images/bullet.png') no-repeat right 10px top 25px ;
 
         @media (max-width: 750px) {
           width: 45%;
@@ -205,6 +210,7 @@ a, a:hover, a:visited {
           display: inline-block;
           letter-spacing: -0.2px;
           padding: 0;
+          margin-right: 2px;
 
           &:before {
             content: '';
@@ -270,6 +276,8 @@ a, a:hover, a:visited {
 
     .bottom-nav {
       display: inline-block;
+      margin-right: 1px;
+      margin-top: 0px;
 
       ul {
         padding-top: 6px;
