@@ -23,8 +23,18 @@ casper.then(function() {
   this.echo('Verify site name');
   phantomcss.screenshot('.site-name', 'site-name');
 
-  this.echo('Verify icons nav');
+  this.echo('Verify the content');
+  phantomcss.screenshot('.main-content', 'main-content');
+
+  this.echo('Verify the search box');
+  phantomcss.screenshot('.search', 'search');
+
+  this.echo('Verify the tags cloud box');
+  phantomcss.screenshot('.tags-cloud-wrapper', 'tags-cloud-wrapper');
+
+  this.echo('Verify the footer icons nav');
   phantomcss.screenshot('.icons-nav', 'icons-nav');
+
 });
 
 // Check hover states.
@@ -32,6 +42,10 @@ casper.then(function() {
   this.echo('Verify menu bar - hover');
   this.mouse.move('.top-navigation .first a');
   phantomcss.screenshot('.top-navigation .first', 'top-navigation-hover');
+
+  this.echo('Verify tags cloud - hover');
+  this.mouse.move('.tags-cloud li a');
+  phantomcss.screenshot('.tags-cloud li a', 'tags-cloud-hover');
 
   this.echo('Verify icons nav - hover');
   this.mouse.move('.icons-nav .first a');
