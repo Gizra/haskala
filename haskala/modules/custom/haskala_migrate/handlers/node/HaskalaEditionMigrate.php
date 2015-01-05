@@ -18,13 +18,14 @@ class HaskalaEditionMigrate extends HaskalaMigration {
 
   public $dependencies = array(
     'HaskalaCityTermsMigrate',
-    'HaskalaBookMigrate',
+    //'HaskalaBookMigrate',
   );
 
   public function __construct($arguments) {
     parent::__construct($arguments);
+
     $this->addFieldMapping('field_book', 'field_book')
-      ->sourceMigration('HaskalaBookMigrate');
+      ->callbacks(array($this, 'getBookNid'));
 
     $this->addFieldMapping('field_edition_year', 'field_edition_year');
 
@@ -38,6 +39,21 @@ class HaskalaEditionMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_edition_changes', 'field_edition_changes');
 
     $this->addFieldMapping('field_edition_references', 'field_edition_references');
+  }
+
+  protected function getBookNid($value) {
+      $query = new EntityFieldQuery();
+      $node_list = $query->entityCondition('entity_type', 'node')
+        ->propertyCondition('type', 'book')
+        ->propertyCondition('title', $value)
+        ->execute();
+
+      if (isset($node_list['node'])) {
+        $node_nid_list = array_keys($node_list['node']);
+        $value = $node_nid_list['0'];
+      }
+
+    return $value;
   }
 
 }
