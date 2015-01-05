@@ -279,6 +279,10 @@ a, a:hover, a:visited {
       margin-right: 1px;
       margin-top: 0px;
 
+      ul.bottom-nav-options {
+        display: none;
+      }
+
       ul {
         padding-top: 6px;
         letter-spacing: -0.2px;
