@@ -14,6 +14,7 @@ function haskala_migrate_migrate_api() {
     'HaskalaPeopleMigrate',
     'HaskalaBookMigrate',
     'HaskalaBookTranslationMigrate',
+    'HaskalaEditionMigrate',
 
     // Terms.
     'HaskalaCityTermsMigrate',
