@@ -18,7 +18,6 @@ class HaskalaEditionMigrate extends HaskalaMigration {
 
   public $dependencies = array(
     'HaskalaCityTermsMigrate',
-    //'HaskalaBookMigrate',
   );
 
   public function __construct($arguments) {
