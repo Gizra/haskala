@@ -613,11 +613,13 @@ function haskala_book_field_default_field_bases() {
 
   // Exported field_base: 'field_language'
   $field_bases['field_language'] = array(
+
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_language',
+
     'foreign keys' => array(
       'tid' => array(
         'columns' => array(
@@ -1445,13 +1447,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_sources_mentione'
-  $field_bases['field_sources_mentione'] = array(
+  // Exported field_base: 'field_sources_exist'
+  $field_bases['field_sources_exist'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_sources_mentione',
+    'field_name' => 'field_sources_exist',
     'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
@@ -1471,13 +1473,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_sources_mentioned'
-  $field_bases['field_sources_mentioned'] = array(
+  // Exported field_base: 'field_sources_list'
+  $field_bases['field_sources_list'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_sources_mentioned',
+    'field_name' => 'field_sources_list',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
