@@ -219,10 +219,10 @@ function enable_development_modules {
 
 
 ##
-# Do dummy content migration.
+# Do content migration.
 ##
-function import_demo_content {
-  echo -e "${LBLUE}> Importing demo data${RESTORE}"
+function import_content {
+  echo -e "${LBLUE}> Importing data${RESTORE}"
   cd $ROOT/www
 
   # Check if migrate module is available

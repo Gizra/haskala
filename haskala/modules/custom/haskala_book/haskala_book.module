@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Haskala Book feature.
+ */
+
+include_once 'haskala_book.features.inc';
