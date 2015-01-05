@@ -24,7 +24,8 @@ class HaskalaBookTranslationMigrate extends HaskalaMigration {
 
   public function __construct($arguments) {
     parent::__construct($arguments);
-    $this->addFieldMapping('field_book', 'field_book');
+    $this->addFieldMapping('field_book', 'field_book')
+      ->sourceMigration('HaskalaBooksMigrate');
 
     $this->addFieldMapping('field_language', 'field_language')
       ->separator(',');

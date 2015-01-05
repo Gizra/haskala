@@ -52,16 +52,8 @@ haskala/1
 haskala/themes/contrib
 haskala/libraries
 
-# Behat
-haskala/behat/vendor/
-behat.local.yml
-haskala/behat/bin
-haskala/behat/composer.phar
-
-# Temporay "build" files
+# Temporary "build" files
 www
 
 # Local Configuration
 config.sh
-
-
