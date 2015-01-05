@@ -12,7 +12,7 @@ function haskala_migrate_migrate_api() {
   $migrations = array(
     // Nodes.
     'HaskalaPeopleMigrate',
-    'HaskalaBookMigrate',
+    'HaskalaBooksMigrate',
 
     // Terms.
     'HaskalaCityTermsMigrate',
