@@ -1,22 +1,18 @@
-Feature: User login
-  In order to be able to be recognized by the site
+Feature: Book
+  In order to be able to view a book
   As an anonymous user
-  We need to be able to login to the site
+  We need to be able to have access to a book page
 
   @api
-  Scenario Outline: Login to site, and check access to the book page.
-    Given  I am an anonymous user
-    When   I visit "<url>"
-    Then   I should get a "200" HTTP response
-    And    I should be on a page titled "<title>"
+  Scenario Outline: Visit a book page
+    Given I am an anonymous user
+    When  I visit "<title>" node of type "book"
+    Then  I should get a "200" HTTP response
+    And   I should see the text "<text>"
 
   Examples:
-    | url                  | title                   |
-    | content/מודע-לילדי-בני-ישראל                       | מודע לילדי בני ישראל \| Haskala                   |
-    | content/ספר-הגלוי-והחתום                          | ספר הגלוי והחתום \| Haskala                   |
-    | content/אורה-ושמחה                              | אורה ושמחה \| Haskala                   |
-    | content/תוכחת-מגולה                              | תוכחת מגולה \| Haskala                   |
-    | content/ספר-נתיבות-השלום-ד                       | ספר נתיבות השלום ד \| Haskala                   |
+    | title                       | text                   |
+    | ספר הגלוי והחתום | מיקרופילם, נגטיב. לפי הטופס שבבריטיש מוזאום. |
 
 
 
