@@ -41,8 +41,8 @@ casper.then(function() {
   phantomcss.screenshot('.top-navigation .first', 'top-navigation-hover');
 
   this.echo('Verify letter filter - hover');
-  this.mouse.move('.books-filter nav .first a');
-  phantomcss.screenshot('.books-filter nav .first', '.books-filter');
+  this.mouse.move('.eng .first a');
+  phantomcss.screenshot('.eng .first', 'books-filter');
 
   this.echo('Verify icons nav - hover');
   this.mouse.move('.icons-nav .first a');
