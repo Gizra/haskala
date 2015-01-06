@@ -44,22 +44,6 @@ casper.then(function() {
 
 });
 
-// Check hover states.
-casper.then(function() {
-  this.echo('Verify menu bar - hover');
-  this.mouse.move('.top-navigation .first a');
-  phantomcss.screenshot('.top-navigation .first', 'top-navigation-hover');
-
-  this.echo('Verify bread crumbs - hover');
-  this.mouse.move('.bread-crumbs .last  a');
-  phantomcss.screenshot('.bread-crumbs .last', 'bread-crumbs-hover');
-
-  this.echo('Verify icons nav - hover');
-  this.mouse.move('.icons-nav .first a');
-  phantomcss.screenshot('.icons-nav .first', 'icons-nav-hover');
-});
-
-
 casper.then( function now_check_the_screenshots(){
   // Compare screenshots.
   phantomcss.compareAll();
