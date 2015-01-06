@@ -27,6 +27,9 @@ casper.then(function() {
   this.echo('Verify bread crumbs');
   phantomcss.screenshot('.bread-crumbs', 'bread-crumbs');
 
+  this.echo('Verify Hr title');
+  phantomcss.screenshot('.hr-title', 'hr-title');
+
   this.echo('Verify the content');
   phantomcss.screenshot('.main-content', 'main-content');
 
@@ -35,12 +38,6 @@ casper.then(function() {
 
   this.echo('Verify bottom details');
   phantomcss.screenshot('.bottom-details', 'bottom-details');
-
-  this.echo('Verify details navigation');
-  phantomcss.screenshot('.details-navigation', 'details-navigation');
-
-  this.echo('Verify details navigation');
-  phantomcss.screenshot('.details-navigation', 'details-navigation');
 
   this.echo('Verify the footer icons nav');
   phantomcss.screenshot('.icons-nav', 'icons-nav');
@@ -53,6 +50,10 @@ casper.then(function() {
   this.echo('Verify menu bar - hover');
   this.mouse.move('.top-navigation .first a');
   phantomcss.screenshot('.top-navigation .first', 'top-navigation-hover');
+
+  this.echo('Verify bread crumbs - hover');
+  this.mouse.move('.bread-crumbs .last  a');
+  phantomcss.screenshot('.bread-crumbs .last', 'bread-crumbs-hover');
 
   this.echo('Verify icons nav - hover');
   this.mouse.move('.icons-nav .first a');
