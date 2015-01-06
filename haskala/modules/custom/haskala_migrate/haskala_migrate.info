@@ -13,7 +13,7 @@ files[] = handlers/node/HaskalaPeopleMigrate.php
 files[] = handlers/node/HaskalaBooksMigrate.php
 files[] = handlers/node/HaskalaBookTranslationsMigrate.php
 files[] = handlers/node/HaskalaEditionMigrate.php
-files[] = handlers/node/HaskalaProducerMigrate.php
+files[] = handlers/node/HaskalaProducersMigrate.php
 
 
 

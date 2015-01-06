@@ -1,9 +1,9 @@
 <?php
 /**
  * @file
- * Contains \HaskalaProducerMigrate.
+ * Contains \HaskalaProducersMigrate.
  */
-class HaskalaProducerMigrate extends HaskalaMigration {
+class HaskalaProducersMigrate extends HaskalaMigration {
   public $entityType = 'node';
   public $bundle = 'producer';
 
