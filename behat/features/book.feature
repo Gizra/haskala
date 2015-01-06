@@ -4,7 +4,7 @@ Feature: User login
   We need to be able to login to the site
 
   @api
-  Scenario Outline: Login to site, and check access to the homepage.
+  Scenario Outline: Login to site, and check access to the book page.
     Given  I am an anonymous user
     When   I visit "<url>"
     Then   I should get a "200" HTTP response
@@ -12,8 +12,11 @@ Feature: User login
 
   Examples:
     | url                  | title                   |
-    |content/ספר-נאוה-קדש   | ספר נאוה קדש \| Haskala  |
-    |content/שיר-תקכז       | שיר - תקכז \| Haskala    |
-    |content/ספר-כתר-מלכות  | ספר כתר מלכות \| Haskala  |
+    | content/מודע-לילדי-בני-ישראל                       | מודע לילדי בני ישראל \| Haskala                   |
+    | content/ספר-הגלוי-והחתום                          | ספר הגלוי והחתום \| Haskala                   |
+    | content/אורה-ושמחה                              | אורה ושמחה \| Haskala                   |
+    | content/תוכחת-מגולה                              | תוכחת מגולה \| Haskala                   |
+    | content/ספר-נתיבות-השלום-ד                       | ספר נתיבות השלום ד \| Haskala                   |
+
 
 
