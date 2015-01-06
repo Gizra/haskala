@@ -44,7 +44,6 @@ casper.then(function() {
 
 });
 
-
 // Check hover states.
 casper.then(function() {
   this.echo('Verify menu bar - hover');

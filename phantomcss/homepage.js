@@ -53,7 +53,6 @@ casper.then(function() {
 });
 
 
-
 casper.then( function now_check_the_screenshots(){
   // Compare screenshots.
   phantomcss.compareAll();
