@@ -6,14 +6,14 @@ Feature: User login
   @api
   Scenario Outline: Login to site, and check access to the homepage.
     Given  I am an anonymous user
-    When I visit "<url>"
-    Then I should get a "200" HTTP response
-    And I should be on a page titled "<title>"
+    When   I visit "<url>"
+    Then   I should get a "200" HTTP response
+    And    I should be on a page titled "<title>"
 
   Examples:
-    | url                                 | title                                     |
-    |content/friedländer-david            | Friedländer, David \| Haskala             |
-    |content/lindau-baruch-ben-jehuda-löb | Lindau, Baruch ben Jehuda Löb \| Haskala  |
-    |content/mendelssohn-moses            | Mendelssohn, Moses \| Haskala             |
+    | url                  | title                   |
+    |content/ספר-נאוה-קדש   | ספר נאוה קדש \| Haskala  |
+    |content/שיר-תקכז       | שיר - תקכז \| Haskala    |
+    |content/ספר-כתר-מלכות  | ספר כתר מלכות \| Haskala  |
 
 
