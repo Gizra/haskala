@@ -1,9 +1,9 @@
 <?php
 /**
  * @file
- * Contains \HaskalaBookMigrate.
+ * Contains \HaskalaBooksMigrate.
  */
-class HaskalaBookMigrate extends HaskalaMigration {
+class HaskalaBooksMigrate extends HaskalaMigration {
   public $entityType = 'node';
   public $bundle = 'book';
 
@@ -14,7 +14,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
     array('field_personal_address', 'Are there personal addresses'),
     array('field_rabbinical_approbations', 'Are there rabbinical approbations'),
     array('field_recommendations', 'Are there recommendations'),
-    array('field_sources_mentione', 'Are there sources mentioned in the book itself'),
+    array('field_sources_exist', 'Are there sources mentioned in the book itself'),
     array('field_thanks', 'Are there thanks'),
     array('field_contemporary_references', 'Contemporary references to the book'),
     array('field_copy_of_book_used', 'Copy of book used'),
@@ -28,7 +28,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
     array('field_hebrew_year', 'Hebrew year of publication as it appears in the book'),
     array('field_height', 'Height of book, in cm'),
     array('field_funders', 'Is there a list of funders'),
-    array('field_printers', 's there a list of printers'),
+    array('field_printers', 'Is there a list of printers'),
     array('field_proofreaders', 'Is there a list of proofreaders'),
     array('field_sellers', 'Is there a list of sellers'),
     array('field_subscribers', 'Is there a list of subscribers'),
@@ -42,7 +42,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
     array('field_later_references', 'Later references to the book'),
     array('field_bar_ilan_library_id', 'Library of Bar Ilan University catalog number'),
     array('field_link_to_digital_book', 'Link to digital book'),
-    array('field_sources_mentioned', 'List of sources mentioned in the book'),
+    array('field_sources_list', 'List of sources mentioned in the book'),
     array('field_location_of_footnotes', 'Location of footnotes'),
     array('field_motto', 'Motto'),
     array('field_publisher_name', 'Name of publisher'),
@@ -79,12 +79,12 @@ class HaskalaBookMigrate extends HaskalaMigration {
     array('field_width', 'Width of book, in cm'),
     array('field_writer_of_preface', 'Writer of preface'),
     array('field_publication_year_in_book', 'Year of publication as it appears in the book'),
-    array('field_translations', 'Translations'),
 
   );
 
   public $dependencies = array(
     'HaskalaCityTermsMigrate',
+    'HaskalaPeopleMigrate',
   );
 
   public function __construct($arguments) {
@@ -102,7 +102,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_personal_address', 'field_personal_address');
     $this->addFieldMapping('field_rabbinical_approbations', 'field_rabbinical_approbations');
     $this->addFieldMapping('field_recommendations', 'field_recommendations');
-    $this->addFieldMapping('field_sources_mentione', 'field_sources_mentione');
+    $this->addFieldMapping('field_sources_exist', 'field_sources_exist');
     $this->addFieldMapping('field_thanks', 'field_thanks');
     $this->addFieldMapping('field_contemporary_references', 'field_contemporary_references');
     $this->addFieldMapping('field_copy_of_book_used', 'field_copy_of_book_used');
@@ -150,7 +150,7 @@ class HaskalaBookMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_later_references', 'field_later_references');
     $this->addFieldMapping('field_bar_ilan_library_id', 'field_bar_ilan_library_id');
     $this->addFieldMapping('field_link_to_digital_book', 'field_link_to_digital_book');
-    $this->addFieldMapping('field_sources_mentioned', 'field_sources_mentioned');
+    $this->addFieldMapping('field_sources_list', 'field_sources_list');
     $this->addFieldMapping('field_location_of_footnotes', 'field_location_of_footnotes');
     $this->addFieldMapping('field_motto', 'field_motto');
 
@@ -219,12 +219,12 @@ class HaskalaBookMigrate extends HaskalaMigration {
       ->defaultValue(TRUE);
 
     $this->addFieldMapping('field_width', 'field_width');
-    //Todo: field_writer_of_preface is entity refernce person node, but the csv column is empty.
-    $this->addFieldMapping('field_writer_of_preface', 'field_writer_of_preface');
+    
+    $this->addFieldMapping('field_writer_of_preface', 'field_writer_of_preface')
+      ->sourceMigration('HaskalaPeopleMigrate');
+
     $this->addFieldMapping('field_publication_year_in_book', 'field_publication_year_in_book');
-    /*$this
-      ->addFieldMapping('field_translations', 'field_translations')
-      ->sourceMigration('HaskalaBookTranslationMigrate');*/
+
 
   }
 
