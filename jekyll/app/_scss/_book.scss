@@ -7,6 +7,8 @@
     }
 
     .bread-crumbs {
+      margin-right: 4px;
+      margin-top: 10px;
 
       li {
         display: inline;
@@ -14,6 +16,10 @@
 
         &:after {
           content: ' >';
+        }
+
+        &.last:after {
+          content: '';
         }
       }
     }
@@ -36,7 +42,7 @@
 
         padding: 0 21px 53px;
         border-bottom: 2px solid $darkgray;
-        margin-bottom: 30px;
+        margin-bottom: 29px;
 
         .title {
           font-size: 31px;
@@ -44,15 +50,13 @@
           line-height: 1.07;
           text-transform: uppercase;
           margin-bottom: 12px;
-          letter-spacing: -0.4px;
+          letter-spacing: -0.5px;
         }
 
         .field {
           line-height: 2.31;
           letter-spacing: 0.4px;
         }
-
-
       }
 
       .field{
@@ -76,10 +80,9 @@
       }
 
       .details-navigation {
-
         font-family: bell_mtbold;
-        letter-spacing: 0.46px;
-        padding-bottom: 15px;
+        letter-spacing: 0.54px;
+        padding-bottom: 13px;
         height: 26px;
 
         ul{
@@ -101,7 +104,7 @@
               list-style-type: none;
             }
 
-            &.active a {
+             a:hover {
               color: $lightBlue;
             }
 
@@ -146,8 +149,8 @@
 
         clear: both;
         border-top: 1px solid $darkgray;
-        padding: 7px 21px 2px;
-        margin-top: 55px;
+        padding: 6px 15px 2px;
+        margin-top: 56px;
 
         .fields-group-name {
           font: 24px bell_mtbold;
@@ -160,10 +163,15 @@
 
         }
 
+        .fields-group-name-last {
+          margin-top: 5px;
+        }
+
         .fields {
           display: inline-block;
           width: 60%;
-          margin-top: -4px;
+          margin-top: -3px;
+          margin-left: 2px;
           font-size: 14px;
 
           .content {
