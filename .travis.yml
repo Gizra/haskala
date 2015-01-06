@@ -89,6 +89,8 @@ script:
   - cd ../behat
   - ./bin/behat --tags=~@wip
 
+  - curl http://127.0.0.1:8080
+
   # Print logs.
   - cat ~/grunt.log
   - cat ~/phantomjs.log
