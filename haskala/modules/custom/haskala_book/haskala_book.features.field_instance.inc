@@ -2980,9 +2980,13 @@ function haskala_book_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
       'weight' => 32,
     ),
   );
@@ -3010,7 +3014,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_language',
-    'label' => 'Language of translation',
+    'label' => 'Language',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -3047,16 +3051,19 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_translation_city',
-    'label' => 'City of translation',
+    'label' => 'City',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
       'weight' => 36,
     ),
   );
@@ -3124,7 +3131,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_translation_year',
-    'label' => 'Year of translation',
+    'label' => 'Year',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -3166,16 +3173,20 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_translator',
-    'label' => 'Translator of translation',
+    'label' => 'Translator',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
       'weight' => 37,
     ),
   );
@@ -3190,7 +3201,7 @@ function haskala_book_field_default_field_instances() {
   t('Are there recommendations');
   t('Are there sources mentioned in the book itself');
   t('Are there thanks');
-  t('City of translation');
+  t('City');
   t('Contemporary references to the book');
   t('Copy of book used');
   t('Evidence about book production');
@@ -3211,8 +3222,8 @@ function haskala_book_field_default_field_instances() {
   t('Is there a table of contents');
   t('Is there an appeal to sell subscriptions');
   t('Is there an epilogue');
+  t('Language');
   t('Language in book');
-  t('Language of translation');
   t('Language of footnotes');
   t('Last known edition');
   t('Later references to the book');
@@ -3253,11 +3264,11 @@ function haskala_book_field_default_field_instances() {
   t('Topic');
   t('Total number of editions');
   t('Translation of book');
-  t('Translator of translation');
+  t('Translator');
   t('Typography');
   t('Width of book, in cm');
   t('Writer of preface');
-  t('Year of translation');
+  t('Year');
   t('Year of publication as it appears in the book');
 
   return $field_instances;

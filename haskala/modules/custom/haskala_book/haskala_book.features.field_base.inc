@@ -613,13 +613,11 @@ function haskala_book_field_default_field_bases() {
 
   // Exported field_base: 'field_language'
   $field_bases['field_language'] = array(
-
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_language',
-
     'foreign keys' => array(
       'tid' => array(
         'columns' => array(
@@ -1890,7 +1888,14 @@ function haskala_book_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_translator',
-    'foreign keys' => array(),
+    'foreign keys' => array(
+      'node' => array(
+        'columns' => array(
+          'target_id' => 'nid',
+        ),
+        'table' => 'node',
+      ),
+    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
