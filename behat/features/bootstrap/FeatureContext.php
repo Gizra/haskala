@@ -163,4 +163,16 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
         }
       });
   }
+
+  /**
+   * @Then /^I should be on a page titled "([^"]*)"$/
+   */
+  public function iShouldBeOnAPageTitled($expected_title) {
+    $title = $this->getSession()->getPage()->find('css', 'head title')->getText();
+
+    if ($title != $expected_title) {
+      throw new \Exception("Expected title '$expected_title', found instead '$title'.");
+    }
+  }
+
 }
