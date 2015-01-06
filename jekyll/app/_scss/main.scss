@@ -274,24 +274,30 @@ a, a:hover, a:visited {
 
     }
 
-    .bottom-nav {
+    .login-area {
       display: inline-block;
       margin-right: 1px;
-      margin-top: 0px;
-
-      ul.bottom-nav-options {
-        display: none;
-      }
+      margin-top: 20px;
 
       ul {
         padding-top: 6px;
-        letter-spacing: -0.2px;
+        letter-spacing: -0.7px;
         display: inline-block;
+
+        &:before,
+        &:after {
+          margin-top: 9px;
+          padding: 0;
+          content: '+';
+          font-size: 12px;
+          font-weight: bold;
+          color: $lightBlue;
+        }
+
       }
 
       li {
-        float: left;
-        padding: 0px 22px 0px 0px;
+        padding: 0px 18px 0px 0px;
         display: inline-block;
 
         &:after {
@@ -308,8 +314,19 @@ a, a:hover, a:visited {
         }
 
         &.first {
-          padding-left: 23px;
+          padding-left: 22px;
         }
+
+        &.last {
+          padding-right: 18px;
+        }
+      }
+
+      a {
+        color: $lightBlue;
+        font: 18px bell_mtbold;
+        padding: 0;
+        display: inline;
       }
 
       li.login.first {
@@ -318,53 +335,10 @@ a, a:hover, a:visited {
 
       li.login {
         padding: 1px 15px 0px 0px;
+        text-transform: uppercase;
 
         a {
           font: 14px bell_mtbold;
-        }
-      }
-
-      a {
-        color: $lightBlue;
-        font: 18px bell_mtbold;
-      }
-
-      &:before,
-      &:after {
-        margin-top: 9px;
-        padding: 0;
-        content: '+';
-        font-size: 12px;
-        font-weight: bold;
-        color: $lightBlue;
-      }
-
-      &:before {
-        float: left;
-      }
-
-      &:after {
-        float: right;
-      }
-    }
-
-    .login-area {
-      padding-top: 6px;
-      text-transform: uppercase;
-
-
-      a {
-        color: $lightBlue;
-        font: 15px bell_mtbold;
-        letter-spacing: -0.5px;
-        padding: 0;
-        display: inline;
-
-        &:before,
-        &:after {
-          padding: 0 13px;
-          content: '+';
-          font-size: 12px;
         }
       }
     }
