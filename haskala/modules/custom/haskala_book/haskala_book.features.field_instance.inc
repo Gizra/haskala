@@ -1820,9 +1820,12 @@ function haskala_book_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
       'weight' => 59,
     ),
   );
@@ -2941,9 +2944,13 @@ function haskala_book_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
       'weight' => 72,
     ),
   );
@@ -2986,7 +2993,7 @@ function haskala_book_field_default_field_instances() {
         'path' => '',
         'size' => 60,
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'entityreference_autocomplete_tags',
       'weight' => 32,
     ),
   );
@@ -3186,7 +3193,7 @@ function haskala_book_field_default_field_instances() {
         'path' => '',
         'size' => 60,
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'entityreference_autocomplete_tags',
       'weight' => 37,
     ),
   );
@@ -3223,9 +3230,13 @@ function haskala_book_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
       'weight' => 3,
     ),
   );
@@ -3300,9 +3311,12 @@ function haskala_book_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
       'weight' => 5,
     ),
   );
@@ -3398,6 +3412,7 @@ function haskala_book_field_default_field_instances() {
   t('Are there sources mentioned in the book itself');
   t('Are there thanks');
   t('Changes in this edition');
+  t('City');
   t('City of edition');
   t('Contemporary references to the book');
   t('Copy of book used');
