@@ -1,6 +1,6 @@
 Uniqe ID,Title,Producer of book,Name of book producer,Role in book creation,Notes on roles in book's creation,Does the person's name appear in the book,Name as it appears in the book,Evidence for person's identity if it does not appear in the book,Approximate age during writing of book,Religion during writing of book,Location during writing of book,References for person and book
-producer1,"Alexander, Isaak - אלכסנדר, יצחק",Abhandlung von der Freiheit des Menschen,"Alexander, Isaak - אלכסנדר, יצחק",Author,notes example,true,gfdgbdfgbdfbf,evidence example,120,jew,Vienna,references example
-producer2,Anonym,Actenstücke zur Geschichte der Erhebung der Juden zu Bürgern der Republik Batavien,Anonym,Translator,,1,name example,evidence example,,,,
+producer1,"Alexander, Isaak - אלכסנדר, יצחק",Abhandlung von der Freiheit des Menschen,"Alexander, Isaak - אלכסנדר, יצחק",Author,notes example,1,name example,evidence example,120,jew,Vienna,references example
+producer2,Anonym,Actenstücke zur Geschichte der Erhebung der Juden zu Bürgern der Republik Batavien,Anonym,Translator,,,,,,,,
 producer3,"Friedländer, David - פרידלענדר, דוד",Akten-Stücke die Reform der Jüdischen Kolonieen in den Preußischen Staaten betreffend,"Friedländer, David - פרידלענדר, דוד","Author,Mevi La'Dfus (Producer)",,,,,,,,
 producer4,אנונימי,An das Breslauer Publikum,אנונימי,Author,,,,,,,,
 producer5,"Herz, Marcus - הרץ, מרכוס",An die Herausgeber des hebräischen Sammlers über die frühe Beerdigung der Juden,"Herz, Marcus - הרץ, מרכוס",Author,,,,,,,,
@@ -167,7 +167,7 @@ producer165,אנונימי,אלה הם השירים,אנונימי,Author,,,,,,,
 producer166,"Troplowitz, Joseph Ephrati - האפרתי, יוסף מטראפלוויץ",אלון בכות,"Troplowitz, Joseph Ephrati - האפרתי, יוסף מטראפלוויץ",Author,,,,,,,,
 producer167,"שיאר, אברהם נפתלי הירץ",אמירה נעימה,"שיאר, אברהם נפתלי הירץ",Author,,,,,,,,
 producer168,"משה צבי ב""ר מנחם מוויהל",אמירה נעימה,"משה צבי ב""ר מנחם מוויהל",Translator,,,,,,,,
-producer169,"Berlin Saul - ברלין, שאול",אמר הצעיר ...,"Berlin Saul - ברלין, שאול",Author,,,,,,,,
+producer169,"Berlin, Saul - ברלין, שאול",אמר הצעיר ...,"Berlin, Saul - ברלין, שאול",Author,,,,,,,,
 producer170,"Homberg, Herz - הרץ, הומברג",אמרי שפר,"Homberg, Herz - הרץ, הומברג",Author,,,,,,,,
 producer171,אנונימי,אן דיא עלטרן דער ווילהלמס-שילר,אנונימי,Author,,,,,,,,
 producer172,"אליהו בן רפאל שלמה, הלוי",אנקת השיר,"אליהו בן רפאל שלמה, הלוי",,,,,,,,,
@@ -316,8 +316,8 @@ producer314,"Löwe, Joel - ברי""ל, יואל",מגלת שיר השירים,"L
 producer315,אברהם אבלי בן ירמיה,מדבר סין,אברהם אבלי בן ירמיה,Editor,,,,,,,,
 producer316,אורי פיבוש בן אריה ליב,מדרש מלים לשונות עברית ואשכנזית,אורי פיבוש בן אריה ליב,Author,,,,,,,,
 producer317,"Epstein, Pelte Moses - אפשטין, פלטא בן משה",מה נכבד היום הזה,"Epstein, Pelte Moses - אפשטין, פלטא בן משה",Author,,,,,,,,
-producer318,"Philippson, Moses - פיליפסון, משה",מודע לבני בינה oder Kinderfreund und Lehrer 1,"Philippson, Moses - פיליפסון, משה",Author,,true,"Philippssohn, Moses",,,,,
-producer319,"Philippson, Moses - פיליפסון, משה",מודע לבני בינה oder Kinderfreund und Lehrer 2,"Philippson, Moses - פיליפסון, משה",Author,,true,"Philippssohn, Moses",,,,,
+producer318,"Philippson, Moses - פיליפסון, משה",מודע לבני בינה oder Kinderfreund und Lehrer 1,"Philippson, Moses - פיליפסון, משה",Author,,1,"Philippssohn, Moses",,,,,
+producer319,"Philippson, Moses - פיליפסון, משה",מודע לבני בינה oder Kinderfreund und Lehrer 2,"Philippson, Moses - פיליפסון, משה",Author,,1,"Philippssohn, Moses",,,,,
 producer320,"Bock, Moses Hirsch - בוק, משה (בן) צבי",מודע לילדי בני ישראל,"Bock, Moses Hirsch - בוק, משה (בן) צבי",Author,,,,,,,,
 producer321,Anonymous,מודע לילדי בני ישראל,Anonymous,Editor,,,,,,,,
 producer322,"Friedländer, David - פרידלענדר, דוד",מודעה,"Friedländer, David - פרידלענדר, דוד",Author,,,,,,,,

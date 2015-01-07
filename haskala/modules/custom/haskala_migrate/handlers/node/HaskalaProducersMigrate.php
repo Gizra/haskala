@@ -29,11 +29,9 @@ class HaskalaProducersMigrate extends HaskalaMigration {
 
   public function __construct($arguments) {
     parent::__construct($arguments);
-    $this->addFieldMapping('field_book', 'field_book')
-      ->callbacks(array($this, 'getBookNid'));
+    $this->addFieldMapping('field_book', 'field_book');
 
-    $this->addFieldMapping('field_producer', 'field_producer')
-      ->callbacks(array($this, 'getPersonNid'));
+    $this->addFieldMapping('field_producer', 'field_producer');
 
     $this->addFieldMapping('field_role', 'field_role')
       ->separator(',');
@@ -45,6 +43,8 @@ class HaskalaProducersMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_roles_notes', 'field_roles_notes');
 
     $this->addFieldMapping('field_person_name_appear', 'field_person_name_appear');
+
+    $this->addFieldMapping('field_name_in_book', 'field_name_in_book');
 
     $this->addFieldMapping('field_producer_evidence', 'field_producer_evidence');
 
@@ -67,37 +67,11 @@ class HaskalaProducersMigrate extends HaskalaMigration {
 
   }
 
-  protected function getBookNid($value) {
-    $query = new EntityFieldQuery();
-    $node_list = $query->entityCondition('entity_type', 'node')
-      ->propertyCondition('type', 'book')
-      ->propertyCondition('title', $value)
-      ->execute();
-
-    if (isset($node_list['node'])) {
-      $node_nid_list = array_keys($node_list['node']);
-      $value = $node_nid_list['0'];
-    }
-
-    return $value;
-  }
-
-  protected function getPersonNid($value) {
-    $query = new EntityFieldQuery();
-    $node_list = $query->entityCondition('entity_type', 'node')
-      ->propertyCondition('type', 'person')
-      ->propertyCondition('title', $value)
-      ->execute();
-
-    if (isset($node_list['node'])) {
-      $node_nid_list = array_keys($node_list['node']);
-      $value = $node_nid_list['0'];
-    }
-
-    return $value;
-  }
-
+  /**
+   * Fetch book and producer node IDs by their titles.
+   */
   public function prepareRow($row) {
-     dpm($row);
+    $row->field_book = $this->getNodeByTitle('book', $row->field_book);
+    $row->field_producer = $this->getNodeByTitle('person', $row->field_producer);
   }
 }

@@ -50,4 +50,21 @@ abstract class HaskalaMigration extends Migration {
     $this->source = new MigrateSourceCSV(drupal_get_path('module', 'haskala_migrate') . '/csv/' . $this->entityType . '/' . $this->bundle . '.csv', $this->csvColumns, array('header_rows' => 1));
     $this->destination = new $class_name($this->bundle, array('text_format' => 'filtered_html'));
   }
+
+  /**
+   * Fetch book and producer node IDs by their titles.
+   */
+  protected function getNodeByTitle($bundle, $title) {
+    $query = new EntityFieldQuery();
+    $result = $query->entityCondition('entity_type', 'node')
+      ->propertyCondition('type', $bundle)
+      ->propertyCondition('title', $title)
+      ->execute();
+
+    if (!isset($result['node'])) {
+      return;
+    }
+
+    return reset(array_keys($result['node']));
+  }
 }
