@@ -3376,9 +3376,9 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-producer-field_book'
-  $field_instances['node-producer-field_book'] = array(
-    'bundle' => 'producer',
+  // Exported field_instance: 'node-production-field_book'
+  $field_instances['node-production-field_book'] = array(
+    'bundle' => 'production',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -3419,9 +3419,9 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-producer-field_name_in_book'
-  $field_instances['node-producer-field_name_in_book'] = array(
-    'bundle' => 'producer',
+  // Exported field_instance: 'node-production-field_name_in_book'
+  $field_instances['node-production-field_name_in_book'] = array(
+    'bundle' => 'production',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -3459,9 +3459,9 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-producer-field_person_book_references'
-  $field_instances['node-producer-field_person_book_references'] = array(
-    'bundle' => 'producer',
+  // Exported field_instance: 'node-production-field_person_book_references'
+  $field_instances['node-production-field_person_book_references'] = array(
+    'bundle' => 'production',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -3499,9 +3499,9 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-producer-field_person_name_appear'
-  $field_instances['node-producer-field_person_name_appear'] = array(
-    'bundle' => 'producer',
+  // Exported field_instance: 'node-production-field_person_name_appear'
+  $field_instances['node-production-field_person_name_appear'] = array(
+    'bundle' => 'production',
     'default_value' => array(
       0 => array(
         'value' => 0,
@@ -3542,9 +3542,9 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-producer-field_producer'
-  $field_instances['node-producer-field_producer'] = array(
-    'bundle' => 'producer',
+  // Exported field_instance: 'node-production-field_producer'
+  $field_instances['node-production-field_producer'] = array(
+    'bundle' => 'production',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -3585,9 +3585,9 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-producer-field_producer_evidence'
-  $field_instances['node-producer-field_producer_evidence'] = array(
-    'bundle' => 'producer',
+  // Exported field_instance: 'node-production-field_producer_evidence'
+  $field_instances['node-production-field_producer_evidence'] = array(
+    'bundle' => 'production',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -3625,9 +3625,9 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-producer-field_religion'
-  $field_instances['node-producer-field_religion'] = array(
-    'bundle' => 'producer',
+  // Exported field_instance: 'node-production-field_religion'
+  $field_instances['node-production-field_religion'] = array(
+    'bundle' => 'production',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -3662,9 +3662,9 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-producer-field_role'
-  $field_instances['node-producer-field_role'] = array(
-    'bundle' => 'producer',
+  // Exported field_instance: 'node-production-field_role'
+  $field_instances['node-production-field_role'] = array(
+    'bundle' => 'production',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -3699,9 +3699,9 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-producer-field_roles_notes'
-  $field_instances['node-producer-field_roles_notes'] = array(
-    'bundle' => 'producer',
+  // Exported field_instance: 'node-production-field_roles_notes'
+  $field_instances['node-production-field_roles_notes'] = array(
+    'bundle' => 'production',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -3739,9 +3739,9 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-producer-field_writing_age'
-  $field_instances['node-producer-field_writing_age'] = array(
-    'bundle' => 'producer',
+  // Exported field_instance: 'node-production-field_writing_age'
+  $field_instances['node-production-field_writing_age'] = array(
+    'bundle' => 'production',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -3785,9 +3785,9 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-producer-field_writing_location'
-  $field_instances['node-producer-field_writing_location'] = array(
-    'bundle' => 'producer',
+  // Exported field_instance: 'node-production-field_writing_location'
+  $field_instances['node-production-field_writing_location'] = array(
+    'bundle' => 'production',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',

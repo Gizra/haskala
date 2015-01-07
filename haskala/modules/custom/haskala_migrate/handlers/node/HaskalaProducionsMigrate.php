@@ -1,11 +1,11 @@
 <?php
 /**
  * @file
- * Contains \HaskalaProducersMigrate.
+ * Contains \HaskalaProductionsMigrate.
  */
-class HaskalaProducersMigrate extends HaskalaMigration {
+class HaskalaProductionsMigrate extends HaskalaMigration {
   public $entityType = 'node';
-  public $bundle = 'producer';
+  public $bundle = 'production';
 
   public $csvColumns = array(
     array('field_book', 'Producer of book'),
