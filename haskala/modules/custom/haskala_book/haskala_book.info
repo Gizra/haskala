@@ -225,16 +225,4 @@ features[variable][] = node_preview_edition
 features[variable][] = node_submitted_book
 features[variable][] = node_submitted_book_translation
 features[variable][] = node_submitted_edition
-features[variable][] = comment_book
-features[variable][] = comment_default_mode_book
-features[variable][] = comment_default_per_page_book
-features[variable][] = comment_form_location_book
-features[variable][] = comment_preview_book
-features[variable][] = comment_subject_field_book
-features[variable][] = field_bundle_settings_node__book
-features[variable][] = menu_options_book
-features[variable][] = menu_parent_book
-features[variable][] = node_options_book
-features[variable][] = node_preview_book
-features[variable][] = node_submitted_book
-
+mtime = 1420530583
