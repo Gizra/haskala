@@ -23,8 +23,7 @@ class HaskalaEditionMigrate extends HaskalaMigration {
   public function __construct($arguments) {
     parent::__construct($arguments);
 
-    $this->addFieldMapping('field_book', 'field_book')
-      ->callbacks(array($this, 'getBookNid'));
+    $this->addFieldMapping('field_book', 'field_book');
 
     $this->addFieldMapping('field_edition_year', 'field_edition_year');
 
