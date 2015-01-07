@@ -43,7 +43,7 @@ function haskala_book_node_info() {
       'help' => '',
     ),
     'producer' => array(
-      'name' => t('Producer'),
+      'name' => t('Person Production Details'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
