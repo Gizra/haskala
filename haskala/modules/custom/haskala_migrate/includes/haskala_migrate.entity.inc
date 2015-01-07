@@ -53,6 +53,15 @@ abstract class HaskalaMigration extends Migration {
 
   /**
    * Fetch book and producer node IDs by their titles.
+   *
+   * @param $bundle
+   * The bundle of node requested id
+   *
+   * @param $title
+   * The title node
+   *
+   * @return
+   * Id of the requested node
    */
   protected function getNodeByTitle($bundle, $title) {
     $query = new EntityFieldQuery();
