@@ -24,7 +24,7 @@ function haskala_people_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -49,7 +49,7 @@ function haskala_people_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 32,
+      'weight' => 2,
     ),
   );
 
@@ -92,7 +92,7 @@ function haskala_people_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 33,
+      'weight' => 3,
     ),
   );
 
@@ -132,7 +132,7 @@ function haskala_people_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 35,
+      'weight' => 5,
     ),
   );
 
@@ -169,7 +169,7 @@ function haskala_people_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 34,
+      'weight' => 4,
     ),
   );
 
