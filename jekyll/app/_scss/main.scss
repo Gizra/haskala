@@ -39,12 +39,19 @@ a, a:hover, a:visited {
   text-decoration: none;
 }
 
-/* reset bootstrap */
+/* Reset bootstrap */
 *, *:before, *:after {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
+
+.page-header{
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+}
+/* End reset bootstrap */
 
 .wrapper {
   max-width: 950px;
