@@ -12,7 +12,7 @@ projects[ckeditor][subdir] = "contrib"
 projects[ckeditor][version] = "1.x-dev"
 
 projects[context][subdir] = "contrib"
-projects[context][version] = "3.5"
+projects[context][version] = "3.6"
 
 projects[ctools][subdir] = "contrib"
 projects[ctools][version] = "1.5"
@@ -32,7 +32,7 @@ projects[entityreference][subdir] = "contrib"
 projects[entityreference][version] = "1.1"
 
 projects[features][subdir] = "contrib"
-projects[features][version] = "2.2"
+projects[features][version] = "2.3"
 
 projects[jquery_update][subdir] = "contrib"
 projects[jquery_update][version] = "2.4"
