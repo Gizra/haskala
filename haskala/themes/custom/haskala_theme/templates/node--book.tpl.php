@@ -113,26 +113,7 @@
               <div class="field-label type-label">Type of book:</div>
               <div class="content"></div>
             </div>
-            <div class="field">
-              <div class="field-label">Full title of book:</div>
-              <div class="content">Abhandlung von der Freiheit des Menschen</div>
-            </div>
-            <div class="field">
-              <div class="field-label">Text is presented as original?</div>
-              <div class="content">Yes</div>
-            </div>
-            <div class="field">
-              <div class="field-label">Are there sources mentioned in the book itself?</div>
-              <div class="content">Yes</div>
-            </div>
-            <div class="field">
-              <div class="field-label">List of sources Leibniz:</div>
-              <div class="content">Theodicee.</div>
-            </div>
-            <div class="field">
-              <div class="field-label">References:</div>
-              <div class="content">11</div>
-            </div>
+            <?php print render($content['group_top_details']); ?>
           </div>
         </div>
       </section>
@@ -148,6 +129,8 @@
           </ul>
         </nav>
         <div>
+          <?php print render($content['group_horizontal_tabs']); ?>
+          <?php print render($content['group_book_structure']); ?>
           <div class="fields-group">
             <div class="fields-group-name">Translation</div>
             <div class="fields">

@@ -25,4 +25,3 @@ features[menu_links][] = menu-top-menu_search:search
 features[menu_links][] = user-menu_login:user/login
 features[menu_links][] = user-menu_user-account:user
 features[page_manager_pages][] = homepage
-mtime = 1419964900
