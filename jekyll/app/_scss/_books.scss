@@ -22,8 +22,10 @@
 
       nav {
             margin-bottom: 10px;
-
-
+        
+        li a:hover {
+          color: $lightBlue;
+        }
 
         li {
           font: 24px bell_mtbold;
