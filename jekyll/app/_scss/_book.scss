@@ -87,12 +87,13 @@
           font-family: bell_mtbold;
           letter-spacing: 0.54px;
           padding-bottom: 13px;
-          height: 25px;
+          height: 13px;
           width: 100%;
           overflow: hidden;
           text-overflow: ellipsis;
           background-color: transparent;
           border: none;
+          position: relative;
 
           li {
             display: list-item;
@@ -112,17 +113,20 @@
             &.selected strong,
             a:hover {
               color: $lightBlue;
+              background-color: transparent;
             }
 
             a {
               color: $darkgray;
               font-size: 19px;
+              padding: 0;
             }
           }
 
           &:before, &:after {
             background: url('../images/sprites.png') no-repeat center;
             margin-top: 4px;
+
           }
 
           &:before {
@@ -143,6 +147,9 @@
             width: 9px;
             height: 15px;
             float: right;
+            position: absolute;
+            top: 0;
+            right: 0;
 
           }
 
@@ -151,7 +158,7 @@
           }
         }
 
-        .field-group-htab {
+        fieldset {
 
           clear: both;
           padding: 6px 15px 2px;
@@ -176,6 +183,8 @@
             display: inline-block;
             vertical-align: top;
             float: left;
+            background-color: transparent;
+            border: none;
           }
 
           .fields-group-name-last {
