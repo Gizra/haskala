@@ -18,7 +18,7 @@ casper.then(function() {
   this.echo('Verify site name');
   phantomcss.screenshot('.site-name', 'site-name');
 
-  this.echo('Verify the books-filter');
+  this.echo('Verify the books filter');
   phantomcss.screenshot('.books-filter', 'books-filter');
 
   this.echo('Verify the footer icons nav');
