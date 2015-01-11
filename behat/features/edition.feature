@@ -5,15 +5,15 @@ Feature: Edition
 
   @api
   Scenario Outline: Login to site, and check access to the edition page.
-    Given  I am an anonymous user
+    Given I am an anonymous user
     When  I visit "<title>" node of type "edition"
     Then  I should get a "200" HTTP response
     And   I should see the text "<text>"
 
   Examples:
-    | title             | text
-    | תורת לשון עברית ב    | מהדורה שלישית ומתוקנת מאת וואלף מאיר, מורה לעברית ולתורה בביה"ס היהודי-גרמני בפראג |
-    | משא בערב           | קלוזנר, וינוגרד                                                           |
-    | בית הספר א         | [שכתוב והרחבה ישראל                                                     |
-    | אגדת ארבע כוסות     | בעריכת דוד סלוצקי וי"ד טומפאווסקי                                            |
-    | ספר נתיבות השלום א  | Publisher: A. Schmidt                                                  |
+    | title                                                                           | text
+    | ילדות ובחרות או נתיבות החנוך והמוסר                                                    | תקמ"ו                                                        |
+    | יונה                                                                              | תקמ"ח                                                       |
+    | חלקת מחקק                                                                        | וינוגרד                                                       |
+    | Ueber die Verbesserung des Judenthums                                            | החיבור הודפס מחדש ב- 1808 בכתב העת Sulamithי                   |
+    | An die Herausgeber des hebräischen Sammlers über die frühe Beerdigung der Juden  | 2. verbesserte und vermehrte Auflage [Voß und Sohn], 60 S.  |
