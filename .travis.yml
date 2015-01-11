@@ -76,6 +76,7 @@ script:
   # Run PhantomCSS tests.
   - cd phantomcss
   - casperjs test homepage.js
+  - casperjs test books.js
   - casperjs test book.js
 
   # Upload failed images to imgur
