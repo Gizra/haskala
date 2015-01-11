@@ -5,7 +5,7 @@ Feature: Book translation
 
   @api
   Scenario Outline: Login to site, and check access to the book translation page.
-    Given  I am an anonymous user
+    Given I am an anonymous user
     When  I visit "<title>" node of type "book_translation"
     Then  I should get a "200" HTTP response
     And   I should see the text "<text>"
@@ -13,7 +13,7 @@ Feature: Book translation
   Examples:
     | title         | text                                                              |
     | זה ספר זכר צדיק | Aus dem Leben Wessely's                                            |
-    | מלוכת שאול      | לפי ורסס ושקד, במהדורות 1871 ו- 1885 חלו שינויי גרסה לשוניים רבים מאת המו"ל. |
+    | מלוכת שאול      | יידיש |
     | ספר מלחמה בשלום | תרגום ליידיש: גדולת יוסף (זכה למהדורות רבות)                              |
-    | הנפש           | מהדורת ברין תקנ"ח כוללת תרגום חלקי של הספר לגרמנית                        |
+    | הנפש           | מהדורת ברין                        |
     | בית הספר א      | 1873                                                              |
