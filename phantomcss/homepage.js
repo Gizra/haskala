@@ -35,6 +35,8 @@ casper.then(function() {
   this.echo('Verify the footer icons nav');
   phantomcss.screenshot('.icons-nav', 'icons-nav');
 
+  this.echo('Verify the adding area');
+  phantomcss.screenshot('.adding-area', 'adding-area');
 });
 
 // Check hover states.
