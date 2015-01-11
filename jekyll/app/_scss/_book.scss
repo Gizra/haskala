@@ -42,7 +42,7 @@
 
         padding: 0 21px 53px;
         border-bottom: 2px solid $darkgray;
-        margin-bottom: 29px;
+        margin-bottom: 31px;
 
         .title {
           font-size: 31px;
@@ -54,7 +54,7 @@
         }
 
         .field {
-          line-height: 2.31;
+          line-height: 2.42;
           letter-spacing: 0.4px;
         }
       }
@@ -80,18 +80,19 @@
         }
       }
 
-      .details-navigation {
-        font-family: bell_mtbold;
-        letter-spacing: 0.54px;
-        padding-bottom: 13px;
-        height: 26px;
+      .horizontal-tabs{
+        border: none;
 
-        ul{
+        .horizontal-tabs-list {
+          font-family: bell_mtbold;
+          letter-spacing: 0.54px;
+          padding-bottom: 13px;
           height: 25px;
-          width: 97%;
+          width: 100%;
           overflow: hidden;
           text-overflow: ellipsis;
-          float: left;
+          background-color: transparent;
+          border: none;
 
           li {
             display: list-item;
@@ -99,13 +100,17 @@
             margin: 0 13px;
             float: left;
             font-size: 14px;
+            background-color: transparent;
+            border-right: none;
 
             &.first
             {
               list-style-type: none;
             }
 
-             a:hover {
+
+            &.selected strong,
+            a:hover {
               color: $lightBlue;
             }
 
@@ -114,76 +119,86 @@
               font-size: 19px;
             }
           }
+
+          &:before, &:after {
+            background: url('../images/sprites.png') no-repeat center;
+            margin-top: 4px;
+          }
+
+          &:before {
+            content: " ";
+            background-position: -200px 0;
+            width: 9px;
+            height: 15px;
+            float: left;
+          }
+
+          &:before.disabled {
+            background-position: -200px -50px;
+          }
+
+          &:after {
+            content: " ";
+            background-position: -220px 0;
+            width: 9px;
+            height: 15px;
+            float: right;
+
+          }
+
+          &:after.disabled {
+            background-position: -220px -50px;
+          }
         }
 
-        &:before, &:after {
-          background: url('../images/sprites.png') no-repeat center;
-          margin-top: 4px;
-        }
+        .field-group-htab {
 
-        &:before {
-          content: " ";
-          background-position: -200px 0;
-          width: 9px;
-          height: 15px;
-          float: left;
-        }
+          clear: both;
+          padding: 6px 15px 2px;
+          margin-top: 50px;
+          border: none;
 
-        &:before.disabled {
-          background-position: -200px -50px;
-        }
 
-        &:after {
-          content: " ";
-          background-position: -220px 0;
-          width: 9px;
-          height: 15px;
-          float: right;
-        }
+          &:before {
+            content: '';
+            width: 100%;
+            border-top: 1px solid $darkgray;
+            float: left;
+            padding-top: 6px;
+          }
 
-        &:after.disabled {
-          background-position: -220px -50px;
-        }
-      }
+          .panel-heading, fieldset.horizontal-tabs-pane > legend {
+            font: 24px bell_mtbold;
+            color: $lightBlue;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            width: 267px;
+            display: inline-block;
+            vertical-align: top;
+            float: left;
+          }
 
-      .fields-group {
+          .fields-group-name-last {
+            margin-top: 5px;
+          }
 
-        clear: both;
-        border-top: 1px solid $darkgray;
-        padding: 6px 15px 2px;
-        margin-top: 56px;
+          .fields {
+            display: inline-block;
+            width: 60%;
+            margin-top: -3px;
+            margin-left: 2px;
+            font-size: 14px;
 
-        .fields-group-name {
-          font: 24px bell_mtbold;
-          color: $lightBlue;
-          text-transform: uppercase;
-          letter-spacing: 0.7px;
-          width: 267px;
-          display: inline-block;
-          vertical-align: top;
-
-        }
-
-        .fields-group-name-last {
-          margin-top: 5px;
-        }
-
-        .fields {
-          display: inline-block;
-          width: 60%;
-          margin-top: -3px;
-          margin-left: 2px;
-          font-size: 14px;
-
-          .content {
-            font-weight: bold;
+            .content {
+              font-weight: bold;
+            }
           }
         }
       }
     }
 
     footer {
-      margin-top: 22px;
+      margin-top: 23px;
     }
   }
 }

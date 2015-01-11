@@ -118,16 +118,6 @@
         </div>
       </section>
       <section class="bottom-details">
-        <nav class="details-navigation">
-          <ul>
-            <li class="first"><a href="#">Translation</a></li>
-            <li><a href="#">New edition</a></li>
-            <li><a href="#">Volumes</a></li>
-            <li><a href="#">Publisher/Printing press</a></li>
-            <li><a href="#">Editions</a></li>
-            <li class="last"><a href="#">Book Structure</a></li>
-          </ul>
-        </nav>
         <div>
           <?php print render($content['group_horizontal_tabs']); ?>
           <div class="fields-group">
