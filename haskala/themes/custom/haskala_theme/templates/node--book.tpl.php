@@ -130,7 +130,6 @@
         </nav>
         <div>
           <?php print render($content['group_horizontal_tabs']); ?>
-          <?php print render($content['group_book_structure']); ?>
           <div class="fields-group">
             <div class="fields-group-name">Translation</div>
             <div class="fields">
