@@ -13,38 +13,38 @@ casper.viewport(1024, 768);
 
 casper.then(function() {
 
-  this.echo('Verify site name');
+  this.echo('Verify drupal site name');
   phantomcss.screenshot('.site-name', 'drupal-homepage-site-name');
 
-  this.echo('Verify the content');
+  this.echo('Verify the drupal content');
   phantomcss.screenshot('.main-content', 'drupal-homepage-main-content');
 
-  this.echo('Verify the search box');
+  this.echo('Verify the drupal search box');
   phantomcss.screenshot('.search', 'drupal-homepage-search');
 
-  this.echo('Verify the tags cloud box');
+  this.echo('Verify the drupal tags cloud box');
   phantomcss.screenshot('.tags-cloud-wrapper', 'drupal-homepage-tags-cloud-wrapper');
 
-  this.echo('Verify the footer icons nav');
+  this.echo('Verify the drupal footer icons nav');
   phantomcss.screenshot('.icons-nav', 'drupal-homepage-icons-nav');
 
 });
 
 // Check hover states.
 casper.then(function() {
-  this.echo('Verify menu bar - hover');
+  this.echo('Verify drupal menu bar - hover');
   this.mouse.move('.top-navigation .first a');
   phantomcss.screenshot('.top-navigation .first', 'drupal-homepage-top-navigation-hover');
 });
 
 casper.then(function() {
-    this.echo('Verify tags cloud - hover');
+    this.echo('Verify drupal tags cloud - hover');
     this.mouse.move('.tags-cloud li a');
     phantomcss.screenshot('.tags-cloud li a', 'drupal-homepage-tags-cloud-hover');
 });
 
 casper.then(function() {
-  this.echo('Verify icons nav - hover');
+  this.echo('Verify drupal icons nav - hover');
   this.mouse.move('.icons-nav .first a');
   phantomcss.screenshot('.icons-nav .first', 'drupal-homepage-icons-nav-hover');
 });
