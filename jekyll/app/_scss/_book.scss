@@ -187,19 +187,15 @@
             border: none;
           }
 
-          .fields-group-name-last {
-            margin-top: 5px;
-          }
-
-          .fields {
+          .panel-body {
             display: inline-block;
             width: 60%;
             margin-top: -3px;
             margin-left: 2px;
             font-size: 14px;
 
-            .content {
-              font-weight: bold;
+            .field-item {
+              display: inline;
             }
           }
         }
