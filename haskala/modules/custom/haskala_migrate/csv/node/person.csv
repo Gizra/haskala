@@ -1,4 +1,260 @@
 Uniqe ID,Title,Name in Hebrew,Name in German,Pseudonym,Gender,Date of birth,Place of birth,Date of death,Place of death,Occupation
 person1,"Friedländer, David","פרידלענדר, דוד","Friedländer, David","Friedlaender, David,Friedlander, David",Male,"December 16, 1750",Königsberg,"December 25, 1834",Berlin,"Author,Commentator,Translator"
-person2,"Lindau, Baruch ben Jehuda Löb","לינדא, ברוך","Lindau, Baruch ben Jehuda Löb","Lindau, Baruch ben Judah Löb",Male,1759,Hannover,"Dezember 5, 1848",Berlin,"Author,Translator"
-person3,"Mendelssohn, Moses","מנדלסון, משה","Mendelssohn, Moses",,Male,"September 6, 1729",Dessau,"January 4, 1786",Berlin,"Author,Commentator,Translator"
+person2,"Lindau, Baruch ben Jehuda Löb - לינדא, ברוך","לינדא, ברוך","Lindau, Baruch ben Jehuda Löb","Lindau, Baruch ben Judah Löb",Male,1759,Hannover,"Dezember 5, 1848",Berlin,"Author,Translator"
+person3,"Mendelssohn, Moses - מנדלסון, משה","מנדלסון, משה","Mendelssohn, Moses",,Male,"September 6, 1729",Dessau,"January 4, 1786",Berlin,"Author,Commentator,Translator"
+person4,"(Feder)-Guttmann, Tuvia - פדר, טוביה",,,,,,,,,Author
+person5,"Ackord, Elias - אקורד, אליהו",,,,,,,,,"Author,Translator"
+person6,"Alexander, Isaak - אלכסנדר, יצחק",,,,,,,,,Author
+person7,"Alexander, Levy - אלכסנדר, לוי",,,,,,,,,Author
+person8,Anonym,,,,,,,,,Translator
+person9,Anonymous,,,,,,,,,Author
+person10,Anonymous,,,,,,,,,Editor
+person11,"Arnstein, Benedict David - ארנשטיין, בנדיקט דוד",,,,,,,,,Author
+person12,"Asch, Abraham - אש, אברהם",,,,,,,,,Author
+person13,"Ascher, Judas - אשר, יהודה",,,,,,,,,Author
+person14,"Ascher, Saul - אשר, שאול",,,,,,,,,Author
+person15,"Ascher, Saul - אשר, שאול",,,,,,,,,"Author,Mevi La'Dfus (Producer)"
+person16,"Baras, Simon - בר""ז, שמעון",,,,,,,,,Author
+person17,"Baruch Schick of Shklov - שיק, ברוך משקלוב",,,,,,,,,Author
+person18,"Baruch Schick of Shklov - שיק, ברוך משקלוב",,,,,,,,,Mevi La'Dfus (Producer)
+person19,"Baschwitz - בשוויץ, ברוך",,,,,,,,,Mevi La'Dfus (Producer)
+person20,"Baschwitz, Zebi (Hirsch) ben Meir - בשביץ, צבי הירש בן מאיר",,,,,,,,,
+person21,"Beer, Peter - בער, פרץ",,,,,,,,,Author
+person22,"Belinfante, Isaac - בלינפנטי, יצחק",,,,,,,,,Author
+person23,"Ben Seew, Juda Löb - בן-זאב, יהודה ליב",,,,,,,,,"Author,Commentator,Translator"
+person24,"Ben-Jacob, Meir - בן-יעקב, מאיר",,,,,,,,,Author
+person25,"Bendavid, Lazarus - בנדוד, לצרוס",,,,,,,,,"Author,Translator"
+person26,"Berlin, Saul - ברלין, שאול",,,,,,,,,Author
+person27,"Berr, Isaac Berr - בר, יצחק בר",,,,,,,,,Author
+person28,"Berr, Michel - בר, מיכאל",,,,,,,,,Author
+person29,"Bock, Moses Hirsch - בוק, משה (בן) צבי",,,,,,,,,Author
+person30,"Bondi, Mardochai - בונדי, מרדכי",,,,,,,,,Author
+person31,"Bondi, Simon - בונדי, שמעון",,,,,,,,,Author
+person32,"Bran, Alexander",,,,,,,,,Mevi La'Dfus (Producer)
+person33,"Breslauer, Mendel - ברסלאו, מנדל",,,,,,,,,Author
+person34,"Buchner, Zeev Wolf - בוכנר, זאב וולף",,,,,,,,,Author
+person35,"Büschenthal, Lippmann Moses - בישנטל, ליפמן משה",,,,,,,,,"Author,Translator"
+person36,"Chorin, Aaron - אהרן בן קלמן",,,,,,,,,Author
+person37,"Cohen, Benjamin Moses - כהן, בנימין משה",,,,,,,,,Mevi La'Dfus (Producer)
+person38,"Cohen, Salomon Jacob - כהן, שלום",,,,,,,,,"Author,Translator,Editor"
+person39,"Cologna, Abraham de - קולוניא, אברהם חי די",,,,,,,,,Author
+person40,"Cöslin, Chajim - קסלין, חיים",,,,,,,,,Author
+person41,"Davidson, Wolf - דוידזון, וולף",,,,,,,,,Author
+person42,"Derenburg, Zebi Hirsch - דרנבורג, הירש",,,,,,,,,Author
+person43,"Dessau, Wolf - דסאו, וולף",,,,,,,,,Commentator
+person44,"Detmold, Samuel - דטמולד, שמואל",,,,,,,,,"Translator,Commentator"
+person45,"Dohm, Lewin Benjamin - דוהם, לוין בנימין",,,,,,,,,Author
+person46,"Dormitzer, Meir Markus - דורמיצר, מאיר",,,,,,,,,Author
+person47,"Driesen, Mordechai - דריזן, מרדכי בן שמעיה",,,,,,,,,Mevi La'Dfus (Producer)
+person48,"Dubno, Salomon - דובנא, שלמה",,,,,,,,,"Author,Editor,Mevi La'Dfus (Producer),Commentator"
+person49,"Epstein, Pelte Moses - אפשטין, פלטא בן משה",,,,,,,,,Author
+person50,"Euchel, Gottleb - אייכל, יחיאל גוטליב",,,,,,,,,"Author,Translator"
+person51,"Euchel, Isaac Abraham - אייכל, יצחק",,,,,,,,,"Author,Mevi La'Dfus (Producer),Commentator,Translator"
+person52,"Francia de Beaufleury, Louis",,,,,,,,,Author
+person53,"Franco Mendes, David - פרנקו-מנדס, דוד",,,,,,,,,Author
+person54,"Fränkel, David - פרנקל, דוד",,,,,,,,,"Author,Mevi La'Dfus (Producer)"
+person55,"Friedländer, David - פרידלענדר, דוד",,,,,,,,,"Author,Commentator,Mevi La'Dfus (Producer),Translator"
+person56,"Friedländer, Michael - פרידענדר, מיכאל",,,,,,,,,Author
+person57,"Friedrichsfeld, David - פרידריכספלד, דוד",,,,,,,,,Author
+person58,"Friesenhausen, David ben Meir Hakohen - פריזנהויזן, דוד",,,,,,,,,Author
+person59,"Furtado, Abraham - פורטאדו, אברהם",,,,,,,,,Translator
+person60,"Fürth, Meyer Elkan - פירדא, אלחנן מאיר בן אברהם",,,,,,,,,"Author,Mevi La'Dfus (Producer)"
+person61,"Gerson, Elias - אליהו מפינטשוב",,,,,,,,,Editor
+person62,"Graanboom, Izak - גראנבום, יצחק",,,,,,,,,Author
+person63,"Gumpertz, Aaron - גומפרץ, אהרון",,,,,,,,,"Author,Commentator"
+person64,"Hanau, Salomon - הנאו, שלמה זלמן",,,,,,,,,Author
+person65,"Heidenheim, Wolf - הידנהים, וולף",,,,,,,,,"Author,Commentator,Translator,Mevi La'Dfus (Producer)"
+person66,Heimann - היימן,,,,,,,,,
+person67,"Helft, Levy - הלפט, לוי",,,,,,,,,Author
+person68,"Henle, Elkan",,,,,,,,,Author
+person69,"Herz, Marcus - הרץ, מרכוס",,,,,,,,,Author
+person70,"Hirschel, Moses - הירשל, משה",,,,,,,,,"Author,Commentator,Mevi La'Dfus (Producer)"
+person71,"Höchheimer, Simon - הכהיימר, שמעון",,,,,,,,,Author
+person72,"Homberg, Herz - הרץ, הומברג",,,,,,,,,"Author,Commentator"
+person73,"Horowitz, Jehuda - הורוויץ, יהודה",,,,,,,,,Author
+person74,"Hourwitz, Zalkind - הורביץ, זלקינד",,,,,,,,,Author
+person75,Hufnagel - הופנגל,,,,,,,,,Translator
+person76,"Hurwitz, Philipp Lazarus - הורוויץ, פיליפ לצרוס",,,,,,,,,Author
+person77,Israelitische Haupt- und Freischule zu Deßaus - משגיחי חנוך נערים בעיר דעסויא,,,,,,,,,Editor
+person78,"Itzig, Isaac Daniel - איציג, יצחק דניאל",,,,,,,,,"Author,Mevi La'Dfus (Producer)"
+person79,"Jacobson, Israel - יאקאבזאהן, איזראעל",,,,,,,,,Author
+person80,"Jaroslaw, Aron - ירוסלב, אהרן",,,,,,,,,Commentator
+person81,"Jeitteles, Baruch (Benedict) - ייטלש, ברוך",,,,,,,,,"Author,Translator"
+person82,"Jeitteles, Ignaz - ייטלש, יגנץ",,,,,,,,,Author
+person83,"Katz, Haim Abraham - כץ, חיים אברהם בן יהודה",,,,,,,,,Author
+person84,"Kausch, Johann Joseph",,,,,,,,,Mevi La'Dfus (Producer)
+person85,"Kerner, Moshe - קרנר, משה בן אליעזר",,,,,,,,,Author
+person86,"Kohen Piwana, Josephi - פיבני, יוסף בן איזק, כהנא",,,,,,,,,Author
+person87,"Kohn, Salomon - כהן, משלם זלמן בן שלמה",,,,,,,,,Author
+person88,"Kuh, Ephraim Moses - קוה, אפרים",,,,,,,,,Author
+person89,"Landau, Israel - לנדא, ישראל",,,,,,,,,"Mevi La'Dfus (Producer),Translator,Editor"
+person90,"Landau, Moses Israel",,,,,,,,,Author
+person91,"Lax, Salomon - לקס, שלמה",,,,,,,,,Author
+person92,"Lemans, Moses - למנס, משה",,,,,,,,,Author
+person93,"Leo, Hartog - לאו, הרטוג",,,,,,,,,Mevi La'Dfus (Producer)
+person94,"Lesczinski, Elasar - לשצ'ינסקי, אלעזר",,,,,,,,,Author
+person95,"Levi, Avigdor - לוי, אביגדור",,,,,,,,,"Author,Editor"
+person96,"Levi, Hannover Raphael - לוי, רפאל מהנובר",,,,,,,,,Author
+person97,"Levi, Joseph Jasmann ben Joel - לוי, יוסף יוסמן בן יואל",,,,,,,,,Author
+person98,"Levi, Moses",,,,,,,,,"Author,Mevi La'Dfus (Producer)"
+person99,"Levin, Menachem Mendel - לפין, מנחם מנדל",,,,,,,,,Author
+person100,"Levison, George (Mordechai Gumpel Schnaber) - שנאבר-לויזון, גומפל מרדכי",,,,,,,,,Author
+person101,"Levy, Elie - אליהו חלפן",,,,,,,,,Author
+person102,"Löwe, Joel - ברי""ל, יואל",,,,,,,,,"Author,Translator,Commentator,Editor"
+person103,"Lowe, Johann Michael Siegfried",,,,,,,,,Mevi La'Dfus (Producer)
+person104,"Löwenstamm, Chaim ben Arije Löb - לוונשטם, חיים בן אריה ליב",,,,,,,,,
+person105,"Löwysohn, Salomon - לוויזון, שלמה",,,,,,,,,Author
+person106,"Luzzatto, Ephraim - לוצטו, אפרים",,,,,,,,,Author
+person107,"Maimon, Salomon - מימון, שלמה",,,,,,,,,"Author,Commentator"
+person108,"Marcus (Ilfeld), Hartog (Hirsch) - מרקוס, צבי הירש בן מרדכי",,,,,,,,,"Author,Translator"
+person109,"Matthieu, Levi",,,,,,,,,Mevi La'Dfus (Producer)
+person110,"Mendelsohn, Moses - מנדלסון (פרנקפורט), משה",,,,,,,,,Translator
+person111,"Milliaud, Moïse - מיליו, משה",,,,,,,,,Author
+person112,"Moritz, Karl Philipp - מוריץ, קרל פיליף",,,,,,,,,Mevi La'Dfus (Producer)
+person113,"Moses von Gottfried Jakob Schaller - שלר, משה גוטפריד יעקב",,,,,,,,,Translator
+person114,"Neumann, Israel Moses - נוימן, ישראל משה",,,,,,,,,"Author,Translator"
+person115,"Neumann, Moses Samuel - נוימן, משה שמואל",,,,,,,,,Author
+person116,"Obernick, Meir - אוברניק, מאיר",,,,,,,,,"Translator,Commentator"
+person117,"Oppenheim, Simon ben David - אופנהים, שמעון בן דוד",,,,,,,,,Author
+person118,"Ottensosser, David - אוטנזוסר, דוד",,,,,,,,,"Author,Translator,Commentator"
+person119,"Oven, Abraham van - אובן, אברהם",,,,,,,,,Translator
+person120,"Pappenheimer, Salomon Seligmann - פאפנהיים, שלמה",,,,,,,,,Author
+person121,"Pereire, Jacob Rodrigues",,,,,,,,,"Author,Editor"
+person122,"Philippson, Moses - פיליפסון, משה",,,,,,,,,"Author,Commentator,Editor,Mevi La'Dfus (Producer)"
+person123,"Philipson, Moses - פיליפסון, משה",,,,,,,,,Author
+person124,Reuben ben Abraham Levi - ראובן בן אברהם לוי,,,,,,,,,
+person125,"Riess, Nathan - ריז, נתן",,,,,,,,,Author
+person126,"Rodrigues-Moreira, Jacob",,,,,,,,,Author
+person127,"Romanelli, Samuel - רומנלי, שמואל",,,,,,,,,Author
+person128,"Salomon, Gotthold - סלומון, גוטהולד",,,,,,,,,"Translator,Commentator"
+person129,"Samocz, Israel - זמושץ, ישראל",,,,,,,,,"Author,Commentator"
+person130,"Sandersleben, Mosse Levi - סנדרסלבן, משה לוי",,,,,,,,,"Author,Translator"
+person131,"Satanow, Isaak - סטנוב, יצחק",,,,,,,,,"Author,Editor,Commentator,Mevi La'Dfus (Producer)"
+person132,"Schack, Chaim ben Mosche - שק, חיים בן משה",,,,,,,,,Author
+person133,"Schiff, Isaak Benedix - שיף, בנדיט איצק",,,,,,,,,Author
+person134,"Schönemann, Salomo - שינמן, שלמה",,,,,,,,,Author
+person135,"Schott, Benedict",,,,,,,,,"Author,Mevi La'Dfus (Producer)"
+person136,"Schulman, Naftali Hirtz - שולמן, נפתלי הרץ",,,,,,,,,"Author,Mevi La'Dfus (Producer)"
+person137,"Schwab, Abraham ben Menachem Mendel - שוואב, אברהם בן מנחם מנדל",,,,,,,,,Author
+person138,"Schwabacher, Heimann - שובכר, חיים צבי",,,,,,,,,"Author,Translator"
+person139,"Soldin, Jakob - זולדין, אליקים איסרל",,,,,,,,,Mevi La'Dfus (Producer)
+person140,Spalding - שפלדינג,,,,,,,,,Translator
+person141,"Troplowitz, Joseph Ephrati - האפרתי, יוסף מטראפלוויץ",,,,,,,,,Author
+person142,"Ulmann, Naphtalie Herz - אולמן, נפתלי הרץ",,,,,,,,,Author
+person143,"Valabregue, Israel-Bernard de - ואלאברג, ישראל ברנאר דה",,,,,,,,,Author
+person144,"Vanoven, Joshua - ונאובן, יהושע",,,,,,,,,Author
+person145,"Venture, Mardochée - ונטורה, מרדכי",,,,,,,,,"Author,Translator"
+person146,"Waltsch, Shimeon - ולטש, שמעון",,,,,,,,,Commentator
+person147,"Wessely, Hartwig - וייזל, נפתלי הרץ",,,,,,,,,"Author,Commentator,Editor,Translator"
+person148,"Wohl, Levi - וול, יהודה ליב בן צבי הירש",,,,,,,,,Translator
+person149,"Wolf, Elcan Isaac - וולף, אלקן יצחק",,,,,,,,,Author
+person150,"Wolf, Joseph - וולף, יוסף",,,,,,,,,Author
+person151,"Wolfsohn-Halle, Aron - וולפסון, אהרון",,,,,,,,,"Author,Translator,Commentator"
+person152,"Worms, Ascher Anschel - וורמס, אנשיל",,,,,,,,,Author
+person153,"Worms, Wolff - וורמס, וולף",,,,,,,,,Mevi La'Dfus (Producer)
+person154,"Zirndorffer, Isaac David - צירנדורף, איצק",,,,,,,,,Mevi La'Dfus (Producer)
+person155,אברהם אבלי בן ירמיה,,,,,,,,,Editor
+person156,אברהם בן אליהו,,,,,,,,,
+person157,"אברהם בן לא""א כהן מביסטריץ",,,,,,,,,Editor
+person158,"אברהם בן מודל, מאטינגן",,,,,,,,,
+person159,"אברהם בר""א פל",,,,,,,,,Translator
+person160,אורי פיבוש בן אריה ליב,,,,,,,,,Author
+person161,"אליהו בן רפאל שלמה, הלוי",,,,,,,,,
+person162,אנונימי,,,,,,,,,
+person163,בנימין משה מעלי,,,,,,,,,Mevi La'Dfus (Producer)
+person164,"ברי""ל, אלחנן",,,,,,,,,Translator
+person165,"בשוויץ, ברוך",,,,,,,,,Mevi La'Dfus (Producer)
+person166,גדליה בן משה,,,,,,,,,"Author,Translator"
+person167,גדליה מאברזיטצקא,,,,,,,,,Translator
+person168,"גרונדשטין, יעקב לוי",,,,,,,,,Author
+person169,"הורוויץ, פנחס אליהו",,,,,,,,,"Author,Translator"
+person170,"הכים, משה בן חיים",,,,,,,,,"Commentator,Mevi La'Dfus (Producer)"
+person171,"הקלירי, שמשון",,,,,,,,,Mevi La'Dfus (Producer)
+person172,"טהעאדאר, דוד",,,,,,,,,Translator
+person173,"יאנוב, שבתי בן דוד יאנוב, שבתי בן דוד",,,,,,,,,
+person174,"יאקב ז""ב",,,,,,,,,Translator
+person175,יהודה ליב בן משה מהמבורג,,,,,,,,,
+person176,"יהודה ליב בן משה, מהמבורג",,,,,,,,,Author
+person177,"יוסף שלמה, מליסא",,,,,,,,,Mevi La'Dfus (Producer)
+person178,יעקב חיים בן יהושע הכהן,,,,,,,,,Author
+person179,ירוחם בן ישכר בער מלבוב,,,,,,,,,Mevi La'Dfus (Producer)
+person180,"לוין, צבי הירש",,,,,,,,,Author
+person181,"מודינה, דוד בן-ציון בן אברהם",,,,,,,,,
+person182,"מוזסזון, אהרן בן משה מגזע צבי מוזסזון, אהרן בן משה מגזע צבי",,,,,,,,,
+person183,"מינדן, יהודה ליב בן יואל",,,,,,,,,"Editor,Mevi La'Dfus (Producer)"
+person184,"מנשה בן יוסף,מאיליא",,,,,,,,,Author
+person185,"מרגליות, יהודה ליב בן אשר זליג",,,,,,,,,Author
+person186,"מרדכי בן יצחק, הלוי",,,,,,,,,Author
+person187,"משה בר""ד פ""ל משה בר""ד פ""ל",,,,,,,,,Translator
+person188,"משה צבי ב""ר מנחם מוויהל",,,,,,,,,Translator
+person189,"נפתלי הירץ בן יהודה ליב, מהלברשטט",,,,,,,,,
+person190,"פולק, אהרן",,,,,,,,,Author
+person191,"פולק, מאיר בן גבריאל",,,,,,,,,Author
+person192,פועלי בית הדפוס חנוך נערים,,,,,,,,,Author
+person193,"פיאצה, משה אהרן רחמים",,,,,,,,,
+person194,פנחס זעליג בן אהרן,,,,,,,,,Mevi La'Dfus (Producer)
+person195,"פרידלנדר, בר""ד בונם",,,,,,,,,Translator
+person196,"פרידלענדר, בונם בר""ד בונם בר""ד פ""ל",,,,,,,,,Translator
+person197,צבי הירש בן מנחם נחום,,,,,,,,,Author
+person198,"ראכנאווע, יוזל",,,,,,,,,Translator
+person199,"שטראשון, שלמה",,,,,,,,,
+person200,"שיאר, אברהם נפתלי הירץ",,,,,,,,,Author
+person201,שמעון פיורדא,,,,,,,,,Editor
+person202,,,,,,,,,,
+person203,"Marcuse, Moses - מרקוזי, משה",,,,,,,,,Translator
+person204,"Levin, Menachem Mendel - לפין, מנחם מנדל",,,,,,,,,Translator
+person205,"הכים, אליהו בן חיים",,,,,,,,,Author
+person206,"Soldin, Jakob - זולדין, אליקים איסרל",,,,,,,,,Author
+person207,הענלי בן שמעון אולמא,,,,,,,,,Mevi La'Dfus (Producer)
+person208,"חלם, שלמה בן משה",,,,,,,,,Author
+person209,"הכים, משה בן חיים",,,,,,,,,
+person210,שלמה אלימלך ואברהם,,,,,,,,,
+person211,"Levi, Hannover Raphael - לוי, רפאל מהנובר",,,,,,,,,"Author,Commentator"
+person212,"Jekutiel, Moses - יקותיאל, משה",,,,,,,,,Mevi La'Dfus (Producer)
+person213,"Bing, Beer Abraham - בינג, אברהם בר",,,,,,,,,Author
+person214,"Hart, Jacob - אליקים בן אברהם",,,,,,,,,Author
+person215,"ננסיך, אברהם בן שלמה",,,,,,,,,
+person216,"Jeitteles, Juda - ייטלש, יהודה",,,,,,,,,
+person217,"Hart, Jacob - אליקים בן אברהם",,,,,,,,,
+person218,"מרגליות, יהודה ליב בן אשר זליג",,,,,,,,,"Commentator,Mevi La'Dfus (Producer)"
+person219,"Beer-Bing, Jesaia - בער, ישי",,,,,,,,,Translator
+person220,"Poper, M. - פופר, מרדכי",,,,,,,,,Author
+person221,"Jaroslaw, Aron - ירוסלב, אהרן",,,,,,,,,Mevi La'Dfus (Producer)
+person222,"ארענסוואלד, ראובן",,,,,,,,,Mevi La'Dfus (Producer)
+person223,"חיט, משה אברהם בן ראובן",,,,,,,,,
+person224,"Meldola, Abraham - מילדולה, אברהם",,,,,,,,,Author
+person225,"Kalker, Simon Isaac - קלקר, שמעון",,,,,,,,,Author
+person226,"נבחוביץ, יהודה ליב",,,,,,,,,
+person227,"Satanow, Isaak - סטנוב, יצחק",,,,,,,,,"Author,Mevi La'Dfus (Producer)"
+person228,"חיט, משה אברהם בן ראובן",,,,,,,,,Author
+person229,"Fischer, Markus - פישר, מאיר",,,,,,,,,Author
+person230,"Baruch Schick of Shklov - שיק, ברוך משקלוב",,,,,,,,,Translator
+person231,"מענץ, אברהם יוסף בן שמעון וואלף",,,,,,,,,Author
+person232,"Lindau, Baruch ben Jehuda Löb - לינדא, ברוך",,,,,,,,,"Author,Translator"
+person233,"Wolf, Joseph - וולף, יוסף",,,,,,,,,Editor
+person234,"Philippson, Moses - פיליפסון, משה",,,,,,,,,Mevi La'Dfus (Producer)
+person235,"Cohen, Chanania Elchanan Chaj - כהן, חנניה אלחנן חי",,,,,,,,,Author
+person236,"Somerhausen, Hirsch (Hartog) - זומרהאוזן, הירש",,,,,,,,,Author
+person237,Gesellschaft des Guten und Edlen - חברת שוחרי הטוב והתושיה,,,,,,,,,Author
+person238,"Hirsch, Isaac - הירש, איצק ליב",,,,,,,,,Translator
+person239,"כהן, ירחמיאל פלק בן נתן",,,,,,,,,Author
+person240,"Wessely, Hartwig - וייזל, נפתלי הרץ",,,,,,,,,
+person241,"Glogau, Hirsch Moses - גלוגוי, צבי הירש בן משה",,,,,,,,,Author
+person242,"אמרספורט, בנימין",,,,,,,,,Author
+person243,"Lemans, Moses - למנס, משה",,,,,,,,,Translator
+person244,Gesellschaft des Guten und Edlen - חברת שוחרי הטוב והתושיה,,,,,,,,,Mevi La'Dfus (Producer)
+person245,"Wessely, Hartwig - וייזל, נפתלי הרץ",,,,,,,,,Mevi La'Dfus (Producer)
+person246,"לוונשטאם, שאול בן אריה ליב",,,,,,,,,
+person247,"Leo, Hartog - לאו, הרטוג",,,,,,,,,Author
+person248,"Aaron, Joseph Philipp - אהרן, יוסף",,,,,,,,,Author
+person249,"מור (מוהר), יוסף שמעון",,,,,,,,,Mevi La'Dfus (Producer)
+person250,"Löwenstamm, Jaacov Moses - לוונשטם, יעקב משה",,,,,,,,,Author
+person251,Ephraim Lion Davids - אפרים בן ליב,,,,,,,,,Translator
+person252,"Fürth, Meyer Elkan - פירדא, אלחנן מאיר בן אברהם",,,,,,,,,Author
+person253,"Friedländer, Sanwil - פרידלנדר, זנוויל שמואל",,,,,,,,,Author
+person254,"Heinemann, Jermias - היינמן, ירמיה",,,,,,,,,Author
+person255,"Wolf, Joseph - וולף, יוסף",,,,,,,,,"Author,Translator"
+person256,"Schottländer, Benedikt - שוטלנדר, בנדיקט",,,,,,,,,Author
+person257,"Philippson, Moses - פיליפסון, משה",,,,,,,,,Don't know
+person258,"Franco Mendes, David - פרנקו-מנדס, דוד",,,,,,,,,Translator
+person259,"Heidenheim, Wolf - הידנהים, וולף",,,,,,,,,Mevi La'Dfus (Producer)
