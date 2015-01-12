@@ -15,9 +15,3 @@ files[] = handlers/node/HaskalaBookTranslationsMigrate.php
 files[] = handlers/node/HaskalaEditionMigrate.php
 files[] = handlers/node/HaskalaProductionsMigrate.php
 files[] = handlers/node/HaskalaMentionsMigrate.php
-
-
-
-
-
-
