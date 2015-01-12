@@ -11,7 +11,7 @@ Feature: Person
     And   I should see the text "<text>"
 
   Examples:
-    | title                           | text                  |
-    | Mendelssohn, Moses              | Dessau                |
-    | Friedländer, David              | Königsberg            |
-    | Lindau, Baruch ben Jehuda Löb   | Hannover              |
+    | title                                            | text                  |
+    | Mendelssohn, Moses - מנדלסון, משה                | Dessau                |
+    | Friedländer, David                               | Königsberg            |
+    | Lindau, Baruch ben Jehuda Löb - לינדא, ברוך       | Hannover              |
