@@ -51,11 +51,11 @@ before_script:
   - cd ..
 
   # Install Behat
-  - cd haskala/behat
+  - cd behat
   - cp aliases.drushrc.php ~/.drush/
   - cp behat.local.yml.travis behat.local.yml
   - composer install
-  - cd ../..
+  - cd ..
 
   # Create display.
   - export DISPLAY=:99.0
