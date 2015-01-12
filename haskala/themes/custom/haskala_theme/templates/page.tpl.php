@@ -1,6 +1,7 @@
 <div class="wrapper">
   <header>
     <nav class="top-navigation nav-bar">
+    <nav class="top-navigation nav-bar top-menu">
       <?php print render($top_menu);  ?>
     </nav>
     <h1 class="site-name"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><span>Library of the</span> Haskala</a></h1>
