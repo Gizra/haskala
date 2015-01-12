@@ -1,6 +1,8 @@
 {
+  "name": "Behat tests for Haskala",
+  "description": "Functional testing for Haskala installation profile.",
   "require": {
-    "drupal/drupal-extension": "v0.1.5"
+    "drupal/drupal-extension": "~3.0"
   },
   "config": {
     "bin-dir": "bin/"
