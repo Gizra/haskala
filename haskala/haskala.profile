@@ -86,6 +86,7 @@ function haskala_setup_blocks() {
  */
 function haskala_set_variables() {
   variable_set('site_frontpage', 'homepage');
+  variable_set('page_manager_node_view_disabled', FALSE);
 }
 
 /**
