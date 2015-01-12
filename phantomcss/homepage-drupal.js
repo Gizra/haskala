@@ -11,7 +11,7 @@ phantomcss.init({
   // mismatchTolerance: 1
 });
 
-casper.start('http://localhost/www/');
+casper.start('http://127.0.0.1:8080');
 
 casper.viewport(1024, 768);
 
@@ -19,19 +19,19 @@ casper.viewport(1024, 768);
 casper.then(function() {
 
   this.echo('Verify site name');
-  phantomcss.screenshot('.site-name', 'site-name');
+  phantomcss.screenshot('.site-name', 'drupal-homepage-site-name');
 
   this.echo('Verify the content');
-  phantomcss.screenshot('.main-content', 'main-content');
+  phantomcss.screenshot('.main-content', 'drupal-homepage-main-content');
 
   this.echo('Verify the search box');
-  phantomcss.screenshot('.search', 'search');
+  phantomcss.screenshot('.search', 'drupal-homepage-search');
 
   this.echo('Verify the tags cloud box');
-  phantomcss.screenshot('.tags-cloud-wrapper', 'tags-cloud-wrapper');
+  phantomcss.screenshot('.tags-cloud-wrapper', 'drupal-homepage-tags-cloud-wrapper');
 
   this.echo('Verify the footer icons nav');
-  phantomcss.screenshot('.icons-nav', 'icons-nav');
+  phantomcss.screenshot('.icons-nav', 'drupal-homepage-icons-nav');
 
 });
 
@@ -39,15 +39,15 @@ casper.then(function() {
 casper.then(function() {
   this.echo('Verify menu bar - hover');
   this.mouse.move('.top-navigation .first a');
-  phantomcss.screenshot('.top-navigation .first', 'top-navigation-hover');
+  phantomcss.screenshot('.top-navigation .first', 'drupal-homepage-top-navigation-hover');
 
   this.echo('Verify tags cloud - hover');
   this.mouse.move('.tags-cloud li a');
-  phantomcss.screenshot('.tags-cloud li a', 'tags-cloud-hover');
+  phantomcss.screenshot('.tags-cloud li a', 'drupal-homepage-tags-cloud-hover');
 
   this.echo('Verify icons nav - hover');
   this.mouse.move('.icons-nav .first a');
-  phantomcss.screenshot('.icons-nav .first', 'icons-nav-hover');
+  phantomcss.screenshot('.icons-nav .first', 'drupal-homepage-icons-nav-hover');
 });
 
 
