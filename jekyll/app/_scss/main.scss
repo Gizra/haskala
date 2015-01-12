@@ -181,6 +181,10 @@ a, a:hover, a:visited {
 
     .footer-nav-bar {
       padding-bottom: 35px;
+
+      li {
+        text-transform: uppercase;
+      }
     }
 
     .icons-nav {
@@ -340,7 +344,7 @@ a, a:hover, a:visited {
       li.login {
         padding: 1px 15px 0px 15px;
         text-transform: uppercase;
-        
+
         a {
           font: 14px bell_mtbold;
         }
