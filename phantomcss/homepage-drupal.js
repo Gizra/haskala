@@ -40,11 +40,15 @@ casper.then(function() {
   this.echo('Verify menu bar - hover');
   this.mouse.move('.top-navigation .first a');
   phantomcss.screenshot('.top-navigation .first', 'drupal-homepage-top-navigation-hover');
+});
 
-  this.echo('Verify tags cloud - hover');
-  this.mouse.move('.tags-cloud li a');
-  phantomcss.screenshot('.tags-cloud li a', 'drupal-homepage-tags-cloud-hover');
+casper.then(function() {
+    this.echo('Verify tags cloud - hover');
+    this.mouse.move('.tags-cloud li a');
+    phantomcss.screenshot('.tags-cloud li a', 'drupal-homepage-tags-cloud-hover');
+});
 
+casper.then(function() {
   this.echo('Verify icons nav - hover');
   this.mouse.move('.icons-nav .first a');
   phantomcss.screenshot('.icons-nav .first', 'drupal-homepage-icons-nav-hover');
