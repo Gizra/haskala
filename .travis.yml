@@ -80,7 +80,7 @@ script:
   - casperjs test books.js
   - casperjs test book.js
   # drupal
-  - homepage-drupal.js
+  - casperjs test homepage-drupal.js
 
 
   # Upload failed images to imgur
