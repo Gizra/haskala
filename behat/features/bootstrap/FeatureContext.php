@@ -12,7 +12,6 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
    * @When /^I login with user "([^"]*)"$/
    */
   public function iLoginWithUser($name) {
-    // $password = $this->drupal_users[$name];
     $password = 'admin';
     $this->loginUser($name, $password);
   }
@@ -51,6 +50,31 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
   }
 
   /**
+   * @When /^I visit "([^"]*)" node of type "([^"]*)"$/
+   */
+  public function iVisitNodePageOfType($title, $type) {
+    $query = new \entityFieldQuery();
+    $result = $query
+      ->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', strtolower($type))
+      ->propertyCondition('title', $title)
+      ->propertyCondition('status', NODE_PUBLISHED)
+      ->range(0, 1)
+      ->execute();
+
+    if (empty($result['node'])) {
+      $params = array(
+        '@title' => $title,
+        '@type' => $type,
+      );
+      throw new \Exception(format_string("Node @title of @type not found.", $params));
+    }
+
+    $nid = key($result['node']);
+    $this->getSession()->visit($this->locatePath('node/' . $nid));
+  }
+
+  /**
    * @Then /^I should wait for the text "([^"]*)" to "([^"]*)"$/
    */
   public function iShouldWaitForTheTextTo($text, $appear) {
@@ -81,25 +105,6 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
       $screenshot = $this->getSession()->getDriver()->getScreenshot();
       file_put_contents($file_name, $screenshot);
       print "Screenshot for failed step created in $file_name";
-    }
-  }
-  /**
-   * @BeforeScenario
-   *
-   * Delete the RESTful tokens before every scenario, so user starts as
-   * anonymous.
-   */
-  public function deleteRestfulTokens($event) {
-    if (!module_exists('restful_token_auth')) {
-      // Module is disabled.
-      return;
-    }
-    if (!$entities = entity_load('restful_token_auth')) {
-      // No tokens found.
-      return;
-    }
-    foreach ($entities as $entity) {
-      $entity->delete();
     }
   }
 
