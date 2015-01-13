@@ -4,11 +4,6 @@ var phantomcss = require('./node_modules/phantomcss/phantomcss.js');
 
 phantomcss.init({
   libraryRoot: './node_modules/phantomcss'
-  // Reduce the default tolerance, to allow for different fonts to be created
-  // on different systems.
-  // Note that screenshots were created on an Ubuntu system, thus they might
-  // fail when tested locally on other machines (e.g. Mac OSX)
-  // mismatchTolerance: 1
 });
 
 casper.start('http://localhost:9000/');
@@ -42,11 +37,15 @@ casper.then(function() {
   this.echo('Verify menu bar - hover');
   this.mouse.move('.top-navigation .first a');
   phantomcss.screenshot('.top-navigation .first', 'top-navigation-hover');
+});
 
-  this.echo('Verify tags cloud - hover');
-  this.mouse.move('.tags-cloud li a');
-  phantomcss.screenshot('.tags-cloud li a', 'tags-cloud-hover');
+  casper.then(function() {
+    this.echo('Verify tags cloud - hover');
+    this.mouse.move('.tags-cloud li a');
+    phantomcss.screenshot('.tags-cloud li a', 'tags-cloud-hover');
+});
 
+casper.then(function() {
   this.echo('Verify icons nav - hover');
   this.mouse.move('.icons-nav .first a');
   phantomcss.screenshot('.icons-nav .first', 'icons-nav-hover');
