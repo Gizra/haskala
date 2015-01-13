@@ -230,6 +230,66 @@ function haskala_general_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 1,
   );
+  // Exported menu link: user-menu_add-a-book-series:admin/structure/taxonomy/series/add
+  $menu_links['user-menu_add-a-book-series:admin/structure/taxonomy/series/add'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'admin/structure/taxonomy/series/add',
+    'router_path' => 'admin/structure/taxonomy/%/add',
+    'link_title' => 'Add a book series',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'user-menu_add-a-book-series:admin/structure/taxonomy/series/add',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+  );
+  // Exported menu link: user-menu_add-a-book:node/add/book
+  $menu_links['user-menu_add-a-book:node/add/book'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'node/add/book',
+    'router_path' => 'node/add/book',
+    'link_title' => 'Add a book',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'user-menu_add-a-book:node/add/book',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+  );
+  // Exported menu link: user-menu_add-a-person:node/add/person
+  $menu_links['user-menu_add-a-person:node/add/person'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'node/add/person',
+    'router_path' => 'node/add/person',
+    'link_title' => 'Add a person',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'user-menu_add-a-person:node/add/person',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+  );
   // Exported menu link: user-menu_login:user/login
   $menu_links['user-menu_login:user/login'] = array(
     'menu_name' => 'user-menu',
