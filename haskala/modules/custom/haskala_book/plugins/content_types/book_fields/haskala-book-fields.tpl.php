@@ -81,22 +81,13 @@
  */
 ?>
 
-    <div id="node-<?php print $nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
       <section class="top-details">
-        <?php print render($title_prefix); ?>
         <?php if (!empty($title)): ?>
           <h1 class="title page-header"><?php print $title; ?></h1>
         <?php endif; ?>
-        <?php if (!$page): ?>
-          <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-        <?php endif; ?>
-        <?php print render($title_suffix); ?>
 
-        <div class="content"<?php print $content_attributes; ?>>
+        <div class="content">
           <?php
-          // We hide the comments and links now so that we can render them later.
-          hide($content['comments']);
-          hide($content['links']);
           //print render($content);
           ?>
           <div class="top-fields">
@@ -104,23 +95,29 @@
               <div class="field-label type-label">Type of book:</div>
               <div class="content"></div>
             </div>
-            <?php print render($content['group_top_details']); ?>
+            <?php foreach($top_details_group as $field){
+              //dpm($field);
+              print drupal_render($field);
+            }
+            ?>
+            <!--<div class="field">
+              <div class="field-label">Full title of book:</div>
+              <div class="content">Abhandlung von der Freiheit des Menschen</div>
+            </div>-->
           </div>
         </div>
       </section>
       <section class="bottom-details">
         <div>
-          <?php foreach ($groups as $group): ?>
-          <?php print render($content['group_horizontal_tabs']); ?>
-          <?php endforeach; ?>
+          <?php foreach ($groups as $group){
+            foreach ($group as $group_field) {
+              print drupal_render($group_field);
+            }
+          } ?>
+
         </div>
       </section>
 
-      <?php print render($content['links']); ?>
-
-      <?php print render($content['comments']); ?>
-
-    </div>
 
 
 

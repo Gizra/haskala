@@ -56,6 +56,10 @@
         .field {
           line-height: 2.42;
           letter-spacing: 0.4px;
+
+          .field-items {
+            font-weight: normal;
+          }
         }
       }
 
@@ -74,7 +78,7 @@
           }
         }
 
-        .content {
+        .field-items {
           display: inline-block;
           font-weight: bold;
         }
