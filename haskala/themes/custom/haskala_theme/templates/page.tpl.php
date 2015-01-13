@@ -1,6 +1,5 @@
 <div class="wrapper">
   <header>
-    <nav class="top-navigation nav-bar">
     <nav class="top-navigation nav-bar top-menu">
       <?php print render($top_menu);  ?>
     </nav>
