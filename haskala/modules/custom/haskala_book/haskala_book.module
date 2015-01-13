@@ -5,3 +5,12 @@
  */
 
 include_once 'haskala_book.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function haskala_book_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+}
