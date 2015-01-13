@@ -81,25 +81,16 @@
  */
 ?>
 
-<section>
-  <h3 class="hr-title">BOOK</h3>
-  <div class="main-content">
-    <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+    <div id="node-<?php print $nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
       <section class="top-details">
         <?php print render($title_prefix); ?>
         <?php if (!empty($title)): ?>
-        <h1 class="title page-header"><?php print $title; ?></h1>
+          <h1 class="title page-header"><?php print $title; ?></h1>
         <?php endif; ?>
         <?php if (!$page): ?>
           <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
-
-        <?php if ($display_submitted): ?>
-          <div class="submitted">
-            <?php print $submitted; ?>
-          </div>
-        <?php endif; ?>
 
         <div class="content"<?php print $content_attributes; ?>>
           <?php
@@ -119,7 +110,9 @@
       </section>
       <section class="bottom-details">
         <div>
+          <?php foreach ($groups as $group): ?>
           <?php print render($content['group_horizontal_tabs']); ?>
+          <?php endforeach; ?>
         </div>
       </section>
 
@@ -128,7 +121,7 @@
       <?php print render($content['comments']); ?>
 
     </div>
-  </div>
-</section>
+
+
 
 

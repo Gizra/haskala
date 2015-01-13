@@ -44,7 +44,7 @@ function haskala_book_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-face7117-ed20-4f6e-ac55-5ce8dffa6fbc';
+    $pane->pid = 'new-4e7518f3-75d5-40d3-b8ae-9921462f299e';
     $pane->panel = 'middle';
     $pane->type = 'book_fields';
     $pane->subtype = 'book_fields';
@@ -59,11 +59,11 @@ function haskala_book_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'face7117-ed20-4f6e-ac55-5ce8dffa6fbc';
-    $display->content['new-face7117-ed20-4f6e-ac55-5ce8dffa6fbc'] = $pane;
-    $display->panels['middle'][0] = 'new-face7117-ed20-4f6e-ac55-5ce8dffa6fbc';
+    $pane->uuid = '4e7518f3-75d5-40d3-b8ae-9921462f299e';
+    $display->content['new-4e7518f3-75d5-40d3-b8ae-9921462f299e'] = $pane;
+    $display->panels['middle'][0] = 'new-4e7518f3-75d5-40d3-b8ae-9921462f299e';
   $display->hide_title = PANELS_TITLE_PANE;
-  $display->title_pane = 'new-face7117-ed20-4f6e-ac55-5ce8dffa6fbc';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context'] = $handler;
 
