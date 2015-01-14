@@ -19,16 +19,17 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   }
 
   $node = $context->data;
+  $wrapper = entity_metadata_wrapper('node', $node);
   //dpm($node);
 
   $top_details_group = field_group_load_field_group('group_top_details', 'node', 'book', 'default');
   $top_details_group_fields = array();
   foreach($top_details_group->children as $field_name) {
     //dpm($field_name);
-    //dpm($node->{$field_name}['und'][0]['value']);
+    //dpm($node->{$field_name}[LANGUAGE_NONE][0]['value']);
+
     // Check if the field isn't empty
-    if ($node->{$field_name}['und']['0']['value'] != '0') {
-      //$top_details_group_fields[] = $node->{$field_name};
+    if ($wrapper->$field_name->value()) {
       $top_details_group_fields[] = field_view_field('node', $node, $field_name);
     }
 
@@ -44,18 +45,20 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
     //dpm($group);
     $field_groups[$group->label] = array();
     foreach($group->children as $field_name) {
+      //dpm($field_name);
+
       // Check if the field isn't empty
-      //if ($node->{$field_name}['und']['0']['value'] != '0') {
-        //$field_groups[$group->label][] = $node->{$field_name};
-        $field_groups[$group->label][] = field_view_field('node', $node, $field_name);
-      //}
+      if ($wrapper->$field_name->value()) {
+        $field = field_view_field('node', $node, $field_name);
+        $field_groups[$group->label][] = $field;
+      }
+    }
+    //Delete empty group
+    if (empty($field_groups[$group->label])){
+      unset($field_groups[$group->label]);
     }
   }
 
-  //dpm($top_details_group_fields);
-  /*$foo = field_view_field('node', $node, 'field_full_title');
-  dpm(render($foo), 'foo');
-  dpm($node);*/
   $grouped_fileds_variables = array(
     'title' => $node->title,
     'top_details_group' => $top_details_group_fields,
@@ -65,7 +68,6 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   $variables = array(
     'nid' => $node->nid,
     'grouped_fields' => theme('haskala_book_fields', $grouped_fileds_variables),
-    //'grouped_fields' => theme('haskala_book', $field_groups),
   );
 
 
@@ -76,7 +78,6 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   $block = new stdClass();
   $block->module = 'haskala_book';
   $block->content =  theme('haskala_book', $variables);
-  //$block->content =  'content!';
 
   return $block;
 }

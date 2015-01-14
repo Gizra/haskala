@@ -104,7 +104,7 @@
             float: left;
             font-size: 14px;
 
-            &.first
+            &:first-child
             {
               list-style-type: none;
             }
