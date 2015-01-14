@@ -19,7 +19,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   $node = $context->data;
   $wrapper = entity_metadata_wrapper('node', $node);
 
-  //Fields to be displayed above the book tabs.
+  // Fields to be displayed above the book tabs.
   $top_details_group = field_group_load_field_group('group_top_details', 'node', 'book', 'default');
   $top_details_group_fields = array();
   foreach($top_details_group->children as $field_name) {
