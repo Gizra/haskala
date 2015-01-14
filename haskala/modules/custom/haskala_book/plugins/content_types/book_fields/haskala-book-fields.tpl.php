@@ -7,7 +7,7 @@
  * Available variables:
  * - $title: the (sanitized) title of the node.
  * - $top_details_group: An array of node book top details group fields items.
- * - $groups: An array of node book bottom details groups fields items.
+ * - $tabs: An array of node book bottom details groups fields items.
  *
  */
 ?>
@@ -17,9 +17,6 @@
           <h1 class="title page-header"><?php print $title; ?></h1>
         <?php endif; ?>
 
-          <?php
-          //print render($content);
-          ?>
         <div class="top-fields">
           <div class="field">
             <div class="field-label type-label">Type of book:</div>
@@ -33,18 +30,18 @@
       <section class="bottom-details">
         <nav class="details-navigation">
           <ul>
-            <?php foreach($groups as $group_name => $group): ?>
+            <?php foreach($tabs as $group_name => $group): ?>
                 <li><a href="#<?php print $group_name; ?>"><?php print $group_name; ?></a></li>
             <?php endforeach; ?>
           </ul>
         </nav>
         <section class="groups">
-          <?php foreach($groups as $group_name => $group): ?>
+          <?php foreach($tabs as $tab_name => $tab_fields): ?>
               <div class="fields-group">
-                <div class="fields-group-name" id="<?php print $group_name; ?>"><?php print $group_name; ?></div>
+                <div class="fields-group-name" id="<?php print $tab_name; ?>"><?php print $tab_name; ?></div>
                 <div class="fields">
-                  <?php foreach($group as $group_field):
-                    print render($group_field);
+                  <?php foreach($tab_fields as $tab_field):
+                    print render($tab_field);
                   endforeach; ?>
                 </div>
               </div>
