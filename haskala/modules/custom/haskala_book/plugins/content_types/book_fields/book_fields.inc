@@ -17,18 +17,32 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   }
 
   $node = $context->data;
+
+  // For weight fields data.
+  $node_view = node_view($node);
+
   $wrapper = entity_metadata_wrapper('node', $node);
 
   // Fields to be displayed above the book tabs.
   $top_details_group = field_group_load_field_group('group_top_details', 'node', 'book', 'default');
-  $top_details_group_fields = array();
+
+  // Sort fields by weight.
+  $top_details_fields_sorted = array();
   foreach($top_details_group->children as $field_name) {
+    if ($wrapper->$field_name->value()){
+      $weight = $node_view[$field_name]['#weight'];
+      $tab_fields_sorted[$weight] = $field_name;
+    }
+  }
+  ksort($top_details_fields_sorted);
+
+  $top_details_group_fields = array();
+  foreach($top_details_fields_sorted as $field_name) {
 
     // Check if the field isn't empty.
     if ($wrapper->$field_name->value()) {
-      $top_details_group_fields[] = field_view_field('node', $node, $field_name);
+      $top_details_group_fields[] = render($node_view[$field_name]);
     }
-
   }
 
   $parent_tabs_group = field_group_load_field_group('group_horizontal_tabs', 'node', 'book', 'default');
@@ -37,19 +51,33 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
 
   foreach ($parent_tabs_group->children as $tab_name) {
     $tab = field_group_load_field_group($tab_name, 'node', 'book', 'default');
-    $tabs_fields[$tab->label] = array();
+
+    // Sort fields by weight
+    $tab_fields_sorted = array();
     foreach($tab->children as $field_name) {
+      if ($wrapper->$field_name->value()){
+        $weight = $node_view[$field_name]['#weight'];
+        $tab_fields_sorted[$weight] = $field_name;
+      }
+    }
+    ksort($tab_fields_sorted);
+
+    $tabs_fields[$tab->label] = array();
+    foreach($tab_fields_sorted as $field_name) {
 
       // Check if the field isn't empty.
       if ($wrapper->$field_name->value()) {
-        $field = field_view_field('node', $node, $field_name);
+        $field = render($node_view[$field_name]);
         $tabs_fields[$tab->label][] = $field;
       }
     }
-    $tabs_fields[$tab->label]['weight'] = $tab->weight;
+
     // Delete empty group.
     if (empty($tabs_fields[$tab->label])){
       unset($tabs_fields[$tab->label]);
+    }
+    else {
+      $tabs_fields[$tab->label]['weight'] = $tab->weight;
     }
   }
   // Sort groups by weight.
