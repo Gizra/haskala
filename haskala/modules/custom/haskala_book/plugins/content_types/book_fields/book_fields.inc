@@ -46,10 +46,18 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
         $tabs_fields[$tab->label][] = $field;
       }
     }
+    $tabs_fields[$tab->label]['weight'] = $tab->weight;
     // Delete empty group.
     if (empty($tabs_fields[$tab->label])){
       unset($tabs_fields[$tab->label]);
     }
+  }
+  // Sort groups by weight.
+  uasort($tabs_fields, 'drupal_sort_weight');
+
+  // Delete weight element.
+  foreach (array_keys($tabs_fields) as $tab_name){
+    unset($tabs_fields[$tab_name]['weight']);
   }
 
   $grouped_fileds_variables = array(
