@@ -183,6 +183,14 @@ a, a:hover, a:visited {
     overflow: hidden;
     clear: both;
 
+    .footer-nav-bar {
+      padding-bottom: 35px;
+
+      li {
+        text-transform: uppercase;
+      }
+    }
+
     .icons-nav {
       font-family: bell_mtbold;
       border-bottom: 1px solid #817f7a;
@@ -280,25 +288,28 @@ a, a:hover, a:visited {
     .bottom-nav {
       display: inline-block;
       margin-right: 1px;
-      margin-top: 0px;
-
-      ul.bottom-nav-options {
-        margin-top: 20px;
-
-        li {
-          padding: 1px 10px 0px 0px;
-        }
-      }
+      margin-top: 20px;
 
       ul {
         padding-top: 6px;
-        letter-spacing: -0.2px;
+        letter-spacing: -0.7px;
         display: inline-block;
+        margin-left: -8px;
+
+        &:before,
+        &:after {
+          margin-top: 9px;
+          padding: 0;
+          content: '+';
+          font-size: 12px;
+          font-weight: bold;
+          color: $lightBlue;
+        }
+
       }
 
       li {
-        float: left;
-        padding: 0px 22px 0px 0px;
+        padding: 0px 18px 0px 0px;
         display: inline-block;
 
         &:after {
@@ -315,65 +326,31 @@ a, a:hover, a:visited {
         }
 
         &.first {
-          padding-left: 23px;
+          padding-left: 22px;
         }
-      }
 
-      li.login.first {
-        display: none;
-        padding-left: 11px;
-      }
-
-      li.login {
-        display: none;
-        padding: 1px 15px 0px 0px;
-
-        a {
-          font: 14px bell_mtbold;
+        &.last {
+          padding-right: 18px;
         }
       }
 
       a {
         color: $lightBlue;
         font: 18px bell_mtbold;
-      }
-
-      &:before,
-      &:after {
-        margin-top: 9px;
-        padding: 0;
-        content: '+';
-        font-size: 12px;
-        font-weight: bold;
-        color: $lightBlue;
-      }
-
-      &:before {
-        float: left;
-      }
-
-      &:after {
-        float: right;
-      }
-    }
-
-    .login-area {
-      padding-top: 6px;
-      text-transform: uppercase;
-
-
-      a {
-        color: $lightBlue;
-        font: 15px bell_mtbold;
-        letter-spacing: -0.5px;
         padding: 0;
         display: inline;
+      }
 
-        &:before,
-        &:after {
-          padding: 0 13px;
-          content: '+';
-          font-size: 12px;
+      li.login.first {
+        padding-left: 11px;
+      }
+
+      li.login {
+        padding: 1px 15px 0px 15px;
+        text-transform: uppercase;
+
+        a {
+          font: 14px bell_mtbold;
         }
       }
     }
