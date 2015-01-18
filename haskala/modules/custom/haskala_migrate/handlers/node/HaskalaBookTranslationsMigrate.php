@@ -17,6 +17,8 @@ class HaskalaBookTranslationsMigrate extends HaskalaMigration {
 
   );
 
+
+
   public $dependencies = array(
     'HaskalaCityTermsMigrate',
     'HaskalaPeopleMigrate',
@@ -24,6 +26,9 @@ class HaskalaBookTranslationsMigrate extends HaskalaMigration {
 
   public function __construct($arguments) {
     parent::__construct($arguments);
+
+    $this->source = new MigrateSourceCSV(DRUPAL_ROOT .'/../haskala/modules/custom/haskala_migrate/csv/node/book_translation.csv', $this->csvColumns,array('header_rows' => 1));
+
     $this->addFieldMapping('field_book', 'field_book')
       ->sourceMigration('HaskalaBooksMigrate');
 
