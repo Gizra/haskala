@@ -73,8 +73,8 @@
   }
 
   .tags-cloud-wrapper {
-    margin-top: 44px;
-    margin-bottom: 78px;
+    margin-top: 47px;
+    margin-bottom: 75px;
 
     h3 {
       color: $lightBlue;
@@ -106,7 +106,7 @@
     }
 
     .tags-cloud {
-      padding-top: 5px;
+      padding-top: 3px;
       max-width: 815px;
       margin: 0 auto;
 
@@ -115,9 +115,9 @@
         background-color: $lightBlue;
         border-radius: 10.5px;
         padding: 0 18px;
-        margin: 4px 8px 0 0;
-        height: 21px;
-        line-height: 19px;
+        margin: 5px 8px 0 0;
+        height: 20px;
+        line-height: 21px;
         color: white;
         font-size: 11px;
         white-space: nowrap;
@@ -128,6 +128,19 @@
       }
     }
   }
+  .wrapper {
+    footer {
+      .login-area {
+        margin-top:0px;
+
+        ul {
+          padding-top: 0px;
+        }
+      }
+    }
+  }
 }
+
+
 
 

@@ -193,12 +193,12 @@ a, a:hover, a:visited {
     .icons-nav {
       font-family: bell_mtbold;
       border-bottom: 1px solid #817f7a;
-      padding-bottom: 33px;
+      padding-bottom: 35px;
 
       li {
         width: 165px;
         padding-right: 27px;
-        background: url('../images/bullet.png') no-repeat right 10px top 25px ;
+        background: url('../images/bullet.png') no-repeat right 10px top 27px ;
 
         @media (max-width: 750px) {
           width: 45%;
