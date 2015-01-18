@@ -13,7 +13,7 @@
 <section>
   <h3 class="hr-title">book</h3>
   <div class="main-content">
-    <div id="node-<?php print $nid; ?>" class="node node-book clearfix">
+    <div id="node-<?php print $nid; ?>" class="node node-book">
           <?php print $grouped_fields; ?>
     </div>
   </div>

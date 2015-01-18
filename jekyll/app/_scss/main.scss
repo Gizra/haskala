@@ -28,6 +28,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   text-transform: uppercase;
+  font: inherit;
 }
 
 p {
@@ -174,7 +175,7 @@ a, a:hover, a:visited {
       display: inline-block;
       border-bottom: 1px solid $lightBlue;
       width: 38%;
-      padding-top: 10px;
+      padding-top: 11px;
     }
 
     &:before {
@@ -193,7 +194,7 @@ a, a:hover, a:visited {
     .icons-nav {
       font-family: bell_mtbold;
       border-bottom: 1px solid #817f7a;
-      padding-bottom: 35px;
+      padding-bottom: 34px;
 
       li {
         width: 165px;
