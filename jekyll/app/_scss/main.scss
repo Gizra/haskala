@@ -190,6 +190,14 @@ a, a:hover, a:visited {
     overflow: hidden;
     clear: both;
 
+    .footer-nav-bar {
+      padding-bottom: 35px;
+
+      li {
+        text-transform: uppercase;
+      }
+    }
+
     .icons-nav {
       font-family: bell_mtbold;
       border-bottom: 1px solid #817f7a;
@@ -289,17 +297,11 @@ a, a:hover, a:visited {
       margin-right: 1px;
       margin-top: 20px;
 
-      /*ul.bottom-nav-options {
-
-        li {
-          padding: 1px 10px 0px 0px;
-        }
-      }*/
-
       ul {
         padding-top: 6px;
         letter-spacing: -0.7px;
         display: inline-block;
+        margin-left: -8px;
 
         &:before,
         &:after {
@@ -309,13 +311,11 @@ a, a:hover, a:visited {
           font-size: 12px;
           font-weight: bold;
           color: $lightBlue;
-          display: inline-block;
         }
+
       }
 
       li {
-        /*float: left;
-        padding: 0px 22px 0px 0px;*/
         padding: 0px 18px 0px 0px;
         display: inline-block;
 
@@ -345,11 +345,20 @@ a, a:hover, a:visited {
         color: $lightBlue;
         font: 18px bell_mtbold;
         padding: 0;
-        display: inline-block;
+        display: inline;
       }
 
       li.login.first {
         padding-left: 11px;
+      }
+
+      li.login {
+        padding: 1px 15px 0px 15px;
+        text-transform: uppercase;
+
+        a {
+          font: 14px bell_mtbold;
+        }
       }
     }
   }
