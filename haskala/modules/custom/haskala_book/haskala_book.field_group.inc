@@ -21,7 +21,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Book\'s reception in its time',
-    'weight' => '63',
+    'weight' => '71',
     'children' => array(
       0 => 'field_contemporary_references',
     ),
@@ -48,7 +48,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Book structure',
-    'weight' => '58',
+    'weight' => '66',
     'children' => array(
       0 => 'field_alignment',
       1 => 'field_book_structure_notes',
@@ -92,10 +92,10 @@ function haskala_book_field_group_info() {
     'label' => 'Bottom details',
     'weight' => '3',
     'children' => array(
-      0 => 'group_structure',
+      0 => 'group_catalog_numbers',
       1 => 'group_prefaces',
-      2 => 'group_topics',
-      3 => 'group_catalog_numbers',
+      2 => 'group_structure',
+      3 => 'group_topics',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -125,7 +125,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Catalog numbers',
-    'weight' => '65',
+    'weight' => '73',
     'children' => array(
       0 => 'field_bar_ilan_library_id',
       1 => 'field_berlin_library_id',
@@ -190,16 +190,17 @@ function haskala_book_field_group_info() {
     'label' => 'horizontal tabs',
     'weight' => '1',
     'children' => array(
-      0 => 'group_book_structure',
-      1 => 'group_prefaces',
-      2 => 'group_topics',
+      0 => 'group_translatation',
+      1 => 'group_book_reception',
+      2 => 'group_book_structure',
       3 => 'group_catalog_numbers',
-      4 => 'group_valumes',
-      5 => 'group_textual_models',
-      6 => 'group_target_audience',
-      7 => 'group_book_reception',
-      8 => 'group_preservation',
-      9 => 'group_references_bibliography',
+      4 => 'group_prefaces',
+      5 => 'group_preservation',
+      6 => 'group_references_bibliography',
+      7 => 'group_target_audience',
+      8 => 'group_textual_models',
+      9 => 'group_topics',
+      10 => 'group_valumes',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -222,7 +223,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Prefaces',
-    'weight' => '59',
+    'weight' => '67',
     'children' => array(
       0 => 'field_preface_notes',
       1 => 'field_preface_number',
@@ -283,7 +284,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Preservation in the public consciousness',
-    'weight' => '64',
+    'weight' => '72',
     'children' => array(
       0 => 'field_later_references',
     ),
@@ -310,7 +311,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'References and bibliography',
-    'weight' => '66',
+    'weight' => '74',
     'children' => array(
       0 => 'field_copy_of_book_used',
       1 => 'field_references_notes',
@@ -385,7 +386,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Target audience',
-    'weight' => '62',
+    'weight' => '70',
     'children' => array(
       0 => 'field_target_audience',
       1 => 'field_target_audience_notes',
@@ -413,7 +414,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Textual models',
-    'weight' => '60',
+    'weight' => '68',
     'children' => array(
       0 => 'field_textual_models_notes',
     ),
@@ -509,7 +510,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Topics',
-    'weight' => '61',
+    'weight' => '69',
     'children' => array(
       0 => 'field_topic',
     ),
@@ -556,6 +557,37 @@ function haskala_book_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_translatation|node|book|default';
+  $field_group->group_name = 'group_translatation';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_horizontal_tabs';
+  $field_group->data = array(
+    'label' => 'Translation',
+    'weight' => '64',
+    'children' => array(
+      0 => 'field_book',
+      1 => 'field_translation_year',
+      2 => 'field_translation_city',
+      3 => 'field_translator',
+      4 => 'field_translation_references',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-translatation field-group-htab',
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_translatation|node|book|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_valumes|node|book|default';
   $field_group->group_name = 'group_valumes';
   $field_group->entity_type = 'node';
@@ -564,7 +596,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Volumes',
-    'weight' => '57',
+    'weight' => '65',
     'children' => array(
       0 => 'field_examined_volume_number',
       1 => 'field_name_of_series',
