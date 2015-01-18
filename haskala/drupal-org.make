@@ -67,14 +67,18 @@ projects[views][version] = "3.8"
 projects[views_bulk_operations][subdir] = "contrib"
 projects[views_bulk_operations][version] = "3.2"
 
-
 ; Development modules
-; Modules
-projects[devel][subdir] = "development"
-projects[coder][subdir] = "development"
 projects[migrate][subdir] = "development"
-projects[migrate_extras][subdir] = "development"
+projects[migrate][version] = "2.6"
 
+projects[migrate_extras][subdir] = "development"
+projects[migrate_extras][version] = "2.5"
+
+projects[devel][subdir] = "development"
+projects[devel][version] = "1.5"
+
+projects[coder][subdir] = "development"
+projects[coder][version] = "2.4"
 
 ; Libraries
 libraries[ckeditor][download][type]= "get"
