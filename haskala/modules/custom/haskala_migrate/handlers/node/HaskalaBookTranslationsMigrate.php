@@ -55,4 +55,14 @@ class HaskalaBookTranslationsMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_translation_references', 'field_translation_references');
   }
 
+  // Add language to book translation title for prevent duplicated titles.
+  public function prepareRow($row) {
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+    $row->title .= ' - '.$row->field_language;
+  }
 }
+
+
+
