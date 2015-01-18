@@ -303,8 +303,7 @@ a, a:hover, a:visited {
         display: inline-block;
         margin-left: -8px;
 
-        &:before,
-        &:after {
+        &:before, &:after {
           margin-top: 9px;
           padding: 0;
           content: '+';
