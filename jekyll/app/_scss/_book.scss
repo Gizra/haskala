@@ -25,12 +25,13 @@
     }
 
     .hr-title {
-      margin: 13px 0 62px;
+      margin: 15px 0 62px;
       font-size: 24px;
       letter-spacing: 2px;
 
       &:before, &:after {
         width: 45%;
+        padding-top: 8px;
       }
     }
 
@@ -40,7 +41,7 @@
 
       #top-details {
 
-        padding: 0 21px 53px;
+        padding: 0 21px 51px;
         border-bottom: 2px solid $darkgray;
         margin-bottom: 31px;
 
@@ -49,7 +50,7 @@
           font-weight: normal;
           line-height: 1.07;
           text-transform: uppercase;
-          margin-bottom: 12px;
+          margin-bottom: 14px;
           letter-spacing: -0.5px;
         }
 
@@ -100,7 +101,7 @@
           li {
             display: list-item;
             list-style-type: disc;
-            margin: 0 13px;
+            margin: 0 12px;
             float: left;
             font-size: 14px;
 
@@ -160,13 +161,13 @@
 
       #groups {
         clear: both;
-        padding-top: 17px;
+        padding-top: 15px;
 
         .fields-group {
 
           border-top: 1px solid $darkgray;
           clear: both;
-          padding: 6px 15px 2px;
+          padding: 6px 18px 2px;
           margin-top: 56px;
 
           .fields-group-name {
@@ -183,7 +184,6 @@
             display: inline-block;
             width: 60%;
             margin-top: -3px;
-            margin-left: 2px;
             font-size: 14px;
 
             .field-item {
