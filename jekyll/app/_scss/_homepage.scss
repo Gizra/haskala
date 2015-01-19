@@ -25,6 +25,7 @@
         display: inline-block;
         vertical-align: top;
         color: $darkgray;
+        font-family: Arial;
         font-weight: bold;
         letter-spacing: -0.98px;
       }
@@ -73,7 +74,7 @@
   }
 
   .tags-cloud-wrapper {
-    margin-top: 47px;
+    margin-top: 45px;
     margin-bottom: 75px;
 
     h3 {
@@ -89,7 +90,7 @@
         display: inline-block;
         border-bottom: 1px solid $lightBlue;
         width: 38%;
-        padding-top: 11px;
+        padding-top: 12px;
 
         @media (max-width: 850px) {
           display: none;
@@ -106,7 +107,7 @@
     }
 
     .tags-cloud {
-      padding-top: 3px;
+      padding-top: 6px;
       max-width: 815px;
       margin: 0 auto;
 
@@ -131,7 +132,7 @@
   .wrapper {
     footer {
       .login-area {
-        margin-top:7px;
+        margin-top:6px;
 
         ul {
           padding-top: 0px;
