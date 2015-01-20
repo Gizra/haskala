@@ -60,13 +60,12 @@ abstract class HaskalaMigration extends Migration {
    * Fetch book and producer node IDs by their titles.
    *
    * @param $bundle
-   * The bundle of node requested id
-   *
+   *   The bundle of node requested ID.
    * @param $title
-   * The title node
+   *   The title of the node.
    *
-   * @return
-   * Id of the requested node
+   * @return int
+   *   Id of the requested node
    */
   protected function getNodeByTitle($bundle, $title) {
     $query = new EntityFieldQuery();
@@ -80,5 +79,27 @@ abstract class HaskalaMigration extends Migration {
     }
 
     return reset(array_keys($result['node']));
+  }
+
+  public function prepareRow($row) {
+    // Load html snippets.
+    foreach ($row as $column => &$original_value) {
+      // If the value is divided to multiple values, search a snippet for each
+      // one separately.
+      $values = explode('|', $original_value);
+      foreach($values as $delta => &$value) {
+        if ($value != '[file]') {
+          continue;
+        }
+        // If the field is divided, add its delta to the file name.
+        $column_delta = count($values) > 1 ? '_' . ($delta + 1) : '';
+        $file = $this->entityType . '_' . $this->bundle . '_' . $row->id . '_' . $column . $column_delta . '.txt';
+        // Get the html snippet.
+        $value = file_get_contents(drupal_get_path('module', 'taglit_migrate') . '/file/' . $file);
+      }
+
+      // If the value was divided, combine it again.
+      $original_value = implode('|', $values);
+    }
   }
 }

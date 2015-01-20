@@ -8,7 +8,6 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = list
 dependencies[] = strongarm
-dependencies[] = taglit_resource
 dependencies[] = text
 dependencies[] = views
 dependencies[] = views_content
