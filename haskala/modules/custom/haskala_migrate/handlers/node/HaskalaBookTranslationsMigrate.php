@@ -5,7 +5,8 @@
  */
 class HaskalaBookTranslationsMigrate extends HaskalaMigration {
   public $entityType = 'node';
-  public $bundle = 'book_translation';
+  public $bundle = 'book';
+  protected $csvFile = 'node/book_translation.csv';
 
   public $csvColumns = array(
     array('field_book', 'Book id'),
@@ -24,6 +25,7 @@ class HaskalaBookTranslationsMigrate extends HaskalaMigration {
 
   public function __construct($arguments) {
     parent::__construct($arguments);
+
     $this->addFieldMapping('field_book', 'field_book')
       ->sourceMigration('HaskalaBooksMigrate');
 
@@ -43,11 +45,14 @@ class HaskalaBookTranslationsMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_translation_city:ignore_case')
       ->defaultValue(TRUE);
 
-    $this
-      ->addFieldMapping('field_translator', 'field_translator')
+    $this->addFieldMapping('field_translator', 'field_translator')
       ->sourceMigration('HaskalaPeopleMigrate');
 
     $this->addFieldMapping('field_translation_references', 'field_translation_references');
   }
 
+  // Add language to book translation title for prevent duplicated titles.
+  public function prepareRow($row) {
+    $row->title .= ' - '.$row->field_language;
+  }
 }
