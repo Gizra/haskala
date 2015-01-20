@@ -6,6 +6,7 @@
  */
 
 abstract class HaskalaMigration extends Migration {
+  protected $csvFile = NULL;
 
   public function __construct($arguments) {
     parent::__construct($arguments);
@@ -47,7 +48,11 @@ abstract class HaskalaMigration extends Migration {
     $this->map = new MigrateSQLMap($this->machineName, $key, $destination_handler->getKeySchema($this->entityType));
 
     // Create a MigrateSource object.
-    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'haskala_migrate') . '/csv/' . $this->entityType . '/' . $this->bundle . '.csv', $this->csvColumns, array('header_rows' => 1));
+    if (!$this->csvFile) {
+      $this->csvFile = $this->entityType . '/' . $this->bundle . '.csv';
+    }
+
+    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'haskala_migrate') . '/csv/' . $this->csvFile, $this->csvColumns, array('header_rows' => 1));
     $this->destination = new $class_name($this->bundle, array('text_format' => 'filtered_html'));
   }
 

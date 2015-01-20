@@ -6,6 +6,7 @@
 class HaskalaBookTranslationsMigrate extends HaskalaMigration {
   public $entityType = 'node';
   public $bundle = 'book';
+  protected $csvFile = 'node/book_translation.csv';
 
   public $csvColumns = array(
     array('field_book', 'Book id'),
@@ -17,8 +18,6 @@ class HaskalaBookTranslationsMigrate extends HaskalaMigration {
 
   );
 
-
-
   public $dependencies = array(
     'HaskalaCityTermsMigrate',
     'HaskalaPeopleMigrate',
@@ -26,8 +25,6 @@ class HaskalaBookTranslationsMigrate extends HaskalaMigration {
 
   public function __construct($arguments) {
     parent::__construct($arguments);
-
-    $this->source = new MigrateSourceCSV(DRUPAL_ROOT .'/../haskala/modules/custom/haskala_migrate/csv/node/book_translation.csv', $this->csvColumns,array('header_rows' => 1));
 
     $this->addFieldMapping('field_book', 'field_book')
       ->sourceMigration('HaskalaBooksMigrate');
@@ -57,12 +54,6 @@ class HaskalaBookTranslationsMigrate extends HaskalaMigration {
 
   // Add language to book translation title for prevent duplicated titles.
   public function prepareRow($row) {
-    if (parent::prepareRow($row) === FALSE) {
-      return FALSE;
-    }
     $row->title .= ' - '.$row->field_language;
   }
 }
-
-
-
