@@ -114,19 +114,6 @@ function page_element_views_default_views() {
       'label' => 'Location',
     ),
   );
-  $translatables['page_element'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Edit'),
-    t('All'),
-    t('Content pane'),
-    t('View panes'),
-  );
   $export['page_element'] = $view;
 
   return $export;

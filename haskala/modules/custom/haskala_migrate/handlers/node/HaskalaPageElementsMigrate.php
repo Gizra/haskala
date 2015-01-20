@@ -8,9 +8,7 @@ class HaskalaPageElementsMigrate extends HaskalaMigration {
   protected $entityType = 'node';
 
   protected $csvColumns = array(
-    array('id', 'ID'),
     array('language', 'language'),
-    array('title', 'Title'),
     array('field_page', 'Page'),
     array('field_location', 'Location'),
     array('field_content', 'Content'),
@@ -26,11 +24,10 @@ class HaskalaPageElementsMigrate extends HaskalaMigration {
     );
     $this->addSimpleMappings($field_names);
 
-    $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('language', 'language');
+   $this->addFieldMapping('language', 'language');
 
     // Get the content from html folder
-    $this->addFieldMapping('field_content', 'field_content')
-      ->arguments(array('format' => 'full_html'));
+    $this->addFieldMapping('field_content', 'field_content');
+    $this->addFieldMapping('field_content:format')->defaultValue('full_html');
   }
 }

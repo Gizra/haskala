@@ -47,8 +47,6 @@ dependencies[] = token
 dependencies[] = views
 dependencies[] = views_bulk_operations
 
-
-
 ; haskala modules ------------------------------------------------------------
 ; Add here haskala modules that should be anebled when installing the
 ; haskala profile.
@@ -57,4 +55,4 @@ dependencies[] = haskala_migrate
 dependencies[] = haskala_people
 dependencies[] = haskala_book
 dependencies[] = haskala_general
-
+dependencies[] = page_element
