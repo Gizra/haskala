@@ -28,6 +28,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   text-transform: uppercase;
+  font: inherit;
 }
 
 p {
@@ -39,12 +40,19 @@ a, a:hover, a:visited {
   text-decoration: none;
 }
 
-/* reset bootstrap */
+/* Reset bootstrap */
 *, *:before, *:after {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
+
+.page-header{
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+}
+/* End reset bootstrap */
 
 .wrapper {
   max-width: 950px;
@@ -167,7 +175,7 @@ a, a:hover, a:visited {
       display: inline-block;
       border-bottom: 1px solid $lightBlue;
       width: 38%;
-      padding-top: 10px;
+      padding-top: 11px;
     }
 
     &:before {
@@ -194,12 +202,12 @@ a, a:hover, a:visited {
     .icons-nav {
       font-family: bell_mtbold;
       border-bottom: 1px solid #817f7a;
-      padding-bottom: 33px;
+      padding-bottom: 36px;
 
       li {
         width: 165px;
         padding-right: 27px;
-        background: url('../images/bullet.png') no-repeat right 10px top 25px ;
+        background: url('../images/bullet.png') no-repeat right 10px top 27px ;
 
         @media (max-width: 750px) {
           width: 45%;
@@ -212,6 +220,10 @@ a, a:hover, a:visited {
           width: 100%;
         }
 
+        &.active a {
+          color: $lightBlue;
+        }
+        
         &.last {
           padding-right: 0;
           background: none;
@@ -245,7 +257,8 @@ a, a:hover, a:visited {
             width: 28px;
           }
 
-          &:hover:before {
+          &:hover:before,
+          &.active:before {
             background-position: 0 -50px;
           }
         }
@@ -256,7 +269,8 @@ a, a:hover, a:visited {
             width: 28px;
           }
 
-          &:hover:before {
+          &:hover:before,
+          &.active:before {
             background-position: -50px -50px;
           }
         }
@@ -267,7 +281,8 @@ a, a:hover, a:visited {
             width: 36px;
           }
 
-          &:hover:before {
+          &:hover:before,
+          &.active:before {
             background-position: -100px -50px;
           }
         }
@@ -278,32 +293,31 @@ a, a:hover, a:visited {
             width: 23px;
           }
 
-          &:hover:before {
+          &:hover:before,
+          &.active:before {
             background-position: -150px -50px;
           }
         }
       }
     }
 
-    .bottom-nav {
+    .login-area {
       display: inline-block;
       margin-right: 1px;
       margin-top: 20px;
 
       ul {
-        padding-top: 6px;
+        padding-top: 5px;
         letter-spacing: -0.7px;
         display: inline-block;
-        margin-left: -8px;
 
-        &:before,
-        &:after {
-          margin-top: 9px;
+        &:before, &:after {
           padding: 0;
           content: '+';
           font-size: 12px;
           font-weight: bold;
           color: $lightBlue;
+          display: inline-block;
         }
 
       }
@@ -326,7 +340,7 @@ a, a:hover, a:visited {
         }
 
         &.first {
-          padding-left: 22px;
+          padding-left: 18px;
         }
 
         &.last {
@@ -336,7 +350,7 @@ a, a:hover, a:visited {
 
       a {
         color: $lightBlue;
-        font: 18px bell_mtbold;
+        font: 14px bell_mtbold;
         padding: 0;
         display: inline;
       }
@@ -346,12 +360,7 @@ a, a:hover, a:visited {
       }
 
       li.login {
-        padding: 1px 15px 0px 15px;
         text-transform: uppercase;
-
-        a {
-          font: 14px bell_mtbold;
-        }
       }
     }
   }
