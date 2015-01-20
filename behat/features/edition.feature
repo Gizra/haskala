@@ -3,7 +3,7 @@ Feature: Edition
   As an anonymous user
   We need to be able to have access to a edition page
 
-  @api @wip
+  @api
   Scenario Outline: Login to site, and check access to the edition page.
     Given I am an anonymous user
     When  I visit "<title>" node of type "edition"
