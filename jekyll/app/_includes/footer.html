@@ -1,18 +1,19 @@
 <footer>
   <nav class="icons-nav nav-bar footer-nav-bar">
-    <ul class="menu nav"><li class="first leaf active"><a href="" title="" class="active">Books</a></li>
-      <li class="leaf active"><a href="" title="" class="active">Digital Books</a></li>
-      <li class="leaf active"><a href="" title="" class="active">People</a></li>
-      <li class="last leaf active"><a href="" title="" class="active">Places</a></li>
+    <ul class="menu nav">
+      <li class="first leaf {% if page.body_class == 'node-type-book' %}active{% endif %}"><a href="" title="" class="{% if page.body_class == 'node-type-book' %}active{% endif %}">Books</a></li>
+      <li class="leaf"><a href="" title="">Digital Books</a></li>
+      <li class="leaf"><a href="" title="">People</a></li>
+      <li class="last leaf"><a href="" title="">Places</a></li>
     </ul>
   </nav>
 
-  <div class="bottom-nav">
+  <div class="login-area">
     <nav>
       <ul>
         <li class="first"><a href="#">Add a book</a></li>
         <li><a href="#">Add a book series</a></li>
-        <li class="last"><a href="#">Add a person</a></li>
+        <li><a href="#">Add a person</a></li>
         <li class="last login"><a href="#">Login</a></li>
       </ul>
     </nav>

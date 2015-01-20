@@ -25,6 +25,7 @@
         display: inline-block;
         vertical-align: top;
         color: $darkgray;
+        font-family: Arial;
         font-weight: bold;
         letter-spacing: -0.98px;
       }
@@ -73,14 +74,14 @@
   }
 
   .tags-cloud-wrapper {
-    margin-top: 44px;
-    margin-bottom: 78px;
+    margin-top: 45px;
+    margin-bottom: 75px;
 
     h3 {
       color: $lightBlue;
       font-family: bell_mtbold;
       font-weight: bold;
-      margin-right: 4px;
+      margin: 0px 4px 0px 0px;
       letter-spacing: 0.9px;
 
       &:before,
@@ -89,7 +90,7 @@
         display: inline-block;
         border-bottom: 1px solid $lightBlue;
         width: 38%;
-        padding-top: 11px;
+        padding-top: 12px;
 
         @media (max-width: 850px) {
           display: none;
@@ -106,7 +107,7 @@
     }
 
     .tags-cloud {
-      padding-top: 5px;
+      padding-top: 6px;
       max-width: 815px;
       margin: 0 auto;
 
@@ -115,9 +116,9 @@
         background-color: $lightBlue;
         border-radius: 10.5px;
         padding: 0 18px;
-        margin: 4px 8px 0 0;
-        height: 21px;
-        line-height: 19px;
+        margin: 5px 8px 0 0;
+        height: 20px;
+        line-height: 21px;
         color: white;
         font-size: 11px;
         white-space: nowrap;
@@ -128,6 +129,19 @@
       }
     }
   }
+  .wrapper {
+    footer {
+      .login-area {
+        margin-top:6px;
+
+        ul {
+          padding-top: 0px;
+        }
+      }
+    }
+  }
 }
+
+
 
 

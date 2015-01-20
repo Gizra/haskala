@@ -11,9 +11,6 @@ projects[admin_views][version] = "1.3"
 projects[ckeditor][subdir] = "contrib"
 projects[ckeditor][version] = "1.x-dev"
 
-projects[context][subdir] = "contrib"
-projects[context][version] = "3.6"
-
 projects[ctools][subdir] = "contrib"
 projects[ctools][version] = "1.5"
 
@@ -66,7 +63,6 @@ projects[views][version] = "3.8"
 
 projects[views_bulk_operations][subdir] = "contrib"
 projects[views_bulk_operations][version] = "3.2"
-
 
 ; Development modules
 projects[migrate][subdir] = "development"
