@@ -26,7 +26,6 @@ dependencies[] = rdf
 ; Contrib modules -------------------------------------------------------------
 dependencies[] = admin_menu_toolbar
 dependencies[] = admin_views
-dependencies[] = context
 dependencies[] = ctools
 dependencies[] = date
 dependencies[] = date_popup

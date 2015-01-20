@@ -31,7 +31,7 @@ casper.then(function() {
   phantomcss.screenshot('.icons-nav', 'icons-nav');
 
   this.echo('Verify the bottom nav');
-  phantomcss.screenshot('.bottom-nav', 'bottom-nav');
+  phantomcss.screenshot('.login-area', 'login-area');
 });
 
 
