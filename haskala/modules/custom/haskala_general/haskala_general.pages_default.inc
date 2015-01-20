@@ -52,6 +52,7 @@ function haskala_general_default_page_manager_pages() {
     'style_settings' => array(
       'default' => NULL,
       'middle' => NULL,
+      'intro' => NULL,
     ),
   );
   $display->cache = array();
@@ -59,6 +60,30 @@ function haskala_general_default_page_manager_pages() {
   $display->uuid = 'a79c8939-3bab-48e9-8c0f-5f6c1892c2b2';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-8cf678a8-783b-4e31-b03b-10540a01e2a3';
+    $pane->panel = 'intro';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'page_element-panel_page_element';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'field_page_value' => 'homepage',
+        'field_location_value' => 'content',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '8cf678a8-783b-4e31-b03b-10540a01e2a3';
+    $display->content['new-8cf678a8-783b-4e31-b03b-10540a01e2a3'] = $pane;
+    $display->panels['intro'][0] = 'new-8cf678a8-783b-4e31-b03b-10540a01e2a3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
