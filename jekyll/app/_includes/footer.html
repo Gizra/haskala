@@ -1,7 +1,7 @@
 <footer>
   <nav class="icons-nav nav-bar footer-nav-bar">
     <ul class="menu nav">
-      <li class="first leaf active"><a href="" title="" class="active">Books</a></li>
+      <li class="first leaf {% if page.body_class == 'node-type-book' %}active{% endif %}"><a href="" title="" class="{% if page.body_class == 'node-type-book' %}active{% endif %}">Books</a></li>
       <li class="leaf"><a href="" title="">Digital Books</a></li>
       <li class="leaf"><a href="" title="">People</a></li>
       <li class="last leaf"><a href="" title="">Places</a></li>

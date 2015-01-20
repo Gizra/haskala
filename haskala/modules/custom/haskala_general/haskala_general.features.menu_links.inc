@@ -70,21 +70,21 @@ function haskala_general_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 1,
   );
-  // Exported menu link: menu-icons-menu_books:<front>
-  $menu_links['menu-icons-menu_books:<front>'] = array(
+  // Exported menu link: menu-icons-menu_books:node/2592
+  $menu_links['menu-icons-menu_books:node/2592'] = array(
     'menu_name' => 'menu-icons-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
+    'link_path' => 'node/2592',
+    'router_path' => 'node/%',
     'link_title' => 'BOOKS',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-icons-menu_books:<front>',
+      'identifier' => 'menu-icons-menu_books:node/2592',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 0,
