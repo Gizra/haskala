@@ -45,8 +45,7 @@ class HaskalaBookTranslationsMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_translation_city:ignore_case')
       ->defaultValue(TRUE);
 
-    $this
-      ->addFieldMapping('field_translator', 'field_translator')
+    $this->addFieldMapping('field_translator', 'field_translator')
       ->sourceMigration('HaskalaPeopleMigrate');
 
     $this->addFieldMapping('field_translation_references', 'field_translation_references');

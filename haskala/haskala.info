@@ -6,7 +6,6 @@ core = 7.x
 
 ; Core ------------------------------------------------------------------------
 dependencies[] = block
-dependencies[] = comment
 dependencies[] = contextual
 dependencies[] = help
 dependencies[] = image
@@ -14,7 +13,6 @@ dependencies[] = list
 dependencies[] = menu
 dependencies[] = number
 dependencies[] = options
-dependencies[] = overlay
 dependencies[] = path
 dependencies[] = taxonomy
 dependencies[] = dblog
@@ -42,9 +40,7 @@ dependencies[] = migrate_extras
 dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = pathauto
-dependencies[] = reldate
 dependencies[] = strongarm
-dependencies[] = transliteration
 dependencies[] = token
 dependencies[] = views
 dependencies[] = views_bulk_operations
