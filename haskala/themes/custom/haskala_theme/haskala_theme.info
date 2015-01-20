@@ -17,3 +17,5 @@ regions[page_bottom] = 'Page bottom'
 stylesheets[all][] = ../../../libraries/haskala/css/main.css
 
 plugins[panels][layouts] = layouts
+
+settings[bootstrap_tooltip_enabled] = 0
