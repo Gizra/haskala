@@ -3313,15 +3313,10 @@ function haskala_book_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 20,
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 70,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3332,21 +3327,20 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_volumes_published_number',
-    'label' => 'Number of volumes published',
+    'label' => 'Number of volumes published',
     'required' => 0,
     'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 45,
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 80,
     ),
   );
 
@@ -4206,8 +4200,8 @@ function haskala_book_field_default_field_instances() {
   t('Notes on preface');
   t('Number of pages');
   t('Number of preface');
+  t('Number of volumes published');
   t('Number of examined volume');
-  t('Number of volumes published');
   t('Other libraries');
   t('Place of publication as it appears in the book');
   t('Preface title');

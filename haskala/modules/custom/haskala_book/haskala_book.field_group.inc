@@ -277,9 +277,9 @@ function haskala_book_field_group_info() {
     'weight' => '73',
     'children' => array(
       0 => 'field_preface_notes',
-      1 => 'field_preface_title',
-      2 => 'field_writer_of_preface',
-      3 => 'field_preface_number',
+      1 => 'field_preface_number',
+      2 => 'field_preface_title',
+      3 => 'field_writer_of_preface',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -739,7 +739,6 @@ function haskala_book_field_group_info() {
       1 => 'field_name_of_series',
       2 => 'field_other_volumes',
       3 => 'field_volumes_notes',
-      4 => 'field_volumes_published_number',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
