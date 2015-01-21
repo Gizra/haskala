@@ -228,6 +228,7 @@ features[field_instance][] = node-edition-field_edition_changes
 features[field_instance][] = node-edition-field_edition_city
 features[field_instance][] = node-edition-field_edition_references
 features[field_instance][] = node-edition-field_edition_year
+features[field_instance][] = node-mention-field_book
 features[field_instance][] = node-production-field_book
 features[field_instance][] = node-production-field_name_in_book
 features[field_instance][] = node-production-field_person_book_references

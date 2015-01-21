@@ -24,7 +24,6 @@ features[field_base][] = field_occupation
 features[field_base][] = field_place_of_birth
 features[field_base][] = field_place_of_death
 features[field_base][] = field_pseudonym
-features[field_instance][] = node-mention-field_book
 features[field_instance][] = node-mention-field_mentionee
 features[field_instance][] = node-mention-field_mentionee_city
 features[field_instance][] = node-mention-field_mentionee_description

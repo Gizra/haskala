@@ -3681,6 +3681,49 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-mention-field_book'
+  $field_instances['node-mention-field_book'] = array(
+    'bundle' => 'mention',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_book',
+    'label' => 'Book',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'node-production-field_book'
   $field_instances['node-production-field_book'] = array(
     'bundle' => 'production',
@@ -4143,6 +4186,7 @@ function haskala_book_field_default_field_instances() {
   t('Are there thanks');
   t('Book is not available?');
   t('British Library');
+  t('Book');
   t('Changes in this edition');
   t('City of edition');
   t('City of translation');
