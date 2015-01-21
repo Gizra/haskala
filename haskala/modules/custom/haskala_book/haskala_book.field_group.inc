@@ -94,12 +94,12 @@ function haskala_book_field_group_info() {
     'children' => array(
       0 => 'group_catalog_numbers',
       1 => 'group_prefaces',
-      2 => 'group_references_bibliography',
-      3 => 'group_structure',
-      4 => 'group_target_audience',
+      2 => 'group_structure',
+      3 => 'group_topics',
+      4 => 'group_volumes',
       5 => 'group_textual_models',
-      6 => 'group_topics',
-      7 => 'group_volumes',
+      6 => 'group_target_audience',
+      7 => 'group_references_bibliography',
     ),
     'format_type' => 'div',
     'format_settings' => array(
