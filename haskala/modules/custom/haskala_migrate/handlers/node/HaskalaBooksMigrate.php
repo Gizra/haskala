@@ -60,7 +60,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_textual_models_notes', 'Notes on textual models'),
     array('field_volumes_notes', 'field_volumes_notes'),
     array('field_examined_volume_number', 'Number of examined volume'),
-    array('field_languages_count', 'Number of languages'),
+    array('field_number_of_languages', 'Number of languages'),
     array('field_number_of_pages', 'Number of pages'),
     array('field_preface_number', 'Number of preface'),
     array('field_volumes_published_number', 'Number of volumes published'),
@@ -154,7 +154,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     $this->addSimpleMappings($simple_mappings);
 
     $term_references = array(
-      'field_languages_count',
+      'field_number_of_languages',
       'field_alignment',
       'field_fonts',
       'field_language',

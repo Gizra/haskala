@@ -1194,8 +1194,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_languages_count'
-  $field_instances['node-book-field_languages_count'] = array(
+  // Exported field_instance: 'node-book-field_number_of_languages'
+  $field_instances['node-book-field_number_of_languages'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1216,7 +1216,7 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_languages_count',
+    'field_name' => 'field_number_of_languages',
     'label' => 'Languages count',
     'required' => 0,
     'settings' => array(

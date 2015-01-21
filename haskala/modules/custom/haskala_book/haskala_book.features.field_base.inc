@@ -937,13 +937,13 @@ function haskala_book_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_languages_count'
-  $field_bases['field_languages_count'] = array(
+  // Exported field_base: 'field_number_of_languages'
+  $field_bases['field_number_of_languages'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_languages_count',
+    'field_name' => 'field_number_of_languages',
     'foreign keys' => array(
       'tid' => array(
         'columns' => array(
