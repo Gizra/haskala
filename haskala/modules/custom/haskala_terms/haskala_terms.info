@@ -5,3 +5,4 @@ dependencies[] = features
 dependencies[] = taxonomy
 features[features_api][] = api:2
 features[taxonomy][] = cities
+features[taxonomy][] = language_counts

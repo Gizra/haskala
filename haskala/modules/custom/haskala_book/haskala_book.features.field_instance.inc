@@ -1200,8 +1200,8 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_languages_number'
-  $field_instances['node-book-field_languages_number'] = array(
+  // Exported field_instance: 'node-book-field_languages_count'
+  $field_instances['node-book-field_languages_count'] = array(
     'bundle' => 'book',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1209,15 +1209,10 @@ function haskala_book_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 22,
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 64,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1227,22 +1222,18 @@ function haskala_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_languages_number',
-    'label' => 'Number of languages',
+    'field_name' => 'field_languages_count',
+    'label' => 'Languages count',
     'required' => 0,
     'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'number',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(),
-      'type' => 'number',
-      'weight' => 54,
+      'type' => 'options_select',
+      'weight' => 77,
     ),
   );
 
@@ -4184,9 +4175,9 @@ function haskala_book_field_default_field_instances() {
   t('Are there recommendations');
   t('Are there sources mentioned in the book itself');
   t('Are there thanks');
+  t('Book');
   t('Book is not available?');
   t('British Library');
-  t('Book');
   t('Changes in this edition');
   t('City of edition');
   t('City of translation');
@@ -4214,6 +4205,7 @@ function haskala_book_field_default_field_instances() {
   t('Is there an appeal to sell subscriptions');
   t('Is there an epilogue');
   t('Language in book');
+  t('Languages count');
   t('Language of footnotes');
   t('Last known edition');
   t('Later references to the book');
@@ -4243,7 +4235,6 @@ function haskala_book_field_default_field_instances() {
   t('Notes on dedications');
   t('Notes on preface');
   t('Number of examined volume');
-  t('Number of languages');
   t('Number of pages');
   t('Number of preface');
   t('Number of volumes published');
