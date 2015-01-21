@@ -10,49 +10,6 @@
 function haskala_people_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-mention-field_book'
-  $field_instances['node-mention-field_book'] = array(
-    'bundle' => 'mention',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_book',
-    'label' => 'Mentioned in book',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete_tags',
-      'weight' => 2,
-    ),
-  );
-
   // Exported field_instance: 'node-mention-field_mentionee'
   $field_instances['node-mention-field_mentionee'] = array(
     'bundle' => 'mention',
@@ -92,7 +49,7 @@ function haskala_people_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -132,7 +89,7 @@ function haskala_people_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -169,7 +126,7 @@ function haskala_people_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -585,7 +542,6 @@ function haskala_people_field_default_field_instances() {
   t('German Name');
   t('Hebrew Name');
   t('Location city of mentionee');
-  t('Mentioned in book');
   t('Mentionee');
   t('Occupation');
   t('Place of birth');
