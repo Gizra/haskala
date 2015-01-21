@@ -1194,43 +1194,6 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_number_of_languages'
-  $field_instances['node-book-field_number_of_languages'] = array(
-    'bundle' => 'book',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 64,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_number_of_languages',
-    'label' => 'Languages count',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 77,
-    ),
-  );
-
   // Exported field_instance: 'node-book-field_last_known_edition'
   $field_instances['node-book-field_last_known_edition'] = array(
     'bundle' => 'book',
@@ -1505,6 +1468,43 @@ function haskala_book_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 42,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_number_of_languages'
+  $field_instances['node-book-field_number_of_languages'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 64,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_number_of_languages',
+    'label' => 'Languages count',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 77,
     ),
   );
 
@@ -2098,15 +2098,10 @@ function haskala_book_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 27,
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 67,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2117,20 +2112,19 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_publication_year_in_book',
-    'label' => 'Year of publication as it appears in the book',
+    'label' => 'Year of publication as it appears in the book',
     'required' => 0,
     'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
       'weight' => 54,
     ),
   );
@@ -4253,8 +4247,8 @@ function haskala_book_field_default_field_instances() {
   t('Width of book, in cm');
   t('Writer of preface');
   t('Year of edition');
+  t('Year of publication as it appears in the book');
   t('Year of translation');
-  t('Year of publication as it appears in the book');
 
   return $field_instances;
 }
