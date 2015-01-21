@@ -245,6 +245,7 @@ features[node][] = edition
 features[node][] = production
 features[page_manager_handlers][] = node_view_panel_context
 features[page_manager_pages][] = books
+features[page_manager_pages][] = digital_books
 features[taxonomy][] = alignment
 features[taxonomy][] = fonts
 features[taxonomy][] = languages
