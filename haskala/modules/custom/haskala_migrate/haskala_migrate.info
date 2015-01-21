@@ -8,10 +8,11 @@ dependencies[] = migrate_extras
 ; Handlers
 files[] = includes/haskala_migrate.entity.inc
 
-files[] = handlers/taxonomy_term/HaskalaCityTermsMigrate.php
-files[] = handlers/node/HaskalaPeopleMigrate.php
 files[] = handlers/node/HaskalaBooksMigrate.php
 files[] = handlers/node/HaskalaBookTranslationsMigrate.php
 files[] = handlers/node/HaskalaEditionMigrate.php
-files[] = handlers/node/HaskalaProductionsMigrate.php
 files[] = handlers/node/HaskalaMentionsMigrate.php
+files[] = handlers/node/HaskalaPageElementsMigrate.php
+files[] = handlers/node/HaskalaPeopleMigrate.php
+files[] = handlers/node/HaskalaProductionsMigrate.php
+files[] = handlers/taxonomy_term/HaskalaCityTermsMigrate.php

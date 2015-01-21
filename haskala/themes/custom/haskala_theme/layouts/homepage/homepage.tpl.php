@@ -1,6 +1,5 @@
 <section class="main-content">
-  <p>A few words about this site, who are we and what can be found here,</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt vehicula arcu, congue volutpat massa scelerisque ut. Nunc luctus nec libero ut luctus. Nunc dictum sagittis dui vitae blandit. Nulla ut erat vitae arcu faucibus egestas feugiat a eros. Cras nec nibh vitae tellus dictum suscipit a non dui. Phasellus at mattis urna. Integer odio arcu, commodo et condimentum vitae, volutpat ut mi.  </p>
+  <?php print $content['intro']; ?>
 </section>
 
 <section class="search">

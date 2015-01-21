@@ -6,6 +6,6 @@ $plugin = array(
   'icon' => 'homepage.png',
   'theme' => 'homepage',
   'regions' => array(
-    'middle' => t('Middle column'),
+    'intro' => t('Introduction text'),
   ),
 );

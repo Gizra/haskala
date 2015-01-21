@@ -1,0 +1,32 @@
+<?php
+/**
+ * @file
+ * Code for the uppercut page element feature.
+ */
+
+include_once 'page_element.features.inc';
+
+function page_element_preprocess_node(&$variables) {
+  // Prevent title to be displayed.
+  $variables['page'] = TRUE;
+}
+
+/**
+ * Utility function. Return application introduction.
+ */
+function page_element_get_element_by_fields($page, $location) {
+  $query = new EntityFieldQuery();
+  $query
+    ->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'page_element')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->fieldCondition('field_page', 'value', $page)
+    ->fieldCondition('field_location', 'value', $location);
+
+  if ((!$result = $query->execute()) || empty($result['node'])) {
+    return;
+  }
+  $nids = array_keys($result['node']);
+  $node = node_view(node_load(reset($nids)));
+  return drupal_render($node);
+}
