@@ -86,7 +86,6 @@ script:
   # Upload failed images to imgur
   # - bash $TRAVIS_BUILD_DIR/imgur ./failures/login-form_0.fail.png
   # - bash $TRAVIS_BUILD_DIR/imgur ./failures/authors-list_1.fail.png
-  - bash $TRAVIS_BUILD_DIR/imgur ./failures/drupal-homepage-icons-nav-hover_7.fail.png
 
   # Run phantomJs.
   - phantomjs --webdriver=4444 > ~/phantomjs.log 2>&1 &
