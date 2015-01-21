@@ -18,9 +18,6 @@ casper.then(function() {
   this.echo('Verify site name');
   phantomcss.screenshot('.site-name', 'site-name');
 
-  this.echo('Verify the content');
-  phantomcss.screenshot('.main-content', 'main-content');
-
   this.echo('Verify the search box');
   phantomcss.screenshot('.search', 'search');
 
