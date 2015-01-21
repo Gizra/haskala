@@ -147,7 +147,7 @@ enable_development_modules
 build_theme_library
 
 # Migrate content.
-# import_content
+import_content
 
 # Run post script (if any).
 run_post_script "install"
