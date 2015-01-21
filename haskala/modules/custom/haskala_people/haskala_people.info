@@ -68,4 +68,3 @@ features[variable][] = node_preview_mention
 features[variable][] = node_preview_person
 features[variable][] = node_submitted_mention
 features[variable][] = node_submitted_person
-features_exclude[field_instance][node-mention-field_book] = node-mention-field_book

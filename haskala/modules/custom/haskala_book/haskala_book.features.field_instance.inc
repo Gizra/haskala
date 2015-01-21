@@ -99,7 +99,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 53,
+        'weight' => 54,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -123,7 +123,7 @@ function haskala_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 38,
+      'weight' => 39,
     ),
   );
 
@@ -170,6 +170,89 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-book-field_book_availability_notes'
+  $field_instances['node-book-field_book_availability_notes'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 61,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_book_availability_notes',
+    'label' => 'Notes on book availability',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 46,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_book_not_available'
+  $field_instances['node-book-field_book_not_available'] = array(
+    'bundle' => 'book',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 60,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_book_not_available',
+    'label' => 'Book is not available?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 45,
+    ),
+  );
+
   // Exported field_instance: 'node-book-field_book_structure_notes'
   $field_instances['node-book-field_book_structure_notes'] = array(
     'bundle' => 'book',
@@ -182,7 +265,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 36,
+        'weight' => 37,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -210,6 +293,46 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-book-field_british_library_id'
+  $field_instances['node-book-field_british_library_id'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 58,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_british_library_id',
+    'label' => 'British Library',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 43,
+    ),
+  );
+
   // Exported field_instance: 'node-book-field_catalog_numbers_notes'
   $field_instances['node-book-field_catalog_numbers_notes'] = array(
     'bundle' => 'book',
@@ -222,7 +345,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 56,
+        'weight' => 63,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -246,7 +369,7 @@ function haskala_book_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 41,
+      'weight' => 48,
     ),
   );
 
@@ -628,15 +751,10 @@ function haskala_book_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 54,
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 55,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -650,18 +768,17 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Frankfurt University Library catalog number',
     'required' => 0,
     'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 39,
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 40,
     ),
   );
 
@@ -791,6 +908,46 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(),
       'type' => 'number',
       'weight' => 18,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_harvard_library_id'
+  $field_instances['node-book-field_harvard_library_id'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 56,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_harvard_library_id',
+    'label' => 'Widener Library, Harvard',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 41,
     ),
   );
 
@@ -1181,7 +1338,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 55,
+        'weight' => 62,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1205,7 +1362,7 @@ function haskala_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 40,
+      'weight' => 47,
     ),
   );
 
@@ -1323,6 +1480,86 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_select',
       'weight' => 49,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_new_york_library_id'
+  $field_instances['node-book-field_new_york_library_id'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 57,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_new_york_library_id',
+    'label' => 'The New York Public Library',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 42,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_other_libraries'
+  $field_instances['node-book-field_other_libraries'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 59,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_other_libraries',
+    'label' => 'Other libraries',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 44,
     ),
   );
 
@@ -2574,6 +2811,46 @@ function haskala_book_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 52,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_tel_aviv_library_id'
+  $field_instances['node-book-field_tel_aviv_library_id'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 53,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tel_aviv_library_id',
+    'label' => 'Tel-Aviv University Library',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 38,
     ),
   );
 
@@ -3907,6 +4184,8 @@ function haskala_book_field_default_field_instances() {
   t('Are there recommendations');
   t('Are there sources mentioned in the book itself');
   t('Are there thanks');
+  t('Book is not available?');
+  t('British Library');
   t('Book');
   t('Changes in this edition');
   t('City of edition');
@@ -3951,6 +4230,7 @@ function haskala_book_field_default_field_instances() {
   t('Names of other published volumes');
   t('National Library of Berlin catalog number');
   t('National Library of Hebrew University catalog number');
+  t('Notes on book availability');
   t('Notes on book structure');
   t('Notes on catalog numbers');
   t('Notes on personal addresses');
@@ -3967,6 +4247,7 @@ function haskala_book_field_default_field_instances() {
   t('Number of pages');
   t('Number of preface');
   t('Number of volumes published');
+  t('Other libraries');
   t('Place of publication as it appears in the book');
   t('Preface title');
   t('Producer of book');
@@ -3980,13 +4261,16 @@ function haskala_book_field_default_field_instances() {
   t('Role in book production');
   t('Secondary sources used by researchers');
   t('Target audience as described in the book');
+  t('Tel-Aviv University Library');
   t('Text is presented as original');
+  t('The New York Public Library');
   t('Title in Latin characters');
   t('Topic');
   t('Total number of editions');
   t('Translation of book');
   t('Translator');
   t('Typography');
+  t('Widener Library, Harvard');
   t('Width of book, in cm');
   t('Writer of preface');
   t('Year of edition');
