@@ -4,6 +4,7 @@ package = Haskala
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = menu
+dependencies[] = page_element
 dependencies[] = page_manager
 dependencies[] = search
 features[ctools][] = page_manager:pages_default:1
