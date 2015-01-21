@@ -32,14 +32,6 @@ function haskala_book_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
-    'book_translation' => array(
-      'name' => t('Book translation'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
     'edition' => array(
       'name' => t('Edition'),
       'base' => 'node_content',
