@@ -69,4 +69,3 @@ features[variable][] = node_preview_mention
 features[variable][] = node_preview_person
 features[variable][] = node_submitted_mention
 features[variable][] = node_submitted_person
-mtime = 1420698481

@@ -120,7 +120,7 @@ function haskala_people_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '1',
+          'weight' => '5',
         ),
       ),
       'display' => array(),
