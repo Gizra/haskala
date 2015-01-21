@@ -70,86 +70,6 @@ function haskala_general_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 1,
   );
-  // Exported menu link: menu-icons-menu_books:node/2592
-  $menu_links['menu-icons-menu_books:node/2592'] = array(
-    'menu_name' => 'menu-icons-menu',
-    'link_path' => 'node/2592',
-    'router_path' => 'node/%',
-    'link_title' => 'BOOKS',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'menu-icons-menu_books:node/2592',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-  );
-  // Exported menu link: menu-icons-menu_digital-books:node/2592
-  $menu_links['menu-icons-menu_digital-books:node/2592'] = array(
-    'menu_name' => 'menu-icons-menu',
-    'link_path' => 'node/2592',
-    'router_path' => 'node/%',
-    'link_title' => 'DIGITAL BOOKS',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'menu-icons-menu_digital-books:node/2592',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-  );
-  // Exported menu link: menu-icons-menu_people:node/2592
-  $menu_links['menu-icons-menu_people:node/2592'] = array(
-    'menu_name' => 'menu-icons-menu',
-    'link_path' => 'node/2592',
-    'router_path' => 'node/%',
-    'link_title' => 'PEOPLE',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'menu-icons-menu_people:node/2592',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-  );
-  // Exported menu link: menu-icons-menu_places:node/2592
-  $menu_links['menu-icons-menu_places:node/2592'] = array(
-    'menu_name' => 'menu-icons-menu',
-    'link_path' => 'node/2592',
-    'router_path' => 'node/%',
-    'link_title' => 'PLACES',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'menu-icons-menu_places:node/2592',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-  );
   // Exported menu link: menu-top-menu_books:<front>
   $menu_links['menu-top-menu_books:<front>'] = array(
     'menu_name' => 'menu-top-menu',
@@ -334,7 +254,6 @@ function haskala_general_menu_default_menu_links() {
   t('Add a book series');
   t('Add a person');
   t('BOOKS');
-  t('DIGITAL BOOKS');
   t('LOGIN');
   t('PEOPLE');
   t('PLACES');

@@ -906,7 +906,7 @@ function haskala_book_field_default_field_bases() {
   // Exported field_base: 'field_language_of_footnotes'
   $field_bases['field_language_of_footnotes'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_language_of_footnotes',
@@ -1683,7 +1683,7 @@ function haskala_book_field_default_field_bases() {
   // Exported field_base: 'field_publication_place'
   $field_bases['field_publication_place'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_publication_place',
@@ -1746,7 +1746,7 @@ function haskala_book_field_default_field_bases() {
   // Exported field_base: 'field_publisher_name'
   $field_bases['field_publisher_name'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_publisher_name',
