@@ -3033,15 +3033,10 @@ function haskala_book_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 26,
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 69,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3052,21 +3047,20 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_total_number_of_editions',
-    'label' => 'Total number of editions',
+    'label' => 'Total number of editions',
     'required' => 0,
     'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 53,
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 79,
     ),
   );
 
@@ -4233,7 +4227,7 @@ function haskala_book_field_default_field_instances() {
   t('The New York Public Library');
   t('Title in Latin characters');
   t('Topic');
-  t('Total number of editions');
+  t('Total number of editions');
   t('Translation of book');
   t('Translator');
   t('Typography');

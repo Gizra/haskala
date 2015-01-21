@@ -58,7 +58,7 @@ function haskala_book_field_group_info() {
       5 => 'field_illustrations_diagrams',
       6 => 'field_language',
       7 => 'field_language_of_footnotes',
-      8 => 'field_languages_number',
+      8 => 'field_number_of_languages',
       9 => 'field_location_of_footnotes',
       10 => 'field_pages_number',
       11 => 'field_preface',
