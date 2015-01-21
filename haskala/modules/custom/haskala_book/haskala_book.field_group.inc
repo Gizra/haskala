@@ -60,7 +60,7 @@ function haskala_book_field_group_info() {
       7 => 'field_language_of_footnotes',
       8 => 'field_number_of_languages',
       9 => 'field_location_of_footnotes',
-      10 => 'field_pages_number',
+      10 => 'field_number_of_pages',
       11 => 'field_preface',
       12 => 'field_table_of_conten',
       13 => 'field_typography',

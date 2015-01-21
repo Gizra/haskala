@@ -160,14 +160,19 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_language',
       'field_language_of_footnotes',
       'field_publisher_name',
-      'field_name_of_series',
       'field_publication_place',
       'field_topic',
       'field_typography',
       'field_width',
     );
     $this->addTermReferenceMappings($term_references);
-    
+
+    $this->addFieldMapping('field_name_of_series', 'field_name_of_series');
+    $this->addFieldMapping('field_name_of_series:create_term')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_name_of_series:ignore_case')
+      ->defaultValue(TRUE);
+
     $this->addFieldMapping('field_writer_of_preface', 'field_writer_of_preface')
       ->sourceMigration('HaskalaPeopleMigrate');
   }
