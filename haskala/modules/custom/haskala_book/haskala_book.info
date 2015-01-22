@@ -310,7 +310,5 @@ features[variable][] = node_preview_production
 features[variable][] = node_submitted_book
 features[variable][] = node_submitted_edition
 features[variable][] = node_submitted_production
-features_exclude[field_base][field_languages_number] = field_languages_number
 features_exclude[field_base][field_hebrew_year] = field_hebrew_year
-features_exclude[field_instance][node-book-field_languages_number] = node-book-field_languages_number
 features_exclude[field_instance][node-book-field_hebrew_year] = node-book-field_hebrew_year

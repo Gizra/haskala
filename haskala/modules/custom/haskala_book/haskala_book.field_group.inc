@@ -448,18 +448,13 @@ function haskala_book_field_group_info() {
       18 => 'field_occasional_words_languages',
       19 => 'group_diagrams',
     ),
-    'format_type' => 'div',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'open',
+      'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => '',
+        'classes' => 'group-structure field-group-fieldset',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
