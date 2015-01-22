@@ -150,6 +150,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_title_in_latin_characters',
       'field_publication_year_in_book',
       'field_total_number_of_editions',
+      'field_width',
     );
     $this->addSimpleMappings($simple_mappings);
 
@@ -158,12 +159,13 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_alignment',
       'field_fonts',
       'field_language',
+      'field_languages_number',
       'field_language_of_footnotes',
+      'field_location_of_footnotes',
       'field_publisher_name',
       'field_publication_place',
       'field_topic',
       'field_typography',
-      'field_width',
     );
     $this->addTermReferenceMappings($term_references);
 
