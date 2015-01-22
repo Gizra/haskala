@@ -4473,7 +4473,7 @@ function haskala_book_field_default_field_instances() {
   t('Notes on topics');
   t('Notes on volumes');
   t('Notes on dedications');
-  t('Notes on preface');
+  t('Notes');
   t('Number of languages');
   t('Number of pages in the book');
   t('Number of examined volume');
