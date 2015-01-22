@@ -78,9 +78,9 @@ function haskala_book_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'languages_number' => array(
-      'name' => 'Languages number',
-      'machine_name' => 'languages_number',
+    'language_counts' => array(
+      'name' => 'Languages counts',
+      'machine_name' => 'language_counts',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
