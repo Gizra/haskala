@@ -151,7 +151,14 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_bar_ilan_library_id', 'field_bar_ilan_library_id');
     $this->addFieldMapping('field_link_to_digital_book', 'field_link_to_digital_book');
     $this->addFieldMapping('field_sources_list', 'field_sources_list');
-    $this->addFieldMapping('field_location_of_footnotes', 'field_location_of_footnotes');
+
+    $this->addFieldMapping('field_location_of_footnotes', 'field_location_of_footnotes')
+      ->separator(',');
+    $this->addFieldMapping('field_location_of_footnotes:create_term')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_location_of_footnotes:ignore_case')
+      ->defaultValue(TRUE);
+
     $this->addFieldMapping('field_motto', 'field_motto');
 
     $this->addFieldMapping('field_publisher_name', 'field_publisher_name')
@@ -181,7 +188,13 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_textual_models_notes', 'field_textual_models_notes');
     $this->addFieldMapping('field_volumes_notes', 'field_volumes_notes');
     $this->addFieldMapping('field_examined_volume_number', 'field_examined_volume_number');
+
     $this->addFieldMapping('field_languages_number', 'field_languages_number');
+    $this->addFieldMapping('field_languages_number:create_term')
+      ->defaultValue(TRUE);
+    $this->addFieldMapping('field_languages_number:ignore_case')
+      ->defaultValue(TRUE);
+
     $this->addFieldMapping('field_pages_number', 'field_pages_number');
     $this->addFieldMapping('field_preface_number', 'field_preface_number');
     $this->addFieldMapping('field_volumes_published_number', 'field_volumes_published_number');
