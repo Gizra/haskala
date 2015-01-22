@@ -43,7 +43,7 @@ function haskala_book_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 80,
+      'weight' => 68,
     ),
   );
 
@@ -289,7 +289,7 @@ function haskala_book_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 96,
+      'weight' => 84,
     ),
   );
 
@@ -449,7 +449,7 @@ function haskala_book_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 90,
+      'weight' => 78,
     ),
   );
 
@@ -588,7 +588,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 84,
+        'weight' => 83,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -628,7 +628,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 83,
+        'weight' => 82,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -668,7 +668,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 82,
+        'weight' => 84,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -679,7 +679,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_diagrams_text',
-    'label' => 'Illustrations / diagrams:',
+    'label' => 'Illustrations / diagrams',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -735,7 +735,7 @@ function haskala_book_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 87,
+      'weight' => 75,
     ),
   );
 
@@ -775,7 +775,7 @@ function haskala_book_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 88,
+      'weight' => 76,
     ),
   );
 
@@ -858,7 +858,7 @@ function haskala_book_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 84,
+      'weight' => 72,
     ),
   );
 
@@ -1233,7 +1233,7 @@ function haskala_book_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 92,
+      'weight' => 80,
     ),
   );
 
@@ -1316,7 +1316,7 @@ function haskala_book_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 94,
+      'weight' => 82,
     ),
   );
 
@@ -1353,7 +1353,7 @@ function haskala_book_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 78,
+      'weight' => 66,
     ),
   );
 
@@ -1390,7 +1390,7 @@ function haskala_book_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 82,
+      'weight' => 70,
     ),
   );
 
@@ -1427,7 +1427,7 @@ function haskala_book_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 77,
+      'weight' => 65,
     ),
   );
 
@@ -1584,7 +1584,7 @@ function haskala_book_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 83,
+      'weight' => 71,
     ),
   );
 
@@ -1738,47 +1738,7 @@ function haskala_book_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 79,
-    ),
-  );
-
-  // Exported field_instance: 'node-book-field_pages_number'
-  $field_instances['node-book-field_pages_number'] = array(
-    'bundle' => 'book',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 66,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_pages_number',
-    'label' => 'Number of pages',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 64,
+      'weight' => 67,
     ),
   );
 
@@ -1859,6 +1819,46 @@ function haskala_book_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 91,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_pages_number'
+  $field_instances['node-book-field_pages_number'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 78,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_pages_number',
+    'label' => 'Number of pages in the book',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 79,
     ),
   );
 
@@ -1984,7 +1984,7 @@ function haskala_book_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 85,
+      'weight' => 73,
     ),
   );
 
@@ -2842,7 +2842,7 @@ function haskala_book_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 86,
+      'weight' => 74,
     ),
   );
 
@@ -2971,7 +2971,7 @@ function haskala_book_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 89,
+      'weight' => 77,
     ),
   );
 
@@ -3534,7 +3534,7 @@ function haskala_book_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 81,
+      'weight' => 69,
     ),
   );
 
@@ -3660,7 +3660,7 @@ function haskala_book_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 93,
+      'weight' => 81,
     ),
   );
 
@@ -4413,7 +4413,6 @@ function haskala_book_field_default_field_instances() {
   t('Are there recommendations');
   t('Are there sources mentioned in the book itself');
   t('Are there thanks');
-  t('Book');
   t('Book is not available?');
   t('British Library');
   t('Changes in this edition');
@@ -4434,7 +4433,7 @@ function haskala_book_field_default_field_instances() {
   t('Gregorian year of publication as it appears in the book');
   t('Hebrew year of publication as it appears in the book');
   t('Height of book, in cm');
-  t('Illustrations / diagrams:');
+  t('Illustrations / diagrams');
   t('Is there a list of funders');
   t('Is there a list of printers');
   t('Is there a list of proofreaders');
@@ -4473,12 +4472,12 @@ function haskala_book_field_default_field_instances() {
   t('Notes on topics');
   t('Notes on volumes');
   t('Notes on dedications');
-  t('Notes');
+  t('Notes on preface');
   t('Number of languages');
   t('Number of pages in the book');
+  t('Number of preface');
+  t('Number of volumes published');
   t('Number of examined volume');
-  t('Number of preface');
-  t('Number of volumes published');
   t('Occasional words in other languages');
   t('Other libraries');
   t('Pages in which illustrations / diagrams appear');
