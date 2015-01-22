@@ -781,7 +781,6 @@ function haskala_book_field_group_info() {
       1 => 'field_name_of_series',
       2 => 'field_other_volumes',
       3 => 'field_volumes_notes',
-      4 => 'field_volumes_published_number',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

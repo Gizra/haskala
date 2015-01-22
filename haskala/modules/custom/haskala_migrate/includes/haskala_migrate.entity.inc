@@ -81,6 +81,23 @@ abstract class HaskalaMigration extends Migration {
     return reset(array_keys($result['node']));
   }
 
+  /**
+   * Add mappings for term-reference fields.
+   *
+   * @param $term_references
+   *   Array of field names.
+   */
+  protected function addTermReferenceMappings($term_references) {
+    foreach ($term_references as $field_name) {
+      $this->addFieldMapping($field_name, $field_name)
+        ->separator(',');
+      $this->addFieldMapping($field_name . ':create_term')
+        ->defaultValue(TRUE);
+      $this->addFieldMapping($field_name . ':ignore_case')
+        ->defaultValue(TRUE);
+    }
+  }
+
   public function prepareRow($row) {
     // Load html snippets.
     foreach ($row as $column => &$original_value) {
@@ -100,6 +117,16 @@ abstract class HaskalaMigration extends Migration {
 
       // If the value was divided, combine it again.
       $original_value = implode('|', $values);
+    }
+
+    // Convert boolean values represented by strings.
+    foreach ($row as &$value) {
+      if ($value == 'FALSE') {
+        $value = FALSE;
+      }
+      if ($value == 'TRUE') {
+        $value = TRUE;
+      }
     }
   }
 }
