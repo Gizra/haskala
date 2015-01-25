@@ -72,9 +72,9 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
 
         // Role of preface writer
         if ($field_name == 'field_writer_of_preface') {
-          $production_id = haskala_book_prefaces_tab_additional_info($node->nid, $wrapper->$field_name->value()->nid);
-          if ($production_id) {
-            $production_node = node_load($production_id);
+          $production_nid = haskala_book_get_production($node->nid, $wrapper->$field_name->value()->nid);
+          if ($production_nid) {
+            $production_node = node_load($production_nid);
             $field = field_view_field('node', $production_node, 'field_role');
             $tabs_fields[$tab->label][] = $field;
           }
@@ -117,20 +117,27 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
 }
 
 /**
-+ * Prefaces tab - role in book production of preface writer
-+ */
-function haskala_book_prefaces_tab_additional_info($book_id, $person_id) {
+ *  Prefaces tab - role in book production of preface writer.
+ *
+ *  @param $book_nid
+ *   The book nid.
+ *  @param $person_nid
+ *   The writer person nid.
+ *
+ *  @return production details nid.
+ */
+function haskala_book_get_production($book_nid, $person_nid) {
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', 'production')
     ->propertyCondition('status', NODE_PUBLISHED)
-    ->fieldCondition('field_producer', 'target_id', $person_id)
-    ->fieldCondition('field_book', 'target_id', $book_id);
+    ->fieldCondition('field_producer', 'target_id', $person_nid)
+    ->fieldCondition('field_book', 'target_id', $book_nid);
   $result = $query->execute();
   if (empty($result['node'])) {
     return;
   }
-  return $production_id = reset($result['node'])->nid;
+  return reset($result['node'])->nid;
 }
 
 /**
