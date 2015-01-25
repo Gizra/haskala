@@ -2000,7 +2000,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 27,
+        'weight' => 71,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2080,7 +2080,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 26,
+        'weight' => 70,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3678,7 +3678,7 @@ function haskala_book_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 25,
+        'weight' => 69,
       ),
       'teaser' => array(
         'label' => 'above',
