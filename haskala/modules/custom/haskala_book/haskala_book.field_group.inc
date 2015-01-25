@@ -21,7 +21,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Book\'s reception in its time',
-    'weight' => '71',
+    'weight' => '73',
     'children' => array(
       0 => 'field_contemporary_references',
     ),
@@ -48,7 +48,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Book structure',
-    'weight' => '66',
+    'weight' => '68',
     'children' => array(
       0 => 'field_alignment',
       1 => 'field_book_structure_notes',
@@ -136,7 +136,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Catalog numbers',
-    'weight' => '73',
+    'weight' => '75',
     'children' => array(
       0 => 'field_bar_ilan_library_id',
       1 => 'field_berlin_library_id',
@@ -279,7 +279,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Prefaces',
-    'weight' => '67',
+    'weight' => '69',
     'children' => array(
       0 => 'field_preface_notes',
       1 => 'field_preface_number',
@@ -340,7 +340,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Preservation in the public consciousness',
-    'weight' => '72',
+    'weight' => '74',
     'children' => array(
       0 => 'field_later_references',
     ),
@@ -367,7 +367,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'References and bibliography',
-    'weight' => '74',
+    'weight' => '76',
     'children' => array(
       0 => 'field_copy_of_book_used',
       1 => 'field_references_notes',
@@ -471,7 +471,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Target audience',
-    'weight' => '70',
+    'weight' => '72',
     'children' => array(
       0 => 'field_target_audience',
       1 => 'field_target_audience_notes',
@@ -527,7 +527,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Textual models',
-    'weight' => '68',
+    'weight' => '70',
     'children' => array(
       0 => 'field_textual_models_notes',
     ),
@@ -650,7 +650,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
     'label' => 'Topics',
-    'weight' => '69',
+    'weight' => '71',
     'children' => array(
       0 => 'field_topic',
       1 => 'field_topics_notes',
@@ -742,9 +742,13 @@ function haskala_book_field_group_info() {
     'children' => array(
       0 => 'field_examined_volume_number',
       1 => 'field_name_of_series',
-      2 => 'field_other_volumes',
-      3 => 'field_volumes_notes',
-      4 => 'field_volumes_published_number',
+      2 => 'field_volumes_notes',
+      3 => 'field_volumes_published_number',
+      4 => 'field_other_volumes',
+      5 => 'field_planned_volumes',
+      6 => 'field_series_part',
+      7 => 'field_printed_originally',
+      8 => 'field_other_books_names',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -774,8 +778,13 @@ function haskala_book_field_group_info() {
     'children' => array(
       0 => 'field_examined_volume_number',
       1 => 'field_name_of_series',
-      2 => 'field_other_volumes',
-      3 => 'field_volumes_notes',
+      2 => 'field_volumes_notes',
+      3 => 'field_volumes_published_number',
+      4 => 'field_other_volumes',
+      5 => 'field_planned_volumes',
+      6 => 'field_series_part',
+      7 => 'field_printed_originally',
+      8 => 'field_other_books_names',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
