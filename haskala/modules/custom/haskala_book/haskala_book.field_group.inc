@@ -52,19 +52,26 @@ function haskala_book_field_group_info() {
     'children' => array(
       0 => 'field_alignment',
       1 => 'field_book_structure_notes',
-      2 => 'field_epilogue',
-      3 => 'field_fonts',
-      4 => 'field_height',
-      5 => 'field_illustrations_diagrams',
-      6 => 'field_language',
-      7 => 'field_language_of_footnotes',
-      8 => 'field_number_of_languages',
-      9 => 'field_location_of_footnotes',
-      10 => 'field_number_of_pages',
-      11 => 'field_preface',
-      12 => 'field_table_of_conten',
-      13 => 'field_typography',
-      14 => 'field_width',
+      2 => 'field_contents_table_notes',
+      3 => 'field_diagrams_book_pages',
+      4 => 'field_diagrams_notes',
+      5 => 'field_diagrams_text',
+      6 => 'field_epilogue',
+      7 => 'field_epilogue_notes',
+      8 => 'field_fonts',
+      9 => 'field_height',
+      10 => 'field_illustrations_diagrams',
+      11 => 'field_language',
+      12 => 'field_language_of_footnotes',
+      13 => 'field_languages_number',
+      14 => 'field_location_of_footnotes',
+      15 => 'field_occasional_words_languages',
+      16 => 'field_pages_number',
+      17 => 'field_preface',
+      18 => 'field_structure_preface_notes',
+      19 => 'field_table_of_conten',
+      20 => 'field_typography',
+      21 => 'field_width',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -137,13 +144,13 @@ function haskala_book_field_group_info() {
       3 => 'field_book_not_available',
       4 => 'field_british_library_id',
       5 => 'field_catalog_numbers_notes',
-      6 => 'field_harvard_library_id',
-      7 => 'field_huji_library_id',
-      8 => 'field_link_to_digital_book',
-      9 => 'field_new_york_library_id',
-      10 => 'field_other_libraries',
-      11 => 'field_tel_aviv_library_id',
-      12 => 'field_frankfurt_library_id',
+      6 => 'field_frankfurt_library_id',
+      7 => 'field_harvard_library_id',
+      8 => 'field_huji_library_id',
+      9 => 'field_link_to_digital_book',
+      10 => 'field_new_york_library_id',
+      11 => 'field_other_libraries',
+      12 => 'field_tel_aviv_library_id',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -196,6 +203,35 @@ function haskala_book_field_group_info() {
     ),
   );
   $export['group_catalog_numbers|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_diagrams|node|book|form';
+  $field_group->group_name = 'group_diagrams';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_structure';
+  $field_group->data = array(
+    'label' => 'Diagrams',
+    'weight' => '83',
+    'children' => array(
+      0 => 'field_diagrams_book_pages',
+      1 => 'field_diagrams_notes',
+      2 => 'field_diagrams_text',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-diagrams field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_diagrams|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -393,31 +429,32 @@ function haskala_book_field_group_info() {
     'children' => array(
       0 => 'field_alignment',
       1 => 'field_book_structure_notes',
-      2 => 'field_epilogue',
-      3 => 'field_fonts',
-      4 => 'field_height',
-      5 => 'field_illustrations_diagrams',
-      6 => 'field_language',
-      7 => 'field_language_of_footnotes',
-      8 => 'field_location_of_footnotes',
-      9 => 'field_number_of_pages',
-      10 => 'field_preface',
-      11 => 'field_table_of_conten',
-      12 => 'field_typography',
-      13 => 'field_width',
+      2 => 'field_contents_table_notes',
+      3 => 'field_epilogue',
+      4 => 'field_epilogue_notes',
+      5 => 'field_fonts',
+      6 => 'field_height',
+      7 => 'field_illustrations_diagrams',
+      8 => 'field_language',
+      9 => 'field_language_of_footnotes',
+      10 => 'field_languages_number',
+      11 => 'field_location_of_footnotes',
+      12 => 'field_occasional_words_languages',
+      13 => 'field_pages_number',
+      14 => 'field_preface',
+      15 => 'field_structure_preface_notes',
+      16 => 'field_table_of_conten',
+      17 => 'field_typography',
+      18 => 'field_width',
+      19 => 'group_diagrams',
     ),
-    'format_type' => 'div',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'open',
+      'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => '',
+        'classes' => 'group-structure field-group-fieldset',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
