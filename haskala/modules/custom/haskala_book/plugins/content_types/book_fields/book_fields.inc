@@ -117,30 +117,6 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
 }
 
 /**
- *  Prefaces tab - role in book production of preface writer.
- *
- *  @param $book_nid
- *   The book nid.
- *  @param $person_nid
- *   The writer person nid.
- *
- *  @return production details nid.
- */
-function haskala_book_get_production($book_nid, $person_nid) {
-  $query = new EntityFieldQuery();
-  $query->entityCondition('entity_type', 'node')
-    ->entityCondition('bundle', 'production')
-    ->propertyCondition('status', NODE_PUBLISHED)
-    ->fieldCondition('field_producer', 'target_id', $person_nid)
-    ->fieldCondition('field_book', 'target_id', $book_nid);
-  $result = $query->execute();
-  if (empty($result['node'])) {
-    return;
-  }
-  return reset($result['node'])->nid;
-}
-
-/**
 
 /**
  * The form to add or edit a node as content.
