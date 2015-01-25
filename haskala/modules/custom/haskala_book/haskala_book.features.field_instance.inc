@@ -2000,7 +2000,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 27,
+        'weight' => 71,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2011,7 +2011,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_preface_notes',
-    'label' => 'Notes on preface',
+    'label' => 'Notes',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -2024,7 +2024,7 @@ function haskala_book_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 47,
+      'weight' => 81,
     ),
   );
 
@@ -2051,7 +2051,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_preface_number',
-    'label' => 'Number of preface',
+    'label' => 'Number',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -2080,7 +2080,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 26,
+        'weight' => 70,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2104,7 +2104,7 @@ function haskala_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 46,
+      'weight' => 80,
     ),
   );
 
@@ -3678,7 +3678,7 @@ function haskala_book_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 25,
+        'weight' => 69,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3703,7 +3703,7 @@ function haskala_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 45,
+      'weight' => 79,
     ),
   );
 
@@ -4472,10 +4472,9 @@ function haskala_book_field_default_field_instances() {
   t('Notes on topics');
   t('Notes on volumes');
   t('Notes on dedications');
-  t('Notes on preface');
+  t('Number');
   t('Number of languages');
   t('Number of pages in the book');
-  t('Number of preface');
   t('Number of volumes published');
   t('Number of examined volume');
   t('Occasional words in other languages');
