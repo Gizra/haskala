@@ -130,10 +130,7 @@ function haskala_book_prefaces_tab_additional_info($book_id, $person_id) {
   if (empty($result['node'])) {
     return;
   }
-  else {
   return $production_id = reset($result['node'])->nid;
-  }
-
 }
 
 /**
