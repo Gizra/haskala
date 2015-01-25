@@ -127,7 +127,7 @@ function haskala_book_prefaces_tab_additional_info($book_id, $person_id) {
     ->fieldCondition('field_book', 'target_id', $book_id);
   $result = $query->execute();
   if (!empty($result)) {
-    $production_id = array_keys($result['node'])[0];
+    $production_id = reset($result['node'])->nid;
   }
   else {
     $production_id = null;
