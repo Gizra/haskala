@@ -73,7 +73,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
         // Role of preface writer
         if ($field_name == 'field_writer_of_preface') {
           $production_id = haskala_book_prefaces_tab_additional_info($node->nid, $wrapper->$field_name->value()->nid);
-          if (isset($production_id)) {
+          if ($production_id) {
             $production_node = node_load($production_id);
             $field = field_view_field('node', $production_node, 'field_role');
             $tabs_fields[$tab->label][] = $field;
