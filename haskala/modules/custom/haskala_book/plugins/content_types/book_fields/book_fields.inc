@@ -69,6 +69,16 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
       if ($wrapper->$field_name->value()) {
         $field = render($node_view[$field_name]);
         $tabs_fields[$tab->label][] = $field;
+
+        // Role of preface writer
+        if ($field_name == 'field_writer_of_preface') {
+          $production_nid = haskala_book_get_production($node->nid, $wrapper->$field_name->value()->nid);
+          if ($production_nid) {
+            $production_node = node_load($production_nid);
+            $field = field_view_field('node', $production_node, 'field_role');
+            $tabs_fields[$tab->label][] = $field;
+          }
+        }
       }
     }
 
@@ -105,6 +115,8 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
 
   return $block;
 }
+
+/**
 
 /**
  * The form to add or edit a node as content.
