@@ -79,8 +79,6 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
       $producer_info = haskala_book_get_bundle_tab('production', $production_node, 'group_producers');
       $tabs_fields[t('Book producers')][] = haskala_book_get_tab_fields($producer_info['wrapper'], $producer_info['tab'], $producer_info['node_view'], $node->nid);
     }
-
-
   }
 
   $grouped_fields_variables = array(
