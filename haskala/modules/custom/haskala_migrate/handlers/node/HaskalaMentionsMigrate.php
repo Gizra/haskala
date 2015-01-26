@@ -44,8 +44,7 @@ class HaskalaMentionsMigrate extends HaskalaMigration {
   /**
    * Fetch book node IDs by their titles.
   */
-  public function prepareRow($row)
-  {
+  public function prepareRow($row) {
     $row->title .= ' - ' . $row->field_book . ' - ' . $row->field_mentionee_description . ' - ' . $row->field_mentionee_city;
     $row->field_book = $this->getNodeByTitle('book', $row->field_book);
     $row->field_mentionee = $this->getNodeByTitle('person', $row->field_mentionee);
