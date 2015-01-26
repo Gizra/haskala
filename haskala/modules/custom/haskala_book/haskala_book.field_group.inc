@@ -368,7 +368,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_horizontal_tabs';
   $field_group->data = array(
-    'label' => 'Publisher/printing press',
+    'label' => 'Publisher/ Printing press',
     'weight' => '66',
     'children' => array(
       0 => 'field_gregorian_year',
@@ -407,7 +407,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_bottom_details';
   $field_group->data = array(
-    'label' => 'Publisher/printing press',
+    'label' => 'Publisher/ Printing press',
     'weight' => '72',
     'children' => array(
       0 => 'field_gregorian_year',
