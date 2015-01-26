@@ -30,7 +30,7 @@ class HaskalaEditionMigrate extends HaskalaMigration {
     );
     $this->addSimpleMappings($simple_mappings);
 
-    $this->addTermReferenceMappings('field_edition_city');
+    $this->addTermReferenceMappings(array('field_edition_city'));
   }
 
   /**
