@@ -52,14 +52,14 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   foreach ($parent_tabs_group->children as $tab_name) {
     $tab = field_group_load_field_group($tab_name, 'node', 'book', 'default');
 
-    $tabs_fields[$tab->label] = haskala_book_get_tab_fields($wrapper, $tab, $node_view, $node->nid);
+    $tabs_fields[$tab->label]['single'] = haskala_book_get_tab_fields($wrapper, $tab, $node_view, $node->nid);
 
     // Delete empty group.
-    if (empty($tabs_fields[$tab->label])){
+    if (empty($tabs_fields[$tab->label]['single'])){
       unset($tabs_fields[$tab->label]);
     }
     else {
-      $tabs_fields[$tab->label]['weight'] = $tab->weight;
+      $tabs_fields[$tab->label]['single']['weight'] = $tab->weight;
     }
   }
 
@@ -68,22 +68,21 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
 
   // Delete weight element.
   foreach (array_keys($tabs_fields) as $tab_name){
-    unset($tabs_fields[$tab_name]['weight']);
+    unset($tabs_fields[$tab_name]['single']['weight']);
   }
 
   //Add Book producers tab
   $productions_ids = haskala_book_get_production($node->nid);
   if ($productions_ids) {
+    $tabs_fields['Book producers'] = array();
     foreach($productions_ids as $production_id) {
-      //dpm($production_id);
       $production_node = node_load($production_id->nid);
-      //dpm($production_node);
       $producer_info = haskala_book_get_bundle_tab('production', $production_node, 'group_producers');
+      $tabs_fields['Book producers'][] = haskala_book_get_tab_fields($producer_info['wrapper'], $producer_info['tab'], $producer_info['node_view'], $node->nid);
     }
-    $tabs_fields['Book producers'] = haskala_book_get_tab_fields($producer_info['wrapper'], $producer_info['tab'], $producer_info['node_view'], $node->nid);
+
 
   }
-
 
   $grouped_fields_variables = array(
     'title' => $node->title,
