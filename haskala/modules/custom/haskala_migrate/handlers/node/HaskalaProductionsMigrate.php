@@ -71,6 +71,8 @@ class HaskalaProductionsMigrate extends HaskalaMigration {
    * Fetch book and producer node IDs by their titles.
    */
   public function prepareRow($row) {
+    $row->title .= ' - ' . $row->field_book . ' - ' . $row->role;
+
     $row->field_book = $this->getNodeByTitle('book', $row->field_book);
     $row->field_producer = $this->getNodeByTitle('person', $row->field_producer);
   }
