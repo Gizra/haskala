@@ -17,6 +17,7 @@ function haskala_book_ctools_plugin_directory($module, $plugin) {
 
 /**
  *  Prefaces tab - role in book production of preface writer.
+ *  Book producers tab - all fields from production bundle.
  *
  *  @param $book_nid
  *   The book nid.
@@ -25,16 +26,91 @@ function haskala_book_ctools_plugin_directory($module, $plugin) {
  *
  *  @return production details nid.
  */
-function haskala_book_get_production($book_nid, $person_nid) {
+function haskala_book_get_production($book_nid, $person_nid = null) {
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', 'production')
     ->propertyCondition('status', NODE_PUBLISHED)
-    ->fieldCondition('field_producer', 'target_id', $person_nid)
     ->fieldCondition('field_book', 'target_id', $book_nid);
+  if ($person_nid) {
+    $query->fieldCondition('field_producer', 'target_id', $person_nid);
+  }
   $result = $query->execute();
   if (empty($result['node'])) {
     return;
   }
-  return reset($result['node'])->nid;
+  if ($person_nid) {
+    return reset($result['node'])->nid;
+  }
+  return $result['node'];
 }
+
+/**
+ *  Tabs with data from another bundles.
+ *
+ *  @param $bundle_name
+ *   The bundle name.
+ *  @param $node
+ *   The node object.
+ * @param $tab_name
+ *   The tab name for group info.
+ *
+ *  @return production details nid.
+ */
+function haskala_book_get_bundle_tab($bundle_name, $node, $tab_name) {
+  $bundle_info['wrapper'] = entity_metadata_wrapper('node', $node);
+  $bundle_info['tab'] = field_group_load_field_group($tab_name, 'node', $bundle_name, 'default');
+  $bundle_info['node_view'] = node_view($node);
+
+  return $bundle_info;
+}
+
+/**
+ *  Get tab group fields.
+ *
+ *  @param $wrapper
+ *   The wrapper object.
+ *  @param $tab
+ *   The tab info.
+ *  @param $node_view
+ *   The node view array for weight field info.
+ * @param $book_nid
+ *   The book nid.
+ *
+ *  @return production details nid.
+ */
+function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
+
+  // Sort fields by weight
+  $tab_fields_sorted = array();
+  foreach($tab->children as $field_name) {
+    if ($wrapper->$field_name->value()){
+      $weight = $node_view[$field_name]['#weight'];
+      $tab_fields_sorted[$weight] = $field_name;
+    }
+  }
+  ksort($tab_fields_sorted);
+
+  $tab_fields = array();
+  foreach($tab_fields_sorted as $field_name) {
+
+    // Check if the field isn't empty.
+    if ($wrapper->$field_name->value()) {
+      $field = render($node_view[$field_name]);
+      $tab_fields[] = $field;
+
+      // Role of preface writer
+      if ($field_name == 'field_writer_of_preface') {
+        $production_nid = haskala_book_get_production($book_nid, $wrapper->$field_name->value()->nid);
+        if ($production_nid) {
+          $production_node = node_load($production_nid);
+          $field = field_view_field('node', $production_node, 'field_role');
+          $tab_fields[] = $field;
+        }
+      }
+    }
+  }
+
+  return $tab_fields;
+}
+
