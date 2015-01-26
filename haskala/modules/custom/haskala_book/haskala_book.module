@@ -24,7 +24,7 @@ function haskala_book_ctools_plugin_directory($module, $plugin) {
  *  @param $person_nid
  *   The writer person nid.
  *
- *  @return production details nid.
+ *  @return production details nodes.
  */
 function haskala_book_get_production($book_nid, $person_nid = NULL) {
   $query = new EntityFieldQuery();
@@ -40,9 +40,9 @@ function haskala_book_get_production($book_nid, $person_nid = NULL) {
     return;
   }
   if ($person_nid) {
-    return reset($result['node'])->nid;
+    return node_load(reset($result['node'])->nid);
   }
-  return $result['node'];
+  return node_load_multiple(array_keys($result['node']));
 }
 
 /**
@@ -55,7 +55,7 @@ function haskala_book_get_production($book_nid, $person_nid = NULL) {
  * @param $tab_name
  *   The tab name for group info.
  *
- *  @return production details nid.
+ *  @return bundle info.
  */
 function haskala_book_get_bundle_tab($bundle_name, $node, $tab_name) {
   $bundle_info['wrapper'] = entity_metadata_wrapper('node', $node);
@@ -77,7 +77,7 @@ function haskala_book_get_bundle_tab($bundle_name, $node, $tab_name) {
  * @param $book_nid
  *   The book nid.
  *
- *  @return production details nid.
+ *  @return tab fields array.
  */
 function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
 
@@ -101,9 +101,8 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
 
       // Role of preface writer
       if ($field_name == 'field_writer_of_preface') {
-        $production_nid = haskala_book_get_production($book_nid, $wrapper->$field_name->value()->nid);
-        if ($production_nid) {
-          $production_node = node_load($production_nid);
+        $production_node = haskala_book_get_production($book_nid, $wrapper->$field_name->value()->nid);
+        if ($production_node) {
           $field = field_view_field('node', $production_node, 'field_role');
           $tab_fields[] = $field;
         }

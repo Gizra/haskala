@@ -42,22 +42,18 @@
   </nav>
   <section id="groups">
     <?php foreach($tabs as $tab_name => $multi_tab_fields): ?>
-
-            <div class="fields-group">
-              <div class="fields-group-name" id="<?php print $tab_name; ?>"><?php print $tab_name; ?></div>
-              <div class="fields">
-                <?php foreach($multi_tab_fields as $single_tab_fields): ?>
-
-                        <div class="fields-multi">
-                          <?php foreach($single_tab_fields as $tab_field): ?>
-                            <?php print render($tab_field); ?>
-                          <?php endforeach; ?>
-                        </div>
-
-                  <?php endforeach; ?>
-              </div>
+      <div class="fields-group">
+        <div class="fields-group-name" id="<?php print $tab_name; ?>"><?php print $tab_name; ?></div>
+        <div class="fields">
+          <?php foreach($multi_tab_fields as $single_tab_fields): ?>
+            <div class="fields-multi">
+              <?php foreach($single_tab_fields as $tab_field): ?>
+                <?php print render($tab_field); ?>
+              <?php endforeach; ?>
             </div>
-
+          <?php endforeach; ?>
+        </div>
+      </div>
     <?php endforeach; ?>
   </section>
 </section>

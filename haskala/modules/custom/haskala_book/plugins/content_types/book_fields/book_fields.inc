@@ -71,14 +71,13 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
     unset($tabs_fields[$tab_name]['single']['weight']);
   }
 
-  //Add Book producers tab
-  $productions_ids = haskala_book_get_production($node->nid);
-  if ($productions_ids) {
-    $tabs_fields['Book producers'] = array();
-    foreach($productions_ids as $production_id) {
-      $production_node = node_load($production_id->nid);
+  // Add Book producers tab.
+  $productions_nodes = haskala_book_get_production($node->nid);
+  if ($productions_nodes) {
+    $tabs_fields[t('Book producers')] = array();
+    foreach($productions_nodes as $production_node) {
       $producer_info = haskala_book_get_bundle_tab('production', $production_node, 'group_producers');
-      $tabs_fields['Book producers'][] = haskala_book_get_tab_fields($producer_info['wrapper'], $producer_info['tab'], $producer_info['node_view'], $node->nid);
+      $tabs_fields[t('Book producers')][] = haskala_book_get_tab_fields($producer_info['wrapper'], $producer_info['tab'], $producer_info['node_view'], $node->nid);
     }
 
 
