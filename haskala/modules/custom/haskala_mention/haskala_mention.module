@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Haskala mention feature.
+ */
+
+include_once 'haskala_mention.features.inc';

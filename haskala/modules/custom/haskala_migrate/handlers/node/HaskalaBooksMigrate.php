@@ -101,7 +101,6 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_contemporary_references',
       'field_copy_of_book_used',
       'field_production_evidence',
-      'field_format_of_publication_date',
       'field_formatted_display_title',
       'field_frankfurt_library_id',
       'field_full_title',
@@ -164,6 +163,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_publication_place',
       'field_topic',
       'field_typography',
+      'field_format_of_publication_date',
     );
     $this->addTermReferenceMappings($term_references);
 
