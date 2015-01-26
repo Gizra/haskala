@@ -7,5 +7,6 @@ $plugin = array(
   'theme' => 'homepage',
   'regions' => array(
     'intro' => t('Introduction text'),
+    'topics' => t('Topics cloud'),
   ),
 );
