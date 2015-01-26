@@ -11,9 +11,9 @@ Feature: Edition
     And   I should see the text "<text>"
 
   Examples:
-    | title                                                                                | text                                                          |
-    | יונה                                                                                   | וינוגרד                                                         |
-    | חלקת מחקק                                                                             | וינוגרד                                                         |
-    | ילדות ובחרות או נתיבות החנוך והמוסר                                                         | Berlin                                                        |
-    | Ueber die Verbesserung des Judenthums                                                | החיבור הודפס מחדש ב- 1808 בכתב העת Sulamith                      |
-    | An die Herausgeber des hebräischen Sammlers über die frühe Beerdigung der Juden      | 2. verbesserte und vermehrte Auflage [Voß und Sohn], 60 S.    |
+    | title                                                                                     | text                                                          |
+    | יונה - תקמ"ח                                                                              | וינוגרד                                                         |
+    | חלקת מחקק - תק"ע                                                                        | וינוגרד                                                         |
+    | ילדות ובחרות או נתיבות החנוך והמוסר - תקמ"ו                                                 | Berlin                                                        |
+    | Ueber die Verbesserung des Judenthums - 1808                                              | החיבור הודפס מחדש ב- 1808 בכתב העת Sulamith                  |
+    | An die Herausgeber des hebräischen Sammlers über die frühe Beerdigung der Juden - 1788    | 2. verbesserte und vermehrte Auflage [Voß und Sohn], 60 S.    |

@@ -97,7 +97,10 @@ function haskala_book_default_page_manager_pages() {
   $page->admin_title = 'Books';
   $page->admin_description = '';
   $page->path = 'books';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -151,7 +154,10 @@ function haskala_book_default_page_manager_pages() {
   $page->admin_title = 'Digital books';
   $page->admin_description = '';
   $page->path = 'digital-books';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(

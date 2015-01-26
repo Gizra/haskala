@@ -361,6 +361,41 @@ function haskala_book_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_producers|node|production|default';
+  $field_group->group_name = 'group_producers';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'production';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Book producers',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_name_in_book',
+      1 => 'field_person_book_references',
+      2 => 'field_person_name_appear',
+      3 => 'field_producer',
+      4 => 'field_producer_evidence',
+      5 => 'field_religion',
+      6 => 'field_role',
+      7 => 'field_roles_notes',
+      8 => 'field_writing_age',
+      9 => 'field_writing_location',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+      ),
+    ),
+  );
+  $export['group_producers|node|production|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_publisher_printing_press|node|book|default';
   $field_group->group_name = 'group_publisher_printing_press';
   $field_group->entity_type = 'node';
