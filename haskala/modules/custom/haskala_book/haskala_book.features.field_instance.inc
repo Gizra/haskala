@@ -871,10 +871,10 @@ function haskala_book_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 5,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 51,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -885,20 +885,17 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_format_of_publication_date',
-    'label' => 'Format of publication date',
+    'label' => 'Format of date',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 15,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 37,
     ),
   );
 
@@ -1082,7 +1079,7 @@ function haskala_book_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_integer',
-        'weight' => 39,
+        'weight' => 49,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1107,7 +1104,47 @@ function haskala_book_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 18,
+      'weight' => 35,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_gregorian_year_pub_other'
+  $field_instances['node-book-field_gregorian_year_pub_other'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 55,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_gregorian_year_pub_other',
+    'label' => 'Gregorian year of publication as it appears in other sources',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 41,
     ),
   );
 
@@ -1151,6 +1188,46 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-book-field_heb_year_publication_other'
+  $field_instances['node-book-field_heb_year_publication_other'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 54,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_heb_year_publication_other',
+    'label' => 'Hebrew year of publication as it appears in other sources',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 40,
+    ),
+  );
+
   // Exported field_instance: 'node-book-field_hebrew_year_of_publication'
   $field_instances['node-book-field_hebrew_year_of_publication'] = array(
     'bundle' => 'book',
@@ -1163,7 +1240,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 65,
+        'weight' => 48,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1187,7 +1264,7 @@ function haskala_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 19,
+      'weight' => 34,
     ),
   );
 
@@ -2231,6 +2308,46 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-book-field_price'
+  $field_instances['node-book-field_price'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 52,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_price',
+    'label' => 'Price of book as it appears in the book',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 38,
+    ),
+  );
+
   // Exported field_instance: 'node-book-field_printed_originally'
   $field_instances['node-book-field_printed_originally'] = array(
     'bundle' => 'book',
@@ -2314,6 +2431,86 @@ function haskala_book_field_default_field_instances() {
       ),
       'type' => 'options_onoff',
       'weight' => 21,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_printing_press_notes'
+  $field_instances['node-book-field_printing_press_notes'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 58,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_printing_press_notes',
+    'label' => 'Notes',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 44,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_printing_press_references'
+  $field_instances['node-book-field_printing_press_references'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 57,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_printing_press_references',
+    'label' => 'References',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 43,
     ),
   );
 
@@ -2412,7 +2609,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 34,
+        'weight' => 50,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2436,7 +2633,47 @@ function haskala_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 46,
+      'weight' => 36,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_publication_place_other'
+  $field_instances['node-book-field_publication_place_other'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 56,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_publication_place_other',
+    'label' => 'Place of publication as it appears in other sources',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 42,
     ),
   );
 
@@ -2452,7 +2689,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 67,
+        'weight' => 47,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2476,7 +2713,47 @@ function haskala_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 54,
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_publication_year_in_other'
+  $field_instances['node-book-field_publication_year_in_other'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 53,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_publication_year_in_other',
+    'label' => 'Year of publication as it appears in other sources',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 39,
     ),
   );
 
@@ -4592,11 +4869,13 @@ function haskala_book_field_default_field_instances() {
   t('Evidence for person\'s identity if it does not appear in the book');
   t('Fonts');
   t('Formatted display title');
-  t('Format of publication date');
+  t('Format of date');
   t('Frankfurt University Library catalog number');
   t('Full title');
   t('General Notes');
+  t('Gregorian year of publication as it appears in other sources');
   t('Gregorian year of publication as it appears in the book');
+  t('Hebrew year of publication as it appears in other sources');
   t('Hebrew year of publication as it appears in the book');
   t('Height of book, in cm');
   t('Illustrations / diagrams');
@@ -4648,10 +4927,13 @@ function haskala_book_field_default_field_instances() {
   t('Other libraries');
   t('Pages in which illustrations / diagrams appear');
   t('Part of a series of books? ');
+  t('Place of publication as it appears in other sources');
   t('Place of publication as it appears in the book');
   t('Preface title');
+  t('Price of book as it appears in the book');
   t('Printed originally with other books?');
   t('Producer of book');
+  t('References');
   t('References for edition');
   t('References for person and book');
   t('References for translation');
@@ -4675,6 +4957,7 @@ function haskala_book_field_default_field_instances() {
   t('Width of book, in cm');
   t('Writer of preface');
   t('Year of edition');
+  t('Year of publication as it appears in other sources');
   t('Year of publication as it appears in the book');
   t('Year of translation');
 
