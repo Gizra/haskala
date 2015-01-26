@@ -26,7 +26,7 @@ function haskala_book_ctools_plugin_directory($module, $plugin) {
  *
  *  @return production details nid.
  */
-function haskala_book_get_production($book_nid, $person_nid = null) {
+function haskala_book_get_production($book_nid, $person_nid = NULL) {
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', 'production')
