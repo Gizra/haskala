@@ -1,0 +1,72 @@
+Id,Name,Parent
+model1,Belles-lettres,
+model2,Allegory,Belles-lettres
+model3,Novel,Belles-lettres
+model4,Parable,Belles-lettres
+model5,Bi'ur,
+model6,Biblical adaptation,
+model7,Biblical history,Biblical adaptation
+model8,Biblical stories,Biblical adaptation
+model9,Blessings,
+model10,Book review,
+model11,Catechisms,
+model12,Dialogue,
+model13,Epistolary literature,
+model14,Epistolary literature (fictional),Epistolary literature
+model15,Epistolary literature (real),Epistolary literature
+model16,Guidebook,
+model17,Informative text,
+model18,Lecture,
+model19,Lexicon,
+model20,Dictionary,Lexicon
+model21,Encyclopedia,Lexicon
+model22,Manifesto,
+model23,Moral literature,
+model24,Personal writing,
+model25,Autobiography,Personal writing
+model26,Biography,Personal writing
+model27,Memoirs,Personal writing
+model28,Play,
+model29,Comedy,Play
+model30,Purim spiel,Play
+model31,Satire,Play
+model32,Poems,
+model33,Biblical epic poetry,Poems
+model34,Elegies,Poems
+model35,Piyyut,Poems
+model36,Poems for special occasions,Poems
+model37,Prose poems,Poems
+model38,Meliza,Poems
+model39,Other poetry,Poems
+model40,Polemics,
+model41,Proverbs and sayings,
+model42,Aphorisms,Proverbs and sayings
+model43,Epigrams,Proverbs and sayings
+model44,Proverbs,Proverbs and sayings
+model45,Sayings,Proverbs and sayings
+model46,Pseudo-commentary,
+model47,Religious literature,
+model48,Aggadah/Midrash,Religious literature
+model49,Commentary,Religious literature
+model50,Halachic literature,Religious literature
+model51,Liturgy,Religious literature
+model52,Haggadah,Liturgy
+model53,Prayers,Liturgy
+model54,Selichot,Liturgy
+model55,Tchines,Liturgy
+model56,Report,
+model57,Riddles,
+model58,Scientific literature,
+model59,Essay,Scientific literature
+model60,Treatise,Scientific literature
+model61,Scientific text model,
+model62,Concise phrasing,Scientific text model
+model63,Frequent use of numbers,Scientific text model
+model64,Professional phrasing,Scientific text model
+model65,Scientific instruments mentioned,Scientific text model
+model66,Speech,
+model67,Story,
+model68,Textbook,
+model69,Hornbook,Textbook
+model70,Reader,Textbook
+model71,Travel literature,

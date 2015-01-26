@@ -8,5 +8,6 @@ features[features_api][] = api:2
 features[page_manager_pages][] = places
 features[taxonomy][] = cities
 features[taxonomy][] = language_counts
+features[taxonomy][] = models
 features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][page_manager] = page_manager
