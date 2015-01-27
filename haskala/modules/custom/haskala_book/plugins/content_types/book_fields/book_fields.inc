@@ -84,7 +84,6 @@ function haskala_book_production_tab_fields(&$tabs_fields, $book_nid) {
       $production_wrapper = entity_metadata_wrapper('node', $production_node);
       $production_tab = field_group_load_field_group('group_producers', 'node', 'production', 'default');
       $production_node_view = node_view($production_node);
-//      $producer_info = haskala_book_get_bundle_tab('production', $production_node, 'group_producers');
       $tabs_fields[t('Book producers')][] = haskala_book_get_tab_fields($production_wrapper, $production_tab, $production_node_view, $book_nid);
     }
   }
