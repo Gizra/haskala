@@ -49,6 +49,9 @@ projects[pathauto][version] = "1.2"
 projects[search_api][subdir] = "contrib"
 projects[search_api][version] = "1.14"
 
+projects[search_api_page][subdir] = "contrib"
+projects[search_api_page][version] = "1.1"
+
 projects[search_api_solr][subdir] = "contrib"
 projects[search_api_solr][version] = "1.6"
 
