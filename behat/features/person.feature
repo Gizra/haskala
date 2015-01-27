@@ -12,6 +12,6 @@ Feature: Person
 
   Examples:
     | title                                            | text                  |
-    | Mendelssohn, Moses - מנדלסון, משה                | Dessau                |
+    | Mendelssohn, Moses                               | Dessau                |
     | Friedländer, David                               | Königsberg            |
-    | Lindau, Baruch ben Jehuda Löb - לינדא, ברוך       | Hannover              |
+    | Lindau, Baruch ben Jehuda Löb                    | Hannover              |
