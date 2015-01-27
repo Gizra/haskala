@@ -46,6 +46,12 @@ projects[panels][version] = "3.4"
 projects[pathauto][subdir] = "contrib"
 projects[pathauto][version] = "1.2"
 
+projects[search_api][subdir] = "contrib"
+projects[search_api][version] = "1.14"
+
+projects[search_api_solr][subdir] = "contrib"
+projects[search_api_solr][version] = "1.6"
+
 projects[strongarm][subdir] = "contrib"
 projects[strongarm][version] = "2.0"
 

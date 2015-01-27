@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Haskala Search feature.
+ */
+
+include_once 'haskala_search.features.inc';
