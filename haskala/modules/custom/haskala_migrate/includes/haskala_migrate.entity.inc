@@ -74,7 +74,18 @@ abstract class HaskalaMigration extends Migration {
       ->propertyCondition('title', $title)
       ->execute();
 
-    if (!isset($result['node'])) {
+    // When not finding a person, try to search only for its German name.
+    if (empty($result['node']) && $bundle == 'person' && mb_strrchr($title, ' - ')) {
+      list($name) = explode(' - ', $title);
+      $query = new EntityFieldQuery();
+      $result = $query->entityCondition('entity_type', 'node')
+        ->propertyCondition('type', 'person')
+        ->propertyCondition('title', $name)
+        ->execute();
+    }
+
+    if (empty($result['node'])) {
+      watchdog('haskala', t('Missing @type called "@title"', array('@type' => $bundle, '@title' => $title)));
       return;
     }
 

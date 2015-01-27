@@ -25,11 +25,14 @@ class HaskalaPeopleMigrate extends HaskalaMigration {
 
   public function __construct($arguments) {
     parent::__construct($arguments);
-    $this->addFieldMapping('field_hebrew_name', 'field_hebrew_name');
-
-    $this->addFieldMapping('field_german_name', 'field_german_name');
-
-    $this->addFieldMapping('field_pseudonym', 'field_pseudonym');
+    $simple_mappings = array(
+      'field_hebrew_name',
+      'field_german_name',
+      'field_pseudonym',
+      'field_date_of_birth',
+      'field_date_of_death',
+    );
+    $this->addSimpleMappings($simple_mappings);
 
     $this
       ->addFieldMapping('field_gender', 'field_gender')
@@ -39,8 +42,6 @@ class HaskalaPeopleMigrate extends HaskalaMigration {
     $this->addFieldMapping('field_gender:ignore_case')
       ->defaultValue(TRUE);
 
-    $this->addFieldMapping('field_date_of_birth', 'field_date_of_birth');
-
     $this
       ->addFieldMapping('field_place_of_birth', 'field_place_of_birth')
       ->defaultValue(TRUE);
@@ -48,8 +49,6 @@ class HaskalaPeopleMigrate extends HaskalaMigration {
       ->defaultValue(TRUE);
     $this->addFieldMapping('field_place_of_birth:ignore_case')
       ->defaultValue(TRUE);
-
-    $this->addFieldMapping('field_date_of_death', 'field_date_of_death');
 
     $this
       ->addFieldMapping('field_place_of_death', 'field_place_of_death')
@@ -66,6 +65,5 @@ class HaskalaPeopleMigrate extends HaskalaMigration {
       ->defaultValue(TRUE);
     $this->addFieldMapping('field_occupation:ignore_case')
       ->defaultValue(TRUE);
-
   }
 }
