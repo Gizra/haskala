@@ -3635,7 +3635,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_textual_models_notes',
-    'label' => 'Notes on textual models',
+    'label' => 'Notes',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -4990,7 +4990,6 @@ function haskala_book_field_default_field_instances() {
   t('Notes on references');
   t('Notes on roles in book\'s creation');
   t('Notes on target audience');
-  t('Notes on textual models');
   t('Notes on dedications');
   t('Number');
   t('Number of languages');
