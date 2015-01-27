@@ -1002,7 +1002,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_full_title',
-    'label' => 'Full title',
+    'label' => 'Full title of book',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -4484,7 +4484,7 @@ function haskala_book_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4525,7 +4525,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4565,7 +4565,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 15,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4576,7 +4576,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_person_book_references',
-    'label' => 'References for person and book',
+    'label' => 'References',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -4609,7 +4609,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 10,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4620,7 +4620,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_person_name_appear',
-    'label' => 'Does the person\'s name appear in the book',
+    'label' => 'Does the person\'s name appear in the book?',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -4661,7 +4661,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_producer',
-    'label' => 'Name of book producer',
+    'label' => 'Name',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -4691,7 +4691,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4731,7 +4731,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 13,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4779,7 +4779,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_role',
-    'label' => 'Role in book creation',
+    'label' => 'Role(s) in book creation',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -4805,7 +4805,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 16,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4816,7 +4816,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_roles_notes',
-    'label' => 'Notes on roles in book\'s creation',
+    'label' => 'Notes',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -4891,7 +4891,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 14,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4937,7 +4937,7 @@ function haskala_book_field_default_field_instances() {
   t('City of translation');
   t('Contemporary references to the book');
   t('Copy of book used');
-  t('Does the person\'s name appear in the book');
+  t('Does the person\'s name appear in the book?');
   t('Edition of book');
   t('Evidence about book production');
   t('Evidence for person\'s identity if it does not appear in the book');
@@ -4945,7 +4945,7 @@ function haskala_book_field_default_field_instances() {
   t('Formatted display title');
   t('Format of date');
   t('Frankfurt University Library catalog number');
-  t('Full title');
+  t('Full title of book');
   t('General Notes');
   t('Gregorian year of publication as it appears in other sources');
   t('Gregorian year of publication as it appears in the book');
@@ -4974,8 +4974,8 @@ function haskala_book_field_default_field_instances() {
   t('Main textual models of the book');
   t('Mentioned in book');
   t('Motto');
+  t('Name');
   t('Name as it appears in the book');
-  t('Name of book producer');
   t('Name of publisher');
   t('Name of series');
   t('Names of other books');
@@ -4988,7 +4988,6 @@ function haskala_book_field_default_field_instances() {
   t('Notes on illustrations / diagrams');
   t('Notes on personal addresses');
   t('Notes on references');
-  t('Notes on roles in book\'s creation');
   t('Notes on target audience');
   t('Notes on dedications');
   t('Number');
@@ -5008,12 +5007,11 @@ function haskala_book_field_default_field_instances() {
   t('Producer of book');
   t('References');
   t('References for edition');
-  t('References for person and book');
   t('References for translation');
   t('References for editions');
   t('References for sources mentioned in the book');
   t('Religion during writing of book');
-  t('Role in book creation');
+  t('Role(s) in book creation');
   t('Role in book production');
   t('Secondary sources used by researchers');
   t('Secondary textual models');
