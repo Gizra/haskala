@@ -42,7 +42,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
       unset($tabs_fields[$tab->label]);
     }
     else {
-      $tabs_fields[$tab->label]['single']['weight'] = $tab->weight;
+      $tabs_fields[$tab->label]['weight'] = $tab->weight;
     }
   }
 
@@ -51,7 +51,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
 
   // Delete weight element.
   foreach (array_keys($tabs_fields) as $tab_name){
-    unset($tabs_fields[$tab_name]['single']['weight']);
+    unset($tabs_fields[$tab_name]['weight']);
   }
 
   // Add Book producers tab.
