@@ -17,7 +17,6 @@ dependencies[] = overlay
 dependencies[] = path
 dependencies[] = taxonomy
 dependencies[] = dblog
-dependencies[] = search
 dependencies[] = shortcut
 dependencies[] = file
 dependencies[] = rdf

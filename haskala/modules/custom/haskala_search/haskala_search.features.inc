@@ -522,6 +522,106 @@ function haskala_search_default_search_api_index() {
 }
 
 /**
+ * Implements hook_default_search_api_page().
+ */
+function haskala_search_default_search_api_page() {
+  $items = array();
+  $items['haskala'] = entity_import('search_api_page', '{
+    "index_id" : "haskala",
+    "path" : "search",
+    "name" : "Haskala",
+    "machine_name" : "haskala",
+    "description" : "",
+    "options" : {
+      "mode" : "terms",
+      "fields" : {
+        "field_bar_ilan_library_id" : "field_bar_ilan_library_id",
+        "field_berlin_library_id" : "field_berlin_library_id",
+        "field_book_availability_notes" : "field_book_availability_notes",
+        "field_book_structure_notes" : "field_book_structure_notes",
+        "field_british_library_id" : "field_british_library_id",
+        "field_catalog_numbers_notes" : "field_catalog_numbers_notes",
+        "field_contemporary_references" : "field_contemporary_references",
+        "field_contents_table_notes" : "field_contents_table_notes",
+        "field_copy_of_book_used" : "field_copy_of_book_used",
+        "field_date_of_birth" : "field_date_of_birth",
+        "field_date_of_death" : "field_date_of_death",
+        "field_dedications_notes" : "field_dedications_notes",
+        "field_diagrams_book_pages" : "field_diagrams_book_pages",
+        "field_diagrams_notes" : "field_diagrams_notes",
+        "field_diagrams_text" : "field_diagrams_text",
+        "field_edition_changes" : "field_edition_changes",
+        "field_edition_references" : "field_edition_references",
+        "field_edition_year" : "field_edition_year",
+        "field_epilogue_notes" : "field_epilogue_notes",
+        "field_formatted_display_title" : "field_formatted_display_title",
+        "field_frankfurt_library_id" : "field_frankfurt_library_id",
+        "field_full_title" : "field_full_title",
+        "field_german_name" : "field_german_name",
+        "field_gregorian_year_pub_other" : "field_gregorian_year_pub_other",
+        "field_harvard_library_id" : "field_harvard_library_id",
+        "field_heb_year_publication_other" : "field_heb_year_publication_other",
+        "field_hebrew_name" : "field_hebrew_name",
+        "field_hebrew_year_of_publication" : "field_hebrew_year_of_publication",
+        "field_huji_library_id" : "field_huji_library_id",
+        "field_last_known_edition" : "field_last_known_edition",
+        "field_later_references" : "field_later_references",
+        "field_location" : "field_location",
+        "field_motto" : "field_motto",
+        "field_name_in_book" : "field_name_in_book",
+        "field_new_york_library_id" : "field_new_york_library_id",
+        "field_other_books_names" : "field_other_books_names",
+        "field_other_libraries" : "field_other_libraries",
+        "field_other_volumes" : "field_other_volumes",
+        "field_page" : "field_page",
+        "field_pages_number" : "field_pages_number",
+        "field_person_book_references" : "field_person_book_references",
+        "field_personal_addresse_notes" : "field_personal_addresse_notes",
+        "field_planned_volumes" : "field_planned_volumes",
+        "field_preface_notes" : "field_preface_notes",
+        "field_preface_number" : "field_preface_number",
+        "field_preface_title" : "field_preface_title",
+        "field_price" : "field_price",
+        "field_printing_press_notes" : "field_printing_press_notes",
+        "field_printing_press_references" : "field_printing_press_references",
+        "field_producer_evidence" : "field_producer_evidence",
+        "field_production_evidence" : "field_production_evidence",
+        "field_pseudonym" : "field_pseudonym",
+        "field_publication_year_in_book" : "field_publication_year_in_book",
+        "field_publication_year_in_other" : "field_publication_year_in_other",
+        "field_references_for_editions" : "field_references_for_editions",
+        "field_references_notes" : "field_references_notes",
+        "field_role_in_book_production" : "field_role_in_book_production",
+        "field_roles_notes" : "field_roles_notes",
+        "field_secondary_sources" : "field_secondary_sources",
+        "field_sources_list" : "field_sources_list",
+        "field_sources_references" : "field_sources_references",
+        "field_structure_preface_notes" : "field_structure_preface_notes",
+        "field_target_audience" : "field_target_audience",
+        "field_target_audience_notes" : "field_target_audience_notes",
+        "field_tel_aviv_library_id" : "field_tel_aviv_library_id",
+        "field_textual_models_notes" : "field_textual_models_notes",
+        "field_title_in_latin_characters" : "field_title_in_latin_characters",
+        "field_topics_notes" : "field_topics_notes",
+        "field_total_number_of_editions" : "field_total_number_of_editions",
+        "field_translation_references" : "field_translation_references",
+        "field_translation_year" : "field_translation_year",
+        "field_volumes_notes" : "field_volumes_notes",
+        "field_volumes_published_number" : "field_volumes_published_number",
+        "title" : "title"
+      },
+      "per_page" : "30",
+      "result_page_search_form" : 1,
+      "get_per_page" : 0,
+      "view_mode" : "search_api_page_result"
+    },
+    "enabled" : "1",
+    "rdf_mapping" : []
+  }');
+  return $items;
+}
+
+/**
  * Implements hook_default_search_api_server().
  */
 function haskala_search_default_search_api_server() {

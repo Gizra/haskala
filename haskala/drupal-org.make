@@ -14,16 +14,8 @@ projects[ckeditor][version] = "1.x-dev"
 projects[ctools][subdir] = "contrib"
 projects[ctools][version] = "1.5"
 
-projects[date][subdir] = "contrib"
-projects[date][version] = "2.8"
-
 projects[diff][subdir] = "contrib"
 projects[diff][version] = "3.2"
-
-projects[entity][subdir] = "contrib"
-projects[entity][version] = "1.5"
-projects[entity][patch][] = "https://www.drupal.org/files/issues/2264079-entity-wrapper-access-single-entity-reference-2.patch"
-projects[entity][patch][] = "https://www.drupal.org/files/issues/2086225-entity-access-check-node-create-3.patch"
 
 projects[entityreference][subdir] = "contrib"
 projects[entityreference][version] = "1.1"
