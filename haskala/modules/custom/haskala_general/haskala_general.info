@@ -29,5 +29,3 @@ features[menu_links][] = user-menu_add-a-person:node/add/person
 features[menu_links][] = user-menu_login:user/login
 features[menu_links][] = user-menu_user-account:user
 features[page_manager_pages][] = homepage
-features[user_permission][] = search content
-features[user_permission][] = use advanced search
