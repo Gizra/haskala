@@ -1665,6 +1665,43 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-book-field_main_textual_models'
+  $field_instances['node-book-field_main_textual_models'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 86,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_textual_models',
+    'label' => 'Main textual models of the book',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 99,
+    ),
+  );
+
   // Exported field_instance: 'node-book-field_motto'
   $field_instances['node-book-field_motto'] = array(
     'bundle' => 'book',
@@ -3040,6 +3077,43 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-book-field_secondary_textual_models'
+  $field_instances['node-book-field_secondary_textual_models'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 87,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_secondary_textual_models',
+    'label' => 'Secondary textual models',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 100,
+    ),
+  );
+
   // Exported field_instance: 'node-book-field_sellers'
   $field_instances['node-book-field_sellers'] = array(
     'bundle' => 'book',
@@ -3550,7 +3624,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 17,
+        'weight' => 88,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3561,7 +3635,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_textual_models_notes',
-    'label' => 'Notes on textual models',
+    'label' => 'Notes',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -3574,7 +3648,7 @@ function haskala_book_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 42,
+      'weight' => 101,
     ),
   );
 
@@ -4897,6 +4971,7 @@ function haskala_book_field_default_field_instances() {
   t('List of sources mentioned in the book');
   t('Location during writing of book');
   t('Location of footnotes');
+  t('Main textual models of the book');
   t('Mentioned in book');
   t('Motto');
   t('Name as it appears in the book');
@@ -4915,7 +4990,6 @@ function haskala_book_field_default_field_instances() {
   t('Notes on references');
   t('Notes on roles in book\'s creation');
   t('Notes on target audience');
-  t('Notes on textual models');
   t('Notes on dedications');
   t('Number');
   t('Number of languages');
@@ -4942,6 +5016,7 @@ function haskala_book_field_default_field_instances() {
   t('Role in book creation');
   t('Role in book production');
   t('Secondary sources used by researchers');
+  t('Secondary textual models');
   t('Target audience as described in the book');
   t('Tel-Aviv University Library');
   t('Text is presented as original');
