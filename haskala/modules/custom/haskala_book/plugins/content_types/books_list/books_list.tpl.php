@@ -1,4 +1,4 @@
 <section class="books-filter">
-  <nav class="eng"><?php print $alpabet_en; ?></nav>
-  <nav class="he"><?php print $alpabet_he; ?></nav>
+  <nav class="eng"><?php print $alphabet_en; ?></nav>
+  <nav class="he"><?php print $alphabet_he; ?></nav>
 </section>
