@@ -14,4 +14,4 @@ Feature: Person
     | title                                            | text                  |
     | Mendelssohn, Moses                               | Dessau                |
     | Friedländer, David                               | Königsberg            |
-    | Lindau, Baruch ben Jehuda Löb - לינדא, ברוך       | Hannover              |
+    | Lindau, Baruch ben Jehuda Löb                    | Hannover              |
