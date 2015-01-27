@@ -75,7 +75,14 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   return $block;
 }
 
-// Add Book producers tab.
+/**
+ * Add Book producers tab into $tabs_fields array.
+ *
+ *  @param &$tabs_fields
+ *   The tabs array.
+ *  @param $book_nid
+ *   The book nid.
+ */
 function haskala_book_production_tab_fields(&$tabs_fields, $book_nid) {
   $productions_nodes = haskala_book_get_production($book_nid);
   if ($productions_nodes) {
