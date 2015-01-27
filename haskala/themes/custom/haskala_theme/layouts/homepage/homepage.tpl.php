@@ -3,10 +3,7 @@
 </section>
 
 <section class="search">
-  <form>
-    <input class="search-text" placeholder="SEARCH">
-    <input type="submit" class="submit" value="">
-  </form>
+  <?php print $content['search']; ?>
 </section>
 
 <section class="tags-cloud-wrapper">
