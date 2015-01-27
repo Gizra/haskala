@@ -12,32 +12,72 @@ $plugin = array(
  * Render callback.
  */
 function haskala_book_books_list_content_type_render($subtype, $conf, $args, $context) {
-  dpm($args);
-  dpm(menu_get_item(current_path()));
+  $item = menu_get_item(current_path());
 
   $variables = array();
 
-  $letter = empty($args[0]) ? 'A' : strtoupper($args[0]);
+  $argument = empty($args[0]) ? 'A' : strtoupper($args[0]);
 
   // Get english alphabet.
   $letters_en = range('A', 'Z');
 
   // Get hebrew alphabet;
-  $letters_he = hebrew_alphabet_without_sofit();
+  $letters_he = haskala_book_hebrew_alphabet_without_sofit();
 
   $links_en = array();
   $links_he = array();
   // Create English filter list.
   foreach ($letters_en as $letter) {
-    $links_en[] = l($letter, '/books/' . $letter);
+    $links_en[] = l($letter, $item['path'] . '/' . $letter);
   }
   // Create Hebrew filter list.
   foreach ($letters_he as $letter) {
-    $links_he[] = l($letter, '/books/' . $letter);
+    $links_he[] = l($letter, $item['path'] . '/' . $letter);
   }
 
   $variables['alphabet_en'] = theme('item_list', array('items' => $links_en));
   $variables['alphabet_he'] = theme('item_list', array('items' => $links_he));
+
+  $nodes = array();
+  $blocks = array();
+  $limit = 50;
+
+  // Get 50 nodes, starting from current letter. If there are less then 50
+  // items - take nodes starting from next letter by alphabet and so on.
+  do {
+    $result = haskala_book_get_nodes_by_letter($argument, $limit);
+    $nodes = array_merge($nodes, $result);
+    $blocks[$argument] = $result;
+
+    if (in_array($argument, $letters_en)) {
+      // Letter is english
+      $key = array_search($argument, $letters_en);
+      $argument = $letters_en[$key + 1];
+    }
+    else if (in_array($argument, $letters_he)) {
+      // Letter is hebrew.
+      $key = array_search($argument, $letters_he);
+      $argument = $letters_he[$key + 1];
+    }
+
+    $limit -= count($result);
+
+  } while (count($nodes) < 50);
+
+  $variables['books_blocks'] = '';
+  foreach ($blocks as $letter => $block) {
+    $block_vars = array();
+    $block_vars['letter'] = $letter;
+    $block_vars['books_list'] = '';
+    foreach ($block as $node) {
+      // @todo: Create new node view mode for this page.
+       $view = node_view($node, 'teaser');
+       $block_vars['books_list'] .= drupal_render($view);
+//       $block_vars['books_list'] .= '<div class="book-title">' . $node->title . '</div>';
+    }
+
+    $variables['books_blocks'] .= theme('letter_books_list', $block_vars);
+  }
 
   $block = new stdClass();
   $block->module = 'haskala_book';
@@ -46,7 +86,40 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
   return $block;
 }
 
-function hebrew_alphabet_without_sofit() {
+/**
+ * Get limited count of nodes with titles starting from the sertain letter.
+ *
+ * @param $letter
+ *  String with the sertain letter.
+ * @param $limit
+ *  Count of nodes, that should be loaded.
+ *
+ * @return array
+ *  Array with node objects.
+ */
+function haskala_book_get_nodes_by_letter($letter, $limit) {
+  $query = new EntityFieldQuery();
+  $query
+    ->entityCondition('entity_type', 'node')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->propertyCondition('type', 'book')
+    ->propertyCondition('title', $letter, 'STARTS_WITH')
+//    ->fieldCondition('field_book',  'target_id', 'NULL', 'IS NULL')
+    ->range(0, $limit);
+
+  $result = $query->execute();
+
+  $nodes = !empty($result) ? node_load_multiple(array_keys($result['node'])) : array();
+
+  return $nodes;
+}
+
+/**
+ * Create array with hebrew letters, not including sofits.
+ *
+ * @return array
+ */
+function haskala_book_hebrew_alphabet_without_sofit() {
   return array(
     'א',
     'ב',
@@ -90,6 +163,15 @@ function haskala_book_books_list_content_type_theme(&$theme, $plugin) {
     'variables' => array(
       'alphabet' => NULL,
       'list' => NULL,
+      'books_blocks' => NULL,
+    ),
+  );
+  $theme['letter_books_list'] = array(
+    'template' => 'letter_books_list',
+    'path' => $plugin['path'],
+    'variables' => array(
+      'letter' => NULL,
+      'books_list' => NULL,
     ),
   );
 }
