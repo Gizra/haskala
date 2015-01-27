@@ -17,19 +17,17 @@
     <h1 class="title page-header"><?php print $title; ?></h1>
   <?php endif; ?>
 
-  <div class="top-fields">
-    <div class="field">
-      <div class="field-label type-label">Type of book:</div>
-      <div class="content"></div>
+  <?php if (!empty($top_details_group)): ?>
+    <div class="top-fields">
+      <div class="field">
+        <div class="field-label type-label">Type of book:</div>
+        <div class="content"></div>
+      </div>
+      <?php foreach($top_details_group as $field):
+        print render($field);
+      endforeach; ?>
     </div>
-    <div class="field">
-      <div class="field-label">Full title of book:</div>
-      <div class="field-items"><?php print $title; ?></div>
-    </div>
-    <?php foreach($top_details_group as $field):
-      print render($field);
-    endforeach; ?>
-  </div>
+  <?php endif; ?>
 </section>
 
 <section id="bottom-details">

@@ -46,25 +46,6 @@ function haskala_book_get_production($book_nid, $person_nid = NULL) {
   return node_load_multiple(array_keys($result['node']));
 }
 
-/**
- *  Tabs with data from another bundles.
- *
- *  @param $bundle_name
- *   The bundle name.
- *  @param $node
- *   The node object.
- * @param $tab_name
- *   The tab name for group info.
- *
- *  @return bundle info.
- */
-function haskala_book_get_bundle_tab($bundle_name, $node, $tab_name) {
-  $bundle_info['wrapper'] = entity_metadata_wrapper('node', $node);
-  $bundle_info['tab'] = field_group_load_field_group($tab_name, 'node', $bundle_name, 'default');
-  $bundle_info['node_view'] = node_view($node);
-
-  return $bundle_info;
-}
 
 /**
  *  Get tab group fields.

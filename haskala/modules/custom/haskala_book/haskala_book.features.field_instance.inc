@@ -1002,7 +1002,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_full_title',
-    'label' => 'Full title',
+    'label' => 'Full title of book',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -4871,7 +4871,7 @@ function haskala_book_field_default_field_instances() {
   t('Formatted display title');
   t('Format of date');
   t('Frankfurt University Library catalog number');
-  t('Full title');
+  t('Full title of book');
   t('General Notes');
   t('Gregorian year of publication as it appears in other sources');
   t('Gregorian year of publication as it appears in the book');
