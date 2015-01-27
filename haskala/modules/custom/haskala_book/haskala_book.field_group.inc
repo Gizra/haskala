@@ -99,9 +99,9 @@ function haskala_book_field_group_info() {
     'label' => 'Bottom details',
     'weight' => '3',
     'children' => array(
-      0 => 'group_publisher_printing_press',
-      1 => 'group_catalog_numbers',
-      2 => 'group_prefaces',
+      0 => 'group_catalog_numbers',
+      1 => 'group_prefaces',
+      2 => 'group_publisher_printing_press',
       3 => 'group_references_bibliography',
       4 => 'group_structure',
       5 => 'group_target_audience',
@@ -247,12 +247,12 @@ function haskala_book_field_group_info() {
     'label' => 'horizontal tabs',
     'weight' => '1',
     'children' => array(
-      0 => 'group_publisher_printing_press',
-      1 => 'group_book_reception',
-      2 => 'group_book_structure',
-      3 => 'group_catalog_numbers',
-      4 => 'group_prefaces',
-      5 => 'group_preservation',
+      0 => 'group_book_reception',
+      1 => 'group_book_structure',
+      2 => 'group_catalog_numbers',
+      3 => 'group_prefaces',
+      4 => 'group_preservation',
+      5 => 'group_publisher_printing_press',
       6 => 'group_references_bibliography',
       7 => 'group_target_audience',
       8 => 'group_textual_models',
@@ -361,6 +361,41 @@ function haskala_book_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_producers|node|production|default';
+  $field_group->group_name = 'group_producers';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'production';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Book producers',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_name_in_book',
+      1 => 'field_person_book_references',
+      2 => 'field_person_name_appear',
+      3 => 'field_producer',
+      4 => 'field_producer_evidence',
+      5 => 'field_religion',
+      6 => 'field_role',
+      7 => 'field_roles_notes',
+      8 => 'field_writing_age',
+      9 => 'field_writing_location',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+      ),
+    ),
+  );
+  $export['group_producers|node|production|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_publisher_printing_press|node|book|default';
   $field_group->group_name = 'group_publisher_printing_press';
   $field_group->entity_type = 'node';
@@ -371,19 +406,19 @@ function haskala_book_field_group_info() {
     'label' => 'Publisher/ Printing press',
     'weight' => '66',
     'children' => array(
-      0 => 'field_gregorian_year',
-      1 => 'field_hebrew_year_of_publication',
-      2 => 'field_publication_place',
-      3 => 'field_publication_year_in_book',
-      4 => 'field_publisher_name',
-      5 => 'field_format_of_publication_date',
-      6 => 'field_price',
-      7 => 'field_publication_year_in_other',
-      8 => 'field_heb_year_publication_other',
-      9 => 'field_gregorian_year_pub_other',
-      10 => 'field_publication_place_other',
-      11 => 'field_printing_press_references',
-      12 => 'field_printing_press_notes',
+      0 => 'field_format_of_publication_date',
+      1 => 'field_gregorian_year',
+      2 => 'field_gregorian_year_pub_other',
+      3 => 'field_heb_year_publication_other',
+      4 => 'field_hebrew_year_of_publication',
+      5 => 'field_price',
+      6 => 'field_printing_press_notes',
+      7 => 'field_printing_press_references',
+      8 => 'field_publication_place',
+      9 => 'field_publication_place_other',
+      10 => 'field_publication_year_in_book',
+      11 => 'field_publication_year_in_other',
+      12 => 'field_publisher_name',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -410,19 +445,19 @@ function haskala_book_field_group_info() {
     'label' => 'Publisher/ Printing press',
     'weight' => '72',
     'children' => array(
-      0 => 'field_gregorian_year',
-      1 => 'field_hebrew_year_of_publication',
-      2 => 'field_publication_place',
-      3 => 'field_publication_year_in_book',
-      4 => 'field_publisher_name',
-      5 => 'field_format_of_publication_date',
-      6 => 'field_price',
-      7 => 'field_publication_year_in_other',
-      8 => 'field_heb_year_publication_other',
-      9 => 'field_gregorian_year_pub_other',
-      10 => 'field_publication_place_other',
-      11 => 'field_printing_press_references',
-      12 => 'field_printing_press_notes',
+      0 => 'field_format_of_publication_date',
+      1 => 'field_gregorian_year',
+      2 => 'field_gregorian_year_pub_other',
+      3 => 'field_heb_year_publication_other',
+      4 => 'field_hebrew_year_of_publication',
+      5 => 'field_price',
+      6 => 'field_printing_press_notes',
+      7 => 'field_printing_press_references',
+      8 => 'field_publication_place',
+      9 => 'field_publication_place_other',
+      10 => 'field_publication_year_in_book',
+      11 => 'field_publication_year_in_other',
+      12 => 'field_publisher_name',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -610,6 +645,8 @@ function haskala_book_field_group_info() {
     'weight' => '69',
     'children' => array(
       0 => 'field_textual_models_notes',
+      1 => 'field_main_textual_models',
+      2 => 'field_secondary_textual_models',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -637,6 +674,8 @@ function haskala_book_field_group_info() {
     'weight' => '76',
     'children' => array(
       0 => 'field_textual_models_notes',
+      1 => 'field_main_textual_models',
+      2 => 'field_secondary_textual_models',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -829,13 +868,6 @@ function haskala_book_field_group_info() {
       6 => 'field_series_part',
       7 => 'field_volumes_notes',
       8 => 'field_volumes_published_number',
-      2 => 'field_volumes_notes',
-      3 => 'field_volumes_published_number',
-      4 => 'field_other_volumes',
-      5 => 'field_planned_volumes',
-      6 => 'field_series_part',
-      7 => 'field_printed_originally',
-      8 => 'field_other_books_names',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -872,13 +904,6 @@ function haskala_book_field_group_info() {
       6 => 'field_series_part',
       7 => 'field_volumes_notes',
       8 => 'field_volumes_published_number',
-      2 => 'field_volumes_notes',
-      3 => 'field_volumes_published_number',
-      4 => 'field_other_volumes',
-      5 => 'field_planned_volumes',
-      6 => 'field_series_part',
-      7 => 'field_printed_originally',
-      8 => 'field_other_books_names',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

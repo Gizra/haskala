@@ -17,6 +17,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   }
 
   $node = $context->data;
+  $book_nid = $node->nid;
 
   // For weight fields data.
   $node_view = node_view($node);
@@ -25,71 +26,26 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
 
   // Fields to be displayed above the book tabs.
   $top_details_group = field_group_load_field_group('group_top_details', 'node', 'book', 'default');
+  $top_details_group_fields = haskala_book_get_tab_fields($wrapper, $top_details_group, $node_view, $book_nid);
 
-  // Sort fields by weight.
-  $top_details_fields_sorted = array();
-  foreach($top_details_group->children as $field_name) {
-    if ($wrapper->$field_name->value()){
-      $weight = $node_view[$field_name]['#weight'];
-      $tab_fields_sorted[$weight] = $field_name;
-    }
-  }
-  ksort($top_details_fields_sorted);
-
-  $top_details_group_fields = array();
-  foreach($top_details_fields_sorted as $field_name) {
-
-    // Check if the field isn't empty.
-    if ($wrapper->$field_name->value()) {
-      $top_details_group_fields[] = render($node_view[$field_name]);
-    }
-  }
-
+  // Book tabs fields.
   $parent_tabs_group = field_group_load_field_group('group_horizontal_tabs', 'node', 'book', 'default');
-
   $tabs_fields = array();
 
   foreach ($parent_tabs_group->children as $tab_name) {
     $tab = field_group_load_field_group($tab_name, 'node', 'book', 'default');
 
-    // Sort fields by weight
-    $tab_fields_sorted = array();
-    foreach($tab->children as $field_name) {
-      if ($wrapper->$field_name->value()){
-        $weight = $node_view[$field_name]['#weight'];
-        $tab_fields_sorted[$weight] = $field_name;
-      }
-    }
-    ksort($tab_fields_sorted);
-
-    $tabs_fields[$tab->label] = array();
-    foreach($tab_fields_sorted as $field_name) {
-
-      // Check if the field isn't empty.
-      if ($wrapper->$field_name->value()) {
-        $field = render($node_view[$field_name]);
-        $tabs_fields[$tab->label][] = $field;
-
-        // Role of preface writer
-        if ($field_name == 'field_writer_of_preface') {
-          $production_nid = haskala_book_get_production($node->nid, $wrapper->$field_name->value()->nid);
-          if ($production_nid) {
-            $production_node = node_load($production_nid);
-            $field = field_view_field('node', $production_node, 'field_role');
-            $tabs_fields[$tab->label][] = $field;
-          }
-        }
-      }
-    }
+    $tabs_fields[$tab->label]['single'] = haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid);
 
     // Delete empty group.
-    if (empty($tabs_fields[$tab->label])){
+    if (empty($tabs_fields[$tab->label]['single'])){
       unset($tabs_fields[$tab->label]);
     }
     else {
       $tabs_fields[$tab->label]['weight'] = $tab->weight;
     }
   }
+
   // Sort groups by weight.
   uasort($tabs_fields, 'drupal_sort_weight');
 
@@ -98,6 +54,9 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
     unset($tabs_fields[$tab_name]['weight']);
   }
 
+  // Add Book producers tab.
+  haskala_book_production_tab_fields($tabs_fields, $book_nid);
+
   $grouped_fields_variables = array(
     'title' => $node->title,
     'top_details_group' => $top_details_group_fields,
@@ -105,7 +64,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   );
 
   $variables = array(
-    'nid' => $node->nid,
+    'nid' => $book_nid,
     'grouped_fields' => theme('haskala_book_fields', $grouped_fields_variables),
   );
 
@@ -117,6 +76,25 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
 }
 
 /**
+ * Add Book producers tab into $tabs_fields array.
+ *
+ *  @param &$tabs_fields
+ *   The tabs array.
+ *  @param $book_nid
+ *   The book nid.
+ */
+function haskala_book_production_tab_fields(&$tabs_fields, $book_nid) {
+  $productions_nodes = haskala_book_get_production($book_nid);
+  if ($productions_nodes) {
+    $tabs_fields[t('Book producers')] = array();
+    foreach($productions_nodes as $production_node) {
+      $production_wrapper = entity_metadata_wrapper('node', $production_node);
+      $production_tab = field_group_load_field_group('group_producers', 'node', 'production', 'default');
+      $production_node_view = node_view($production_node);
+      $tabs_fields[t('Book producers')][] = haskala_book_get_tab_fields($production_wrapper, $production_tab, $production_node_view, $book_nid);
+    }
+  }
+}
 
 /**
  * The form to add or edit a node as content.
