@@ -126,13 +126,3 @@ function haskala_book_hebrew_alphabet_without_sofit() {
     'ת',
   );
 }
-
-/**
- * Implements hook_entity_info_alter().
- */
-function haskala_book_entity_info_alter(&$entity_info) {
-  $entity_info['node']['view modes']['link'] = array(
-    'label' => t('Node Link'),
-    'custom settings' => TRUE,
-  );
-}

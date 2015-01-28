@@ -33,7 +33,7 @@ function haskala_theme_preprocess_node(&$variables) {
 /**
  * Preprocess for article images.
  */
-function haskala_theme_preprocess_node__book__link(&$variables) {
+function haskala_theme_preprocess_node__book__teaser(&$variables) {
   $node = $variables['node'];
   $variables['url'] = url('node/' . $node->nid);
 }

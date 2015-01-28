@@ -67,7 +67,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
     $block_vars['class'] = in_array($letter, $letters_he) ? 'he' : 'en';
     $block_vars['books_list'] = '';
     foreach ($block as $node) {
-       $view = node_view($node, 'link');
+       $view = node_view($node, 'teaser');
        $block_vars['books_list'] .= drupal_render($view);
     }
     $variables['books_blocks'] .= theme('letter_books_list', $block_vars);
