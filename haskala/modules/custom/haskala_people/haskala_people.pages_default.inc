@@ -91,7 +91,7 @@ function haskala_people_default_page_manager_pages() {
     $display->content['new-d677698b-3981-4f23-ae67-374b28aa4baf'] = $pane;
     $display->panels['middle'][0] = 'new-d677698b-3981-4f23-ae67-374b28aa4baf';
     $pane = new stdClass();
-    $pane->pid = 'new-25f64ae0-8e7d-4f33-8a96-25c8797756cf';
+    $pane->pid = 'new-e8455e6c-201f-4597-8fa6-22e2a1bce7b4';
     $pane->panel = 'middle';
     $pane->type = 'books_list';
     $pane->subtype = 'books_list';
@@ -105,7 +105,7 @@ function haskala_people_default_page_manager_pages() {
       'context' => 'argument_string_1',
       'override_title' => 0,
       'override_title_text' => '',
-      'form_build_id' => 'form-FPHUFnfvj_lwQJe635Gpcx-xJ96C0upriDAH9be0THM',
+      'form_build_id' => 'form-sK-kK_pDu5MMSSVIRLU-SnGVsmnSdOg5yAwoSiLvYxY',
       'form_token' => 'b2HINQ6ffiAJtt50PjW9oysiHHIw9-HyQuYbJvlMoFE',
       'form_id' => 'haskala_book_books_list_content_type_edit_form',
       'op' => 'Finish',
@@ -118,9 +118,9 @@ function haskala_people_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '25f64ae0-8e7d-4f33-8a96-25c8797756cf';
-    $display->content['new-25f64ae0-8e7d-4f33-8a96-25c8797756cf'] = $pane;
-    $display->panels['middle'][1] = 'new-25f64ae0-8e7d-4f33-8a96-25c8797756cf';
+    $pane->uuid = 'e8455e6c-201f-4597-8fa6-22e2a1bce7b4';
+    $display->content['new-e8455e6c-201f-4597-8fa6-22e2a1bce7b4'] = $pane;
+    $display->panels['middle'][1] = 'new-e8455e6c-201f-4597-8fa6-22e2a1bce7b4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

@@ -1,8 +1,8 @@
 <?php
 
 $plugin = array(
-  'title' => t('Books list'),
-  'description' => t('Display a books list starting from some letter.'),
+  'title' => t('Nodes list'),
+  'description' => t('Display a nodes list starting from some letter.'),
   'category' => t('Haskala'),
   'hook theme' => 'haskala_book_books_list_content_type_theme',
   'required context' => new ctools_context_optional(t('Letter'), 'string'),
@@ -37,7 +37,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
   // Get 50 nodes, starting from current letter. If there are less then 50
   // items - take nodes starting from next letter by alphabet and so on.
   do {
-    $result = haskala_book_get_nodes_by_letter($argument, $limit, $book_type);
+    $result = haskala_book_get_nodes_by_letter($argument, $limit, $node_type, $book_type);
     $count = $count + count($result);
     // Do not add empty result.
     if (!empty($result)) {
@@ -75,7 +75,18 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
     $block_vars['class'] = in_array($letter, $letters_he) ? 'he' : 'en';
     $block_vars['books_list'] = '';
     foreach ($block as $node) {
-       $view = node_view($node, 'teaser');
+      if ($node_type == 'person') {
+        if (in_array($letter, $letters_en)) {
+          $view = node_view($node, 'teaser_en');
+        }
+        else if (in_array($letter, $letters_he)) {
+          $view = node_view($node, 'teaser_he');
+        }
+      }
+      elseif ($node_type == 'book') {
+        $view = node_view($node, 'teaser');
+      }
+
        $block_vars['books_list'] .= drupal_render($view);
     }
     $variables['books_blocks'] .= theme('letter_books_list', $block_vars);
@@ -95,22 +106,40 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
  *  String with the certain letter.
  * @param $limit
  *  Count of nodes, that should be loaded.
+ * @param $node_type
+ *  Node bundle.
  * @param $book_type
  *  Type of the book node. Could be regular or digital.
  *
  * @return array
  *  Array with node objects.
  */
-function haskala_book_get_nodes_by_letter($letter, $limit, $book_type) {
+function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', $book_type = 'regular') {
   $query = new EntityFieldQuery();
   $query
     ->entityCondition('entity_type', 'node')
     ->propertyCondition('status', NODE_PUBLISHED)
-    ->propertyCondition('type', 'book')
-    ->propertyCondition('title', $letter, 'STARTS_WITH');
+    ->propertyCondition('type', $node_type);
+
+  if ($node_type == 'book') {
+    $query->propertyCondition('title', $letter, 'STARTS_WITH');
+  }
+  else if ($node_type == 'person') {
+    // Get english alphabet.
+    $letters_en = range('A', 'Z');
+    // Get hebrew alphabet;
+    $letters_he = haskala_book_hebrew_alphabet_without_sofit();
+    if (in_array($letter, $letters_en)) {
+      $query->fieldCondition('field_german_name',  'value', $letter, 'STARTS_WITH');
+    }
+    else if (in_array($letter, $letters_he)) {
+      $query->fieldCondition('field_hebrew_name',  'value', $letter, 'STARTS_WITH');
+    }
+  }
+
 //    ->fieldCondition('field_book',  'target_id', 'NULL', 'IS NULL')
 
-  if ($book_type == 'digital') {
+  if ($book_type == 'digital' && $node_type == 'book') {
       $query->fieldCondition('field_link_to_digital_book',  'value', 'NULL', 'IS NOT NULL');
     }
 
