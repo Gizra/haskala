@@ -128,10 +128,10 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $book_type) {
  * The form to add or edit a node as content.
  */
 function haskala_book_books_list_content_type_edit_form($form, &$form_state) {
-$book_types = array(
-  'regular' => 'regular',
-  'digital' => 'digital',
-);
+  $book_types = array(
+    'regular' => 'regular',
+    'digital' => 'digital',
+  );
   $form['book_type'] = array(
     '#type' => 'select',
     '#title' => t('Book type'),
