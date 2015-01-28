@@ -105,7 +105,7 @@ function haskala_book_default_page_manager_pages() {
   $page->arguments = array(
     'letter' => array(
       'id' => 1,
-      'identifier' => 'String',
+      'identifier' => 'Letter',
       'name' => 'string',
       'settings' => array(
         'use_tail' => 0,
@@ -181,10 +181,11 @@ function haskala_book_default_page_manager_pages() {
       'override_title' => 0,
       'override_title_text' => '',
       'book_type' => 'regular',
-      'form_build_id' => 'form-Eu4MHp9tSWJUjdiFpcuFh4AQ5hOfTFj48FN-3-FCQEc',
+      'form_build_id' => 'form-ibnO58rdMdTG33kWi40RWRicPatPh5Yh5Nz9urDlJuw',
       'form_token' => 'Y6AVcBeweMlALi6EjgUHONl-NWAU4yLLnsdwNuDb4Zw',
       'form_id' => 'haskala_book_books_list_content_type_edit_form',
       'op' => 'Finish',
+      'context' => 'argument_string_1',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -210,13 +211,22 @@ function haskala_book_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Digital books';
   $page->admin_description = '';
-  $page->path = 'digital-books';
+  $page->path = 'digital-books/!letter';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
   );
   $page->menu = array();
-  $page->arguments = array();
+  $page->arguments = array(
+    'letter' => array(
+      'id' => 1,
+      'identifier' => 'Letter',
+      'name' => 'string',
+      'settings' => array(
+        'use_tail' => 0,
+      ),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
@@ -287,10 +297,11 @@ function haskala_book_default_page_manager_pages() {
       'override_title' => 0,
       'override_title_text' => '',
       'book_type' => 'digital',
-      'form_build_id' => 'form-09NoXdiVoD2aJrNiHSlP16_9diodkO70zr0u32XsSjI',
+      'form_build_id' => 'form-7TdmvFFAOCvH9nVgopvqDfhg1iWXjlgfdJOfpqU4dnU',
       'form_token' => 'Y6AVcBeweMlALi6EjgUHONl-NWAU4yLLnsdwNuDb4Zw',
       'form_id' => 'haskala_book_books_list_content_type_edit_form',
       'op' => 'Finish',
+      'context' => 'argument_string_1',
     );
     $pane->cache = array();
     $pane->style = array(

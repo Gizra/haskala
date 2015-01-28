@@ -5,6 +5,7 @@ $plugin = array(
   'description' => t('Display a books list starting from some letter.'),
   'category' => t('Haskala'),
   'hook theme' => 'haskala_book_books_list_content_type_theme',
+  'required context' => new ctools_context_optional(t('Letter'), 'string'),
   'defaults' => array(
     'book_type' => 'regular',
   ),
@@ -16,7 +17,7 @@ $plugin = array(
 function haskala_book_books_list_content_type_render($subtype, $conf, $args, $context) {
   $variables = array();
 
-  $argument = empty($args[0]) ? 'A' : strtoupper($args[0]);
+  $argument = empty($context->data) ? 'A' : strtoupper($context->data);
 
   $book_type = $conf['book_type'];
 
