@@ -6,7 +6,7 @@ $plugin = array(
   'category' => t('Haskala'),
   'hook theme' => 'haskala_book_books_list_content_type_theme',
   'defaults' => array(
-    'book_type' =>'regular',
+    'book_type' => 'regular',
   ),
 );
 
@@ -96,7 +96,6 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
  *  Array with node objects.
  */
 function haskala_book_get_nodes_by_letter($letter, $limit, $book_type) {
-
   $query = new EntityFieldQuery();
   $query
     ->entityCondition('entity_type', 'node')
@@ -104,7 +103,8 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $book_type) {
     ->propertyCondition('type', 'book')
     ->propertyCondition('title', $letter, 'STARTS_WITH');
 //    ->fieldCondition('field_book',  'target_id', 'NULL', 'IS NULL')
-    if ($book_type == 'digital') {
+
+  if ($book_type == 'digital') {
       $query->fieldCondition('field_link_to_digital_book',  'value', 'NULL', 'IS NOT NULL');
     }
 
@@ -126,14 +126,14 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $book_type) {
  */
 function haskala_book_books_list_content_type_edit_form($form, &$form_state) {
 $book_types = array(
-  'regular',
-  'digital',
+  'regular' => 'regular',
+  'digital' => 'digital',
 );
   $form['book_type'] = array(
     '#type' => 'select',
     '#title' => t('Book type'),
     '#options' => $book_types,
-    '#default_value' => $form_state['conf']['type'],
+    '#default_value' => $form_state['conf']['book_type'],
   );
 
   return $form;
