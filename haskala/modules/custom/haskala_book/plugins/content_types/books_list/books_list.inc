@@ -92,6 +92,8 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
  *  String with the certain letter.
  * @param $limit
  *  Count of nodes, that should be loaded.
+ * @param $book_type
+ *  Type of the book node. Could be regular or digital.
  *
  * @return array
  *  Array with node objects.
