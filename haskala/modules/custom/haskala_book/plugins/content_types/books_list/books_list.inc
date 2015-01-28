@@ -12,8 +12,6 @@ $plugin = array(
  * Render callback.
  */
 function haskala_book_books_list_content_type_render($subtype, $conf, $args, $context) {
-  $item = menu_get_item(current_path());
-
   $variables = array();
 
   $argument = empty($args[0]) ? 'A' : strtoupper($args[0]);
@@ -24,7 +22,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
   // Get hebrew alphabet;
   $letters_he = haskala_book_hebrew_alphabet_without_sofit();
 
-  $nodes = array();
+  $count = 0;
   $blocks = array();
   $limit = 50;
 
@@ -32,7 +30,8 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
   // items - take nodes starting from next letter by alphabet and so on.
   do {
     $result = haskala_book_get_nodes_by_letter($argument, $limit);
-    $nodes = array_merge($nodes, $result);
+    $count = $count + count($result);
+    // Do not add
     if (!empty($result)) {
       $blocks[$argument] = $result;
     }
@@ -50,7 +49,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
 
     $limit -= count($result);
 
-  } while (count($nodes) < 50);
+  } while ($count < 50);
 
   $variables['books_blocks'] = '';
   foreach ($blocks as $letter => $block) {
@@ -59,7 +58,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
     $block_vars['books_list'] = '';
     foreach ($block as $node) {
       // @todo: Create new node view mode for this page.
-       $view = node_view($node, 'teaser');
+       $view = node_view($node, 'link');
        $block_vars['books_list'] .= drupal_render($view);
 //       $block_vars['books_list'] .= '<div class="book-title">' . $node->title . '</div>';
     }

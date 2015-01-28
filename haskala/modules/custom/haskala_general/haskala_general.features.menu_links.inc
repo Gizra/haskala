@@ -153,7 +153,7 @@ function haskala_general_menu_default_menu_links() {
   // Exported menu link: menu-top-menu_books:<front>
   $menu_links['menu-top-menu_books:<front>'] = array(
     'menu_name' => 'menu-top-menu',
-    'link_path' => '<front>',
+    'link_path' => 'books',
     'router_path' => '',
     'link_title' => 'BOOKS',
     'options' => array(
