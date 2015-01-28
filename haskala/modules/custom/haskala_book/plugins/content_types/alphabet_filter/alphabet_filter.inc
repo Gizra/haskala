@@ -46,7 +46,7 @@ function haskala_book_alphabet_filter_content_type_render($subtype, $conf, $args
 /**
  * The form to add or edit a node as content.
  */
-function haskala_book_alphabet_filter_content_type_render_edit_form($form, &$form_state) {
+function haskala_book_alphabet_filter_content_type_edit_form($form, &$form_state) {
   return $form;
 }
 
