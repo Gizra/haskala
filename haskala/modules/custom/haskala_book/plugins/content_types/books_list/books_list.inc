@@ -31,7 +31,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
   do {
     $result = haskala_book_get_nodes_by_letter($argument, $limit);
     $count = $count + count($result);
-    // Do not add
+    // Do not add empty result.
     if (!empty($result)) {
       $blocks[$argument] = $result;
     }
@@ -40,6 +40,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
       // Letter is english
       $key = array_search($argument, $letters_en);
       if ($key == count($letters_en) - 1) {
+        // This is the last letter in the alphabet.
         break;
       }
       $argument = $letters_en[$key + 1];
@@ -48,6 +49,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
       // Letter is hebrew.
       $key = array_search($argument, $letters_he);
       if ($key == count($letters_he) - 1) {
+        // This is the last letter in the alphabet.
         break;
       }
       $argument = $letters_he[$key + 1];
@@ -57,6 +59,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
 
   } while ($count < 50);
 
+  // Create formatted html of block of the nodes to display.
   $variables['books_blocks'] = '';
   foreach ($blocks as $letter => $block) {
     $block_vars = array();
@@ -67,7 +70,6 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
        $view = node_view($node, 'link');
        $block_vars['books_list'] .= drupal_render($view);
     }
-
     $variables['books_blocks'] .= theme('letter_books_list', $block_vars);
   }
 
@@ -79,10 +81,10 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
 }
 
 /**
- * Get limited count of nodes with titles starting from the sertain letter.
+ * Get limited count of nodes with titles starting from the certain letter.
  *
  * @param $letter
- *  String with the sertain letter.
+ *  String with the certain letter.
  * @param $limit
  *  Count of nodes, that should be loaded.
  *
@@ -99,7 +101,7 @@ function haskala_book_get_nodes_by_letter($letter, $limit) {
 //    ->fieldCondition('field_book',  'target_id', 'NULL', 'IS NULL')
   if ($limit != 50) {
     // Could be that for some letter there are more than 50 items. In this case
-    // we should load all of them.
+    // if this is the first requested letter we should load all of them.
     $query->range(0, $limit);
   }
 
