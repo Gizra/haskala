@@ -95,3 +95,34 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
   return $tab_fields;
 }
 
+/**
+ * Create array with hebrew letters, not including sofits.
+ *
+ * @return array
+ */
+function haskala_book_hebrew_alphabet_without_sofit() {
+  return array(
+    'א',
+    'ב',
+    'ג',
+    'ד',
+    'ה',
+    'ו',
+    'ז',
+    'ח',
+    'ט',
+    'י',
+    'כ',
+    'ל',
+    'מ',
+    'נ',
+    'ס',
+    'ע',
+    'פ',
+    'צ',
+    'ק',
+    'ר',
+    'ש',
+    'ת',
+  );
+}

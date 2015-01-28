@@ -24,20 +24,6 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
   // Get hebrew alphabet;
   $letters_he = haskala_book_hebrew_alphabet_without_sofit();
 
-  $links_en = array();
-  $links_he = array();
-  // Create English filter list.
-  foreach ($letters_en as $letter) {
-    $links_en[] = l($letter, $item['path'] . '/' . $letter);
-  }
-  // Create Hebrew filter list.
-  foreach ($letters_he as $letter) {
-    $links_he[] = l($letter, $item['path'] . '/' . $letter);
-  }
-
-  $variables['alphabet_en'] = theme('item_list', array('items' => $links_en));
-  $variables['alphabet_he'] = theme('item_list', array('items' => $links_he));
-
   $nodes = array();
   $blocks = array();
   $limit = 50;
@@ -47,7 +33,9 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
   do {
     $result = haskala_book_get_nodes_by_letter($argument, $limit);
     $nodes = array_merge($nodes, $result);
-    $blocks[$argument] = $result;
+    if (!empty($result)) {
+      $blocks[$argument] = $result;
+    }
 
     if (in_array($argument, $letters_en)) {
       // Letter is english
@@ -115,38 +103,6 @@ function haskala_book_get_nodes_by_letter($letter, $limit) {
 }
 
 /**
- * Create array with hebrew letters, not including sofits.
- *
- * @return array
- */
-function haskala_book_hebrew_alphabet_without_sofit() {
-  return array(
-    'א',
-    'ב',
-    'ג',
-    'ד',
-    'ה',
-    'ו',
-    'ז',
-    'ח',
-    'ט',
-    'י',
-    'כ',
-    'ל',
-    'מ',
-    'נ',
-    'ס',
-    'ע',
-    'פ',
-    'צ',
-    'ק',
-    'ר',
-    'ש',
-    'ת',
-  );
-}
-
-/**
  * The form to add or edit a node as content.
  */
 function haskala_book_books_list_content_type_render_edit_form($form, &$form_state) {
@@ -161,7 +117,6 @@ function haskala_book_books_list_content_type_theme(&$theme, $plugin) {
     'template' => 'books_list',
     'path' => $plugin['path'],
     'variables' => array(
-      'alphabet' => NULL,
       'list' => NULL,
       'books_blocks' => NULL,
     ),
