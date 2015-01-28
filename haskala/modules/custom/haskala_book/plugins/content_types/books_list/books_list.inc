@@ -39,11 +39,17 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
     if (in_array($argument, $letters_en)) {
       // Letter is english
       $key = array_search($argument, $letters_en);
+      if ($key == count($letters_en) - 1) {
+        break;
+      }
       $argument = $letters_en[$key + 1];
     }
     else if (in_array($argument, $letters_he)) {
       // Letter is hebrew.
       $key = array_search($argument, $letters_he);
+      if ($key == count($letters_he) - 1) {
+        break;
+      }
       $argument = $letters_he[$key + 1];
     }
 
@@ -90,9 +96,13 @@ function haskala_book_get_nodes_by_letter($letter, $limit) {
     ->entityCondition('entity_type', 'node')
     ->propertyCondition('status', NODE_PUBLISHED)
     ->propertyCondition('type', 'book')
-    ->propertyCondition('title', $letter, 'STARTS_WITH')
+    ->propertyCondition('title', $letter, 'STARTS_WITH');
 //    ->fieldCondition('field_book',  'target_id', 'NULL', 'IS NULL')
-    ->range(0, $limit);
+  if ($limit != 50) {
+    // Could be that for some letter there are more than 50 items. In this case
+    // we should load all of them.
+    $query->range(0, $limit);
+  }
 
   $result = $query->execute();
 
