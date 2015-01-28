@@ -16,6 +16,55 @@ function haskala_book_ctools_plugin_directory($module, $plugin) {
 }
 
 /**
+ *  Translation tab - Other names for the original author.
+ *
+ *  @param $person_nid
+ *   The author person node ID.
+ *
+ *  @return  The created field for orginal author other names.
+ */
+function haskala_book_author_names($person_nid) {
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'person')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->propertyCondition('nid', $person_nid);
+  $result = $query->execute();
+  if (empty($result['node'])) {
+    return;
+  }
+  $author_node = node_load(reset($result['node'])->nid);
+  $author_wrapper = entity_metadata_wrapper('node', $author_node);
+
+  $author_names = '';
+
+  // Try build field_view_field().
+  if ($author_wrapper->field_hebrew_name) {
+    $author_names_as_field = field_view_field('node', $author_node, 'field_hebrew_name');
+    $author_names = $author_wrapper->field_hebrew_name->value();
+  }
+  if ($author_wrapper->field_german_name) {
+    $author_names_as_field = field_view_field('node', $author_node, 'field_german_name');
+    $author_names .= ', '.$author_wrapper->field_german_name->value();
+  }
+  if ($author_wrapper->field_pseudonym) {
+    $author_names_as_field = field_view_field('node', $author_node, 'field_pseudonym');
+    $author_names .= ', '.$author_wrapper->field_pseudonym->value();
+  }
+  // If Success build field, change value to all fields values together.
+  if (isset($author_names_as_field)) {
+    // Check if $author_names string start with ',' and delete ', '.
+    if (substr($author_names, 0, 1) === ',') {
+      $author_names = substr($author_names, 2);
+    }
+    $author_names_as_field[0]['#markup'] = $author_names;
+    $author_names_as_field['#title'] = 'Other names for the author';
+  }
+  return $author_names_as_field;
+}
+
+
+/**
  *  Prefaces tab - role in book production of preface writer.
  *  Book producers tab - all fields from production bundle.
  *
@@ -81,6 +130,11 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
       $field = render($node_view[$field_name]);
       $tab_fields[] = $field;
 
+      // Other names for the author
+      if ($field_name == 'field_original_author') {
+        $author_names_as_field = haskala_book_author_names($wrapper->$field_name->value()->nid);
+      }
+
       // Role of preface writer.
       if ($field_name == 'field_writer_of_preface') {
         $production_node = haskala_book_get_production($book_nid, $wrapper->$field_name->value()->nid);
@@ -89,6 +143,17 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
           $tab_fields[] = $field;
         }
       }
+    }
+  }
+  // Add $author_names to translation tab
+  if ($tab->label == 'Translation'){
+    // Move the translation general notes if exist to the end.
+    $notes_key = key(preg_grep('/field-translation-notes/', $tab_fields));
+    $tab_fields[] = $author_names_as_field;
+    if ($notes_key) {
+      $notes_element = $tab_fields[$notes_key];
+      unset($tab_fields[$notes_key]);
+      $tab_fields[] = $notes_element;
     }
   }
 
