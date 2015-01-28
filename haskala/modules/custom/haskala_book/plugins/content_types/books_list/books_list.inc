@@ -61,12 +61,11 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
   foreach ($blocks as $letter => $block) {
     $block_vars = array();
     $block_vars['letter'] = $letter;
+    $block_vars['class'] = in_array($letter, $letters_he) ? 'he' : 'en';
     $block_vars['books_list'] = '';
     foreach ($block as $node) {
-      // @todo: Create new node view mode for this page.
        $view = node_view($node, 'link');
        $block_vars['books_list'] .= drupal_render($view);
-//       $block_vars['books_list'] .= '<div class="book-title">' . $node->title . '</div>';
     }
 
     $variables['books_blocks'] .= theme('letter_books_list', $block_vars);
@@ -135,6 +134,7 @@ function haskala_book_books_list_content_type_theme(&$theme, $plugin) {
     'path' => $plugin['path'],
     'variables' => array(
       'letter' => NULL,
+      'class' => NULL,
       'books_list' => NULL,
     ),
   );
