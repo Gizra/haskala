@@ -146,7 +146,7 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
     }
   }
   // Add $author_names to translation tab
-  if ($tab->label == 'Translation'){
+  if ($tab->label == 'Translation' && isset($author_names_as_field)){
     // Move the translation general notes if exist to the end.
     $notes_key = key(preg_grep('/field-translation-notes/', $tab_fields));
     $tab_fields[] = $author_names_as_field;
