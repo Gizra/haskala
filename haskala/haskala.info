@@ -3,7 +3,6 @@ description = Haskala platform installation profile
 version = 1.x-dev
 core = 7.x
 
-
 ; Core ------------------------------------------------------------------------
 dependencies[] = block
 dependencies[] = comment
@@ -18,7 +17,6 @@ dependencies[] = overlay
 dependencies[] = path
 dependencies[] = taxonomy
 dependencies[] = dblog
-dependencies[] = search
 dependencies[] = shortcut
 dependencies[] = file
 dependencies[] = rdf
@@ -27,11 +25,8 @@ dependencies[] = rdf
 dependencies[] = admin_menu_toolbar
 dependencies[] = admin_views
 dependencies[] = ctools
-dependencies[] = date
-dependencies[] = date_popup
 dependencies[] = diff
 dependencies[] = entity
-dependencies[] = entity_token
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = field_group
@@ -42,18 +37,20 @@ dependencies[] = migrate_extras
 dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = pathauto
+dependencies[] = search_api
+dependencies[] = search_api_page
+dependencies[] = search_api_solr
 dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = views
 dependencies[] = views_bulk_operations
 
 ; haskala modules ------------------------------------------------------------
-; Add here haskala modules that should be anebled when installing the
-; haskala profile.
-dependencies[] = haskala_terms
+dependencies[] = haskala_book
+dependencies[] = haskala_general
 dependencies[] = haskala_mention
 dependencies[] = haskala_migrate
 dependencies[] = haskala_people
-dependencies[] = haskala_book
-dependencies[] = haskala_general
+dependencies[] = haskala_search
+dependencies[] = haskala_terms
 dependencies[] = page_element
