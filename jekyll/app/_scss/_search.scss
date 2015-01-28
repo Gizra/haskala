@@ -1,0 +1,69 @@
+#search-api-page-search-form, #search-api-page-search-form-haskala {
+  position: relative;
+  max-width: 784px;
+  margin: 0 auto;
+  padding-right: 28px;
+
+  .form-type-textfield label {
+    display: none;
+  }
+
+  input {
+    height: 48px;
+    display: inline-block;
+    vertical-align: top;
+    color: $darkgray;
+    font-family: Arial;
+    font-weight: bold;
+    letter-spacing: -0.98px;
+  }
+
+  ::-webkit-input-placeholder {
+    color: $darkgray;
+    text-transform: uppercase;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    color: $darkgray;
+    text-transform: uppercase;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: $darkgray;
+    text-transform: uppercase;
+  }
+
+  :-ms-input-placeholder {
+    color: $darkgray;
+    text-transform: uppercase;
+  }
+
+  input.form-text {
+    border: 1px solid #a5a29b;
+    border-radius: 24px;
+    height: 46px;
+    width: 100%;
+    padding: 0 10px 0 13px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 13px;
+    letter-spacing: -0.6px;
+  }
+
+  .form-submit {
+    border: none;
+    right: 1px;
+    top: 0;
+    position: absolute;
+    border-radius: 0 24px 24px 0;
+    background: #615f59 url('../images/search.png') no-repeat 14px 11px;
+    width: 60px;
+    height: 48px;
+    cursor: pointer;
+    color: transparent;
+    padding: 0;
+
+    &:hover {
+      background-color: $orange;
+    }
+  }
+}

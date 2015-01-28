@@ -1,0 +1,15 @@
+<?php
+/**
+ * @file
+ * Code for the Haskala Search feature.
+ */
+
+include_once 'haskala_search.features.inc';
+
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function haskala_search_form_search_api_page_search_form_haskala_alter(&$form, &$form_state) {
+  $form['keys_1']['#attributes']['placeholder'] = t('Search');
+}
