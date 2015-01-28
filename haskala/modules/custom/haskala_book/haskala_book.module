@@ -44,11 +44,15 @@ function haskala_book_author_names($person_nid) {
     $author_names = $author_wrapper->field_hebrew_name->value();
   }
   if ($author_wrapper->field_german_name) {
-    $author_names_as_field = field_view_field('node', $author_node, 'field_german_name');
+    if (!isset($author_names_as_field)) {
+      $author_names_as_field = field_view_field('node', $author_node, 'field_german_name');
+    }
     $author_names .= ', '.$author_wrapper->field_german_name->value();
   }
   if ($author_wrapper->field_pseudonym) {
-    $author_names_as_field = field_view_field('node', $author_node, 'field_pseudonym');
+    if (!isset($author_names_as_field)) {
+      $author_names_as_field = field_view_field('node', $author_node, 'field_pseudonym');
+    }
     $author_names .= ', '.$author_wrapper->field_pseudonym->value();
   }
   // If Success build field, change value to all fields values together.
