@@ -15,13 +15,22 @@ function haskala_people_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'People';
   $page->admin_description = '';
-  $page->path = 'people';
+  $page->path = 'people/!letter';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
   );
   $page->menu = array();
-  $page->arguments = array();
+  $page->arguments = array(
+    'letter' => array(
+      'id' => 1,
+      'identifier' => 'Letter',
+      'name' => 'string',
+      'settings' => array(
+        'use_tail' => 0,
+      ),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
@@ -59,6 +68,59 @@ function haskala_people_default_page_manager_pages() {
   $display->uuid = '1688a8f4-b84b-41e6-93a8-ac470465e249';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-d677698b-3981-4f23-ae67-374b28aa4baf';
+    $pane->panel = 'middle';
+    $pane->type = 'alphabet_filter';
+    $pane->subtype = 'alphabet_filter';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'd677698b-3981-4f23-ae67-374b28aa4baf';
+    $display->content['new-d677698b-3981-4f23-ae67-374b28aa4baf'] = $pane;
+    $display->panels['middle'][0] = 'new-d677698b-3981-4f23-ae67-374b28aa4baf';
+    $pane = new stdClass();
+    $pane->pid = 'new-25f64ae0-8e7d-4f33-8a96-25c8797756cf';
+    $pane->panel = 'middle';
+    $pane->type = 'books_list';
+    $pane->subtype = 'books_list';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'book_type' => 'regular',
+      'node_type' => 'person',
+      'return' => 'Finish',
+      'cancel' => 'Cancel',
+      'context' => 'argument_string_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'form_build_id' => 'form-FPHUFnfvj_lwQJe635Gpcx-xJ96C0upriDAH9be0THM',
+      'form_token' => 'b2HINQ6ffiAJtt50PjW9oysiHHIw9-HyQuYbJvlMoFE',
+      'form_id' => 'haskala_book_books_list_content_type_edit_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '25f64ae0-8e7d-4f33-8a96-25c8797756cf';
+    $display->content['new-25f64ae0-8e7d-4f33-8a96-25c8797756cf'] = $pane;
+    $display->panels['middle'][1] = 'new-25f64ae0-8e7d-4f33-8a96-25c8797756cf';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

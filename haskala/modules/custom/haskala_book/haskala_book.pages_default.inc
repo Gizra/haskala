@@ -181,11 +181,12 @@ function haskala_book_default_page_manager_pages() {
       'override_title' => 0,
       'override_title_text' => '',
       'book_type' => 'regular',
-      'form_build_id' => 'form-ibnO58rdMdTG33kWi40RWRicPatPh5Yh5Nz9urDlJuw',
-      'form_token' => 'Y6AVcBeweMlALi6EjgUHONl-NWAU4yLLnsdwNuDb4Zw',
+      'form_build_id' => 'form-fZqpLj-S6ZPpzDSMVF_vCzAZd-nfFAtYZwtYpskCuSI',
+      'form_token' => 'b2HINQ6ffiAJtt50PjW9oysiHHIw9-HyQuYbJvlMoFE',
       'form_id' => 'haskala_book_books_list_content_type_edit_form',
       'op' => 'Finish',
       'context' => 'argument_string_1',
+      'node_type' => 'book',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -297,11 +298,12 @@ function haskala_book_default_page_manager_pages() {
       'override_title' => 0,
       'override_title_text' => '',
       'book_type' => 'digital',
-      'form_build_id' => 'form-7TdmvFFAOCvH9nVgopvqDfhg1iWXjlgfdJOfpqU4dnU',
-      'form_token' => 'Y6AVcBeweMlALi6EjgUHONl-NWAU4yLLnsdwNuDb4Zw',
+      'form_build_id' => 'form-wI-6ydcOBFLH8mKwwNKzGRK9T01dbd3_mXW5D8giujQ',
+      'form_token' => 'b2HINQ6ffiAJtt50PjW9oysiHHIw9-HyQuYbJvlMoFE',
       'form_id' => 'haskala_book_books_list_content_type_edit_form',
       'op' => 'Finish',
       'context' => 'argument_string_1',
+      'node_type' => 'book',
     );
     $pane->cache = array();
     $pane->style = array(

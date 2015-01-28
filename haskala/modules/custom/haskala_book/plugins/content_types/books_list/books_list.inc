@@ -8,6 +8,7 @@ $plugin = array(
   'required context' => new ctools_context_optional(t('Letter'), 'string'),
   'defaults' => array(
     'book_type' => 'regular',
+    'node_type' => 'book',
   ),
 );
 
@@ -20,6 +21,8 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
   $argument = empty($context->data) ? 'A' : strtoupper($context->data);
 
   $book_type = $conf['book_type'];
+  $node_type = $conf['node_type'];
+
 
   // Get english alphabet.
   $letters_en = range('A', 'Z');
@@ -128,6 +131,19 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $book_type) {
  * The form to add or edit a node as content.
  */
 function haskala_book_books_list_content_type_edit_form($form, &$form_state) {
+  $node_types = array_keys(node_type_get_types());
+  $bundles = array();
+  foreach ($node_types as $type) {
+    $bundles[$type] = $type;
+  }
+
+  $form['node_type'] = array(
+    '#type' => 'select',
+    '#title' => t('Node type'),
+    '#options' => $bundles,
+    '#default_value' => $form_state['conf']['node_type'],
+  );
+
   $book_types = array(
     'regular' => 'regular',
     'digital' => 'digital',
@@ -138,6 +154,8 @@ function haskala_book_books_list_content_type_edit_form($form, &$form_state) {
     '#options' => $book_types,
     '#default_value' => $form_state['conf']['book_type'],
   );
+
+
 
   return $form;
 }
