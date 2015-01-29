@@ -1,3 +1,3 @@
-<section class="books-list">
+<section class="terms-list">
   <?php print $terms_blocks; ?>
 </section>

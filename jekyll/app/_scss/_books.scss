@@ -90,7 +90,8 @@
       }
     }
 
-    .books-list {
+    .books-list,
+    .terms-list {
       max-width: 723px;
       margin: 0 auto;
 
@@ -125,7 +126,8 @@
         font: 60px Alef;
       }
 
-      .books-by-letter {
+      .books-by-letter,
+      .terms-by-letter {
         text-align: left;
         float: left;
         margin-left: 34px;

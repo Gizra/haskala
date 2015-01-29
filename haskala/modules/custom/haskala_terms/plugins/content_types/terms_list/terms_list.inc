@@ -35,8 +35,8 @@ function haskala_terms_terms_list_content_type_render($subtype, $conf, $args, $c
   $blocks = array();
   $limit = 50;
 
-  // Get 50 nodes, starting from current letter. If there are less then 50
-  // items - take nodes starting from next letter by alphabet and so on.
+  // Get 50 terms of certain vocabulary, starting from current letter. If there
+  // are less then 50 items - take terms starting from next letter by alphabet.
   do {
     $result = haskala_terms_get_terms_by_letter($argument, $limit, $vid);
     $count = $count + count($result);
@@ -68,7 +68,7 @@ function haskala_terms_terms_list_content_type_render($subtype, $conf, $args, $c
 
   } while ($count < 50);
 
-  // Create formatted html of block of the nodes to display.
+  // Create formatted html of block of the terms to display.
   $variables['terms_blocks'] = '';
   foreach ($blocks as $letter => $block) {
     $block_vars = array();
@@ -90,12 +90,12 @@ function haskala_terms_terms_list_content_type_render($subtype, $conf, $args, $c
 }
 
 /**
- * Get limited count of nodes with titles starting from the certain letter.
+ * Get limited count of terms with titles starting from the certain letter.
  *
  * @param $letter
  *  String with the certain letter.
  * @param $limit
- *  Count of nodes, that should be loaded.
+ *  Count of terms, that should be loaded.
  * @param $vid
  *  Vocabulary id.
  *
