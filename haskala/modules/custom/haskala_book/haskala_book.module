@@ -36,32 +36,29 @@ function haskala_book_author_names($person_nid) {
   $author_node = node_load(reset($result['node'])->nid);
   $author_wrapper = entity_metadata_wrapper('node', $author_node);
 
-  $author_names = '';
+  $author_names = array();
 
   // Try build field_view_field().
   if ($author_wrapper->field_hebrew_name) {
     $author_names_as_field = field_view_field('node', $author_node, 'field_hebrew_name');
-    $author_names = $author_wrapper->field_hebrew_name->value();
+    $author_names[] = $author_wrapper->field_hebrew_name->value();
   }
   if ($author_wrapper->field_german_name) {
     if (!isset($author_names_as_field)) {
       $author_names_as_field = field_view_field('node', $author_node, 'field_german_name');
     }
-    $author_names .= ', '.$author_wrapper->field_german_name->value();
+    $author_names[] = $author_wrapper->field_german_name->value();
   }
   if ($author_wrapper->field_pseudonym) {
     if (!isset($author_names_as_field)) {
       $author_names_as_field = field_view_field('node', $author_node, 'field_pseudonym');
     }
-    $author_names .= ', '.$author_wrapper->field_pseudonym->value();
+    $author_names[] = $author_wrapper->field_pseudonym->value();
   }
   // If Success build field, change value to all fields values together.
   if (isset($author_names_as_field)) {
-    // Check if $author_names string start with ',' and delete ', '.
-    if (substr($author_names, 0, 1) === ',') {
-      $author_names = substr($author_names, 2);
-    }
-    $author_names_as_field[0]['#markup'] = $author_names;
+    $author_names_str = implode(',',$author_names);
+    $author_names_as_field[0]['#markup'] = $author_names_str;
     $author_names_as_field['#title'] = 'Other names for the author';
   }
   return $author_names_as_field;
