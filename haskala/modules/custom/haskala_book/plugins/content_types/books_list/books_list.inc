@@ -87,7 +87,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
         $view = node_view($node, 'teaser');
       }
 
-       $block_vars['books_list'] .= drupal_render($view);
+      $block_vars['books_list'] .= drupal_render($view);
     }
     $variables['books_blocks'] .= theme('letter_books_list', $block_vars);
   }
