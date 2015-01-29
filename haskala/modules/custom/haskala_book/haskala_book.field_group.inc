@@ -13,56 +13,21 @@ function haskala_book_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_book_reception|node|book|default';
-  $field_group->group_name = 'group_book_reception';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'default';
-  $field_group->parent_name = 'group_target_audience';
-  $field_group->data = array(
-    'label' => 'Book\'s reception in its time',
-    'weight' => '112',
-    'children' => array(
-      0 => 'field_contemporary_references',
-      1 => 'field_contemporary_disputes',
-      2 => 'field_censorship',
-      3 => 'field_bans',
-    ),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'formatter' => 'collapsible',
-      'instance_settings' => array(
-        'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => 'group-book-reception field-group-div',
-        'id' => '',
-      ),
-    ),
-  );
-  $export['group_book_reception|node|book|default'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_book_reception|node|book|form';
   $field_group->group_name = 'group_book_reception';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'book';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_bottom_details';
+  $field_group->parent_name = 'group_target_audience';
   $field_group->data = array(
     'label' => 'Book\'s reception in its time',
-    'weight' => '113',
+    'weight' => '120',
     'children' => array(
-      0 => 'field_contemporary_references',
-      1 => 'field_contemporary_disputes',
-      2 => 'field_censorship',
-      3 => 'field_bans',
-      4 => 'field_target_general_notes',
-      5 => 'group_preservation',
+      0 => 'field_bans',
+      1 => 'field_censorship',
+      2 => 'field_contemporary_disputes',
+      3 => 'field_contemporary_references',
+      4 => 'group_preservation',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -143,17 +108,17 @@ function haskala_book_field_group_info() {
     'label' => 'Bottom details',
     'weight' => '3',
     'children' => array(
-      0 => 'group_catalog_numbers',
-      1 => 'group_prefaces',
-      2 => 'group_publisher_printing_press',
-      3 => 'group_references_bibliography',
-      4 => 'group_structure',
-      5 => 'group_target_audience',
-      6 => 'group_textual_models',
-      7 => 'group_topics',
-      8 => 'group_translation',
-      9 => 'group_volumes',
-      10 => 'group_book_reception',
+      0 => 'field_target_general_notes',
+      1 => 'group_catalog_numbers',
+      2 => 'group_prefaces',
+      3 => 'group_publisher_printing_press',
+      4 => 'group_references_bibliography',
+      5 => 'group_structure',
+      6 => 'group_target_audience',
+      7 => 'group_textual_models',
+      8 => 'group_topics',
+      9 => 'group_translation',
+      10 => 'group_volumes',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -378,41 +343,6 @@ function haskala_book_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_preservation|node|book|default';
-  $field_group->group_name = 'group_preservation';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'default';
-  $field_group->parent_name = 'group_target_audience';
-  $field_group->data = array(
-    'label' => 'Preservation in the public consciousness',
-    'weight' => '113',
-    'children' => array(
-      0 => 'field_later_references',
-      1 => 'field_preservation_references',
-      2 => 'field_original_sources_mention',
-      3 => 'field_mentions_in_reviews',
-      4 => 'field_partial_publication_other',
-    ),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'formatter' => 'collapsible',
-      'instance_settings' => array(
-        'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => 'group-preservation field-group-div',
-        'id' => '',
-      ),
-    ),
-  );
-  $export['group_preservation|node|book|default'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_preservation|node|book|form';
   $field_group->group_name = 'group_preservation';
   $field_group->entity_type = 'node';
@@ -421,13 +351,13 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_book_reception';
   $field_group->data = array(
     'label' => 'Preservation in the public consciousness',
-    'weight' => '16',
+    'weight' => '122',
     'children' => array(
       0 => 'field_later_references',
-      1 => 'field_preservation_references',
+      1 => 'field_mentions_in_reviews',
       2 => 'field_original_sources_mention',
-      3 => 'field_mentions_in_reviews',
-      4 => 'field_partial_publication_other',
+      3 => 'field_partial_publication_other',
+      4 => 'field_preservation_references',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -480,73 +410,6 @@ function haskala_book_field_group_info() {
     ),
   );
   $export['group_producers|node|production|default'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_production|node|book|default';
-  $field_group->group_name = 'group_production';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'default';
-  $field_group->parent_name = 'group_target_audience';
-  $field_group->data = array(
-    'label' => 'Production',
-    'weight' => '111',
-    'children' => array(
-      0 => 'field_production_evidence',
-      1 => 'field_contacts_other_people',
-      2 => 'field_contacts_official_agents',
-    ),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'formatter' => 'collapsible',
-      'instance_settings' => array(
-        'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => 'group-production field-group-div',
-        'id' => '',
-      ),
-    ),
-  );
-  $export['group_production|node|book|default'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_production|node|book|form';
-  $field_group->group_name = 'group_production';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_target_audience';
-  $field_group->data = array(
-    'label' => 'Production',
-    'weight' => '119',
-    'children' => array(
-      0 => 'field_production_evidence',
-      1 => 'field_contacts_other_people',
-      2 => 'field_contacts_official_agents',
-    ),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'formatter' => 'open',
-      'instance_settings' => array(
-        'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => 'group-production field-group-div',
-        'required_fields' => 1,
-        'id' => '',
-      ),
-    ),
-  );
-  $export['group_production|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -743,12 +606,20 @@ function haskala_book_field_group_info() {
     'label' => 'Target audience',
     'weight' => '71',
     'children' => array(
-      0 => 'field_target_audience_notes',
-      1 => 'field_target_audience',
-      2 => 'field_target_general_notes',
-      3 => 'group_production',
-      4 => 'group_preservation',
-      5 => 'group_book_reception',
+      0 => 'field_bans',
+      1 => 'field_censorship',
+      2 => 'field_contacts_official_agents',
+      3 => 'field_contacts_other_people',
+      4 => 'field_contemporary_disputes',
+      5 => 'field_contemporary_references',
+      6 => 'field_later_references',
+      7 => 'field_mentions_in_reviews',
+      8 => 'field_original_sources_mention',
+      9 => 'field_partial_publication_other',
+      10 => 'field_production_evidence',
+      11 => 'field_target_audience',
+      12 => 'field_target_audience_notes',
+      13 => 'field_target_general_notes',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -775,9 +646,10 @@ function haskala_book_field_group_info() {
     'label' => 'Target audience',
     'weight' => '112',
     'children' => array(
-      0 => 'field_target_audience_notes',
-      1 => 'field_target_audience',
-      2 => 'group_production',
+      0 => 'field_target_audience',
+      1 => 'field_target_audience_notes',
+      2 => 'group_book_reception',
+      3 => 'group_target_production',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -790,6 +662,40 @@ function haskala_book_field_group_info() {
     ),
   );
   $export['group_target_audience|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_target_production|node|book|form';
+  $field_group->group_name = 'group_target_production';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_target_audience';
+  $field_group->data = array(
+    'label' => 'Production',
+    'weight' => '119',
+    'children' => array(
+      0 => 'field_contacts_official_agents',
+      1 => 'field_contacts_other_people',
+      2 => 'field_production_evidence',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-target-production field-group-fieldset',
+        'required_fields' => 1,
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_target_production|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */

@@ -128,7 +128,7 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
 
   $tab_fields = array();
   foreach($tab_fields_sorted as $field_name) {
-
+    
     // Check if the field isn't empty.
     if ($wrapper->$field_name->value()) {
       $field = render($node_view[$field_name]);
