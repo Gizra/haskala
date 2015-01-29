@@ -21,12 +21,9 @@ function haskala_terms_terms_list_content_type_render($subtype, $conf, $args, $c
 
   $vocab_name = $conf['vocabulary'];
 
-  dpm($vocab_name);
   $vocabulary = taxonomy_vocabulary_machine_name_load($vocab_name);
 
   $vid = $vocabulary->vid;
-  dpm($vid);
-
 
   // Get english alphabet.
   $letters_en = range('A', 'Z');
@@ -72,17 +69,17 @@ function haskala_terms_terms_list_content_type_render($subtype, $conf, $args, $c
   } while ($count < 50);
 
   // Create formatted html of block of the nodes to display.
-  $variables['books_blocks'] = '';
+  $variables['terms_blocks'] = '';
   foreach ($blocks as $letter => $block) {
     $block_vars = array();
     $block_vars['letter'] = $letter;
     $block_vars['class'] = in_array($letter, $letters_he) ? 'he' : 'en';
-    $block_vars['books_list'] = '';
+    $block_vars['terms_list'] = '';
     foreach ($block as $term) {
-      $view = taxonomy_term_view($term);
-      $block_vars['books_list'] .= drupal_render($view);
+      $view = taxonomy_term_view($term, 'teaser');
+      $block_vars['terms_list'] .= drupal_render($view);
     }
-    $variables['books_blocks'] .= theme('letter_terms_list', $block_vars);
+    $variables['terms_blocks'] .= theme('letter_terms_list', $block_vars);
   }
 
   $block = new stdClass();
