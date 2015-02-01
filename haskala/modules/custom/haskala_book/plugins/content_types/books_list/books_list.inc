@@ -22,42 +22,33 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
   // Get hebrew alphabet;
   $letters_he = haskala_book_hebrew_alphabet_without_sofit();
 
-  $count = 0;
+  if (!in_array($argument, $letters_en) && !in_array($argument, $letters_he)) {
+    return;
+  }
+
+  $letters = in_array($argument, $letters_en) ? $letters_en : $letters_he;
+
   $blocks = array();
   $limit = 50;
 
   // Get 50 nodes, starting from current letter. If there are less then 50
   // items - take nodes starting from next letter by alphabet and so on.
-  do {
+  while ($limit > 0) {
     $result = haskala_book_get_nodes_by_letter($argument, $limit);
-    $count = $count + count($result);
     // Do not add empty result.
     if (!empty($result)) {
       $blocks[$argument] = $result;
     }
 
-    if (in_array($argument, $letters_en)) {
-      // Letter is english
-      $key = array_search($argument, $letters_en);
-      if ($key == count($letters_en) - 1) {
-        // This is the last letter in the alphabet.
-        break;
-      }
-      $argument = $letters_en[$key + 1];
+    $key = array_search($argument, $letters);
+    if ($key == count($letters) - 1) {
+      // This is the last letter in the alphabet.
+      break;
     }
-    else if (in_array($argument, $letters_he)) {
-      // Letter is hebrew.
-      $key = array_search($argument, $letters_he);
-      if ($key == count($letters_he) - 1) {
-        // This is the last letter in the alphabet.
-        break;
-      }
-      $argument = $letters_he[$key + 1];
-    }
+    $argument = $letters[$key + 1];
 
     $limit -= count($result);
-
-  } while ($count < 50);
+  }
 
   // Create formatted html of block of the nodes to display.
   $variables['books_blocks'] = '';
@@ -98,7 +89,6 @@ function haskala_book_get_nodes_by_letter($letter, $limit) {
     ->propertyCondition('status', NODE_PUBLISHED)
     ->propertyCondition('type', 'book')
     ->propertyCondition('title', $letter, 'STARTS_WITH');
-//    ->fieldCondition('field_book',  'target_id', 'NULL', 'IS NULL')
   if ($limit != 50) {
     // Could be that for some letter there are more than 50 items. In this case
     // if this is the first requested letter we should load all of them.
