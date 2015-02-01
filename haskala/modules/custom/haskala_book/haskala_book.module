@@ -81,7 +81,7 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
       $field = render($node_view[$field_name]);
       $tab_fields[] = $field;
 
-      // Other names for the author
+      // Other names for the author.
       if ($field_name == 'field_original_author') {
         $author_names_as_field = haskala_person_get_names($wrapper->$field_name->value()->nid);
       }
