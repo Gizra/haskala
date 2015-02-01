@@ -112,6 +112,7 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
 }
 
 /**
+<<<<<<< HEAD
  * Create array with hebrew letters, not including sofits.
  *
  * @return array
@@ -142,3 +143,52 @@ function haskala_book_hebrew_alphabet_without_sofit() {
     'ת',
   );
 }
+=======
+ *  Persons mentioned in book tab.
+ *
+ *  @param $book_nid
+ *   The book node ID.
+ *
+ *  @return multi mentions fields .
+ */
+function haskala_book_get_mentions($book_nid) {
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'mention')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->fieldCondition('field_book', 'target_id', $book_nid);
+  $result = $query->execute();
+  if (empty($result['node'])) {
+    return;
+  }
+  $mention_nodes = node_load_multiple(array_keys($result['node']));
+  if ($mention_nodes) {
+    $mentions_fields = array();
+    foreach($mention_nodes as $mention_node) {
+      $mentionee_fields = array();
+      $mention_wrapper = entity_metadata_wrapper('node', $mention_node);
+      //$mention_node_view = node_view($mention_node);
+      if ($mention_wrapper->field_mentionee->value()) {
+        $person_node = node_load($mention_wrapper->field_mentionee->value()->nid);
+        $person_wrapper = entity_metadata_wrapper('node', $person_node);
+        if ($person_wrapper->field_hebrew_name->value()) {
+          $mentionee_fields[] = field_view_field('node', $person_node, 'field_hebrew_name');
+        }
+        if ($person_wrapper->field_german_name->value()) {
+          $mentionee_fields[] = field_view_field('node', $person_node, 'field_german_name');
+        }
+      }
+      if ($mention_wrapper->field_mentionee_description->value()) {
+        $mentionee_fields[] = field_view_field('node', $mention_node, 'field_mentionee_description');
+      }
+      if ($mention_wrapper->field_mentionee_city->value()) {
+        $mentionee_fields[] = field_view_field('node', $mention_node, 'field_mentionee_city');
+      }
+      $mentions_fields[] = $mentionee_fields;
+    }
+    return $mentions_fields;
+  }
+  return;
+}
+
+>>>>>>> 67
