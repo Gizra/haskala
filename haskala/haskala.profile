@@ -32,6 +32,11 @@ function haskala_install_tasks() {
     'display' => FALSE,
   );
 
+  $tasks['haskala_set_permissions'] = array(
+    'display_name' => st('Set Permissions'),
+    'display' => FALSE,
+  );
+
   $tasks['haskala_set_variables'] = array(
     'display_name' => st('Set variables'),
     'display' => FALSE,
@@ -79,6 +84,19 @@ function haskala_setup_blocks() {
       ->condition('theme', $theme)
       ->execute();
   }
+}
+
+/**
+ * Task callback; Set permissions.
+ */
+function haskala_set_permissions() {
+  // Enable default permissions for system roles.
+  $permissions = array(
+    'access search_api_page',
+  );
+
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, $permissions);
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, $permissions);
 }
 
 /**

@@ -81,6 +81,11 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
       $field = render($node_view[$field_name]);
       $tab_fields[] = $field;
 
+      // Other names for the author.
+      if ($field_name == 'field_original_author') {
+        $author_names_as_field = haskala_person_get_names($wrapper->$field_name->value()->nid);
+      }
+
       // Role of preface writer.
       if ($field_name == 'field_writer_of_preface') {
         $production_node = haskala_book_get_production($book_nid, $wrapper->$field_name->value()->nid);
@@ -89,6 +94,17 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
           $tab_fields[] = $field;
         }
       }
+    }
+  }
+  // Add $author_names to translation tab.
+  if ($tab->label == 'Translation' && isset($author_names_as_field)){
+    // Move the translation general notes if exist to the end.
+    $notes_key = key(preg_grep('/field-translation-notes/', $tab_fields));
+    $tab_fields[] = $author_names_as_field;
+    if ($notes_key) {
+      $notes_element = $tab_fields[$notes_key];
+      unset($tab_fields[$notes_key]);
+      $tab_fields[] = $notes_element;
     }
   }
 
@@ -141,5 +157,37 @@ function haskala_book_get_mentions($book_nid) {
     return $mentions_fields;
   }
   return;
+}
+
+/*
+ * Create array with hebrew letters, not including sofits.
+ *
+ * @return array
+ */
+function haskala_book_hebrew_alphabet_without_sofit() {
+  return array(
+    'א',
+    'ב',
+    'ג',
+    'ד',
+    'ה',
+    'ו',
+    'ז',
+    'ח',
+    'ט',
+    'י',
+    'כ',
+    'ל',
+    'מ',
+    'נ',
+    'ס',
+    'ע',
+    'פ',
+    'צ',
+    'ק',
+    'ר',
+    'ש',
+    'ת',
+  );
 }
 
