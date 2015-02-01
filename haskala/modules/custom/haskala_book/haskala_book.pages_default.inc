@@ -96,13 +96,22 @@ function haskala_book_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Books';
   $page->admin_description = '';
-  $page->path = 'books';
+  $page->path = 'books/!letter';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
   );
   $page->menu = array();
-  $page->arguments = array();
+  $page->arguments = array(
+    'letter' => array(
+      'id' => 1,
+      'identifier' => 'String',
+      'name' => 'string',
+      'settings' => array(
+        'use_tail' => 0,
+      ),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
@@ -140,6 +149,44 @@ function haskala_book_default_page_manager_pages() {
   $display->uuid = '7ac11674-0df6-4a9e-9829-24085c30b737';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-29651a02-9b69-4aac-b9ac-09d5cd907ee3';
+    $pane->panel = 'middle';
+    $pane->type = 'alphabet_filter';
+    $pane->subtype = 'alphabet_filter';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '29651a02-9b69-4aac-b9ac-09d5cd907ee3';
+    $display->content['new-29651a02-9b69-4aac-b9ac-09d5cd907ee3'] = $pane;
+    $display->panels['middle'][0] = 'new-29651a02-9b69-4aac-b9ac-09d5cd907ee3';
+    $pane = new stdClass();
+    $pane->pid = 'new-743f99b1-f219-45af-a57e-0a214d45186b';
+    $pane->panel = 'middle';
+    $pane->type = 'books_list';
+    $pane->subtype = 'books_list';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '743f99b1-f219-45af-a57e-0a214d45186b';
+    $display->content['new-743f99b1-f219-45af-a57e-0a214d45186b'] = $pane;
+    $display->panels['middle'][1] = 'new-743f99b1-f219-45af-a57e-0a214d45186b';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
