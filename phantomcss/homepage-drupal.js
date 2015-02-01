@@ -13,6 +13,8 @@ process.env.TRAVIS = process.env.TRAVIS || false;
 // Allow changing the base url based on Travis, or a local installation.
 var baseUrl = process.env.TRAVIS ? 'http://127.0.0.1:8080' : 'http://localhost/haskala/www';
 
+console.log('baseURL: ' + baseUrl);
+
 casper.start(baseUrl);
 
 casper.viewport(1024, 768);
