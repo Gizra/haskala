@@ -109,6 +109,7 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $book_type) {
 
   $result = $query->execute();
 
+  // Load nodes by nids from result.
   $nodes = !empty($result) ? node_load_multiple(array_keys($result['node'])) : array();
 
   return $nodes;
