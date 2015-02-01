@@ -60,7 +60,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   // Add mentionees for PERSONS MENTIONED IN BOOK tab.
     $mentionees = haskala_book_get_mentions($book_nid);
     if ($mentionees) {
-      $tabs_fields['Persons mentioned in book']['sub_title'] = 'People mentioned in the book';//theme('mentionees_sub_title','<div class = "tab-sub-title">Persons mentioned in book</div>');
+      $tabs_fields['Persons mentioned in book']['sub_title'] = 'People mentioned in the book';
       $mention_tmp = array_merge($tabs_fields['Persons mentioned in book'], $mentionees);
       $tabs_fields['Persons mentioned in book'] = $mention_tmp;
   }
