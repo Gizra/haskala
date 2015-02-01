@@ -6,7 +6,14 @@ phantomcss.init({
   libraryRoot: './node_modules/phantomcss'
 });
 
-casper.start('http://127.0.0.1:8080');
+var process = process || {};
+process.env = process.env || {};
+process.env.TRAVIS = process.env.TRAVIS || false;
+
+// Allow changing the base url based on Travis, or a local installation.
+var baseUrl = process.env.TRAVIS ? 'http://127.0.0.1:8080' : 'http://localhost/haskala/www';
+
+casper.start(baseUrl);
 
 casper.viewport(1024, 768);
 
