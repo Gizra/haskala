@@ -10,24 +10,24 @@
 function haskala_general_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'access haskala search_api_page'.
-  $permissions['access haskala search_api_page'] = array(
-    'name' => 'access haskala search_api_page',
+  // Exported permission: 'search content'.
+  $permissions['search content'] = array(
+    'name' => 'search content',
     'roles' => array(
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
     ),
-    'module' => 'search_api_page',
+    'module' => 'search',
   );
 
-  // Exported permission: 'access search_api_page'.
-  $permissions['access search_api_page'] = array(
-    'name' => 'access search_api_page',
+  // Exported permission: 'use advanced search'.
+  $permissions['use advanced search'] = array(
+    'name' => 'use advanced search',
     'roles' => array(
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
     ),
-    'module' => 'search_api_page',
+    'module' => 'search',
   );
 
   return $permissions;
