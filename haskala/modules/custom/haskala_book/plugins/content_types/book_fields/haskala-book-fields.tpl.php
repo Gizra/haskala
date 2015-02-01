@@ -43,19 +43,12 @@
       <div class="fields-group">
         <div class="fields-group-name" id="<?php print $tab_name; ?>"><?php print $tab_name; ?></div>
         <div class="fields">
-          <?php foreach($multi_tab_fields as $key => $single_tab_fields):
-            // Sub title in tab if exist.?>
-            <?php if ($key === 'sub_title'): ?>
-              <div class = "tab-sub-title">
-                <?php print $single_tab_fields; ?>
-              </div>
-            <?php else: ?>
-              <div class="fields-multi">
-                <?php foreach($single_tab_fields as $tab_field): ?>
-                  <?php print render($tab_field); ?>
-                <?php endforeach; ?>
-              </div>
-            <?php endif; ?>
+          <?php foreach($multi_tab_fields as $single_tab_fields): ?>
+            <div class="fields-multi">
+              <?php foreach($single_tab_fields as $tab_field): ?>
+                <?php print render($tab_field); ?>
+              <?php endforeach; ?>
+            </div>
           <?php endforeach; ?>
         </div>
       </div>
