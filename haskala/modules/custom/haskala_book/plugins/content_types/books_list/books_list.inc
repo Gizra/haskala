@@ -17,9 +17,25 @@ $plugin = array(
  */
 function haskala_book_books_list_content_type_render($subtype, $conf, $args, $context) {
   $variables = array();
-dpm($args[0]);
+
   $argument = empty($context->data) ? 'A' : strtoupper($context->data);
-  $tid = $args[0];
+  // Get english alphabet.
+  $letters_en = range('A', 'Z');
+
+  // Get hebrew alphabet;
+  $letters_he = haskala_book_hebrew_alphabet_without_sofit();
+
+  // Get letter argument for the taxonomy term page.
+  $item = menu_get_item(current_path());
+  if (!empty($item['page_arguments'][1])) {
+    $page_argument = $item['page_arguments'][1];
+    if (in_array($page_argument, $letters_he) || in_array($page_argument, $letters_en)) {
+      $argument = strtoupper($page_argument);
+    }
+  }
+
+
+  $tid = !empty($args[0]) ? $args[0] : NULL;
 
   $book_type = $conf['book_type'];
   $node_type = $conf['node_type'];
@@ -59,7 +75,7 @@ dpm($args[0]);
  * @return array
  *  Array with node objects.
  */
-function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', $book_type = 'regular', $tid) {
+function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', $book_type = 'regular', $tid = NULL) {
   $query = new EntityFieldQuery();
   $query
     ->entityCondition('entity_type', 'node')
@@ -167,3 +183,4 @@ function haskala_book_books_list_content_type_theme(&$theme, $plugin) {
     ),
   );
 }
+
