@@ -5,3 +5,82 @@
  */
 
 include_once 'haskala_general.features.inc';
+
+/**
+ * Builds the list ordered by alphabet starting from letter.
+ *
+ * @param $entity_type
+ *  Entity type
+ * @param $options
+ *  Parameters for different entity types:
+ *    $options['node'] - array of options for nodes (node_type, book_type).
+ *    $options['term'] - array of options for terms (vid).
+ * @param $letter
+ *  Letter to start the list from.
+ *
+ * @return string
+ *  Return formatted html of the items list.
+ */
+function haskala_general_build_items_list($entity_type, $options, $letter) {
+  $variables = $options[$entity_type];
+
+  // Get english alphabet.
+  $letters_en = range('A', 'Z');
+
+  // Get hebrew alphabet;
+  $letters_he = haskala_book_hebrew_alphabet_without_sofit();
+
+  if (!in_array($letter, $letters_en) && !in_array($letter, $letters_he)) {
+    return;
+  }
+
+  $letters = in_array($letter, $letters_en) ? $letters_en : $letters_he;
+
+  $blocks = array();
+  $limit = 50;
+  // Get 50 items, starting from current letter. If there are less then 50
+  // items - take items starting from next letter by alphabet and so on.
+  while ($limit > 0) {
+    $result =
+      $entity_type == 'node' ?
+      haskala_book_get_nodes_by_letter($letter, $limit, $variables['node_type'], $variables['book_type']) :
+      haskala_terms_get_terms_by_letter($letter, $limit, $variables['vid']);
+
+    // Do not add empty result.
+    if (!empty($result)) {
+      $blocks[$letter] = $result;
+    }
+
+    $key = array_search($letter, $letters);
+    if ($key == count($letters) - 1) {
+      // This is the last letter in the alphabet.
+      break;
+    }
+    $letter = $letters[$key + 1];
+
+    $limit -= count($result);
+  }
+
+  $theme = $entity_type == 'node' ? 'letter_books_list' : 'letter_terms_list';
+  $theme_variable = $entity_type == 'node' ? 'books_list' : 'terms_list';
+
+  $blocks_html = '';
+
+  foreach ($blocks as $letter => $block) {
+    $block_vars = array();
+    $block_vars['letter'] = $letter;
+    $block_vars['class'] = in_array($letter, $letters_he) ? 'he' : 'en';
+    $block_vars[$theme_variable] = '';
+    foreach ($block as $item) {
+      $view_mode = 'teaser';
+      if ($entity_type == 'node' && $variables['node_type'] == 'person') {
+        $view_mode = in_array($letter, $letters_en) ? 'teaser_en' : 'teaser_he';
+      }
+      $view = $entity_type == 'node' ? node_view($item, $view_mode) : taxonomy_term_view($item, $view_mode);
+      $block_vars[$theme_variable] .= render($view);
+    }
+    $blocks_html .= theme($theme, $block_vars);
+  }
+
+  return $blocks_html;
+}

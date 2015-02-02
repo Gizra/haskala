@@ -23,58 +23,15 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
   $book_type = $conf['book_type'];
   $node_type = $conf['node_type'];
 
-  // Get english alphabet.
-  $letters_en = range('A', 'Z');
+  $options = array(
+    'node' => array(
+      'node_type' => $node_type,
+      'book_type' => $book_type,
+    )
+  );
 
-  // Get hebrew alphabet;
-  $letters_he = haskala_book_hebrew_alphabet_without_sofit();
-
-  if (!in_array($argument, $letters_en) && !in_array($argument, $letters_he)) {
-    return;
-  }
-
-  $letters = in_array($argument, $letters_en) ? $letters_en : $letters_he;
-
-  $blocks = array();
-  $limit = 50;
-
-  // Get 50 nodes, starting from current letter. If there are less then 50
-  // items - take nodes starting from next letter by alphabet and so on.
-  while ($limit > 0) {
-    $result = haskala_book_get_nodes_by_letter($argument, $limit, $node_type, $book_type);
-    // Do not add empty result.
-    if (!empty($result)) {
-      $blocks[$argument] = $result;
-    }
-
-    $key = array_search($argument, $letters);
-    if ($key == count($letters) - 1) {
-      // This is the last letter in the alphabet.
-      break;
-    }
-    $argument = $letters[$key + 1];
-
-    $limit -= count($result);
-  }
-
-  // Create formatted html of block of the nodes to display.
-  $variables['books_blocks'] = '';
-  foreach ($blocks as $letter => $block) {
-    $block_vars = array();
-    $block_vars['letter'] = $letter;
-    $block_vars['class'] = in_array($letter, $letters_he) ? 'he' : 'en';
-    $block_vars['books_list'] = '';
-    foreach ($block as $node) {
-      $view_mode = 'teaser';
-      if ($node_type == 'person') {
-        $view_mode = in_array($letter, $letters_en) ? 'teaser_en' : 'teaser_he';
-      }
-      $view = node_view($node, $view_mode);
-
-      $block_vars['books_list'] .= render($view);
-    }
-    $variables['books_blocks'] .= theme('letter_books_list', $block_vars);
-  }
+  // Create formatted html of block of the terms to display.
+  $variables['books_blocks'] = haskala_general_build_items_list('node', $options, $argument);
 
   $block = new stdClass();
   $block->module = 'haskala_book';

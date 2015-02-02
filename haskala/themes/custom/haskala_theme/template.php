@@ -38,7 +38,7 @@ function haskala_theme_preprocess_node__book__teaser(&$variables) {
 }
 
 /**
- * Preprocess for peron nodes teaser.
+ * Preprocess for person nodes teaser.
  */
 function haskala_theme_preprocess_node__person(&$variables) {
   $node = $variables['node'];
@@ -56,4 +56,26 @@ function haskala_theme_preprocess_node__person(&$variables) {
   }
 }
 
+/**
+ * Taxonomy term preprocess
+ */
+function haskala_theme_preprocess_taxonomy_term(&$variables) {
+  $view_mode = $variables['view_mode'];
 
+  // Generic tpl for term--bundle--view-mode.
+  $variables['theme_hook_suggestions'][] = "taxonomy_term__{$view_mode}";
+
+  $preprocess_function = "haskala_theme_preprocess_taxonomy_term__{$view_mode}";
+  if (function_exists($preprocess_function)) {
+    $preprocess_function($variables);
+  }
+}
+
+/**
+ * Preprocess for taxonomy term teaser.
+ */
+function haskala_theme_preprocess_taxonomy_term__teaser(&$variables) {
+  $term = $variables['term'];
+  $variables['url'] = url('taxonomy/term/' . $term->tid);
+  $variables['title'] =$term->name;
+}
