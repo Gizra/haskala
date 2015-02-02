@@ -86,10 +86,8 @@ script:
 
 
   # Upload failed images to imgur
-  - bash $TRAVIS_BUILD_DIR/imgur ./screenshots/drupal-homepage-search_2.png
-  - bash $TRAVIS_BUILD_DIR/imgur ./screenshots/drupal-homepage-tags-cloud-wrapper_3.png
-  - bash $TRAVIS_BUILD_DIR/imgur ./failures/drupal-homepage-search_2.fail.png
-  - bash $TRAVIS_BUILD_DIR/imgur ./failures/drupal-homepage-tags-cloud-wrapper_3.fail.png
+#  - bash $TRAVIS_BUILD_DIR/imgur ./screenshots/drupal-homepage-tags-cloud-wrapper_3.png
+#  - bash $TRAVIS_BUILD_DIR/imgur ./failures/drupal-homepage-tags-cloud-wrapper_3.fail.png
 
   # Run phantomJs.
   - phantomjs --webdriver=4444 > ~/phantomjs.log 2>&1 &
