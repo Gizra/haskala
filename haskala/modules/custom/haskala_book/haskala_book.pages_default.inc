@@ -105,7 +105,7 @@ function haskala_book_default_page_manager_pages() {
   $page->arguments = array(
     'letter' => array(
       'id' => 1,
-      'identifier' => 'String',
+      'identifier' => 'Letter',
       'name' => 'string',
       'settings' => array(
         'use_tail' => 0,
@@ -175,7 +175,18 @@ function haskala_book_default_page_manager_pages() {
     $pane->subtype = 'books_list';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'return' => 'Finish',
+      'cancel' => 'Cancel',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'book_type' => 'regular',
+      'form_build_id' => 'form-ibnO58rdMdTG33kWi40RWRicPatPh5Yh5Nz9urDlJuw',
+      'form_token' => 'Y6AVcBeweMlALi6EjgUHONl-NWAU4yLLnsdwNuDb4Zw',
+      'form_id' => 'haskala_book_books_list_content_type_edit_form',
+      'op' => 'Finish',
+      'context' => 'argument_string_1',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -200,13 +211,22 @@ function haskala_book_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Digital books';
   $page->admin_description = '';
-  $page->path = 'digital-books';
+  $page->path = 'digital-books/!letter';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
   );
   $page->menu = array();
-  $page->arguments = array();
+  $page->arguments = array(
+    'letter' => array(
+      'id' => 1,
+      'identifier' => 'Letter',
+      'name' => 'string',
+      'settings' => array(
+        'use_tail' => 0,
+      ),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
@@ -244,6 +264,56 @@ function haskala_book_default_page_manager_pages() {
   $display->uuid = 'cb39c989-828f-4412-98d0-2b6039718f2a';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-2ab758ed-dcff-44b3-a0bf-0391456b03e8';
+    $pane->panel = 'middle';
+    $pane->type = 'alphabet_filter';
+    $pane->subtype = 'alphabet_filter';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '2ab758ed-dcff-44b3-a0bf-0391456b03e8';
+    $display->content['new-2ab758ed-dcff-44b3-a0bf-0391456b03e8'] = $pane;
+    $display->panels['middle'][0] = 'new-2ab758ed-dcff-44b3-a0bf-0391456b03e8';
+    $pane = new stdClass();
+    $pane->pid = 'new-6831057e-1a0e-4759-95be-b8717adb4c2d';
+    $pane->panel = 'middle';
+    $pane->type = 'books_list';
+    $pane->subtype = 'books_list';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'bundle' => 'any',
+      'return' => 'Finish',
+      'cancel' => 'Cancel',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'book_type' => 'digital',
+      'form_build_id' => 'form-7TdmvFFAOCvH9nVgopvqDfhg1iWXjlgfdJOfpqU4dnU',
+      'form_token' => 'Y6AVcBeweMlALi6EjgUHONl-NWAU4yLLnsdwNuDb4Zw',
+      'form_id' => 'haskala_book_books_list_content_type_edit_form',
+      'op' => 'Finish',
+      'context' => 'argument_string_1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '6831057e-1a0e-4759-95be-b8717adb4c2d';
+    $display->content['new-6831057e-1a0e-4759-95be-b8717adb4c2d'] = $pane;
+    $display->panels['middle'][1] = 'new-6831057e-1a0e-4759-95be-b8717adb4c2d';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
