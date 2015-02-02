@@ -2,7 +2,7 @@ Feature: People page
   As an anonymous user
   We need to be able to see the people list starting from chosen letter.
 
-  @api @foo
+  @api
   Scenario Outline: Visit a people page
     Given I am an anonymous user
     And   I visit "people"
