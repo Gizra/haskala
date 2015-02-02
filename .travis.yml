@@ -60,7 +60,9 @@ before_script:
   # Create display.
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-  - sleep 3 # give xvfb some time to start
+
+  # Wait for Grunt to finish loading.
+  - until $(curl --output /dev/null --silent --head --fail http://localhost:9000); do sleep 1; echo '.'; done
 
   # start a web server on port 8080, run in the background; wait for initialization
   - drush @site runserver 127.0.0.1:8080 &
