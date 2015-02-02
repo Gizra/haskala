@@ -31,17 +31,16 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   // Book tabs fields.
   $parent_tabs_group = field_group_load_field_group('group_horizontal_tabs', 'node', 'book', 'default');
   $tabs_fields = array();
-
   foreach ($parent_tabs_group->children as $tab_name) {
     $tab = field_group_load_field_group($tab_name, 'node', 'book', 'default');
-
-    $tabs_fields[$tab->label]['single'] = haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid);
-
-    // Delete empty group.
-    if (empty($tabs_fields[$tab->label]['single'])){
-      unset($tabs_fields[$tab->label]);
-    }
-    else {
+    $tab_fields = haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid);
+    if ($tab_fields) {
+      if (preg_grep('/^group_/', array_keys($tab_fields))) {
+        $tabs_fields[$tab->label] = $tab_fields;
+      }
+      else {
+        $tabs_fields[$tab->label]['single'] = $tab_fields;
+      }
       $tabs_fields[$tab->label]['weight'] = $tab->weight;
     }
   }
@@ -64,7 +63,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
     $mention_tmp = array_merge($tabs_fields[t('Persons mentioned in book')], $mentionees);
     $tabs_fields[t('Persons mentioned in book')] = $mention_tmp;
   }
-
+  
   $grouped_fields_variables = array(
     'title' => $node->title,
     'top_details_group' => $top_details_group_fields,
