@@ -81,6 +81,11 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
       $field = render($node_view[$field_name]);
       $tab_fields[] = $field;
 
+      // Other names for the author.
+      if ($field_name == 'field_original_author') {
+        $author_names_as_field = haskala_person_get_names($wrapper->$field_name->value()->nid);
+      }
+
       // Role of preface writer.
       if ($field_name == 'field_writer_of_preface') {
         $production_node = haskala_book_get_production($book_nid, $wrapper->$field_name->value()->nid);
@@ -91,11 +96,70 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
       }
     }
   }
+  // Add $author_names to translation tab.
+  if ($tab->label == 'Translation' && isset($author_names_as_field)){
+    // Move the translation general notes if exist to the end.
+    $notes_key = key(preg_grep('/field-translation-notes/', $tab_fields));
+    $tab_fields[] = $author_names_as_field;
+    if ($notes_key) {
+      $notes_element = $tab_fields[$notes_key];
+      unset($tab_fields[$notes_key]);
+      $tab_fields[] = $notes_element;
+    }
+  }
 
   return $tab_fields;
 }
 
 /**
+ *  Persons mentioned in book tab.
+ *
+ *  @param $book_nid
+ *   The book node ID.
+ *
+ *  @return multi mentions fields .
+ */
+function haskala_book_get_mentions($book_nid) {
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'mention')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->fieldCondition('field_book', 'target_id', $book_nid);
+  $result = $query->execute();
+  if (empty($result['node'])) {
+    return;
+  }
+  $mention_nodes = node_load_multiple(array_keys($result['node']));
+  if (!$mention_nodes) {
+    return;
+  }
+  $mentions_fields = array();
+  foreach($mention_nodes as $mention_node) {
+    $mentionee_fields = array();
+    $mention_wrapper = entity_metadata_wrapper('node', $mention_node);
+    //$mention_node_view = node_view($mention_node);
+    if ($mention_wrapper->field_mentionee->value()) {
+      $person_node = node_load($mention_wrapper->field_mentionee->value()->nid);
+      $person_wrapper = entity_metadata_wrapper('node', $person_node);
+      if ($person_wrapper->field_hebrew_name->value()) {
+        $mentionee_fields[] = field_view_field('node', $person_node, 'field_hebrew_name');
+      }
+      if ($person_wrapper->field_german_name->value()) {
+        $mentionee_fields[] = field_view_field('node', $person_node, 'field_german_name');
+      }
+    }
+    if ($mention_wrapper->field_mentionee_description->value()) {
+      $mentionee_fields[] = field_view_field('node', $mention_node, 'field_mentionee_description');
+    }
+    if ($mention_wrapper->field_mentionee_city->value()) {
+      $mentionee_fields[] = field_view_field('node', $mention_node, 'field_mentionee_city');
+    }
+    $mentions_fields[] = $mentionee_fields;
+  }
+  return $mentions_fields;
+}
+
+/*
  * Create array with hebrew letters, not including sofits.
  *
  * @return array
@@ -126,3 +190,4 @@ function haskala_book_hebrew_alphabet_without_sofit() {
     'ת',
   );
 }
+
