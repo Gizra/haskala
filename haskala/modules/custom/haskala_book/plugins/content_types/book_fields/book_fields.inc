@@ -57,6 +57,14 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   // Add Book producers tab.
   haskala_book_production_tab_fields($tabs_fields, $book_nid);
 
+  // Add mentionees for PERSONS MENTIONED IN BOOK tab.
+  $mentionees = haskala_book_get_mentions($book_nid);
+  if ($mentionees) {
+    $tabs_fields[t('Persons mentioned in book')]['sub_title'] = t('People mentioned in the book');
+    $mention_tmp = array_merge($tabs_fields[t('Persons mentioned in book')], $mentionees);
+    $tabs_fields[t('Persons mentioned in book')] = $mention_tmp;
+  }
+
   $grouped_fields_variables = array(
     'title' => $node->title,
     'top_details_group' => $top_details_group_fields,
