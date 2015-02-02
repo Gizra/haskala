@@ -75,19 +75,13 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
     $block_vars['class'] = in_array($letter, $letters_he) ? 'he' : 'en';
     $block_vars['books_list'] = '';
     foreach ($block as $node) {
+      $view_mode = 'teaser';
       if ($node_type == 'person') {
-        if (in_array($letter, $letters_en)) {
-          $view = node_view($node, 'teaser_en');
-        }
-        else if (in_array($letter, $letters_he)) {
-          $view = node_view($node, 'teaser_he');
-        }
+        $view_mode = in_array($letter, $letters_en) ? 'teaser_en' : 'teaser_he';
       }
-      elseif ($node_type == 'book') {
-        $view = node_view($node, 'teaser');
-      }
+      $view = node_view($node, $view_mode);
 
-      $block_vars['books_list'] .= drupal_render($view);
+      $block_vars['books_list'] .= render($view);
     }
     $variables['books_blocks'] .= theme('letter_books_list', $block_vars);
   }
@@ -136,8 +130,6 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', 
       $query->fieldCondition('field_hebrew_name',  'value', $letter, 'STARTS_WITH');
     }
   }
-
-//    ->fieldCondition('field_book',  'target_id', 'NULL', 'IS NULL')
 
   if ($book_type == 'digital' && $node_type == 'book') {
       $query->fieldCondition('field_link_to_digital_book',  'value', 'NULL', 'IS NOT NULL');

@@ -45,7 +45,7 @@ function haskala_theme_preprocess_node__person(&$variables) {
   $view_mode = $variables['view_mode'];
   if ($view_mode == 'teaser' || $view_mode == 'teaser_en' || $view_mode == 'teaser_he') {
     // Generic tpl for node--person--teaser.
-    $variables['theme_hook_suggestions'][] = "node__person__teaser";
+    $variables['theme_hook_suggestions'][] = 'node__person__teaser';
     $variables['url'] = url('node/' . $node->nid);
   }
   if ($view_mode == 'teaser' || $view_mode == 'teaser_en') {
