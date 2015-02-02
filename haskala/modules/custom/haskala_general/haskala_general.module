@@ -42,7 +42,7 @@ function haskala_general_build_items_list($entity_type, $options, $letter) {
   // items - take items starting from next letter by alphabet and so on.
   while ($limit > 0) {
     if ($entity_type == 'node') {
-      $result = haskala_book_get_nodes_by_letter($letter, $limit, $variables['node_type'], $variables['book_type']);
+      $result = haskala_book_get_nodes_by_letter($letter, $limit, $variables['node_type'], $variables['book_type'], $variables['tid']);
     }
     else {
       $result = haskala_terms_get_terms_by_letter($letter, $limit, $variables['vid']);

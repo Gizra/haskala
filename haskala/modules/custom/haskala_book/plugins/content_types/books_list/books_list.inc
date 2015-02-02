@@ -17,8 +17,9 @@ $plugin = array(
  */
 function haskala_book_books_list_content_type_render($subtype, $conf, $args, $context) {
   $variables = array();
-
+dpm($args[0]);
   $argument = empty($context->data) ? 'A' : strtoupper($context->data);
+  $tid = $args[0];
 
   $book_type = $conf['book_type'];
   $node_type = $conf['node_type'];
@@ -27,6 +28,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
     'node' => array(
       'node_type' => $node_type,
       'book_type' => $book_type,
+      'tid' => $tid,
     )
   );
 
@@ -51,11 +53,13 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
  *  Node bundle.
  * @param $book_type
  *  Type of the book node. Could be regular or digital.
+ * @tid
+ *  Taxonomy term id.
  *
  * @return array
  *  Array with node objects.
  */
-function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', $book_type = 'regular') {
+function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', $book_type = 'regular', $tid) {
   $query = new EntityFieldQuery();
   $query
     ->entityCondition('entity_type', 'node')
@@ -79,8 +83,11 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', 
   }
 
   if ($book_type == 'digital' && $node_type == 'book') {
-      $query->fieldCondition('field_link_to_digital_book',  'value', 'NULL', 'IS NOT NULL');
-    }
+    $query->fieldCondition('field_link_to_digital_book',  'value', 'NULL', 'IS NOT NULL');
+  }
+  if ($book_type == 'from_term' && $node_type == 'book') {
+    $query->fieldCondition('field_topic', 'tid', array($tid));
+  }
 
   if ($limit != 50) {
     // Could be that for some letter there are more than 50 items. In this case
@@ -92,7 +99,6 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', 
 
   // Load nodes by nids from result.
   $nodes = !empty($result) ? node_load_multiple(array_keys($result['node'])) : array();
-
   return $nodes;
 }
 
@@ -116,6 +122,7 @@ function haskala_book_books_list_content_type_edit_form($form, &$form_state) {
   $book_types = array(
     'regular' => 'regular',
     'digital' => 'digital',
+    'from_term' => 'from_term',
   );
   $form['book_type'] = array(
     '#type' => 'select',
