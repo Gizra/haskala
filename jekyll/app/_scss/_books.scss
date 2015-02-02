@@ -25,7 +25,26 @@
 
       nav {
             margin-bottom: 10px;
-        
+
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          text-align: justify;
+          line-height: 0;
+          font-size: 1px; /* 1px for Opera */
+
+          /* For IE6-7*/
+          text-justify: newspaper;
+          zoom:1;
+        }
+
+        ul:after {
+          content: '';
+          width: 100%;
+          display: inline-block;
+        }
+
         li a:hover {
           color: $lightBlue;
         }

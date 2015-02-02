@@ -21,6 +21,7 @@ function haskala_migrate_migrate_api() {
 
     // Terms.
     'HaskalaCityTermsMigrate',
+    'HaskalaOriginalTypeTermsMigrate',
     'HaskalaModelTermsMigrate',
   );
   

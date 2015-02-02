@@ -5,3 +5,43 @@
  */
 
 include_once 'haskala_people.features.inc';
+
+/**
+ *  Translation tab - Other names for the original author.
+ *
+ *  @param $person_nid
+ *   The author person node ID.
+ *
+ *  @return  The created field for orginal author other names.
+ */
+function haskala_person_get_names($person_nid) {
+  $person_node = node_load($person_nid);
+  $person_wrapper = entity_metadata_wrapper('node', $person_node);
+
+  $person_names = array();
+
+  // Try build field_view_field().
+  if ($person_wrapper->field_hebrew_name) {
+    $person_names_as_field = field_view_field('node', $person_node, 'field_hebrew_name');
+    $person_names[] = $person_wrapper->field_hebrew_name->value();
+  }
+  if ($person_wrapper->field_german_name) {
+    if (!isset($person_names_as_field)) {
+      $person_names_as_field = field_view_field('node', $person_node, 'field_german_name');
+    }
+    $person_names[] = $person_wrapper->field_german_name->value();
+  }
+  if ($person_wrapper->field_pseudonym) {
+    if (!isset($person_names_as_field)) {
+      $person_names_as_field = field_view_field('node', $person_node, 'field_pseudonym');
+    }
+    $person_names[] = $person_wrapper->field_pseudonym->value();
+  }
+  // If Success build field, change value to all fields values together.
+  if (isset($person_names_as_field)) {
+    $person_names_str = implode(',',$person_names);
+    $person_names_as_field[0]['#markup'] = $person_names_str;
+    $person_names_as_field['#title'] = 'Other names for the author';
+  }
+  return $person_names_as_field;
+}
