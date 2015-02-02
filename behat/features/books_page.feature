@@ -2,7 +2,7 @@ Feature: Books page
   As an anonymous user
   We need to be able to see the books list starting from chosen letter.
 
-  @api @foo
+  @api
   Scenario Outline: Visit a books page
     Given I am an anonymous user
     And   I visit "books"
@@ -17,7 +17,7 @@ Feature: Books page
     | מ      | מאמר אמרה צרופה                                          |
     | ת      | תבנית חברת שוחרי הטוב והתושיה                              |
 
-  @api @foo
+  @api
   Scenario Outline: Visit a digital-books page
     Given I am an anonymous user
     And   I visit "digital-books"
