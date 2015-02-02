@@ -173,7 +173,7 @@ function haskala_general_menu_default_menu_links() {
   // Exported menu link: menu-top-menu_people:<front>
   $menu_links['menu-top-menu_people:<front>'] = array(
     'menu_name' => 'menu-top-menu',
-    'link_path' => '<front>',
+    'link_path' => 'people',
     'router_path' => '',
     'link_title' => 'PEOPLE',
     'options' => array(
@@ -193,7 +193,7 @@ function haskala_general_menu_default_menu_links() {
   // Exported menu link: menu-top-menu_places:<front>
   $menu_links['menu-top-menu_places:<front>'] = array(
     'menu_name' => 'menu-top-menu',
-    'link_path' => '<front>',
+    'link_path' => 'places',
     'router_path' => '',
     'link_title' => 'PLACES',
     'options' => array(
