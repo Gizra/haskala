@@ -31,6 +31,7 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = jquery_update
+dependencies[] = libraries
 dependencies[] = module_filter
 dependencies[] = migrate
 dependencies[] = migrate_extras

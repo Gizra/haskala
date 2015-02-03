@@ -15,7 +15,6 @@ regions[page_top] = 'Page top'
 regions[page_bottom] = 'Page bottom'
 
 stylesheets[all][] = ../../../libraries/haskala/css/main.css
-stylesheets[ie][] = ../../../libraries/haskala/css/ie-lte-10.css
 
 plugins[panels][layouts] = layouts
 
