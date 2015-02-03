@@ -64,32 +64,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
  */
 function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', $book_type = 'regular', $tid = NULL) {
   if ($tid) {
-
-    $query = db_select('taxonomy_index', 't');
-
-    $query->join('node', 'n', 't.nid = n.nid'); //JOIN node with users
-
-    $query->fields('n',array('nid'))//SELECT the fields from node
-
-    ->condition('t.tid', $tid, '=')
-
-    ->condition('n.title', $letter . '%', 'LIKE')
-
-    ->orderBy('n.title', 'ASC');//ORDER BY title
-
-    if ($limit != 50) {
-      // Could be that for some letter there are more than 50 items. In this case
-      // if this is the first requested letter we should load all of them.
-      $query->range(0, $limit);
-    }
-
-    $result = $query->execute();
-
-    $records = $result->fetchAllAssoc('nid');
-
-    $nodes = node_load_multiple(array_keys($records));
-
-    return $nodes;
+    return haskala_book_get_nodes_by_term_and_letter($tid, $letter, $limit);
   }
 
   $query = new EntityFieldQuery();
@@ -117,9 +92,6 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', 
   if ($book_type == 'digital' && $node_type == 'book') {
     $query->fieldCondition('field_link_to_digital_book',  'value', 'NULL', 'IS NOT NULL');
   }
-  if ($book_type == 'from_term' && $node_type == 'book') {
-    $query->fieldCondition('field_topic', 'tid', array($tid));
-  }
 
   if ($limit != 50) {
     // Could be that for some letter there are more than 50 items. In this case
@@ -130,6 +102,38 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', 
   $result = $query->execute();
   // Load nodes by nids from result.
   $nodes = !empty($result) ? node_load_multiple(array_keys($result['node'])) : array();
+  return $nodes;
+}
+
+/**
+ * @param $tid
+ * @param $letter
+ * @param $limit
+ * @return array
+ */
+function haskala_book_get_nodes_by_term_and_letter($tid, $letter, $limit) {
+  $query = db_select('taxonomy_index', 't');
+
+  $query->join('node', 'n', 't.nid = n.nid'); //JOIN terms with nodes
+
+  $query->fields('n',array('nid'))//SELECT the fields from node
+  ->condition('t.tid', $tid)
+    ->condition('n.status', NODE_PUBLISHED)
+    ->condition('n.title', $letter . '%', 'LIKE')
+    ->orderBy('n.title', 'ASC');//ORDER BY title
+
+  if ($limit != 50) {
+    // Could be that for some letter there are more than 50 items. In this case
+    // if this is the first requested letter we should load all of them.
+    $query->range(0, $limit);
+  }
+
+  $result = $query->execute();
+
+  $records = $result->fetchAllAssoc('nid');
+
+  $nodes = node_load_multiple(array_keys($records));
+
   return $nodes;
 }
 
