@@ -61,7 +61,8 @@ function haskala_book_field_group_info() {
       1 => 'field_censorship',
       2 => 'field_contemporary_disputes',
       3 => 'field_contemporary_references',
-      4 => 'group_preservation',
+      4 => 'field_target_general_notes',
+      5 => 'group_preservation',
     ),
     'format_type' => 'div',
     'format_settings' => array(

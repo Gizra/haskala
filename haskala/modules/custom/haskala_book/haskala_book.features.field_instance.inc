@@ -4842,7 +4842,7 @@ function haskala_book_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 17,
+      'weight' => 123,
     ),
   );
 
