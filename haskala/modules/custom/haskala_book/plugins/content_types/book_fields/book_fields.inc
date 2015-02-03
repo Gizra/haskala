@@ -34,7 +34,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   foreach ($parent_tabs_group->children as $tab_name) {
     $tab = field_group_load_field_group($tab_name, 'node', 'book', 'default');
     $tab_fields = haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid);
-    if ($tab_fields) {
+    if ($tab_fields && !empty($tab_fields)) {
       if (preg_grep('/^group_/', array_keys($tab_fields))) {
         $tabs_fields[$tab->label] = $tab_fields;
       }
