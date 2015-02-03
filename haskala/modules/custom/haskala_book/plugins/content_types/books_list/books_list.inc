@@ -5,7 +5,10 @@ $plugin = array(
   'description' => t('Display a nodes list starting from some letter.'),
   'category' => t('Haskala'),
   'hook theme' => 'haskala_book_books_list_content_type_theme',
-  'required context' => new ctools_context_optional(t('Letter'), 'string'),
+  'required context' => array(
+    new ctools_context_optional(t('Letter'), 'string'),
+    new ctools_context_optional(t('Term'), 'taxonomy_term'),
+  ),
   'defaults' => array(
     'book_type' => 'regular',
     'node_type' => 'book',
@@ -17,26 +20,9 @@ $plugin = array(
  */
 function haskala_book_books_list_content_type_render($subtype, $conf, $args, $context) {
   $variables = array();
+  $argument = empty($context[0]->data) ? 'A' : strtoupper($context[0]->data);
 
-  $argument = empty($context->data) ? 'A' : strtoupper($context->data);
-  // Get english alphabet.
-  $letters_en = range('A', 'Z');
-
-  // Get hebrew alphabet;
-  $letters_he = haskala_book_hebrew_alphabet_without_sofit();
-
-  // Get letter argument for the taxonomy term page.
-  $item = menu_get_item(current_path());
-  if (!empty($item['page_arguments'][1])) {
-    $page_argument = $item['page_arguments'][1];
-    if (in_array($page_argument, $letters_he) || in_array($page_argument, $letters_en)) {
-      $argument = strtoupper($page_argument);
-    }
-  }
-
-
-  $tid = !empty($args[0]) ? $args[0] : NULL;
-
+  $tid = !empty($context[1]->data->tid) ? $context[1]->data->tid : NULL;
   $book_type = $conf['book_type'];
   $node_type = $conf['node_type'];
 
@@ -112,7 +98,6 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', 
   }
 
   $result = $query->execute();
-
   // Load nodes by nids from result.
   $nodes = !empty($result) ? node_load_multiple(array_keys($result['node'])) : array();
   return $nodes;

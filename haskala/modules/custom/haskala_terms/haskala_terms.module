@@ -14,3 +14,11 @@ function haskala_terms_ctools_plugin_directory($module, $plugin) {
     return 'plugins/' . $plugin;
   }
 }
+
+function haskala_terms_menu_alter(&$items) {
+  $items['taxonomy/term/%taxonomy_term']['page callback'] = 'haskala_terms_taxonomy_page_callback';
+}
+
+function haskala_terms_taxonomy_page_callback($term) {
+  drupal_goto('term/' . $term->tid);
+}

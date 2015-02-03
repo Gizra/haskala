@@ -102,11 +102,14 @@ function haskala_people_default_page_manager_pages() {
       'node_type' => 'person',
       'return' => 'Finish',
       'cancel' => 'Cancel',
-      'context' => 'argument_string_1',
+      'context' => array(
+        0 => 'argument_string_1',
+        1 => 'empty',
+      ),
       'override_title' => 0,
       'override_title_text' => '',
-      'form_build_id' => 'form-sK-kK_pDu5MMSSVIRLU-SnGVsmnSdOg5yAwoSiLvYxY',
-      'form_token' => 'b2HINQ6ffiAJtt50PjW9oysiHHIw9-HyQuYbJvlMoFE',
+      'form_build_id' => 'form-fk4ywSXYxvNfVgOKJiFpU27--lalYQMNMrxiVCPcTsQ',
+      'form_token' => 'pZyHkGatmvZTNaYaIl5W3LusNzvfGyq6ItOgKOHn4Dc',
       'form_id' => 'haskala_book_books_list_content_type_edit_form',
       'op' => 'Finish',
     );

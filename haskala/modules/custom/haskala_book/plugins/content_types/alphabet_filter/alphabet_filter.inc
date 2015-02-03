@@ -23,6 +23,7 @@ function haskala_book_alphabet_filter_content_type_render($subtype, $conf, $args
 
   $links_en = array();
   $links_he = array();
+
   // Create English filter list.
   foreach ($letters_en as $letter) {
     $links_en[] = l($letter, $item['path'] . '/' . $letter);
@@ -62,3 +63,4 @@ function haskala_book_alphabet_filter_content_type_theme(&$theme, $plugin) {
     ),
   );
 }
+
