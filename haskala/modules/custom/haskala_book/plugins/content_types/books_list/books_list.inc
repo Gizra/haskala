@@ -93,7 +93,8 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', 
     $query->fieldCondition('field_link_to_digital_book',  'value', 'NULL', 'IS NOT NULL');
   }
 
-  if ($limit != 50) {
+  $default_limit = variable_get('haskala_index_items_limit', 50);
+  if ($limit != $default_limit) {
     // Could be that for some letter there are more than 50 items. In this case
     // if this is the first requested letter we should load all of them.
     $query->range(0, $limit);

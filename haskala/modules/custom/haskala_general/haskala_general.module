@@ -37,7 +37,7 @@ function haskala_general_build_items_list($entity_type, $options, $letter) {
   $letters = in_array($letter, $letters_en) ? $letters_en : $letters_he;
 
   $blocks = array();
-  $limit = 50;
+  $limit = variable_get('haskala_index_items_limit', 50);
   // Get 50 items, starting from current letter. If there are less then 50
   // items - take items starting from next letter by alphabet and so on.
   while ($limit > 0) {
