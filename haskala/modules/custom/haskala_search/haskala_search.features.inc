@@ -13,7 +13,7 @@ function haskala_search_default_search_api_index() {
     "name" : "Haskala",
     "machine_name" : "haskala",
     "description" : null,
-    "server" : "opensolr",
+    "server" : "index_depot",
     "item_type" : "node",
     "options" : {
       "index_directly" : 0,
@@ -128,7 +128,7 @@ function haskala_search_default_search_api_index() {
         "field_subscribers" : { "type" : "boolean" },
         "field_subscription_appeal" : { "type" : "boolean" },
         "field_table_of_conten" : { "type" : "boolean" },
-        "field_target_audience" : { "type" : "text" },
+        "field_target_audience" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_target_audience_notes" : { "type" : "text" },
         "field_tel_aviv_library_id" : { "type" : "text" },
         "field_textual_models_notes" : { "type" : "text" },
@@ -154,9 +154,9 @@ function haskala_search_default_search_api_index() {
       },
       "data_alter_callbacks" : {
         "search_api_alter_bundle_filter" : {
-          "status" : 0,
+          "status" : 1,
           "weight" : "-10",
-          "settings" : { "default" : "1", "bundles" : [] }
+          "settings" : { "default" : "0", "bundles" : { "book" : "book", "person" : "person" } }
         },
         "search_api_alter_node_access" : { "status" : 0, "weight" : "0", "settings" : [] },
         "search_api_alter_node_status" : { "status" : 0, "weight" : "0", "settings" : [] },
@@ -167,7 +167,7 @@ function haskala_search_default_search_api_index() {
       },
       "processors" : {
         "search_api_case_ignore" : {
-          "status" : 0,
+          "status" : 1,
           "weight" : "0",
           "settings" : { "fields" : {
               "title" : true,
@@ -391,7 +391,6 @@ function haskala_search_default_search_api_index() {
               "field_sources_list" : true,
               "field_sources_references" : true,
               "field_structure_preface_notes" : true,
-              "field_target_audience" : true,
               "field_target_audience_notes" : true,
               "field_tel_aviv_library_id" : true,
               "field_textual_models_notes" : true,
@@ -501,7 +500,7 @@ function haskala_search_default_search_api_index() {
           }
         },
         "search_api_highlighting" : {
-          "status" : 0,
+          "status" : 1,
           "weight" : "35",
           "settings" : {
             "prefix" : "\\u003Cstrong\\u003E",
@@ -626,9 +625,9 @@ function haskala_search_default_search_api_page() {
  */
 function haskala_search_default_search_api_server() {
   $items = array();
-  $items['opensolr'] = entity_import('search_api_server', '{
-    "name" : "Opensolr",
-    "machine_name" : "opensolr",
+  $items['index_depot'] = entity_import('search_api_server', '{
+    "name" : "Index Depot",
+    "machine_name" : "index_depot",
     "description" : "",
     "class" : "search_api_solr_service",
     "options" : {
