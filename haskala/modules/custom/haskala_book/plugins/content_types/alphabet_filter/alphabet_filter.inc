@@ -12,7 +12,7 @@ $plugin = array(
  */
 function haskala_book_alphabet_filter_content_type_render($subtype, $conf, $args, $context) {
   $item = menu_get_item(current_path());
-
+dpm($item);
   $variables = array();
 
   // Get english alphabet.
@@ -26,11 +26,11 @@ function haskala_book_alphabet_filter_content_type_render($subtype, $conf, $args
 
   // Create English filter list.
   foreach ($letters_en as $letter) {
-    $links_en[] = l($letter, $item['path'] . '/' . $letter);
+    $links_en[] = l($letter, $item['tab_root_href'] . '/' . $letter);
   }
   // Create Hebrew filter list.
   foreach ($letters_he as $letter) {
-    $links_he[] = l($letter, $item['path'] . '/' . $letter);
+    $links_he[] = l($letter, $item['tab_root_href'] . '/' . $letter);
   }
 
   $variables['alphabet_en'] = theme('item_list', array('items' => $links_en));
