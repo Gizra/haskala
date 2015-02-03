@@ -16,59 +16,6 @@ function haskala_book_ctools_plugin_directory($module, $plugin) {
 }
 
 /**
- *  Translation tab - Other names for the original author.
- *
- *  @param $person_nid
- *   The author person node ID.
- *
- *  @return  The created field for orginal author other names.
- */
-function haskala_book_author_names($person_nid) {
-  $query = new EntityFieldQuery();
-  $query->entityCondition('entity_type', 'node')
-    ->entityCondition('bundle', 'person')
-    ->propertyCondition('status', NODE_PUBLISHED)
-    ->propertyCondition('nid', $person_nid);
-  $result = $query->execute();
-  if (empty($result['node'])) {
-    return;
-  }
-  $author_node = node_load(reset($result['node'])->nid);
-  $author_wrapper = entity_metadata_wrapper('node', $author_node);
-
-  $author_names = '';
-
-  // Try build field_view_field().
-  if ($author_wrapper->field_hebrew_name) {
-    $author_names_as_field = field_view_field('node', $author_node, 'field_hebrew_name');
-    $author_names = $author_wrapper->field_hebrew_name->value();
-  }
-  if ($author_wrapper->field_german_name) {
-    if (!isset($author_names_as_field)) {
-      $author_names_as_field = field_view_field('node', $author_node, 'field_german_name');
-    }
-    $author_names .= ', '.$author_wrapper->field_german_name->value();
-  }
-  if ($author_wrapper->field_pseudonym) {
-    if (!isset($author_names_as_field)) {
-      $author_names_as_field = field_view_field('node', $author_node, 'field_pseudonym');
-    }
-    $author_names .= ', '.$author_wrapper->field_pseudonym->value();
-  }
-  // If Success build field, change value to all fields values together.
-  if (isset($author_names_as_field)) {
-    // Check if $author_names string start with ',' and delete ', '.
-    if (substr($author_names, 0, 1) === ',') {
-      $author_names = substr($author_names, 2);
-    }
-    $author_names_as_field[0]['#markup'] = $author_names;
-    $author_names_as_field['#title'] = 'Other names for the author';
-  }
-  return $author_names_as_field;
-}
-
-
-/**
  *  Prefaces tab - role in book production of preface writer.
  *  Book producers tab - all fields from production bundle.
  *
