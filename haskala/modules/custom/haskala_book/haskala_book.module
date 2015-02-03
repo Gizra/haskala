@@ -69,12 +69,15 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
   // Sort fields by weight.
   $tab_fields_sorted = array();
 
+  // Tab sub groups fields.
+  $sub_tabs_fields = array();
+
   foreach ($tab->children as $child_name) {
 
     // If exist sub group. Ex.:Target audience tab contains sub groups.
-    if (substr($child_name, 0,5) == 'group') {
+    if (substr($child_name, 0, 5) == 'group') {
       $sub_tab = field_group_load_field_group($child_name, 'node', 'book', 'default');
-      // Recursive call
+      // Recursive call.
       $sub_tabs_fields[$child_name] = haskala_book_get_tab_fields($wrapper, $sub_tab, $node_view, $book_nid);
       if ($sub_tabs_fields[$child_name]) {
         // Add sub title at the beginning of the array.
@@ -88,9 +91,8 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
       $tab_fields_sorted[$weight] = $child_name;
     }
   }
-  ksort($tab_fields_sorted);
 
-  if (isset($sub_tabs_fields)) {
+  if ($sub_tabs_fields) {
     // Sort sub groups by weight.
     uasort($sub_tabs_fields, 'drupal_sort_weight');
     // Delete weight element.
@@ -99,12 +101,11 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
     }
     $tab_fields = $sub_tabs_fields;
   }
-  else{
-    $tab_fields_main = array();
-  }
 
+  // Fields of the main tab.
+  $tab_fields_main = array();
+  ksort($tab_fields_sorted);
   foreach ($tab_fields_sorted as $field_name) {
-
     // Check if the field isn't empty.
     if ($wrapper->$field_name->value()) {
       $field = render($node_view[$field_name]);
@@ -138,8 +139,8 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
     }
   }
 
-  if (isset($tab_fields_main)) {
-    if (isset($sub_tabs_fields)) {
+  if ($tab_fields_main) {
+    if ($sub_tabs_fields) {
       $tab_fields['main'] = $tab_fields_main;
     }
     else{
