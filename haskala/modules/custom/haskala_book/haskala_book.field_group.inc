@@ -671,10 +671,9 @@ function haskala_book_field_group_info() {
     'label' => 'References and bibliography',
     'weight' => '76',
     'children' => array(
-      0 => 'field_references_notes',
-      1 => 'field_secondary_sources',
-      2 => 'field_copy_of_book_used',
-      3 => 'field_book_studies',
+      0 => 'field_copy_of_book_used',
+      1 => 'field_references_notes',
+      2 => 'field_secondary_sources',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -701,10 +700,9 @@ function haskala_book_field_group_info() {
     'label' => 'References and bibliography',
     'weight' => '116',
     'children' => array(
-      0 => 'field_references_notes',
-      1 => 'field_secondary_sources',
-      2 => 'field_copy_of_book_used',
-      3 => 'field_book_studies',
+      0 => 'field_copy_of_book_used',
+      1 => 'field_references_notes',
+      2 => 'field_secondary_sources',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -809,11 +807,11 @@ function haskala_book_field_group_info() {
     'label' => 'Target audience',
     'weight' => '72',
     'children' => array(
-      0 => 'group_book_reception',
-      1 => 'group_preservation',
-      2 => 'group_sub_target_audience',
+      0 => 'group_target_production',
+      1 => 'group_book_reception',
+      2 => 'group_preservation',
       3 => 'group_target_general_notes',
-      4 => 'group_target_production',
+      4 => 'group_sub_target_audience',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
