@@ -373,6 +373,46 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-book-field_book_studies'
+  $field_instances['node-book-field_book_studies'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 37,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_book_studies',
+    'label' => 'Studies about the book',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 52,
+    ),
+  );
+
   // Exported field_instance: 'node-book-field_british_library_id'
   $field_instances['node-book-field_british_library_id'] = array(
     'bundle' => 'book',
@@ -716,7 +756,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_copy_of_book_used',
-    'label' => 'Copy of book used',
+    'label' => 'Copy of book used',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -726,9 +766,9 @@ function haskala_book_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'rows' => 3,
       ),
-      'type' => 'text_textfield',
+      'type' => 'text_textarea',
       'weight' => 51,
     ),
   );
@@ -4086,7 +4126,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 37,
+        'weight' => 38,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4097,7 +4137,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_references_notes',
-    'label' => 'Notes on references',
+    'label' => 'Notes',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -4110,7 +4150,7 @@ function haskala_book_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 52,
+      'weight' => 53,
     ),
   );
 
@@ -6334,7 +6374,7 @@ function haskala_book_field_default_field_instances() {
   t('Contacts with other people');
   t('Contemporary disputes about the book');
   t('Contemporary references to the book');
-  t('Copy of book used');
+  t('Copy of book used');
   t('Does the person\'s name appear in the book?');
   t('Edition of book');
   t('Evidence about book production');
@@ -6388,7 +6428,6 @@ function haskala_book_field_default_field_instances() {
   t('Notes');
   t('Notes on book availability');
   t('Notes on illustrations / diagrams');
-  t('Notes on references');
   t('Notes on target audience');
   t('Number');
   t('Number of languages');
@@ -6422,6 +6461,7 @@ function haskala_book_field_default_field_instances() {
   t('Role in book production');
   t('Secondary sources used by researchers');
   t('Secondary textual models');
+  t('Studies about the book');
   t('Target audience as described in the book');
   t('Tel-Aviv University Library');
   t('Text is presented as original');
