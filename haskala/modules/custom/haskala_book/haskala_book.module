@@ -72,7 +72,6 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
   foreach ($tab->children as $child_name) {
 
     // If exist sub group. Ex.:Target audience tab contains sub groups.
-    //if (strpos($child_name, 'group') !== FALSE) {
     if (substr($child_name, 0,5) == 'group') {
       $sub_tab = field_group_load_field_group($child_name, 'node', 'book', 'default');
       // Recursive call
