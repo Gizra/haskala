@@ -81,9 +81,8 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
       $sub_tab_fields = haskala_book_get_tab_fields($wrapper, $sub_tab, $node_view, $book_nid);
       if ($sub_tab_fields) {
         $sub_tabs_fields[$child_name] = $sub_tab_fields;
-          // Add sub title at the beginning of the array.
+        // Add sub title at the beginning of the array.
         $sub_tabs_fields[$child_name] = array('sub_title' => $sub_tab->label) + $sub_tabs_fields[$child_name];
-
         $sub_tabs_fields[$child_name]['weight'] = $sub_tab->weight;
       }
     }
@@ -112,8 +111,6 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
     if ($wrapper->$field_name->value()) {
       $field = render($node_view[$field_name]);
       $tab_fields_main[] = $field;
-
-
 
       // Role of preface writer.
       if ($field_name == 'field_writer_of_preface') {
