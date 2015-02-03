@@ -12,7 +12,6 @@ $plugin = array(
  */
 function haskala_book_alphabet_filter_content_type_render($subtype, $conf, $args, $context) {
   $item = menu_get_item(current_path());
-dpm($item);
   $variables = array();
 
   // Get english alphabet.
@@ -35,7 +34,6 @@ dpm($item);
 
   $variables['alphabet_en'] = theme('item_list', array('items' => $links_en));
   $variables['alphabet_he'] = theme('item_list', array('items' => $links_he));
-
 
   $block = new stdClass();
   $block->module = 'haskala_book';

@@ -23,6 +23,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
   $argument = empty($context[0]->data) ? 'A' : strtoupper($context[0]->data);
 
   $tid = !empty($context[1]->data->tid) ? $context[1]->data->tid : NULL;
+
   $book_type = $conf['book_type'];
   $node_type = $conf['node_type'];
 
@@ -62,6 +63,35 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
  *  Array with node objects.
  */
 function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', $book_type = 'regular', $tid = NULL) {
+  if ($tid) {
+
+    $query = db_select('taxonomy_index', 't');
+
+    $query->join('node', 'n', 't.nid = n.nid'); //JOIN node with users
+
+    $query->fields('n',array('nid'))//SELECT the fields from node
+
+    ->condition('t.tid', $tid, '=')
+
+    ->condition('n.title', $letter . '%', 'LIKE')
+
+    ->orderBy('n.title', 'ASC');//ORDER BY title
+
+    if ($limit != 50) {
+      // Could be that for some letter there are more than 50 items. In this case
+      // if this is the first requested letter we should load all of them.
+      $query->range(0, $limit);
+    }
+
+    $result = $query->execute();
+
+    $records = $result->fetchAllAssoc('nid');
+
+    $nodes = node_load_multiple(array_keys($records));
+
+    return $nodes;
+  }
+
   $query = new EntityFieldQuery();
   $query
     ->entityCondition('entity_type', 'node')
