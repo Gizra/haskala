@@ -12,7 +12,7 @@ projects[ckeditor][subdir] = "contrib"
 projects[ckeditor][version] = "1.x-dev"
 
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.5"
+projects[ctools][version] = "1.6"
 
 projects[diff][subdir] = "contrib"
 projects[diff][version] = "3.2"
@@ -32,13 +32,13 @@ projects[field_group][subdir] = "contrib"
 projects[field_group][version] = "1.4"
 
 projects[jquery_update][subdir] = "contrib"
-projects[jquery_update][version] = "2.4"
+projects[jquery_update][version] = "2.5"
 
 projects[module_filter][subdir] = "contrib"
 projects[module_filter][version] = "2.0-alpha2"
 
 projects[panels][subdir] = "contrib"
-projects[panels][version] = "3.4"
+projects[panels][version] = "3.5"
 
 projects[pathauto][subdir] = "contrib"
 projects[pathauto][version] = "1.2"
