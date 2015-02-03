@@ -121,73 +121,87 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
 
   // Sort fields by weight.
   $tab_fields_sorted = array();
+
   foreach($tab->children as $child_name) {
 
     // If exist sub group. Ex.:Target audience tab contains sub groups.
-    if (strpos($child_name,'group') !== false){
+    if (strpos($child_name, 'group') !== FALSE) {
       $sub_tab = field_group_load_field_group($child_name, 'node', 'book', 'default');
       // Recorsive call
-      $sub_tab_fields[$child_name] = haskala_book_get_tab_fields($wrapper, $sub_tab, $node_view, $book_nid);
-      // Add sub title at the beginning of the array.
-      $sub_tab_fields[$child_name] = array('sub_title' => $sub_tab->label) + $sub_tab_fields[$child_name];
+      $sub_tabs_fields[$child_name] = haskala_book_get_tab_fields($wrapper, $sub_tab, $node_view, $book_nid);
+      if ($sub_tabs_fields[$child_name]) {
+        // Add sub title at the beginning of the array.
+        $sub_tabs_fields[$child_name] = array('sub_title' => $sub_tab->label) + $sub_tabs_fields[$child_name];
+
+        $sub_tabs_fields[$child_name]['weight'] = $sub_tab->weight;
+      }
     }
     else {
       $field_name = $child_name;
 
-      if ($wrapper->$field_name->value()){
+      if ($wrapper->$field_name->value()) {
         $weight = $node_view[$field_name]['#weight'];
         $tab_fields_sorted[$weight] = $field_name;
       }
     }
-    ksort($tab_fields_sorted);
-
-    if (isset($sub_tab_fields)) {
-      $tab_fields = $sub_tab_fields;
-    }
-    else{
-      $tab_fields_main = array();
-    }
-
-    foreach($tab_fields_sorted as $field_name) {
-
-      // Check if the field isn't empty.
-      if ($wrapper->$field_name->value()) {
-        $field = render($node_view[$field_name]);
-        $tab_fields_main[] = $field;
-
-        // Other names for the author.
-        if ($field_name == 'field_original_author') {
-          $author_names_as_field = haskala_person_get_names($wrapper->$field_name->value()->nid);
-        }
-
-        // Role of preface writer.
-        if ($field_name == 'field_writer_of_preface') {
-          $production_node = haskala_book_get_production($book_nid, $wrapper->$field_name->value()->nid);
-          if ($production_node) {
-            $field = field_view_field('node', $production_node, 'field_role');
-            $tab_fields_main[] = $field;
-          }
-        }
-      }
-    }
-
-    // Add $author_names to translation tab.
-    if ($tab->label == 'Translation' && isset($author_names_as_field)){
-      // Move the translation general notes if exist to the end.
-      $notes_key = key(preg_grep('/field-translation-notes/', $tab_fields_main));
-      $tab_fields_main[] = $author_names_as_field;
-      if ($notes_key) {
-        $notes_element = $tab_fields_main[$notes_key];
-        unset($tab_fields_main[$notes_key]);
-        $tab_fields_main[] = $notes_element;
-      }
-    }
   }
-  if (isset($sub_tab_fields)) {
-    $tab_fields['main'] = $tab_fields_main;
+  ksort($tab_fields_sorted);
+
+  if (isset($sub_tabs_fields)) {
+    // Sort sub groups by weight.
+    uasort($sub_tabs_fields, 'drupal_sort_weight');
+    // Delete weight element.
+    foreach (array_keys($sub_tabs_fields) as $sub_tab_name){
+      unset($sub_tabs_fields[$sub_tab_name]['weight']);
+    }
+    $tab_fields = $sub_tabs_fields;
   }
   else{
-    $tab_fields = $tab_fields_main;
+    $tab_fields_main = array();
+  }
+
+  foreach($tab_fields_sorted as $field_name) {
+
+    // Check if the field isn't empty.
+    if ($wrapper->$field_name->value()) {
+      $field = render($node_view[$field_name]);
+      $tab_fields_main[] = $field;
+
+      // Other names for the author.
+      if ($field_name == 'field_original_author') {
+        $author_names_as_field = haskala_person_get_names($wrapper->$field_name->value()->nid);
+      }
+
+      // Role of preface writer.
+      if ($field_name == 'field_writer_of_preface') {
+        $production_node = haskala_book_get_production($book_nid, $wrapper->$field_name->value()->nid);
+        if ($production_node) {
+          $field = field_view_field('node', $production_node, 'field_role');
+          $tab_fields_main[] = $field;
+        }
+      }
+    }
+  }
+
+  // Add $author_names to translation tab.
+  if ($tab->label == 'Translation' && isset($author_names_as_field)){
+    // Move the translation general notes if exist to the end.
+    $notes_key = key(preg_grep('/field-translation-notes/', $tab_fields_main));
+    $tab_fields_main[] = $author_names_as_field;
+    if ($notes_key) {
+      $notes_element = $tab_fields_main[$notes_key];
+      unset($tab_fields_main[$notes_key]);
+      $tab_fields_main[] = $notes_element;
+    }
+  }
+
+  if (isset($tab_fields_main)) {
+    if (isset($sub_tabs_fields)) {
+      $tab_fields['main'] = $tab_fields_main;
+    }
+    else{
+      $tab_fields = $tab_fields_main;
+    }
   }
 
   return $tab_fields;
