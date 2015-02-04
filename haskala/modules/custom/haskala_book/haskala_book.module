@@ -45,7 +45,6 @@ function haskala_book_get_production($book_nid, $person_nid = NULL, $role = NULL
     $query->fieldCondition('field_role', 'tid', $role_tid);
   }
   $result = $query->execute();
-  dpm($result);
   if (empty($result['node'])) {
     return;
   }
@@ -126,7 +125,6 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
       if ($field_name == 'field_book') {
         $production_node = haskala_book_get_production($book_nid, NULL, t('Translator'));
         if ($production_node) {
-          //$production_wrapper = entity_metadata_wrapper('node', $production_node);
           $translator_name_field = field_view_field('node', $production_node, 'field_producer');
           if ($translator_name_field) {
             $translator_name_field['#title'] = t('Author of original');
