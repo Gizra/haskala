@@ -12,6 +12,6 @@ Feature: HomePage Drupal
 
   Examples:
     | link home page | link |
-    | BOOKS          | A    |
+    | Books          | A    |
     | Morals         | next |
     | Digital Books  | O    |
