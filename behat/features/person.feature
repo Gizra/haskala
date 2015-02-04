@@ -15,3 +15,14 @@ Feature: Person
     | Mendelssohn, Moses                               | Dessau                |
     | Friedländer, David                               | Königsberg            |
     | Lindau, Baruch ben Jehuda Löb                    | Hannover              |
+
+  @api
+  Scenario Outline: Verify breadcrumbs exist
+    Given I am an anonymous user
+    When  I visit "<title>" node of type "person"
+    Then  I should see the link "<title>"
+
+  Examples:
+    | title          |
+    | Satanow, Isaak |
+    | חיאן, צדוק      |
