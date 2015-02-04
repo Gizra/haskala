@@ -5042,7 +5042,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sources_exist',
-    'label' => 'Are there sources mentioned in the book itself',
+    'label' => 'Are there sources mentioned in the book itself?',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -5134,7 +5134,7 @@ function haskala_book_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'display_label' => 0,
+        'display_label' => 1,
       ),
       'type' => 'options_onoff',
       'weight' => 23,
@@ -7143,7 +7143,7 @@ function haskala_book_field_default_field_instances() {
   t('Are there personal addresses?');
   t('Are there rabbinical approbations?');
   t('Are there recommendations?');
-  t('Are there sources mentioned in the book itself');
+  t('Are there sources mentioned in the book itself?');
   t('Are there sources not mentioned in the book?');
   t('Are there thanks?');
   t('Bans');
