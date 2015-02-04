@@ -1,5 +1,5 @@
 Uniqe ID,Title,Producer of book,Name of book producer,Role in book creation,Notes on roles in book's creation,Does the person's name appear in the book,Name as it appears in the book,Evidence for person's identity if it does not appear in the book,Approximate age during writing of book,Religion during writing of book,Location during writing of book,References for person and book
-producer1,"Alexander, Isaak - אלכסנדר, יצחק",Abhandlung von der Freiheit des Menschen,"Alexander, Isaak - אלכסנדר, יצחק",Author,notes example,1,name example,evidence example,120,jew,Vienna,references example
+producer1,"Alexander, Isaak - אלכסנדר, יצחק",Abhandlung von der Freiheit des Menschen,"Alexander, Isaak - אלכסנדר, יצחק",Author,,,,,,,,
 producer2,Anonym,Actenstücke zur Geschichte der Erhebung der Juden zu Bürgern der Republik Batavien,Anonym,Translator,,,,,,,,
 producer3,"Friedländer, David - פרידלענדר, דוד",Akten-Stücke die Reform der Jüdischen Kolonieen in den Preußischen Staaten betreffend,"Friedländer, David - פרידלענדר, דוד","Author,Mevi La'Dfus (Producer)",,,,,,,,
 producer4,אנונימי,An das Breslauer Publikum,אנונימי,Author,,,,,,,,
