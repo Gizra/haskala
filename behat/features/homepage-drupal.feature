@@ -7,11 +7,11 @@ Feature: HomePage Drupal
   Scenario Outline: Visit a homepage drupal page
     Given I am an anonymous user
     When  I visit ""
-    Then  I click "<link home page>"
+    Then  I click "<on link>"
     And   I should see the link "<link>"
 
   Examples:
-    | link home page | link |
+    | on link        | link |
     | Books          | A    |
     | Morals         | next |
     | Digital Books  | O    |
