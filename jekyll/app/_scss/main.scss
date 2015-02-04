@@ -62,6 +62,24 @@ a, a:hover, a:visited {
 
   header {
 
+    .bread-crumbs {
+      margin-right: 4px;
+      margin-top: 10px;
+
+      li {
+        display: inline;
+        font-weight: bold;
+
+        &:after {
+          content: ' >';
+        }
+
+        &.last:after {
+          content: '';
+        }
+      }
+    }
+
     a {
       color: $darkgray;
       display: inline-block;
