@@ -193,10 +193,10 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
  *
  *  @param $book_nid
  *   The book node ID.
- *  *  @param $bundle
+ *  @param $bundle
  *   The book node ID.
  *
- *  @return multi bundle fields .
+ *  @return multi bundle fields.
  */
 function haskala_book_get_reference_nodes($book_nid, $bundle) {
   $query = new EntityFieldQuery();
@@ -241,7 +241,6 @@ function haskala_book_get_reference_nodes_fields($book_nid, $bundle, $nodes, $gr
       $translator_name_field = haskala_book_get_translator($node->nid);
       if ($translator_name_field) {
         $translator_name_field['#title'] = t('Translator');
-
         array_unshift($node_fields, $translator_name_field);
       }
     }
