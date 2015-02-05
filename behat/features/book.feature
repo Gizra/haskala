@@ -7,7 +7,7 @@ Feature: Book
   Scenario Outline: Visit a book page
     Given I am an anonymous user
     When  I visit "<title>" node of type "book"
-    Then  I should get a "200" HTTP response
+    Then  I should see "14" ".work-box" elements
     And   I should see the text "<text>"
 
   Examples:
