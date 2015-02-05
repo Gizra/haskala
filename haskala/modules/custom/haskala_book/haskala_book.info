@@ -421,6 +421,7 @@ features[page_manager_pages][] = books
 features[page_manager_pages][] = digital_books
 features[taxonomy][] = alignment
 features[taxonomy][] = date_format
+features[taxonomy][] = edition_type
 features[taxonomy][] = fonts
 features[taxonomy][] = languages
 features[taxonomy][] = location_of_footnotes
