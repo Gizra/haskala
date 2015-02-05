@@ -232,6 +232,7 @@ features[field_group][] = group_top_details|node|book|form
 features[field_group][] = group_topics|node|book|default
 features[field_group][] = group_topics|node|book|form
 features[field_group][] = group_translatation|node|book|default
+features[field_group][] = group_translation_editions_tab|node|book|default
 features[field_group][] = group_translation|node|book|form
 features[field_group][] = group_valumes|node|book|default
 features[field_group][] = group_volumes|node|book|form

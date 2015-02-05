@@ -1421,12 +1421,8 @@ function haskala_book_field_group_info() {
       9 => 'field_original_title_else_refer',
       10 => 'field_original_title_elsewhere',
       11 => 'field_original_type',
-      12 => 'field_translation_city',
-      13 => 'field_translation_notes',
-      14 => 'field_translation_references',
-      15 => 'field_translation_type',
-      16 => 'field_translation_year',
-      17 => 'field_translator',
+      12 => 'field_translation_notes',
+      13 => 'field_translation_type',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -1439,6 +1435,40 @@ function haskala_book_field_group_info() {
     ),
   );
   $export['group_translatation|node|book|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_translation_editions_tab|node|book|default';
+  $field_group->group_name = 'group_translation_editions_tab';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Translation info',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_translation_city',
+      1 => 'field_translation_references',
+      2 => 'field_translation_year',
+      3 => 'field_translator',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-translation-editions-tab field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_translation_editions_tab|node|book|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
