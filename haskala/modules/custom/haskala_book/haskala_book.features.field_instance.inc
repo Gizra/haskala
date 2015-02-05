@@ -6625,7 +6625,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_edition_references',
-    'label' => 'References for edition',
+    'label' => 'References',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -7280,7 +7280,6 @@ function haskala_book_field_default_field_instances() {
   t('Quotes from Jewish sources');
   t('Quotes from non-Jewish sources');
   t('References');
-  t('References for edition');
   t('References for name of author of the original text as it appears elsewhere');
   t('References for title of the original text as it appears elsewhere');
   t('References for translation');
