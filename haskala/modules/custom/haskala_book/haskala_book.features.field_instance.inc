@@ -6136,7 +6136,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_translation_references',
-    'label' => 'References for translation',
+    'label' => 'References',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -7282,7 +7282,6 @@ function haskala_book_field_default_field_instances() {
   t('References');
   t('References for name of author of the original text as it appears elsewhere');
   t('References for title of the original text as it appears elsewhere');
-  t('References for translation');
   t('Religion during writing of book');
   t('Role(s) in book creation');
   t('Role in book production');
