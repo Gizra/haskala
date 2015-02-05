@@ -5,7 +5,7 @@ Feature: Person
 
   @api
   Scenario Outline: Login to site, and check access to the person page.
-    Given  I am an anonymous user
+    Given I am an anonymous user
     When  I visit "<title>" node of type "person"
     Then  I should get a "200" HTTP response
     And   I should see the text "<text>"

@@ -20,7 +20,7 @@ Feature: Book page
     | Publisher/ Printing press   | Place of publication as it appears in | Dyhernfurth |
     | Persons mentioned in book   | שיחיו ליום הולדתו בשנת                     |            |
     | Topics                      | Topic                                 | Religious beliefs |
-    | Target audience             | described in the book                 | maskilim          |
+    | Target audience             | Target audience as described in the book | maskilim          |
     | Catalog numbers             | University catalog                    |                   |
     | References and bibliography | לאומית                                  |                  |
 
