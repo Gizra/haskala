@@ -133,7 +133,6 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
         }
       }
 
-
       // Role of preface writer.
       if ($field_name == 'field_writer_of_preface') {
         $production_node = haskala_book_get_production($book_nid, $wrapper->$field_name->getIdentifier());
@@ -144,7 +143,6 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
       }
     }
   }
-
 
 
   // Add $author_names to translation tab.
@@ -216,11 +214,19 @@ function haskala_book_get_reference_nodes($book_nid, $bundle) {
  */
 function haskala_book_get_reference_nodes_fields($book_nid, $bundle, $nodes, $group_name) {
   $nodes_fields = array();
-  foreach($nodes as $node) {
+  foreach ($nodes as $node) {
     $wrapper = entity_metadata_wrapper('node', $node);
     $tab = field_group_load_field_group($group_name, 'node', $bundle, 'default');
     $node_view = node_view($node);
-    $nodes_fields[] = haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid);
+    $node_fields = haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid);
+    // Add language translation.
+    if ($bundle == 'book') {
+      if ($wrapper->field_language->value()) {
+        $language_field = render($node_view['field_language']);
+        array_unshift($node_fields, $language_field);
+      }
+    }
+    $nodes_fields[] = $node_fields;
   }
   return $nodes_fields;
 }
@@ -271,7 +277,7 @@ function haskala_book_get_mentions($book_nid) {
     return;
   }
   $mentions_fields = array();
-  foreach($mention_nodes as $mention_node) {
+  foreach ($mention_nodes as $mention_node) {
     $mentionee_fields = array();
     $mention_wrapper = entity_metadata_wrapper('node', $mention_node);
     if ($mention_wrapper->field_mentionee->value()) {
