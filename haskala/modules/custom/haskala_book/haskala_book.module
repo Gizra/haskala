@@ -178,6 +178,86 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
 }
 
 /**
+ *  Get another Bundle nodes referece to the book.
+ *
+ *  @param $book_nid
+ *   The book node ID.
+ *  *  @param $bundle
+ *   The book node ID.
+ *
+ *  @return multi bundle fields .
+ */
+function haskala_book_get_reference_nodes($book_nid, $bundle) {
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', $bundle)
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->fieldCondition('field_book', 'target_id', $book_nid);
+  $result = $query->execute();
+  if (empty($result['node'])) {
+    return;
+  }
+  return node_load_multiple(array_keys($result['node']));
+}
+
+/**
+ *  Get nodes reference fields.
+ *
+ *  @param $book_nid
+ *   The book node ID.
+ *  @param $bundle
+ *   The book node ID.
+ *  @param $nodes
+ *   Array of nodes.
+ *  @param $group_name
+ *   The group of fields name .
+ *
+ *  @return multi reference nodes fields .
+ */
+function haskala_book_get_reference_nodes_fields($book_nid, $bundle, $nodes, $group_name) {
+  $nodes_fields = array();
+  foreach($nodes as $node) {
+    $wrapper = entity_metadata_wrapper('node', $node);
+    $tab = field_group_load_field_group($group_name, 'node', $bundle, 'default');
+    $node_view = node_view($node);
+    $nodes_fields[] = haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid);
+  }
+  return $nodes_fields;
+}
+
+/**
+ *  Editions for Editions tab.
+ *
+ *  @param $book_nid
+ *   The book node ID.
+ *
+ *  @return multi editions fields .
+ */
+function haskala_book_get_editions($book_nid) {
+  $editions_nodes = haskala_book_get_reference_nodes($book_nid, 'edition');
+  if (!$editions_nodes) {
+    return;
+  }
+  return haskala_book_get_reference_nodes_fields($book_nid, 'edition', $editions_nodes, 'group_editions');
+}
+
+/**
+ *  Translations for Editions tab.
+ *
+ *  @param $book_nid
+ *   The book node ID.
+ *
+ *  @return multi translations fields .
+ */
+function haskala_book_get_translations($book_nid) {
+  $translations_nodes = haskala_book_get_reference_nodes($book_nid, 'book');
+  if (!$translations_nodes) {
+    return;
+  }
+  return haskala_book_get_reference_nodes_fields($book_nid, 'book', $translations_nodes, 'group_translation_editions_tab');
+}
+
+/**
  *  Persons mentioned in book tab.
  *
  *  @param $book_nid
@@ -186,16 +266,7 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
  *  @return multi mentions fields .
  */
 function haskala_book_get_mentions($book_nid) {
-  $query = new EntityFieldQuery();
-  $query->entityCondition('entity_type', 'node')
-    ->entityCondition('bundle', 'mention')
-    ->propertyCondition('status', NODE_PUBLISHED)
-    ->fieldCondition('field_book', 'target_id', $book_nid);
-  $result = $query->execute();
-  if (empty($result['node'])) {
-    return;
-  }
-  $mention_nodes = node_load_multiple(array_keys($result['node']));
+  $mention_nodes = haskala_book_get_reference_nodes($book_nid, 'mention');
   if (!$mention_nodes) {
     return;
   }
@@ -203,7 +274,6 @@ function haskala_book_get_mentions($book_nid) {
   foreach($mention_nodes as $mention_node) {
     $mentionee_fields = array();
     $mention_wrapper = entity_metadata_wrapper('node', $mention_node);
-    //$mention_node_view = node_view($mention_node);
     if ($mention_wrapper->field_mentionee->value()) {
       $person_node = node_load($mention_wrapper->field_mentionee->value()->nid);
       $person_wrapper = entity_metadata_wrapper('node', $person_node);
