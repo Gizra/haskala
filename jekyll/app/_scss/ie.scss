@@ -1,3 +1,25 @@
 body {
-  background: deeppink !important;
+  .page-books .wrapper .books-list .letter-wrapper {
+    clear: both/9;
+    margin-bottom: 48px/9;
+  }
+  .page-books .wrapper footer {
+    margin-top: 114px/9;
+  }
+
+  .page-single-book .wrapper .main-content .top-details {
+    padding: 0 21px 48px/9;
+    border-bottom: 2px solid #615f59/9;
+    margin-bottom: 29px/9;
+  }
+
+  .page-single-book .wrapper .main-content .fields-group {
+    clear: both/9;
+    border-top: 1px solid #615f59/9;
+    padding: 7px 15px 2px/9;
+    margin-top: 56px/9;
+  }
+  .page-single-book .wrapper footer {
+    margin-top: 16px/9;
+  }
 }
