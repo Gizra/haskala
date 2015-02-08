@@ -68,9 +68,9 @@ function haskala_book_get_translator($book_nid) {
   if (!$production_node) {
     return;
   }
-
   return field_view_field('node', $production_node, 'field_producer');
 }
+
 
 /**
  *  Get tab group fields.
@@ -223,7 +223,7 @@ function haskala_book_get_reference_nodes($book_nid, $bundle) {
  *  @param $group_name
  *   The group of fields name .
  *
- *  @return multi reference nodes fields .
+ *  @return Multi reference nodes fields .
  */
 function haskala_book_get_reference_nodes_fields($book_nid, $bundle, $nodes, $group_name) {
   $nodes_fields = array();
@@ -255,7 +255,7 @@ function haskala_book_get_reference_nodes_fields($book_nid, $bundle, $nodes, $gr
  *  @param $book_nid
  *   The book node ID.
  *
- *  @return multi editions fields .
+ *  @return Multi editions fields .
  */
 function haskala_book_get_editions($book_nid) {
   $editions_nodes = haskala_book_get_reference_nodes($book_nid, 'edition');
@@ -271,7 +271,7 @@ function haskala_book_get_editions($book_nid) {
  *  @param $book_nid
  *   The book node ID.
  *
- *  @return multi translations fields .
+ *  @return Multi translations fields .
  */
 function haskala_book_get_translations($book_nid) {
   $translations_nodes = haskala_book_get_reference_nodes($book_nid, 'book');
@@ -287,7 +287,7 @@ function haskala_book_get_translations($book_nid) {
  *  @param $book_nid
  *   The book node ID.
  *
- *  @return multi mentions fields .
+ *  @return Multi mentions fields .
  */
 function haskala_book_get_mentions($book_nid) {
   $mention_nodes = haskala_book_get_reference_nodes($book_nid, 'mention');
