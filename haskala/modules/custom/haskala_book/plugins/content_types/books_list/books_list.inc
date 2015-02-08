@@ -5,7 +5,10 @@ $plugin = array(
   'description' => t('Display a nodes list starting from some letter.'),
   'category' => t('Haskala'),
   'hook theme' => 'haskala_book_books_list_content_type_theme',
-  'required context' => new ctools_context_optional(t('Letter'), 'string'),
+  'required context' => array(
+    new ctools_context_optional(t('Letter'), 'string'),
+    new ctools_context_optional(t('Term'), 'taxonomy_term'),
+  ),
   'defaults' => array(
     'book_type' => 'regular',
     'node_type' => 'book',
@@ -17,8 +20,9 @@ $plugin = array(
  */
 function haskala_book_books_list_content_type_render($subtype, $conf, $args, $context) {
   $variables = array();
+  $argument = empty($context[0]->data) ? 'A' : strtoupper($context[0]->data);
 
-  $argument = empty($context->data) ? 'A' : strtoupper($context->data);
+  $tid = !empty($context[1]->data->tid) ? $context[1]->data->tid : NULL;
 
   $book_type = $conf['book_type'];
   $node_type = $conf['node_type'];
@@ -27,6 +31,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
     'node' => array(
       'node_type' => $node_type,
       'book_type' => $book_type,
+      'tid' => $tid,
     )
   );
 
@@ -51,11 +56,17 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
  *  Node bundle.
  * @param $book_type
  *  Type of the book node. Could be regular or digital.
+ * @tid
+ *  Taxonomy term id.
  *
  * @return array
  *  Array with node objects.
  */
-function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', $book_type = 'regular') {
+function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', $book_type = 'regular', $tid = NULL) {
+  if ($tid) {
+    return haskala_book_get_nodes_by_term_and_letter($tid, $letter, $limit);
+  }
+
   $query = new EntityFieldQuery();
   $query
     ->entityCondition('entity_type', 'node')
@@ -79,8 +90,38 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', 
   }
 
   if ($book_type == 'digital' && $node_type == 'book') {
-      $query->fieldCondition('field_link_to_digital_book',  'value', 'NULL', 'IS NOT NULL');
-    }
+    $query->fieldCondition('field_link_to_digital_book',  'value', 'NULL', 'IS NOT NULL');
+  }
+
+  $default_limit = variable_get('haskala_index_items_limit', 50);
+  if ($limit != $default_limit) {
+    // Could be that for some letter there are more than 50 items. In this case
+    // if this is the first requested letter we should load all of them.
+    $query->range(0, $limit);
+  }
+
+  $result = $query->execute();
+  // Load nodes by nids from result.
+  $nodes = !empty($result) ? node_load_multiple(array_keys($result['node'])) : array();
+  return $nodes;
+}
+
+/**
+ * @param $tid
+ * @param $letter
+ * @param $limit
+ * @return array
+ */
+function haskala_book_get_nodes_by_term_and_letter($tid, $letter, $limit) {
+  $query = db_select('taxonomy_index', 't');
+
+  $query->join('node', 'n', 't.nid = n.nid'); //JOIN terms with nodes
+
+  $query->fields('n',array('nid'))//SELECT the fields from node
+  ->condition('t.tid', $tid)
+    ->condition('n.status', NODE_PUBLISHED)
+    ->condition('n.title', $letter . '%', 'LIKE')
+    ->orderBy('n.title', 'ASC');//ORDER BY title
 
   if ($limit != 50) {
     // Could be that for some letter there are more than 50 items. In this case
@@ -90,8 +131,9 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', 
 
   $result = $query->execute();
 
-  // Load nodes by nids from result.
-  $nodes = !empty($result) ? node_load_multiple(array_keys($result['node'])) : array();
+  $records = $result->fetchAllAssoc('nid');
+
+  $nodes = node_load_multiple(array_keys($records));
 
   return $nodes;
 }
@@ -116,6 +158,7 @@ function haskala_book_books_list_content_type_edit_form($form, &$form_state) {
   $book_types = array(
     'regular' => 'regular',
     'digital' => 'digital',
+    'from_term' => 'from_term',
   );
   $form['book_type'] = array(
     '#type' => 'select',
@@ -160,3 +203,4 @@ function haskala_book_books_list_content_type_theme(&$theme, $plugin) {
     ),
   );
 }
+

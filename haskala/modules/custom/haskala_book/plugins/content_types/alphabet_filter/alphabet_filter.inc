@@ -12,7 +12,6 @@ $plugin = array(
  */
 function haskala_book_alphabet_filter_content_type_render($subtype, $conf, $args, $context) {
   $item = menu_get_item(current_path());
-
   $variables = array();
 
   // Get english alphabet.
@@ -23,18 +22,18 @@ function haskala_book_alphabet_filter_content_type_render($subtype, $conf, $args
 
   $links_en = array();
   $links_he = array();
+
   // Create English filter list.
   foreach ($letters_en as $letter) {
-    $links_en[] = l($letter, $item['path'] . '/' . $letter);
+    $links_en[] = l($letter, $item['tab_root_href'] . '/' . $letter);
   }
   // Create Hebrew filter list.
   foreach ($letters_he as $letter) {
-    $links_he[] = l($letter, $item['path'] . '/' . $letter);
+    $links_he[] = l($letter, $item['tab_root_href'] . '/' . $letter);
   }
 
   $variables['alphabet_en'] = theme('item_list', array('items' => $links_en));
   $variables['alphabet_he'] = theme('item_list', array('items' => $links_he));
-
 
   $block = new stdClass();
   $block->module = 'haskala_book';
@@ -62,3 +61,4 @@ function haskala_book_alphabet_filter_content_type_theme(&$theme, $plugin) {
     ),
   );
 }
+
