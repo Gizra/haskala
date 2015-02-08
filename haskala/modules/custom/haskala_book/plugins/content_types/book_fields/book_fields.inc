@@ -56,6 +56,21 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   // Add Book producers tab.
   haskala_book_production_tab_fields($tabs_fields, $book_nid);
 
+  // Add editions to Editions tab.
+  $editions_fields = haskala_book_get_editions($book_nid);
+  if ($editions_fields) {
+    $editions_tmp = array_merge($tabs_fields[t('Editions')], $editions_fields);
+    $tabs_fields[t('Editions')] = $editions_tmp;
+  }
+
+  // Add translations to Editions tab.
+  $translations_fields = haskala_book_get_translations($book_nid);
+  if ($translations_fields) {
+    $tabs_fields[t('Editions')]['sub_title'] = t('Translations');
+    $translation_tmp = array_merge($tabs_fields[t('Editions')], $translations_fields);
+    $tabs_fields[t('Editions')] = $translation_tmp;
+  }
+
   // Add mentionees for PERSONS MENTIONED IN BOOK tab.
   $mentionees = haskala_book_get_mentions($book_nid);
   if ($mentionees) {
