@@ -49,3 +49,17 @@ Feature: Book page
   Examples:
     | tab         | text     |
     | Translation | פרידלענדר, דוד,Friedländer, David,Friedlaender, David,Friedlander, David |
+
+
+  @api
+  Scenario Outline: Visit a books page
+    Given I am an anonymous user
+    And   I visit "books/דברי-שלום-ואמת-א"
+    When  I should see the text "<tab>"
+    Then  I should see the text "<text>"
+    And   I click "<link>"
+    And   I should get a "200" HTTP response
+
+  Examples:
+    | tab         | text     | link          |
+    | Editions | בית עקד ספרים | Vienna        |
