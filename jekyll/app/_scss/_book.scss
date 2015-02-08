@@ -91,70 +91,63 @@
         padding-bottom: 13px;
         position: relative;
 
-        ul{
-          height: 13px;
-          width: 100%;
+        .tabs-frame {
           overflow: hidden;
+          width: 98%;
           text-overflow: ellipsis;
-          display: inline;
+          white-space: nowrap;
 
-          li {
-            display: list-item;
-            list-style-type: disc;
-            margin: 0 12px;
-            float: left;
-            font-size: 14px;
+          ul {
+            display: inline;
 
-            &:first-child
-            {
-              list-style-type: none;
-            }
+            li {
+              display: inline;
+              margin: 0 12px;
+              font-size: 14px;
 
-            &.active a,
-            a:hover,
-             {
-              color: $lightBlue;
-            }
+              &:first-child {
+                list-style-type: none;
+              }
 
-            a {
-              color: $darkgray;
-              font-size: 19px;
+              &.active a,
+              a:hover {
+                color: $lightBlue;
+              }
+
+              a {
+                color: $darkgray;
+                font-size: 19px;
+              }
             }
           }
         }
 
-
-        &:before, &:after {
+        & > a {
           background: url('../images/sprites.png') no-repeat center;
           margin-top: 4px;
-        }
-
-        &:before {
-          content: " ";
-          background-position: -200px 0;
+          content: '';
           width: 9px;
           height: 15px;
-          float: left;
-        }
 
-        &:before.disabled {
-          background-position: -200px -50px;
-        }
+          &.previous {
+            background-position: -200px 0;
+            float: left;
+          }
 
-        &:after {
-          content: " ";
-          background-position: -220px 0;
-          width: 9px;
-          height: 15px;
-          float: right;
-          position: absolute;
-          top: 0;
-          right: 0;
+          &.previous.disabled {
+            background-position: -200px -50px;
+          }
 
-        }
+          &.next {
+            background-position: -220px 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
 
-        &:after.disabled {
-          background-position: -220px -50px;
+          &.next.disabled {
+            background-position: -220px -50px;
+          }
         }
       }
 
@@ -163,7 +156,6 @@
         padding-top: 15px;
 
         .fields-group {
-
           border-top: 1px solid $darkgray;
           clear: both;
           padding: 6px 18px 2px;
