@@ -32,6 +32,10 @@
       &:before, &:after {
         width: 45%;
         padding-top: 8px;
+
+        @media (max-width: 850px) {
+          display: none;
+        }
       }
     }
 
@@ -92,10 +96,14 @@
 
         .tabs-frame {
           overflow: hidden;
-          width: 98%;
+          width: 97%;
           text-overflow: ellipsis;
           white-space: nowrap;
           margin-left: 20px;
+
+          @media (max-width: 850px) {
+            width: 93%;
+          }
 
           ul {
             display: inline;
@@ -131,6 +139,7 @@
           content: '';
           width: 9px;
           height: 15px;
+          cursor: pointer;
 
           &.previous {
             background-position: -200px 0;
@@ -150,6 +159,10 @@
 
           &.next.disabled {
             background-position: -220px -50px;
+          }
+
+          &.disabled {
+            cursor: auto;
           }
         }
       }
