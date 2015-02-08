@@ -88,7 +88,6 @@
       #details-navigation {
         font-family: bell_mtbold;
         letter-spacing: 0.54px;
-        padding-bottom: 13px;
         position: relative;
 
         .tabs-frame {
@@ -96,9 +95,12 @@
           width: 98%;
           text-overflow: ellipsis;
           white-space: nowrap;
+          margin-left: 20px;
 
           ul {
             display: inline;
+            margin-left: 0;
+            transition: 400ms;
 
             li {
               display: inline;
@@ -107,6 +109,7 @@
 
               &:first-child {
                 list-style-type: none;
+                margin-left: 0;
               }
 
               &.active a,
