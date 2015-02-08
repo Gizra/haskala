@@ -1102,6 +1102,46 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-book-field_editions_notes'
+  $field_instances['node-book-field_editions_notes'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_editions_notes',
+    'label' => 'Notes',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 21,
+    ),
+  );
+
   // Exported field_instance: 'node-book-field_epilogue'
   $field_instances['node-book-field_epilogue'] = array(
     'bundle' => 'book',
@@ -1443,7 +1483,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2156,7 +2196,7 @@ function haskala_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 19,
     ),
   );
 
@@ -4704,7 +4744,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4715,7 +4755,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_references_for_editions',
-    'label' => 'References for editions',
+    'label' => 'References',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -4725,10 +4765,10 @@ function haskala_book_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'rows' => 3,
       ),
-      'type' => 'text_textfield',
-      'weight' => 8,
+      'type' => 'text_textarea',
+      'weight' => 20,
     ),
   );
 
@@ -4784,7 +4824,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6096,7 +6136,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_translation_references',
-    'label' => 'References for translation',
+    'label' => 'References',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -6453,7 +6493,7 @@ function haskala_book_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6585,7 +6625,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_edition_references',
-    'label' => 'References for edition',
+    'label' => 'References',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -7240,11 +7280,8 @@ function haskala_book_field_default_field_instances() {
   t('Quotes from Jewish sources');
   t('Quotes from non-Jewish sources');
   t('References');
-  t('References for edition');
   t('References for name of author of the original text as it appears elsewhere');
   t('References for title of the original text as it appears elsewhere');
-  t('References for translation');
-  t('References for editions');
   t('Religion during writing of book');
   t('Role(s) in book creation');
   t('Role in book production');
