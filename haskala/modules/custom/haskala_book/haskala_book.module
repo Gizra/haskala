@@ -61,7 +61,7 @@ function haskala_book_get_production($book_nid, $person_nid = NULL, $role = NULL
  *  @param $book_nid
  *   The book node ID.
  *
- *  @return translator name field.
+ *  @return Translator name field.
  */
 function haskala_book_get_translator($book_nid) {
   $production_node = haskala_book_get_production($book_nid, NULL, t('Translator'));
