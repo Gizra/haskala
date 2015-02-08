@@ -67,3 +67,16 @@
     }
   }
 }
+
+.search-api-page-results {
+
+  .search-result {
+    margin-top: 30px;
+
+    .title {
+      font-weight: bold;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

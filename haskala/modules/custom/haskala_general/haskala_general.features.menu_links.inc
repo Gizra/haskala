@@ -150,61 +150,61 @@ function haskala_general_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 1,
   );
-  // Exported menu link: menu-top-menu_books:<front>
-  $menu_links['menu-top-menu_books:<front>'] = array(
+  // Exported menu link: menu-top-menu_books:books
+  $menu_links['menu-top-menu_books:books'] = array(
     'menu_name' => 'menu-top-menu',
     'link_path' => 'books',
-    'router_path' => '',
+    'router_path' => 'books',
     'link_title' => 'BOOKS',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-top-menu_books:<front>',
+      'identifier' => 'menu-top-menu_books:books',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 0,
     'customized' => 1,
   );
-  // Exported menu link: menu-top-menu_people:<front>
-  $menu_links['menu-top-menu_people:<front>'] = array(
+  // Exported menu link: menu-top-menu_people:people
+  $menu_links['menu-top-menu_people:people'] = array(
     'menu_name' => 'menu-top-menu',
     'link_path' => 'people',
-    'router_path' => '',
+    'router_path' => 'people',
     'link_title' => 'PEOPLE',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-top-menu_people:<front>',
+      'identifier' => 'menu-top-menu_people:people',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 0,
     'customized' => 1,
   );
-  // Exported menu link: menu-top-menu_places:<front>
-  $menu_links['menu-top-menu_places:<front>'] = array(
+  // Exported menu link: menu-top-menu_places:places
+  $menu_links['menu-top-menu_places:places'] = array(
     'menu_name' => 'menu-top-menu',
     'link_path' => 'places',
-    'router_path' => '',
+    'router_path' => 'places',
     'link_title' => 'PLACES',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-top-menu_places:<front>',
+      'identifier' => 'menu-top-menu_places:places',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 0,

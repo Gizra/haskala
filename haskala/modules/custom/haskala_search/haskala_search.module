@@ -12,4 +12,5 @@ include_once 'haskala_search.features.inc';
  */
 function haskala_search_form_search_api_page_search_form_haskala_alter(&$form, &$form_state) {
   $form['keys_1']['#attributes']['placeholder'] = t('Search');
+  $form['keys_2']['#attributes']['placeholder'] = t('Search');
 }
