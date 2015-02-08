@@ -1,12 +1,21 @@
 // Book tabs scroller.
 $(document).ready(function() {
 
+  // Disable the right scroller when the list fits in the frame.
+  if ($('#details-navigation ul').width() < $('#details-navigation .tabs-frame').width()) {
+    $('#details-navigation > a.next').addClass('disabled');
+  }
+
   $('#details-navigation > a').click(function(event) {
     event.preventDefault();
+    var a = $(event.currentTarget);
+    if (a.hasClass('disabled')) {
+      return;
+    }
+
     // The increments are half the tabs container width.
     var visibleWidth = $('#details-navigation').width();
     var delta = visibleWidth / 2;
-    var a = $(event.currentTarget);
     if (a.data('direction') == 'next') {
       delta *= -1;
     }
