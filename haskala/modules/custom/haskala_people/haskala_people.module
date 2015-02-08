@@ -38,10 +38,13 @@ function haskala_person_get_names($person_nid) {
     $person_names[] = $person_wrapper->field_pseudonym->value();
   }
   // If Success build field, change value to all fields values together.
-  if (isset($person_names_as_field)) {
+  if (!isset($person_names_as_field)) {
+    return;
+  }
+  else {
     $person_names_str = implode(',',$person_names);
     $person_names_as_field[0]['#markup'] = $person_names_str;
     $person_names_as_field['#title'] = t('Other names for the author');
+    return $person_names_as_field;
   }
-  return $person_names_as_field;
 }
