@@ -185,11 +185,6 @@
             margin-top: -3px;
             font-size: 14px;
 
-            .tab-sub-title {
-              margin-top: 40px;
-              border-bottom: 1px solid $darkgray;
-            }
-
             .field-item {
               display: inline;
 
@@ -204,6 +199,16 @@
           }
         }
       }
+      .tab-sub-title {
+        margin-top: 40px;
+        border-bottom: 1px solid $darkgray;
+
+
+      }
+
+      &.type-of-book {
+         display: none;
+       }
     }
 
     footer {
