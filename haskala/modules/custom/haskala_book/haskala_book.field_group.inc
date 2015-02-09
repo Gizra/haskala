@@ -888,7 +888,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_bottom_details';
   $field_group->data = array(
     'label' => 'Publisher/ Printing press',
-    'weight' => '129',
+    'weight' => '130',
     'children' => array(
       0 => 'field_format_of_publication_date',
       1 => 'field_gregorian_year',
@@ -1557,7 +1557,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_bottom_details';
   $field_group->data = array(
     'label' => 'Translation',
-    'weight' => '127',
+    'weight' => '128',
     'children' => array(
       0 => 'field_bibliographical_citations',
       1 => 'field_field_orginal_author_in_or',
@@ -1634,7 +1634,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_bottom_details';
   $field_group->data = array(
     'label' => 'Volumes',
-    'weight' => '128',
+    'weight' => '129',
     'children' => array(
       0 => 'field_examined_volume_number',
       1 => 'field_name_of_series',
