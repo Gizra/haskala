@@ -7524,10 +7524,10 @@ function haskala_book_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
+        'label' => 'hidden',
+        'module' => 'haskala_terms',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'haskala_terms_detailed',
         'weight' => 10,
       ),
       'teaser' => array(
