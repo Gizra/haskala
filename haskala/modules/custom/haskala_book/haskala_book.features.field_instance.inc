@@ -7239,11 +7239,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-production-field_person_name_appear'
   $field_instances['node-production-field_person_name_appear'] = array(
     'bundle' => 'production',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -7263,7 +7259,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_person_name_appear',
-    'label' => 'Does the person\'s name appear in the book?',
+    'label' => 'Person\'s name appear in the book',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -7271,10 +7267,8 @@ function haskala_book_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
+      'settings' => array(),
+      'type' => 'options_buttons',
       'weight' => 6,
     ),
   );
@@ -7588,7 +7582,6 @@ function haskala_book_field_default_field_instances() {
   t('Contemporary disputes about the book');
   t('Contemporary references to the book');
   t('Copy of book used');
-  t('Does the person\'s name appear in the book?');
   t('Edition of book');
   t('Evidence about book production');
   t('Evidence for person\'s identity if it does not appear in the book');
@@ -7662,6 +7655,7 @@ function haskala_book_field_default_field_instances() {
   t('Pages in which illustrations / diagrams appear');
   t('Part of a series of books? ');
   t('Partial publication of the book in other texts');
+  t('Person\'s name appear in the book');
   t('Place of publication as it appears in other sources');
   t('Place of publication as it appears in the book');
   t('Place of publication of original text');
