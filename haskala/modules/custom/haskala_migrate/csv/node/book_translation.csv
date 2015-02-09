@@ -1,33 +1,33 @@
-Uniqe ID,Title,Book id,Language of translation,Year of translation,City of translation,Translator id,References for translation
-bookTranslation1,Etwas zur Charackteristick der Juden,book42,Hebrew,1994,,,
-bookTranslation2,בית הספר א,book155,גרמנית,1842,Vienna,person2127,
-bookTranslation3,בית הספר א,book155,איטלקית,1825,Vienna,person2128,
-bookTranslation4,בית הספר א,book155,רוסית,1873,Warsaw,person2129,
-bookTranslation5,דברי שלום ואמת א,book173,איטלקית,1783,Gorizia,person2130,"הספר תורגם לאיטלקית ע""י אליהו מורפורגו זמן קצר לאחר פרסומו:
+Uniqe ID,Title,Book id,Language of translation,Year of translation,City of translation,References for translation
+bookTranslation1,Etwas zur Charackteristick der Juden,book42,Hebrew,1994,,
+bookTranslation2,בית הספר א,book155,גרמנית,1842,Vienna,
+bookTranslation3,בית הספר א,book155,איטלקית,1825,Vienna,
+bookTranslation4,בית הספר א,book155,רוסית,1873,Warsaw,
+bookTranslation5,דברי שלום ואמת א,book173,איטלקית,1783,Gorizia,"הספר תורגם לאיטלקית ע""י אליהו מורפורגו זמן קצר לאחר פרסומו:
 Traduzione di Elia Morpurgo de' Discorsi ebraici di tolleranza e felicità diretti de Naftali Herz Weisel agli ebrei dimoranti ne' domini dell'Augustissimo Imperadore Giuseppe II, il Giusto."
-bookTranslation6,דברי שלום ואמת א,book173,גרמנית,,,person1,
-bookTranslation7,דברי שלום ואמת א,book173,הולנדית,,,,
-bookTranslation8,דברי שלום ואמת א,book173,צרפתית,1790,Berlin,,"Instruction salutaire adressée aux communautés juives de l'Empire, par le célèbre Hartwic Weisly, juif de Berlin, traduite en françois en l'année 1782. Nouvelle édition augmentée de notes, d'une lettre à M. l'abbé Maury, député à l'Assemblée nationale, par l'éditeur [ : Isaac Berr], et de la réponse de M. l'abbé Maury, Paris."
-bookTranslation9,הנפש,book189,גרמנית,"תקנ""ח",Brno,,"מהדורת ברין תקנ""ח כוללת תרגום חלקי של הספר לגרמנית"
-bookTranslation10,זה ספר זכר צדיק,book203,גרמנית,1840,,,"הספר תורגם ב- 1840: 
+bookTranslation6,דברי שלום ואמת א,book173,גרמנית,,,
+bookTranslation7,דברי שלום ואמת א,book173,הולנדית,,,
+bookTranslation8,דברי שלום ואמת א,book173,צרפתית,1790,Berlin,"Instruction salutaire adressée aux communautés juives de l'Empire, par le célèbre Hartwic Weisly, juif de Berlin, traduite en françois en l'année 1782. Nouvelle édition augmentée de notes, d'une lettre à M. l'abbé Maury, député à l'Assemblée nationale, par l'éditeur [ : Isaac Berr], et de la réponse de M. l'abbé Maury, Paris."
+bookTranslation9,הנפש,book189,גרמנית,"תקנ""ח",Brno,"מהדורת ברין תקנ""ח כוללת תרגום חלקי של הספר לגרמנית"
+bookTranslation10,זה ספר זכר צדיק,book203,גרמנית,1840,,"הספר תורגם ב- 1840: 
 Aus dem Leben Wessely's"
-bookTranslation11,מודע לבני בינה oder Kinderfreund und Lehrer 2,book254,הולנדית,,,,'''מודע לבני בינה''' יצא במהדורה מיוחדת עם הולנדית במקום גרמנית. מהדורה זו כוללת (ככל הנראה) גם את החלק השני של הספר.
-bookTranslation12,מלוכת שאול,book277,יידיש,,,,"הספר תורגם ליידיש (תחת הכותרת ""ספר גדולת דוד ומלוכת שאול""), תוך שינוי אידיאולוגי עצום (ראו ורסס, המחזה מלוכת שאול)  וזכה למהדורות רבות הרבה יותר מאשר בעברית.
+bookTranslation11,מודע לבני בינה oder Kinderfreund und Lehrer 2,book254,הולנדית,,,'''מודע לבני בינה''' יצא במהדורה מיוחדת עם הולנדית במקום גרמנית. מהדורה זו כוללת (ככל הנראה) גם את החלק השני של הספר.
+bookTranslation12,מלוכת שאול,book277,יידיש,,,"הספר תורגם ליידיש (תחת הכותרת ""ספר גדולת דוד ומלוכת שאול""), תוך שינוי אידיאולוגי עצום (ראו ורסס, המחזה מלוכת שאול)  וזכה למהדורות רבות הרבה יותר מאשר בעברית.
 
 לפי ורסס ושקד, במהדורות 1871 ו- 1885 חלו שינויי גרסה לשוניים רבים מאת המו""ל."
-bookTranslation13,משא בערב,book285,אנגלית,1886,Cambridge,person2131,"הספר תורגם לאנגלית במחצית השנייה של המאה ה- 19 על-ידי. הוא יצא תחת הכותרת:
+bookTranslation13,משא בערב,book285,אנגלית,1886,Cambridge,"הספר תורגם לאנגלית במחצית השנייה של המאה ה- 19 על-ידי. הוא יצא תחת הכותרת:
 Romanelli's Travels in Marocco towards the End of the 18th Century, fifth edition with Preface, Notes and the Life of the Author. By S.M. Schiller-Szinessy, Hebrew and English."
-bookTranslation14,ספר מלחמה בשלום,book362,יידיש,,,,תרגום ליידיש: גדולת יוסף (זכה למהדורות רבות)
-bookTranslation15,שירי תפארת א,book488,גרמנית,1795,,,"שני השירים הראשונים תורגמו לגרמנית (1795) ע""י שני פרופ' גרמניים (הופנאגל ושפאלדינד) (וייזל כתב לתרגום זה הערות בגרמנית).
+bookTranslation14,ספר מלחמה בשלום,book362,יידיש,,,תרגום ליידיש: גדולת יוסף (זכה למהדורות רבות)
+bookTranslation15,שירי תפארת א,book488,גרמנית,1795,,"שני השירים הראשונים תורגמו לגרמנית (1795) ע""י שני פרופ' גרמניים (הופנאגל ושפאלדינד) (וייזל כתב לתרגום זה הערות בגרמנית).
 
 לפי קלויזנר, א', עמ' 139"
-bookTranslation16,שירי תפארת א,book488,גרמנית,,,,"עוד שני שירים תרגם בנו הבחור של וייזל.
+bookTranslation16,שירי תפארת א,book488,גרמנית,,,"עוד שני שירים תרגם בנו הבחור של וייזל.
 
 לפי קלויזנר, א', עמ' 139"
-bookTranslation17,שירי תפארת א,book488,גרמנית,1806,,person2132,"מנחם עמנואל וייזל, בנו השני של וייזל, תירגם עוד שלשה שירים לגרמנית.
+bookTranslation17,שירי תפארת א,book488,גרמנית,1806,,"מנחם עמנואל וייזל, בנו השני של וייזל, תירגם עוד שלשה שירים לגרמנית.
 
 לפי קלויזנר, א', עמ' 139"
-bookTranslation18,שירי תפארת א,book488,צרפתית,1815,,,"חלק מן השירים תורגם ע""י מ. בר לצרפתית.
+bookTranslation18,שירי תפארת א,book488,צרפתית,1815,,"חלק מן השירים תורגם ע""י מ. בר לצרפתית.
 
 לפי קלויזנר, א', עמ' 139"
-bookTranslation19,תודת אמונת בית ישראל,book504,"גרמנית, צרפתית",1813,Vienna,,המהדורה כוללת לפי ה-IUL- עם תת-כותרת בגרמנית ובצרפתית. תרגום לגרמנית ותרגום לצרפתית
+bookTranslation19,תודת אמונת בית ישראל,book504,"גרמנית, צרפתית",1813,Vienna,המהדורה כוללת לפי ה-IUL- עם תת-כותרת בגרמנית ובצרפתית. תרגום לגרמנית ותרגום לצרפתית
