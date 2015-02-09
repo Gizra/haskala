@@ -35,4 +35,8 @@ body {
   .wrapper footer .icons-nav li {
     background: url("../images/bullet.png") no-repeat right 10px top 27px;
   }
+
+  .wrapper footer .icons-nav li.last {
+    background: none;
+  }
 }
