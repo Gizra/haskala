@@ -60,7 +60,7 @@
               </div>
             <?php else: ?>
               <div class="fields-multi">
-                <?php foreach($single_tab_fields as $key_field => $tab_field): ?>
+                <?php foreach ($single_tab_fields as $key_field => $tab_field): ?>
                   <?php // Sub group in tab if exist.
                   if ($key_field === 'sub_title'): ?>
                     <div class="tab-sub-title">

@@ -24,10 +24,31 @@ function haskala_terms_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'detailed' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 0,
+      ),
+      'term_teaser' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_current_name',
-    'label' => 'Current name',
+    'label' => 'Current name of location',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -46,7 +67,7 @@ function haskala_terms_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Current name');
+  t('Current name of location');
 
   return $field_instances;
 }

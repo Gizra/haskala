@@ -36,7 +36,6 @@ function haskala_book_get_production($book_nid, $person_nid = NULL, $role = NULL
     ->propertyCondition('status', NODE_PUBLISHED)
     ->fieldCondition('field_book', 'target_id', $book_nid);
   if ($person_nid) {
-
     $query->fieldCondition('field_producer', 'target_id', $person_nid);
   }
   if ($role) {
@@ -325,29 +324,6 @@ function haskala_book_get_mentions($book_nid) {
  * @return array
  */
 function haskala_book_hebrew_alphabet_without_sofit() {
-  return array(
-    'א',
-    'ב',
-    'ג',
-    'ד',
-    'ה',
-    'ו',
-    'ז',
-    'ח',
-    'ט',
-    'י',
-    'כ',
-    'ל',
-    'מ',
-    'נ',
-    'ס',
-    'ע',
-    'פ',
-    'צ',
-    'ק',
-    'ר',
-    'ש',
-    'ת',
-  );
+  return array('א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ז', 'ח', 'ט', 'י', 'כ', 'ל', 'מ', 'נ', 'ס', 'ע', 'פ', 'צ', 'ק', 'ר', 'ש', 'ת');
 }
 
