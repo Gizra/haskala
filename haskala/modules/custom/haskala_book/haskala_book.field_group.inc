@@ -1528,7 +1528,6 @@ function haskala_book_field_group_info() {
       0 => 'field_translation_city',
       1 => 'field_translation_references',
       2 => 'field_translation_year',
-      3 => 'field_translator',
     ),
     'format_type' => 'div',
     'format_settings' => array(
