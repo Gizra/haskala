@@ -20,7 +20,7 @@
   <?php if (!empty($top_details_group)): ?>
     <div class="top-fields">
       <div class="field">
-        <div class="field-label type-label"><?php print t(Type of book); ?>:</div>
+        <div class="field-label type-label"><?php print t('Type of book'); ?>:</div>
         <div class="content"></div>
       </div>
       <?php foreach($top_details_group as $single_tab_fields): ?>

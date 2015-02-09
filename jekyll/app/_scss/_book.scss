@@ -202,13 +202,11 @@
       .tab-sub-title {
         margin-top: 40px;
         border-bottom: 1px solid $darkgray;
-
-
+      }
+      .type-of-book {
+        display: none;
       }
 
-      &.type-of-book {
-         display: none;
-       }
     }
 
     footer {
