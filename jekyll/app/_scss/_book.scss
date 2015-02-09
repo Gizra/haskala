@@ -112,12 +112,14 @@
 
             li {
               display: inline;
-              margin: 0 12px;
+              padding: 0 8px 0 18px;
               font-size: 14px;
+              background: url("../images/sprites.png") no-repeat;
+              background-position: -315px 5px;
 
               &:first-child {
-                list-style-type: none;
-                margin-left: 0;
+                background: none;
+                padding-left: 0;
               }
 
               &.active a,
