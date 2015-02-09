@@ -13,7 +13,6 @@ class HaskalaBookTranslationsMigrate extends HaskalaMigration {
     array('field_language', 'Language of translation'),
     array('field_translation_year', 'Year of translation'),
     array('field_translation_city', 'City of translation'),
-    /*array('field_translator', 'Translator id'),*/
     array('field_translation_references', 'References for translation'),
 
   );
