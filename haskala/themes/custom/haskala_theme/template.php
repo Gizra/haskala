@@ -15,6 +15,18 @@ function haskala_theme_preprocess_page(&$variables) {
   $variables['top_menu'] = menu_tree('menu-top-menu');
   $variables['icons_menu'] = menu_tree('menu-icons-menu');
   $variables['user_menu'] = menu_tree('user-menu');
+
+  if ($node = menu_get_object()) {
+    $breadcrumbs = array(l(t('Home'), ''));
+    if ($node->type == 'book') {
+      $breadcrumbs[] = l(t('Books'), 'books');
+    }
+    if ($node->type == 'person') {
+      $breadcrumbs[] = l(t('People'), 'people');
+    }
+    $breadcrumbs[] = l($node->title, 'node/' . $node->nid);
+    $variables['breadcrumbs'] = theme('item_list', array('items' => $breadcrumbs));
+  }
 }
 
 /**
