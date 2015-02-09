@@ -24,7 +24,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
 
   $wrapper = entity_metadata_wrapper('node', $node);
 
-  // Fields to be displayed above the book tabs.
+  // Type of book - fields to be displayed above the book tabs.
   $top_details_group = field_group_load_field_group('group_top_details', 'node', 'book', 'default');
   $top_details_group_fields = haskala_book_get_tab_fields($wrapper, $top_details_group, $node_view, $book_nid);
 
