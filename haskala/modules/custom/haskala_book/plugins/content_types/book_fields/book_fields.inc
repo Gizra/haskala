@@ -113,7 +113,8 @@ function haskala_book_production_tab_fields(&$tabs_fields, $book_nid) {
 
   $producers = array();
   foreach($productions_nodes as $production_node) {
-    $producers[] = array(render(node_view($production_node)));
+    $node_view = node_view($production_node);
+    $producers[] = array(render($node_view));
   }
   $tabs_fields[t('Book producers')] = $producers;
 }
