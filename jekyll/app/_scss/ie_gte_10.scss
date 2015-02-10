@@ -1,5 +1,5 @@
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-/* home page */
+  /* home page */
 
   body.front {
 
@@ -23,26 +23,6 @@
       padding: 7px 15px 2px;
       margin-top: 56px;
     }
-    .page-single-book .wrapper footer {
-      margin-top: 16px;
-    }
-
-    .wrapper footer .icons-nav {
-      padding-top: 5px;
-      padding-bottom: 33px;
-    }
-
-    .wrapper footer .icons-nav {
-      margin-top: 15px;
-    }
-
-    .wrapper footer .icons-nav li {
-      background: url("../images/bullet.png") no-repeat right 10px top 27px;
-    }
-
-    .wrapper footer .icons-nav li.last {
-      background: none;
-    }
 
     .front .tags-cloud-wrapper {
       margin-top: 43px;
@@ -61,7 +41,7 @@
       #top-details {
         padding: 0 32px 51px;
         border-bottom: 2px solid #615f59;
-        margin-bottom: 41px;
+        margin-bottom: 31px;
       }
 
       #top-details .field {
@@ -70,10 +50,58 @@
       }
     }
 
-    footer {
-      margin-top: 33px;
+    .node-type-book .wrapper .main-content #groups .fields-group {
+      border-top: 1px solid #615f59;
+      clear: both;
+      padding: 5px 19px 2px;
+      margin-top: 55px;
+    }
+  }
+
+  /* footer */
+  body.front, body.node-type-book {
+
+    .page-single-book .wrapper footer {
+      margin-top: 16px;
+    }
+
+    .wrapper footer .icons-nav {
+      li {
+        background: url("../images/bullet.png") no-repeat right 10px top 27px;
+      }
+
+      li.last {
+        background: none;
+      }
+    }
+  }
+
+  body.front .wrapper footer {
+    margin-top: 33px;
+
+   .icons-nav {
+      padding-top: 5px;
+      padding-bottom: 33px;
+      margin-top: 15px;
+    }
+  }
+
+  body.node-type-book .wrapper footer {
+    margin-top: -16px;
+
+    .icons-nav {
+      padding-top: 5px;
+      padding-bottom: 33px;
+      margin-top: 45px;
+
+      .menu-nav {
+        margin-left: 35px;
+        margin-top: 1px;
+      }
+    }
+
+    .login-are {
+      margin-left: 34px;
     }
   }
 }
-
-
