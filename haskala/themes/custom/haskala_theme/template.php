@@ -16,15 +16,29 @@ function haskala_theme_preprocess_page(&$variables) {
   $variables['icons_menu'] = menu_tree('menu-icons-menu');
   $variables['user_menu'] = menu_tree('user-menu');
 
+  // Build breadcrumbs.
+  $breadcrumbs = array(l(t('Home'), ''));
   if ($node = menu_get_object()) {
-    $breadcrumbs = array(l(t('Home'), ''));
     if ($node->type == 'book') {
       $breadcrumbs[] = l(t('Books'), 'books');
     }
     if ($node->type == 'person') {
       $breadcrumbs[] = l(t('People'), 'people');
     }
-    $breadcrumbs[] = l($node->title, 'node/' . $node->nid);
+    $breadcrumbs[] = $node->title;
+  }
+  elseif ($term = menu_get_object('taxonomy_term', 2)) {
+    if ($term->vocabulary_machine_name == 'cities') {
+      $breadcrumbs[] = l(t('Places'), 'places');
+    }
+    else {
+      $vocabularies = taxonomy_vocabulary_get_names();
+      $breadcrumbs[] = $vocabularies[$term->vocabulary_machine_name]->name;
+    }
+    $breadcrumbs[] = $term->name;
+  }
+
+  if (count($breadcrumbs) > 1) {
     $variables['breadcrumbs'] = theme('item_list', array('items' => $breadcrumbs));
   }
 }
