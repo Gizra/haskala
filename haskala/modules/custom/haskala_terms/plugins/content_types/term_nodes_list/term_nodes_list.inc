@@ -15,15 +15,28 @@ function haskala_terms_term_nodes_list_content_type_render($subtype, $conf, $arg
     return;
   }
   $term = $context->data;
-  $related_node_ids = taxonomy_select_nodes($term->tid, FALSE);
+  $nids = haskala_terms_select_nodes($term->tid, TRUE, variable_get('haskala_nodes_on_term', 15));
+  $build = array();
 
-  // Only display book and person nodes.
-  $nodes = node_load_multiple($related_node_ids, array('type' => 'book'));
-  $nodes += node_load_multiple($related_node_ids, array('type' => 'person'));
+  if ($nids) {
+    $nodes = node_load_multiple($nids);
+    $build = node_view_multiple($nodes);
+    $build['pager'] = array(
+      '#theme' => 'pager',
+      '#weight' => 5,
+    );
+  }
+  else {
+    $build['no_content'] = array(
+      '#prefix' => '<p>',
+      '#markup' => t('There is currently no content classified with this term.'),
+      '#suffix' => '</p>',
+    );
+  }
 
   $block = new stdClass();
   $block->module = 'haskala_terms';
-  $block->content = node_view_multiple($nodes);
+  $block->content = $build;
 
   return $block;
 }
