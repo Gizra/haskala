@@ -8,8 +8,7 @@ Feature: Book
     Given I am an anonymous user
     When  I visit "<title>" node of type "book"
     And   I should see the text "<text>"
-    Then  I should see "1" ".bread-crumbs" elements
-
+    Then I should see the text "<title>" under "bread-crumbs"
 
   Examples:
     | title                  | text                                  |
