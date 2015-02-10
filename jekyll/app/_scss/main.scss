@@ -26,6 +26,10 @@ body {
   padding: 0 20px;
 }
 
+.wrapper > .region-content {
+  min-height: 400px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   text-transform: uppercase;
@@ -61,6 +65,28 @@ a, a:hover, a:visited {
   line-height: 1.7em;
 
   header {
+
+    .bread-crumbs {
+      margin-right: 4px;
+      margin-top: 10px;
+
+      li {
+        display: inline;
+        font-weight: bold;
+
+        &:after {
+          content: ' >';
+        }
+
+        &.last:after {
+          content: '';
+        }
+
+        a {
+          font-weight: normal;
+        }
+      }
+    }
 
     a {
       color: $darkgray;
@@ -203,12 +229,12 @@ a, a:hover, a:visited {
     .icons-nav {
       font-family: bell_mtbold;
       border-bottom: 1px solid #817f7a;
-      padding-bottom: 36px;
+      padding-bottom: 34px;
 
       li {
         width: 165px;
         padding-right: 27px;
-        background: url('../images/bullet.png') no-repeat right 10px top 27px ;
+        background: url('../images/bullet.png') no-repeat right 10px top 48px ;
 
         @media (max-width: 750px) {
           width: 45%;
@@ -232,7 +258,6 @@ a, a:hover, a:visited {
 
         a {
           color: $darkgray;
-          display: inline-block;
           letter-spacing: -0.2px;
           padding: 0;
           margin-right: 2px;
@@ -366,4 +391,10 @@ a, a:hover, a:visited {
       }
     }
   }
+}
+
+.view-id-page_element .views-field-edit-node a {
+  position: absolute;
+  right: -20px;
+  top: -20px;
 }
