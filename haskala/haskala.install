@@ -190,7 +190,7 @@ function _haskala_install_save_default_permissions($filtered_html_format) {
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
 
-  // Site manager role
+  // Site manager role.
   $role = new stdClass();
   $role->name = 'manager';
   $role->weight = 2;
@@ -198,6 +198,7 @@ function _haskala_install_save_default_permissions($filtered_html_format) {
 
   user_role_grant_permissions(
     $role->rid,
+    // Give all content related permissions.
     array_keys(module_invoke('node', 'permission'))
   );
 
