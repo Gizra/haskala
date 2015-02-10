@@ -3,12 +3,12 @@ Feature: Book
   As an anonymous user
   We need to be able to have access to a book page
 
-  @api
+  @api @foo
   Scenario Outline: Visit a book page
     Given I am an anonymous user
     When  I visit "<title>" node of type "book"
-    Then  I should see "1" ".bread-crumbs" elements
-    And   I should see the text "<text>"
+    Then I should see "<text>" in the ".bread-crumbs" element
+
 
   Examples:
     | title                  | text                                  |
