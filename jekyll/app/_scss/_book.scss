@@ -144,23 +144,23 @@
           cursor: pointer;
 
           &.previous {
-            background-position: -200px 0;
+            background-position: -194px 0;
             float: left;
           }
 
           &.previous.disabled {
-            background-position: -200px -50px;
+            background-position: -224px 0px;
           }
 
           &.next {
-            background-position: -220px 0;
+            background-position: -255px 0;
             position: absolute;
             top: 0;
             right: 0;
           }
 
           &.next.disabled {
-            background-position: -220px -50px;
+            background-position: -285px 0;
           }
 
           &.disabled {

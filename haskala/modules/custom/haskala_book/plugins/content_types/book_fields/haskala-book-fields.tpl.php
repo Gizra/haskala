@@ -32,11 +32,15 @@
 
 <section id="bottom-details">
   <nav id="details-navigation">
-    <ul>
-      <?php foreach($tabs as $group_name => $group): ?>
-          <li><a href="#<?php print $group_name; ?>"><?php print $group_name; ?></a></li>
-      <?php endforeach; ?>
-    </ul>
+    <a class="previous disabled" data-direction="previous"></a>
+    <div class="tabs-frame">
+      <ul>
+        <?php foreach($tabs as $group_name => $group): ?>
+            <li><a href="#<?php print $group_name; ?>"><?php print $group_name; ?></a></li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
+    <a class="next" data-direction="next"></a>
   </nav>
   <section id="groups">
     <?php foreach($tabs as $tab_name => $multi_tab_fields): ?>
