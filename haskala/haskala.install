@@ -162,7 +162,6 @@ function _haskala_install_save_default_permissions($filtered_html_format) {
     DRUPAL_ANONYMOUS_RID,
     array(
       'access content',
-      'access comments',
       $filtered_html_permission
     )
   );
@@ -170,9 +169,6 @@ function _haskala_install_save_default_permissions($filtered_html_format) {
     DRUPAL_AUTHENTICATED_RID,
     array(
       'access content',
-      'access comments',
-      'post comments',
-      'skip comment approval',
       $filtered_html_permission
     )
   );
@@ -180,7 +176,7 @@ function _haskala_install_save_default_permissions($filtered_html_format) {
   // Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();
   $admin_role->name = 'administrator';
-  $admin_role->weight = 2;
+  $admin_role->weight = 10;
   user_role_save($admin_role);
   user_role_grant_permissions(
     $admin_role->rid,
@@ -193,6 +189,18 @@ function _haskala_install_save_default_permissions($filtered_html_format) {
   db_insert('users_roles')
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
+
+  // Site manager role
+  $role = new stdClass();
+  $role->name = 'manager';
+  $role->weight = 2;
+  user_role_save($role);
+
+  user_role_grant_permissions(
+    $role->rid,
+    array_keys(module_invoke('node', 'permission'))
+  );
+
 }
 
 
