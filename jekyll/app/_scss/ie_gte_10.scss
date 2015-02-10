@@ -79,7 +79,7 @@
   body.front .wrapper footer {
     margin-top: 33px;
 
-   .icons-nav {
+    .icons-nav {
       padding-top: 5px;
       padding-bottom: 33px;
       margin-top: 15px;
@@ -104,4 +104,35 @@
       margin-left: 34px;
     }
   }
+
+  .page-books .wrapper .books-list .letter-wrapper,
+  .page-books .wrapper .terms-list .letter-wrapper,
+  .page-digital-books .wrapper .books-list .letter-wrapper,
+  .page-digital-books .wrapper .terms-list .letter-wrapper,
+  .page-people .wrapper .books-list .letter-wrapper,
+  .page-people .wrapper .terms-list .letter-wrapper,
+  .page-places .wrapper .books-list .letter-wrapper,
+  .page-places .wrapper .terms-list .letter-wrapper {
+    margin-bottom: 45px;
+  }
+
+  .page-books .wrapper footer,
+  .page-digital-books .wrapper footer,
+  .page-people .wrapper footer,
+  .page-places .wrapper footer {
+    margin-top: 138px;
+  }
+
+  .page-books .wrapper footer {
+
+    .icons-nav li {
+      background: url("../images/bullet.png") no-repeat right 11px top 28px;
+    }
+
+    li.last {
+      background: none;
+    }
+  }
 }
+
+
