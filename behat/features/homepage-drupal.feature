@@ -6,7 +6,7 @@ Feature: HomePage Drupal
   @api
   Scenario Outline: Visit a homepage drupal page
     Given I am an anonymous user
-    When  I visit ""
+    When  I visit "/"
     Then  I click "<on the link>"
     And   I should see the link "<link>"
 
