@@ -14,6 +14,10 @@
       &:before, &:after {
         width: 45%;
         padding-top: 8px;
+
+        @media (max-width: 850px) {
+          display: none;
+        }
       }
     }
 
@@ -24,8 +28,8 @@
       #top-details {
 
         padding: 0 21px 51px;
-        border-bottom: 2px solid $darkgray;
-        margin-bottom: 31px;
+        border-bottom: 1px solid $darkgray;
+        margin-bottom: 32px;
 
         .title {
           font-size: 31px;
@@ -69,74 +73,81 @@
 
       #details-navigation {
         font-family: bell_mtbold;
-        letter-spacing: 0.54px;
-        padding-bottom: 13px;
+        letter-spacing: 0.24px;
         position: relative;
 
-        ul{
-          height: 13px;
-          width: 100%;
+        .tabs-frame {
           overflow: hidden;
+          width: 96%;
           text-overflow: ellipsis;
-          display: inline;
+          white-space: nowrap;
+          margin-left: 20px;
 
-          li {
-            display: list-item;
-            list-style-type: disc;
-            margin: 0 12px;
-            float: left;
-            font-size: 14px;
+          @media (max-width: 850px) {
+            width: 93%;
+          }
 
-            &:first-child
-            {
-              list-style-type: none;
-            }
+          ul {
+            display: inline;
+            margin-left: 0;
+            transition: 400ms;
 
-            &.active a,
-            a:hover,
-             {
-              color: $lightBlue;
-            }
+            li {
+              display: inline;
+              padding: 0 10px 0 20px;
+              font-size: 14px;
+              background: url("../images/sprites.png") no-repeat;
+              background-position: -315px 6px;
 
-            a {
-              color: $darkgray;
-              font-size: 19px;
+              &:first-child {
+                background: none;
+                padding-left: 0;
+              }
+
+              &.active a,
+              a:hover {
+                color: $lightBlue;
+              }
+
+              a {
+                color: $darkgray;
+                font-size: 19px;
+              }
             }
           }
         }
 
-
-        &:before, &:after {
+        & > a {
           background: url('../images/sprites.png') no-repeat center;
-          margin-top: 4px;
-        }
-
-        &:before {
-          content: " ";
-          background-position: -200px 0;
+          margin-top: 2px;
+          content: '';
           width: 9px;
           height: 15px;
-          float: left;
-        }
+          cursor: pointer;
 
-        &:before.disabled {
-          background-position: -200px -50px;
-        }
+          &.previous {
+            background-position: -194px 0;
+            float: left;
+          }
 
-        &:after {
-          content: " ";
-          background-position: -220px 0;
-          width: 9px;
-          height: 15px;
-          float: right;
-          position: absolute;
-          top: 0;
-          right: 0;
+          &.previous.disabled {
+            background-position: -224px 0px;
+          }
 
-        }
+          &.next {
+            background-position: -255px 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
 
-        &:after.disabled {
-          background-position: -220px -50px;
+          &.next.disabled {
+            background-position: -285px 0;
+          }
+
+          &.disabled {
+            cursor: auto;
+          }
         }
       }
 
@@ -145,7 +156,6 @@
         padding-top: 15px;
 
         .fields-group {
-
           border-top: 1px solid #eae9e7;
           clear: both;
           padding: 6px 18px 2px;
