@@ -3,10 +3,10 @@ Feature: HomePage Drupal
   As an anonymous user
   We need to be able to have access to a homepage drupal page
 
-  @api @foo
+  @api
   Scenario Outline: Visit a homepage drupal page
     Given I am an anonymous user
-    When  I visit ""
+    When  I visit "/"
     Then  I click "<on the link>"
     And   I should see the link "<link>"
 
