@@ -8,7 +8,7 @@ Feature: Book
     Given I am an anonymous user
     When  I visit "<title>" node of type "book"
     And   I should see the text "<text>"
-    Then I should see the text "<title>" under "bread-crumbs"
+    Then  I should see the text "<title>" under "bread-crumbs"
 
   Examples:
     | title                  | text                                  |
@@ -17,14 +17,3 @@ Feature: Book
     | ספר אמרי בינה            | IUL בספריית אוניברסיטת תל אביב תחת סיגנטורה      |
     | מאמר צדק ועוני או עוז הצדק | שם המחבר כפי שמופיע אצל וינוגרד   |
     | בית הספר א              | למודי המישרים                   |
-
-  @api
-  Scenario Outline: Verify breadcrumbs exist
-    Given I am an anonymous user
-    When  I visit "<title>" node of type "book"
-    Then  I should see the link "<title>"
-
-  Examples:
-    | title                                    |
-    | Abhandlung von der Freiheit des Menschen |
-    | מליצה לפורים                              |
