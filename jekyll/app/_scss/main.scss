@@ -4,6 +4,7 @@
 @import 'book';
 @import 'books';
 @import 'homepage';
+@import 'list';
 @import 'search';
 
 * {
@@ -43,6 +44,10 @@ p {
 a, a:hover, a:visited {
   color: $lightBlue;
   text-decoration: none;
+}
+
+a:hover {
+  color: $lightBlue !important;
 }
 
 /* Reset bootstrap */
