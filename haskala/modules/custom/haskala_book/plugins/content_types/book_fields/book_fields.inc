@@ -94,6 +94,8 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   $block->module = 'haskala_book';
   $block->content = theme('haskala_book', $variables);
 
+  drupal_add_js(drupal_get_path('module', 'haskala_book') . '/js/haskala_book.js');
+
   return $block;
 }
 
