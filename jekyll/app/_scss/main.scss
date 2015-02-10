@@ -26,6 +26,10 @@ body {
   padding: 0 20px;
 }
 
+.wrapper > .region-content {
+  min-height: 400px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   text-transform: uppercase;
