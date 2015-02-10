@@ -36,7 +36,6 @@ function haskala_book_get_production($book_nid, $person_nid = NULL, $role = NULL
     ->propertyCondition('status', NODE_PUBLISHED)
     ->fieldCondition('field_book', 'target_id', $book_nid);
   if ($person_nid) {
-
     $query->fieldCondition('field_producer', 'target_id', $person_nid);
   }
   if ($role) {
@@ -53,6 +52,22 @@ function haskala_book_get_production($book_nid, $person_nid = NULL, $role = NULL
     return node_load(reset($result['node'])->nid);
   }
   return node_load_multiple(array_keys($result['node']));
+}
+
+/**
+ *  Translator of translation.
+ *
+ *  @param $book_nid
+ *   The book node ID.
+ *
+ *  @return Translator name field.
+ */
+function haskala_book_get_translator($book_nid) {
+  $production_node = haskala_book_get_production($book_nid, NULL, t('Translator'));
+  if (!$production_node) {
+    return;
+  }
+  return field_view_field('node', $production_node, 'field_producer');
 }
 
 
@@ -123,16 +138,12 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
 
       // Add translator name to Type of book tab, if book is a translation.
       if ($field_name == 'field_book') {
-        $production_node = haskala_book_get_production($book_nid, NULL, t('Translator'));
-        if ($production_node) {
-          $translator_name_field = field_view_field('node', $production_node, 'field_producer');
-          if ($translator_name_field) {
-            $translator_name_field['#title'] = t('Author of original');
-            $tab_fields_main[] = $translator_name_field;
-          }
+        $translator_name_field = haskala_book_get_translator($book_nid);
+        if ($translator_name_field) {
+          $translator_name_field['#title'] = t('Author of original');
+          $tab_fields_main[] = $translator_name_field;
         }
       }
-
 
       // Role of preface writer.
       if ($field_name == 'field_writer_of_preface') {
@@ -144,7 +155,6 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
       }
     }
   }
-
 
 
   // Add $author_names to translation tab.
@@ -178,32 +188,115 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
 }
 
 /**
- *  Persons mentioned in book tab.
+ *  Get nodes referencing a book.
  *
  *  @param $book_nid
  *   The book node ID.
+ *  @param $bundle
+ *   The book node ID.
  *
- *  @return multi mentions fields .
+ *  @return Multi bundle fields.
  */
-function haskala_book_get_mentions($book_nid) {
+function haskala_book_get_reference_nodes($book_nid, $bundle) {
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'node')
-    ->entityCondition('bundle', 'mention')
+    ->entityCondition('bundle', $bundle)
     ->propertyCondition('status', NODE_PUBLISHED)
     ->fieldCondition('field_book', 'target_id', $book_nid);
   $result = $query->execute();
   if (empty($result['node'])) {
     return;
   }
-  $mention_nodes = node_load_multiple(array_keys($result['node']));
+  return node_load_multiple(array_keys($result['node']));
+}
+
+/**
+ *  Get nodes reference fields.
+ *
+ *  @param $book_nid
+ *   The book node ID.
+ *  @param $bundle
+ *   The book node ID.
+ *  @param $nodes
+ *   Array of nodes.
+ *  @param $group_name
+ *   The group of fields name .
+ *
+ *  @return Multi reference nodes fields .
+ */
+function haskala_book_get_reference_nodes_fields($book_nid, $bundle, $nodes, $group_name) {
+  $nodes_fields = array();
+  foreach ($nodes as $node) {
+    $wrapper = entity_metadata_wrapper('node', $node);
+    $tab = field_group_load_field_group($group_name, 'node', $bundle, 'default');
+    $node_view = node_view($node);
+    $node_fields = haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid);
+    // Add language translation && translator.
+    if ($bundle == 'book') {
+      if ($wrapper->field_language->value()) {
+        $language_field = render($node_view['field_language']);
+        array_unshift($node_fields, $language_field);
+      }
+      $translator_name_field = haskala_book_get_translator($node->nid);
+      if ($translator_name_field) {
+        $translator_name_field['#title'] = t('Translator');
+        array_unshift($node_fields, $translator_name_field);
+      }
+    }
+    $nodes_fields[] = $node_fields;
+  }
+  return $nodes_fields;
+}
+
+/**
+ *  Editions for Editions tab.
+ *
+ *  @param $book_nid
+ *   The book node ID.
+ *
+ *  @return Multi editions fields .
+ */
+function haskala_book_get_editions($book_nid) {
+  $editions_nodes = haskala_book_get_reference_nodes($book_nid, 'edition');
+  if (!$editions_nodes) {
+    return;
+  }
+  return haskala_book_get_reference_nodes_fields($book_nid, 'edition', $editions_nodes, 'group_editions');
+}
+
+/**
+ *  Translations for Editions tab.
+ *
+ *  @param $book_nid
+ *   The book node ID.
+ *
+ *  @return Multi translations fields .
+ */
+function haskala_book_get_translations($book_nid) {
+  $translations_nodes = haskala_book_get_reference_nodes($book_nid, 'book');
+  if (!$translations_nodes) {
+    return;
+  }
+  return haskala_book_get_reference_nodes_fields($book_nid, 'book', $translations_nodes, 'group_translation_editions_tab');
+}
+
+/**
+ *  Persons mentioned in book tab.
+ *
+ *  @param $book_nid
+ *   The book node ID.
+ *
+ *  @return Multi mentions fields .
+ */
+function haskala_book_get_mentions($book_nid) {
+  $mention_nodes = haskala_book_get_reference_nodes($book_nid, 'mention');
   if (!$mention_nodes) {
     return;
   }
   $mentions_fields = array();
-  foreach($mention_nodes as $mention_node) {
+  foreach ($mention_nodes as $mention_node) {
     $mentionee_fields = array();
     $mention_wrapper = entity_metadata_wrapper('node', $mention_node);
-    //$mention_node_view = node_view($mention_node);
     if ($mention_wrapper->field_mentionee->value()) {
       $person_node = node_load($mention_wrapper->field_mentionee->value()->nid);
       $person_wrapper = entity_metadata_wrapper('node', $person_node);
@@ -231,29 +324,6 @@ function haskala_book_get_mentions($book_nid) {
  * @return array
  */
 function haskala_book_hebrew_alphabet_without_sofit() {
-  return array(
-    'א',
-    'ב',
-    'ג',
-    'ד',
-    'ה',
-    'ו',
-    'ז',
-    'ח',
-    'ט',
-    'י',
-    'כ',
-    'ל',
-    'מ',
-    'נ',
-    'ס',
-    'ע',
-    'פ',
-    'צ',
-    'ק',
-    'ר',
-    'ש',
-    'ת',
-  );
+  return array('א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ז', 'ח', 'ט', 'י', 'כ', 'ל', 'מ', 'נ', 'ס', 'ע', 'פ', 'צ', 'ק', 'ר', 'ש', 'ת');
 }
 

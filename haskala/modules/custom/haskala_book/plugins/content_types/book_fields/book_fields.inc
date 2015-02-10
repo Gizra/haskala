@@ -24,7 +24,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
 
   $wrapper = entity_metadata_wrapper('node', $node);
 
-  // Fields to be displayed above the book tabs.
+  // Type of book - fields to be displayed above the book tabs.
   $top_details_group = field_group_load_field_group('group_top_details', 'node', 'book', 'default');
   $top_details_group_fields = haskala_book_get_tab_fields($wrapper, $top_details_group, $node_view, $book_nid);
 
@@ -55,6 +55,21 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
 
   // Add Book producers tab.
   haskala_book_production_tab_fields($tabs_fields, $book_nid);
+
+  // Add editions to Editions tab.
+  $editions_fields = haskala_book_get_editions($book_nid);
+  if ($editions_fields) {
+    $editions_tmp = array_merge($tabs_fields[t('Editions')], $editions_fields);
+    $tabs_fields[t('Editions')] = $editions_tmp;
+  }
+
+  // Add translations to Editions tab.
+  $translations_fields = haskala_book_get_translations($book_nid);
+  if ($translations_fields) {
+    $tabs_fields[t('Editions')]['sub_title'] = t('Translations');
+    $translation_tmp = array_merge($tabs_fields[t('Editions')], $translations_fields);
+    $tabs_fields[t('Editions')] = $translation_tmp;
+  }
 
   // Add mentionees for PERSONS MENTIONED IN BOOK tab.
   $mentionees = haskala_book_get_mentions($book_nid);
@@ -92,15 +107,16 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
  */
 function haskala_book_production_tab_fields(&$tabs_fields, $book_nid) {
   $productions_nodes = haskala_book_get_production($book_nid);
-  if ($productions_nodes) {
-    $tabs_fields[t('Book producers')] = array();
-    foreach($productions_nodes as $production_node) {
-      $production_wrapper = entity_metadata_wrapper('node', $production_node);
-      $production_tab = field_group_load_field_group('group_producers', 'node', 'production', 'default');
-      $production_node_view = node_view($production_node);
-      $tabs_fields[t('Book producers')][] = haskala_book_get_tab_fields($production_wrapper, $production_tab, $production_node_view, $book_nid);
-    }
+  if (!$productions_nodes) {
+    return;
   }
+
+  $producers = array();
+  foreach($productions_nodes as $production_node) {
+    $node_view = node_view($production_node);
+    $producers[] = array(render($node_view));
+  }
+  $tabs_fields[t('Book producers')] = $producers;
 }
 
 /**

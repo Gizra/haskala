@@ -20,12 +20,21 @@
   <?php if (!empty($top_details_group)): ?>
     <div class="top-fields">
       <div class="field">
-        <div class="field-label type-label">Type of book:</div>
+        <div class="field-label type-label"><?php print t('Type of book'); ?>:</div>
         <div class="content"></div>
       </div>
-      <?php foreach($top_details_group as $field):
-        print render($field);
-      endforeach; ?>
+      <?php foreach($top_details_group as $single_tab_fields): ?>
+        <?php foreach($single_tab_fields as $key_field => $tab_field): ?>
+          <?php // Sub group in tab if exist.
+          if ($key_field === 'sub_title'): ?>
+            <div class="tab-sub-title <?php print $tab_field == t('Type of book') ? 'type-of-book' : ''; ?>">
+              <?php print $tab_field; ?>
+            </div>
+          <?php else: ?>
+            <?php print render($tab_field); ?>
+          <?php endif; ?>
+        <?php endforeach; ?>
+      <?php endforeach; ?>
     </div>
   <?php endif; ?>
 </section>
@@ -51,7 +60,7 @@
               </div>
             <?php else: ?>
               <div class="fields-multi">
-                <?php foreach($single_tab_fields as $key_field => $tab_field): ?>
+                <?php foreach ($single_tab_fields as $key_field => $tab_field): ?>
                   <?php // Sub group in tab if exist.
                   if ($key_field === 'sub_title'): ?>
                     <div class="tab-sub-title">

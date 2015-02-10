@@ -7,7 +7,7 @@ Feature: Book
   Scenario Outline: Visit a book page
     Given I am an anonymous user
     When  I visit "<title>" node of type "book"
-    Then  I should get a "200" HTTP response
+    Then  I should see "1" ".bread-crumbs" elements
     And   I should see the text "<text>"
 
   Examples:
@@ -17,3 +17,14 @@ Feature: Book
     | ספר אמרי בינה            | IUL בספריית אוניברסיטת תל אביב תחת סיגנטורה      |
     | מאמר צדק ועוני או עוז הצדק | שם המחבר כפי שמופיע אצל וינוגרד   |
     | בית הספר א              | למודי המישרים                   |
+
+  @api
+  Scenario Outline: Verify breadcrumbs exist
+    Given I am an anonymous user
+    When  I visit "<title>" node of type "book"
+    Then  I should see the link "<title>"
+
+  Examples:
+    | title                                    |
+    | Abhandlung von der Freiheit des Menschen |
+    | מליצה לפורים                              |

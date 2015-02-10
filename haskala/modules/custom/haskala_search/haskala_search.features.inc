@@ -139,7 +139,6 @@ function haskala_search_default_search_api_index() {
         "field_translation_city" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_translation_references" : { "type" : "text" },
         "field_translation_year" : { "type" : "text" },
-        "field_translator" : { "type" : "integer", "entity_type" : "node" },
         "field_typography" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_volumes_notes" : { "type" : "text" },
         "field_volumes_published_number" : { "type" : "text" },
