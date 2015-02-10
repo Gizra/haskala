@@ -29,7 +29,7 @@
 
         padding: 0 21px 51px;
         border-bottom: 1px solid $darkgray;
-        margin-bottom: 31px;
+        margin-bottom: 32px;
 
         .title {
           font-size: 31px;
@@ -73,7 +73,7 @@
 
       #details-navigation {
         font-family: bell_mtbold;
-        letter-spacing: 0.54px;
+        letter-spacing: 0.24px;
         position: relative;
 
         .tabs-frame {
@@ -94,10 +94,10 @@
 
             li {
               display: inline;
-              padding: 0 8px 0 18px;
+              padding: 0 10px 0 20px;
               font-size: 14px;
               background: url("../images/sprites.png") no-repeat;
-              background-position: -315px 5px;
+              background-position: -315px 6px;
 
               &:first-child {
                 background: none;
