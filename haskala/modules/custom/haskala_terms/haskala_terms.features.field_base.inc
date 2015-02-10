@@ -39,5 +39,28 @@ function haskala_terms_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_geolocation'
+  $field_bases['field_geolocation'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_geolocation',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'lat' => array(
+        0 => 'lat',
+      ),
+      'lng' => array(
+        0 => 'lng',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'geolocation',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'geolocation_latlng',
+  );
+
   return $field_bases;
 }
