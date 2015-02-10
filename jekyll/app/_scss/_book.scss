@@ -6,24 +6,6 @@
       margin-bottom: 11px;
     }
 
-    .bread-crumbs {
-      margin-right: 4px;
-      margin-top: 10px;
-
-      li {
-        display: inline;
-        font-weight: bold;
-
-        &:after {
-          content: ' >';
-        }
-
-        &.last:after {
-          content: '';
-        }
-      }
-    }
-
     .hr-title {
       margin: 15px 0 62px;
       font-size: 24px;
@@ -174,7 +156,7 @@
         padding-top: 15px;
 
         .fields-group {
-          border-top: 1px solid $darkgray;
+          border-top: 1px solid #eae9e7;
           clear: both;
           padding: 6px 18px 2px;
           margin-top: 56px;
@@ -195,11 +177,6 @@
             margin-top: -3px;
             font-size: 14px;
 
-            .tab-sub-title {
-              margin-top: 40px;
-              border-bottom: 1px solid $darkgray;
-            }
-
             .field-item {
               display: inline;
 
@@ -214,6 +191,14 @@
           }
         }
       }
+      .tab-sub-title {
+        margin-top: 40px;
+        border-bottom: 1px solid $darkgray;
+      }
+      .type-of-book {
+        display: none;
+      }
+
     }
 
     footer {

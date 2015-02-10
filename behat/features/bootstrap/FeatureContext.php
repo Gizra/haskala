@@ -168,4 +168,16 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
         }
       });
   }
+
+  /**
+   * @When I should see :num :element elements
+   */
+  public function iShouldSeeElements($num, $element) {
+    $container = $this->getSession()->getPage();
+    $nodes = $container->findAll('css', $element);
+    $count = count($nodes);
+    if (intval($num) != $count) {
+      throw new \Exception(sprintf('The number of %s element on the page is %s and is not equal to %s, like you expect.', $element, $count, $num));
+    }
+  }
 }

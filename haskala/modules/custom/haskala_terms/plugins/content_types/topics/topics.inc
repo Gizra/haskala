@@ -15,7 +15,10 @@ function haskala_terms_topics_content_type_render($subtype, $conf, $args, $conte
     ->fields('t', array('field_topic_tid'))
     ->groupBy('field_topic_tid');
   $query->addExpression('COUNT(field_topic_tid)', 'usage_count');
-  $query->having('usage_count > 8')->orderBy('usage_count', 'DESC');
+  $query
+    ->orderBy('usage_count', 'DESC')
+    ->orderBy('field_topic_tid', 'DESC')
+    ->range(0, variable_get('haskala_topics_limit', 23));
   $term_ids = $query->execute()->fetchAllAssoc('field_topic_tid');
 
   if (!$term_ids) {

@@ -7,6 +7,7 @@ phantomcss.init({
 });
 
 casper.start('http://127.0.0.1:8080');
+//casper.start('http://localhost/haskala/www/');
 
 casper.viewport(1024, 768);
 
@@ -15,6 +16,12 @@ casper.then(function() {
 
   this.echo('Verify drupal site name');
   phantomcss.screenshot('.site-name', 'drupal-homepage-site-name');
+
+  this.echo('Verify drupal homepage header');
+  phantomcss.screenshot('header', 'drupal-homepage-header');
+
+  this.echo('Verify drupal homepage content');
+  phantomcss.screenshot('.region-content', 'drupal-homepage-content');
 
   this.echo('Verify the drupal content');
   phantomcss.screenshot('.main-content', 'drupal-homepage-main-content');
@@ -27,6 +34,9 @@ casper.then(function() {
 
   this.echo('Verify the drupal footer icons nav');
   phantomcss.screenshot('.icons-nav', 'drupal-homepage-icons-nav');
+
+  this.echo('Verify the drupal footer');
+  phantomcss.screenshot('footer', 'drupal-homepage-footer');
 
 });
 
@@ -41,12 +51,6 @@ casper.then(function() {
     this.echo('Verify drupal tags cloud - hover');
     this.mouse.move('.tags-cloud li a');
     phantomcss.screenshot('.tags-cloud li a', 'drupal-homepage-tags-cloud-hover');
-});
-
-casper.then(function() {
-  this.echo('Verify drupal icons nav - hover');
-  this.mouse.move('.icons-nav .first a');
-  phantomcss.screenshot('.icons-nav .first', 'drupal-homepage-icons-nav-hover');
 });
 
 

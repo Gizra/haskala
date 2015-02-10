@@ -5,7 +5,11 @@
     </nav>
     <h1 class="site-name"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><span>Library of the</span> Haskala</a></h1>
     <hr>
-    <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+    <?php if (isset($breadcrumbs)): ?>
+      <nav class="bread-crumbs">
+        <?php print $breadcrumbs; ?>
+      </nav>
+    <?php endif;?>
   </header>
 
   <?php print $messages; ?>
