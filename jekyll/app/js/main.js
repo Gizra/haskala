@@ -28,7 +28,7 @@ $(document).ready(function() {
     $('#details-navigation > a').removeClass('disabled');
 
     // Block left navigation on zero.
-    if (margin > 0) {
+    if (margin >= 0) {
       margin = 0;
       a.addClass('disabled');
     }
