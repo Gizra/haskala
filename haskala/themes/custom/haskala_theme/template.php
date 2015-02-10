@@ -97,5 +97,12 @@ function haskala_theme_preprocess_taxonomy_term(&$variables) {
 function haskala_theme_preprocess_taxonomy_term__teaser(&$variables) {
   $term = $variables['term'];
   $variables['url'] = url('taxonomy/term/' . $term->tid);
-  $variables['title'] =$term->name;
+  $variables['title'] = $term->name;
+}
+
+/**
+ * Preprocess for taxonomy term teaser.
+ */
+function haskala_theme_preprocess_taxonomy_term__detailed(&$variables) {
+  $variables['title_label'] = $variables['vocabulary_machine_name'] == 'cities' ? t('Location during writing of book') : '';
 }
