@@ -7,9 +7,8 @@ Feature: Book
   Scenario Outline: Visit a book page
     Given I am an anonymous user
     When  I visit "<title>" node of type "book"
-    # TODO: Verify the text is inside the breadcrumb element.
-    Then  I should see "1" ".bread-crumbs" elements
     And   I should see the text "<text>"
+    Then  I should see the text "<title>" under "bread-crumbs"
 
   Examples:
     | title                  | text                                  |
