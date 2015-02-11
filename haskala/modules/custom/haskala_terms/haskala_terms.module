@@ -14,3 +14,100 @@ function haskala_terms_ctools_plugin_directory($module, $plugin) {
     return 'plugins/' . $plugin;
   }
 }
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function haskala_terms_entity_info_alter(&$entity_info) {
+  $entity_info['taxonomy_term']['view modes']['detailed'] = array(
+    'label' => t('Detailed'),
+    'custom settings' => TRUE,
+  );
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function haskala_terms_field_formatter_info() {
+  return array(
+    'haskala_terms_detailed' => array(
+      'label' => t('Detailed'),
+      'field types' => array('taxonomy_term_reference'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function haskala_terms_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  if ($display['type'] != 'haskala_terms_detailed') {
+    return;
+  }
+
+  $element = array();
+  foreach ($items as $delta => $item) {
+    $element[$delta] = taxonomy_term_view(taxonomy_term_load($item['tid']), 'detailed');
+  }
+
+  return $element;
+}
+
+/**
+ * Custom version of taxonomy_select_nodes(), to allow selecting specific
+ * bundles.
+ *
+ * Return nodes attached to a term across all field instances.
+ *
+ * This function requires taxonomy module to be maintaining its own tables,
+ * and will return an empty array if it is not. If using other field storage
+ * methods alternatives methods for listing terms will need to be used.
+ *
+ * @param $tid
+ *   The term ID.
+ * @param $pager
+ *   Boolean to indicate whether a pager should be used.
+ * @param $limit
+ *   Integer. The maximum number of nodes to find.
+ *   Set to FALSE for no limit.
+ * @param $order
+ *   An array of fields and directions.
+ *
+ * @return
+ *   An array of nids matching the query.
+ */
+function haskala_terms_select_nodes($tid, $pager = TRUE, $limit = FALSE, $order = array('t.sticky' => 'DESC', 't.created' => 'DESC')) {
+  if (!variable_get('taxonomy_maintain_index_table', TRUE)) {
+    return array();
+  }
+  $query = db_select('taxonomy_index', 't');
+  $query->innerJoin('node', 'n', 'n.nid = t.nid');
+  $query->addTag('node_access');
+  $query->condition('tid', $tid);
+  $query->condition('n.type', array('book', 'person'), 'IN');
+  if ($pager) {
+    $count_query = clone $query;
+    $count_query->addExpression('COUNT(t.nid)');
+
+    $query = $query->extend('PagerDefault');
+    if ($limit !== FALSE) {
+      $query = $query->limit($limit);
+    }
+    $query->setCountQuery($count_query);
+  }
+  else {
+    if ($limit !== FALSE) {
+      $query->range(0, $limit);
+    }
+  }
+  $query->addField('t', 'nid');
+  $query->addField('t', 'tid');
+  foreach ($order as $field => $direction) {
+    $query->orderBy($field, $direction);
+    // ORDER BY fields need to be loaded too, assume they are in the form
+    // table_alias.name
+    list($table_alias, $name) = explode('.', $field);
+    $query->addField($table_alias, $name);
+  }
+  return $query->execute()->fetchCol();
+}

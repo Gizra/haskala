@@ -104,6 +104,7 @@ function haskala_set_permissions() {
  */
 function haskala_set_variables() {
   variable_set('page_manager_node_view_disabled', FALSE);
+  variable_set('page_manager_term_view_disabled', FALSE);
   variable_set('site_frontpage', 'homepage');
   variable_set('user_email_verification', FALSE);
   variable_set('pathauto_node_book_pattern', 'books/[node:title]');

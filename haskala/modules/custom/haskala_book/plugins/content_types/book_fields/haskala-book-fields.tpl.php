@@ -27,7 +27,7 @@
         <?php foreach($single_tab_fields as $key_field => $tab_field): ?>
           <?php // Sub group in tab if exist.
           if ($key_field === 'sub_title'): ?>
-            <div class="tab-sub-title <?php print $tab_field==t('Type of book')? 'type-of-book' :''?>">
+            <div class="tab-sub-title <?php print $tab_field == t('Type of book') ? 'type-of-book' : ''; ?>">
               <?php print $tab_field; ?>
             </div>
           <?php else: ?>
@@ -41,11 +41,15 @@
 
 <section id="bottom-details">
   <nav id="details-navigation">
-    <ul>
-      <?php foreach($tabs as $group_name => $group): ?>
-          <li><a href="#<?php print $group_name; ?>"><?php print $group_name; ?></a></li>
-      <?php endforeach; ?>
-    </ul>
+    <a class="previous disabled" data-direction="previous"></a>
+    <div class="tabs-frame">
+      <ul>
+        <?php foreach($tabs as $group_name => $group): ?>
+            <li><a href="#<?php print $group_name; ?>"><?php print $group_name; ?></a></li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
+    <a class="next" data-direction="next"></a>
   </nav>
   <section id="groups">
     <?php foreach($tabs as $tab_name => $multi_tab_fields): ?>
@@ -60,7 +64,7 @@
               </div>
             <?php else: ?>
               <div class="fields-multi">
-                <?php foreach($single_tab_fields as $key_field => $tab_field): ?>
+                <?php foreach ($single_tab_fields as $key_field => $tab_field): ?>
                   <?php // Sub group in tab if exist.
                   if ($key_field === 'sub_title'): ?>
                     <div class="tab-sub-title">

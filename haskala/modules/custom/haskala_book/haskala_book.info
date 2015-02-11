@@ -223,7 +223,6 @@ features[field_group][] = group_prefaces|node|book|default
 features[field_group][] = group_prefaces|node|book|form
 features[field_group][] = group_preservation|node|book|default
 features[field_group][] = group_preservation|node|book|form
-features[field_group][] = group_producers|node|production|default
 features[field_group][] = group_publisher_printing_press|node|book|default
 features[field_group][] = group_publisher_printing_press|node|book|form
 features[field_group][] = group_references_bibliography|node|book|default

@@ -7,10 +7,22 @@
   <meta name="viewport" content="width=device-width">
 
   <!-- build:css({app,.tmp}) css/main.css -->
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/main.css">
   <!-- endbuild -->
 
+  <!-- build:css({app,.tmp}) css/ie_gte_10.css -->
+  <!-- Css for IE >= 10 -->
+  <link rel="stylesheet" href="css/ie_gte_10.css" />
+  <!-- endbuild -->
+
+  <!-- build:css({app,.tmp}) css/ie_lte_9.css -->
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" href="css/ie_lte_9.css" />
+  <![endif]-->
+  <!-- endbuild -->
+
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body class="{{ page.body_class }}">
 

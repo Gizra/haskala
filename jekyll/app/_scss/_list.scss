@@ -1,0 +1,24 @@
+.pane-term-nodes-list {
+
+  .book-title {
+    text-align: left;
+
+    a {
+      margin-left: 34px;
+      font: 11px open_sanslight;
+      font-weight: bold;
+      line-height: 2.41;
+      letter-spacing: 1.2px;
+      color: $darkgray;
+
+      &:visited {
+        color: $darkgray;
+      }
+
+      &:hover {
+        color: $lightBlue;
+      }
+    }
+  }
+
+}
