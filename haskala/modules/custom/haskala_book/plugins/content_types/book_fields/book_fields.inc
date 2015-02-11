@@ -53,6 +53,30 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
     unset($tabs_fields[$tab_name]['weight']);
   }
 
+  // Add author names field to translation tab.
+  if ($wrapper->field_book->value()) {
+    $production_node = haskala_book_get_production($wrapper->field_book->getIdentifier(), NULL, t('Author'));
+    if ($production_node) {
+      $production_wrapper = entity_metadata_wrapper('node', $production_node);
+      $author_names_as_field = haskala_person_get_names($production_wrapper->field_producer->getIdentifier());
+
+      if ($author_names_as_field) {
+        // The tab fields array should contain keys: 'single', 'main'
+        // and keys that beginning with 'group'.
+        // The field "general notes" may be exist in 'single' or 'main' keys only.
+        $key = preg_grep('/^(?!group).*$/', array_keys($tabs_fields[t('Translation')]));
+        $key = reset($key);
+        // Insert before the last field "general notes" if exist.
+        if ($key && strstr(end($tabs_fields[t('Translation')][$key]), 'field-translation-notes')) {
+          array_splice($tabs_fields[t('Translation')][$key], count($tabs_fields[t('Translation')][$key])-1, 0, render($author_names_as_field));        }
+        // If field "general notes" is not exist, add to the end of translation fields array.
+        else {
+          $tabs_fields[t('Translation')][$key][] = render($author_names_as_field);
+        }
+      }
+    }
+  }
+
   // Add Book producers tab.
   haskala_book_production_tab_fields($tabs_fields, $book_nid);
 

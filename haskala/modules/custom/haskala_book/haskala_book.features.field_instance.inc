@@ -179,7 +179,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 94,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1369,7 +1369,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 99,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3117,7 +3117,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 101,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3157,7 +3157,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 100,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3197,7 +3197,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 98,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3237,7 +3237,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 96,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3277,7 +3277,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 95,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3314,7 +3314,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 97,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3394,7 +3394,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 91,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3434,7 +3434,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 93,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3474,7 +3474,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 92,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3514,7 +3514,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 90,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6519,7 +6519,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 102,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6599,7 +6599,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 89,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
