@@ -53,6 +53,25 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
     unset($tabs_fields[$tab_name]['weight']);
   }
 
+  // Add $author_names to translation tab.
+  if ($wrapper->field_book->value()) {
+    $production_node = haskala_book_get_production($wrapper->field_book->getIdentifier(), NULL, t('Author'));
+    if ($production_node) {
+      $production_wrapper = entity_metadata_wrapper('node', $production_node);
+      $author_names_as_field = haskala_person_get_names($production_wrapper->field_producer->getIdentifier());
+      if ($author_names_as_field) {
+        $tabs_fields[t('Translation')]['single'][] = render($author_names_as_field);
+        // Move the translation general notes if exist to the end.
+        $notes_key = key(preg_grep('/field-translation-notes/', $tabs_fields[t('Translation')]['single']));
+        if ($notes_key !== NULL) {
+          $notes_element = $tabs_fields[t('Translation')]['single'][$notes_key];
+          unset($tabs_fields[t('Translation')]['single'][$notes_key]);
+          $tabs_fields[t('Translation')]['single'][] = $notes_element;
+        }
+      }
+    }
+  }
+
   // Add Book producers tab.
   haskala_book_production_tab_fields($tabs_fields, $book_nid);
 
