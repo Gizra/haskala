@@ -1,0 +1,8 @@
+@media (min-width: 850px) {
+  .page-places, .page-taxonomy-term {
+    .pane-cities-map-panel-pane-1, .pane-terms-list, .pane-term-nodes-list {
+      width: 50%;
+      float: left;
+    }
+  }
+}
