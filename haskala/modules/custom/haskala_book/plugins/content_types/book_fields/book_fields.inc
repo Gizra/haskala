@@ -61,10 +61,13 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
       $author_names_as_field = haskala_person_get_names($production_wrapper->field_producer->getIdentifier());
 
       if ($author_names_as_field) {
-        $key = isset($tabs_fields[t('Translation')]['main']) ? 'main' : (isset($tabs_fields[t('Translation')]['single']) ? 'single' : NULL) ;
-
+        /* The tab fields array should contain keys: 'single', 'main'
+           and keys that beginning with 'group'.
+           The field "general notes" may be exist in 'single' or 'main' keys only. */
+        $key = preg_grep('/^(?!group).*$/', array_keys($tabs_fields[t('Translation')]));
+        $key = reset($key);
         // Insert before the last field "general notes" if exist.
-        if ($key && strpos(end($tabs_fields[t('Translation')][$key]), 'field-translation-notes') !== false) {
+        if ($key && strstr(end($tabs_fields[t('Translation')][$key]), 'field-translation-notes')) {
           array_splice($tabs_fields[t('Translation')][$key], count($tabs_fields[t('Translation')][$key])-1, 0, render($author_names_as_field));        }
         // If field "general notes" is not exist, add to the end of translation fields array.
         else {
