@@ -60,13 +60,19 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
       $production_wrapper = entity_metadata_wrapper('node', $production_node);
       $author_names_as_field = haskala_person_get_names($production_wrapper->field_producer->getIdentifier());
       if ($author_names_as_field) {
-        $tabs_fields[t('Translation')]['single'][] = render($author_names_as_field);
+        if (isset($tabs_fields[t('Translation')]) && array_key_exists('main',$tabs_fields[t('Translation')])) {
+          $key = 'main';
+        }
+        else {
+          $key = 'single';
+        }
+        $tabs_fields[t('Translation')][$key][] = render($author_names_as_field);
         // Move the translation general notes if exist to the end.
-        $notes_key = key(preg_grep('/field-translation-notes/', $tabs_fields[t('Translation')]['single']));
+        $notes_key = key(preg_grep('/field-translation-notes/', $tabs_fields[t('Translation')][$key]));
         if ($notes_key !== NULL) {
-          $notes_element = $tabs_fields[t('Translation')]['single'][$notes_key];
-          unset($tabs_fields[t('Translation')]['single'][$notes_key]);
-          $tabs_fields[t('Translation')]['single'][] = $notes_element;
+          $notes_element = $tabs_fields[t('Translation')][$key][$notes_key];
+          unset($tabs_fields[t('Translation')][$key][$notes_key]);
+          $tabs_fields[t('Translation')][$key][] = $notes_element;
         }
       }
     }
