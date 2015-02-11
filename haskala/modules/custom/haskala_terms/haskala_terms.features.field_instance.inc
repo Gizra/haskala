@@ -65,9 +65,47 @@ function haskala_terms_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-cities-field_geolocation'
+  $field_instances['taxonomy_term-cities-field_geolocation'] = array(
+    'bundle' => 'cities',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'geolocation',
+        'settings' => array(),
+        'type' => 'geolocation_text',
+        'weight' => 1,
+      ),
+      'detailed' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_geolocation',
+    'label' => 'Geolocation',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'geolocation',
+      'settings' => array(),
+      'type' => 'geolocation_text',
+      'weight' => 32,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Current name of location');
+  t('Geolocation');
 
   return $field_instances;
 }
