@@ -64,7 +64,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
         $key = isset($tabs_fields[t('Translation')]['main']) ? 'main' : (isset($tabs_fields[t('Translation')]['single']) ? 'single' : NULL) ;
 
         // Insert before the last field "general notes" if exist.
-        if ($key && preg_grep('/field-translation-notes/', $tabs_fields[t('Translation')][$key])) {
+        if ($key && strpos(end($tabs_fields[t('Translation')][$key]), 'field-translation-notes') !== false) {
           array_splice($tabs_fields[t('Translation')][$key], count($tabs_fields[t('Translation')][$key])-1, 0, render($author_names_as_field));        }
         // If field "general notes" is not exist, add to the end of translation fields array.
         else {
