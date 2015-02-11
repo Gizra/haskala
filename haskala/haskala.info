@@ -29,6 +29,7 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = geolocation
+dependencies[] = ip_geoloc
 dependencies[] = jquery_update
 dependencies[] = libraries
 dependencies[] = module_filter
