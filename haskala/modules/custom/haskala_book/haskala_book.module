@@ -158,8 +158,8 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
 
 
   // Add $author_names to translation tab.
-  if ($tab->label == 'Translation') {
-    $production_node = haskala_book_get_production($book_nid, NULL, t('Translator'));
+  if ($tab->label == 'Translation' && $wrapper->field_book->value()) {
+    $production_node = haskala_book_get_production($wrapper->field_book->getIdentifier(), NULL, t('Author'));
     if ($production_node) {
       $production_wrapper = entity_metadata_wrapper('node', $production_node);
       $author_names_as_field = haskala_person_get_names($production_wrapper->field_producer->getIdentifier());
