@@ -111,3 +111,43 @@ function haskala_terms_select_nodes($tid, $pager = TRUE, $limit = FALSE, $order 
   }
   return $query->execute()->fetchCol();
 }
+
+/**
+ * Implements hook_views_pre_render().
+ *
+ * Convert book sub-nodes (Edition, Production & Mention) to book links on the
+ * cities view.
+ */
+function haskala_terms_views_pre_render(&$view) {
+  if ($view->name != 'cities_map') {
+    return;
+  }
+
+  // Track which nodes are already shown for which terms, to avoid duplicates.
+  $terms_nodes = array();
+  foreach ($view->result as &$result) {
+    if (!$nid = $result->node_taxonomy_index_nid) {
+      continue;
+    }
+
+    if (empty($terms_nodes[$result->tid])) {
+      $terms_nodes[$result->tid] = array();
+    }
+
+    $wrapper = entity_metadata_wrapper('node', $nid);
+    if (in_array($wrapper->type->value(), array('edition', 'production', 'mention'))) {
+      // Convert the link to the book holding the sub-node.
+      $nid = $result->node_taxonomy_index_nid = $wrapper->field_book->getIdentifier();
+      $result->node_taxonomy_index_title = $wrapper->field_book->label();
+    }
+
+    // Remove duplicate nodes.
+    if (!empty($terms_nodes[$result->tid][$nid])) {
+      unset($result->node_taxonomy_index_title);
+      unset($result->node_taxonomy_index_nid);
+    }
+
+    // Mark this node as displayed on this term.
+    $terms_nodes[$result->tid][$nid] = TRUE;
+  }
+}
