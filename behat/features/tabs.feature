@@ -48,7 +48,9 @@ Feature: Book page
 
   Examples:
     | tab         | text     | link
-    | Translation | וייזל, נפתלי הרץ,Wessely, Hartwig | Gorizia
+    | Translation | וייזל, נפתלי הרץ,Wessely, Hartwig | Gorizia |
+    | Type of book | דברי שלום ואמת א                |         |
+    | Type of book | Wessely, Hartwig - וייזל, נפתלי הרץ |         |
 
 
   @api
