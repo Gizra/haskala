@@ -65,3 +65,4 @@ Feature: Book page
   Examples:
     | tab         | text     | link          |
     | Editions | בית עקד ספרים | Vienna        |
+    | Editions | אליהו מורפורגו | איטלקית        |
