@@ -42,13 +42,13 @@ Feature: Book page
   @api
   Scenario Outline: Visit a books page
     Given I am an anonymous user
-    And   I visit "books/מגלת-קהלת"
+    And   I visit "books/דברי-שלום-ואמת-א-איטלקית"
     When  I should see the text "<tab>"
     Then  I should see the text "<text>"
 
   Examples:
-    | tab         | text     |
-    | Translation | פרידלענדר, דוד,Friedländer, David,Friedlaender, David,Friedlander, David |
+    | tab         | text     | link
+    | Translation | וייזל, נפתלי הרץ,Wessely, Hartwig | Gorizia
 
 
   @api
