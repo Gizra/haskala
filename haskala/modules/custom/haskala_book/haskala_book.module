@@ -136,12 +136,12 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
       $field = render($node_view[$field_name]);
       $tab_fields_main[] = $field;
 
-      // Add translator name to Type of book tab, if book is a translation.
+      // Add orginal author name to Type of book tab, if book is a translation.
       if ($field_name == 'field_book') {
-        $translator_name_field = haskala_book_get_producer($wrapper->$field_name->getIdentifier(), t('Author'));
-        if ($translator_name_field) {
-          $translator_name_field['#title'] = t('Author of original');
-          $tab_fields_main[] = $translator_name_field;
+        $author_name_field = haskala_book_get_producer($wrapper->$field_name->getIdentifier(), t('Author'));
+        if ($author_name_field) {
+          $author_name_field['#title'] = t('Author of original');
+          $tab_fields_main[] = $author_name_field;
         }
       }
 
