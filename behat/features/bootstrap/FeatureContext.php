@@ -180,4 +180,15 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
       throw new \Exception(sprintf('The number of %s element on the page is %s and is not equal to %s, like you expect.', $element, $count, $num));
     }
   }
+
+  /**
+   * @Given /^I should see the text "([^"]*)" under "([^"]*)"$/
+   */
+  public function iShouldSeeTheTextUnder($text, $container) {
+    $page = $this->getSession()->getPage();
+
+    if (!$page->find('xpath', "//*[contains(@class, '{$container}')]//*[contains(., '{$text}')]")) {
+      throw new Exception(sprintf("The element with %s wasn't found in %s", $text, $container));
+    }
+  }
 }

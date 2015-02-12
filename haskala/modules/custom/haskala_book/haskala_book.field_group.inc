@@ -1464,6 +1464,7 @@ function haskala_book_field_group_info() {
       11 => 'field_original_type',
       12 => 'field_translation_notes',
       13 => 'field_translation_type',
+      14 => 'group_translation_editions_tab',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -1485,7 +1486,7 @@ function haskala_book_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'book';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_translatation';
   $field_group->data = array(
     'label' => 'Translation info',
     'weight' => '3',

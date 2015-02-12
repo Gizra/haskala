@@ -7,7 +7,7 @@ Feature: Person
   Scenario Outline: Login to site, and check access to the person page.
     Given I am an anonymous user
     When  I visit "<title>" node of type "person"
-    Then  I should see "1" ".bread-crumbs" elements
+    Then  I should see the text "<title>" under "bread-crumbs"
     And   I should see the text "<text>"
 
   Examples:
@@ -15,14 +15,3 @@ Feature: Person
     | Mendelssohn, Moses                               | Dessau                |
     | Friedländer, David                               | Königsberg            |
     | Lindau, Baruch ben Jehuda Löb                    | Hannover              |
-
-  @api
-  Scenario Outline: Verify breadcrumbs exist
-    Given I am an anonymous user
-    When  I visit "<title>" node of type "person"
-    Then  I should see the link "<title>"
-
-  Examples:
-    | title          |
-    | Satanow, Isaak |
-    | חיאן, צדוק      |
