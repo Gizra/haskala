@@ -2982,49 +2982,6 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_old_edition'
-  $field_instances['node-book-field_old_edition'] = array(
-    'bundle' => 'book',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 159,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_old_edition',
-    'label' => 'Name of "old text"',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete_tags',
-      'weight' => 34,
-    ),
-  );
-
   // Exported field_instance: 'node-book-field_old_name_in_book'
   $field_instances['node-book-field_old_name_in_book'] = array(
     'bundle' => 'book',
@@ -3062,6 +3019,89 @@ function haskala_book_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 130,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_old_text'
+  $field_instances['node-book-field_old_text'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 159,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_old_text',
+    'label' => 'Name of "old text"',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_old_text_author'
+  $field_instances['node-book-field_old_text_author'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 160,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_old_text_author',
+    'label' => 'Author of "old text"',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 35,
     ),
   );
 
@@ -4166,7 +4206,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 160,
+        'weight' => 161,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4190,7 +4230,7 @@ function haskala_book_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 35,
+      'weight' => 36,
     ),
   );
 
@@ -6097,7 +6137,7 @@ function haskala_book_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 123,
+      'weight' => 122,
     ),
   );
 
@@ -7569,6 +7609,7 @@ function haskala_book_field_default_field_instances() {
   t('Are there sources mentioned in the book itself?');
   t('Are there sources not mentioned in the book?');
   t('Are there thanks?');
+  t('Author of "old text"');
   t('Bans');
   t('Bibliographical citations');
   t('Book is not available?');
