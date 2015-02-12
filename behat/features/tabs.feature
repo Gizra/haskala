@@ -66,3 +66,19 @@ Feature: Book page
     | tab         | text     | link          |
     | Editions | בית עקד ספרים | Vienna        |
     | Editions | אליהו מורפורגו | איטלקית        |
+
+
+  @api
+  Scenario Outline: Visit a books page
+    Given I am an anonymous user
+    And   I visit "books/אגרת-ארחות-עולם"
+    When  I should see the text "<tab>"
+    Then  I should see the text "<text>"
+    And   I click "<link>"
+    And   I should get a "200" HTTP response
+
+  Examples:
+    | tab         | text     | link          |
+    | Persons mentioned in book | People mentioned in the book | Thanks        |
+
+
