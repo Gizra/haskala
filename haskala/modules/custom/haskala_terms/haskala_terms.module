@@ -52,3 +52,52 @@ function haskala_terms_field_formatter_view($entity_type, $entity, $field, $inst
 
   return $element;
 }
+
+/**
+ * Implements hook_views_pre_render().
+ *
+ * Convert book sub-nodes (Edition, Production & Mention) to book links on the
+ * cities view.
+ */
+function haskala_terms_views_pre_render(&$view) {
+  if ($view->name != 'cities_map') {
+    return;
+  }
+
+  // Instead of loading all book subnodes for each result, Create a hash linking
+  // each subnode to its book.
+  $query = db_select('field_data_field_book', 'fb');
+  $query->addField('fb', 'entity_id', 'book_subnode_nid');
+  $query->addField('n', 'nid', 'book_nid');
+  $query->addField('n', 'title', 'book_title');
+  $query->innerJoin('node', 'n', 'n.nid = fb.field_book_target_id');
+  $query->condition('fb.bundle', array('mention', 'edition', 'production'), 'in');
+  $subnodes = $query->execute()->fetchAllAssoc('book_subnode_nid');
+
+  // Track which nodes are already shown for which terms, to avoid duplicates.
+  $terms_nodes = array();
+  foreach ($view->result as &$result) {
+    if (!$nid = $result->node_taxonomy_index_nid) {
+      continue;
+    }
+
+    if (empty($terms_nodes[$result->tid])) {
+      $terms_nodes[$result->tid] = array();
+    }
+
+    if (!empty($subnodes[$result->node_taxonomy_index_nid])) {
+      // Convert the link to the book holding the sub-node.
+      $result->node_taxonomy_index_title = $subnodes[$result->node_taxonomy_index_nid]->book_title;
+      $nid = $result->node_taxonomy_index_nid = $subnodes[$result->node_taxonomy_index_nid]->book_nid;
+    }
+
+    // Remove duplicate nodes.
+    if (!empty($terms_nodes[$result->tid][$nid])) {
+      unset($result->node_taxonomy_index_title);
+      unset($result->node_taxonomy_index_nid);
+    }
+
+    // Mark this node as displayed on this term.
+    $terms_nodes[$result->tid][$nid] = TRUE;
+  }
+}
