@@ -61,8 +61,6 @@ function haskala_book_field_group_info() {
       1 => 'field_censorship',
       2 => 'field_contemporary_disputes',
       3 => 'field_contemporary_references',
-      4 => 'field_target_general_notes',
-      5 => 'group_preservation',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -193,19 +191,20 @@ function haskala_book_field_group_info() {
       3 => 'field_expanded_in_edition',
       4 => 'field_expanded_in_translations',
       5 => 'field_full_title',
-      6 => 'field_old_edition',
-      7 => 'field_presented_as_original',
-      8 => 'field_presented_as_translation',
-      9 => 'field_presented_new_edition',
-      10 => 'field_presented_new_edition_note',
-      11 => 'field_presented_new_edition_refe',
-      12 => 'field_presented_original_notes',
-      13 => 'field_presented_original_referen',
-      14 => 'field_presented_translatio_notes',
-      15 => 'field_presented_translation_refe',
-      16 => 'field_title_in_latin_characters',
-      17 => 'field_translation_contradict',
-      18 => 'group_textual_cultural_sources',
+      6 => 'field_presented_as_original',
+      7 => 'field_presented_as_translation',
+      8 => 'field_presented_new_edition',
+      9 => 'field_presented_new_edition_note',
+      10 => 'field_presented_new_edition_refe',
+      11 => 'field_presented_original_notes',
+      12 => 'field_presented_original_referen',
+      13 => 'field_presented_translatio_notes',
+      14 => 'field_presented_translation_refe',
+      15 => 'field_title_in_latin_characters',
+      16 => 'field_translation_contradict',
+      17 => 'field_old_text',
+      18 => 'field_old_text_author',
+      19 => 'group_textual_cultural_sources',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -232,10 +231,10 @@ function haskala_book_field_group_info() {
     'label' => 'Bottom details',
     'weight' => '3',
     'children' => array(
-      0 => 'group_new_edition',
-      1 => 'group_book_type',
-      2 => 'group_catalog_numbers',
-      3 => 'group_editions',
+      0 => 'group_book_type',
+      1 => 'group_catalog_numbers',
+      2 => 'group_editions',
+      3 => 'group_new_edition',
       4 => 'group_persons_mentioned',
       5 => 'group_prefaces',
       6 => 'group_publisher_printing_press',
@@ -774,10 +773,10 @@ function haskala_book_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'book';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_book_reception';
+  $field_group->parent_name = 'group_target_audience';
   $field_group->data = array(
     'label' => 'Preservation in the public consciousness',
-    'weight' => '122',
+    'weight' => '121',
     'children' => array(
       0 => 'field_later_references',
       1 => 'field_mentions_in_reviews',
@@ -1064,8 +1063,10 @@ function haskala_book_field_group_info() {
     'children' => array(
       0 => 'field_target_audience',
       1 => 'field_target_audience_notes',
-      2 => 'group_book_reception',
-      3 => 'group_target_production',
+      2 => 'field_target_general_notes',
+      3 => 'group_book_reception',
+      4 => 'group_preservation',
+      5 => 'group_target_production',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -1228,7 +1229,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_book_type';
   $field_group->data = array(
     'label' => 'Textual and cultural sources for the book',
-    'weight' => '36',
+    'weight' => '37',
     'children' => array(
       0 => 'field_book_type_general_notes',
       1 => 'field_jewish_sources_quotes',
@@ -1464,6 +1465,7 @@ function haskala_book_field_group_info() {
       11 => 'field_original_type',
       12 => 'field_translation_notes',
       13 => 'field_translation_type',
+      14 => 'group_translation_editions_tab',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -1485,7 +1487,7 @@ function haskala_book_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'book';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_translatation';
   $field_group->data = array(
     'label' => 'Translation info',
     'weight' => '3',
@@ -1599,18 +1601,19 @@ function haskala_book_field_group_info() {
       3 => 'field_expanded_in_edition',
       4 => 'field_expanded_in_translations',
       5 => 'field_full_title',
-      6 => 'field_old_edition',
-      7 => 'field_presented_as_original',
-      8 => 'field_presented_as_translation',
-      9 => 'field_presented_new_edition',
-      10 => 'field_presented_new_edition_note',
-      11 => 'field_presented_new_edition_refe',
-      12 => 'field_presented_original_notes',
-      13 => 'field_presented_original_referen',
-      14 => 'field_presented_translatio_notes',
-      15 => 'field_presented_translation_refe',
-      16 => 'field_title_in_latin_characters',
-      17 => 'field_translation_contradict',
+      6 => 'field_presented_as_original',
+      7 => 'field_presented_as_translation',
+      8 => 'field_presented_new_edition',
+      9 => 'field_presented_new_edition_note',
+      10 => 'field_presented_new_edition_refe',
+      11 => 'field_presented_original_notes',
+      12 => 'field_presented_original_referen',
+      13 => 'field_presented_translatio_notes',
+      14 => 'field_presented_translation_refe',
+      15 => 'field_title_in_latin_characters',
+      16 => 'field_translation_contradict',
+      17 => 'field_old_text',
+      18 => 'field_old_text_author',
     ),
     'format_type' => 'div',
     'format_settings' => array(

@@ -60,10 +60,10 @@ function haskala_book_get_production($book_nid, $person_nid = NULL, $role = NULL
  *  @param $book_nid
  *   The book node ID.
  *
- *  @return Translator name field.
+ *  @return Translator or orginal author name field.
  */
-function haskala_book_get_translator($book_nid) {
-  $production_node = haskala_book_get_production($book_nid, NULL, t('Translator'));
+function haskala_book_get_producer($book_nid, $role) {
+  $production_node = haskala_book_get_production($book_nid, NULL, $role);
   if (!$production_node) {
     return;
   }
@@ -136,12 +136,12 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
       $field = render($node_view[$field_name]);
       $tab_fields_main[] = $field;
 
-      // Add translator name to Type of book tab, if book is a translation.
+      // Add orginal author name to Type of book tab, if book is a translation.
       if ($field_name == 'field_book') {
-        $translator_name_field = haskala_book_get_translator($book_nid);
-        if ($translator_name_field) {
-          $translator_name_field['#title'] = t('Author of original');
-          $tab_fields_main[] = $translator_name_field;
+        $author_name_field = haskala_book_get_producer($wrapper->$field_name->getIdentifier(), t('Author'));
+        if ($author_name_field) {
+          $author_name_field['#title'] = t('Author of original');
+          $tab_fields_main[] = $author_name_field;
         }
       }
 
@@ -156,25 +156,6 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
     }
   }
 
-
-  // Add $author_names to translation tab.
-  if ($tab->label == 'Translation') {
-    $production_node = haskala_book_get_production($book_nid, NULL, t('Translator'));
-    if ($production_node) {
-      $production_wrapper = entity_metadata_wrapper('node', $production_node);
-      $author_names_as_field = haskala_person_get_names($production_wrapper->field_producer->getIdentifier());
-      if ($author_names_as_field) {
-        // Move the translation general notes if exist to the end.
-        $notes_key = key(preg_grep('/field-translation-notes/', $tab_fields_main));
-        $tab_fields_main[] = $author_names_as_field;
-        if ($notes_key) {
-          $notes_element = $tab_fields_main[$notes_key];
-          unset($tab_fields_main[$notes_key]);
-          $tab_fields_main[] = $notes_element;
-        }
-      }
-    }
-  }
 
   if ($tab_fields_main) {
     if ($sub_tabs_fields) {
@@ -237,7 +218,7 @@ function haskala_book_get_reference_nodes_fields($book_nid, $bundle, $nodes, $gr
         $language_field = render($node_view['field_language']);
         array_unshift($node_fields, $language_field);
       }
-      $translator_name_field = haskala_book_get_translator($node->nid);
+      $translator_name_field = haskala_book_get_producer($node->nid, t('Translator'));
       if ($translator_name_field) {
         $translator_name_field['#title'] = t('Translator');
         array_unshift($node_fields, $translator_name_field);

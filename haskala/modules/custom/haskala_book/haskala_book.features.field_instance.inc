@@ -179,7 +179,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 94,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1369,7 +1369,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 99,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2982,49 +2982,6 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_old_edition'
-  $field_instances['node-book-field_old_edition'] = array(
-    'bundle' => 'book',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 159,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_old_edition',
-    'label' => 'Name of "old text"',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete_tags',
-      'weight' => 34,
-    ),
-  );
-
   // Exported field_instance: 'node-book-field_old_name_in_book'
   $field_instances['node-book-field_old_name_in_book'] = array(
     'bundle' => 'book',
@@ -3062,6 +3019,89 @@ function haskala_book_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 130,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_old_text'
+  $field_instances['node-book-field_old_text'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 159,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_old_text',
+    'label' => 'Name of "old text"',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_old_text_author'
+  $field_instances['node-book-field_old_text_author'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 160,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_old_text_author',
+    'label' => 'Author of "old text"',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 35,
     ),
   );
 
@@ -3117,7 +3157,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 101,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3157,7 +3197,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 100,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3197,7 +3237,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 98,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3237,7 +3277,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 96,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3277,7 +3317,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 95,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3314,7 +3354,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 97,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3394,7 +3434,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 91,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3434,7 +3474,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 93,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3474,7 +3514,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 92,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3514,7 +3554,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 90,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4166,7 +4206,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 160,
+        'weight' => 161,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4190,7 +4230,7 @@ function haskala_book_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 35,
+      'weight' => 36,
     ),
   );
 
@@ -6097,7 +6137,7 @@ function haskala_book_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 123,
+      'weight' => 122,
     ),
   );
 
@@ -6519,7 +6559,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 102,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6599,7 +6639,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 89,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -7569,6 +7609,7 @@ function haskala_book_field_default_field_instances() {
   t('Are there sources mentioned in the book itself?');
   t('Are there sources not mentioned in the book?');
   t('Are there thanks?');
+  t('Author of "old text"');
   t('Bans');
   t('Bibliographical citations');
   t('Book is not available?');
