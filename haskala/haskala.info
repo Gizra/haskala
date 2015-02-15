@@ -31,6 +31,7 @@ dependencies[] = field_group
 dependencies[] = geolocation
 dependencies[] = jquery_update
 dependencies[] = libraries
+dependencies[] = link
 dependencies[] = module_filter
 dependencies[] = migrate
 dependencies[] = migrate_extras

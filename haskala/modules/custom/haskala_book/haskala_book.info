@@ -7,6 +7,7 @@ dependencies[] = features
 dependencies[] = field_group
 dependencies[] = haskala_people
 dependencies[] = haskala_terms
+dependencies[] = link
 dependencies[] = list
 dependencies[] = number
 dependencies[] = options
