@@ -34,6 +34,9 @@ projects[field_group][version] = "1.4"
 projects[geolocation][subdir] = "contrib"
 projects[geolocation][version] = "1.6"
 
+projects[ip_geoloc][subdir] = "contrib"
+projects[ip_geoloc][version] = "1.26"
+
 projects[jquery_update][subdir] = "contrib"
 projects[jquery_update][version] = "2.5"
 

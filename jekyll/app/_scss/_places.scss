@@ -1,0 +1,13 @@
+@media (min-width: 850px) {
+  .page-places, .page-taxonomy-term {
+    .pane-terms-list, .pane-term-nodes-list {
+      width: 30%;
+      float: left;
+    }
+
+    .pane-cities-map-panel-pane-1 {
+      width: 70%;
+      float: left;
+    }
+  }
+}

@@ -14,29 +14,41 @@ function haskala_terms_term_nodes_list_content_type_render($subtype, $conf, $arg
   if (empty($context->data)) {
     return;
   }
-  $term = $context->data;
-  $nids = haskala_terms_select_nodes($term->tid, TRUE, variable_get('haskala_nodes_on_term', 15));
-  $build = array();
-
-  if ($nids) {
-    $nodes = node_load_multiple($nids);
-    $build = node_view_multiple($nodes);
-    $build['pager'] = array(
-      '#theme' => 'pager',
-      '#weight' => 5,
-    );
-  }
-  else {
-    $build['no_content'] = array(
-      '#prefix' => '<p>',
-      '#markup' => t('There is currently no content classified with this term.'),
-      '#suffix' => '</p>',
-    );
-  }
 
   $block = new stdClass();
   $block->module = 'haskala_terms';
-  $block->content = $build;
+  $block->content = array();
+
+  $term = $context->data;
+  $nids = taxonomy_select_nodes($term->tid, TRUE, variable_get('haskala_nodes_on_term', 15));
+  if (!$nids) {
+    $block->content['no_content'] = array(
+      '#prefix' => '<p>',
+      '#suffix' => '</p>',
+      '#markup' => t('There is currently no content classified with this term.'),
+    );
+
+    return $block;
+  }
+
+  $nodes = node_load_multiple($nids);
+  // Rebuild the nids list, to convert book sub-nodes to book nodes.
+  $nids = array();
+  foreach ($nodes as &$node) {
+    $wrapper = entity_metadata_wrapper('node', $node);
+    if (in_array($node->type, array('edition', 'production', 'mention'))) {
+      $nids[] = $wrapper->field_book->getIdentifier();
+    }
+    else {
+      $nids[] = $node->nid;
+    }
+  }
+
+  $block->content = node_view_multiple(node_load_multiple($nids));
+  $block->content['pager'] = array(
+    '#theme' => 'pager',
+    '#weight' => 5,
+  );
 
   return $block;
 }
