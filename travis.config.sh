@@ -76,5 +76,3 @@ MYSQL_DB_NAME="drupal"
 # Post reset script.
 # function post_reset {}
 
-# Upload failed images to imgur
-- bash $TRAVIS_BUILD_DIR/imgur ./screenshots/drupal-homepage-search_4.png 
