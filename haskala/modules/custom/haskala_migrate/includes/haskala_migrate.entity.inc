@@ -75,13 +75,23 @@ abstract class HaskalaMigration extends Migration {
       ->execute();
 
     // When not finding a person, try to search only for its German name.
-    if (empty($result['node']) && $bundle == 'person' && mb_strrchr($title, ' - ')) {
-      list($name) = explode(' - ', $title);
-      $query = new EntityFieldQuery();
-      $result = $query->entityCondition('entity_type', 'node')
-        ->propertyCondition('type', 'person')
-        ->propertyCondition('title', $name)
-        ->execute();
+    if (empty($result['node']) && $bundle == 'person') {
+      if (mb_strrchr($title, ' - ')) {
+        list($name) = explode(' - ', $title);
+        $query = new EntityFieldQuery();
+        $result = $query->entityCondition('entity_type', 'node')
+          ->propertyCondition('type', 'person')
+          ->propertyCondition('title', $name)
+          ->execute();
+      }
+      // Try to search by its German name or hebrew name.
+      else {
+        $query = new EntityFieldQuery();
+        $result = $query->entityCondition('entity_type', 'node')
+          ->propertyCondition('type', 'person')
+          ->propertyCondition('title', '%' . $title . '%', 'LIKE')
+          ->execute();
+      }
     }
 
     if (empty($result['node'])) {

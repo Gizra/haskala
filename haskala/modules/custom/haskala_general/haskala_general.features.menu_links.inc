@@ -170,6 +170,26 @@ function haskala_general_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 1,
   );
+  // Exported menu link: menu-top-menu_digital-books:digital-books
+  $menu_links['menu-top-menu_digital-books:digital-books'] = array(
+    'menu_name' => 'menu-top-menu',
+    'link_path' => 'digital-books',
+    'router_path' => 'digital-books',
+    'link_title' => 'DIGITAL BOOKS',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-top-menu_digital-books:digital-books',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+  );
   // Exported menu link: menu-top-menu_people:people
   $menu_links['menu-top-menu_people:people'] = array(
     'menu_name' => 'menu-top-menu',
@@ -335,6 +355,7 @@ function haskala_general_menu_default_menu_links() {
   t('Add a person');
   t('BOOKS');
   t('Books');
+  t('DIGITAL BOOKS');
   t('Digital Books');
   t('LOGIN');
   t('PEOPLE');

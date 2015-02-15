@@ -147,6 +147,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_title_in_latin_characters',
       'field_publication_year_in_book',
       'field_total_number_of_editions',
+      'field_writer_of_preface',
       'field_width',
     );
     $this->addSimpleMappings($simple_mappings);
@@ -172,8 +173,15 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       ->defaultValue(TRUE);
     $this->addFieldMapping('field_name_of_series:ignore_case')
       ->defaultValue(TRUE);
+  }
 
-    $this->addFieldMapping('field_writer_of_preface', 'field_writer_of_preface')
-      ->sourceMigration('HaskalaPeopleMigrate');
+  /**
+   * Fetch person node IDs by their titles.
+   */
+  public function prepareRow($row) {
+    parent::prepareRow($row);
+    if ($row->field_writer_of_preface) {
+      $row->field_writer_of_preface = $this->getNodeByTitle('person', $row->field_writer_of_preface);
+    }
   }
 }

@@ -79,7 +79,7 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', 
   }
 
   if ($book_type == 'digital' && $node_type == 'book') {
-      $query->fieldCondition('field_link_to_digital_book',  'value', 'NULL', 'IS NOT NULL');
+      $query->fieldCondition('field_link_to_digital_book',  'url', 'NULL', 'IS NOT NULL');
     }
 
   if ($limit != 50) {

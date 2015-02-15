@@ -4,7 +4,7 @@
  * Preprocess html.
  */
 function haskala_theme_preprocess_html(&$vars) {
-  // Css for IE <= 9
+  // Css for IE <= 9.
   drupal_add_css(libraries_get_path('haskala') . '/css/ie.css', array('browsers' => array('IE' => 'lte IE 9', '!IE' => FALSE)));
 }
 
