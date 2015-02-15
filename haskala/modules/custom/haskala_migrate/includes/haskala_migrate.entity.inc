@@ -86,10 +86,11 @@ abstract class HaskalaMigration extends Migration {
       }
       // Try to search by its German name or hebrew name.
       else {
+
         $query = new EntityFieldQuery();
         $result = $query->entityCondition('entity_type', 'node')
           ->propertyCondition('type', 'person')
-          ->propertyCondition('title', '%'.$title.'%', 'LIKE')
+          ->propertyCondition('title', '%' . $title . '%', 'LIKE')
           ->execute();
       }
     }
