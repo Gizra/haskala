@@ -85,7 +85,7 @@ Feature: Book page
   @api
   Scenario Outline: Visit a books page
     Given I am an anonymous user
-    And   I visit "books/abhandlung-von-der-freiheit-des-menschen#Catalog numbers"
+    And   I visit "books/abhandlung-von-der-freiheit-des-menschen"
     When  I should see the text "<tab>"
     Then  I should see the text "<text>"
     And   I click "<link>"
@@ -94,3 +94,4 @@ Feature: Book page
   Examples:
     | tab         | text     | link          |
     | Catalog numbers | Link to digital book | http://www.mdz-nbn-resolving.de/urn/resolver.pl?urn=urn%3Anbn%3Ade%3Abvb%3A12-bs...       |
+    | Prefaces | Writer of preface |      |
