@@ -28,7 +28,7 @@ Feature: Book page
     Given I am an anonymous user
     When  I visit "books/זה-ספר-בית-המדות"
     And   I click "<link>"
-    Then   I should get a "200" HTTP response
+    Then  I should get a "200" HTTP response
 
   Examples:
     | link              |
@@ -84,7 +84,7 @@ Feature: Book page
     Given I am an anonymous user
     When  I visit "books/דברי-שלום-ואמת-א"
     Then  I should see the text "<tab>"
-    And  I should see the text "<text>"
+    And   I should see the text "<text>"
 
   Examples:
     | tab         | text     |
@@ -96,7 +96,7 @@ Feature: Book page
   Scenario Outline: Visit a books page
     Given I am an anonymous user
     When  I visit "books/דברי-שלום-ואמת-א"
-    And I click "<link>"
+    And   I click "<link>"
     Then  I should get a "200" HTTP response
 
   Examples:
@@ -108,9 +108,9 @@ Feature: Book page
   @api
   Scenario Outline: Visit a books page
     Given I am an anonymous user
-    When   I visit "books/אגרת-ארחות-עולם"
+    When  I visit "books/אגרת-ארחות-עולם"
     Then  I should see the text "<tab>"
-    And  I should see the text "<text>"
+    And   I should see the text "<text>"
 
   Examples:
     | tab         | text     |
@@ -123,7 +123,7 @@ Feature: Book page
     Given I am an anonymous user
     When  I visit "books/abhandlung-von-der-freiheit-des-menschen"
     Then  I should see the text "<tab>"
-    And  I should see the text "<text>"
+    And   I should see the text "<text>"
 
   Examples:
     | tab         | text     |
