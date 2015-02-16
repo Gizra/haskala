@@ -5,7 +5,20 @@
       float: left;
 
       .pane-content {
-        padding-right: 30px;
+        padding-right: 15px;
+      }
+
+      .terms-list .terms-by-letter {
+        max-width: 118px;
+
+        .terms-title {
+          margin-top: 10px;
+          line-height: 1.5;
+
+          &:first-child {
+            margin-top: 6px;
+          }
+        }
       }
     }
 
