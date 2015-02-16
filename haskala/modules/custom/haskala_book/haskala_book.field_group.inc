@@ -224,7 +224,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-book-type field-group-fieldset',
@@ -303,7 +303,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => '',
@@ -359,7 +359,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-diagrams field-group-fieldset',
@@ -419,7 +419,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-editions field-group-fieldset',
@@ -698,7 +698,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-new-edition field-group-fieldset',
@@ -810,7 +810,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-other-books field-group-fieldset',
@@ -935,7 +935,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-persons-mentioned field-group-fieldset',
@@ -1023,7 +1023,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => '',
@@ -1226,7 +1226,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-publisher-printing-press field-group-fieldset',
@@ -1340,7 +1340,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-references-bibliography field-group-fieldset',
@@ -1421,7 +1421,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-series field-group-fieldset',
@@ -1449,7 +1449,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-sources-mentioned-in-book field-group-fieldset',
@@ -1477,7 +1477,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-sources-not-mentioned field-group-fieldset',
@@ -1523,7 +1523,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-structure field-group-fieldset',
@@ -1672,7 +1672,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-target-audience field-group-fieldset',
@@ -1907,7 +1907,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-textual-models field-group-fieldset',
@@ -2024,7 +2024,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => '',
@@ -2198,7 +2198,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-translation field-group-fieldset',
@@ -2318,7 +2318,7 @@ function haskala_book_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
       'instance_settings' => array(
         'description' => '',
         'classes' => 'group-volumes field-group-fieldset',
