@@ -110,6 +110,8 @@ function haskala_set_variables() {
   variable_set('user_email_verification', FALSE);
   variable_set('pathauto_node_book_pattern', 'books/[node:title]');
   variable_set('pathauto_node_person_pattern', 'people/[node:title]');
+  variable_set('ip_geoloc_marker_dimensions', '25 x 36');
+  variable_set('ip_geoloc_marker_directory', 'profiles/haskala/themes/custom/haskala_theme/map_markers');
 }
 
 /**
