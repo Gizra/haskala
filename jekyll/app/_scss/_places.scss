@@ -3,6 +3,10 @@
     .pane-terms-list, .pane-term-nodes-list {
       width: 30%;
       float: left;
+
+      .pane-content {
+        padding-right: 30px;
+      }
     }
 
     .pane-cities-map-panel-pane-1 {
