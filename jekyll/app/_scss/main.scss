@@ -5,6 +5,7 @@
 @import 'books';
 @import 'homepage';
 @import 'list';
+@import 'places';
 @import 'search';
 
 * {
@@ -59,10 +60,14 @@ a, a:hover, a:visited {
   border-bottom: none;
 }
 
-.nav>li>a:hover {
+.nav > li > a:hover {
   background-color: transparent;
 }
 /* End reset bootstrap */
+
+.krumo-root {
+  text-align: left;
+}
 
 .wrapper {
   max-width: 950px;
