@@ -350,7 +350,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_structure';
   $field_group->data = array(
-    'label' => 'Diagrams',
+    'label' => '',
     'weight' => '84',
     'children' => array(
       0 => 'field_diagrams_book_pages',
@@ -468,7 +468,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_structure';
   $field_group->data = array(
-    'label' => 'Epilogue notes',
+    'label' => '',
     'weight' => '76',
     'children' => array(
       0 => 'field_epilogue_notes',
@@ -559,7 +559,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_book_type';
   $field_group->data = array(
-    'label' => 'New edition presented',
+    'label' => '',
     'weight' => '25',
     'children' => array(
       0 => 'field_contradict_new_edition',
@@ -590,7 +590,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_new_edition';
   $field_group->data = array(
-    'label' => 'Type of new edition elsewhere',
+    'label' => '',
     'weight' => '127',
     'children' => array(
       0 => 'field_new_edition_type_else_note',
@@ -618,7 +618,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_new_edition';
   $field_group->data = array(
-    'label' => 'Type of new edition',
+    'label' => '',
     'weight' => '125',
     'children' => array(
       0 => 'field_new_edition_type_notes',
@@ -718,7 +718,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_translation';
   $field_group->data = array(
-    'label' => 'Orginal author',
+    'label' => '',
     'weight' => '16',
     'children' => array(
       0 => 'field_orginal_author_else_refer',
@@ -745,7 +745,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_book_type';
   $field_group->data = array(
-    'label' => 'orginal_presented',
+    'label' => '',
     'weight' => '21',
     'children' => array(
       0 => 'field_contradict_orginal',
@@ -776,7 +776,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_translation';
   $field_group->data = array(
-    'label' => 'Title of the original text',
+    'label' => '',
     'weight' => '8',
     'children' => array(
       0 => 'field_original_title_else_refer',
@@ -803,7 +803,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_volumes';
   $field_group->data = array(
-    'label' => 'Other books',
+    'label' => '',
     'weight' => '87',
     'children' => array(
       0 => 'field_other_books_names',
@@ -830,7 +830,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_persons_mentioned';
   $field_group->data = array(
-    'label' => 'personal addresses',
+    'label' => '',
     'weight' => '9',
     'children' => array(
       0 => 'field_personal_addresse_notes',
@@ -955,7 +955,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_structure';
   $field_group->data = array(
-    'label' => 'Preface notes',
+    'label' => '',
     'weight' => '74',
     'children' => array(
       0 => 'field_structure_preface_notes',
@@ -1414,7 +1414,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_volumes';
   $field_group->data = array(
-    'label' => 'Series',
+    'label' => '',
     'weight' => '85',
     'children' => array(
       0 => 'field_name_of_series',
@@ -1441,7 +1441,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_textual_cultural_sources';
   $field_group->data = array(
-    'label' => 'Sources mentioned in the book itself',
+    'label' => '',
     'weight' => '21',
     'children' => array(
       0 => 'field_sources_list',
@@ -1469,7 +1469,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_textual_cultural_sources';
   $field_group->data = array(
-    'label' => 'sources not mentioned in book',
+    'label' => '',
     'weight' => '23',
     'children' => array(
       0 => 'field_sources_not_mentioned_list',
@@ -1602,7 +1602,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_structure';
   $field_group->data = array(
-    'label' => 'Table of contents',
+    'label' => '',
     'weight' => '78',
     'children' => array(
       0 => 'field_contents_table_notes',
@@ -2147,7 +2147,7 @@ function haskala_book_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_book_type';
   $field_group->data = array(
-    'label' => 'Translation presented',
+    'label' => '',
     'weight' => '23',
     'children' => array(
       0 => 'field_book',
