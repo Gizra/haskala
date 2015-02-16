@@ -103,13 +103,15 @@ function haskala_set_permissions() {
  * Task callback; Setup blocks.
  */
 function haskala_set_variables() {
-  variable_set('jquery_update_jquery_admin_version', 'default');
+  variable_set('jquery_update_jquery_admin_version', '1.7');
   variable_set('page_manager_node_view_disabled', FALSE);
   variable_set('page_manager_term_view_disabled', FALSE);
   variable_set('site_frontpage', 'homepage');
   variable_set('user_email_verification', FALSE);
   variable_set('pathauto_node_book_pattern', 'books/[node:title]');
   variable_set('pathauto_node_person_pattern', 'people/[node:title]');
+  variable_set('ip_geoloc_marker_dimensions', '25 x 36');
+  variable_set('ip_geoloc_marker_directory', 'profiles/haskala/themes/custom/haskala_theme/map_markers');
 }
 
 /**

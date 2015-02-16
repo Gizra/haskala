@@ -3,11 +3,32 @@
     .pane-terms-list, .pane-term-nodes-list {
       width: 30%;
       float: left;
+
+      .pane-content {
+        padding-right: 15px;
+      }
+
+      .terms-list .terms-by-letter {
+        max-width: 118px;
+
+        .terms-title {
+          margin-top: 10px;
+          line-height: 1.5;
+
+          &:first-child {
+            margin-top: 6px;
+          }
+        }
+      }
     }
 
     .pane-cities-map-panel-pane-1 {
       width: 70%;
       float: left;
     }
+  }
+
+  #ip-geoloc-map-of-view-cities_map-panel_pane_1 {
+    height: 600px !important;
   }
 }
