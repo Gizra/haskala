@@ -75,3 +75,4 @@ MYSQL_DB_NAME="drupal"
 
 # Post reset script.
 # function post_reset {}
+
