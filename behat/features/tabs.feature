@@ -10,17 +10,17 @@ Feature: Book page
     And   I should see the text "<text>"
 
   Examples:
-    | tab                         | text                                    |
+    | tab                         | text                                       |
     | Book producers              | מרגליות, יהודה ליב בן אשר                  |
-    | Book structure              | על חלק דברי המוסר                        |
-    | Textual models              | מרגליות                                   |
-    | Type of book                | Title of the book in Latin characters    |
-    | Publisher/ Printing press   | Place of publication as it appears in    |
-    | Persons mentioned in book   | שיחיו ליום הולדתו בשנת                      |
-    | Topics                      | Topic                                    |
-    | Target audience             | Target audience as described in the book |
-    | Catalog numbers             | University catalog                       |
-    | References and bibliography | לאומית                                    |
+    | Book structure              | על חלק דברי המוסר                          |
+    | Textual models              | מרגליות                                    |
+    | Type of book                | Title of the book in Latin characters      |
+    | Publisher/ Printing press   | Place of publication as it appears in      |
+    | Persons mentioned in book   | שיחיו ליום הולדתו בשנת                     |
+    | Topics                      | Topic                                      |
+    | Target audience             | Target audience as described in the book   |
+    | Catalog numbers             | University catalog                         |
+    | References and bibliography | לאומית                                     |
 
 
   @api
@@ -47,7 +47,7 @@ Feature: Book page
     And   I should see the text "<text>"
 
   Examples:
-    | tab      | text     |
+    | tab      | text      |
     | Volumes  | אך המספור |
     | Prefaces | מבוא      |
 
@@ -60,8 +60,8 @@ Feature: Book page
     Then  I should get a "200" HTTP response
 
   Examples:
-    | link      |
-    | ספר מנחה חדשה |
+    | link            |
+    | ספר מנחה חדשה   |
 
 
   @api
@@ -72,11 +72,11 @@ Feature: Book page
     And   I should see the text "<text>"
 
   Examples:
-    | tab         | text     |
-    | Translation | וייזל, נפתלי הרץ,Wessely, Hartwig |
-    | Translation | 1783
-    | Type of book | דברי שלום ואמת א                |
-    | Type of book | Wessely, Hartwig - וייזל, נפתלי הרץ |
+    | tab          | text                                 |
+    | Translation  | וייזל, נפתלי הרץ,Wessely, Hartwig    |
+    | Translation  | 1783                                 |
+    | Type of book | דברי שלום ואמת א                     |
+    | Type of book | Wessely, Hartwig - וייזל, נפתלי הרץ  |
 
 
   @api
@@ -87,8 +87,8 @@ Feature: Book page
     And   I should see the text "<text>"
 
   Examples:
-    | tab         | text     |
-    | Editions | בית עקד ספרים |
+    | tab      | text           |
+    | Editions | בית עקד ספרים  |
     | Editions | אליהו מורפורגו |
 
 
@@ -113,9 +113,9 @@ Feature: Book page
     And   I should see the text "<text>"
 
   Examples:
-    | tab         | text     |
+    | tab                       | text                         |
     | Persons mentioned in book | People mentioned in the book |
-    | Persons mentioned in book | יעקב בן יצחק פלעקלש        |
+    | Persons mentioned in book | יעקב בן יצחק פלעקלש          |
 
 
   @api
@@ -126,9 +126,9 @@ Feature: Book page
     And   I should see the text "<text>"
 
   Examples:
-    | tab         | text     |
+    | tab             | text                 |
     | Catalog numbers | Link to digital book |
-    | Prefaces | Writer of preface |
+    | Prefaces        | Writer of preface    |
 
 
   @api
@@ -139,6 +139,6 @@ Feature: Book page
     Then  I should get a "200" HTTP response
 
   Examples:
-    | link          |
+    | link                                                                                |
     | http://www.mdz-nbn-resolving.de/urn/resolver.pl?urn=urn%3Anbn%3Ade%3Abvb%3A12-bs... |
 
