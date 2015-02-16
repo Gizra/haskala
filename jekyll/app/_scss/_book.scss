@@ -1,4 +1,4 @@
-.node-type-book {
+.node-type-book, .node-type-person {
 
   .wrapper {
 
@@ -21,6 +21,15 @@
       }
     }
 
+    h1 {
+      font-size: 31px;
+      font-weight: normal;
+      line-height: 1.07;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      letter-spacing: -0.5px;
+    }
+
     .main-content {
       margin-top: 30px;
       text-align: left;
@@ -30,15 +39,6 @@
         padding: 0 21px 51px;
         border-bottom: 1px solid $darkgray;
         margin-bottom: 32px;
-
-        .title {
-          font-size: 31px;
-          font-weight: normal;
-          line-height: 1.07;
-          text-transform: uppercase;
-          margin-bottom: 14px;
-          letter-spacing: -0.5px;
-        }
 
         .field {
           line-height: 2.42;

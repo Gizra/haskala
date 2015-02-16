@@ -56,11 +56,11 @@ function find_people_viaf_ids($start_nid = 0) {
   $query->addField('n', 'title');
   $query->condition('n.type', 'person');
   $query->condition('n.nid', $start_nid, '>');
-  $query->range(0, 200);
+  $query->range(0, 400);
   $people = $query->execute()->fetchAllAssoc('nid');
 
   foreach ($people as $person) {
-    $name = $person->title;
+    $name = str_replace('"', '', $person->title);
     if (mb_strrchr($name, ' - ')) {
       list($name) = explode(' - ', $name);
     }

@@ -36,6 +36,7 @@ features[field_instance][] = node-person-field_place_of_death
 features[field_instance][] = node-person-field_pseudonym
 features[field_instance][] = node-person-field_viaf_id
 features[node][] = person
+features[page_manager_handlers][] = node_view__person_page
 features[page_manager_pages][] = people
 features[taxonomy][] = description_of_mentionee
 features[taxonomy][] = gender
