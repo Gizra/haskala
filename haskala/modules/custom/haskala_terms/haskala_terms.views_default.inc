@@ -41,6 +41,7 @@ function haskala_terms_views_default_views() {
     'field_geolocation' => 'field_geolocation',
   );
   $handler->display->display_options['style_options']['ip_geoloc_views_plugin_longitude'] = 'field_geolocation';
+  $handler->display->display_options['style_options']['default_marker_color'] = 'marker-active';
   $handler->display->display_options['style_options']['center_option'] = '4';
   $handler->display->display_options['style_options']['gps_roles'] = array(
     1 => 0,
@@ -48,6 +49,15 @@ function haskala_terms_views_default_views() {
     4 => 0,
     3 => 0,
   );
+  $handler->display->display_options['style_options']['map_options'] = '{
+"mapTypeId":"roadmap", 
+"disableDefaultUI":true, 
+"zoom":4, 
+"zoomControl":true, 
+"scaleControl":true,
+"styles":[{"featureType":"all", "stylers":[{"saturation":-80, "lightness": 80}] }]
+}
+ ';
   /* Relationship: Taxonomy term: Content with term */
   $handler->display->display_options['relationships']['nid']['id'] = 'nid';
   $handler->display->display_options['relationships']['nid']['table'] = 'taxonomy_index';
