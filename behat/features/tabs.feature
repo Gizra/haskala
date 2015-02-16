@@ -48,7 +48,7 @@ Feature: Book page
 
   Examples:
     | tab      | text     |
-    | Volumes  | ספר מנחה חדשה |
+    | Volumes  | אך המספור |
     | Prefaces | מבוא      |
 
 
@@ -61,7 +61,7 @@ Feature: Book page
 
   Examples:
     | link      |
-    | אך המספור |
+    | ספר מנחה חדשה |
 
 
   @api
