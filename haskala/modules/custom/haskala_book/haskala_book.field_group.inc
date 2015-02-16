@@ -185,26 +185,15 @@ function haskala_book_field_group_info() {
     'label' => 'Type of book',
     'weight' => '8',
     'children' => array(
-      0 => 'field_book',
-      1 => 'field_contradict_new_edition',
-      2 => 'field_contradict_orginal',
-      3 => 'field_expanded_in_edition',
-      4 => 'field_expanded_in_translations',
-      5 => 'field_full_title',
-      6 => 'field_presented_as_original',
-      7 => 'field_presented_as_translation',
-      8 => 'field_presented_new_edition',
-      9 => 'field_presented_new_edition_note',
-      10 => 'field_presented_new_edition_refe',
-      11 => 'field_presented_original_notes',
-      12 => 'field_presented_original_referen',
-      13 => 'field_presented_translatio_notes',
-      14 => 'field_presented_translation_refe',
-      15 => 'field_title_in_latin_characters',
-      16 => 'field_translation_contradict',
-      17 => 'field_old_text',
-      18 => 'field_old_text_author',
-      19 => 'group_textual_cultural_sources',
+      0 => 'field_full_title',
+      1 => 'field_presented_as_original',
+      2 => 'field_presented_as_translation',
+      3 => 'field_presented_new_edition',
+      4 => 'field_title_in_latin_characters',
+      5 => 'group_orginal_presented',
+      6 => 'group_textual_cultural_sources',
+      7 => 'group_translation_presented',
+      8 => 'group_new_edition_presented',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -218,50 +207,6 @@ function haskala_book_field_group_info() {
   );
   $export['group_book_type|node|book|form'] = $field_group;
 
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_bottom_details|node|book|form';
-  $field_group->group_name = 'group_bottom_details';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Bottom details',
-    'weight' => '3',
-    'children' => array(
-      0 => 'group_book_type',
-      1 => 'group_catalog_numbers',
-      2 => 'group_editions',
-      3 => 'group_new_edition',
-      4 => 'group_persons_mentioned',
-      5 => 'group_prefaces',
-      6 => 'group_publisher_printing_press',
-      7 => 'group_references_bibliography',
-      8 => 'group_structure',
-      9 => 'group_target_audience',
-      10 => 'group_textual_models',
-      11 => 'group_topics',
-      12 => 'group_translation',
-      13 => 'group_volumes',
-    ),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'formatter' => 'open',
-      'instance_settings' => array(
-        'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => '',
-        'required_fields' => 1,
-        'id' => '',
-      ),
-    ),
-  );
-  $export['group_bottom_details|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -353,7 +298,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_structure';
   $field_group->data = array(
     'label' => 'Diagrams',
-    'weight' => '83',
+    'weight' => '84',
     'children' => array(
       0 => 'field_diagrams_book_pages',
       1 => 'field_diagrams_notes',
@@ -463,6 +408,33 @@ function haskala_book_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_epilogue_notes|node|book|form';
+  $field_group->group_name = 'group_epilogue_notes';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_structure';
+  $field_group->data = array(
+    'label' => 'Epilogue notes',
+    'weight' => '76',
+    'children' => array(
+      0 => 'field_epilogue_notes',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-epilogue-notes field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_epilogue_notes|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_horizontal_tabs|node|book|default';
   $field_group->group_name = 'group_horizontal_tabs';
   $field_group->entity_type = 'node';
@@ -496,6 +468,93 @@ function haskala_book_field_group_info() {
     ),
   );
   $export['group_horizontal_tabs|node|book|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_new_edition_presented|node|book|form';
+  $field_group->group_name = 'group_new_edition_presented';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_book_type';
+  $field_group->data = array(
+    'label' => 'New edition presented',
+    'weight' => '25',
+    'children' => array(
+      0 => 'field_contradict_new_edition',
+      1 => 'field_old_text',
+      2 => 'field_old_text_author',
+      3 => 'field_presented_new_edition_note',
+      4 => 'field_presented_new_edition_refe',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-new-edition-presented field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_new_edition_presented|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_new_edition_type_elsewhere|node|book|form';
+  $field_group->group_name = 'group_new_edition_type_elsewhere';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_new_edition';
+  $field_group->data = array(
+    'label' => 'Type of new edition elsewhere',
+    'weight' => '127',
+    'children' => array(
+      0 => 'field_new_edition_type_else_note',
+      1 => 'field_new_edition_type_else_ref',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-new-edition-type-elsewhere field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_new_edition_type_elsewhere|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_new_edition_type|node|book|form';
+  $field_group->group_name = 'group_new_edition_type';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_new_edition';
+  $field_group->data = array(
+    'label' => 'Type of new edition',
+    'weight' => '125',
+    'children' => array(
+      0 => 'field_new_edition_type_notes',
+      1 => 'field_new_edition_type_reference',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-new-edition-type field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_new_edition_type|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -548,16 +607,14 @@ function haskala_book_field_group_info() {
     'weight' => '10',
     'children' => array(
       0 => 'field_new_edition_general_notes',
-      1 => 'field_new_edition_type_else_note',
-      2 => 'field_new_edition_type_else_ref',
-      3 => 'field_new_edition_type_elsewhere',
-      4 => 'field_new_edition_type_in_text',
-      5 => 'field_new_edition_type_notes',
-      6 => 'field_new_edition_type_reference',
-      7 => 'field_old_author_addition_names',
-      8 => 'field_old_author_names_other_sor',
-      9 => 'field_old_name_in_book',
-      10 => 'field_old_text_author_in_book',
+      1 => 'field_new_edition_type_elsewhere',
+      2 => 'field_new_edition_type_in_text',
+      3 => 'field_old_author_addition_names',
+      4 => 'field_old_author_names_other_sor',
+      5 => 'field_old_name_in_book',
+      6 => 'field_old_text_author_in_book',
+      7 => 'group_new_edition_type',
+      8 => 'group_new_edition_type_elsewhere',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -570,6 +627,118 @@ function haskala_book_field_group_info() {
     ),
   );
   $export['group_new_edition|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_orginal_author|node|book|form';
+  $field_group->group_name = 'group_orginal_author';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_translation';
+  $field_group->data = array(
+    'label' => 'Orginal author',
+    'weight' => '16',
+    'children' => array(
+      0 => 'field_orginal_author_else_refer',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-orginal-author field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_orginal_author|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_orginal_presented|node|book|form';
+  $field_group->group_name = 'group_orginal_presented';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_book_type';
+  $field_group->data = array(
+    'label' => 'orginal_presented',
+    'weight' => '21',
+    'children' => array(
+      0 => 'field_contradict_orginal',
+      1 => 'field_expanded_in_edition',
+      2 => 'field_expanded_in_translations',
+      3 => 'field_presented_original_notes',
+      4 => 'field_presented_original_referen',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-orginal-presented field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_orginal_presented|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_original_title|node|book|form';
+  $field_group->group_name = 'group_original_title';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_translation';
+  $field_group->data = array(
+    'label' => 'Title of the original text',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_original_title_else_refer',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-original-title field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_original_title|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_other_books|node|book|form';
+  $field_group->group_name = 'group_other_books';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_volumes';
+  $field_group->data = array(
+    'label' => 'Other books',
+    'weight' => '87',
+    'children' => array(
+      0 => 'field_other_books_names',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-other-books field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_other_books|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -668,6 +837,33 @@ function haskala_book_field_group_info() {
     ),
   );
   $export['group_persons_mentioned|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_preface_notes|node|book|form';
+  $field_group->group_name = 'group_preface_notes';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_structure';
+  $field_group->data = array(
+    'label' => 'Preface notes',
+    'weight' => '74',
+    'children' => array(
+      0 => 'field_structure_preface_notes',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-preface-notes field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_preface_notes|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -942,6 +1138,89 @@ function haskala_book_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_series|node|book|form';
+  $field_group->group_name = 'group_series';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_volumes';
+  $field_group->data = array(
+    'label' => 'Series',
+    'weight' => '85',
+    'children' => array(
+      0 => 'field_name_of_series',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-series field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_series|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_sources_mentioned_in_book|node|book|form';
+  $field_group->group_name = 'group_sources_mentioned_in_book';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_textual_cultural_sources';
+  $field_group->data = array(
+    'label' => 'Sources mentioned in the book itself',
+    'weight' => '21',
+    'children' => array(
+      0 => 'field_sources_list',
+      1 => 'field_sources_references',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-sources-mentioned-in-book field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_sources_mentioned_in_book|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_sources_not_mentioned|node|book|form';
+  $field_group->group_name = 'group_sources_not_mentioned';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_textual_cultural_sources';
+  $field_group->data = array(
+    'label' => 'sources not mentioned in book',
+    'weight' => '23',
+    'children' => array(
+      0 => 'field_sources_not_mentioned_list',
+      1 => 'field_sources_not_mentioned_ref',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-sources-not-mentioned field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_sources_not_mentioned|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_structure|node|book|form';
   $field_group->group_name = 'group_structure';
   $field_group->entity_type = 'node';
@@ -954,24 +1233,24 @@ function haskala_book_field_group_info() {
     'children' => array(
       0 => 'field_alignment',
       1 => 'field_book_structure_notes',
-      2 => 'field_contents_table_notes',
-      3 => 'field_epilogue',
-      4 => 'field_epilogue_notes',
-      5 => 'field_fonts',
-      6 => 'field_height',
-      7 => 'field_illustrations_diagrams',
-      8 => 'field_language',
-      9 => 'field_language_of_footnotes',
-      10 => 'field_languages_number',
-      11 => 'field_location_of_footnotes',
-      12 => 'field_occasional_words_languages',
-      13 => 'field_pages_number',
-      14 => 'field_preface',
-      15 => 'field_structure_preface_notes',
-      16 => 'field_table_of_conten',
-      17 => 'field_typography',
-      18 => 'field_width',
-      19 => 'group_diagrams',
+      2 => 'field_epilogue',
+      3 => 'field_fonts',
+      4 => 'field_height',
+      5 => 'field_illustrations_diagrams',
+      6 => 'field_language',
+      7 => 'field_language_of_footnotes',
+      8 => 'field_languages_number',
+      9 => 'field_location_of_footnotes',
+      10 => 'field_occasional_words_languages',
+      11 => 'field_pages_number',
+      12 => 'field_preface',
+      13 => 'field_table_of_conten',
+      14 => 'field_typography',
+      15 => 'field_width',
+      16 => 'group_diagrams',
+      17 => 'group_preface_notes',
+      18 => 'group_epilogue_notes',
+      19 => 'group_table_contents',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -1016,6 +1295,33 @@ function haskala_book_field_group_info() {
     ),
   );
   $export['group_sub_target_audience|node|book|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_table_contents|node|book|form';
+  $field_group->group_name = 'group_table_contents';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_structure';
+  $field_group->data = array(
+    'label' => 'Table of contents',
+    'weight' => '78',
+    'children' => array(
+      0 => 'field_contents_table_notes',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-table-contents field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_table_contents|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1229,18 +1535,16 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_book_type';
   $field_group->data = array(
     'label' => 'Textual and cultural sources for the book',
-    'weight' => '37',
+    'weight' => '31',
     'children' => array(
       0 => 'field_book_type_general_notes',
       1 => 'field_jewish_sources_quotes',
       2 => 'field_motto',
       3 => 'field_non_jewish_sources_quotes',
       4 => 'field_sources_exist',
-      5 => 'field_sources_list',
-      6 => 'field_sources_not_mentioned',
-      7 => 'field_sources_not_mentioned_list',
-      8 => 'field_sources_not_mentioned_ref',
-      9 => 'field_sources_references',
+      5 => 'field_sources_not_mentioned',
+      6 => 'group_sources_mentioned_in_book',
+      7 => 'group_sources_not_mentioned',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1349,37 +1653,6 @@ function haskala_book_field_group_info() {
     ),
   );
   $export['group_top_details|node|book|default'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_top_details|node|book|form';
-  $field_group->group_name = 'group_top_details';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Top details',
-    'weight' => '2',
-    'children' => array(),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'label' => 'Top details',
-      'instance_settings' => array(
-        'required_fields' => 1,
-        'id' => '',
-        'classes' => 'top-details',
-        'description' => '',
-        'show_label' => '1',
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-      ),
-      'formatter' => 'open',
-    ),
-  );
-  $export['group_top_details|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1544,6 +1817,36 @@ function haskala_book_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_translation_presented|node|book|form';
+  $field_group->group_name = 'group_translation_presented';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_book_type';
+  $field_group->data = array(
+    'label' => 'Translation presented',
+    'weight' => '23',
+    'children' => array(
+      0 => 'field_book',
+      1 => 'field_presented_translatio_notes',
+      2 => 'field_presented_translation_refe',
+      3 => 'field_translation_contradict',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-translation-presented field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_translation_presented|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_translation|node|book|form';
   $field_group->group_name = 'group_translation';
   $field_group->entity_type = 'node';
@@ -1556,19 +1859,19 @@ function haskala_book_field_group_info() {
     'children' => array(
       0 => 'field_bibliographical_citations',
       1 => 'field_field_orginal_author_in_or',
-      2 => 'field_orginal_author_else_refer',
-      3 => 'field_orginal_author_elsewhere',
-      4 => 'field_orginal_publication_place',
-      5 => 'field_orginal_publication_year',
-      6 => 'field_original_language',
-      7 => 'field_original_publisher',
-      8 => 'field_original_title',
-      9 => 'field_original_title_else_refer',
-      10 => 'field_original_title_elsewhere',
-      11 => 'field_original_type',
-      12 => 'field_translation_notes',
-      13 => 'field_translation_type',
-      14 => 'group_translation_editions_tab',
+      2 => 'field_orginal_author_elsewhere',
+      3 => 'field_orginal_publication_place',
+      4 => 'field_orginal_publication_year',
+      5 => 'field_original_language',
+      6 => 'field_original_publisher',
+      7 => 'field_original_title',
+      8 => 'field_original_title_elsewhere',
+      9 => 'field_original_type',
+      10 => 'field_translation_notes',
+      11 => 'field_translation_type',
+      12 => 'group_translation_editions_tab',
+      13 => 'group_original_title',
+      14 => 'group_orginal_author',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -1681,14 +1984,14 @@ function haskala_book_field_group_info() {
     'weight' => '11',
     'children' => array(
       0 => 'field_examined_volume_number',
-      1 => 'field_name_of_series',
-      2 => 'field_other_books_names',
-      3 => 'field_other_volumes',
-      4 => 'field_planned_volumes',
-      5 => 'field_printed_originally',
-      6 => 'field_series_part',
-      7 => 'field_volumes_notes',
-      8 => 'field_volumes_published_number',
+      1 => 'field_other_volumes',
+      2 => 'field_planned_volumes',
+      3 => 'field_printed_originally',
+      4 => 'field_series_part',
+      5 => 'field_volumes_notes',
+      6 => 'field_volumes_published_number',
+      7 => 'group_series',
+      8 => 'group_other_books',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
