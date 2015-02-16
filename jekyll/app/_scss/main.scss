@@ -5,6 +5,7 @@
 @import 'books';
 @import 'homepage';
 @import 'list';
+@import 'places';
 @import 'search';
 
 * {
@@ -53,12 +54,21 @@ a, a:hover, a:visited {
   box-sizing: content-box;
 }
 
-.page-header{
+.page-header {
   padding: 0;
   margin: 0;
   border-bottom: none;
 }
+
+.nav > li > a:hover {
+  background-color: transparent;
+}
+
 /* End reset bootstrap */
+
+.krumo-root {
+  text-align: left;
+}
 
 .wrapper {
   max-width: 950px;
@@ -93,6 +103,7 @@ a, a:hover, a:visited {
       color: $darkgray;
       display: inline-block;
       padding: 0;
+      white-space: nowrap;
 
       &:hover {
         color: $lightBlue;

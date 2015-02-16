@@ -103,6 +103,7 @@ function haskala_set_permissions() {
  * Task callback; Setup blocks.
  */
 function haskala_set_variables() {
+  variable_set('jquery_update_jquery_admin_version', 'default');
   variable_set('page_manager_node_view_disabled', FALSE);
   variable_set('page_manager_term_view_disabled', FALSE);
   variable_set('site_frontpage', 'homepage');

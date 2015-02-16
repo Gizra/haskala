@@ -34,11 +34,17 @@ projects[field_group][version] = "1.4"
 projects[geolocation][subdir] = "contrib"
 projects[geolocation][version] = "1.6"
 
+projects[ip_geoloc][subdir] = "contrib"
+projects[ip_geoloc][version] = "1.26"
+
 projects[jquery_update][subdir] = "contrib"
 projects[jquery_update][version] = "2.5"
 
 projects[libraries][subdir] = "contrib"
 projects[libraries][version] = "2.2"
+
+projects[link][subdir] = "contrib"
+projects[link][version] = "1.3"
 
 projects[module_filter][subdir] = "contrib"
 projects[module_filter][version] = "2.0-alpha2"
