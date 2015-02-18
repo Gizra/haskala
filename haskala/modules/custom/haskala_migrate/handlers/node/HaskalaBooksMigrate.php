@@ -184,4 +184,16 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       $row->field_writer_of_preface = $this->getNodeByTitle('person', $row->field_writer_of_preface);
     }
   }
+
+  /**
+   * Set boolean fields to false instead of null.
+   */
+  public function prepare($node, $row) {
+    $wrapper = entity_metadata_wrapper('node', $node);
+    foreach ($row as $field => $value) {
+      if ($value === FALSE) {
+        $wrapper->$field->set(FALSE);
+      }
+    }
+  }
 }
