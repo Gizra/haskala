@@ -988,7 +988,8 @@ function haskala_book_field_group_info() {
       0 => 'field_preface_notes',
       1 => 'field_preface_number',
       2 => 'field_preface_title',
-      3 => 'field_writer_of_preface',
+      3 => 'field_role',
+      4 => 'field_writer_of_preface',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

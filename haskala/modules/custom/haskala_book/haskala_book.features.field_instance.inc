@@ -3928,7 +3928,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 71,
+        'weight' => 72,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4008,7 +4008,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 70,
+        'weight' => 71,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5237,7 +5237,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 162,
+        'weight' => 70,
       ),
       'teaser' => array(
         'label' => 'above',
