@@ -7,7 +7,7 @@ Feature: Book
   Scenario Outline: Visit a book page
     Given I am an anonymous user
     When  I visit "<title>" node of type "book"
-    Then  I should see the text "<title>" under "bread-crumbs"
+    Then  I should see the text "<title>" under ".bread-crumbs"
     And   I should see the text "<text>"
 
   Examples:

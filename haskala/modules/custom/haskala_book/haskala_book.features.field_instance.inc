@@ -6869,7 +6869,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_writer_of_preface',
-    'label' => 'Writer of preface',
+    'label' => 'Writer of preface',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -7711,7 +7711,7 @@ function haskala_book_field_default_field_instances() {
   t('Was the text expanded in translations?');
   t('Widener Library, Harvard');
   t('Width of book, in cm');
-  t('Writer of preface');
+  t('Writer of preface');
   t('Year of edition');
   t('Year of publication as it appears in other sources');
   t('Year of publication as it appears in the book');

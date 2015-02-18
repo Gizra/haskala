@@ -7,7 +7,7 @@ Feature: Person
   Scenario Outline: Login to site, and check access to the person page.
     Given I am an anonymous user
     When  I visit "<title>" node of type "person"
-    Then  I should see the text "<title>" under "bread-crumbs"
+    Then  I should see the text "<title>" under ".bread-crumbs"
     And   I should see the text "<text>"
 
   Examples:
