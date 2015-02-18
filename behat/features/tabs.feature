@@ -3,15 +3,14 @@ Feature: Book page
   We need to be able to see the tabs list in the book page.
 
   @api
-  Scenario: Visit a books page
+  Scenario: Verify tabs content on a book page
     Given I am an anonymous user
     When  I visit "books/זה-ספר-בית-המדות"
-    Then I should see the text under the tab
+    Then  I should see the text under the tab
     | tab                         | text                                       |
     | Book producers              | מרגליות, יהודה ליב בן אשר                  |
     | Book structure              | על חלק דברי המוסר                          |
     | Textual models              | מרגליות                                    |
-    # | Type of book                | Title of the book in Latin characters      |
     | Publisher/ Printing press   | Place of publication as it appears in      |
     | Persons mentioned in book   | שיחיו ליום הולדתו בשנת                     |
     | Topics                      | Topic                                      |
@@ -19,6 +18,11 @@ Feature: Book page
     | Catalog numbers             | University catalog                         |
     | References and bibliography | לאומית                                     |
 
+  @api
+  Scenario: Verify content in the "Type of book" section
+    Given I am an anonymous user
+    When  I visit "books/זה-ספר-בית-המדות"
+    Then  I should see the text "Zeh Sefer bet ha-midot" under "#top-details"
 
   @api
   Scenario Outline: Visit a books page
@@ -36,14 +40,11 @@ Feature: Book page
     | maskilim          |
 
 
-  @api
-  Scenario Outline: Visit a books page
+  @api @fooy
+  Scenario: Verify tabs content on a book page
     Given I am an anonymous user
     When  I visit "books/ספר-מנחה-חדשה-ד"
-    Then  I should see the text "<tab>"
-    And   I should see the text "<text>"
-
-  Examples:
+    Then  I should see the text under the tab
     | tab      | text      |
     | Volumes  | אך המספור |
     | Prefaces | מבוא      |
@@ -60,30 +61,18 @@ Feature: Book page
     | link            |
     | ספר מנחה חדשה   |
 
-
-  @api
-  Scenario Outline: Visit a books page
+  @api @fooy
+  Scenario: Verify content in the "Type of book" section
     Given I am an anonymous user
     When  I visit "books/דברי-שלום-ואמת-א-איטלקית"
-    Then  I should see the text "<tab>"
-    And   I should see the text "<text>"
-
-  Examples:
-    | tab          | text                                 |
-    | Translation  | וייזל, נפתלי הרץ,Wessely, Hartwig    |
-    | Translation  | 1783                                 |
-    | Type of book | דברי שלום ואמת א                     |
-    | Type of book | Wessely, Hartwig - וייזל, נפתלי הרץ  |
-
+    Then  I should see the text "דברי שלום ואמת א" under "#top-details"
+    And   I should see the text "Wessely, Hartwig - וייזל, נפתלי הרץ" under "#top-details"
 
   @api
-  Scenario Outline: Visit a books page
+  Scenario: Verify tabs content on a book page
     Given I am an anonymous user
     When  I visit "books/דברי-שלום-ואמת-א"
-    Then  I should see the text "<tab>"
-    And   I should see the text "<text>"
-
-  Examples:
+    Then  I should see the text under the tab
     | tab      | text           |
     | Editions | בית עקד ספרים  |
     | Editions | אליהו מורפורגו |
@@ -101,31 +90,23 @@ Feature: Book page
     | Vienna        |
     | איטלקית       |
 
-
   @api
-  Scenario Outline: Visit a books page
+  Scenario: Verify tabs content on a book page
     Given I am an anonymous user
     When  I visit "books/אגרת-ארחות-עולם"
-    Then  I should see the text "<tab>"
-    And   I should see the text "<text>"
-
-  Examples:
+    Then  I should see the text under the tab
     | tab                       | text                         |
     | Persons mentioned in book | People mentioned in the book |
     | Persons mentioned in book | יעקב בן יצחק פלעקלש          |
 
-
   @api
-  Scenario Outline: Visit a books page
+  Scenario: Verify tabs content on a book page
     Given I am an anonymous user
     When  I visit "books/abhandlung-von-der-freiheit-des-menschen"
-    Then  I should see the text "<tab>"
-    And   I should see the text "<text>"
-
-  Examples:
-    | tab             | text                 |
-    | Catalog numbers | Link to digital book |
-    | Prefaces        | Writer of preface    |
+    Then  I should see the text under the tab
+    | tab                         | text                                       |
+    | Catalog numbers             | Link to digital book                       |
+    | Prefaces                    | Writer of preface                          |
 
 
   @api

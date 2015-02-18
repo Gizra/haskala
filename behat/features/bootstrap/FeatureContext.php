@@ -184,12 +184,8 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
   /**
    * @Given /^I should see the text "([^"]*)" under "([^"]*)"$/
    */
-  public function iShouldSeeTheTextUnder($text, $container) {
-    $page = $this->getSession()->getPage();
-
-    if (!$page->find('xpath', "//*[contains(@class, '{$container}')]//*[contains(., '{$text}')]")) {
-      throw new Exception(sprintf("The element with %s wasn't found in %s", $text, $container));
-    }
+  public function iShouldSeeTheTextUnderSection($text, $section) {
+    $this->getMink()->assertSession()->elementTextContains('css', $section, $text);
   }
 
   /**

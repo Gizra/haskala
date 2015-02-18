@@ -2,3 +2,4 @@ vendor/
 behat.local.yml
 bin/
 composer.phar
+composer.lock
