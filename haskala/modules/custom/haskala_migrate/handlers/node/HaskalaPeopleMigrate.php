@@ -17,6 +17,7 @@ class HaskalaPeopleMigrate extends HaskalaMigration {
     array('field_date_of_death', 'Date of death'),
     array('field_place_of_death', 'Place of death'),
     array('field_occupation', 'Occupation'),
+    array('field_viaf_id', 'Occupation'),
   );
 
   public $dependencies = array(
@@ -31,6 +32,7 @@ class HaskalaPeopleMigrate extends HaskalaMigration {
       'field_pseudonym',
       'field_date_of_birth',
       'field_date_of_death',
+      'field_viaf_id',
     );
     $this->addSimpleMappings($simple_mappings);
 
