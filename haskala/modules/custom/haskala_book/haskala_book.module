@@ -96,6 +96,8 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
   // Tab sub groups fields.
   $sub_tabs_fields = array();
 
+  $node = $wrapper->value();
+
   foreach ($tab->children as $child_name) {
 
     // If exist sub group. Ex.:Target audience tab contains sub groups.
@@ -110,7 +112,7 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
         $sub_tabs_fields[$child_name]['weight'] = $sub_tab->weight;
       }
     }
-    elseif ($wrapper->$child_name->value()) {
+    elseif ($node->$child_name) {
       $weight = $node_view[$child_name]['#weight'];
       $tab_fields_sorted[$weight] = $child_name;
     }
@@ -132,7 +134,7 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
   ksort($tab_fields_sorted);
   foreach ($tab_fields_sorted as $field_name) {
     // Check if the field isn't empty.
-    if ($wrapper->$field_name->value()) {
+    if ($node->$field_name) {
       $field = render($node_view[$field_name]);
       $tab_fields_main[] = $field;
 

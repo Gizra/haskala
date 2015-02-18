@@ -68,7 +68,8 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
         $key = reset($key);
         // Insert before the last field "general notes" if exist.
         if ($key && strstr(end($tabs_fields[t('Translation')][$key]), 'field-translation-notes')) {
-          array_splice($tabs_fields[t('Translation')][$key], count($tabs_fields[t('Translation')][$key])-1, 0, render($author_names_as_field));        }
+          array_splice($tabs_fields[t('Translation')][$key], count($tabs_fields[t('Translation')][$key]) - 1, 0, render($author_names_as_field));
+        }
         // If field "general notes" is not exist, add to the end of translation fields array.
         else {
           $tabs_fields[t('Translation')][$key][] = render($author_names_as_field);
@@ -96,8 +97,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   }
 
   // Add mentionees for PERSONS MENTIONED IN BOOK tab.
-  $mentionees = haskala_book_get_mentions($book_nid);
-  if ($mentionees) {
+  if ($mentionees = haskala_book_get_mentions($book_nid)) {
     $tabs_fields[t('Persons mentioned in book')]['sub_title'] = t('People mentioned in the book');
     $mention_tmp = array_merge($tabs_fields[t('Persons mentioned in book')], $mentionees);
     $tabs_fields[t('Persons mentioned in book')] = $mention_tmp;

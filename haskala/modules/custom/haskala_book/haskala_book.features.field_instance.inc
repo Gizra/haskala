@@ -293,11 +293,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_book_not_available'
   $field_instances['node-book-field_book_not_available'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -328,7 +324,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 45,
     ),
   );
@@ -776,11 +772,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_contradict_new_edition'
   $field_instances['node-book-field_contradict_new_edition'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -811,7 +803,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 26,
     ),
   );
@@ -819,11 +811,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_contradict_orginal'
   $field_instances['node-book-field_contradict_orginal'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -851,10 +839,8 @@ function haskala_book_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
+      'settings' => array(),
+      'type' => 'options_buttons',
       'weight' => 22,
     ),
   );
@@ -902,11 +888,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_dedications'
   $field_instances['node-book-field_dedications'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -937,7 +919,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 14,
     ),
   );
@@ -1145,11 +1127,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_epilogue'
   $field_instances['node-book-field_epilogue'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1180,7 +1158,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 75,
     ),
   );
@@ -1274,11 +1252,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_expanded_in_edition'
   $field_instances['node-book-field_expanded_in_edition'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1309,7 +1283,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 26,
     ),
   );
@@ -1317,11 +1291,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_expanded_in_translations'
   $field_instances['node-book-field_expanded_in_translations'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1352,7 +1322,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 25,
     ),
   );
@@ -1634,11 +1604,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_funders'
   $field_instances['node-book-field_funders'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1669,7 +1635,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 26,
     ),
   );
@@ -1969,11 +1935,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_illustrations_diagrams'
   $field_instances['node-book-field_illustrations_diagrams'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -2004,7 +1966,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 83,
     ),
   );
@@ -3799,11 +3761,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_personal_address'
   $field_instances['node-book-field_personal_address'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -3834,7 +3792,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 8,
     ),
   );
@@ -3922,11 +3880,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_preface'
   $field_instances['node-book-field_preface'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -3957,7 +3911,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 73,
     ),
   );
@@ -4085,11 +4039,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_presented_as_original'
   $field_instances['node-book-field_presented_as_original'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -4120,7 +4070,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 20,
     ),
   );
@@ -4128,11 +4078,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_presented_as_translation'
   $field_instances['node-book-field_presented_as_translation'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -4163,7 +4109,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 22,
     ),
   );
@@ -4171,11 +4117,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_presented_new_edition'
   $field_instances['node-book-field_presented_new_edition'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -4206,7 +4148,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 24,
     ),
   );
@@ -4534,11 +4476,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_printed_originally'
   $field_instances['node-book-field_printed_originally'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -4569,7 +4507,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 86,
     ),
   );
@@ -4577,11 +4515,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_printers'
   $field_instances['node-book-field_printers'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -4612,7 +4546,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 22,
     ),
   );
@@ -4780,11 +4714,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_proofreaders'
   $field_instances['node-book-field_proofreaders'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -4815,7 +4745,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 24,
     ),
   );
@@ -5100,11 +5030,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_rabbinical_approbations'
   $field_instances['node-book-field_rabbinical_approbations'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -5135,7 +5061,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 10,
     ),
   );
@@ -5143,11 +5069,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_recommendations'
   $field_instances['node-book-field_recommendations'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -5178,7 +5100,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 12,
     ),
   );
@@ -5383,11 +5305,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_sellers'
   $field_instances['node-book-field_sellers'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -5418,7 +5336,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 28,
     ),
   );
@@ -5466,11 +5384,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_series_part'
   $field_instances['node-book-field_series_part'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -5501,7 +5415,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 84,
     ),
   );
@@ -5509,11 +5423,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_sources_exist'
   $field_instances['node-book-field_sources_exist'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -5544,7 +5454,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 20,
     ),
   );
@@ -5592,11 +5502,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_sources_not_mentioned'
   $field_instances['node-book-field_sources_not_mentioned'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -5627,7 +5533,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 22,
     ),
   );
@@ -5795,11 +5701,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_subscribers'
   $field_instances['node-book-field_subscribers'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -5830,7 +5732,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 20,
     ),
   );
@@ -5878,11 +5780,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_subscription_appeal'
   $field_instances['node-book-field_subscription_appeal'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -5913,7 +5811,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 18,
     ),
   );
@@ -5961,11 +5859,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_table_of_conten'
   $field_instances['node-book-field_table_of_conten'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -5996,7 +5890,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 77,
     ),
   );
@@ -6201,11 +6095,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_thanks'
   $field_instances['node-book-field_thanks'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -6236,7 +6126,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 16,
     ),
   );
@@ -6484,11 +6374,7 @@ function haskala_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_translation_contradict'
   $field_instances['node-book-field_translation_contradict'] = array(
     'bundle' => 'book',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -6519,7 +6405,7 @@ function haskala_book_field_default_field_instances() {
       'settings' => array(
         'display_label' => 1,
       ),
-      'type' => 'options_onoff',
+      'type' => 'options_buttons',
       'weight' => 24,
     ),
   );
