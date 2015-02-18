@@ -3,18 +3,15 @@ Feature: Book page
   We need to be able to see the tabs list in the book page.
 
   @api
-  Scenario Outline: Visit a books page
+  Scenario: Visit a books page
     Given I am an anonymous user
     When  I visit "books/זה-ספר-בית-המדות"
-    Then  I should see the text "<tab>"
-    And   I should see the text "<text>"
-
-  Examples:
+    Then I should see the text under the tab
     | tab                         | text                                       |
     | Book producers              | מרגליות, יהודה ליב בן אשר                  |
     | Book structure              | על חלק דברי המוסר                          |
     | Textual models              | מרגליות                                    |
-    | Type of book                | Title of the book in Latin characters      |
+    # | Type of book                | Title of the book in Latin characters      |
     | Publisher/ Printing press   | Place of publication as it appears in      |
     | Persons mentioned in book   | שיחיו ליום הולדתו בשנת                     |
     | Topics                      | Topic                                      |
