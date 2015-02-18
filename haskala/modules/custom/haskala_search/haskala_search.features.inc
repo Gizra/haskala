@@ -116,7 +116,6 @@ function haskala_search_default_search_api_index() {
         "field_references_notes" : { "type" : "text" },
         "field_religion" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_role" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "field_role_in_book_production" : { "type" : "text" },
         "field_roles_notes" : { "type" : "text" },
         "field_secondary_sources" : { "type" : "text" },
         "field_sellers" : { "type" : "boolean" },
