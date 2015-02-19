@@ -17,7 +17,7 @@ function haskala_general_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'http_response';
-  $handler->weight = 1;
+  $handler->weight = -28;
   $handler->conf = array(
     'title' => 'Blocked nodes',
     'contexts' => array(),

@@ -7,6 +7,15 @@
 include_once 'haskala_people.features.inc';
 
 /**
+ * Implements hook_ctools_plugin_directory().
+ */
+function haskala_people_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
  *  Translation tab - Other names for the original author.
  *
  *  @param $person_nid
@@ -46,4 +55,45 @@ function haskala_person_get_names($person_nid) {
   $person_names_as_field[0]['#markup'] = $person_names_str;
   $person_names_as_field['#title'] = t('Other names for the author');
   return $person_names_as_field;
+}
+
+/**
+ * Retrieve books related to a person, by mention and production nodes.
+ * @param $person_nid
+ *
+ * @return book nodes.
+ */
+function haskala_people_get_person_related_books($person_nid) {
+  // Gather mention and production nodes together before fetching the books.
+  $sub_nodes = array();
+
+  // Fetch person mentions.
+  $query = new EntityFieldQuery();
+  $result = $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'mention')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->fieldCondition('field_mentionee', 'target_id', $person_nid)
+    ->execute();
+  if (!empty($result['node'])) {
+    $sub_nodes = array_keys($result['node']);
+  }
+
+  // Fetch person production details.
+  $query = new EntityFieldQuery();
+  $result = $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'production')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->fieldCondition('field_producer', 'target_id', $person_nid)
+    ->execute();
+  if (!empty($result['node'])) {
+    $sub_nodes += array_keys($result['node']);
+  }
+
+  // Fetch book node IDs from the sub-nodes.
+  $book_nids = array();
+  foreach($sub_nodes as $nid) {
+    $wrapper = entity_metadata_wrapper('node', $nid);
+    $book_nids[] = $wrapper->field_book->getIdentifier();
+  }
+  return array_unique($book_nids);
 }

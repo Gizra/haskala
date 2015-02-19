@@ -50,6 +50,8 @@ function haskala_theme_preprocess_node(&$variables) {
   $node = $variables['node'];
   $view_mode = $variables['view_mode'];
 
+  $variables['type_label'] = ucfirst($node->type);
+
   // Generic tpl for node--bundle--view-mode.
   $variables['theme_hook_suggestions'][] = "node__{$node->type}__{$view_mode}";
 

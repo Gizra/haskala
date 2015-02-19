@@ -1,0 +1,36 @@
+.node-type-person {
+
+  .wrapper {
+
+    .hr-title {
+
+      &:before, &:after {
+        width: 43%;
+      }
+    }
+
+    .main-content {
+
+      .field-item {
+        display: inline;
+
+        &:after {
+          content: ', ';
+        }
+
+        &:last-child:after {
+          content: '';
+        }
+      }
+    }
+
+    .pane-related-books {
+      text-align: left;
+      margin-top: 20px;
+
+      .pane-title {
+        font-size: 19px;
+      }
+    }
+  }
+}

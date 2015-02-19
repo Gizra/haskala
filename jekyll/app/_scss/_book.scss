@@ -1,4 +1,4 @@
-.node-type-book {
+.node-type-book, .node-type-person {
 
   .wrapper {
 
@@ -26,7 +26,6 @@
       text-align: left;
 
       #top-details {
-
         padding: 0 21px 51px;
         border-bottom: 1px solid $darkgray;
         margin-bottom: 32px;
