@@ -27,7 +27,7 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
     'node' => array(
       'node_type' => $node_type,
       'book_type' => $book_type,
-    )
+    ),
   );
 
   // Create formatted html of block of the terms to display.
@@ -57,15 +57,14 @@ function haskala_book_books_list_content_type_render($subtype, $conf, $args, $co
  */
 function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', $book_type = 'regular') {
   $query = new EntityFieldQuery();
-  $query
-    ->entityCondition('entity_type', 'node')
+  $query->entityCondition('entity_type', 'node')
     ->propertyCondition('status', NODE_PUBLISHED)
     ->propertyCondition('type', $node_type);
 
   if ($node_type == 'book') {
     $query->propertyCondition('title', $letter, 'STARTS_WITH');
   }
-  else if ($node_type == 'person') {
+  elseif ($node_type == 'person') {
     // Get english alphabet.
     $letters_en = range('A', 'Z');
     // Get hebrew alphabet;
@@ -73,14 +72,14 @@ function haskala_book_get_nodes_by_letter($letter, $limit, $node_type = 'book', 
     if (in_array($letter, $letters_en)) {
       $query->fieldCondition('field_german_name',  'value', $letter, 'STARTS_WITH');
     }
-    else if (in_array($letter, $letters_he)) {
+    elseif (in_array($letter, $letters_he)) {
       $query->fieldCondition('field_hebrew_name',  'value', $letter, 'STARTS_WITH');
     }
   }
 
   if ($book_type == 'digital' && $node_type == 'book') {
-      $query->fieldCondition('field_link_to_digital_book',  'url', 'NULL', 'IS NOT NULL');
-    }
+    $query->fieldCondition('field_link_to_digital_book', 'url', 'NULL', 'IS NOT NULL');
+  }
 
   if ($limit != 50) {
     // Could be that for some letter there are more than 50 items. In this case
