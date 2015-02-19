@@ -73,7 +73,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Bans',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -193,7 +193,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Bibliographical citations',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -355,7 +355,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'General Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -395,7 +395,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Studies about the book',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -435,7 +435,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'General notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -515,7 +515,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'General Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -555,7 +555,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Censorship',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -595,7 +595,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Contacts with official agents',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -635,7 +635,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Contacts with other people',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -675,7 +675,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Contemporary disputes about the book',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -715,7 +715,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Contemporary references to the book',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -755,7 +755,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -871,7 +871,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Copy of book used',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -950,7 +950,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1030,7 +1030,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes on illustrations / diagrams',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1110,7 +1110,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1189,7 +1189,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1507,7 +1507,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1997,7 +1997,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Quotes from Jewish sources',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2188,7 +2188,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Later references to the book',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2359,7 +2359,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'General notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2399,7 +2399,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Mentions in reviews',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2439,7 +2439,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Motto',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2556,7 +2556,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2596,7 +2596,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'References',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2710,7 +2710,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2750,7 +2750,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'References',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2830,7 +2830,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Quotes from non-Jewish sources',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3150,7 +3150,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'References for name of author of the original text as it appears elsewhere',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3387,7 +3387,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Original sources which mention the book',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3467,7 +3467,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'References for title of the original text as it appears elsewhere',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3584,7 +3584,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Names of other books',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3664,7 +3664,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Names of other published volumes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3744,7 +3744,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Partial publication of the book in other texts',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3823,7 +3823,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3863,7 +3863,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Names of planned volumes that were not published',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3942,7 +3942,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4179,7 +4179,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4219,7 +4219,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'References',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4259,7 +4259,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4299,7 +4299,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'References',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4339,7 +4339,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4379,7 +4379,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'References',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4419,7 +4419,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'References',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4577,7 +4577,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4617,7 +4617,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4657,7 +4657,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'References',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4697,7 +4697,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Evidence about book production',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4776,7 +4776,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5013,7 +5013,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5131,7 +5131,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5171,7 +5171,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'References',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5211,7 +5211,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5291,7 +5291,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Secondary sources used by researchers',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5407,7 +5407,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5525,7 +5525,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'List of sources',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5604,7 +5604,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'List of sources',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5644,7 +5644,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'References',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5684,7 +5684,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'References',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5724,7 +5724,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5803,7 +5803,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5882,7 +5882,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5998,7 +5998,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes on target audience',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6038,7 +6038,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'General notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6118,7 +6118,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6197,7 +6197,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6476,7 +6476,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'General notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6516,7 +6516,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'References',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6670,7 +6670,7 @@ function haskala_book_field_default_field_instances() {
     'label' => 'General Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(

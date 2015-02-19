@@ -86,6 +86,9 @@ function _haskala_install_get_filtered_html_format() {
       'filter_html' => array(
         'weight' => 1,
         'status' => 1,
+        'settings' => array(
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <ins>',
+        ),
       ),
       // Line break filter.
       'filter_autop' => array(
