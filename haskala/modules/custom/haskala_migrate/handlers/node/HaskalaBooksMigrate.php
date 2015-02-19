@@ -68,7 +68,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_preface_title', 'Preface title'),
     array('field_references_for_editions', 'References for editions'),
     array('field_sources_references', 'References for sources mentioned in the book'),
-    array('field_role_in_book_production', 'Role in book production'),
+    array('field_role', 'Role in book production'),
     array('field_secondary_sources', 'Secondary sources used by researchers'),
     array('field_target_audience', 'Target audience as described in the book'),
     array('field_presented_as_original', 'Text is presented as original'),
@@ -141,7 +141,6 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_preface_title',
       'field_references_for_editions',
       'field_sources_references',
-      'field_role_in_book_production',
       'field_secondary_sources',
       'field_presented_as_original',
       'field_title_in_latin_characters',
@@ -165,6 +164,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_topic',
       'field_typography',
       'field_format_of_publication_date',
+      'field_role',
     );
     $this->addTermReferenceMappings($term_references);
 
@@ -182,6 +182,18 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     parent::prepareRow($row);
     if ($row->field_writer_of_preface) {
       $row->field_writer_of_preface = $this->getNodeByTitle('person', $row->field_writer_of_preface);
+    }
+  }
+
+  /**
+   * Set boolean fields to false instead of null.
+   */
+  public function prepare($node, $row) {
+    $wrapper = entity_metadata_wrapper('node', $node);
+    foreach ($row as $field => $value) {
+      if ($value === FALSE) {
+        $wrapper->$field->set(FALSE);
+      }
     }
   }
 }

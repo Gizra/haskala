@@ -184,11 +184,21 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
   /**
    * @Given /^I should see the text "([^"]*)" under "([^"]*)"$/
    */
-  public function iShouldSeeTheTextUnder($text, $container) {
-    $page = $this->getSession()->getPage();
+  public function iShouldSeeTheTextUnderSection($text, $section) {
+    $this->getMink()->assertSession()->elementTextContains('css', $section, $text);
+  }
 
-    if (!$page->find('xpath', "//*[contains(@class, '{$container}')]//*[contains(., '{$text}')]")) {
-      throw new Exception(sprintf("The element with %s wasn't found in %s", $text, $container));
+  /**
+   * @Then I should see the text under the tab
+   */
+  public function iShouldSeeTheTextUnderTheTab(TableNode $table) {
+    foreach ($table as $row) {
+      // Check tab text exists in the navigation details.
+      $this->getMink()->assertSession()->elementTextContains('css', '#details-navigation', $row['tab']);
+
+      // Check tab and text exists in the content area.
+      $this->getMink()->assertSession()->elementTextContains('css', '#groups', $row['tab']);
+      $this->getMink()->assertSession()->elementTextContains('css', '#groups', $row['text']);
     }
   }
 }
