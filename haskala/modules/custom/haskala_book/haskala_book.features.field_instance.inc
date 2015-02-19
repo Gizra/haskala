@@ -3928,7 +3928,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 71,
+        'weight' => 72,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3952,7 +3952,7 @@ function haskala_book_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 81,
+      'weight' => 82,
     ),
   );
 
@@ -4008,7 +4008,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 70,
+        'weight' => 71,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5222,6 +5222,46 @@ function haskala_book_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 53,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_role'
+  $field_instances['node-book-field_role'] = array(
+    'bundle' => 'book',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 70,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_role',
+    'label' => 'Role in book production',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 81,
     ),
   );
 
@@ -7573,6 +7613,7 @@ function haskala_book_field_default_field_instances() {
   t('References for name of author of the original text as it appears elsewhere');
   t('References for title of the original text as it appears elsewhere');
   t('Religion during writing of book');
+  t('Role in book production');
   t('Role(s) in book creation');
   t('Secondary sources used by researchers');
   t('Secondary textual models');

@@ -405,6 +405,7 @@ features[field_instance][] = node-book-field_recommendations
 features[field_instance][] = node-book-field_recommendations_notes
 features[field_instance][] = node-book-field_references_for_editions
 features[field_instance][] = node-book-field_references_notes
+features[field_instance][] = node-book-field_role
 features[field_instance][] = node-book-field_secondary_sources
 features[field_instance][] = node-book-field_secondary_textual_models
 features[field_instance][] = node-book-field_sellers

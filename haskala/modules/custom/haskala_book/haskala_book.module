@@ -146,15 +146,6 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
           $tab_fields_main[] = $author_name_field;
         }
       }
-
-      // Role of preface writer.
-      if ($field_name == 'field_writer_of_preface') {
-        $production_node = haskala_book_get_production($book_nid, $wrapper->$field_name->getIdentifier());
-        if ($production_node) {
-          $field = field_view_field('node', $production_node, 'field_role');
-          $tab_fields_main[] = $field;
-        }
-      }
     }
   }
 
