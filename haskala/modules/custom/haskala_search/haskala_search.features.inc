@@ -9,9 +9,9 @@
  */
 function haskala_search_default_search_api_index() {
   $items = array();
-  $items['haskala2'] = entity_import('search_api_index', '{
-    "name" : "Haskala2",
-    "machine_name" : "haskala2",
+  $items['haskala'] = entity_import('search_api_index', '{
+    "name" : "Haskala",
+    "machine_name" : "haskala",
     "description" : null,
     "server" : "index_depot",
     "item_type" : "node",
@@ -448,11 +448,11 @@ function haskala_search_default_search_api_index() {
  */
 function haskala_search_default_search_api_page() {
   $items = array();
-  $items['haskala2'] = entity_import('search_api_page', '{
-    "index_id" : "haskala2",
+  $items['haskala'] = entity_import('search_api_page', '{
+    "index_id" : "haskala",
     "path" : "search",
-    "name" : "Haskala2",
-    "machine_name" : "haskala2",
+    "name" : "Haskala",
+    "machine_name" : "haskala",
     "description" : null,
     "options" : {
       "mode" : "terms",
