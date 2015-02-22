@@ -30,9 +30,6 @@ else {
   });
 }
 
-
-
-
 WebdriverCSS.init(client);
 
 client

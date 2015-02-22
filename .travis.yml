@@ -41,28 +41,11 @@ install:
   - npm install -g ngrok
 
 before_script:
-
-  # Install Drupal
-  - cp travis.config.sh config.sh
-  - ./install -dy
-
   # Install Jekyll
   - cd jekyll
   - npm install
   - bower install
   - grunt serve > ~/grunt.log 2>&1 &
-  - cd ..
-
-  # Install PhantomCSS
-  - cd phantomcss
-  - npm install
-  - cd ..
-
-  # Install Behat
-  - cd behat
-  - cp aliases.drushrc.php ~/.drush/
-  - cp behat.local.yml.travis behat.local.yml
-  - composer install
   - cd ..
 
   # Create display.
@@ -72,45 +55,17 @@ before_script:
   # Wait for Grunt to finish loading.
   - until $(curl --output /dev/null --silent --head --fail http://localhost:9000); do sleep 1; echo '.'; done
 
-  # start a web server on port 8080, run in the background; wait for initialization
-  - drush @site runserver 127.0.0.1:8080 &
-  - until netstat -an 2>/dev/null | grep '8080.*LISTEN'; do true; done
-
-  # Run selenium.
-  - wget http://selenium-release.storage.googleapis.com/2.40/selenium-server-standalone-2.40.0.jar
-  - java -jar selenium-server-standalone-2.40.0.jar -p 4444 &
-
   # Run ngrok
   - ngrok -authtoken=$NGROK_AUTHTOKEN -log=stdout -subdomain=$TRAVIS_COMMIT 9000 > ~/ngrok.log 2>&1 &
   - until $(curl --output /dev/null --silent --head --fail http://$TRAVIS_COMMIT.ngrok.com); do sleep 1; echo '.'; done
 
 script:
 
-  # Run PhantomCSS tests.
-  - cd phantomcss
-  # jekyll
-  - casperjs test homepage.js
-  - casperjs test books.js
-  - casperjs test book.js
-  # drupal
-  - casperjs test homepage-drupal.js
-
-  # Upload failed images to imgur
-  - bash scan_phantomcss_fails.sh > ~/phantomcss.log 2>&1 &
-
-  # Run phantomJs.
-  - phantomjs --webdriver=4444 > ~/phantomjs.log 2>&1 &
-
   # Run WebDriverCss tests
-  - cd ../webdrivercss
+  - cd ./webdrivercss
   - npm install
   - node wdcss.js
 
-  # Run behat tests.
-  - cd ../behat
-  - ./bin/behat --tags=~@wip
-
   # Print logs.
   - cat ~/grunt.log
-  - cat ~/phantomjs.log
-  - cat ~/phantomcss.log
+  - cat ~/ngrok.log
