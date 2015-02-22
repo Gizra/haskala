@@ -18,5 +18,7 @@ script:
 
   # Run WebDriverCss tests
   - cd ./webdrivercss
+  - mkdir webdrivercss
+  - chmod 777 webdrivercss
   - npm install
   - node wdcss.js
