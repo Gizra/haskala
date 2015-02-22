@@ -55,8 +55,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
 
   // Add author names field to translation tab.
   if ($wrapper->field_book->value()) {
-    $production_node = haskala_book_get_production($wrapper->field_book->getIdentifier(), NULL, t('Author'));
-    if ($production_node) {
+    if ($production_node = haskala_book_get_production($wrapper->field_book->getIdentifier(), NULL, t('Author'))) {
       $production_wrapper = entity_metadata_wrapper('node', $production_node);
       $author_names_as_field = haskala_person_get_names($production_wrapper->field_producer->getIdentifier());
 
@@ -102,7 +101,12 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
     $mention_tmp = array_merge($tabs_fields[t('Persons mentioned in book')], $mentionees);
     $tabs_fields[t('Persons mentioned in book')] = $mention_tmp;
   }
-  
+
+  // Set css ids on tabs.
+  foreach ($tabs_fields as $label => &$tab) {
+    $tab['css_id'] = drupal_html_id($label);
+  }
+
   $grouped_fields_variables = array(
     'title' => $node->title,
     'top_details_group' => $top_details_group_fields,

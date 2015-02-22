@@ -112,6 +112,7 @@ function haskala_set_variables() {
   variable_set('pathauto_node_person_pattern', 'people/[node:title]');
   variable_set('ip_geoloc_marker_dimensions', '25 x 36');
   variable_set('ip_geoloc_marker_directory', 'profiles/haskala/themes/custom/haskala_theme/map_markers');
+  variable_set('theme_haskala_theme_settings', array(array('bootstrap_tooltip_enabled' => FALSE, 'bootstrap_anchors_fix' => FALSE, 'bootstrap_popover_enabled' => FALSE)));
 }
 
 /**
