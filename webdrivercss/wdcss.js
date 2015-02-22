@@ -10,18 +10,21 @@ caps['name'] = caps.browserName;
 
 var url;
 
-if (process.env.BROWSERSTACK_USERNAME) {
-  caps['browserstack.user'] = process.env.BROWSERSTACK_USERNAME;
-  caps['browserstack.key'] = process.env.BROWSERSTACK_ACCESS;
-  caps['browserstack.debug'] = 'true';
+if (true) {
+// if (process.env.BROWSERSTACK_USERNAME) {
+  // caps['user'] = 'amitaibu';
+  // caps['key'] = '8b4285d8-49e2-404a-8cb5-932b0a34971a';
+  // caps['browserstack.debug'] = 'true';
 
   var client = WebdriverIO.remote({
     desiredCapabilities: caps,
-    host: 'hub.browserstack.com',
-    port: 80
+    host: 'ondemand.saucelabs.com',
+    port: 80,
+    user: 'amitaibu',
+    key: '8b4285d8-49e2-404a-8cb5-932b0a34971a'
   });
 
-  url = 'http://some-commit.ngrok.com';
+  url = 'http://' + process.env.TRAVIS_COMMIT + '.ngrok.com';
 }
 else {
   // Local selenium
