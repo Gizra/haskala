@@ -10,18 +10,15 @@ caps['name'] = caps.browserName;
 
 var url;
 
-if (true) {
-// if (process.env.BROWSERSTACK_USERNAME) {
-  // caps['user'] = 'amitaibu';
-  // caps['key'] = '8b4285d8-49e2-404a-8cb5-932b0a34971a';
-  // caps['browserstack.debug'] = 'true';
+if (process.env.BROWSERSTACK_USERNAME) {
+  caps['browserstack.user'] = process.env.BROWSERSTACK_USERNAME;
+  caps['browserstack.key'] = process.env.BROWSERSTACK_ACCESS;
+  caps['browserstack.debug'] = 'true';
 
   var client = WebdriverIO.remote({
     desiredCapabilities: caps,
-    host: 'ondemand.saucelabs.com',
-    port: 80,
-    user: 'amitaibu',
-    key: '8b4285d8-49e2-404a-8cb5-932b0a34971a'
+    host: 'hub.browserstack.com',
+    port: 80
   });
 
   url = 'http://' + process.env.TRAVIS_COMMIT + '.ngrok.com';
@@ -40,3 +37,10 @@ client
   .url(url)
   .webdrivercss(caps.name, {name: 'homepage'})
   .end();
+
+client.on('error', function(e) {
+  // will be executed everytime an error occured
+  // e.g. when element couldn't be found
+  console.log(e.body.value.class);   // -> "org.openqa.selenium.NoSuchElementException"
+  console.log(e.body.value.message); // -> "no such element ..."
+})
