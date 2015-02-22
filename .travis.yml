@@ -1,12 +1,7 @@
-language: php
+language: node_js
 
-php:
-  - 5.5
-
-mysql:
-  database: drupal
-  username: root
-  encoding: utf8
+node_js:
+  - '0.12'
 
 env:
   global:
