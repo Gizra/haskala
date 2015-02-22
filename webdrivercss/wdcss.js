@@ -21,7 +21,7 @@ if (process.env.BROWSERSTACK_USERNAME) {
     port: 80
   });
 
-  url = 'http://' + process.env.TRAVIS_COMMIT + '.ngrok.com';
+  url = 'http://some-commit.ngrok.com';
 }
 else {
   // Local selenium
