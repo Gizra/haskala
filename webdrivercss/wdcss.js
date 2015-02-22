@@ -34,13 +34,7 @@ WebdriverCSS.init(client);
 
 client
   .init()
-  .url(url)
+  .url('http://google.com')
   .webdrivercss(caps.name, {name: 'homepage'})
   .end();
 
-client.on('error', function(e) {
-  // will be executed everytime an error occured
-  // e.g. when element couldn't be found
-  console.log(e.body.value.class);   // -> "org.openqa.selenium.NoSuchElementException"
-  console.log(e.body.value.message); // -> "no such element ..."
-})
