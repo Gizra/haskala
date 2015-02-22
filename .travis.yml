@@ -43,6 +43,7 @@ install:
 before_script:
   # Install Jekyll
   - cd jekyll
+  - bundle install
   - npm install
   - bower install
   - grunt serve > ~/grunt.log 2>&1 &
