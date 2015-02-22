@@ -3,9 +3,15 @@
 /**
  * Preprocess html.
  */
-function haskala_theme_preprocess_html(&$vars) {
+function haskala_theme_preprocess_html(&$variables) {
   // Css for IE <= 9.
   drupal_add_css(libraries_get_path('haskala') . '/css/ie.css', array('browsers' => array('IE' => 'lte IE 9', '!IE' => FALSE)));
+
+  // Add a class for city term pages.
+  $term = menu_get_object('taxonomy_term', 2);
+  if ($term && $term->vocabulary_machine_name == 'cities') {
+    $variables['classes_array'][] = 'page-places';
+  }
 }
 
 /**
@@ -87,7 +93,7 @@ function haskala_theme_preprocess_node__person(&$variables) {
   if ($view_mode == 'teaser' || $view_mode == 'teaser_en') {
     $variables['name'] = entity_metadata_wrapper('node', $node)->field_german_name->value();
   }
-  else if ($view_mode == 'teaser_he') {
+  elseif ($view_mode == 'teaser_he') {
     $variables['name'] = entity_metadata_wrapper('node', $node)->field_hebrew_name->value();
   }
 }
