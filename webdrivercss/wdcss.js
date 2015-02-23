@@ -3,7 +3,10 @@ var WebdriverIO = require('webdriverio'),
 
 var caps;
 caps = {
-  'browserName': 'chrome'
+  'browserName': 'internet explorer',
+  'version': '9',
+  'platform': 'WINDOWS',
+  'os_version': '7'
 };
 
 caps['name'] = caps.browserName;

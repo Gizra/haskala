@@ -86,7 +86,7 @@ before_script:
   # Run ngrok
   - ngrok -authtoken=$NGROK_AUTHTOKEN -log=stdout -subdomain=$TRAVIS_COMMIT 9000 > ~/ngrok.log 2>&1 &
   - until $(curl --output /dev/null --silent --head --fail http://$TRAVIS_COMMIT.ngrok.com); do sleep 1; echo '.'; done
-  
+
   # Run selenium.
   - wget http://selenium-release.storage.googleapis.com/2.40/selenium-server-standalone-2.40.0.jar
   - java -jar selenium-server-standalone-2.40.0.jar -p 4444 &
