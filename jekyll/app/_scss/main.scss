@@ -69,6 +69,10 @@ a, a:hover, a:visited {
 
 .krumo-root {
   text-align: left;
+
+  li {
+    display: block !important;
+  }
 }
 
 .wrapper {
