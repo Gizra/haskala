@@ -1,7 +1,12 @@
-language: node_js
+language: php
 
-node_js:
-  - '0.12'
+php:
+  - 5.5
+
+mysql:
+  database: drupal
+  username: root
+  encoding: utf8
 
 env:
   global:
@@ -9,14 +14,110 @@ env:
   - secure: "YJi/Abc+p1hMtGWPRnfrRDhfNIuxXRACQ7QxWHS9uHrYvdvkiqsxChcJuOZZ6Ga4At5G88nMAzdzF3xDqzF0FRI0rs6D5jLSudvMoC4rAs/u+ghN8feBBHi6yPqebfwjEPCl8HljeWrFUTf8EJBJLYxBCSuz9TjO2z7yuz2roSs="
   - secure: "Cz5WUtEnosATTanZ5Qqft5kbJSvM374ig6uOJjj35N0B1acHUJoXBYcyvc7gHjIf+iDU6xHxgyMsDwTXyVD/eQsIpzpThDRxHv92w/w0gKmtYSnn4D+ZZ9N5l3uP6dtyChXLqf/k95R0O2Cg/AdtTHv9ipI+LW+trRGgt0Z5fas="
 
-before_script:
+before_install:
+  - sudo apt-get update > /dev/null
+  - composer self-update
+
+  # WebDriverCss required installation.
   - sudo apt-get install graphicsmagick libcairo2-dev
   - export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
 
+  # Install Bower, Grunt, CasperJs and NgRok.
+  - npm install -g bower grunt-cli casperjs ngrok
+
+  # Install Sass and Compass for Grunt to work.
+  - gem install compass
+
+  # Configure imgur bash script to upload images on failure.
+  - npm install -g jshon
+  - chmod +x imgur
+  - chmod +x install
+
+install:
+  # install php packages required for running a web server from drush on php 5.3
+  - sudo apt-get install -y --force-yes php5-cgi php5-mysql
+
+  # install drush
+  - export PATH="$HOME/.composer/vendor/bin:$PATH"
+  - composer global require drush/drush:6.*
+  - phpenv rehash
+
+before_script:
+
+  # Install Drupal
+  - cp travis.config.sh config.sh
+  - ./install -dy
+
+  # Install Jekyll
+  - cd jekyll
+  - npm install
+  - bower install
+  - grunt serve > ~/grunt.log 2>&1 &
+  - cd ..
+
+  # Install PhantomCSS
+  - cd phantomcss
+  - npm install
+  - cd ..
+
+  # Install WebDriverCss
+  - cd webdrivercss
+  - npm install
+  - cd ..
+
+  # Install Behat
+  - cd behat
+  - cp aliases.drushrc.php ~/.drush/
+  - cp behat.local.yml.travis behat.local.yml
+  - composer install
+  - cd ..
+
+  # Create display.
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
+  # Wait for Grunt to finish loading.
+  - until $(curl --output /dev/null --silent --head --fail http://localhost:9000); do sleep 1; echo '.'; done
+
+  # start a web server on port 8080, run in the background; wait for initialization
+  - drush @site runserver 127.0.0.1:8080 &
+  - until netstat -an 2>/dev/null | grep '8080.*LISTEN'; do true; done
+
+  # Run ngrok
+  - ngrok -authtoken=$NGROK_AUTHTOKEN -log=stdout -subdomain=$TRAVIS_COMMIT 9000 > ~/ngrok.log 2>&1 &
+  - until $(curl --output /dev/null --silent --head --fail http://$TRAVIS_COMMIT.ngrok.com); do sleep 1; echo '.'; done
+  
+  # Run selenium.
+  - wget http://selenium-release.storage.googleapis.com/2.40/selenium-server-standalone-2.40.0.jar
+  - java -jar selenium-server-standalone-2.40.0.jar -p 4444 &
+
 script:
 
+  # Run PhantomCSS tests.
+  - cd phantomcss
+  # jekyll
+  - casperjs test homepage.js
+  - casperjs test books.js
+  - casperjs test book.js
+  # drupal
+  - casperjs test homepage-drupal.js
+
+  # Upload failed images to imgur
+  - bash scan_phantomcss_fails.sh > ~/phantomcss.log 2>&1 &
+
   # Run WebDriverCss tests
-  - cd ./webdrivercss
-  - chmod -R 777 webdrivercss
+  - cd ../webdrivercss
   - npm install
   - node wdcss.js
+
+  # Run phantomJs.
+  - phantomjs --webdriver=4444 > ~/phantomjs.log 2>&1 &
+
+  # Run behat tests.
+  - cd ../behat
+  - ./bin/behat --tags=~@wip
+
+  # Print logs.
+  - cat ~/grunt.log
+  - cat ~/phantomjs.log
+  - cat ~/phantomcss.log

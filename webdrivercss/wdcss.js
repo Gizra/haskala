@@ -34,7 +34,6 @@ WebdriverCSS.init(client);
 
 client
   .init()
-  .url('http://google.com')
+  .url(url)
   .webdrivercss(caps.name, {name: 'homepage'})
   .end();
-
