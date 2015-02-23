@@ -81,18 +81,22 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   haskala_book_production_tab_fields($tabs_fields, $book_nid);
 
   // Add editions to Editions tab.
-  $editions_fields = haskala_book_get_editions($book_nid);
-  if ($editions_fields) {
-    $editions_tmp = array_merge($tabs_fields[t('Editions')], $editions_fields);
-    $tabs_fields[t('Editions')] = $editions_tmp;
+  if ($editions_fields = haskala_book_get_editions($book_nid)) {
+    if (empty($tabs_fields[t('Editions')])) {
+      $tabs_fields[t('Editions')] = array();
+    }
+
+    $tabs_fields[t('Editions')] = array_merge($tabs_fields[t('Editions')], $editions_fields);
   }
 
   // Add translations to Editions tab.
-  $translations_fields = haskala_book_get_translations($book_nid);
-  if ($translations_fields) {
+  if ($translations_fields = haskala_book_get_translations($book_nid)) {
+    if (empty($tabs_fields[t('Editions')])) {
+      $tabs_fields[t('Editions')] = array();
+    }
+
     $tabs_fields[t('Editions')]['sub_title'] = t('Translations');
-    $translation_tmp = array_merge($tabs_fields[t('Editions')], $translations_fields);
-    $tabs_fields[t('Editions')] = $translation_tmp;
+    $tabs_fields[t('Editions')] = array_merge($tabs_fields[t('Editions')], $translations_fields);
   }
 
   // Add mentionees for PERSONS MENTIONED IN BOOK tab.
