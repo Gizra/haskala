@@ -82,9 +82,15 @@ a, a:hover, a:visited {
       margin-right: 4px;
       margin-top: 10px;
 
+      ul {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
       li {
         display: inline;
-        font-weight: bold;
+        font-weight: normal;
 
         &:after {
           content: ' >';
