@@ -31,22 +31,19 @@ function haskala_theme_preprocess_page(&$variables) {
     if ($node->type == 'person') {
       $breadcrumbs[] = l(t('People'), 'people');
     }
-    $breadcrumbs[] = $node->title;
   }
   elseif ($term = menu_get_object('taxonomy_term', 2)) {
-    if ($term->vocabulary_machine_name == 'cities') {
-      $breadcrumbs[] = l(t('Places'), 'places');
-    }
-    else {
-      $vocabularies = taxonomy_vocabulary_get_names();
-      $breadcrumbs[] = $vocabularies[$term->vocabulary_machine_name]->name;
-    }
-    $breadcrumbs[] = $term->name;
+    $vocabularies = taxonomy_vocabulary_get_names();
+    $breadcrumbs[] = $vocabularies[$term->vocabulary_machine_name]->name;
   }
 
-  if (count($breadcrumbs) > 1) {
-    $variables['breadcrumbs'] = theme('item_list', array('items' => $breadcrumbs));
+  $title = drupal_get_title();
+  if ($title == t('Home')) {
+    return;
   }
+
+  $breadcrumbs[] = drupal_get_title();
+  $variables['breadcrumbs'] = theme('item_list', array('items' => $breadcrumbs));
 }
 
 /**
