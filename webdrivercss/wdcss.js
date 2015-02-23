@@ -5,8 +5,7 @@ var caps;
 caps = {
   'browserName': 'internet explorer',
   'version': '9',
-  'platform': 'WINDOWS',
-  'os_version': '7'
+  'platform': 'WINDOWS'
 };
 
 caps['name'] = caps.browserName;
