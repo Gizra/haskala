@@ -9,6 +9,10 @@ env:
   - secure: "YJi/Abc+p1hMtGWPRnfrRDhfNIuxXRACQ7QxWHS9uHrYvdvkiqsxChcJuOZZ6Ga4At5G88nMAzdzF3xDqzF0FRI0rs6D5jLSudvMoC4rAs/u+ghN8feBBHi6yPqebfwjEPCl8HljeWrFUTf8EJBJLYxBCSuz9TjO2z7yuz2roSs="
   - secure: "Cz5WUtEnosATTanZ5Qqft5kbJSvM374ig6uOJjj35N0B1acHUJoXBYcyvc7gHjIf+iDU6xHxgyMsDwTXyVD/eQsIpzpThDRxHv92w/w0gKmtYSnn4D+ZZ9N5l3uP6dtyChXLqf/k95R0O2Cg/AdtTHv9ipI+LW+trRGgt0Z5fas="
 
+before_script:
+  - sudo apt-get install graphicsmagick libcairo2-dev
+  - export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
+
 script:
 
   # Run WebDriverCss tests
