@@ -8,7 +8,7 @@ caps = {
   'platform': 'WINDOWS'
 };
 
-caps['name'] = caps.browserName;
+caps['name'] = 'ie';
 
 var url;
 
