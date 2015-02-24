@@ -93,5 +93,10 @@ function haskala_general_build_items_list($entity_type, $options, $letter) {
  * /node pages)
  */
 function haskala_general_query_node_access_alter(QueryAlterableInterface $query) {
-  $query->condition('n.type', variable_get('haskala_public_nodes', array('book', 'person')), 'IN');
+  $tables = $query->getTables();
+  foreach ($tables as $table) {
+    if ($table == 'node') {
+      $query->condition($table-['alias'] . '.type', variable_get('haskala_public_nodes', array('book', 'person')), 'IN');
+    }
+  }
 }
