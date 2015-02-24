@@ -9,7 +9,7 @@ projects[admin_views][subdir] = "contrib"
 projects[admin_views][version] = "1.4"
 
 projects[ckeditor][subdir] = "contrib"
-projects[ckeditor][version] = "1.x-dev"
+projects[ckeditor][version] = "1.16"
 
 projects[ctools][subdir] = "contrib"
 projects[ctools][version] = "1.6"
@@ -34,6 +34,9 @@ projects[field_group][version] = "1.4"
 projects[geolocation][subdir] = "contrib"
 projects[geolocation][version] = "1.6"
 
+projects[google_analytics][subdir] = "contrib"
+projects[google_analytics][version] = "2.1"
+
 projects[ip_geoloc][subdir] = "contrib"
 projects[ip_geoloc][version] = "1.26"
 projects[ip_geoloc][patch][] = "https://www.drupal.org/files/issues/fixing-separator-decoding-2432515-1.patch"
@@ -47,8 +50,15 @@ projects[libraries][version] = "2.2"
 projects[link][subdir] = "contrib"
 projects[link][version] = "1.3"
 
+projects[logs_http][subdir] = "contrib"
+projects[logs_http][version] = "1.x-dev"
+; Using dev due to no release available.
+
+projects[metatag][subdir] = "contrib"
+projects[metatag][version] = "1.4"
+
 projects[module_filter][subdir] = "contrib"
-projects[module_filter][version] = "2.0-alpha2"
+projects[module_filter][version] = "2.0"
 
 projects[panels][subdir] = "contrib"
 projects[panels][version] = "3.5"
@@ -77,6 +87,9 @@ projects[views][version] = "3.10"
 projects[views_bulk_operations][subdir] = "contrib"
 projects[views_bulk_operations][version] = "3.2"
 
+projects[xmlsitemap][subdir] = "contrib"
+projects[xmlsitemap][version] = "2.2"
+
 ; Development modules
 projects[migrate][subdir] = "development"
 projects[migrate][version] = "2.7"
@@ -86,9 +99,6 @@ projects[migrate_extras][version] = "2.5"
 
 projects[devel][subdir] = "development"
 projects[devel][version] = "1.5"
-
-projects[coder][subdir] = "development"
-projects[coder][version] = "2.4"
 
 
 ; Libraries

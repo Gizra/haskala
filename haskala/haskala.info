@@ -29,11 +29,14 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = geolocation
+dependencies[] = googleanalytics
 dependencies[] = ip_geoloc
 dependencies[] = jquery_update
 dependencies[] = libraries
 dependencies[] = link
+dependencies[] = logs_http
 dependencies[] = module_filter
+dependencies[] = metatag
 dependencies[] = migrate
 dependencies[] = migrate_extras
 dependencies[] = page_manager
@@ -46,6 +49,7 @@ dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = views
 dependencies[] = views_bulk_operations
+dependencies[] = xmlsitemap
 
 ; haskala modules ------------------------------------------------------------
 dependencies[] = haskala_book
