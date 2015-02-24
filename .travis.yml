@@ -109,6 +109,7 @@ script:
   - cd ../webdrivercss
   - npm install
   - node wdcss.js
+  - bash upload_images.sh
 
   # Run phantomJs.
   - phantomjs --webdriver=4444 > ~/phantomjs.log 2>&1 &
