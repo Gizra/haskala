@@ -36,6 +36,7 @@ projects[geolocation][version] = "1.6"
 
 projects[ip_geoloc][subdir] = "contrib"
 projects[ip_geoloc][version] = "1.26"
+projects[ip_geoloc][patch][] = "https://www.drupal.org/files/issues/fixing-separator-decoding-2432515-1.patch"
 
 projects[jquery_update][subdir] = "contrib"
 projects[jquery_update][version] = "2.5"

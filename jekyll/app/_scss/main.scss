@@ -69,6 +69,10 @@ a, a:hover, a:visited {
 
 .krumo-root {
   text-align: left;
+
+  li {
+    display: block !important;
+  }
 }
 
 .wrapper {
@@ -145,9 +149,13 @@ a, a:hover, a:visited {
           a {
             width: 30px;
             height: 30px;
-            background: url('../images/top_search.png') no-repeat center bottom;
+            background: url('../images/top-search.png') no-repeat center bottom;
             display: inline-block;
             color: transparent;
+
+            &.active, &:hover {
+              background-image: url('../images/top-search-active.png');
+            }
           }
         }
       }
