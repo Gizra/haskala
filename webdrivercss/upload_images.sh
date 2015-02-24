@@ -2,7 +2,7 @@
 DIRECTORY=./webdrivercss
 
 if [ -d "$DIRECTORY" ]; then
-  for i in $DIRECTORY/*
+  for i in $DIRECTORY/*.png
     do
       bash $TRAVIS_BUILD_DIR/imgur $i
     done
