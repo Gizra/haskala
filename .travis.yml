@@ -85,6 +85,8 @@ script:
   - casperjs test homepage-drupal.js
 
 
+#  - bash $TRAVIS_BUILD_DIR/imgur ./screenshots/drupal-homepage-footer_7.png
+
   # Upload failed images to imgur
   - bash scan_phantomcss_fails.sh > ~/phantomcss.log 2>&1 &
 

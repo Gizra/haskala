@@ -279,6 +279,7 @@ a, a:hover, a:visited {
         }
 
         a {
+          display: inline;
           color: $darkgray;
           letter-spacing: -0.2px;
           padding: 0;
