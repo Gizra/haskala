@@ -1915,7 +1915,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_huji_library_id',
-    'label' => 'National Library of Hebrew University catalog number',
+    'label' => 'National Library of Israel',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -7580,7 +7580,7 @@ function haskala_book_field_default_field_instances() {
   t('Names of other published volumes');
   t('Names of planned volumes that were not published');
   t('National Library of Berlin catalog number');
-  t('National Library of Hebrew University catalog number');
+  t('National Library of Israel');
   t('Notes');
   t('Notes on book availability');
   t('Notes on illustrations / diagrams');
