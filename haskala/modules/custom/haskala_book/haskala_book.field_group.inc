@@ -560,7 +560,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_book_type';
   $field_group->data = array(
     'label' => '',
-    'weight' => '25',
+    'weight' => '26',
     'children' => array(
       0 => 'field_contradict_new_edition',
       1 => 'field_old_text',
@@ -1020,8 +1020,8 @@ function haskala_book_field_group_info() {
       0 => 'field_preface_notes',
       1 => 'field_preface_number',
       2 => 'field_preface_title',
-      3 => 'field_writer_of_preface',
-      4 => 'field_role',
+      3 => 'field_role',
+      4 => 'field_writer_of_preface',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -1472,7 +1472,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_textual_cultural_sources';
   $field_group->data = array(
     'label' => '',
-    'weight' => '23',
+    'weight' => '24',
     'children' => array(
       0 => 'field_sources_not_mentioned_list',
       1 => 'field_sources_not_mentioned_ref',
@@ -1833,7 +1833,7 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_book_type';
   $field_group->data = array(
     'label' => 'Textual and cultural sources for the book',
-    'weight' => '31',
+    'weight' => '27',
     'children' => array(
       0 => 'field_book_type_general_notes',
       1 => 'field_jewish_sources_quotes',
@@ -2150,12 +2150,13 @@ function haskala_book_field_group_info() {
   $field_group->parent_name = 'group_book_type';
   $field_group->data = array(
     'label' => '',
-    'weight' => '23',
+    'weight' => '24',
     'children' => array(
-      0 => 'field_book',
-      1 => 'field_presented_translatio_notes',
-      2 => 'field_presented_translation_refe',
-      3 => 'field_translation_contradict',
+      0 => 'field_presented_translatio_notes',
+      1 => 'field_presented_translation_refe',
+      2 => 'field_translation_contradict',
+      3 => 'field_original_text_name',
+      4 => 'field_original_text_author',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
