@@ -1229,7 +1229,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_expanded_in_edition',
-    'label' => 'Was the text expanded in a new edition?',
+    'label' => 'Expanded in new edition?',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1268,7 +1268,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_expanded_in_translations',
-    'label' => 'Was the text expanded in translations?',
+    'label' => 'Expanded in translations?',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -7672,8 +7672,8 @@ function haskala_book_field_default_field_instances() {
   t('Type of original text');
   t('Type of translation');
   t('Typography');
-  t('Was the text expanded in a new edition?');
-  t('Was the text expanded in translations?');
+  t('Expanded in new edition?');
+  t('Expanded in translations?');
   t('Widener Library, Harvard');
   t('Width of book, in cm');
   t('Writer of preface');

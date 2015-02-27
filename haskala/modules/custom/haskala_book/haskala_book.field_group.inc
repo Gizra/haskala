@@ -168,7 +168,6 @@ function haskala_book_field_group_info() {
     'label' => 'Type of book',
     'weight' => '126',
     'children' => array(
-      0 => 'field_book',
       1 => 'field_contradict_new_edition',
       2 => 'field_contradict_orginal',
       3 => 'field_expanded_in_edition',
@@ -2224,7 +2223,6 @@ function haskala_book_field_group_info() {
     'label' => 'Type of book',
     'weight' => '142',
     'children' => array(
-      0 => 'field_book',
       1 => 'field_contradict_new_edition',
       2 => 'field_contradict_orginal',
       3 => 'field_expanded_in_edition',
