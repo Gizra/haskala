@@ -18,8 +18,7 @@ projects[diff][subdir] = "contrib"
 projects[diff][version] = "3.2"
 
 projects[entity][subdir] = "contrib"
-projects[entity][version] = "1.5"
-projects[entity][patch][] = "https://www.drupal.org/files/issues/2264079-entity-wrapper-access-single-entity-reference-2.patch"
+projects[entity][version] = "1.6"
 projects[entity][patch][] = "https://www.drupal.org/files/issues/2086225-entity-access-check-node-create-3.patch"
 
 projects[entityreference][subdir] = "contrib"
