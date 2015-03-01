@@ -231,8 +231,7 @@ function haskala_book_get_reference_nodes_fields($book_nid, $bundle, $nodes, $gr
  *  @return Multi editions fields .
  */
 function haskala_book_get_editions($book_nid) {
-  $editions_nodes = haskala_book_get_reference_nodes($book_nid, 'edition');
-  if (!$editions_nodes) {
+  if (!$editions_nodes = haskala_book_get_reference_nodes($book_nid, 'edition')) {
     return;
   }
   return haskala_book_get_reference_nodes_fields($book_nid, 'edition', $editions_nodes, 'group_editions');
@@ -247,8 +246,7 @@ function haskala_book_get_editions($book_nid) {
  *  @return Multi translations fields .
  */
 function haskala_book_get_translations($book_nid) {
-  $translations_nodes = haskala_book_get_reference_nodes($book_nid, 'book');
-  if (!$translations_nodes) {
+  if (!$translations_nodes = haskala_book_get_reference_nodes($book_nid, 'translation')) {
     return;
   }
   return haskala_book_get_reference_nodes_fields($book_nid, 'book', $translations_nodes, 'group_translation_editions_tab');
