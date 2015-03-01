@@ -176,7 +176,36 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_topic', 'Topic'),
     array('field_topics_notes', 'Notes on topics'),
 
-//
+    // Target audience
+    array('field_target_audience', 'Target audience as described in the book'),
+    array('field_target_audience_notes', 'Notes on target audience'),
+    array('field_production_evidence', 'Evidence about book production'),
+    array('field_contacts_other_people', 'Contacts with other people'),
+    array('field_contacts_official_agents', 'Contacts with official agents'),
+    array('field_contemporary_references', 'Contemporary references to the book'),
+    array('field_contemporary_disputes', 'Contemporary disputes about the book'),
+    array('field_censorship', 'Censorship'),
+    array('field_bans', 'Bans'),
+    // Later references to the book?
+    array('field_original_sources_mention', 'Original sources which mention the book'),
+    array('field_mentions_in_reviews', 'Mentions in reviews'),
+    array('field_preservation_references', 'References for preservation in the public consciousness'),
+    array('field_partial_publication_other', 'Partial publication of the book in other texts'),
+    array('field_target_general_notes', 'Notes on target audience'),
+
+
+//    array('', ''),
+//    array('', ''),
+//    array('', ''),
+//    array('', ''),
+//    array('', ''),
+//    array('', ''),
+//    array('', ''),
+//    array('', ''),
+//    array('', ''),
+//    array('', ''),
+//    array('', ''),
+//    array('', ''),
 //    array('', ''),
 
 
@@ -466,13 +495,34 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     $this->addTermReferenceMappings(array('field_topic'));
 
 
+    // Target audience
+    $simple_mappings = array(
+      'field_target_audience_notes',
+      'field_production_evidence',
+      'field_contacts_other_people',
+      'field_contacts_official_agents',
+      'field_contemporary_references',
+      'field_contemporary_disputes',
+      'field_censorship',
+      'field_bans',
+      'field_original_sources_mention',
+      'field_mentions_in_reviews',
+      'field_preservation_references',
+      'field_partial_publication_other',
+      'field_target_general_notes',
+    );
+    $this->addSimpleMappings($simple_mappings);
+    $term_references = array(
+      'field_target_audience',
+    );
+    $this->addTermReferenceMappings($term_references);
 
 //    $simple_mappings = array(
 //    );
 //    $this->addSimpleMappings($simple_mappings);
 //    $term_references = array(
 //    );
-
+//    $this->addTermReferenceMappings
 
 //    $simple_mappings = array(
 //      'field_dedications',
