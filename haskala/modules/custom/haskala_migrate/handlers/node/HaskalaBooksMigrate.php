@@ -194,16 +194,22 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_target_general_notes', 'Notes on target audience'),
 
 
-//    array('', ''),
-//    array('', ''),
-//    array('', ''),
-//    array('', ''),
-//    array('', ''),
-//    array('', ''),
-//    array('', ''),
-//    array('', ''),
-//    array('', ''),
-//    array('', ''),
+    // Catalog numbers
+    array('field_huji_library_id', 'National Library of Hebrew University catalog number'),
+    array('field_bar_ilan_library_id', 'Library of Bar Ilan University catalog number'),
+    array('field_tel_aviv_library_id', 'Library of Tel Aviv University catalog number'),
+    array('field_berlin_library_id', 'National Library of Berlin catalog number'),
+    array('field_frankfurt_library_id', 'Frankfurt University Library catalog number'),
+    array('field_harvard_library_id', 'Widener Library of Harvard catalog number'),
+    array('field_new_york_library_id', 'New York Public Library catalog number'),
+    array('field_british_library_id', 'British Museum catalog number'),
+    array('field_other_libraries', 'Catalog number at other libraries'),
+    array('field_book_not_available', 'Book is not available'),
+    array('field_book_availability_notes', 'Notes on book availability'),
+    array('field_link_to_digital_book', 'Link to digital book'),
+    array('field_catalog_numbers_notes', 'Notes on catalog numbers'),
+
+    //
 //    array('', ''),
 //    array('', ''),
 //    array('', ''),
@@ -516,6 +522,24 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_target_audience',
     );
     $this->addTermReferenceMappings($term_references);
+
+    // Catalog numbers
+    $simple_mappings = array(
+      'field_huji_library_id',
+      'field_bar_ilan_library_id',
+      'field_tel_aviv_library_id',
+      'field_berlin_library_id',
+      'field_frankfurt_library_id',
+      'field_harvard_library_id',
+      'field_new_york_library_id',
+      'field_british_library_id',
+      'field_other_libraries',
+      'field_book_not_available',
+      'field_book_availability_notes',
+      'field_link_to_digital_book',
+      'field_catalog_numbers_notes',
+    );
+    $this->addSimpleMappings($simple_mappings);
 
 //    $simple_mappings = array(
 //    );
