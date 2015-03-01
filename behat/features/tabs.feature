@@ -66,12 +66,12 @@ Feature: Book page
     Given I am an anonymous user
     When  I visit "books/דברי-שלום-ואמת-א"
     Then  I should see the text under the tab
-    | tab      | text           |
-    | Editions | בית עקד ספרים  |
-    | Editions | אליהו מורפורגו |
+    | tab      | text                                |
+    | Editions | בית עקד ספרים                       |
+    | Editions | במהדורת וינה צורף גם מאמר חקור דין. |
 
 
-  @api
+  @api @wip
   Scenario Outline: Visit a books page
     Given I am an anonymous user
     When  I visit "books/דברי-שלום-ואמת-א"
