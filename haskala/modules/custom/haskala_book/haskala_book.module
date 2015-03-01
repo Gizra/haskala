@@ -60,7 +60,7 @@ function haskala_book_get_production($book_nid, $person_nid = NULL, $role = NULL
  *  @param $book_nid
  *   The book node ID.
  *
- *  @return Translator or orginal author name field.
+ *  @return Translator or original author name field.
  */
 function haskala_book_get_producer($book_nid, $role) {
   $production_node = haskala_book_get_production($book_nid, NULL, $role);
@@ -138,7 +138,7 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
       $field = render($node_view[$field_name]);
       $tab_fields_main[] = $field;
 
-      // Add orginal author name to Type of book tab, if book is a translation.
+      // Add original author name to Type of book tab, if book is a translation.
       if ($field_name == 'field_book') {
         $author_name_field = haskala_book_get_producer($wrapper->$field_name->getIdentifier(), t('Author'));
         if ($author_name_field) {

@@ -21,7 +21,7 @@ function haskala_people_ctools_plugin_directory($module, $plugin) {
  *  @param $person_nid
  *   The author person node ID.
  *
- *  @return  The created field for orginal author other names.
+ *  @return  The created field for original author other names.
  */
 function haskala_person_get_names($person_nid) {
   $person_node = node_load($person_nid);

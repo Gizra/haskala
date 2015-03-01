@@ -163,29 +163,11 @@ function haskala_book_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'book';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_horizontal_tabs';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Type of book',
     'weight' => '126',
-    'children' => array(
-      1 => 'field_contradict_new_edition',
-      2 => 'field_contradict_orginal',
-      3 => 'field_expanded_in_edition',
-      4 => 'field_expanded_in_translations',
-      5 => 'field_old_edition',
-      6 => 'field_presented_as_original',
-      7 => 'field_presented_as_translation',
-      8 => 'field_presented_new_edition',
-      9 => 'field_presented_new_edition_note',
-      10 => 'field_presented_new_edition_refe',
-      11 => 'field_presented_original_notes',
-      12 => 'field_presented_original_referen',
-      13 => 'field_presented_translatio_notes',
-      14 => 'field_presented_translation_refe',
-      15 => 'field_title_in_latin_characters',
-      16 => 'field_translation_contradict',
-      17 => 'group_textual_cultural_sources',
-    ),
+    'children' => array(),
     'format_type' => 'htab',
     'format_settings' => array(
       'formatter' => 'closed',
@@ -217,7 +199,7 @@ function haskala_book_field_group_info() {
       3 => 'field_presented_new_edition',
       4 => 'field_title_in_latin_characters',
       5 => 'group_new_edition_presented',
-      6 => 'group_orginal_presented',
+      6 => 'group_original_presented',
       7 => 'group_textual_cultural_sources',
       8 => 'group_translation_presented',
     ),
@@ -710,8 +692,8 @@ function haskala_book_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_orginal_author|node|book|form';
-  $field_group->group_name = 'group_orginal_author';
+  $field_group->identifier = 'group_original_author|node|book|form';
+  $field_group->group_name = 'group_original_author';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'book';
   $field_group->mode = 'form';
@@ -720,25 +702,25 @@ function haskala_book_field_group_info() {
     'label' => '',
     'weight' => '16',
     'children' => array(
-      0 => 'field_orginal_author_else_refer',
+      0 => 'field_original_author_else_refer',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-orginal-author field-group-fieldset',
+        'classes' => 'group-original-author field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
   );
-  $export['group_orginal_author|node|book|form'] = $field_group;
+  $export['group_original_author|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_orginal_presented|node|book|form';
-  $field_group->group_name = 'group_orginal_presented';
+  $field_group->identifier = 'group_original_presented|node|book|form';
+  $field_group->group_name = 'group_original_presented';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'book';
   $field_group->mode = 'form';
@@ -747,7 +729,7 @@ function haskala_book_field_group_info() {
     'label' => '',
     'weight' => '21',
     'children' => array(
-      0 => 'field_contradict_orginal',
+      0 => 'field_contradict_original',
       1 => 'field_expanded_in_edition',
       2 => 'field_expanded_in_translations',
       3 => 'field_presented_original_notes',
@@ -758,12 +740,12 @@ function haskala_book_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-orginal-presented field-group-fieldset',
+        'classes' => 'group-original-presented field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
   );
-  $export['group_orginal_presented|node|book|form'] = $field_group;
+  $export['group_original_presented|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -2049,20 +2031,21 @@ function haskala_book_field_group_info() {
     'weight' => '127',
     'children' => array(
       0 => 'field_bibliographical_citations',
-      1 => 'field_field_orginal_author_in_or',
-      2 => 'field_orginal_author_else_refer',
-      3 => 'field_orginal_author_elsewhere',
-      4 => 'field_orginal_publication_place',
-      5 => 'field_orginal_publication_year',
-      6 => 'field_original_language',
-      7 => 'field_original_publisher',
-      8 => 'field_original_title',
-      9 => 'field_original_title_else_refer',
-      10 => 'field_original_title_elsewhere',
-      11 => 'field_original_type',
-      12 => 'field_translation_notes',
-      13 => 'field_translation_type',
-      14 => 'group_translation_editions_tab',
+      1 => 'field_original_author',
+      2 => 'field_original_author_else_refer',
+      3 => 'field_original_author_elsewhere',
+      4 => 'field_original_publication_place',
+      5 => 'field_original_publication_year',
+      6 => 'field_original_author_other_name',
+      7 => 'field_original_language',
+      8 => 'field_original_publisher',
+      9 => 'field_original_title',
+      10 => 'field_original_title_else_refer',
+      11 => 'field_original_title_elsewhere',
+      12 => 'field_original_type',
+      13 => 'field_translation_notes',
+      14 => 'field_translation_type',
+      15 => 'group_translation_editions_tab',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -2151,11 +2134,11 @@ function haskala_book_field_group_info() {
     'label' => '',
     'weight' => '24',
     'children' => array(
-      0 => 'field_presented_translatio_notes',
-      1 => 'field_presented_translation_refe',
-      2 => 'field_translation_contradict',
-      3 => 'field_original_text_name',
-      4 => 'field_original_text_author',
+      0 => 'field_original_text_author',
+      1 => 'field_original_text_name',
+      2 => 'field_presented_translatio_notes',
+      3 => 'field_presented_translation_refe',
+      4 => 'field_translation_contradict',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -2183,10 +2166,10 @@ function haskala_book_field_group_info() {
     'weight' => '9',
     'children' => array(
       0 => 'field_bibliographical_citations',
-      1 => 'field_field_orginal_author_in_or',
-      2 => 'field_orginal_author_elsewhere',
-      3 => 'field_orginal_publication_place',
-      4 => 'field_orginal_publication_year',
+      1 => 'field_original_author',
+      2 => 'field_original_author_elsewhere',
+      3 => 'field_original_publication_place',
+      4 => 'field_original_publication_year',
       5 => 'field_original_language',
       6 => 'field_original_publisher',
       7 => 'field_original_title',
@@ -2194,9 +2177,10 @@ function haskala_book_field_group_info() {
       9 => 'field_original_type',
       10 => 'field_translation_notes',
       11 => 'field_translation_type',
-      12 => 'group_orginal_author',
-      13 => 'group_original_title',
-      14 => 'group_translation_editions_tab',
+      12 => 'field_original_author_other_name',
+      13 => 'group_original_author',
+      14 => 'group_original_title',
+      15 => 'group_translation_editions_tab',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -2223,24 +2207,24 @@ function haskala_book_field_group_info() {
     'label' => 'Type of book',
     'weight' => '142',
     'children' => array(
-      1 => 'field_contradict_new_edition',
-      2 => 'field_contradict_orginal',
-      3 => 'field_expanded_in_edition',
-      4 => 'field_expanded_in_translations',
-      5 => 'field_full_title',
-      6 => 'field_presented_as_original',
-      7 => 'field_presented_as_translation',
-      8 => 'field_presented_new_edition',
-      9 => 'field_presented_new_edition_note',
-      10 => 'field_presented_new_edition_refe',
-      11 => 'field_presented_original_notes',
-      12 => 'field_presented_original_referen',
-      13 => 'field_presented_translatio_notes',
-      14 => 'field_presented_translation_refe',
-      15 => 'field_title_in_latin_characters',
-      16 => 'field_translation_contradict',
-      17 => 'field_old_text',
-      18 => 'field_old_text_author',
+      0 => 'field_contradict_new_edition',
+      1 => 'field_contradict_original',
+      2 => 'field_expanded_in_edition',
+      3 => 'field_expanded_in_translations',
+      4 => 'field_full_title',
+      5 => 'field_old_text',
+      6 => 'field_old_text_author',
+      7 => 'field_presented_as_original',
+      8 => 'field_presented_as_translation',
+      9 => 'field_presented_new_edition',
+      10 => 'field_presented_new_edition_note',
+      11 => 'field_presented_new_edition_refe',
+      12 => 'field_presented_original_notes',
+      13 => 'field_presented_original_referen',
+      14 => 'field_presented_translatio_notes',
+      15 => 'field_presented_translation_refe',
+      16 => 'field_title_in_latin_characters',
+      17 => 'field_translation_contradict',
     ),
     'format_type' => 'div',
     'format_settings' => array(

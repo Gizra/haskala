@@ -8,12 +8,12 @@ class HaskalaBooksMigrate extends HaskalaMigration {
   public $bundle = 'book';
 
   public $csvColumns = array(
-    // Type of book.
+    // Type of book
     array('field_full_title', 'Full title'),
     array('field_title_in_latin_characters', 'Title in Latin characters'),
 
     array('field_presented_as_original', 'Text is presented as original'),
-    array('field_contradict_orginal', 'Information to contradict original text'),
+    array('field_contradict_original', 'Information to contradict original text'),
     array('field_presented_original_referen', 'References for declaring as original text'),
     array('field_presented_original_notes', 'Notes on declaring as original text'),
     array('field_expanded_in_translations', 'Text expanded in translations'),
@@ -47,6 +47,73 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_book_type_general_notes', 'Notes on type of book'),
 
 
+    // Translation
+    array('field_translation_type', 'Type of translation'),
+    array('field_original_type', 'Type of original text'),
+    array('field_original_title', 'Title of the original text as it appeared originally'),
+    array('field_original_title_elsewhere', 'Title of the original text as it appears elsewhere'),
+    array('field_original_title_else_refer', 'References for title of the original text as it appears elsewhere'),
+    array('field_bibliographical_citations', 'Bibliographical citations for translation'),
+    array('field_original_language', 'Original language of text'),
+    array('field_original_publication_year', 'Year of publication of original text'),
+    array('field_original_publisher', 'Original publisher'),
+    array('field_original_publication_place', 'Place of publication of original text'),
+    array('field_original_author', 'Name of author of the original text as it appeared originally'),
+    array('field_original_author_elsewhere', 'Name of author of the original text as it appears elsewhere'),
+    array('field_original_author_else_refer', 'References for name of author of the original text as it appears elsewhere'),
+    array('field_original_author_other_name', 'Other names for the author'),
+    array('field_translation_notes', 'Notes on translation'),
+
+
+    // New edition
+    array('field_new_edition_type_in_text', 'Type of new edition, as specified in the text'),
+    array('field_new_edition_type_reference', 'References for new edition as specified in text'),
+    array('field_new_edition_type_notes', 'Notes on new edition as specified in text'),
+    array('field_new_edition_type_elsewhere', 'Type of new edition, as specified elsewhere'),
+    array('field_new_edition_type_else_ref', 'References for new edition as specified elsewhere'),
+    array('field_new_edition_type_else_note', 'Notes on new edition as specified elsewhere'),
+    array('field_old_name_in_book', 'Name of the old text as it appears in the book'),
+    array('field_old_text_author_in_book', "Name of the old text's author as it appears in the book"),
+    array('field_old_author_addition_names', "Additional names for the old text's author as it appears in the book"),
+    array('field_old_author_names_other_sor', "Name of the old text's author as it appears in other sources"),
+    array('field_new_edition_general_notes', 'Notes on new edition'),
+
+
+    // Volumes
+    array('field_volumes_published_number', 'Number of volumes published'),
+    array('field_examined_volume_number', 'Number of examined volume'),
+    array('field_other_volumes', 'Names of other published volumes'),
+    array('field_planned_volumes', 'Names of planned volumes that were not published'),
+    array('field_series_part', 'Part of a series of books'),
+    array('field_name_of_series', 'Name of series'),
+    array('field_printed_originally', 'Printed originally with other books'),
+    array('field_other_books_names', 'Names of other books'),
+    array('field_volumes_notes', 'Notes on volumes'),
+
+
+    // Publisher/ Printing press
+    array('field_publisher_name', 'Name of publisher'),
+    array('field_publication_year_in_book', 'Year of publication as it appears in the book'),
+    array('field_hebrew_year_of_publication', 'Hebrew year of publication as it appears in the book'),
+    array('field_gregorian_year', 'Gregorian year of publication as it appears in the book'),
+    array('field_publication_place', 'Place of publication as it appears in the book'),
+    array('field_format_of_publication_date', 'Format of publication date'),
+    array('field_price', 'Price of book as it appears in the book'),
+    array('field_publication_year_in_other', 'Year of publication as it appears in other sources'),
+    array('field_heb_year_publication_other', 'Hebrew year of publication as it appears in other sources'),
+    array('field_gregorian_year_pub_other', 'Gregorian year of publication as it appears in other sources'),
+    array('field_publication_place_other', 'Place of publication as it appears in other sources'),
+    array('field_printing_press_references', 'References for publication information'),
+    array('field_printing_press_notes', 'Notes on publication'),
+
+
+    // Editions
+//    array('', ''),
+//    array('', ''),
+//    array('', ''),
+//    array('', ''),
+//    array('', ''),
+//    array('', ''),
 
 //    array('field_alignment', 'Alignment of text'),
 //    array('field_dedications', 'Are there dedications'),
@@ -129,12 +196,12 @@ class HaskalaBooksMigrate extends HaskalaMigration {
   public function __construct($arguments) {
     parent::__construct($arguments);
 
-    // Type of book.
+    // Type of book
     $simple_mappings = array(
       'field_full_title',
       'field_title_in_latin_characters',
       'field_presented_as_original',
-      'field_contradict_orginal',
+      'field_contradict_original',
       'field_presented_original_referen',
       'field_presented_original_notes',
       'field_expanded_in_translations',
@@ -162,6 +229,88 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_motto',
       'field_book_type_general_notes',
     );
+    $this->addSimpleMappings($simple_mappings);
+
+    // Translation
+    $simple_mappings = array(
+      'field_translation_type',
+      'field_original_title',
+      'field_original_title_elsewhere',
+      'field_original_title_else_refer',
+      'field_bibliographical_citations',
+      'field_original_publication_year',
+      'field_original_publication_place',
+      'field_original_author',
+      'field_original_author_elsewhere',
+      'field_original_author_else_refer',
+      'field_original_author_other_name',
+      'field_translation_notes',
+    );
+    $this->addSimpleMappings($simple_mappings);
+    $term_references = array(
+      'field_original_type',
+      'field_original_language',
+      'field_original_publisher',
+    );
+    $this->addTermReferenceMappings($term_references);
+
+    // New edition
+    $simple_mappings = array(
+      'field_new_edition_type_reference',
+      'field_new_edition_type_notes',
+      'field_new_edition_type_else_ref',
+      'field_new_edition_type_else_note',
+      'field_old_name_in_book',
+      'field_old_text_author_in_book',
+      'field_old_author_addition_names',
+      'field_old_author_names_other_sor',
+      'field_new_edition_general_notes',
+    );
+    $this->addSimpleMappings($simple_mappings);
+    $term_references = array(
+      'field_new_edition_type_in_text',
+      'field_new_edition_type_elsewhere',
+    );
+    $this->addTermReferenceMappings($term_references);
+
+    // Volumes
+    $simple_mappings = array(
+      'field_volumes_published_number',
+      'field_examined_volume_number',
+      'field_other_volumes',
+      'field_planned_volumes',
+      'field_series_part',
+      'field_printed_originally',
+      'field_other_books_names',
+      'field_volumes_notes',
+    );
+    $this->addSimpleMappings($simple_mappings);
+    $term_references = array(
+      'field_name_of_series',
+    );
+    $this->addTermReferenceMappings($term_references);
+
+    // Publisher/ Printing press
+    $simple_mappings = array(
+      'field_publication_year_in_book',
+      'field_hebrew_year_of_publication',
+      'field_gregorian_year',
+      'field_price',
+      'field_publication_year_in_other',
+      'field_heb_year_publication_other',
+      'field_gregorian_year_pub_other',
+      'field_printing_press_references',
+      'field_printing_press_notes',
+    );
+    $this->addSimpleMappings($simple_mappings);
+    $term_references = array(
+      'field_publisher_name',
+      'field_publication_place',
+      'field_format_of_publication_date',
+      'field_publication_place_other',
+    );
+    $this->addTermReferenceMappings($term_references);
+
 
 //    $simple_mappings = array(
 //      'field_dedications',
@@ -222,7 +371,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
 //      'field_writer_of_preface',
 //      'field_width',
 //    );
-    $this->addSimpleMappings($simple_mappings);
+
 
 //    $term_references = array(
 //      'field_languages_number',
@@ -264,6 +413,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
   public function prepare($node, $row) {
 //    dpm($row);
 //    dpm($node);
+
     $wrapper = entity_metadata_wrapper('node', $node);
     foreach ($row as $field => $value) {
       if ($value === FALSE) {
