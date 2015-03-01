@@ -5,7 +5,7 @@
  */
 class HaskalaBookTranslationsMigrate extends HaskalaMigration {
   public $entityType = 'node';
-  public $bundle = 'book';
+  public $bundle = 'translation';
   protected $csvFile = 'node/book_translation.csv';
 
   public $csvColumns = array(
