@@ -172,12 +172,17 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_sellers_notes', 'Notes on list of sellers'),
     array('field_mention_general_notes', 'Notes on book mentions'),
 
+
     // Textual models
+    array('field_main_textual_models', 'Main models'),
+    array('field_secondary_textual_models', 'Secondary models'),
     array('field_textual_models_notes', 'Notes on textual models'),
+
 
     // Topics
     array('field_topic', 'Topic'),
     array('field_topics_notes', 'Notes on topics'),
+
 
     // Target audience
     array('field_target_audience', 'Target audience as described in the book'),
@@ -211,6 +216,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_book_availability_notes', 'Notes on book availability'),
     array('field_link_to_digital_book', 'Link to digital book'),
     array('field_catalog_numbers_notes', 'Notes on catalog numbers'),
+
 
     // References and bibliography
     array('field_secondary_sources', 'Secondary sources used by researchers'),
@@ -430,10 +436,13 @@ class HaskalaBooksMigrate extends HaskalaMigration {
 
 
     // Textual models
-    $simple_mappings = array(
-      'field_textual_models_notes',
+    $this->addSimpleMappings(array('field_textual_models_notes'));
+    $term_references = array(
+      'field_main_textual_models',
+      'field_secondary_textual_models',
     );
-    $this->addSimpleMappings($simple_mappings);
+    $this->addTermReferenceMappings($term_references);
+
 
 
     // Topics
