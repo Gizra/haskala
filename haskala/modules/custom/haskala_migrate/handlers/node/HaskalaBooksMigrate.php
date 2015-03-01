@@ -114,7 +114,33 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_editions_notes', 'Notes on editions'),
 
 
+    // Book structure
+    array('field_languages_number', 'Number of languages'),
+    array('field_language', 'Language in book'),
+    array('field_occasional_words_languages', 'Appearance of words in other language'),
+    array('field_alignment', 'Alignment of text'),
+    array('field_typography', 'Typography'),
+    array('field_language_of_footnotes', 'Language of footnotes'),
+    array('field_location_of_footnotes', 'Location of footnotes'),
+    array('field_fonts', 'Fonts'),
+    array('field_preface', 'Is there a preface'),
+    array('field_structure_preface_notes', 'Notes on preface'),
+    array('field_epilogue', 'Is there an epilogue'),
+    // Notes on epilogue?
+    array('field_table_of_conten', 'Is there a table of contents'),
+    // Notes on TOC?
+    array('field_pages_number', 'Number of pages'),
+    array('field_height', 'Height of book, in cm'),
+    array('field_width', 'Width of book, in cm'),
+    array('field_illustrations_diagrams', 'Are there illustrations/diagrams'),
+    array('field_diagrams_notes', 'Notes on illustrations/diagrams'),
+    array('field_diagrams_book_pages', 'Pages in which illustrations/diagrams appear'),
+    array('field_diagrams_text', 'Illustration/diagram for book'),
+    array('field_book_structure_notes', 'Notes on book structure'),
 
+
+//    array('', ''),
+//    array('', ''),
 //    array('', ''),
 //    array('', ''),
 
@@ -323,6 +349,34 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     );
     $this->addSimpleMappings($simple_mappings);
 
+
+    // Book structure
+     $simple_mappings = array(
+       'field_preface',
+       'field_structure_preface_notes',
+       'field_epilogue',
+       'field_table_of_conten',
+       'field_pages_number',
+       'field_height',
+       'field_width',
+       'field_illustrations_diagrams',
+       'field_diagrams_notes',
+       'field_diagrams_book_pages',
+       'field_diagrams_text',
+       'field_book_structure_notes',
+     );
+    $this->addSimpleMappings($simple_mappings);
+    $term_references = array(
+      'field_languages_number',
+      'field_language',
+      'field_occasional_words_languages',
+      'field_alignment',
+      'field_typography',
+      'field_language_of_footnotes',
+      'field_location_of_footnotes',
+      'field_fonts',
+    );
+    $this->addTermReferenceMappings($term_references);
 
 //    $simple_mappings = array(
 //      'field_dedications',
