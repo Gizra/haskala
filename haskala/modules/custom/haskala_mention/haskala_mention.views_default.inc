@@ -76,7 +76,7 @@ function haskala_mention_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Field: Content: Producer of book */
+  /* Field: Content: Translation of book */
   $handler->display->display_options['fields']['field_book']['id'] = 'field_book';
   $handler->display->display_options['fields']['field_book']['table'] = 'field_data_field_book';
   $handler->display->display_options['fields']['field_book']['field'] = 'field_book';
