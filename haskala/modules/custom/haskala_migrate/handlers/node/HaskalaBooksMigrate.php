@@ -169,7 +169,14 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_mention_general_notes', 'Notes on book mentions'),
 
 
+    // Textual models
+    array('field_textual_models_notes', 'Notes on textual models'),
+
+    // Topics
 //    array('', ''),
+//    array('', ''),
+
+//
 //    array('', ''),
 
 
@@ -443,6 +450,13 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_funders',
       'field_sellers',
       'field_mention_general_notes',
+    );
+    $this->addSimpleMappings($simple_mappings);
+
+
+    // Textual models
+    $simple_mappings = array(
+      'field_textual_models_notes',
     );
     $this->addSimpleMappings($simple_mappings);
 
