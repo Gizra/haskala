@@ -139,9 +139,14 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_book_structure_notes', 'Notes on book structure'),
 
 
-//    array('', ''),
-//    array('', ''),
-//    array('', ''),
+    // Prefaces
+    array('field_preface_number', 'Number of preface'),
+    array('field_writer_of_preface', 'Writer of preface'),
+    array('field_role', 'Role in book production'),
+    array('field_preface_title', 'Preface title'),
+    array('field_preface_notes', 'Notes on preface'),
+
+
 //    array('', ''),
 
 //    array('field_alignment', 'Alignment of text'),
@@ -349,22 +354,21 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     );
     $this->addSimpleMappings($simple_mappings);
 
-
     // Book structure
-     $simple_mappings = array(
-       'field_preface',
-       'field_structure_preface_notes',
-       'field_epilogue',
-       'field_table_of_conten',
-       'field_pages_number',
-       'field_height',
-       'field_width',
-       'field_illustrations_diagrams',
-       'field_diagrams_notes',
-       'field_diagrams_book_pages',
-       'field_diagrams_text',
-       'field_book_structure_notes',
-     );
+    $simple_mappings = array(
+      'field_preface',
+      'field_structure_preface_notes',
+      'field_epilogue',
+      'field_table_of_conten',
+      'field_pages_number',
+      'field_height',
+      'field_width',
+      'field_illustrations_diagrams',
+      'field_diagrams_notes',
+      'field_diagrams_book_pages',
+      'field_diagrams_text',
+      'field_book_structure_notes',
+    );
     $this->addSimpleMappings($simple_mappings);
     $term_references = array(
       'field_languages_number',
@@ -377,6 +381,26 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_fonts',
     );
     $this->addTermReferenceMappings($term_references);
+
+    // Prefaces
+    $simple_mappings = array(
+      'field_preface_number',
+      'field_preface_title',
+      'field_preface_notes',
+      'field_writer_of_preface',
+    );
+    $this->addSimpleMappings($simple_mappings);
+    $term_references = array(
+      'field_role',
+    );
+    $this->addTermReferenceMappings($term_references);
+
+//    $simple_mappings = array(
+//    );
+//    $this->addSimpleMappings($simple_mappings);
+//    $term_references = array(
+//    );
+//    $this->addTermReferenceMappings($term_references);
 
 //    $simple_mappings = array(
 //      'field_dedications',
