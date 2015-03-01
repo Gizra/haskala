@@ -173,8 +173,8 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_textual_models_notes', 'Notes on textual models'),
 
     // Topics
-//    array('', ''),
-//    array('', ''),
+    array('field_topic', 'Topic'),
+    array('field_topics_notes', 'Notes on topics'),
 
 //
 //    array('', ''),
@@ -461,12 +461,18 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     $this->addSimpleMappings($simple_mappings);
 
 
+    // Topics
+    $this->addSimpleMappings(array('field_topics_notes'));
+    $this->addTermReferenceMappings(array('field_topic'));
+
+
+
 //    $simple_mappings = array(
 //    );
 //    $this->addSimpleMappings($simple_mappings);
 //    $term_references = array(
 //    );
-//    $this->addTermReferenceMappings($term_references);
+
 
 //    $simple_mappings = array(
 //      'field_dedications',
