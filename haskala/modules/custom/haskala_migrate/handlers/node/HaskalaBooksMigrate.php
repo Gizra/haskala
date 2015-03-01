@@ -108,10 +108,13 @@ class HaskalaBooksMigrate extends HaskalaMigration {
 
 
     // Editions
-//    array('', ''),
-//    array('', ''),
-//    array('', ''),
-//    array('', ''),
+    array('field_total_number_of_editions', 'Total number of editions'),
+    array('field_last_known_edition', 'Last known edition'),
+    array('field_references_for_editions', 'References for editions'),
+    array('field_editions_notes', 'Notes on editions'),
+
+
+
 //    array('', ''),
 //    array('', ''),
 
@@ -310,6 +313,15 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_publication_place_other',
     );
     $this->addTermReferenceMappings($term_references);
+
+    // Editions
+    $simple_mappings = array(
+      'field_total_number_of_editions',
+      'field_last_known_edition',
+      'field_references_for_editions',
+      'field_editions_notes',
+    );
+    $this->addSimpleMappings($simple_mappings);
 
 
 //    $simple_mappings = array(
