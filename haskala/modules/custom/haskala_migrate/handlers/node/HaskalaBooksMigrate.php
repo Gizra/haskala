@@ -151,23 +151,26 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_personal_address', 'Are there personal addresses'),
     array('field_personal_addresse_notes', 'Notes on personal addresses'),
     array('field_rabbinical_approbations', 'Are there rabbinical approbations'),
-    // Notes on rabbinical approbations?
+    array('field_rabbinical_appro_notes', 'Notes on approbations'),
     array('field_recommendations', 'Are there recommendations'),
-    // Notes on recommendations?
+    array('field_recommendations_notes', 'Notes on recommendations'),
     array('field_dedications', 'Are there dedications'),
-    // Dedications notes?
+    array('field_dedications_notes', 'Notes on dedications'),
     array('field_thanks', 'Are there thanks'),
-    // Thanks notes?
+    array('field_thanks_notes', 'Notes on thanks'),
     array('field_subscription_appeal', 'Is there an appeal to sell subscriptions'),
-    // Notes?
+    array('field_subscription_appeal_notes', 'Notes on appeal to sell subscriptions'),
     array('field_subscribers', 'Is there a list of subscribers'),
-    // Notes?
+    array('field_subscribers_notes', 'Notes on list of subscribers'),
     array('field_printers', 'Is there a list of printers'),
+    array('field_printers_notes', 'Notes on list of printers'),
     array('field_proofreaders', 'Is there a list of proofreaders'),
+    array('field_proofreaders_notes', 'Notes on list of proofreaders'),
     array('field_funders', 'Is there a list of funders'),
+    array('field_founders_notes', 'Notes on list of funders'),
     array('field_sellers', 'Is there a list of sellers'),
+    array('field_sellers_notes', 'Notes on list of sellers'),
     array('field_mention_general_notes', 'Notes on book mentions'),
-
 
     // Textual models
     array('field_textual_models_notes', 'Notes on textual models'),
@@ -402,15 +405,25 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_personal_address',
       'field_personal_addresse_notes',
       'field_rabbinical_approbations',
+      'field_rabbinical_appro_notes',
       'field_recommendations',
+      'field_recommendations_notes',
       'field_dedications',
+      'field_dedications_notes',
       'field_thanks',
+      'field_thanks_notes',
       'field_subscription_appeal',
+      'field_subscription_appeal_notes',
       'field_subscribers',
+      'field_subscribers_notes',
       'field_printers',
+      'field_printers_notes',
       'field_proofreaders',
+      'field_proofreaders_notes',
       'field_funders',
+      'field_founders_notes',
       'field_sellers',
+      'field_sellers_notes',
       'field_mention_general_notes',
     );
     $this->addSimpleMappings($simple_mappings);
