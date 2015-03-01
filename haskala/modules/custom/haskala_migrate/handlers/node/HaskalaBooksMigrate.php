@@ -147,7 +147,32 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_preface_notes', 'Notes on preface'),
 
 
+    // Persons mentioned in the book
+    array('field_personal_address', 'Are there personal addresses'),
+    array('field_personal_addresse_notes', 'Notes on personal addresses'),
+    array('field_rabbinical_approbations', 'Are there rabbinical approbations'),
+    // Notes on rabbinical approbations?
+    array('field_recommendations', 'Are there recommendations'),
+    // Notes on recommendations?
+    array('field_dedications', 'Are there dedications'),
+    // Dedications notes?
+    array('field_thanks', 'Are there thanks'),
+    // Thanks notes?
+    array('field_subscription_appeal', 'Is there an appeal to sell subscriptions'),
+    // Notes?
+    array('field_subscribers', 'Is there a list of subscribers'),
+    // Notes?
+    array('field_printers', 'Is there a list of printers'),
+    array('field_proofreaders', 'Is there a list of proofreaders'),
+    array('field_funders', 'Is there a list of funders'),
+    array('field_sellers', 'Is there a list of sellers'),
+    array('field_mention_general_notes', 'Notes on book mentions'),
+
+
 //    array('', ''),
+//    array('', ''),
+
+
 
 //    array('field_alignment', 'Alignment of text'),
 //    array('field_dedications', 'Are there dedications'),
@@ -265,6 +290,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     );
     $this->addSimpleMappings($simple_mappings);
 
+
     // Translation
     $simple_mappings = array(
       'field_translation_type',
@@ -288,6 +314,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     );
     $this->addTermReferenceMappings($term_references);
 
+
     // New edition
     $simple_mappings = array(
       'field_new_edition_type_reference',
@@ -307,6 +334,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     );
     $this->addTermReferenceMappings($term_references);
 
+
     // Volumes
     $simple_mappings = array(
       'field_volumes_published_number',
@@ -323,6 +351,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_name_of_series',
     );
     $this->addTermReferenceMappings($term_references);
+
 
     // Publisher/ Printing press
     $simple_mappings = array(
@@ -345,6 +374,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     );
     $this->addTermReferenceMappings($term_references);
 
+
     // Editions
     $simple_mappings = array(
       'field_total_number_of_editions',
@@ -353,6 +383,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_editions_notes',
     );
     $this->addSimpleMappings($simple_mappings);
+
 
     // Book structure
     $simple_mappings = array(
@@ -382,6 +413,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     );
     $this->addTermReferenceMappings($term_references);
 
+
     // Prefaces
     $simple_mappings = array(
       'field_preface_number',
@@ -394,6 +426,26 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_role',
     );
     $this->addTermReferenceMappings($term_references);
+
+
+    // Persons mentioned in book
+    $simple_mappings = array(
+      'field_personal_address',
+      'field_personal_addresse_notes',
+      'field_rabbinical_approbations',
+      'field_recommendations',
+      'field_dedications',
+      'field_thanks',
+      'field_subscription_appeal',
+      'field_subscribers',
+      'field_printers',
+      'field_proofreaders',
+      'field_funders',
+      'field_sellers',
+      'field_mention_general_notes',
+    );
+    $this->addSimpleMappings($simple_mappings);
+
 
 //    $simple_mappings = array(
 //    );
