@@ -187,6 +187,10 @@
 
             .fields-multi:not(:first-child) {
               margin-top: 30px;
+
+              .node-teaser:not(:first-child) {
+                margin-top: 30px;
+              }
             }
           }
         }

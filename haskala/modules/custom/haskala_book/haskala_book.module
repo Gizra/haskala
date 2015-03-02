@@ -204,20 +204,7 @@ function haskala_book_get_reference_nodes_fields($book_nid, $bundle, $nodes, $gr
     $wrapper = entity_metadata_wrapper('node', $node);
     $tab = field_group_load_field_group($group_name, 'node', $bundle, 'default');
     $node_view = node_view($node);
-    $node_fields = haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid);
-    // Add language translation && translator.
-    if ($bundle == 'book') {
-      if ($wrapper->field_language->value()) {
-        $language_field = render($node_view['field_language']);
-        array_unshift($node_fields, $language_field);
-      }
-      $translator_name_field = haskala_book_get_producer($node->nid, t('Translator'));
-      if ($translator_name_field) {
-        $translator_name_field['#title'] = t('Translator');
-        array_unshift($node_fields, $translator_name_field);
-      }
-    }
-    $nodes_fields[] = $node_fields;
+    $nodes_fields[] = haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid);
   }
   return $nodes_fields;
 }
@@ -246,10 +233,7 @@ function haskala_book_get_editions($book_nid) {
  *  @return Multi translations fields .
  */
 function haskala_book_get_translations($book_nid) {
-  if (!$translations_nodes = haskala_book_get_reference_nodes($book_nid, 'translation')) {
-    return;
-  }
-  return haskala_book_get_reference_nodes_fields($book_nid, 'book', $translations_nodes, 'group_translation_editions_tab');
+  return node_view_multiple(haskala_book_get_reference_nodes($book_nid, 'translation'));
 }
 
 /**
