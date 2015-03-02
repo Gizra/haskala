@@ -53,6 +53,8 @@ function haskala_theme_preprocess_node(&$variables) {
   $node = $variables['node'];
   $view_mode = $variables['view_mode'];
 
+  unset($variables['content']['links']);
+
   $variables['type_label'] = ucfirst($node->type);
 
   // Generic tpl for node--bundle--view-mode.
