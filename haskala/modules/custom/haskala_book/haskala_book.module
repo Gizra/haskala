@@ -233,7 +233,11 @@ function haskala_book_get_editions($book_nid) {
  *  @return Multi translations fields .
  */
 function haskala_book_get_translations($book_nid) {
-  return node_view_multiple(haskala_book_get_reference_nodes($book_nid, 'translation'));
+  if (!$nodes = haskala_book_get_reference_nodes($book_nid, 'translation')) {
+    return;
+  }
+
+  return node_view_multiple($nodes);
 }
 
 /**
