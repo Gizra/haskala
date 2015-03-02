@@ -194,7 +194,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_contemporary_disputes', 'Contemporary disputes about the book'),
     array('field_censorship', 'Censorship'),
     array('field_bans', 'Bans'),
-    // Later references to the book?
+    array('field_later_references', 'Later references to the book'),
     array('field_original_sources_mention', 'Original sources which mention the book'),
     array('field_mentions_in_reviews', 'Mentions in reviews'),
     array('field_preservation_references', 'References for preservation in the public consciousness'),
@@ -460,6 +460,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_contemporary_disputes',
       'field_censorship',
       'field_bans',
+      'field_later_references',
       'field_original_sources_mention',
       'field_mentions_in_reviews',
       'field_preservation_references',
