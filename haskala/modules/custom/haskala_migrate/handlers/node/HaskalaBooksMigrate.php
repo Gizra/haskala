@@ -126,9 +126,9 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_preface', 'Is there a preface'),
     array('field_structure_preface_notes', 'Notes on preface'),
     array('field_epilogue', 'Is there an epilogue'),
-    // Notes on epilogue?
+    array('field_epilogue_notes', 'Notes on afterword'),
     array('field_table_of_conten', 'Is there a table of contents'),
-    // Notes on TOC?
+    array('field_contents_table_notes', 'Notes on index'),
     array('field_pages_number', 'Number of pages'),
     array('field_height', 'Height of book, in cm'),
     array('field_width', 'Width of book, in cm'),
@@ -368,7 +368,9 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_preface',
       'field_structure_preface_notes',
       'field_epilogue',
+      'field_epilogue_notes',
       'field_table_of_conten',
+      'field_contents_table_notes',
       'field_pages_number',
       'field_height',
       'field_width',
