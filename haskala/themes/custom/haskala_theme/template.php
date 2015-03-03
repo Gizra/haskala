@@ -127,3 +127,32 @@ function haskala_theme_preprocess_taxonomy_term__teaser(&$variables) {
 function haskala_theme_preprocess_taxonomy_term__detailed(&$variables) {
   $variables['title_label'] = $variables['vocabulary_machine_name'] == 'cities' ? t('Location during writing of book') : '';
 }
+
+/**
+ * Override theme_field in order to remove the colon from the label in case it
+ * ends with a question mark.
+ */
+function haskala_theme_field($variables) {
+  if (mb_substr($variables['label'], -1) != '?') {
+    $variables['label'] .= ':';
+  }
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<div class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . '&nbsp;</div>';
+  }
+
+  // Render the items.
+  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
+  foreach ($variables['items'] as $delta => $item) {
+    $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
+    $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
+  }
+  $output .= '</div>';
+
+  // Render the top-level DIV.
+  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+
+  return $output;
+}
