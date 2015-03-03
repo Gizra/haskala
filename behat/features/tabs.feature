@@ -4,19 +4,19 @@ Feature: Book page
 
   @api
   Scenario: Verify tabs & fields content on a book page
-    Given I am an anonymous user
+    Given the following book data
+      | field                                                                      | text                                                    |
+      | Type of translation                                                        | translation of contemporary text, or of adjacent period |
+      | Type of original text                                                      | book                                                    |
+      | Title of the original text as it appears elsewhere                         | A view of Sir Isaac Newton's Philosophy                 |
+      | References for title of the original text as it appears elsewhere          | KVK                                                     |
+      | Year of publication of original text                                       | 1728                                                    |
+      | Place of publication of original text                                      | London                                                  |
+      | Name of author of the original text as it appeared originally              | Dr. Pemberton                                           |
+      | Name of author of the original text as it appears elsewhere                | Pemberton, Henry                                        |
+      | References for name of author of the original text as it appears elsewhere | KVK                                                     |
     When  I visit "books/anfangsgründe-der-newtonischen-philosophie"
-    Then  I should see the text of field under the tab
-      | tab         | field                                                                      | text                                                    |
-      | Translation | Type of translation                                                        | translation of contemporary text, or of adjacent period |
-      | Translation | Type of original text                                                      | book                                                    |
-      | Translation | Title of the original text as it appears elsewhere                         | A view of Sir Isaac Newton's Philosophy                 |
-      | Translation | References for title of the original text as it appears elsewhere          | KVK                                                     |
-      | Translation | Year of publication of original text                                       | 1728                                                    |
-      | Translation | Place of publication of original text                                      | London                                                  |
-      | Translation | Name of author of the original text as it appeared originally              | Dr. Pemberton                                           |
-      | Translation | Name of author of the original text as it appears elsewhere                | Pemberton, Henry                                        |
-      | Translation | References for name of author of the original text as it appears elsewhere | KVK                                                     |
+    Then  I should see the text of fields under the tab with name "Translation" and ID "translation"
 
 
   @api
