@@ -45,6 +45,54 @@ Feature: Book page
       | Translation         | Original publisher         | Schramm u. Frank |
 
   @api
+  Scenario: Verify tabs & fields content on a book page
+    Given I am an anonymous user
+    When  I visit "books/פעדאן"
+    Then  I should see the text of field under the tab
+      | tab                 | field                      | text             |
+      | Translation         | Other names for the author | משה מדעסויא      |
+      | Translation         | General notes              | לשונות סתומות     |
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given I am an anonymous user
+    When  I visit "books/ספר שערי נעימה"
+    Then  I should see the text of field under the tab
+      | tab              | field                                                   | text                  |
+      | New edition      | Type of new edition, as specified in the text           | first printing        |
+      | New edition      | References                                              | כך בעמוד השער ובהסכמות |
+      | New edition      | Notes                                                   | רשות להדפיס המחברת    |
+      | New edition      | Name of the old text as it appears in the book          | שערי נעימה             |
+      | New edition      | Name of the old text's author as it appears in the book | חלם, שלמה בן משה      |
+      | New edition      | Additional names for the old text's author as it appears in the book | שלמה בעל מרכבת המשנה |
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given I am an anonymous user
+    When  I visit "books/לשון-הזהב"
+    Then  I should see the text of field under the tab
+      | tab              | field                                       | text                  |
+      | New edition      | Type of new edition, as specified elsewhere | edition               |
+      | New edition      | References                                  | סנדלר, הביאור לתורה    |
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given I am an anonymous user
+    When  I visit "books/אהבת-ציון"
+    Then  I should see the text of field under the tab
+      | tab              | field                                       | text            |
+      | New edition      | Notes                                       | כפי שמציין יערי    |
+      | New edition      | General notes                               | הטקסט המקורי    |
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given I am an anonymous user
+    When  I visit "books/מגלת-קהלת"
+    Then  I should see the text of field under the tab
+      | tab                       | field                                          | text                         |
+      | Publisher/ Printing press |                      |Price of book as it appears in the book |
+
+  @api
   Scenario: Verify tabs content on a book page
     Given I am an anonymous user
     When  I visit "books/זה-ספר-בית-המדות"
@@ -158,11 +206,4 @@ Feature: Book page
     | http://www.mdz-nbn-resolving.de/urn/resolver.pl?urn=urn%3Anbn%3Ade%3Abvb%3A12-bs... |
 
 
-  @api
-  Scenario: Verify tabs content on a book page
-    Given I am an anonymous user
-    When  I visit "books/מגלת-קהלת"
-    Then  I should see the text of field under the tab
-      | tab                         | text                                    |
-      | New edition                 | באור קצר                                |
-      | Publisher/ Printing press   | Price of book as it appears in the book |
+
