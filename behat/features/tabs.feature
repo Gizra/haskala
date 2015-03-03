@@ -2,7 +2,7 @@ Feature: Book page
   As an anonymous user
   We need to be able to see the tabs list in the book page and all relevant fields.
 
-  @api @foo
+  @api
   Scenario: Verify tabs & fields content on a book page
     Given I am an anonymous user
     When  I visit "books/anfangsgründe-der-newtonischen-philosophie"
@@ -34,12 +34,12 @@ Feature: Book page
     Then  I should see the text of field under the tab
       | tab                 | field                      | text                                                  |
       | Translation         | Bibliographical citations  | המאסף תקמ"ח (אדר שני), דפוס חברת חינוך נערים, עמ' 37-35 |
-      | Translation         | Original language of texts | German                                                |
+      | Translation         | Original language of text | German                                                |
 
   @api
   Scenario: Verify tabs & fields content on a book page
     Given I am an anonymous user
-    When  I visit "books/מציאת הארץ החדשה א"
+    When  I visit "books/מציאת-הארץ-החדשה-א"
     Then  I should see the text of field under the tab
       | tab                 | field                      | text             |
       | Translation         | Original publisher         | Schramm u. Frank |
@@ -130,7 +130,7 @@ Feature: Book page
     | maskilim          |
 
 
-  @api @fooy
+  @api
   Scenario: Verify tabs content on a book page
     Given I am an anonymous user
     When  I visit "books/ספר-מנחה-חדשה-ד"
@@ -162,7 +162,7 @@ Feature: Book page
     | Editions | Translations |
 
 
-  @api @wip
+  @api
   Scenario Outline: Visit a books page
     Given I am an anonymous user
     When  I visit "books/דברי-שלום-ואמת-א"
