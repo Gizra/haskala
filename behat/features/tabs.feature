@@ -80,9 +80,9 @@ Feature: Book page
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
-      | tab              | field                                       | text            |
-      | New edition      | Notes                                       | כפי שמציין יערי    |
-      | New edition      | General notes                               | הטקסט המקורי    |
+      | field                                       | text            |
+      | Notes                                       | כפי שמציין יערי    |
+      | General notes                               | הטקסט המקורי    |
     When  I visit "books/אהבת-ציון"
     Then  I should see the text of fields under the tab with name "New edition" and ID "new-edition"
 
@@ -116,7 +116,7 @@ Feature: Book page
     When  I visit "books/זה-ספר-בית-המדות"
     Then  I should see the text "Zeh Sefer bet ha-midot" under "#top-details"
 
-  @api 
+  @api
   Scenario Outline: Visit a books page
     Given I am an anonymous user
     When  I visit "books/זה-ספר-בית-המדות"
