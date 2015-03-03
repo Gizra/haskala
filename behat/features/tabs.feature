@@ -21,70 +21,72 @@ Feature: Book page
 
   @api
   Scenario: Verify tabs & fields content on a book page
-    Given I am an anonymous user
+    Given the following book data
+      | field                                                | text      |
+      | Title of the original text as it appeared originally | קהלת מוסר |
     When  I visit "books/der-prediger"
-    Then  I should see the text of field under the tab
-      | tab                 | field                                                | text      |
-      | Translation         | Title of the original text as it appeared originally | קהלת מוסר |
+    Then  I should see the text of fields under the tab with name "Translation" and ID "translation"
 
   @api
   Scenario: Verify tabs & fields content on a book page
-    Given I am an anonymous user
+    Given the following book data
+      | field                      | text                                                  |
+      | Bibliographical citations  | המאסף תקמ"ח (אדר שני), דפוס חברת חינוך נערים, עמ' 37-35 |
+      | Original language of text  | German                                                |
     When  I visit "books/מכתב"
-    Then  I should see the text of field under the tab
-      | tab                 | field                      | text                                                  |
-      | Translation         | Bibliographical citations  | המאסף תקמ"ח (אדר שני), דפוס חברת חינוך נערים, עמ' 37-35 |
-      | Translation         | Original language of text | German                                                |
+    Then  I should see the text of fields under the tab with name "Translation" and ID "translation"
 
   @api
   Scenario: Verify tabs & fields content on a book page
-    Given I am an anonymous user
+    Given the following book data
+      | field                      | text             |
+      | Original publisher         | Schramm u. Frank |
     When  I visit "books/מציאת-הארץ-החדשה-א"
-    Then  I should see the text of field under the tab
-      | tab                 | field                      | text             |
-      | Translation         | Original publisher         | Schramm u. Frank |
+    Then  I should see the text of fields under the tab with name "Translation" and ID "translation"
 
   @api
   Scenario: Verify tabs & fields content on a book page
-    Given I am an anonymous user
+    Given the following book data
+      | field                      | text             |
+      | Other names for the author | משה מדעסויא      |
+      | General notes              | לשונות סתומות     |
     When  I visit "books/פעדאן"
-    Then  I should see the text of field under the tab
-      | tab                 | field                      | text             |
-      | Translation         | Other names for the author | משה מדעסויא      |
-      | Translation         | General notes              | לשונות סתומות     |
+    Then  I should see the text of fields under the tab with name "Translation" and ID "translation"
+
 
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given I am an anonymous user
+    Given the following book data
+      | field                                                   | text                  |
+      | Type of new edition, as specified in the text           | first printing        |
+      | References                                              | כך בעמוד השער ובהסכמות |
+      | Notes                                                   | רשות להדפיס המחברת    |
+      | Name of the old text as it appears in the book          | שערי נעימה             |
+      | Name of the old text's author as it appears in the book | חלם, שלמה בן משה      |
+      | Additional names for the old text's author as it appears in the book | שלמה בעל מרכבת המשנה |
     When  I visit "books/ספר שערי נעימה"
-    Then  I should see the text of field under the tab
-      | tab              | field                                                   | text                  |
-      | New edition      | Type of new edition, as specified in the text           | first printing        |
-      | New edition      | References                                              | כך בעמוד השער ובהסכמות |
-      | New edition      | Notes                                                   | רשות להדפיס המחברת    |
-      | New edition      | Name of the old text as it appears in the book          | שערי נעימה             |
-      | New edition      | Name of the old text's author as it appears in the book | חלם, שלמה בן משה      |
-      | New edition      | Additional names for the old text's author as it appears in the book | שלמה בעל מרכבת המשנה |
+    Then  I should see the text of fields under the tab with name "New edition" and ID "new-edition"
+
 
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given I am an anonymous user
+    Given the following book data
+      | field                                       | text                  |
+      | Type of new edition, as specified elsewhere | edition               |
+      | References                                  | סנדלר, הביאור לתורה    |
     When  I visit "books/לשון-הזהב"
-    Then  I should see the text of field under the tab
-      | tab              | field                                       | text                  |
-      | New edition      | Type of new edition, as specified elsewhere | edition               |
-      | New edition      | References                                  | סנדלר, הביאור לתורה    |
+    Then  I should see the text of fields under the tab with name "New edition" and ID "new-edition"
 
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given I am an anonymous user
-    When  I visit "books/אהבת-ציון"
-    Then  I should see the text of field under the tab
+    Given the following book data
       | tab              | field                                       | text            |
       | New edition      | Notes                                       | כפי שמציין יערי    |
       | New edition      | General notes                               | הטקסט המקורי    |
+    When  I visit "books/אהבת-ציון"
+    Then  I should see the text of fields under the tab with name "New edition" and ID "new-edition"
 
-  @api
+  @api @wip
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given I am an anonymous user
     When  I visit "books/מגלת-קהלת"
@@ -92,7 +94,7 @@ Feature: Book page
       | tab                       | field                                          | text                         |
       | Publisher/ Printing press |                      |Price of book as it appears in the book |
 
-  @api
+  @api @wip
   Scenario: Verify tabs content on a book page
     Given I am an anonymous user
     When  I visit "books/זה-ספר-בית-המדות"
@@ -108,13 +110,13 @@ Feature: Book page
     | Catalog numbers             |                     | University catalog                         |
     | References and bibliography |                     | לאומית                                     |
 
-  @api
+  @api @wip
   Scenario: Verify content in the "Type of book" section
     Given I am an anonymous user
     When  I visit "books/זה-ספר-בית-המדות"
     Then  I should see the text "Zeh Sefer bet ha-midot" under "#top-details"
 
-  @api
+  @api 
   Scenario Outline: Visit a books page
     Given I am an anonymous user
     When  I visit "books/זה-ספר-בית-המדות"
@@ -130,7 +132,7 @@ Feature: Book page
     | maskilim          |
 
 
-  @api
+  @api @wip
   Scenario: Verify tabs content on a book page
     Given I am an anonymous user
     When  I visit "books/ספר-מנחה-חדשה-ד"
@@ -151,7 +153,7 @@ Feature: Book page
     | link            |
     | ספר מנחה חדשה   |
 
-  @api
+  @api @wip
   Scenario: Verify tabs content on a book page
     Given I am an anonymous user
     When  I visit "books/דברי-שלום-ואמת-א"
@@ -175,7 +177,7 @@ Feature: Book page
     | איטלקית       |
     | דוד פרידלנדר    |
 
-  @api
+  @api @wip
   Scenario: Verify tabs content on a book page
     Given I am an anonymous user
     When  I visit "books/אגרת-ארחות-עולם"
@@ -184,7 +186,7 @@ Feature: Book page
     | Persons mentioned in book | People mentioned in the book |
     | Persons mentioned in book | יעקב בן יצחק פלעקלש          |
 
-  @api
+  @api @wip
   Scenario: Verify tabs content on a book page
     Given I am an anonymous user
     When  I visit "books/abhandlung-von-der-freiheit-des-menschen"
