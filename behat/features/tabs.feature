@@ -64,7 +64,7 @@ Feature: Book page
       | Name of the old text as it appears in the book          | שערי נעימה             |
       | Name of the old text's author as it appears in the book | חלם, שלמה בן משה      |
       | Additional names for the old text's author as it appears in the book | שלמה בעל מרכבת המשנה |
-    When  I visit "books/ספר שערי נעימה"
+    When  I visit "books/ספר-שערי-נעימה"
     Then  I should see the text of fields under the tab with name "New edition" and ID "new-edition"
 
 
