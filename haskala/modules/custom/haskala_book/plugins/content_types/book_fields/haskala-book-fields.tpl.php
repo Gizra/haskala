@@ -53,8 +53,8 @@
   </nav>
   <section id="groups">
     <?php foreach($tabs as $tab_name => $multi_tab_fields): ?>
-      <div class="fields-group">
-        <div class="fields-group-name" id="<?php print $multi_tab_fields['css_id']; ?>"><?php print $tab_name; ?></div>
+      <div class="fields-group" id="<?php print $multi_tab_fields['css_id']; ?>">
+        <div class="fields-group-name"><?php print $tab_name; ?></div>
         <div class="fields">
           <?php unset($multi_tab_fields['css_id']); ?>
           <?php foreach($multi_tab_fields as $key => $single_tab_fields):
