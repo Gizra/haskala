@@ -189,7 +189,7 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
   }
 
   /**
-   * @Then I should see the text under the tab
+   * @Then I should see the text of field under the tab
    */
   public function iShouldSeeTheTextUnderTheTab(TableNode $table) {
     foreach ($table as $row) {
@@ -198,6 +198,7 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
 
       // Check tab and text exists in the content area.
       $this->getMink()->assertSession()->elementTextContains('css', '#groups', $row['tab']);
+      $this->getMink()->assertSession()->elementTextContains('css', '#groups', $row['field']);
       $this->getMink()->assertSession()->elementTextContains('css', '#groups', $row['text']);
     }
   }
