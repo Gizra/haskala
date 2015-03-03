@@ -36,7 +36,7 @@ function haskala_terms_term_nodes_list_content_type_render($subtype, $conf, $arg
   $nids = array();
   foreach ($nodes as &$node) {
     $wrapper = entity_metadata_wrapper('node', $node);
-    if (in_array($node->type, array('edition', 'production', 'mention'))) {
+    if (in_array($node->type, array('edition', 'production', 'mention', 'translation'))) {
       $nids[] = $wrapper->field_book->getIdentifier();
     }
     else {

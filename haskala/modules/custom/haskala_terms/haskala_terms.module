@@ -56,8 +56,8 @@ function haskala_terms_field_formatter_view($entity_type, $entity, $field, $inst
 /**
  * Implements hook_views_pre_render().
  *
- * Convert book sub-nodes (Edition, Production & Mention) to book links on the
- * cities view.
+ * Convert book sub-nodes (Edition, Production, Mention & Translation) to book
+ * links on the cities view.
  */
 function haskala_terms_views_pre_render(&$view) {
   if ($view->name != 'cities_map') {
@@ -71,7 +71,7 @@ function haskala_terms_views_pre_render(&$view) {
   $query->addField('n', 'nid', 'book_nid');
   $query->addField('n', 'title', 'book_title');
   $query->innerJoin('node', 'n', 'n.nid = fb.field_book_target_id');
-  $query->condition('fb.bundle', array('mention', 'edition', 'production'), 'in');
+  $query->condition('fb.bundle', array('mention', 'edition', 'production', 'translation'), 'in');
   $subnodes = $query->execute()->fetchAllAssoc('book_subnode_nid');
 
   // Track which nodes are already shown for which terms, to avoid duplicates.
