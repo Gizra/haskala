@@ -86,6 +86,22 @@ Feature: Book page
     When  I visit "books/אהבת-ציון"
     Then  I should see the text of fields under the tab with name "New edition" and ID "new-edition"
 
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                                            | text                   |
+      | Number of volumes published                      | 2                      |
+      | Number of examined volume                        | 2                      |
+      | Names of other published volumes                 | קורות שנות קדם - חלק א' |
+      | Names of planned volumes that were not published | לא ידוע על ספרים נוספים   |
+      | Part of a series of books                        | Yes                     |
+      | Name of series                                   | קורות שנות קדם           |
+      | Printed originally with other books              | Yes                     |
+      | Names of other books                             | נכרך עם קורות שנות קדם   |
+      | General notes                                    | יש לבדוק שוב             |
+    When  I visit "books/קורות-שנות-קדם-ב"
+    Then  I should see the text of fields under the tab with name "Volumes" and ID "volumes"
+
   @api @wip
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given I am an anonymous user
