@@ -66,9 +66,10 @@ Feature: Book page
     Given I am an anonymous user
     When  I visit "books/דברי-שלום-ואמת-א"
     Then  I should see the text under the tab
-    | tab      | text                                |
-    | Editions | בית עקד ספרים                       |
+    | tab      | text                             |
+    | Editions | בית עקד ספרים                     |
     | Editions | במהדורת וינה צורף גם מאמר חקור דין. |
+    | Editions | Translations |
 
 
   @api @wip
@@ -82,6 +83,7 @@ Feature: Book page
     | link          |
     | Vienna        |
     | איטלקית       |
+    | דוד פרידלנדר    |
 
   @api
   Scenario: Verify tabs content on a book page
@@ -113,3 +115,12 @@ Feature: Book page
     | link                                                                                |
     | http://www.mdz-nbn-resolving.de/urn/resolver.pl?urn=urn%3Anbn%3Ade%3Abvb%3A12-bs... |
 
+
+  @api
+  Scenario: Verify tabs content on a book page
+    Given I am an anonymous user
+    When  I visit "books/מגלת-קהלת"
+    Then  I should see the text under the tab
+      | tab                         | text                                    |
+      | New edition                 | באור קצר                                |
+      | Publisher/ Printing press   | Price of book as it appears in the book |
