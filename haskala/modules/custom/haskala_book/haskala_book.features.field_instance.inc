@@ -33,7 +33,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_alignment',
-    'label' => 'Alignment of text',
+    'label' => 'Alignment of text',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -7829,7 +7829,7 @@ function haskala_book_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Additional names for the old text\'s author as it appears in the book');
-  t('Alignment of text');
+  t('Alignment of text');
   t('Approximate age during writing of book');
   t('Are there dedications?');
   t('Are there illustrations/diagrams?');
