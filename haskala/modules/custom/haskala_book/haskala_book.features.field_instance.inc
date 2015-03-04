@@ -110,7 +110,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_bar_ilan_library_id',
-    'label' => 'Library of Bar Ilan University catalog number',
+    'label' => 'Bar-Ilan University Library',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -7889,7 +7889,7 @@ function haskala_book_field_default_field_instances() {
   t('Language of footnotes');
   t('Last known edition');
   t('Later references to the book');
-  t('Library of Bar Ilan University catalog number');
+  t('Bar-Ilan University Library');
   t('Link to digital book');
   t('List of sources');
   t('Location during writing of book');

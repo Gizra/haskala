@@ -211,6 +211,16 @@ Feature: Book page
     Then  I should see the text of fields under the tab with name "References and bibliography" and ID "references-and-bibliography"
 
 
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                       | text                                                                                                                |
+      | National Library of Israel  | 13901 V 25                                                                                                          |
+      | Bar-Ilan University Library | B43 בן-זאב.או תקס"ז                                                                                                   |
+      | Tel-Aviv University Library | CR 492.42 בן-ז                                                                                                     |
+      | General notes               | בבר אילן ראיתי חלק א' וב' בנפרד, וכרך משותף לשלושת החלקים. בלאומית יש שלושה כרכים נפרדים. כלומר, הספר יצא במקור בשלושה כרכים נפרדים. |
+    When  I visit "books/אוצר-השרשים-א"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
 
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
