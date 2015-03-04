@@ -103,6 +103,97 @@ Feature: Book page
     Then  I should see the text of fields under the tab with name "Volumes" and ID "volumes"
 
   @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                                                   | text               |
+      | Name of publisher                                       | Friedrich Maurer   |
+      | Year of publication as it appears in the book           | 1788               |
+      | Hebrew year of publication as it appears in the book    | תקמט               |
+      | Gregorian year of publication as it appears in the book | 1788               |
+      | Place of publication as it appears in the book          | Berlin             |
+      | Format of date                                          | modern             |
+    When  I visit "books/der-prediger"
+    Then  I should see the text of fields under the tab with name "Publisher/ Printing press " and ID "publisher-printing-press"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+    Then  I should see the text of field under the tab
+      | field                                          | text               |
+      | Price of book as it appears in the book        | ראו הערה במגלת רות |
+    When  I visit "books/מגלת-קהלת"
+    Then  I should see the text of fields under the tab with name "Publisher/ Printing press " and ID "publisher-printing-press"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+    Then  I should see the text of field under the tab
+      | field                                                        | text               |
+      | Year of publication as it appears in other sources           | תקס                |
+      | Hebrew year of publication as it appears in other sources    | תקס                |
+      | Gregorian year of publication as it appears in other sources | 1790               |
+      | Place of publication as it appears in other sources          | Dyhernfurth        |
+      | References                                                   | וינוגרד              |
+      | Notes                                                        | יצאו רק שתי חוברות   |
+    When  I visit "books/נתיב-לשון-עברית"
+    Then  I should see the text of fields under the tab with name "Publisher/ Printing press" and ID "publisher-printing-press"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+    Then  I should see the text of field under the tab
+      | field                                | text                    |
+      | Total number of editions             | 3                       |
+      | Last known edition                   | 1841                    |
+      | References                           | Deutsch-jüdische Kinder |
+      | Notes                                | מהדורות נוספות במקור      |
+    When  I visit "books/israelitischer-kinderfreund-oder-handbuch-der-gemeinnützigsten-wissenschaftlichen-kenntnisse"
+    Then  I should see the text of fields under the tab with name "Editions" and ID "editions"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+    Then  I should see the text of field under the tab
+      | field                                 | text                    |
+      | Year                                  | תקמ"ב                   |
+      | City                                  | Vienna                  |
+      | Changes in this edition               | מהדורת ורשה             |
+      | References                            | בית עקד ספרים           |
+      | Language                              | הולנדית                  |
+      | Year                                  | 1783                    |
+      | City                                  | Gorizia                 |
+      | Translator                            | דוד פרידלנדר              |
+      | References                            | Instruction salutaire   |
+    When  I visit "books/דברי-שלום-ואמת-א"
+    Then  I should see the text of fields under the tab with name "Editions" and ID "editions"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+    Then  I should see the text of field under the tab
+      | field                                        | text                    |
+      | Number of languages                          | monolingual             |
+      | Languages in book                            | German                  |
+      | Occasional words in other languages          | Hebrew                  |
+      | Alignment of text                            | left                    |
+      | Typography                                   | consecutive             |
+      | Language of footnotes                        | German                  |
+      | Location of footnotes                        | bottom of pages         |
+      | Fonts                                        | Gothic                  |
+      | Is there a preface                           | Yes                     |
+      | Is there an epilogue                         | No                      |
+      | Is there a table of contents                 | Yes                     |
+      | Notes                                        | Abendgebet	305          |
+      | Number of pages in the book                  |  478, [5]               |
+      | Height of book, in cm                        | 19                      |
+      | Width of book, in cm                         | 10                      |
+      | Are there illustrations/diagrams?            | Yes                     |
+      | Pages in which illustrations/diagrams appear | 2                       |
+      | General notes                                | Seitenzahlen richtig:   |
+    When  I visit "books/gebete-der-hochdeutschen-und-polnischen-juden"
+    Then  I should see the text of fields under the tab with name "Book structure" and ID "book-structure"
+    
+  @api
   Scenario Outline: Visit a books page
     Given I am an anonymous user
     When  I visit "books/זה-ספר-בית-המדות"
