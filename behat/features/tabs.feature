@@ -138,6 +138,35 @@ Feature: Book page
     When  I visit "books/נתיב-לשון-עברית"
     Then  I should see the text of fields under the tab with name "Publisher/ Printing press" and ID "publisher-printing-press"
 
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+    Then  I should see the text of field under the tab
+      | field                                | text                    |
+      | Total number of editions             | 3                       |
+      | Last known edition                   | 1841                    |
+      | References                           | Deutsch-jüdische Kinder |
+      | Notes                                | מהדורות נוספות במקור      |
+    When  I visit "books/israelitischer-kinderfreund-oder-handbuch-der-gemeinnützigsten-wissenschaftlichen-kenntnisse"
+    Then  I should see the text of fields under the tab with name "Editions" and ID "editions"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+    Then  I should see the text of field under the tab
+      | field                                 | text                    |
+      | Year                                  | תקמ"ב                   |
+      | City                                  | Vienna                  |
+      | Changes in this edition               | מהדורת ורשה             |
+      | References                            | בית עקד ספרים           |
+      | Language                              | הולנדית                  |
+      | Year                                  | 1783                    |
+      | City                                  | Gorizia                 |
+      | Translator                            | דוד פרידלנדר              |
+      | References                            | Instruction salutaire   |
+    When  I visit "books/דברי-שלום-ואמת-א"
+    Then  I should see the text of fields under the tab with name "Editions" and ID "editions"
+
   @api @wip
   Scenario: Verify tabs content on a book page
     Given I am an anonymous user
