@@ -271,7 +271,16 @@ Feature: Book page
       | Notes             | דקדוק, טעמים.          |
     When  I visit "books/ספר-שערי-נעימה"
     Then  I should see the text of fields under the tab with name "Topics" and ID "topics"
-    
+
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                     | text                               |
+      | Name                      | Wohl, Levi - וול, יהודה ליב בן צבי הירש |
+      | Role(s) in book creation  | Translator                         |
+    When  I visit "books/balsam-für-die-wunde"
+    Then  I should see the text of fields under the tab with name "Book producers" and ID "book-producers"
 
   @api
   Scenario Outline: Visit a books page
