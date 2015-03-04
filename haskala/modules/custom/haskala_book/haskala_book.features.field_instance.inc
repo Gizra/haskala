@@ -1501,7 +1501,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_full_title',
-    'label' => 'Full title of book',
+    'label' => 'Full title of book',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -2102,7 +2102,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_later_references',
-    'label' => 'Later references to the book',
+    'label' => 'Later references to the book',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -6829,7 +6829,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_width',
-    'label' => 'Width of book, in cm',
+    'label' => 'Width of book, in cm',
     'required' => 0,
     'settings' => array(
       'max' => '',
@@ -7864,7 +7864,7 @@ function haskala_book_field_default_field_instances() {
   t('Formatted display title');
   t('Format of date');
   t('Frankfurt University Library catalog number');
-  t('Full title of book');
+  t('Full title of book');
   t('General Notes');
   t('General notes');
   t('Gregorian year of publication as it appears in other sources');
@@ -7888,7 +7888,7 @@ function haskala_book_field_default_field_instances() {
   t('Languages in book');
   t('Language of footnotes');
   t('Last known edition');
-  t('Later references to the book');
+  t('Later references to the book');
   t('Bar-Ilan University Library');
   t('Link to digital book');
   t('List of sources');
@@ -7970,7 +7970,7 @@ function haskala_book_field_default_field_instances() {
   t('Type of translation');
   t('Typography');
   t('Widener Library, Harvard');
-  t('Width of book, in cm');
+  t('Width of book, in cm');
   t('Writer of preface');
   t('Year');
   t('Year of edition');
