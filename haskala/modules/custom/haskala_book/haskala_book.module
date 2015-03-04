@@ -60,7 +60,7 @@ function haskala_book_get_production($book_nid, $person_nid = NULL, $role = NULL
  *  @param $book_nid
  *   The book node ID.
  *
- *  @return Translator or orginal author name field.
+ *  @return Translator or original author name field.
  */
 function haskala_book_get_producer($book_nid, $role) {
   $production_node = haskala_book_get_production($book_nid, NULL, $role);
@@ -138,7 +138,7 @@ function haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid) {
       $field = render($node_view[$field_name]);
       $tab_fields_main[] = $field;
 
-      // Add orginal author name to Type of book tab, if book is a translation.
+      // Add original author name to Type of book tab, if book is a translation.
       if ($field_name == 'field_book') {
         $author_name_field = haskala_book_get_producer($wrapper->$field_name->getIdentifier(), t('Author'));
         if ($author_name_field) {
@@ -204,20 +204,7 @@ function haskala_book_get_reference_nodes_fields($book_nid, $bundle, $nodes, $gr
     $wrapper = entity_metadata_wrapper('node', $node);
     $tab = field_group_load_field_group($group_name, 'node', $bundle, 'default');
     $node_view = node_view($node);
-    $node_fields = haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid);
-    // Add language translation && translator.
-    if ($bundle == 'book') {
-      if ($wrapper->field_language->value()) {
-        $language_field = render($node_view['field_language']);
-        array_unshift($node_fields, $language_field);
-      }
-      $translator_name_field = haskala_book_get_producer($node->nid, t('Translator'));
-      if ($translator_name_field) {
-        $translator_name_field['#title'] = t('Translator');
-        array_unshift($node_fields, $translator_name_field);
-      }
-    }
-    $nodes_fields[] = $node_fields;
+    $nodes_fields[] = haskala_book_get_tab_fields($wrapper, $tab, $node_view, $book_nid);
   }
   return $nodes_fields;
 }
@@ -231,8 +218,7 @@ function haskala_book_get_reference_nodes_fields($book_nid, $bundle, $nodes, $gr
  *  @return Multi editions fields .
  */
 function haskala_book_get_editions($book_nid) {
-  $editions_nodes = haskala_book_get_reference_nodes($book_nid, 'edition');
-  if (!$editions_nodes) {
+  if (!$editions_nodes = haskala_book_get_reference_nodes($book_nid, 'edition')) {
     return;
   }
   return haskala_book_get_reference_nodes_fields($book_nid, 'edition', $editions_nodes, 'group_editions');
@@ -247,11 +233,15 @@ function haskala_book_get_editions($book_nid) {
  *  @return Multi translations fields .
  */
 function haskala_book_get_translations($book_nid) {
-  $translations_nodes = haskala_book_get_reference_nodes($book_nid, 'book');
-  if (!$translations_nodes) {
+  if (!$nodes = haskala_book_get_reference_nodes($book_nid, 'translation')) {
     return;
   }
-  return haskala_book_get_reference_nodes_fields($book_nid, 'book', $translations_nodes, 'group_translation_editions_tab');
+
+  $nodes_view = node_view_multiple($nodes);
+  // Remove the "sorted" property, otherwise when we print the tabs "1" is
+  // being printed at the end of the translations list.
+  unset($nodes_view['nodes']['#sorted']);
+  return $nodes_view;
 }
 
 /**
@@ -300,4 +290,3 @@ function haskala_book_get_mentions($book_nid) {
 function haskala_book_hebrew_alphabet_without_sofit() {
   return array('א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ז', 'ח', 'ט', 'י', 'כ', 'ל', 'מ', 'נ', 'ס', 'ע', 'פ', 'צ', 'ק', 'ר', 'ש', 'ת');
 }
-

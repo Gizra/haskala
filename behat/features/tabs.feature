@@ -61,24 +61,17 @@ Feature: Book page
     | link            |
     | ספר מנחה חדשה   |
 
-  @api @fooy
-  Scenario: Verify content in the "Type of book" section
-    Given I am an anonymous user
-    When  I visit "books/דברי-שלום-ואמת-א-איטלקית"
-    Then  I should see the text "דברי שלום ואמת א" under "#top-details"
-    And   I should see the text "Wessely, Hartwig - וייזל, נפתלי הרץ" under "#top-details"
-
   @api
   Scenario: Verify tabs content on a book page
     Given I am an anonymous user
     When  I visit "books/דברי-שלום-ואמת-א"
     Then  I should see the text under the tab
-    | tab      | text           |
-    | Editions | בית עקד ספרים  |
-    | Editions | אליהו מורפורגו |
+    | tab      | text                                |
+    | Editions | בית עקד ספרים                       |
+    | Editions | במהדורת וינה צורף גם מאמר חקור דין. |
 
 
-  @api
+  @api @wip
   Scenario Outline: Visit a books page
     Given I am an anonymous user
     When  I visit "books/דברי-שלום-ואמת-א"

@@ -57,6 +57,7 @@
         .field-label {
           display: inline-block;
           font-weight: normal;
+          vertical-align: top;
 
           &.type-label {
             font-size: 16px;
@@ -186,6 +187,14 @@
 
             .fields-multi:not(:first-child) {
               margin-top: 30px;
+
+              .node-teaser:not(:first-child) {
+                margin-top: 30px;
+              }
+            }
+
+            .field-name-field-target-general-notes .field-label {
+              display: none;
             }
           }
         }
@@ -196,6 +205,10 @@
       }
       .type-of-book {
         display: none;
+      }
+
+      .field-type-link-field a {
+        white-space: nowrap;
       }
 
     }

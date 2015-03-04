@@ -54,7 +54,7 @@ function haskala_book_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = '%node:title';
   $display->uuid = 'a8788bb9-8c5f-47ad-914a-ebdf7c60f501';
   $display->content = array();
   $display->panels = array();
@@ -77,7 +77,7 @@ function haskala_book_default_page_manager_handlers() {
     $pane->uuid = '4e7518f3-75d5-40d3-b8ae-9921462f299e';
     $display->content['new-4e7518f3-75d5-40d3-b8ae-9921462f299e'] = $pane;
     $display->panels['middle'][0] = 'new-4e7518f3-75d5-40d3-b8ae-9921462f299e';
-  $display->hide_title = PANELS_TITLE_PANE;
+  $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context'] = $handler;

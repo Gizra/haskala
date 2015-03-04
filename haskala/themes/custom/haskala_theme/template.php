@@ -3,9 +3,15 @@
 /**
  * Preprocess html.
  */
-function haskala_theme_preprocess_html(&$vars) {
+function haskala_theme_preprocess_html(&$variables) {
   // Css for IE <= 9.
   drupal_add_css(libraries_get_path('haskala') . '/css/ie.css', array('browsers' => array('IE' => 'lte IE 9', '!IE' => FALSE)));
+
+  // Add a class for city term pages.
+  $term = menu_get_object('taxonomy_term', 2);
+  if ($term && $term->vocabulary_machine_name == 'cities') {
+    $variables['classes_array'][] = 'page-places';
+  }
 }
 
 /**
@@ -25,22 +31,19 @@ function haskala_theme_preprocess_page(&$variables) {
     if ($node->type == 'person') {
       $breadcrumbs[] = l(t('People'), 'people');
     }
-    $breadcrumbs[] = $node->title;
   }
   elseif ($term = menu_get_object('taxonomy_term', 2)) {
-    if ($term->vocabulary_machine_name == 'cities') {
-      $breadcrumbs[] = l(t('Places'), 'places');
-    }
-    else {
-      $vocabularies = taxonomy_vocabulary_get_names();
-      $breadcrumbs[] = $vocabularies[$term->vocabulary_machine_name]->name;
-    }
-    $breadcrumbs[] = $term->name;
+    $vocabularies = taxonomy_vocabulary_get_names();
+    $breadcrumbs[] = $vocabularies[$term->vocabulary_machine_name]->name;
   }
 
-  if (count($breadcrumbs) > 1) {
-    $variables['breadcrumbs'] = theme('item_list', array('items' => $breadcrumbs));
+  $title = drupal_get_title();
+  if ($title == t('Home')) {
+    return;
   }
+
+  $breadcrumbs[] = drupal_get_title();
+  $variables['breadcrumbs'] = theme('item_list', array('items' => $breadcrumbs));
 }
 
 /**
@@ -49,6 +52,8 @@ function haskala_theme_preprocess_page(&$variables) {
 function haskala_theme_preprocess_node(&$variables) {
   $node = $variables['node'];
   $view_mode = $variables['view_mode'];
+
+  unset($variables['content']['links']);
 
   $variables['type_label'] = ucfirst($node->type);
 
@@ -87,7 +92,7 @@ function haskala_theme_preprocess_node__person(&$variables) {
   if ($view_mode == 'teaser' || $view_mode == 'teaser_en') {
     $variables['name'] = entity_metadata_wrapper('node', $node)->field_german_name->value();
   }
-  else if ($view_mode == 'teaser_he') {
+  elseif ($view_mode == 'teaser_he') {
     $variables['name'] = entity_metadata_wrapper('node', $node)->field_hebrew_name->value();
   }
 }
@@ -121,4 +126,33 @@ function haskala_theme_preprocess_taxonomy_term__teaser(&$variables) {
  */
 function haskala_theme_preprocess_taxonomy_term__detailed(&$variables) {
   $variables['title_label'] = $variables['vocabulary_machine_name'] == 'cities' ? t('Location during writing of book') : '';
+}
+
+/**
+ * Override theme_field in order to remove the colon from the label in case it
+ * ends with a question mark.
+ */
+function haskala_theme_field($variables) {
+  if (mb_substr($variables['label'], -1) != '?') {
+    $variables['label'] .= ':';
+  }
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<div class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . '&nbsp;</div>';
+  }
+
+  // Render the items.
+  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
+  foreach ($variables['items'] as $delta => $item) {
+    $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
+    $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
+  }
+  $output .= '</div>';
+
+  // Render the top-level DIV.
+  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+
+  return $output;
 }

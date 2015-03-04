@@ -3,10 +3,6 @@
 .page-people,
 .page-places {
 
-  .bread-crumbs {
-    display: none;
-  }
-
   .wrapper {
 
     li {
@@ -61,6 +57,10 @@
 
           a {
             color: $darkgray;
+
+            &:hover {
+              color: $lightBlue;
+            }
           }
         }
 
@@ -158,6 +158,10 @@
 
         a {
           color: $darkgray;
+
+          &:hover {
+            color: $lightBlue;
+          }
         }
       }
     }

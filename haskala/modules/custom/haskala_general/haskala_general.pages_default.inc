@@ -32,6 +32,7 @@ function haskala_general_default_page_manager_handlers() {
             'type' => array(
               'edition' => 'edition',
               'production' => 'production',
+              'translation' => 'translation',
               'mention' => 'mention',
               'page_element' => 'page_element',
             ),

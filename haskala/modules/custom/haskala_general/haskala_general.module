@@ -85,3 +85,27 @@ function haskala_general_build_items_list($entity_type, $options, $letter) {
 
   return $blocks_html;
 }
+
+/**
+ * Implements hook_query_TAG_alter().
+ *
+ * Allow only certain node types on the node_access tag (Affects /rss.xml and
+ * /node pages)
+ */
+function haskala_general_query_node_access_alter(QueryAlterableInterface $query) {
+  if (user_access('administer content')) {
+    return;
+  }
+
+  // Ignore the page elements view.
+  if (!empty($query->alterTags['views_page_element'])) {
+    return;
+  }
+
+  $tables = $query->getTables();
+  foreach ($tables as $table) {
+    if ($table['table'] == 'node') {
+      $query->condition($table['alias'] . '.type', variable_get('haskala_public_nodes', array('book', 'person')), 'IN');
+    }
+  }
+}

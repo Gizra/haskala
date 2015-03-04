@@ -69,6 +69,10 @@ a, a:hover, a:visited {
 
 .krumo-root {
   text-align: left;
+
+  li {
+    display: block !important;
+  }
 }
 
 .wrapper {
@@ -82,9 +86,15 @@ a, a:hover, a:visited {
       margin-right: 4px;
       margin-top: 10px;
 
+      ul {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
       li {
         display: inline;
-        font-weight: bold;
+        font-weight: normal;
 
         &:after {
           content: ' >';
@@ -106,14 +116,13 @@ a, a:hover, a:visited {
       padding: 0;
       white-space: nowrap;
 
-      &:hover {
+      &:hover, &.active {
         color: $lightBlue;
       }
     }
 
     .top-navigation {
       margin-bottom: 16px;
-      margin-right: 34px;
       font-family: bell_mtbold;
 
       li {
@@ -140,14 +149,18 @@ a, a:hover, a:visited {
 
         &.last {
           margin-left: 15px;
-          margin-top: 4px;
+          margin-top: 7px;
 
           a {
-            width: 30px;
-            height: 30px;
-            background: url('../images/top_search.png') no-repeat center bottom;
+            width: 25px;
+            height: 27px;
+            background: url('../images/top-search.png') no-repeat;
             display: inline-block;
             color: transparent;
+
+            &.active, &:hover {
+              background-position: 0 -33px;
+            }
           }
         }
       }
@@ -271,6 +284,7 @@ a, a:hover, a:visited {
         }
 
         a {
+          display: inline;
           color: $darkgray;
           letter-spacing: -0.2px;
           padding: 0;
