@@ -207,28 +207,6 @@ Feature: Book page
     When  I visit "books/ספר-עמוד-השחר"
     Then  I should see the text of fields under the tab with name "Prefaces" and ID "prefaces"
 
-  @api @wip
-  Scenario: Verify tabs content on a book page
-    Given I am an anonymous user
-    When  I visit "books/זה-ספר-בית-המדות"
-    Then  I should see the text of field under the tab
-    | tab                         | field               | text                                       |
-    | Book producers              |                     | מרגליות, יהודה ליב בן אשר                  |
-    | Book structure              |                     | על חלק דברי המוסר                          |
-    | Textual models              |                     | מרגליות                                    |
-    | Publisher/ Printing press   |                     | Place of publication as it appears in      |
-    | Persons mentioned in book   |                     | שיחיו ליום הולדתו בשנת                     |
-    | Topics                      |                     | Topic                                      |
-    | Target audience             |                     | Target audience as described in the book   |
-    | Catalog numbers             |                     | University catalog                         |
-    | References and bibliography |                     | לאומית                                     |
-
-  @api @wip
-  Scenario: Verify content in the "Type of book" section
-    Given I am an anonymous user
-    When  I visit "books/זה-ספר-בית-המדות"
-    Then  I should see the text "Zeh Sefer bet ha-midot" under "#top-details"
-
   @api
   Scenario Outline: Visit a books page
     Given I am an anonymous user
@@ -245,16 +223,6 @@ Feature: Book page
     | maskilim          |
 
 
-  @api @wip
-  Scenario: Verify tabs content on a book page
-    Given I am an anonymous user
-    When  I visit "books/ספר-מנחה-חדשה-ד"
-    Then  I should see the text of field under the tab
-    | tab      | text      |
-    | Volumes  | אך המספור |
-    | Prefaces | מבוא      |
-
-
   @api
   Scenario Outline: Visit a books page
     Given I am an anonymous user
@@ -265,16 +233,6 @@ Feature: Book page
   Examples:
     | link            |
     | ספר מנחה חדשה   |
-
-  @api @wip
-  Scenario: Verify tabs content on a book page
-    Given I am an anonymous user
-    When  I visit "books/דברי-שלום-ואמת-א"
-    Then  I should see the text of field under the tab
-    | tab      | text                             |
-    | Editions | בית עקד ספרים                     |
-    | Editions | במהדורת וינה צורף גם מאמר חקור דין. |
-    | Editions | Translations |
 
 
   @api
@@ -289,24 +247,6 @@ Feature: Book page
     | Vienna        |
     | איטלקית       |
     | דוד פרידלנדר    |
-
-  @api @wip
-  Scenario: Verify tabs content on a book page
-    Given I am an anonymous user
-    When  I visit "books/אגרת-ארחות-עולם"
-    Then  I should see the text of field under the tab
-    | tab                       | text                         |
-    | Persons mentioned in book | People mentioned in the book |
-    | Persons mentioned in book | יעקב בן יצחק פלעקלש          |
-
-  @api @wip
-  Scenario: Verify tabs content on a book page
-    Given I am an anonymous user
-    When  I visit "books/abhandlung-von-der-freiheit-des-menschen"
-    Then  I should see the text of field under the tab
-    | tab                         | text                                       |
-    | Catalog numbers             | Link to digital book                       |
-    | Prefaces                    | Writer of preface                          |
 
 
   @api
