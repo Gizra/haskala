@@ -4096,7 +4096,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_preface_title',
-    'label' => 'Preface title',
+    'label' => 'Preface title',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -7936,7 +7936,7 @@ function haskala_book_field_default_field_instances() {
   t('Place of publication as it appears in other sources');
   t('Place of publication as it appears in the book');
   t('Place of publication of original text');
-  t('Preface title');
+  t('Preface title');
   t('Price of book as it appears in the book');
   t('Printed originally with other books?');
   t('Producer of book');

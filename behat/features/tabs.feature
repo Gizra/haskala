@@ -193,6 +193,20 @@ Feature: Book page
     When  I visit "books/gebete-der-hochdeutschen-und-polnischen-juden"
     Then  I should see the text of fields under the tab with name "Book structure" and ID "book-structure"
 
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+    Then  I should see the text of field under the tab
+      | field                                        | text                    |
+      | Number                                       | 2                       |
+      | Writer of preface                            | משה זאללשין              |
+      | Role in book production                      | author                   |
+      | Preface title                                | מתאר את מערכת השמש שלנו |
+      | Notes                                        | מחבר-שותף                |
+
+    When  I visit "books/ספר-עמוד-השחר"
+    Then  I should see the text of fields under the tab with name "Prefaces" and ID "prefaces"
+
   @api @wip
   Scenario: Verify tabs content on a book page
     Given I am an anonymous user
