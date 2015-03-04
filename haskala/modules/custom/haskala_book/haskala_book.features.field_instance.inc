@@ -1951,7 +1951,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_language',
-    'label' => 'Language in book',
+    'label' => 'Languages in book',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2062,7 +2062,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_last_known_edition',
-    'label' => 'Last known edition',
+    'label' => 'Last known edition',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -7885,9 +7885,9 @@ function haskala_book_field_default_field_instances() {
   t('Is there information to contradict this?');
   t('Is there information to contradict this? ');
   t('Language ');
-  t('Language in book');
+  t('Languages in book');
   t('Language of footnotes');
-  t('Last known edition');
+  t('Last known edition');
   t('Later references to the book');
   t('Bar-Ilan University Library');
   t('Link to digital book');
