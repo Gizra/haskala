@@ -33,7 +33,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_alignment',
-    'label' => 'Alignment of text',
+    'label' => 'Alignment of text',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -110,7 +110,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_bar_ilan_library_id',
-    'label' => 'Library of Bar Ilan University catalog number',
+    'label' => 'Bar-Ilan University Library',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -669,7 +669,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_contemporary_references',
-    'label' => 'Contemporary references to the book',
+    'label' => 'Contemporary references to the book',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -1188,7 +1188,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_examined_volume_number',
-    'label' => 'Number of examined volume',
+    'label' => 'Number of examined volume',
     'required' => 0,
     'settings' => array(
       'max' => '',
@@ -1344,7 +1344,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_format_of_publication_date',
-    'label' => 'Format of date',
+    'label' => 'Format of date',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1501,7 +1501,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_full_title',
-    'label' => 'Full title of book',
+    'label' => 'Full title of book',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1951,7 +1951,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_language',
-    'label' => 'Language in book',
+    'label' => 'Languages in book',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1988,7 +1988,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_language_of_footnotes',
-    'label' => 'Language of footnotes',
+    'label' => 'Language of footnotes',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2062,7 +2062,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_last_known_edition',
-    'label' => 'Last known edition',
+    'label' => 'Last known edition',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -2102,7 +2102,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_later_references',
-    'label' => 'Later references to the book',
+    'label' => 'Later references to the book',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -4096,7 +4096,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_preface_title',
-    'label' => 'Preface title',
+    'label' => 'Preface title',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -6351,7 +6351,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_topic',
-    'label' => 'Topic',
+    'label' => 'Topics',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -6829,7 +6829,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_width',
-    'label' => 'Width of book, in cm',
+    'label' => 'Width of book, in cm',
     'required' => 0,
     'settings' => array(
       'max' => '',
@@ -7279,7 +7279,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_person_name_appear',
-    'label' => 'Person\'s name appear in the book',
+    'label' => 'Does the person\'s name appear in the book?',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -7829,7 +7829,7 @@ function haskala_book_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Additional names for the old text\'s author as it appears in the book');
-  t('Alignment of text');
+  t('Alignment of text');
   t('Approximate age during writing of book');
   t('Are there dedications?');
   t('Are there illustrations/diagrams?');
@@ -7853,7 +7853,7 @@ function haskala_book_field_default_field_instances() {
   t('Contacts with official agents');
   t('Contacts with other people');
   t('Contemporary disputes about the book');
-  t('Contemporary references to the book');
+  t('Contemporary references to the book');
   t('Copy of book used');
   t('Edition of book');
   t('Evidence about book production');
@@ -7862,9 +7862,9 @@ function haskala_book_field_default_field_instances() {
   t('Expanded in translations?');
   t('Fonts');
   t('Formatted display title');
-  t('Format of date');
+  t('Format of date');
   t('Frankfurt University Library catalog number');
-  t('Full title of book');
+  t('Full title of book');
   t('General Notes');
   t('General notes');
   t('Gregorian year of publication as it appears in other sources');
@@ -7885,11 +7885,11 @@ function haskala_book_field_default_field_instances() {
   t('Is there information to contradict this?');
   t('Is there information to contradict this? ');
   t('Language ');
-  t('Language in book');
-  t('Language of footnotes');
-  t('Last known edition');
-  t('Later references to the book');
-  t('Library of Bar Ilan University catalog number');
+  t('Languages in book');
+  t('Language of footnotes');
+  t('Last known edition');
+  t('Later references to the book');
+  t('Bar-Ilan University Library');
   t('Link to digital book');
   t('List of sources');
   t('Location during writing of book');
@@ -7922,7 +7922,7 @@ function haskala_book_field_default_field_instances() {
   t('Number of languages');
   t('Number of pages in the book');
   t('Number of volumes published');
-  t('Number of examined volume');
+  t('Number of examined volume');
   t('Occasional words in other languages');
   t('Original language of text');
   t('Original publisher');
@@ -7932,11 +7932,11 @@ function haskala_book_field_default_field_instances() {
   t('Pages in which illustrations / diagrams appear');
   t('Part of a series of books? ');
   t('Partial publication of the book in other texts');
-  t('Person\'s name appear in the book');
+  t('Does the person\'s name appear in the book?');
   t('Place of publication as it appears in other sources');
   t('Place of publication as it appears in the book');
   t('Place of publication of original text');
-  t('Preface title');
+  t('Preface title');
   t('Price of book as it appears in the book');
   t('Printed originally with other books?');
   t('Producer of book');
@@ -7960,7 +7960,7 @@ function haskala_book_field_default_field_instances() {
   t('Title of the book in Latin characters');
   t('Title of the original text as it appeared originally');
   t('Title of the original text as it appears elsewhere');
-  t('Topic');
+  t('Topics');
   t('Total number of editions');
   t('Translation of book');
   t('Translator');
@@ -7970,7 +7970,7 @@ function haskala_book_field_default_field_instances() {
   t('Type of translation');
   t('Typography');
   t('Widener Library, Harvard');
-  t('Width of book, in cm');
+  t('Width of book, in cm');
   t('Writer of preface');
   t('Year');
   t('Year of edition');
