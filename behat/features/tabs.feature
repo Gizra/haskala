@@ -232,6 +232,14 @@ Feature: Book page
     When  I visit "books/zaphnath-paneach-oder-sammlung-moralischer-lehren-sprüche-erzählungen-und-gedichte-aus-dem"
     Then  I should see the text of fields under the tab with name "References and bibliography" and ID "references-and-bibliography"
 
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                  | text                                                                                                                               |
+      | Secondary sources used by researchers      | פיליפסון, ביוגרפיות.                                                                                                                |
+    When  I visit "books/מודע-לבני-בינה-oder-kinderfreund-und-lehrer-1"
+    Then  I should see the text of fields under the tab with name "References and bibliography" and ID "references-and-bibliography"
+
 
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
