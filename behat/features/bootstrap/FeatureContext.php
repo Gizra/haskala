@@ -221,7 +221,9 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
    */
   public function iShouldSeeTheTextOfFieldsUnderTheTabWithId($name, $selector) {
     // Check tab text exists in the navigation details.
-    $this->getMink()->assertSession()->elementTextContains('css', '#details-navigation', $name);
+    if ($selector != "top-details"){
+      $this->getMink()->assertSession()->elementTextContains('css', '#details-navigation', $name);
+    }
 
     foreach ($this->getFieldsDataTable() as $row) {
       // Check tab and text exists in the specific tab.

@@ -3,6 +3,28 @@ Feature: Book page
   We need to be able to see the tabs list in the book page and all relevant fields.
 
   @api
+  Scenario: Verify content in the "Type of book" section on a book page
+    Given the following book data
+      | field                                                        | text                                  |
+      | Full title of book                                           | אויף פוליש טייטש גשריבן                  |
+      | Title of the book in Latin characters                        | Sefer refuʼot ha-nikra ʻEzer Yisraʼel |
+      | Text is presented as original                                | Yes                                   |
+      | Is there information to contradict this                      | Yes                                   |
+      | References                                                   | שמרוק, משה מרקוזה                     |
+    When  I visit "books/ספר-רפואות-הנקרא-עזר-ישראל"
+    Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
+
+  @api
+  Scenario: Verify content in the "Type of book" section on a book page
+    Given the following book data
+      | field                                       | text                                |
+      | Notes                                       | כפי שמציין זאת בפרוש                  |
+      | Expanded in translations                    | Yes                                 |
+      | Expanded in new edition                     | Yes                                 |
+    When  I visit "books/מאמר-מגיד-חדשות"
+    Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
+
+  @api
   Scenario: Verify tabs & fields content on a book page
     Given the following book data
       | field                                                                      | text                                                    |
@@ -178,7 +200,7 @@ Feature: Book page
       | Is there a preface                           | Yes                     |
       | Is there an epilogue                         | No                      |
       | Is there a table of contents                 | Yes                     |
-      | Notes                                        | Abendgebet	305          |
+      | Notes                                        | Versöhnungstagesgebete  |
       | Number of pages in the book                  |  478, [5]               |
       | Height of book, in cm                        | 19                      |
       | Width of book, in cm                         | 10                      |
