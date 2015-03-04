@@ -1344,7 +1344,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_format_of_publication_date',
-    'label' => 'Format of date',
+    'label' => 'Format of date',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -7862,7 +7862,7 @@ function haskala_book_field_default_field_instances() {
   t('Expanded in translations?');
   t('Fonts');
   t('Formatted display title');
-  t('Format of date');
+  t('Format of date');
   t('Frankfurt University Library catalog number');
   t('Full title of book');
   t('General Notes');
