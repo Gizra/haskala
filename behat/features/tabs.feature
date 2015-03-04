@@ -113,7 +113,7 @@ Feature: Book page
       | Place of publication as it appears in the book          | Berlin             |
       | Format of date                                          | modern             |
     When  I visit "books/der-prediger"
-    Then  I should see the text of fields under the tab with name "Publisher/ Printing press " and ID "publisher-printing-press"
+    Then  I should see the text of fields under the tab with name "Publisher/ Printing press" and ID "publisher-printing-press"
 
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
@@ -121,7 +121,7 @@ Feature: Book page
       | field                                          | text               |
       | Price of book as it appears in the book        | ראו הערה במגלת רות |
     When  I visit "books/מגלת-קהלת"
-    Then  I should see the text of fields under the tab with name "Publisher/ Printing press " and ID "publisher-printing-press"
+    Then  I should see the text of fields under the tab with name "Publisher/ Printing press" and ID "publisher-printing-press"
 
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
@@ -211,6 +211,56 @@ Feature: Book page
     Then  I should see the text of fields under the tab with name "References and bibliography" and ID "references-and-bibliography"
 
 
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                                        | text                     |
+      | Are there personal addresses                 | No                       |
+      | Are there rabbinical approbations            | No                       |
+      | Are there recommendations                    | No                       |
+      | Are there dedications                        | Yes                      |
+      | Notes                                        | [1770-1838]              |
+      | Are there thanks                             | No                       |
+      | Is there an appeal to sell subscriptions     | Yes                      |
+      | Is there a list of subscribers               | Yes                      |
+      | Is there a list of printers                  | No                       |
+      | Is there a list of proofreaders              | No                       |
+      | Is there a list of the book's funders        | No                       |
+      | General notes                                | Studiosus Theodor in Kbg |
+      | Hebrew name                                  | Friedländer, Rebekka Meyer |
+      | German name                                  | Abrahamsen, Moses Levin    |
+      | Description                                  | Subscriber                 |
+      | Location city                                | Halle                      |
+    When  I visit "books/gebete-der-hochdeutschen-und-polnischen-juden"
+    Then  I should see the text of fields under the tab with name "Persons mentioned in book" and ID "persons-mentioned-in-book"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                                        | text               |
+      | Is there a list of the book's sellers        | No                 |
+    When  I visit "books/der-prediger"
+    Then  I should see the text of fields under the tab with name "Persons mentioned in book" and ID "persons-mentioned-in-book"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                                        | text                        |
+      | Main textual models of the book              | Informative text, Textbook  |
+      | Secondary textual models                     | Poems, Meliza               |
+      | Notes                                        | שיר מליצי פרי עטו             |
+    When  I visit "books/תורת-לשון-עברית-א"
+    Then  I should see the text of fields under the tab with name "Textual models" and ID "textual-models"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field             | text                  |
+      | Topics            | Bible, Hebrew         |
+      | Notes             | דקדוק, טעמים.          |
+    When  I visit "books/ספר-שערי-נעימה"
+    Then  I should see the text of fields under the tab with name "Topics" and ID "topics"
 
   @api
   Scenario Outline: Visit a books page

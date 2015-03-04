@@ -6351,7 +6351,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_topic',
-    'label' => 'Topic',
+    'label' => 'Topics',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -7960,7 +7960,7 @@ function haskala_book_field_default_field_instances() {
   t('Title of the book in Latin characters');
   t('Title of the original text as it appeared originally');
   t('Title of the original text as it appears elsewhere');
-  t('Topic');
+  t('Topics');
   t('Total number of editions');
   t('Translation of book');
   t('Translator');
