@@ -106,7 +106,7 @@ Feature: Book page
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
       | field                                                   | text               |
-      | Name of the publisher                                   | Friedrich Maurer   |
+      | Name of publisher                                       | Friedrich Maurer   |
       | Year of publication as it appears in the book           | 1788               |
       | Hebrew year of publication as it appears in the book    | תקמט               |
       | Gregorian year of publication as it appears in the book | 1788               |
@@ -166,6 +166,32 @@ Feature: Book page
       | References                            | Instruction salutaire   |
     When  I visit "books/דברי-שלום-ואמת-א"
     Then  I should see the text of fields under the tab with name "Editions" and ID "editions"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+    Then  I should see the text of field under the tab
+      | field                                        | text                    |
+      | Number of languages                          | monolingual             |
+      | Languages in book                            | German                  |
+      | Occasional words in other languages          | Hebrew                  |
+      | Alignment of text                            | left                    |
+      | Typography                                   | consecutive             |
+      | Language of footnotes                        | German                  |
+      | Location of footnotes                        | bottom of pages         |
+      | Fonts                                        | Gothic                  |
+      | Is there a preface                           | Yes                     |
+      | Is there an epilogue                         | No                      |
+      | Is there a table of contents                 | Yes                     |
+      | Notes                                        | Abendgebet	305          |
+      | Number of pages in the book                  |  478, [5]               |
+      | Height of book, in cm                        | 19                      |
+      | Width of book, in cm                         | 10                      |
+      | Are there illustrations/diagrams?            | Yes                     |
+      | Pages in which illustrations/diagrams appear | 2                       |
+      | General notes                                | Seitenzahlen richtig:   |
+    When  I visit "books/gebete-der-hochdeutschen-und-polnischen-juden"
+    Then  I should see the text of fields under the tab with name "Book structure" and ID "book-structure"
 
   @api @wip
   Scenario: Verify tabs content on a book page
