@@ -118,7 +118,6 @@ Feature: Book page
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
-    Then  I should see the text of field under the tab
       | field                                          | text               |
       | Price of book as it appears in the book        | ראו הערה במגלת רות |
     When  I visit "books/מגלת-קהלת"
@@ -127,7 +126,6 @@ Feature: Book page
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
-    Then  I should see the text of field under the tab
       | field                                                        | text               |
       | Year of publication as it appears in other sources           | תקס                |
       | Hebrew year of publication as it appears in other sources    | תקס                |
@@ -141,7 +139,6 @@ Feature: Book page
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
-    Then  I should see the text of field under the tab
       | field                                | text                    |
       | Total number of editions             | 3                       |
       | Last known edition                   | 1841                    |
@@ -153,7 +150,6 @@ Feature: Book page
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
-    Then  I should see the text of field under the tab
       | field                                 | text                    |
       | Year                                  | תקמ"ב                   |
       | City                                  | Vienna                  |
@@ -170,7 +166,6 @@ Feature: Book page
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
-    Then  I should see the text of field under the tab
       | field                                        | text                    |
       | Number of languages                          | monolingual             |
       | Languages in book                            | German                  |
@@ -196,16 +191,16 @@ Feature: Book page
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
-    Then  I should see the text of field under the tab
       | field                                        | text                    |
       | Number                                       | 2                       |
       | Writer of preface                            | משה זאללשין              |
       | Role in book production                      | author                   |
       | Preface title                                | מתאר את מערכת השמש שלנו |
       | Notes                                        | מחבר-שותף                |
-
     When  I visit "books/ספר-עמוד-השחר"
     Then  I should see the text of fields under the tab with name "Prefaces" and ID "prefaces"
+
+
 
   @api
   Scenario Outline: Visit a books page
