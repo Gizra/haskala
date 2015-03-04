@@ -332,6 +332,15 @@ Feature: Book page
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
+      | field                                       | text                |
+      | Does the person's name appear in the book?  | Yes                 |
+      | Name as it appears in the book              | Philippssohn, Moses |
+    When  I visit "books/מודע-לבני-בינה-oder-kinderfreund-und-lehrer-1"
+    Then  I should see the text of fields under the tab with name "Book producers" and ID "book-producers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
       | field                                               | text                       |
       | Partial publication of the book in other texts      | ללמד בני ישראל              |
     When  I visit "books/בית-הספר-א"

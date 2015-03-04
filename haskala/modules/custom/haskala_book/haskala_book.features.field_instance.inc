@@ -7279,7 +7279,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_person_name_appear',
-    'label' => 'Person\'s name appear in the book',
+    'label' => 'Does the person\'s name appear in the book?',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -7932,7 +7932,7 @@ function haskala_book_field_default_field_instances() {
   t('Pages in which illustrations / diagrams appear');
   t('Part of a series of books? ');
   t('Partial publication of the book in other texts');
-  t('Person\'s name appear in the book');
+  t('Does the person\'s name appear in the book?');
   t('Place of publication as it appears in other sources');
   t('Place of publication as it appears in the book');
   t('Place of publication of original text');
