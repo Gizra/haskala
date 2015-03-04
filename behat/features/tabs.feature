@@ -234,6 +234,16 @@ Feature: Book page
     Then  I should see the text of fields under the tab with name "Persons mentioned in book" and ID "persons-mentioned-in-book"
 
   @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                                        | text                        |
+      | Main textual models of the book              | Informative text, Textbook  |
+      | Secondary textual models                     | Poems, Meliza               |
+      | Notes                                        | שיר מליצי פרי עטו             |
+    When  I visit "books/תורת-לשון-עברית-א"
+    Then  I should see the text of fields under the tab with name "Textual models" and ID "textual-models"
+
+  @api
   Scenario Outline: Visit a books page
     Given I am an anonymous user
     When  I visit "books/זה-ספר-בית-המדות"
