@@ -200,6 +200,16 @@ Feature: Book page
     When  I visit "books/ספר-עמוד-השחר"
     Then  I should see the text of fields under the tab with name "Prefaces" and ID "prefaces"
 
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                  | text                                                                                                                               |
+      | Copy of book used      | UB Rostock: CIc-377                                                                                                                |
+      | Studies about the book | Wohlwill, Immanuel: Über den Zustand der Jacobsonsschule in Seesen während der letzten drei Jahre, in:AZJ, Jg. 1847, Heft 1, S. 13 |
+      | Notes                  | Angaben nach erster Sichtung in UB Rostock                                                                                         |
+    When  I visit "books/zaphnath-paneach-oder-sammlung-moralischer-lehren-sprüche-erzählungen-und-gedichte-aus-dem"
+    Then  I should see the text of fields under the tab with name "References and bibliography" and ID "references-and-bibliography"
+
 
 
   @api
