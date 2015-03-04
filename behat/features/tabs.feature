@@ -189,7 +189,6 @@ Feature: Book page
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
       | field                                        | text                    |
-<<<<<<< HEAD
       | Number of languages                          | monolingual             |
       | Languages in book                            | German                  |
       | Occasional words in other languages          | Hebrew                  |
@@ -215,8 +214,6 @@ Feature: Book page
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
       | field                                        | text                    |
-=======
->>>>>>> master
       | Number                                       | 2                       |
       | Writer of preface                            | משה זאללשין              |
       | Role in book production                      | author                   |
