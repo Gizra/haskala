@@ -265,6 +265,22 @@ Feature: Book page
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
+      | field                         | text                                                                                                                |
+      | Berlin State Library          | Ez 6310<a>                                                                                                         |
+    When  I visit "books/akten-stücke-die-reform-der-jüdischen-kolonieen-den-preußischen-staaten-betreffend"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                   | text                                                                                                                |
+      | Book is not available?  | Yes                                                                                                         |
+    When  I visit "books/beweis-dass-heutzutage-den-k-k-staaten-die-juden-zu-kriegsdienst-ebensowohl-verpflichtet-sind"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
       | field                                        | text                     |
       | Are there personal addresses                 | No                       |
       | Are there rabbinical approbations            | No                       |
