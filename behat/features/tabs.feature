@@ -281,6 +281,14 @@ Feature: Book page
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
+      | field            | text                                                                                                                |
+      | Other libraries  | UB Göttingen: 8 H E ECCL 934/21:1                                                                                                         |
+    When  I visit "books/gesammelte-actenstücke-und-öffentliche-verhandlungen-über-die-verbesserung-der-juden"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
       | field                                        | text                     |
       | Are there personal addresses                 | No                       |
       | Are there rabbinical approbations            | No                       |
