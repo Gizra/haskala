@@ -150,7 +150,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_berlin_library_id',
-    'label' => 'National Library of Berlin catalog number',
+    'label' => 'Berlin State Library',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1461,7 +1461,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_frankfurt_library_id',
-    'label' => 'Frankfurt University Library catalog number',
+    'label' => 'Frankfurt University Library',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -7863,7 +7863,7 @@ function haskala_book_field_default_field_instances() {
   t('Fonts');
   t('Formatted display title');
   t('Format of date');
-  t('Frankfurt University Library catalog number');
+  t('Frankfurt University Library');
   t('Full title of book');
   t('General Notes');
   t('General notes');
@@ -7912,7 +7912,7 @@ function haskala_book_field_default_field_instances() {
   t('Names of other books');
   t('Names of other published volumes');
   t('Names of planned volumes that were not published');
-  t('National Library of Berlin catalog number');
+  t('Berlin State Library');
   t('National Library of Israel');
   t('Notes');
   t('Notes on book availability');
