@@ -1188,7 +1188,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_examined_volume_number',
-    'label' => 'Number of examined volume',
+    'label' => 'Number of examined volume',
     'required' => 0,
     'settings' => array(
       'max' => '',
@@ -7922,7 +7922,7 @@ function haskala_book_field_default_field_instances() {
   t('Number of languages');
   t('Number of pages in the book');
   t('Number of volumes published');
-  t('Number of examined volume');
+  t('Number of examined volume');
   t('Occasional words in other languages');
   t('Original language of text');
   t('Original publisher');
