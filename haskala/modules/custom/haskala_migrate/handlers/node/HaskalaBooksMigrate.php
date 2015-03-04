@@ -141,7 +141,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
 
     // Prefaces
     array('field_preface_number', 'Number of preface'),
-    array('field_writer_of_preface', 'Writer of preface'),
+    array('field_preface_writer', 'Writer of preface'),
     array('field_role', 'Role in book production'),
     array('field_preface_title', 'Preface title'),
     array('field_preface_notes', 'Notes on preface'),
@@ -399,7 +399,7 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_preface_number',
       'field_preface_title',
       'field_preface_notes',
-      'field_writer_of_preface',
+      'field_preface_writer',
     );
     $this->addSimpleMappings($simple_mappings);
     $term_references = array(
@@ -510,8 +510,8 @@ class HaskalaBooksMigrate extends HaskalaMigration {
    */
   public function prepareRow($row) {
     parent::prepareRow($row);
-    if ($row->field_writer_of_preface) {
-      $row->field_writer_of_preface = $this->getNodeByTitle('person', $row->field_writer_of_preface);
+    if ($row->field_preface_writer) {
+      $row->field_preface_writer = $this->getNodeByTitle('person', $row->field_writer_of_preface);
     }
   }
 
@@ -525,5 +525,8 @@ class HaskalaBooksMigrate extends HaskalaMigration {
         $wrapper->$field->set(FALSE);
       }
     }
+
+    // Create prefaces nodes.
+    dpm($row->field_preface_number);
   }
 }
