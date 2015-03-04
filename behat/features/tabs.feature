@@ -272,6 +272,53 @@ Feature: Book page
     When  I visit "books/ספר-שערי-נעימה"
     Then  I should see the text of fields under the tab with name "Topics" and ID "topics"
 
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                                     | text                       |
+      | Target audience as described in the book  | maskilim                   |
+      | Notes on target audience                  | יהודים היושבים במדינות אחרות   |
+      | Evidence about book production            | שיקבענה בדפוס               |
+      | Contacts with other people                | מדובר במשה אנסהיים          |
+    When  I visit "books/פעדאן"
+    Then  I should see the text of fields under the tab with name "Target audience" and ID "target-audience"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                                     | text                       |
+      | Contacts with official agents             | Studien-Hof-Kommission     |
+      | Later references to the book              | Ohne Bewilligung           |
+      | Mentions in reviews                       | Naftali Herz Hombergs      |
+    When  I visit "books/bne-zion"
+    Then  I should see the text of fields under the tab with name "Target audience" and ID "target-audience"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                                     | text                       |
+      | Contemporary references to the book       | כתב יושר                    |
+      | Contemporary disputes about the book      | למשל אוגוסט קראנץ           |
+      | Bans                                      | למאבקו בוייזל                |
+    When  I visit "books/דברי-שלום-ואמת-א"
+    Then  I should see the text of fields under the tab with name "Target audience" and ID "target-audience"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                  | text                       |
+      | Censorship             | Bewilligung der K          |
+    When  I visit "books/salomo-und-joseph-ii"
+    Then  I should see the text of fields under the tab with name "Target audience" and ID "target-audience"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                                               | text                       |
+      | Original sources which mention the book             | Rezension in Sulamith      |
+      | General notes                                       | Letteren zu drucken        |
+    When  I visit "books/geschichte-der-juden-von-ihrer-rückkehr-aus-der-babylonischen-gefangenschaft-bis-zur"
+    Then  I should see the text of fields under the tab with name "Target audience" and ID "target-audience"
 
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
@@ -281,6 +328,14 @@ Feature: Book page
       | Role(s) in book creation  | Translator                         |
     When  I visit "books/balsam-für-die-wunde"
     Then  I should see the text of fields under the tab with name "Book producers" and ID "book-producers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                                               | text                       |
+      | Partial publication of the book in other texts      | ללמד בני ישראל              |
+    When  I visit "books/בית-הספר-א"
+    Then  I should see the text of fields under the tab with name "Target audience" and ID "target-audience"
 
   @api
   Scenario Outline: Visit a books page

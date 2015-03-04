@@ -33,7 +33,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_alignment',
-    'label' => 'Alignment of text',
+    'label' => 'Alignment of text',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -669,7 +669,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_contemporary_references',
-    'label' => 'Contemporary references to the book',
+    'label' => 'Contemporary references to the book',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -1988,7 +1988,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_language_of_footnotes',
-    'label' => 'Language of footnotes',
+    'label' => 'Language of footnotes',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -7829,7 +7829,7 @@ function haskala_book_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Additional names for the old text\'s author as it appears in the book');
-  t('Alignment of text');
+  t('Alignment of text');
   t('Approximate age during writing of book');
   t('Are there dedications?');
   t('Are there illustrations/diagrams?');
@@ -7853,7 +7853,7 @@ function haskala_book_field_default_field_instances() {
   t('Contacts with official agents');
   t('Contacts with other people');
   t('Contemporary disputes about the book');
-  t('Contemporary references to the book');
+  t('Contemporary references to the book');
   t('Copy of book used');
   t('Edition of book');
   t('Evidence about book production');
@@ -7886,7 +7886,7 @@ function haskala_book_field_default_field_instances() {
   t('Is there information to contradict this? ');
   t('Language ');
   t('Languages in book');
-  t('Language of footnotes');
+  t('Language of footnotes');
   t('Last known edition');
   t('Later references to the book');
   t('Bar-Ilan University Library');
