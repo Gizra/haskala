@@ -237,7 +237,11 @@ function haskala_book_get_translations($book_nid) {
     return;
   }
 
-  return node_view_multiple($nodes);
+  $nodes_view = node_view_multiple($nodes);
+  // Remove the "sorted" property, otherwise when we print the tabs "1" is
+  // being printed at the end of the translations list.
+  unset($nodes_view['nodes']['#sorted']);
+  return $nodes_view;
 }
 
 /**
@@ -286,4 +290,3 @@ function haskala_book_get_mentions($book_nid) {
 function haskala_book_hebrew_alphabet_without_sofit() {
   return array('א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ז', 'ח', 'ט', 'י', 'כ', 'ל', 'מ', 'נ', 'ס', 'ע', 'פ', 'צ', 'ק', 'ר', 'ש', 'ת');
 }
-
