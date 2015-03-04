@@ -244,6 +244,15 @@ Feature: Book page
     Then  I should see the text of fields under the tab with name "Textual models" and ID "textual-models"
 
   @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field             | text                  |
+      | Topics            | Bible, Hebrew         |
+      | Notes             | דקדוק, טעמים.          |
+    When  I visit "books/ספר-שערי-נעימה"
+    Then  I should see the text of fields under the tab with name "Topics" and ID "topics"
+
+  @api
   Scenario Outline: Visit a books page
     Given I am an anonymous user
     When  I visit "books/זה-ספר-בית-המדות"
