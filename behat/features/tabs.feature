@@ -102,13 +102,41 @@ Feature: Book page
     When  I visit "books/קורות-שנות-קדם-ב"
     Then  I should see the text of fields under the tab with name "Volumes" and ID "volumes"
 
-  @api @wip
+  @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given I am an anonymous user
-    When  I visit "books/מגלת-קהלת"
+    Given the following book data
+      | field                                                   | text               |
+      | Name of the publisher                                   | Friedrich Maurer   |
+      | Year of publication as it appears in the book           | 1788               |
+      | Hebrew year of publication as it appears in the book    | תקמט               |
+      | Gregorian year of publication as it appears in the book | 1788               |
+      | Place of publication as it appears in the book          | Berlin             |
+      | Format of date                                          | modern             |
+    When  I visit "books/der-prediger"
+    Then  I should see the text of fields under the tab with name "Publisher/ Printing press " and ID "publisher-printing-press"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
     Then  I should see the text of field under the tab
-      | tab                       | field                                          | text                         |
-      | Publisher/ Printing press |                      |Price of book as it appears in the book |
+      | field                                          | text               |
+      | Price of book as it appears in the book        | ראו הערה במגלת רות |
+    When  I visit "books/מגלת-קהלת"
+    Then  I should see the text of fields under the tab with name "Publisher/ Printing press " and ID "publisher-printing-press"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+    Then  I should see the text of field under the tab
+      | field                                                        | text               |
+      | Year of publication as it appears in other sources           | תקס                |
+      | Hebrew year of publication as it appears in other sources    | תקס                |
+      | Gregorian year of publication as it appears in other sources | 1790               |
+      | Place of publication as it appears in other sources          | Dyhernfurth        |
+      | References                                                   | וינוגרד              |
+      | Notes                                                        | יצאו רק שתי חוברות   |
+    When  I visit "books/נתיב-לשון-עברית"
+    Then  I should see the text of fields under the tab with name "Publisher/ Printing press" and ID "publisher-printing-press"
 
   @api @wip
   Scenario: Verify tabs content on a book page
