@@ -506,16 +506,6 @@ class HaskalaBooksMigrate extends HaskalaMigration {
   }
 
   /**
-   * Fetch person node IDs by their titles.
-   */
-  public function prepareRow($row) {
-    parent::prepareRow($row);
-    if ($row->field_preface_writer) {
-      $row->field_preface_writer = $this->getNodeByTitle('person', $row->field_writer_of_preface);
-    }
-  }
-
-  /**
    * Set boolean fields to false instead of null.
    */
   public function prepare($node, $row) {
@@ -525,8 +515,5 @@ class HaskalaBooksMigrate extends HaskalaMigration {
         $wrapper->$field->set(FALSE);
       }
     }
-
-    // Create prefaces nodes.
-    dpm($row->field_preface_number);
   }
 }
