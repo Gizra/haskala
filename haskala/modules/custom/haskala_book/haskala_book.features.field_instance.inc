@@ -1344,7 +1344,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_format_of_publication_date',
-    'label' => 'Format of date',
+    'label' => 'Format of date',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -4096,7 +4096,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_preface_title',
-    'label' => 'Preface title',
+    'label' => 'Preface title',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -7862,7 +7862,7 @@ function haskala_book_field_default_field_instances() {
   t('Expanded in translations?');
   t('Fonts');
   t('Formatted display title');
-  t('Format of date');
+  t('Format of date');
   t('Frankfurt University Library catalog number');
   t('Full title of book');
   t('General Notes');
@@ -7936,7 +7936,7 @@ function haskala_book_field_default_field_instances() {
   t('Place of publication as it appears in other sources');
   t('Place of publication as it appears in the book');
   t('Place of publication of original text');
-  t('Preface title');
+  t('Preface title');
   t('Price of book as it appears in the book');
   t('Printed originally with other books?');
   t('Producer of book');
