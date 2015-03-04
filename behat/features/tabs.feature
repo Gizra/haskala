@@ -197,9 +197,10 @@ Feature: Book page
       | Role in book production                      | author                   |
       | Preface title                                | מתאר את מערכת השמש שלנו |
       | Notes                                        | מחבר-שותף                |
-
     When  I visit "books/ספר-עמוד-השחר"
     Then  I should see the text of fields under the tab with name "Prefaces" and ID "prefaces"
+
+
 
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
