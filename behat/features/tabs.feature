@@ -290,7 +290,6 @@ Feature: Book page
       | Contacts with official agents             | Studien-Hof-Kommission     |
       | Later references to the book              | Ohne Bewilligung           |
       | Mentions in reviews                       | Naftali Herz Hombergs      |
-      |
     When  I visit "books/bne-zion"
     Then  I should see the text of fields under the tab with name "Target audience" and ID "target-audience"
 
