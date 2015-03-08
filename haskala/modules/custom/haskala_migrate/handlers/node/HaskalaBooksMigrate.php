@@ -494,4 +494,15 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       }
     }
   }
+
+  public function prepareRow($row) {
+    parent::prepareRow($row);
+
+    // Fetch person node IDs by their titles.
+    foreach (array('field_old_text_author', 'field_original_text_author') as $person_field) {
+      if ($row->$person_field) {
+        $row->$person_field = $this->getNodeByTitle('person', $row->$person_field);
+      }
+    }
+  }
 }
