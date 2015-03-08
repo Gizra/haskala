@@ -467,9 +467,9 @@ Feature: Book page
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
       | field                     | text                               |
-      | Name                      | Wohl, Levi - וול, יהודה ליב בן צבי הירש |
-      | Role(s) in book creation  | Translator                         |
-    When  I visit "books/balsam-für-die-wunde"
+      | Name                      | Maimon, Salomon - מימון, שלמה |
+      | Role(s) in book creation  | Mevi La'Dfus (Producer)                         |
+    When  I visit "books/salomon-maimons-lebensgeschichte-1"
     Then  I should see the text of fields under the tab with name "Book producers" and ID "book-producers"
 
   @api
