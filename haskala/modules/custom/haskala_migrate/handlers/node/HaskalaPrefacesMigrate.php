@@ -16,6 +16,11 @@ class HaskalaPrefacesMigrate extends HaskalaMigration {
     array('field_preface_notes', 'Notes on preface'),
   );
 
+  public $dependencies = array(
+    // Dependent on books, but books are never marked as finished.
+    'HaskalaProductionsMigratePrimary',
+  );
+
   public function __construct($arguments) {
     parent::__construct($arguments);
 
