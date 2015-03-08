@@ -139,14 +139,6 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_book_structure_notes', 'Notes on book structure'),
 
 
-    // Prefaces
-    array('field_preface_number', 'Number of preface'),
-    array('field_writer_of_preface', 'Writer of preface'),
-    array('field_role', 'Role in book production'),
-    array('field_preface_title', 'Preface title'),
-    array('field_preface_notes', 'Notes on preface'),
-
-
     // Persons mentioned in the book
     array('field_personal_address', 'Are there personal addresses'),
     array('field_personal_addresse_notes', 'Notes on personal addresses'),
@@ -394,20 +386,6 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     $this->addTermReferenceMappings($term_references);
 
 
-    // Prefaces
-    $simple_mappings = array(
-      'field_preface_number',
-      'field_preface_title',
-      'field_preface_notes',
-      'field_writer_of_preface',
-    );
-    $this->addSimpleMappings($simple_mappings);
-    $term_references = array(
-      'field_role',
-    );
-    $this->addTermReferenceMappings($term_references);
-
-
     // Persons mentioned in book
     $simple_mappings = array(
       'field_personal_address',
@@ -503,16 +481,6 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_references_notes',
     );
     $this->addSimpleMappings($simple_mappings);
-  }
-
-  /**
-   * Fetch person node IDs by their titles.
-   */
-  public function prepareRow($row) {
-    parent::prepareRow($row);
-    if ($row->field_writer_of_preface) {
-      $row->field_writer_of_preface = $this->getNodeByTitle('person', $row->field_writer_of_preface);
-    }
   }
 
   /**

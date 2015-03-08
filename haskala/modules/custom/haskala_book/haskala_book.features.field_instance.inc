@@ -7136,6 +7136,253 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-preface-field_book'
+  $field_instances['node-preface-field_book'] = array(
+    'bundle' => 'preface',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_book',
+    'label' => 'Book',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-preface-field_preface_notes'
+  $field_instances['node-preface-field_preface_notes'] = array(
+    'bundle' => 'preface',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_preface_notes',
+    'label' => 'Notes',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-preface-field_preface_number'
+  $field_instances['node-preface-field_preface_number'] = array(
+    'bundle' => 'preface',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_preface_number',
+    'label' => 'Number',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-preface-field_preface_title'
+  $field_instances['node-preface-field_preface_title'] = array(
+    'bundle' => 'preface',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_preface_title',
+    'label' => 'Preface title',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-preface-field_preface_writer'
+  $field_instances['node-preface-field_preface_writer'] = array(
+    'bundle' => 'preface',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_preface_writer',
+    'label' => 'Writer of preface',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-preface-field_role'
+  $field_instances['node-preface-field_role'] = array(
+    'bundle' => 'preface',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_role',
+    'label' => 'Role in book production',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-production-field_book'
   $field_instances['node-production-field_book'] = array(
     'bundle' => 'production',
@@ -7842,7 +8089,9 @@ function haskala_book_field_default_field_instances() {
   t('Author of "old text"');
   t('Author of original text');
   t('Bans');
+  t('Bar-Ilan University Library');
   t('Bibliographical citations');
+  t('Book');
   t('Book is not available?');
   t('British Library');
   t('Censorship');
@@ -7855,14 +8104,15 @@ function haskala_book_field_default_field_instances() {
   t('Contemporary disputes about the book');
   t('Contemporary references to the book');
   t('Copy of book used');
+  t('Does the person\'s name appear in the book?');
   t('Edition of book');
   t('Evidence about book production');
   t('Evidence for person\'s identity if it does not appear in the book');
   t('Expanded in new edition?');
   t('Expanded in translations?');
   t('Fonts');
-  t('Formatted display title');
   t('Format of date');
+  t('Formatted display title');
   t('Frankfurt University Library catalog number');
   t('Full title of book');
   t('General Notes');
@@ -7885,11 +8135,10 @@ function haskala_book_field_default_field_instances() {
   t('Is there information to contradict this?');
   t('Is there information to contradict this? ');
   t('Language ');
-  t('Languages in book');
   t('Language of footnotes');
+  t('Languages in book');
   t('Last known edition');
   t('Later references to the book');
-  t('Bar-Ilan University Library');
   t('Link to digital book');
   t('List of sources');
   t('Location during writing of book');
@@ -7919,10 +8168,10 @@ function haskala_book_field_default_field_instances() {
   t('Notes on illustrations / diagrams');
   t('Notes on target audience');
   t('Number');
+  t('Number of examined volume');
   t('Number of languages');
   t('Number of pages in the book');
   t('Number of volumes published');
-  t('Number of examined volume');
   t('Occasional words in other languages');
   t('Original language of text');
   t('Original publisher');
@@ -7932,7 +8181,6 @@ function haskala_book_field_default_field_instances() {
   t('Pages in which illustrations / diagrams appear');
   t('Part of a series of books? ');
   t('Partial publication of the book in other texts');
-  t('Does the person\'s name appear in the book?');
   t('Place of publication as it appears in other sources');
   t('Place of publication as it appears in the book');
   t('Place of publication of original text');

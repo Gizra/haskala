@@ -14,6 +14,7 @@ files[] = handlers/node/HaskalaEditionMigrate.php
 files[] = handlers/node/HaskalaMentionsMigrate.php
 files[] = handlers/node/HaskalaPageElementsMigrate.php
 files[] = handlers/node/HaskalaPeopleMigrate.php
+files[] = handlers/node/HaskalaPrefacesMigrate.php
 files[] = handlers/node/HaskalaProductionsMigrate.php
 files[] = handlers/taxonomy_term/HaskalaCityTermsMigrate.php
 files[] = handlers/taxonomy_term/HaskalaEditionTypeTermsMigrate.php
