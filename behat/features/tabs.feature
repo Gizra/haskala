@@ -21,7 +21,63 @@ Feature: Book page
       | Notes                                       | כפי שמציין זאת בפרוש                  |
       | Expanded in translations                    | Yes                                 |
       | Expanded in new edition                     | Yes                                 |
+      | Quotes from non-Jewish sources              | Basnage: Histoire des Juifs.        |
+      | General notes                               | הוא גם כולל קטע מתורגם               |
     When  I visit "books/מאמר-מגיד-חדשות"
+    Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
+
+  @api
+  Scenario: Verify content in the "Type of book" section on a book page
+    Given the following book data
+      | field                                       | text                                |
+      | Text is presented as a translation          | Yes                                 |
+      | References                                  | רשום בדף השער                       |
+      | Notes                                       | אמנציפצית היהודים בהולנד               |
+    When  I visit "books/actenstücke-zur-geschichte-der-erhebung-der-juden-zu-bürgern-der-republik-batavien"
+    Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
+
+  @api
+  Scenario: Verify content in the "Type of book" section on a book page
+    Given the following book data
+      | field                                     | text                                |
+      | Name of original text                     | עולת צבור                            |
+      | Author of original text                   | Flekeles, Eleasar                   |
+    When  I visit "books/זענד-שרייבן-אן-דיא-דייטשי-יודן"
+    Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
+
+  @api
+  Scenario: Verify content in the "Type of book" section on a book page
+    Given the following book data
+      | field                                           | text                                |
+      | Text is presented as a new edition of old text  | Yes                                 |
+      | Is there information to contradict this         | Yes                                 |
+      | References                                      | מציין את המקור המדוייק                |
+      | Name of "old text"                              | משלי אסף                           |
+      | Author of "old text"                            | אסף בן ברכיהו                       |
+      | Notes                                           | דברי הימים א                        |
+    When  I visit "books/משלי-אסף-א"
+    Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
+
+  @api
+  Scenario: Verify content in the "Type of book" section on a book page
+    Given the following book data
+      | field                                           | text                               |
+      | Are there sources mentioned in the book itself  | Yes                                |
+      | List of sources                                 | תלמוד                              |
+      | References                                      | פרקים בסאטירה                      |
+      | Are there sources not mentioned in the book     | Yes                                |
+      | List of sources                                 | Voltaire, וולטר                     |
+      | References                                      | היושב על כסא הרבנות                 |
+      | Quotes from Jewish sources                      | פסוקים רבים מתוך ספרי התנ"ך          |
+    When  I visit "books/ספר-כתב-יושר"
+    Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
+
+  @api
+  Scenario: Verify content in the "Type of book" section on a book page
+    Given the following book data
+      | field                   | text                               |
+      | Motto                   | revus par Grimm                    |
+    When  I visit "books/akten-stücke-die-reform-der-jüdischen-kolonieen-den-preußischen-staaten-betreffend"
     Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
 
   @api

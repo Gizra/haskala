@@ -4214,7 +4214,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_presented_new_edition',
-    'label' => 'Text is presented as a new edition?',
+    'label' => 'Text is presented as a new edition of old text?',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -7953,7 +7953,7 @@ function haskala_book_field_default_field_instances() {
   t('Studies about the book');
   t('Target audience as described in the book');
   t('Tel-Aviv University Library');
-  t('Text is presented as a new edition?');
+  t('Text is presented as a new edition of old text?');
   t('Text is presented as a translation?');
   t('Text is presented as original');
   t('The New York Public Library');
