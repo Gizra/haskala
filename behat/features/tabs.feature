@@ -5,11 +5,79 @@ Feature: Book page
   @api
   Scenario: Verify content in the "Type of book" section on a book page
     Given the following book data
+      | field                                                        | text                                  |
+      | Full title of book                                           | אויף פוליש טייטש גשריבן                  |
+      | Title of the book in Latin characters                        | Sefer refuʼot ha-nikra ʻEzer Yisraʼel |
+      | Text is presented as original                                | Yes                                   |
+      | Is there information to contradict this                      | Yes                                   |
+      | References                                                   | שמרוק, משה מרקוזה                     |
+    When  I visit "books/ספר-רפואות-הנקרא-עזר-ישראל"
+    Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
+
+  @api
+  Scenario: Verify content in the "Type of book" section on a book page
+    Given the following book data
       | field                                       | text                                |
       | Notes                                       | כפי שמציין זאת בפרוש                  |
       | Expanded in translations                    | Yes                                 |
       | Expanded in new edition                     | Yes                                 |
+      | Quotes from non-Jewish sources              | Basnage: Histoire des Juifs.        |
+      | General notes                               | הוא גם כולל קטע מתורגם               |
     When  I visit "books/מאמר-מגיד-חדשות"
+    Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
+
+  @api
+  Scenario: Verify content in the "Type of book" section on a book page
+    Given the following book data
+      | field                                       | text                                |
+      | Text is presented as a translation          | Yes                                 |
+      | References                                  | רשום בדף השער                       |
+      | Notes                                       | אמנציפצית היהודים בהולנד               |
+    When  I visit "books/actenstücke-zur-geschichte-der-erhebung-der-juden-zu-bürgern-der-republik-batavien"
+    Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
+
+  @api
+  Scenario: Verify content in the "Type of book" section on a book page
+    Given the following book data
+      | field                                     | text                                |
+      | Name of original text                     | עולת צבור                            |
+      | Author of original text                   | Flekeles, Eleasar                   |
+    When  I visit "books/זענד-שרייבן-אן-דיא-דייטשי-יודן"
+    Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
+
+  @api
+  Scenario: Verify content in the "Type of book" section on a book page
+    Given the following book data
+      | field                                           | text                                |
+      | Text is presented as a new edition of old text  | Yes                                 |
+      | Is there information to contradict this         | Yes                                 |
+      | References                                      | מציין את המקור המדוייק                |
+      | Name of "old text"                              | משלי אסף                           |
+      | Author of "old text"                            | אסף בן ברכיהו                       |
+      | Notes                                           | דברי הימים א                        |
+    When  I visit "books/משלי-אסף-א"
+    Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
+
+  @api
+  Scenario: Verify content in the "Type of book" section on a book page
+    Given the following book data
+      | field                                           | text                               |
+      | Are there sources mentioned in the book itself  | Yes                                |
+      | List of sources                                 | תלמוד                              |
+      | References                                      | פרקים בסאטירה                      |
+      | Are there sources not mentioned in the book     | Yes                                |
+      | List of sources                                 | Voltaire, וולטר                     |
+      | References                                      | היושב על כסא הרבנות                 |
+      | Quotes from Jewish sources                      | פסוקים רבים מתוך ספרי התנ"ך          |
+    When  I visit "books/ספר-כתב-יושר"
+    Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
+
+  @api
+  Scenario: Verify content in the "Type of book" section on a book page
+    Given the following book data
+      | field                   | text                               |
+      | Motto                   | revus par Grimm                    |
+    When  I visit "books/akten-stücke-die-reform-der-jüdischen-kolonieen-den-preußischen-staaten-betreffend"
     Then  I should see the text of fields under the tab with name "Type of book" and ID "top-details"
 
   @api
@@ -177,6 +245,31 @@ Feature: Book page
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
       | field                                        | text                    |
+      | Number of languages                          | monolingual             |
+      | Languages in book                            | German                  |
+      | Occasional words in other languages          | Hebrew                  |
+      | Alignment of text                            | left                    |
+      | Typography                                   | consecutive             |
+      | Language of footnotes                        | German                  |
+      | Location of footnotes                        | bottom of pages         |
+      | Fonts                                        | Gothic                  |
+      | Is there a preface                           | Yes                     |
+      | Is there an epilogue                         | No                      |
+      | Is there a table of contents                 | Yes                     |
+      | Notes                                        | Versöhnungstagesgebete  |
+      | Number of pages in the book                  |  478, [5]               |
+      | Height of book, in cm                        | 19                      |
+      | Width of book, in cm                         | 10                      |
+      | Are there illustrations/diagrams?            | Yes                     |
+      | Pages in which illustrations / diagrams appear | 2                       |
+      | General notes                                | Seitenzahlen richtig:   |
+    When  I visit "books/gebete-der-hochdeutschen-und-polnischen-juden"
+    Then  I should see the text of fields under the tab with name "Book structure" and ID "book-structure"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                                        | text                    |
       | Number                                       | 2                       |
       | Writer of preface                            | משה זאללשין              |
       | Role in book production                      | author                   |
@@ -184,36 +277,6 @@ Feature: Book page
       | Notes                                        | מחבר-שותף                |
     When  I visit "books/ספר-עמוד-השחר"
     Then  I should see the text of fields under the tab with name "Prefaces" and ID "prefaces"
-
-  @api
-  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given the following book data
-      | field                  | text                                                                                                                               |
-      | Copy of book used      | UB Rostock: CIc-377                                                                                                                |
-      | Studies about the book | Wohlwill, Immanuel: Über den Zustand der Jacobsonsschule in Seesen während der letzten drei Jahre, in:AZJ, Jg. 1847, Heft 1, S. 13 |
-      | Notes                  | Angaben nach erster Sichtung in UB Rostock                                                                                         |
-    When  I visit "books/zaphnath-paneach-oder-sammlung-moralischer-lehren-sprüche-erzählungen-und-gedichte-aus-dem"
-    Then  I should see the text of fields under the tab with name "References and bibliography" and ID "references-and-bibliography"
-
-  @api
-  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given the following book data
-      | field                  | text                                                                                                                               |
-      | Secondary sources used by researchers      | פיליפסון, ביוגרפיות.                                                                                                                |
-    When  I visit "books/מודע-לבני-בינה-oder-kinderfreund-und-lehrer-1"
-    Then  I should see the text of fields under the tab with name "References and bibliography" and ID "references-and-bibliography"
-
-
-  @api
-  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given the following book data
-      | field                       | text                                                                                                                |
-      | National Library of Israel  | 13901 V 25                                                                                                          |
-      | Bar-Ilan University Library | B43 בן-זאב.או תקס"ז                                                                                                   |
-      | Tel-Aviv University Library | CR 492.42 בן-ז                                                                                                     |
-      | General notes               | בבר אילן ראיתי חלק א' וב' בנפרד, וכרך משותף לשלושת החלקים. בלאומית יש שלושה כרכים נפרדים. כלומר, הספר יצא במקור בשלושה כרכים נפרדים. |
-    When  I visit "books/אוצר-השרשים-א"
-    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
 
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
@@ -316,10 +379,97 @@ Feature: Book page
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
+      | field                                               | text                       |
+      | Partial publication of the book in other texts      | ללמד בני ישראל              |
+    When  I visit "books/בית-הספר-א"
+    Then  I should see the text of fields under the tab with name "Target audience" and ID "target-audience"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                       | text                                                                                                                          |
+      | National Library of Israel  | 13901 V 25                                                                                                                    |
+      | Bar-Ilan University Library | B43 בן-זאב.או תקס"ז                                                                                                            |
+      | Tel-Aviv University Library | CR 492.42 בן-ז                                                                                                                 |
+      | General notes               | בבר אילן ראיתי חלק א' וב' בנפרד, וכרך משותף לשלושת החלקים. בלאומית יש שלושה כרכים נפרדים. כלומר, הספר יצא במקור בשלושה כרכים נפרדים. |
+    When  I visit "books/אוצר-השרשים-א"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                         | text                                                                                       |
+      | Berlin State Library          | Ez 6310<a>                                                                                 |
+      | Frankfurt University Library  | urn:nbn:de:hebis:30-180012126007                                                           |
+      | Link to digital book          | http://sammlungen.ub.uni-frankfurt.de/urn/urn:nbn:de:hebis:30-180012126007                 |
+    When  I visit "books/akten-stücke-die-reform-der-jüdischen-kolonieen-den-preußischen-staaten-betreffend"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                         | text                              |
+      | The New York Public Library   | 31225 MF                          |
+    When  I visit "books/אמרי-שפר"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                         | text                              |
+      | British Library               | 58JY6                             |
+    When  I visit "books/בית-הספר-ב"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field            | text                                           |
+      | Other libraries  | UB Göttingen: 8 H E ECCL 934/21:1              |
+    When  I visit "books/gesammelte-actenstücke-und-öffentliche-verhandlungen-über-die-verbesserung-der-juden"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                   | text                                    |
+      | Book is not available?  | Yes                                     |
+    When  I visit "books/beweis-dass-heutzutage-den-k-k-staaten-die-juden-zu-kriegsdienst-ebensowohl-verpflichtet-sind"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                       | text                                    |
+      | Notes on book availability  | אך לאחר הקדמת המחבר                    |
+    When  I visit "books/שירי-תפארת-א"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                  | text                                                                                                                               |
+      | Copy of book used      | UB Rostock: CIc-377                                                                                                                |
+      | Studies about the book | Wohlwill, Immanuel: Über den Zustand der Jacobsonsschule in Seesen während der letzten drei Jahre, in:AZJ, Jg. 1847, Heft 1, S. 13 |
+      | Notes                  | Angaben nach erster Sichtung in UB Rostock                                                                                         |
+    When  I visit "books/zaphnath-paneach-oder-sammlung-moralischer-lehren-sprüche-erzählungen-und-gedichte-aus-dem"
+    Then  I should see the text of fields under the tab with name "References and bibliography" and ID "references-and-bibliography"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                  | text                                                                                                                               |
+      | Secondary sources used by researchers      | פיליפסון, ביוגרפיות.                                                                                                                |
+    When  I visit "books/מודע-לבני-בינה-oder-kinderfreund-und-lehrer-1"
+    Then  I should see the text of fields under the tab with name "References and bibliography" and ID "references-and-bibliography"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
       | field                     | text                               |
-      | Name                      | Wohl, Levi - וול, יהודה ליב בן צבי הירש |
-      | Role(s) in book creation  | Translator                         |
-    When  I visit "books/balsam-für-die-wunde"
+      | Name                      | Maimon, Salomon - מימון, שלמה |
+      | Role(s) in book creation  | Mevi La'Dfus (Producer)                         |
+    When  I visit "books/salomon-maimons-lebensgeschichte-1"
     Then  I should see the text of fields under the tab with name "Book producers" and ID "book-producers"
 
   @api
@@ -331,13 +481,6 @@ Feature: Book page
     When  I visit "books/מודע-לבני-בינה-oder-kinderfreund-und-lehrer-1"
     Then  I should see the text of fields under the tab with name "Book producers" and ID "book-producers"
 
-  @api
-  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given the following book data
-      | field                                               | text                       |
-      | Partial publication of the book in other texts      | ללמד בני ישראל              |
-    When  I visit "books/בית-הספר-א"
-    Then  I should see the text of fields under the tab with name "Target audience" and ID "target-audience"
 
   @api
   Scenario Outline: Visit a books page
@@ -391,4 +534,6 @@ Feature: Book page
   Examples:
     | link                                                                                |
     | http://www.mdz-nbn-resolving.de/urn/resolver.pl?urn=urn%3Anbn%3Ade%3Abvb%3A12-bs... |
+
+
 

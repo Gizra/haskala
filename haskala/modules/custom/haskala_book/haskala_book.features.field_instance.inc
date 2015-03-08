@@ -150,7 +150,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_berlin_library_id',
-    'label' => 'National Library of Berlin catalog number',
+    'label' => 'Berlin State Library',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -738,7 +738,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 157,
+        'weight' => 158,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1461,7 +1461,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_frankfurt_library_id',
-    'label' => 'Frankfurt University Library catalog number',
+    'label' => 'Frankfurt University Library',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -2930,7 +2930,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 159,
+        'weight' => 160,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2972,7 +2972,7 @@ function haskala_book_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 160,
+        'weight' => 161,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3453,7 +3453,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 162,
+        'weight' => 154,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4139,7 +4139,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_presented_as_original',
-    'label' => 'Text is presented as original',
+    'label' => 'Text is presented as original',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -4206,7 +4206,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 156,
+        'weight' => 157,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4217,7 +4217,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_presented_new_edition',
-    'label' => 'Text is presented as a new edition?',
+    'label' => 'Text is presented as a new edition of old text?',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -4245,7 +4245,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 161,
+        'weight' => 162,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4285,7 +4285,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 158,
+        'weight' => 159,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4405,7 +4405,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 155,
+        'weight' => 156,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -8093,6 +8093,7 @@ function haskala_book_field_default_field_instances() {
   t('Author of original text');
   t('Bans');
   t('Bar-Ilan University Library');
+  t('Berlin State Library');
   t('Bibliographical citations');
   t('Book');
   t('Book is not available?');
@@ -8116,7 +8117,7 @@ function haskala_book_field_default_field_instances() {
   t('Fonts');
   t('Format of date');
   t('Formatted display title');
-  t('Frankfurt University Library catalog number');
+  t('Frankfurt University Library');
   t('Full title of book');
   t('General Notes');
   t('General notes');
@@ -8164,7 +8165,6 @@ function haskala_book_field_default_field_instances() {
   t('Names of other books');
   t('Names of other published volumes');
   t('Names of planned volumes that were not published');
-  t('National Library of Berlin catalog number');
   t('National Library of Israel');
   t('Notes');
   t('Notes on book availability');
@@ -8204,9 +8204,9 @@ function haskala_book_field_default_field_instances() {
   t('Studies about the book');
   t('Target audience as described in the book');
   t('Tel-Aviv University Library');
-  t('Text is presented as a new edition?');
+  t('Text is presented as a new edition of old text?');
   t('Text is presented as a translation?');
-  t('Text is presented as original');
+  t('Text is presented as original');
   t('The New York Public Library');
   t('Title of the book in Latin characters');
   t('Title of the original text as it appeared originally');
