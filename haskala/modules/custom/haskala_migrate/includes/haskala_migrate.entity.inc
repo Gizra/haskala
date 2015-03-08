@@ -95,8 +95,19 @@ abstract class HaskalaMigration extends Migration {
     }
 
     if (empty($result['node'])) {
-      watchdog('haskala', t('Missing @type called "@title"', array('@type' => $bundle, '@title' => $title)));
-      return;
+      // Create a stub node.
+      $node = new stdClass();
+      $node->title = $title;
+      $node->type = $bundle;
+      node_object_prepare($node);
+      $node->language = LANGUAGE_NONE; // Or e.g. 'en' if locale is enabled
+      $node->uid = 1;
+      $node->status = NODE_PUBLISHED;
+      $node->promote = 0;
+      node_save($node);
+
+      watchdog('haskala', t('created @type called "@title"', array('@type' => $bundle, '@title' => $title)));
+      return $node->nid;
     }
 
     return reset(array_keys($result['node']));
