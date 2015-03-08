@@ -9,6 +9,13 @@ use Behat\Behat\Tester\Exception\PendingException;
 class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
 
   /**
+   * Hold the TableNode data to be used by following steps.
+   *
+   * @var array
+   */
+  protected $fieldsDataTable = array();
+
+  /**
    * @When /^I login with user "([^"]*)"$/
    */
   public function iLoginWithUser($name) {
@@ -173,8 +180,8 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
    * @When I should see :num :element elements
    */
   public function iShouldSeeElements($num, $element) {
-    $container = $this->getSession()->getPage();
-    $nodes = $container->findAll('css', $element);
+    $page = $this->getSession()->getPage();
+    $nodes = $page->findAll('css', $element);
     $count = count($nodes);
     if (intval($num) != $count) {
       throw new \Exception(sprintf('The number of %s element on the page is %s and is not equal to %s, like you expect.', $element, $count, $num));
@@ -188,17 +195,40 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
     $this->getMink()->assertSession()->elementTextContains('css', $section, $text);
   }
 
-  /**
-   * @Then I should see the text under the tab
-   */
-  public function iShouldSeeTheTextUnderTheTab(TableNode $table) {
-    foreach ($table as $row) {
-      // Check tab text exists in the navigation details.
-      $this->getMink()->assertSession()->elementTextContains('css', '#details-navigation', $row['tab']);
 
-      // Check tab and text exists in the content area.
-      $this->getMink()->assertSession()->elementTextContains('css', '#groups', $row['tab']);
-      $this->getMink()->assertSession()->elementTextContains('css', '#groups', $row['text']);
+  /**
+   * @Given the following book data
+   *
+   * Since a step with a TableNode cannot get a second argument, this is used
+   * as a step to get the data in an internal variable.
+   */
+  public function theFollowingBookData(TableNode $table) {
+    $this->fieldsDataTable = $table;
+
+  }
+
+  /**
+   * Return an existing data table.
+   *
+   * @return array
+   */
+  public function getFieldsDataTable() {
+    return $this->fieldsDataTable;
+  }
+
+  /**
+   * @Then I should see the text of fields under the tab with name :name and ID :selector
+   */
+  public function iShouldSeeTheTextOfFieldsUnderTheTabWithId($name, $selector) {
+    // Check tab text exists in the navigation details.
+    if ($selector != "top-details"){
+      $this->getMink()->assertSession()->elementTextContains('css', '#details-navigation', $name);
+    }
+
+    foreach ($this->getFieldsDataTable() as $row) {
+      // Check tab and text exists in the specific tab.
+      $this->getMink()->assertSession()->elementTextContains('css', '#' . $selector, $row['field']);
+      $this->getMink()->assertSession()->elementTextContains('css', '#' . $selector, $row['text']);
     }
   }
 }
