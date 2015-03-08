@@ -66,13 +66,20 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
   }
 
   // Add translations to Editions tab.
-  if ($translations_fields = haskala_book_get_translations($book_nid)) {
+  if ($translations_fields = haskala_book_get_sub_nodes($book_nid, 'translation')) {
     if (empty($tabs_fields[t('Editions')])) {
       $tabs_fields[t('Editions')] = array();
     }
 
     $tabs_fields[t('Editions')]['sub_title'] = t('Translations');
     $tabs_fields[t('Editions')] = array_merge($tabs_fields[t('Editions')], $translations_fields);
+  }
+
+  // Add translations to Editions tab.
+  if ($prefaces = haskala_book_get_sub_nodes($book_nid, 'preface')) {
+    dpm($prefaces);
+    $tabs_fields[t('Prefaces')]['sub_title'] = t('Prefaces');
+//    $tabs_fields[t('Editions')] = array_merge($tabs_fields[t('Editions')], $translations_fields);
   }
 
   // Add mentionees for PERSONS MENTIONED IN BOOK tab.

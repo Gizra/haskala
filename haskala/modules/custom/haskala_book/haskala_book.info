@@ -458,6 +458,7 @@ features[field_instance][] = node-edition-field_edition_city
 features[field_instance][] = node-edition-field_edition_references
 features[field_instance][] = node-edition-field_edition_year
 features[field_instance][] = node-mention-field_book
+features[field_instance][] = node-preface-field_book
 features[field_instance][] = node-preface-field_preface_notes
 features[field_instance][] = node-preface-field_preface_number
 features[field_instance][] = node-preface-field_preface_title

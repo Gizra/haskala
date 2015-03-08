@@ -7136,6 +7136,49 @@ function haskala_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-preface-field_book'
+  $field_instances['node-preface-field_book'] = array(
+    'bundle' => 'preface',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_book',
+    'label' => 'Book',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'node-preface-field_preface_notes'
   $field_instances['node-preface-field_preface_notes'] = array(
     'bundle' => 'preface',
@@ -8044,6 +8087,7 @@ function haskala_book_field_default_field_instances() {
   t('Bans');
   t('Bar-Ilan University Library');
   t('Bibliographical citations');
+  t('Book');
   t('Book is not available?');
   t('British Library');
   t('Censorship');
