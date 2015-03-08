@@ -187,10 +187,10 @@
 
             .fields-multi:not(:first-child) {
               margin-top: 30px;
+            }
 
-              .node-teaser:not(:first-child) {
-                margin-top: 30px;
-              }
+            .node-teaser:not(:first-child) {
+              margin-top: 30px;
             }
 
             .field-name-field-target-general-notes .field-label {
@@ -199,10 +199,12 @@
           }
         }
       }
+
       .tab-sub-title {
         margin-top: 40px;
         border-bottom: 1px solid $darkgray;
       }
+
       .type-of-book {
         display: none;
       }

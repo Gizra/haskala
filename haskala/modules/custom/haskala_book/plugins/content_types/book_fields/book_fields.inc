@@ -77,9 +77,7 @@ function haskala_book_book_fields_content_type_render($subtype, $conf, $args, $c
 
   // Add translations to Editions tab.
   if ($prefaces = haskala_book_get_sub_nodes($book_nid, 'preface')) {
-    dpm($prefaces);
-    $tabs_fields[t('Prefaces')]['sub_title'] = t('Prefaces');
-//    $tabs_fields[t('Editions')] = array_merge($tabs_fields[t('Editions')], $translations_fields);
+    $tabs_fields[t('Prefaces')] = $prefaces;
   }
 
   // Add mentionees for PERSONS MENTIONED IN BOOK tab.
