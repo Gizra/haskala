@@ -738,7 +738,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 157,
+        'weight' => 158,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2930,7 +2930,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 159,
+        'weight' => 160,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2972,7 +2972,7 @@ function haskala_book_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 160,
+        'weight' => 161,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3410,7 +3410,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 163,
+        'weight' => 155,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3450,7 +3450,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 162,
+        'weight' => 154,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4203,7 +4203,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 156,
+        'weight' => 157,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4242,7 +4242,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 161,
+        'weight' => 162,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4282,7 +4282,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 158,
+        'weight' => 159,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4402,7 +4402,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 155,
+        'weight' => 156,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -7842,6 +7842,8 @@ function haskala_book_field_default_field_instances() {
   t('Author of "old text"');
   t('Author of original text');
   t('Bans');
+  t('Bar-Ilan University Library');
+  t('Berlin State Library');
   t('Bibliographical citations');
   t('Book is not available?');
   t('British Library');
@@ -7855,14 +7857,15 @@ function haskala_book_field_default_field_instances() {
   t('Contemporary disputes about the book');
   t('Contemporary references to the book');
   t('Copy of book used');
+  t('Does the person\'s name appear in the book?');
   t('Edition of book');
   t('Evidence about book production');
   t('Evidence for person\'s identity if it does not appear in the book');
   t('Expanded in new edition?');
   t('Expanded in translations?');
   t('Fonts');
-  t('Formatted display title');
   t('Format of date');
+  t('Formatted display title');
   t('Frankfurt University Library');
   t('Full title of book');
   t('General Notes');
@@ -7885,11 +7888,10 @@ function haskala_book_field_default_field_instances() {
   t('Is there information to contradict this?');
   t('Is there information to contradict this? ');
   t('Language ');
-  t('Languages in book');
   t('Language of footnotes');
+  t('Languages in book');
   t('Last known edition');
   t('Later references to the book');
-  t('Bar-Ilan University Library');
   t('Link to digital book');
   t('List of sources');
   t('Location during writing of book');
@@ -7912,17 +7914,16 @@ function haskala_book_field_default_field_instances() {
   t('Names of other books');
   t('Names of other published volumes');
   t('Names of planned volumes that were not published');
-  t('Berlin State Library');
   t('National Library of Israel');
   t('Notes');
   t('Notes on book availability');
   t('Notes on illustrations / diagrams');
   t('Notes on target audience');
   t('Number');
+  t('Number of examined volume');
   t('Number of languages');
   t('Number of pages in the book');
   t('Number of volumes published');
-  t('Number of examined volume');
   t('Occasional words in other languages');
   t('Original language of text');
   t('Original publisher');
@@ -7932,7 +7933,6 @@ function haskala_book_field_default_field_instances() {
   t('Pages in which illustrations / diagrams appear');
   t('Part of a series of books? ');
   t('Partial publication of the book in other texts');
-  t('Does the person\'s name appear in the book?');
   t('Place of publication as it appears in other sources');
   t('Place of publication as it appears in the book');
   t('Place of publication of original text');
