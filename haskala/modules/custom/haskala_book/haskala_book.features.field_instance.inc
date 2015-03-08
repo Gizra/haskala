@@ -4136,7 +4136,7 @@ function haskala_book_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_presented_as_original',
-    'label' => 'Text is presented as original',
+    'label' => 'Text is presented as original',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -7955,7 +7955,7 @@ function haskala_book_field_default_field_instances() {
   t('Tel-Aviv University Library');
   t('Text is presented as a new edition?');
   t('Text is presented as a translation?');
-  t('Text is presented as original');
+  t('Text is presented as original');
   t('The New York Public Library');
   t('Title of the book in Latin characters');
   t('Title of the original text as it appeared originally');

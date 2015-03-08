@@ -205,7 +205,7 @@ Feature: Book page
       | Height of book, in cm                        | 19                      |
       | Width of book, in cm                         | 10                      |
       | Are there illustrations/diagrams?            | Yes                     |
-      | Pages in which illustrations/diagrams appear | 2                       |
+      | Pages in which illustrations / diagrams appear | 2                       |
       | General notes                                | Seitenzahlen richtig:   |
     When  I visit "books/gebete-der-hochdeutschen-und-polnischen-juden"
     Then  I should see the text of fields under the tab with name "Book structure" and ID "book-structure"
