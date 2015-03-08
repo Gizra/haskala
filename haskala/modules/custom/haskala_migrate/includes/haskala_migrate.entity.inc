@@ -100,7 +100,7 @@ abstract class HaskalaMigration extends Migration {
       $node->title = $title;
       $node->type = $bundle;
       node_object_prepare($node);
-      $node->language = LANGUAGE_NONE; // Or e.g. 'en' if locale is enabled
+      $node->language = LANGUAGE_NONE;
       $node->uid = 1;
       $node->status = NODE_PUBLISHED;
       $node->promote = 0;
