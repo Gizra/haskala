@@ -281,70 +281,6 @@ Feature: Book page
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
-      | field                  | text                                                                                                                               |
-      | Copy of book used      | UB Rostock: CIc-377                                                                                                                |
-      | Studies about the book | Wohlwill, Immanuel: Über den Zustand der Jacobsonsschule in Seesen während der letzten drei Jahre, in:AZJ, Jg. 1847, Heft 1, S. 13 |
-      | Notes                  | Angaben nach erster Sichtung in UB Rostock                                                                                         |
-    When  I visit "books/zaphnath-paneach-oder-sammlung-moralischer-lehren-sprüche-erzählungen-und-gedichte-aus-dem"
-    Then  I should see the text of fields under the tab with name "References and bibliography" and ID "references-and-bibliography"
-
-  @api
-  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given the following book data
-      | field                  | text                                                                                                                               |
-      | Secondary sources used by researchers      | פיליפסון, ביוגרפיות.                                                                                                                |
-    When  I visit "books/מודע-לבני-בינה-oder-kinderfreund-und-lehrer-1"
-    Then  I should see the text of fields under the tab with name "References and bibliography" and ID "references-and-bibliography"
-
-
-  @api
-  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given the following book data
-      | field                       | text                                                                                                                |
-      | National Library of Israel  | 13901 V 25                                                                                                          |
-      | Bar-Ilan University Library | B43 בן-זאב.או תקס"ז                                                                                                   |
-      | Tel-Aviv University Library | CR 492.42 בן-ז                                                                                                     |
-      | General notes               | בבר אילן ראיתי חלק א' וב' בנפרד, וכרך משותף לשלושת החלקים. בלאומית יש שלושה כרכים נפרדים. כלומר, הספר יצא במקור בשלושה כרכים נפרדים. |
-    When  I visit "books/אוצר-השרשים-א"
-    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
-
-  @api
-  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given the following book data
-      | field                         | text                                                                                                                |
-      | Berlin State Library          | Ez 6310<a>                                                                                                         |
-      | Frankfurt University Library  | urn:nbn:de:hebis:30-180012126007                                                                                                   |
-      | Link to digital book          | http://sammlungen.ub.uni-frankfurt.de/urn/urn:nbn:de:hebis:30-180012126007                                                                                                     |
-    When  I visit "books/akten-stücke-die-reform-der-jüdischen-kolonieen-den-preußischen-staaten-betreffend"
-    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
-
-  @api
-  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given the following book data
-      | field                         | text                                                                                                                |
-      | Berlin State Library          | Ez 6310<a>                                                                                                         |
-    When  I visit "books/akten-stücke-die-reform-der-jüdischen-kolonieen-den-preußischen-staaten-betreffend"
-    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
-
-  @api
-  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given the following book data
-      | field                   | text                                                                                                                |
-      | Book is not available?  | Yes                                                                                                         |
-    When  I visit "books/beweis-dass-heutzutage-den-k-k-staaten-die-juden-zu-kriegsdienst-ebensowohl-verpflichtet-sind"
-    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
-
-  @api
-  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given the following book data
-      | field            | text                                                                                                                |
-      | Other libraries  | UB Göttingen: 8 H E ECCL 934/21:1                                                                                                         |
-    When  I visit "books/gesammelte-actenstücke-und-öffentliche-verhandlungen-über-die-verbesserung-der-juden"
-    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
-
-  @api
-  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given the following book data
       | field                                        | text                     |
       | Are there personal addresses                 | No                       |
       | Are there rabbinical approbations            | No                       |
@@ -443,6 +379,93 @@ Feature: Book page
   @api
   Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
     Given the following book data
+      | field                                               | text                       |
+      | Partial publication of the book in other texts      | ללמד בני ישראל              |
+    When  I visit "books/בית-הספר-א"
+    Then  I should see the text of fields under the tab with name "Target audience" and ID "target-audience"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                       | text                                                                                                                          |
+      | National Library of Israel  | 13901 V 25                                                                                                                    |
+      | Bar-Ilan University Library | B43 בן-זאב.או תקס"ז                                                                                                            |
+      | Tel-Aviv University Library | CR 492.42 בן-ז                                                                                                                 |
+      | General notes               | בבר אילן ראיתי חלק א' וב' בנפרד, וכרך משותף לשלושת החלקים. בלאומית יש שלושה כרכים נפרדים. כלומר, הספר יצא במקור בשלושה כרכים נפרדים. |
+    When  I visit "books/אוצר-השרשים-א"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                         | text                                                                                       |
+      | Berlin State Library          | Ez 6310<a>                                                                                 |
+      | Frankfurt University Library  | urn:nbn:de:hebis:30-180012126007                                                           |
+      | Link to digital book          | http://sammlungen.ub.uni-frankfurt.de/urn/urn:nbn:de:hebis:30-180012126007                 |
+    When  I visit "books/akten-stücke-die-reform-der-jüdischen-kolonieen-den-preußischen-staaten-betreffend"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                         | text                              |
+      | The New York Public Library   | 31225 MF                          |
+    When  I visit "books/אמרי-שפר"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                         | text                              |
+      | British Library               | 58JY6                             |
+    When  I visit "books/בית-הספר-ב"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field            | text                                           |
+      | Other libraries  | UB Göttingen: 8 H E ECCL 934/21:1              |
+    When  I visit "books/gesammelte-actenstücke-und-öffentliche-verhandlungen-über-die-verbesserung-der-juden"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                   | text                                    |
+      | Book is not available?  | Yes                                     |
+    When  I visit "books/beweis-dass-heutzutage-den-k-k-staaten-die-juden-zu-kriegsdienst-ebensowohl-verpflichtet-sind"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                       | text                                    |
+      | Notes on book availability  | אך לאחר הקדמת המחבר                    |
+    When  I visit "books/שירי-תפארת-א"
+    Then  I should see the text of fields under the tab with name "Catalog numbers" and ID "catalog-numbers"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                  | text                                                                                                                               |
+      | Copy of book used      | UB Rostock: CIc-377                                                                                                                |
+      | Studies about the book | Wohlwill, Immanuel: Über den Zustand der Jacobsonsschule in Seesen während der letzten drei Jahre, in:AZJ, Jg. 1847, Heft 1, S. 13 |
+      | Notes                  | Angaben nach erster Sichtung in UB Rostock                                                                                         |
+    When  I visit "books/zaphnath-paneach-oder-sammlung-moralischer-lehren-sprüche-erzählungen-und-gedichte-aus-dem"
+    Then  I should see the text of fields under the tab with name "References and bibliography" and ID "references-and-bibliography"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
+      | field                  | text                                                                                                                               |
+      | Secondary sources used by researchers      | פיליפסון, ביוגרפיות.                                                                                                                |
+    When  I visit "books/מודע-לבני-בינה-oder-kinderfreund-und-lehrer-1"
+    Then  I should see the text of fields under the tab with name "References and bibliography" and ID "references-and-bibliography"
+
+  @api
+  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
+    Given the following book data
       | field                     | text                               |
       | Name                      | Wohl, Levi - וול, יהודה ליב בן צבי הירש |
       | Role(s) in book creation  | Translator                         |
@@ -458,13 +481,6 @@ Feature: Book page
     When  I visit "books/מודע-לבני-בינה-oder-kinderfreund-und-lehrer-1"
     Then  I should see the text of fields under the tab with name "Book producers" and ID "book-producers"
 
-  @api
-  Scenario: Verify tabs & fields content on a book pageVerify tabs content on a book page
-    Given the following book data
-      | field                                               | text                       |
-      | Partial publication of the book in other texts      | ללמד בני ישראל              |
-    When  I visit "books/בית-הספר-א"
-    Then  I should see the text of fields under the tab with name "Target audience" and ID "target-audience"
 
   @api
   Scenario Outline: Visit a books page
