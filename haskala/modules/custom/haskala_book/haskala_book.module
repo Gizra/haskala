@@ -227,13 +227,15 @@ function haskala_book_get_editions($book_nid) {
 /**
  *  Translations for Editions tab.
  *
- *  @param $book_nid
+ * @param $book_nid
  *   The book node ID.
+ * @param $bundle
+ *   The sub-nodes bundle.
  *
- *  @return Multi translations fields .
+ * @return \Multi translations fields .
  */
-function haskala_book_get_translations($book_nid) {
-  if (!$nodes = haskala_book_get_reference_nodes($book_nid, 'translation')) {
+function haskala_book_get_sub_nodes($book_nid, $bundle) {
+  if (!$nodes = haskala_book_get_reference_nodes($book_nid, $bundle)) {
     return;
   }
 

@@ -50,8 +50,7 @@ projects[link][subdir] = "contrib"
 projects[link][version] = "1.3"
 
 projects[logs_http][subdir] = "contrib"
-projects[logs_http][version] = "1.x-dev"
-; Using dev due to no release available.
+projects[logs_http][version] = "1.0"
 
 projects[metatag][subdir] = "contrib"
 projects[metatag][version] = "1.4"
@@ -78,7 +77,7 @@ projects[strongarm][subdir] = "contrib"
 projects[strongarm][version] = "2.0"
 
 projects[token][subdir] = "contrib"
-projects[token][version] = "1.5"
+projects[token][version] = "1.6"
 
 projects[views][subdir] = "contrib"
 projects[views][version] = "3.10"
