@@ -139,14 +139,6 @@ class HaskalaBooksMigrate extends HaskalaMigration {
     array('field_book_structure_notes', 'Notes on book structure'),
 
 
-    // Prefaces
-//    array('field_preface_number', 'Number of preface'),
-//    array('field_preface_writer', 'Writer of preface'),
-//    array('field_role', 'Role in book production'),
-//    array('field_preface_title', 'Preface title'),
-//    array('field_preface_notes', 'Notes on preface'),
-
-
     // Persons mentioned in the book
     array('field_personal_address', 'Are there personal addresses'),
     array('field_personal_addresse_notes', 'Notes on personal addresses'),
@@ -392,20 +384,6 @@ class HaskalaBooksMigrate extends HaskalaMigration {
       'field_fonts',
     );
     $this->addTermReferenceMappings($term_references);
-
-
-    // Prefaces
-//    $simple_mappings = array(
-//      'field_preface_number',
-//      'field_preface_title',
-//      'field_preface_notes',
-//      'field_preface_writer',
-//    );
-//    $this->addSimpleMappings($simple_mappings);
-//    $term_references = array(
-//      'field_role',
-//    );
-//    $this->addTermReferenceMappings($term_references);
 
 
     // Persons mentioned in book
