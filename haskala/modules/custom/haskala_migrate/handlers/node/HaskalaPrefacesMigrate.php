@@ -18,7 +18,7 @@ class HaskalaPrefacesMigrate extends HaskalaMigration {
 
   public $dependencies = array(
     // Dependent on books, but books are never marked as finished.
-    'HaskalaProductionsMigratePrimary',
+    'HaskalaProductionsMigrate',
   );
 
   public function __construct($arguments) {
