@@ -20,7 +20,7 @@ function haskala_terms_term_nodes_list_content_type_render($subtype, $conf, $arg
   $block->content = array();
 
   $term = $context->data;
-  $nids = taxonomy_select_nodes($term->tid, TRUE, variable_get('haskala_nodes_on_term', 15));
+  $nids = taxonomy_select_nodes($term->tid, FALSE);
   if (!$nids) {
     $block->content['no_content'] = array(
       '#prefix' => '<p>',
@@ -43,14 +43,18 @@ function haskala_terms_term_nodes_list_content_type_render($subtype, $conf, $arg
       $nids[] = $node->nid;
     }
   }
-
-  $block->content = node_view_multiple(node_load_multiple($nids));
-  $block->content['pager'] = array(
-    '#theme' => 'pager',
-    '#weight' => 5,
-  );
+  $nodes = node_load_multiple($nids);
+  uasort($nodes, '_haskala_terms_sort_nodes');
+  $block->content = node_view_multiple($nodes);
 
   return $block;
+}
+
+/**
+ * Sorting callback; Sort nodes by title.
+ */
+function _haskala_terms_sort_nodes($node1, $node2) {
+  return $node1->title > $node2->title;
 }
 
 /**
