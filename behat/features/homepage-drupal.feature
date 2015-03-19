@@ -11,7 +11,7 @@ Feature: HomePage Drupal
     And   I should see the link "<link>"
 
   Examples:
-    | on the link        | link |
-    | Books          | A    |
-    | Morals         | next |
-    | Digital Books  | O    |
+    | on the link    | link         |
+    | Books          | A            |
+    | Morals         | Der Prediger |
+    | Digital Books  | O            |

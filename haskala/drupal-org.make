@@ -12,7 +12,7 @@ projects[ckeditor][subdir] = "contrib"
 projects[ckeditor][version] = "1.16"
 
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.6"
+projects[ctools][version] = "1.7"
 
 projects[diff][subdir] = "contrib"
 projects[diff][version] = "3.2"
@@ -25,7 +25,7 @@ projects[entityreference][subdir] = "contrib"
 projects[entityreference][version] = "1.1"
 
 projects[features][subdir] = "contrib"
-projects[features][version] = "2.3"
+projects[features][version] = "2.4"
 
 projects[field_group][subdir] = "contrib"
 projects[field_group][version] = "1.4"
@@ -50,7 +50,7 @@ projects[link][subdir] = "contrib"
 projects[link][version] = "1.3"
 
 projects[logs_http][subdir] = "contrib"
-projects[logs_http][version] = "1.0"
+projects[logs_http][version] = "1.1"
 
 projects[metatag][subdir] = "contrib"
 projects[metatag][version] = "1.4"
