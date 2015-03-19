@@ -20,7 +20,7 @@ function haskala_terms_term_nodes_list_content_type_render($subtype, $conf, $arg
   $block->content = array();
 
   $term = $context->data;
-  $nids = taxonomy_select_nodes($term->tid, FALSE);
+  $nids = haskala_terms_select_nodes($term->tid);
   if (!$nids) {
     $block->content['no_content'] = array(
       '#prefix' => '<p>',
@@ -31,30 +31,13 @@ function haskala_terms_term_nodes_list_content_type_render($subtype, $conf, $arg
     return $block;
   }
 
-  $nodes = node_load_multiple($nids);
-  // Rebuild the nids list, to convert book sub-nodes to book nodes.
-  $nids = array();
-  foreach ($nodes as &$node) {
-    $wrapper = entity_metadata_wrapper('node', $node);
-    if (in_array($node->type, array('edition', 'production', 'mention', 'translation', 'preface'))) {
-      $nids[] = $wrapper->field_book->getIdentifier();
-    }
-    else {
-      $nids[] = $node->nid;
-    }
-  }
-  $nodes = node_load_multiple($nids);
-  uasort($nodes, '_haskala_terms_sort_nodes');
-  $block->content = node_view_multiple($nodes);
+  $block->content = node_view_multiple(node_load_multiple($nids));
+  $block->content['pager'] = array(
+    '#theme' => 'pager',
+    '#weight' => 5,
+  );
 
   return $block;
-}
-
-/**
- * Sorting callback; Sort nodes by title.
- */
-function _haskala_terms_sort_nodes($node1, $node2) {
-  return $node1->title > $node2->title;
 }
 
 /**
