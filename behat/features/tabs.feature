@@ -491,7 +491,6 @@ Feature: Book page
 
   Examples:
     | link              |
-    | Author            |
     | monolingual       |
     | Dyhernfurth       |
     | Religious beliefs |
