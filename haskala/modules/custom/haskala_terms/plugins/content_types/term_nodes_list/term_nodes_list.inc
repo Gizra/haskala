@@ -41,6 +41,13 @@ function haskala_terms_term_nodes_list_content_type_render($subtype, $conf, $arg
 }
 
 /**
+ * Sorting callback; Sort nodes by title.
+ */
+function _haskala_terms_sort_nodes($node1, $node2) {
+  return $node1->title > $node2->title;
+}
+
+/**
  * Plugin settings form.
  */
 function haskala_terms_term_nodes_list_content_type_edit_form($form, &$form_state) {

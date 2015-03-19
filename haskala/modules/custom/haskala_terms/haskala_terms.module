@@ -76,7 +76,7 @@ function haskala_terms_views_pre_render(&$view) {
 
   // Track which nodes are already shown for which terms, to avoid duplicates.
   $terms_nodes = array();
-  foreach ($view->result as &$result) {
+  foreach ($view->result as $delta => &$result) {
     if (!$nid = $result->node_taxonomy_index_nid) {
       continue;
     }
@@ -93,13 +93,50 @@ function haskala_terms_views_pre_render(&$view) {
 
     // Remove duplicate nodes.
     if (!empty($terms_nodes[$result->tid][$nid])) {
-      unset($result->node_taxonomy_index_title);
-      unset($result->node_taxonomy_index_nid);
+      unset($view->result[$delta]);
     }
-
-    // Mark this node as displayed on this term.
-    $terms_nodes[$result->tid][$nid] = TRUE;
+    else {
+      // Mark this node as displayed on this term.
+      $terms_nodes[$result->tid][$nid] = TRUE;
+    }
   }
+}
+
+/**
+ * Fetch book and person nodes related to a term.
+ * Based on taxonomy_select_nodes().
+ *
+ * @param $tid
+ *   The term ID.
+ *
+ * @return array
+ *   An array of nids matching the query.
+ */
+function haskala_terms_select_nodes($tid) {
+  if (!variable_get('taxonomy_maintain_index_table', TRUE)) {
+    return array();
+  }
+
+  $query = db_select('taxonomy_index', 't');
+  $query->innerJoin('node', 'n', 'n.nid = t.nid');
+  $query->addTag('node_access');
+  $query->condition('tid', $tid);
+  $query->condition('n.type', array('book', 'person'), 'IN');
+
+  $count_query = clone $query;
+  $count_query->addExpression('COUNT(t.nid)');
+
+  $query = $query->extend('PagerDefault');
+  $query = $query->limit(variable_get('haskala_nodes_on_term', 15));
+
+  $query->setCountQuery($count_query);
+
+  $query->addField('t', 'nid');
+  $query->addField('t', 'tid');
+
+  $query->orderBy('n.title');
+
+  return $query->execute()->fetchCol();
 }
 
 /**
