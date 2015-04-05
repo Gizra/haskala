@@ -45,17 +45,16 @@ function haskala_terms_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-f8a60875-f68b-4d39-ba85-ca528fcb3027';
+    $pane->pid = 'new-2c21ef0d-ed79-48be-b699-f4818515a87f';
     $pane->panel = 'middle';
-    $pane->type = 'term_nodes_list';
-    $pane->subtype = 'term_nodes_list';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'city_books-panel_pane_city_books';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'context' => 'argument_term_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
+      'context' => array(
+        0 => 'argument_term_1',
+      ),
     );
     $pane->cache = array();
     $pane->style = array(
@@ -65,9 +64,9 @@ function haskala_terms_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'f8a60875-f68b-4d39-ba85-ca528fcb3027';
-    $display->content['new-f8a60875-f68b-4d39-ba85-ca528fcb3027'] = $pane;
-    $display->panels['middle'][0] = 'new-f8a60875-f68b-4d39-ba85-ca528fcb3027';
+    $pane->uuid = '2c21ef0d-ed79-48be-b699-f4818515a87f';
+    $display->content['new-2c21ef0d-ed79-48be-b699-f4818515a87f'] = $pane;
+    $display->panels['middle'][0] = 'new-2c21ef0d-ed79-48be-b699-f4818515a87f';
     $pane = new stdClass();
     $pane->pid = 'new-8c2d55cc-f22d-42e4-93fb-3a6f1c36cf2c';
     $pane->panel = 'middle';
@@ -218,10 +217,10 @@ function haskala_terms_default_page_manager_pages() {
     $display->content['new-2ce3c491-fb40-4a1b-9abb-9cf429aa6d46'] = $pane;
     $display->panels['middle'][1] = 'new-2ce3c491-fb40-4a1b-9abb-9cf429aa6d46';
     $pane = new stdClass();
-    $pane->pid = 'new-30e7542e-9ea1-4baa-95ab-b81be54daa04';
+    $pane->pid = 'new-94320e81-a9fb-40b7-b4d2-d98c9ed07ecf';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'cities_map-panel_pane_1';
+    $pane->subtype = 'city_books-panel_pane_map';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -237,9 +236,9 @@ function haskala_terms_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $pane->uuid = '30e7542e-9ea1-4baa-95ab-b81be54daa04';
-    $display->content['new-30e7542e-9ea1-4baa-95ab-b81be54daa04'] = $pane;
-    $display->panels['middle'][2] = 'new-30e7542e-9ea1-4baa-95ab-b81be54daa04';
+    $pane->uuid = '94320e81-a9fb-40b7-b4d2-d98c9ed07ecf';
+    $display->content['new-94320e81-a9fb-40b7-b4d2-d98c9ed07ecf'] = $pane;
+    $display->panels['middle'][2] = 'new-94320e81-a9fb-40b7-b4d2-d98c9ed07ecf';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

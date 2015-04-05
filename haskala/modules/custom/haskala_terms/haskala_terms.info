@@ -1,6 +1,7 @@
 name = Haskala Terms
 core = 7.x
 package = Haskala
+dependencies[] = entity
 dependencies[] = features
 dependencies[] = geolocation
 dependencies[] = ip_geoloc
@@ -21,5 +22,6 @@ features[taxonomy][] = cities
 features[taxonomy][] = language_counts
 features[taxonomy][] = models
 features[views_view][] = cities_map
+features[views_view][] = city_books
 features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][page_manager] = page_manager
