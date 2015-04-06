@@ -129,6 +129,12 @@ function haskala_book_production_tab_fields(&$tabs_fields, $book_nid) {
   $producers = array();
   foreach($productions_nodes as $production_node) {
     $node_view = node_view($production_node);
+
+    // Replace the link to the anonymous author with plain text.
+    if (!empty($node_view['field_producer']['#items'][0]['entity']->title) && $node_view['field_producer']['#items'][0]['entity']->title == 'אנונימי') {
+      $node_view['field_producer'][0]['#markup'] = 'אנונימי';
+    }
+
     $producers[] = array(render($node_view));
   }
   // TODO: use node_view_multiple() instead.
