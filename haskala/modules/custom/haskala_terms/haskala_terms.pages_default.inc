@@ -13,13 +13,76 @@ function haskala_terms_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
+  $handler->name = 'term_view__general_term_page';
+  $handler->task = 'term_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 1;
+  $handler->conf = array(
+    'title' => 'General term page',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'general_term_page',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'fdcf0a54-932d-44ae-8a88-369d4b74e53e';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-5d5b8a72-e5fb-469d-a23c-4cb71b9b8e23';
+    $pane->panel = 'middle';
+    $pane->type = 'term_nodes_list';
+    $pane->subtype = 'term_nodes_list';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_term_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '5d5b8a72-e5fb-469d-a23c-4cb71b9b8e23';
+    $display->content['new-5d5b8a72-e5fb-469d-a23c-4cb71b9b8e23'] = $pane;
+    $display->panels['middle'][0] = 'new-5d5b8a72-e5fb-469d-a23c-4cb71b9b8e23';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-5d5b8a72-e5fb-469d-a23c-4cb71b9b8e23';
+  $handler->conf['display'] = $display;
+  $export['term_view__general_term_page'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
   $handler->name = 'term_view__term_page';
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Term page',
+    'title' => 'City page',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -29,6 +92,21 @@ function haskala_terms_default_page_manager_handlers() {
     'contexts' => array(),
     'relationships' => array(),
     'name' => 'term_page',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'term_vocabulary',
+          'settings' => array(
+            'machine_name' => array(
+              'cities' => 'cities',
+            ),
+          ),
+          'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'onecol';
