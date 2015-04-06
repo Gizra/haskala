@@ -13,13 +13,13 @@ function haskala_terms_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'term_view__term_page';
+  $handler->name = 'term_view__general_term_page';
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 0;
+  $handler->weight = 1;
   $handler->conf = array(
-    'title' => 'Term page',
+    'title' => 'General term page',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -28,7 +28,7 @@ function haskala_terms_default_page_manager_handlers() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
-    'name' => 'term_page',
+    'name' => 'general_term_page',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -41,11 +41,11 @@ function haskala_terms_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = '';
-  $display->uuid = '5a3a7cc3-6f8d-4866-8d43-184b5fd20c73';
+  $display->uuid = 'fdcf0a54-932d-44ae-8a88-369d4b74e53e';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-f8a60875-f68b-4d39-ba85-ca528fcb3027';
+    $pane->pid = 'new-5d5b8a72-e5fb-469d-a23c-4cb71b9b8e23';
     $pane->panel = 'middle';
     $pane->type = 'term_nodes_list';
     $pane->subtype = 'term_nodes_list';
@@ -65,9 +65,86 @@ function haskala_terms_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'f8a60875-f68b-4d39-ba85-ca528fcb3027';
-    $display->content['new-f8a60875-f68b-4d39-ba85-ca528fcb3027'] = $pane;
-    $display->panels['middle'][0] = 'new-f8a60875-f68b-4d39-ba85-ca528fcb3027';
+    $pane->uuid = '5d5b8a72-e5fb-469d-a23c-4cb71b9b8e23';
+    $display->content['new-5d5b8a72-e5fb-469d-a23c-4cb71b9b8e23'] = $pane;
+    $display->panels['middle'][0] = 'new-5d5b8a72-e5fb-469d-a23c-4cb71b9b8e23';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-5d5b8a72-e5fb-469d-a23c-4cb71b9b8e23';
+  $handler->conf['display'] = $display;
+  $export['term_view__general_term_page'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'term_view__term_page';
+  $handler->task = 'term_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'City page',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'term_page',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'term_vocabulary',
+          'settings' => array(
+            'machine_name' => array(
+              'cities' => 'cities',
+            ),
+          ),
+          'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '5a3a7cc3-6f8d-4866-8d43-184b5fd20c73';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-2c21ef0d-ed79-48be-b699-f4818515a87f';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'city_books-panel_pane_city_books';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'argument_term_1',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '2c21ef0d-ed79-48be-b699-f4818515a87f';
+    $display->content['new-2c21ef0d-ed79-48be-b699-f4818515a87f'] = $pane;
+    $display->panels['middle'][0] = 'new-2c21ef0d-ed79-48be-b699-f4818515a87f';
     $pane = new stdClass();
     $pane->pid = 'new-8c2d55cc-f22d-42e4-93fb-3a6f1c36cf2c';
     $pane->panel = 'middle';
@@ -218,10 +295,10 @@ function haskala_terms_default_page_manager_pages() {
     $display->content['new-2ce3c491-fb40-4a1b-9abb-9cf429aa6d46'] = $pane;
     $display->panels['middle'][1] = 'new-2ce3c491-fb40-4a1b-9abb-9cf429aa6d46';
     $pane = new stdClass();
-    $pane->pid = 'new-30e7542e-9ea1-4baa-95ab-b81be54daa04';
+    $pane->pid = 'new-94320e81-a9fb-40b7-b4d2-d98c9ed07ecf';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'cities_map-panel_pane_1';
+    $pane->subtype = 'city_books-panel_pane_map';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -237,9 +314,9 @@ function haskala_terms_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $pane->uuid = '30e7542e-9ea1-4baa-95ab-b81be54daa04';
-    $display->content['new-30e7542e-9ea1-4baa-95ab-b81be54daa04'] = $pane;
-    $display->panels['middle'][2] = 'new-30e7542e-9ea1-4baa-95ab-b81be54daa04';
+    $pane->uuid = '94320e81-a9fb-40b7-b4d2-d98c9ed07ecf';
+    $display->content['new-94320e81-a9fb-40b7-b4d2-d98c9ed07ecf'] = $pane;
+    $display->panels['middle'][2] = 'new-94320e81-a9fb-40b7-b4d2-d98c9ed07ecf';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
