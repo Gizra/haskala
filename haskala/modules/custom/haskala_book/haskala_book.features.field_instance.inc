@@ -1772,14 +1772,9 @@ function haskala_book_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 2,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_decimal',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
         'weight' => 79,
       ),
       'teaser' => array(
@@ -1794,17 +1789,16 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Height of book, in cm',
     'required' => 0,
     'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
       'weight' => 81,
     ),
   );
@@ -6813,14 +6807,9 @@ function haskala_book_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 2,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_decimal',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
         'weight' => 80,
       ),
       'teaser' => array(
@@ -6835,17 +6824,16 @@ function haskala_book_field_default_field_instances() {
     'label' => 'Width of book, in cm',
     'required' => 0,
     'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
       'weight' => 82,
     ),
   );

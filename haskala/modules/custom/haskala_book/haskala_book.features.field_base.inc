@@ -1058,14 +1058,18 @@ function haskala_book_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_height',
-    'indexes' => array(),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
     'locked' => 0,
-    'module' => 'number',
+    'module' => 'text',
     'settings' => array(
-      'decimal_separator' => '.',
+      'max_length' => 255,
     ),
     'translatable' => 0,
-    'type' => 'number_float',
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_huji_library_id'
@@ -3815,7 +3819,7 @@ function haskala_book_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
-      'max_length' => 255,
+      'max_length' => 2047,
     ),
     'translatable' => 0,
     'type' => 'text',
@@ -4085,14 +4089,18 @@ function haskala_book_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_width',
-    'indexes' => array(),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
     'locked' => 0,
-    'module' => 'number',
+    'module' => 'text',
     'settings' => array(
-      'decimal_separator' => '.',
+      'max_length' => 255,
     ),
     'translatable' => 0,
-    'type' => 'number_float',
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_writer_of_preface'
