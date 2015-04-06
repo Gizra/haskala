@@ -82,7 +82,7 @@ function haskala_terms_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Term page',
+    'title' => 'City page',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -92,6 +92,21 @@ function haskala_terms_default_page_manager_handlers() {
     'contexts' => array(),
     'relationships' => array(),
     'name' => 'term_page',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'term_vocabulary',
+          'settings' => array(
+            'machine_name' => array(
+              'cities' => 'cities',
+            ),
+          ),
+          'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'onecol';
