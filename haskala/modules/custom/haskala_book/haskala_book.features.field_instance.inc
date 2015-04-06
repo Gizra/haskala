@@ -1775,7 +1775,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 79,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1799,7 +1799,7 @@ function haskala_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 81,
     ),
   );
 
@@ -6810,7 +6810,7 @@ function haskala_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 80,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6834,7 +6834,7 @@ function haskala_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 82,
     ),
   );
 
