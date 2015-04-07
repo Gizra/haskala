@@ -70,7 +70,6 @@ function haskala_search_default_search_api_index() {
         "field_mentionee_description" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_name_in_book" : { "type" : "text" },
         "field_name_of_series" : { "type" : "integer", "entity_type" : "taxonomy_term" },
-        "field_new_edition_general_notes" : { "type" : "text" },
         "field_new_edition_type_elsewhere" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_new_edition_type_in_text" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_new_york_library_id" : { "type" : "text" },
