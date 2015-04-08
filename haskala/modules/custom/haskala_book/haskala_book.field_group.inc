@@ -137,10 +137,9 @@ function haskala_book_field_group_info() {
       15 => 'field_occasional_words_languages',
       16 => 'field_pages_number',
       17 => 'field_preface',
-      18 => 'field_structure_preface_notes',
-      19 => 'field_table_of_conten',
-      20 => 'field_typography',
-      21 => 'field_width',
+      18 => 'field_table_of_conten',
+      19 => 'field_typography',
+      20 => 'field_width',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
