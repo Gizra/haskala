@@ -42,9 +42,15 @@
         .field {
           line-height: 2.42;
           letter-spacing: 0.4px;
+          margin-top: 10px;
+
+          .field-label {
+            font-weight: bold;
+          }
 
           .field-items {
             font-weight: normal;
+            line-height: 1.5;
           }
         }
       }
