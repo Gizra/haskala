@@ -160,5 +160,12 @@ abstract class HaskalaMigration extends Migration {
         $value = TRUE;
       }
     }
+
+    // Convert wiki bold into html: '''text''' => <strong>text</strong>.
+    foreach ($row as &$value) {
+      if (strpos($value, "'''") !== FALSE) {
+        $value = preg_replace("/'''(.*?)'''/", '<strong>${1}</strong>', $value);
+      }
+    }
   }
 }
