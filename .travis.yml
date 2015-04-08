@@ -8,12 +8,22 @@ mysql:
   username: root
   encoding: utf8
 
+env:
+  global:
+  - secure: "IMZuE8kgR/r793TL0oyQtld/GfgFfRSHZi1nw8QbNOSzVPB3F6RJpwLK3XILuNdaWHwdnIPHm+aOoRqz+fRovmqqbHGDrmWx4g4xYLquBLp/rAksQD6whmBkE6TPnue/UzwligxBr0XzJ7GdmmEorhIo+qFzjr92Xwp86ME60d4="
+  - secure: "YJi/Abc+p1hMtGWPRnfrRDhfNIuxXRACQ7QxWHS9uHrYvdvkiqsxChcJuOZZ6Ga4At5G88nMAzdzF3xDqzF0FRI0rs6D5jLSudvMoC4rAs/u+ghN8feBBHi6yPqebfwjEPCl8HljeWrFUTf8EJBJLYxBCSuz9TjO2z7yuz2roSs="
+  - secure: "Cz5WUtEnosATTanZ5Qqft5kbJSvM374ig6uOJjj35N0B1acHUJoXBYcyvc7gHjIf+iDU6xHxgyMsDwTXyVD/eQsIpzpThDRxHv92w/w0gKmtYSnn4D+ZZ9N5l3uP6dtyChXLqf/k95R0O2Cg/AdtTHv9ipI+LW+trRGgt0Z5fas="
+
 before_install:
   - sudo apt-get update > /dev/null
   - composer self-update
 
-  # Install Bower, Grunt and CasperJs.
-  - npm install -g bower grunt-cli casperjs
+  # WebDriverCss required installation.
+  - sudo apt-get install graphicsmagick libcairo2-dev
+  - export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
+
+  # Install Bower, Grunt, CasperJs and NgRok.
+  - npm install -g bower grunt-cli casperjs ngrok
 
   # Install Sass and Compass for Grunt to work.
   - gem install compass
@@ -50,6 +60,11 @@ before_script:
   - npm install
   - cd ..
 
+  # Install WebDriverCss
+  - cd webdrivercss
+  - npm install
+  - cd ..
+
   # Install Behat
   - cd behat
   - cp aliases.drushrc.php ~/.drush/
@@ -68,10 +83,13 @@ before_script:
   - drush @site runserver 127.0.0.1:8080 &
   - until netstat -an 2>/dev/null | grep '8080.*LISTEN'; do true; done
 
+  # Run ngrok
+  - ngrok -authtoken=$NGROK_AUTHTOKEN -log=stdout -subdomain=$TRAVIS_COMMIT 9000 > ~/ngrok.log 2>&1 &
+  - until $(curl --output /dev/null --silent --head --fail http://$TRAVIS_COMMIT.ngrok.com); do sleep 1; echo '.'; done
+
   # Run selenium.
   - wget http://selenium-release.storage.googleapis.com/2.40/selenium-server-standalone-2.40.0.jar
   - java -jar selenium-server-standalone-2.40.0.jar -p 4444 &
-  - sleep 5
 
 script:
 
@@ -84,10 +102,14 @@ script:
   # drupal
   - casperjs test homepage-drupal.js
 
-#  - bash $TRAVIS_BUILD_DIR/imgur ./screenshots/drupal-homepage-footer_7.png
-
   # Upload failed images to imgur
   - bash scan_phantomcss_fails.sh > ~/phantomcss.log 2>&1 &
+
+  # Run WebDriverCss tests
+  - cd ../webdrivercss
+  - npm install
+  - node wdcss.js
+  - bash upload_images.sh
 
   # Run phantomJs.
   - phantomjs --webdriver=4444 > ~/phantomjs.log 2>&1 &
