@@ -52,9 +52,9 @@ function haskala_terms_views_default_views() {
   $handler->display->display_options['style_options']['map_options'] = '{
 "mapTypeId":"roadmap", 
 "disableDefaultUI":true, 
-"zoom":4, 
-"zoomControl":true, 
-"scaleControl":true,
+"zoom":6, 
+"zoomControl":false, 
+"scaleControl":false,
 "styles":[{"featureType":"all", "stylers":[{"saturation":-80, "lightness": 80}] }]
 }
  ';
@@ -253,9 +253,11 @@ function haskala_terms_views_default_views() {
   $handler->display->display_options['style_options']['map_options'] = '{
 "mapTypeId":"roadmap", 
 "disableDefaultUI":true, 
-"zoom":4, 
+"zoom":5, 
+"minZoom": 4,
+"maxZoom": 7,
 "zoomControl":true, 
-"scaleControl":true,
+"scaleControl":false,
 "styles":[{"featureType":"all", "stylers":[{"saturation":-80, "lightness": 80}] }]
 }
  ';
@@ -269,6 +271,24 @@ function haskala_terms_views_default_views() {
   $handler->display->display_options['relationships']['field_publication_place_tid']['field'] = 'field_publication_place_tid';
   $handler->display->display_options['relationships']['field_publication_place_tid']['label'] = 'field_publication_place';
   $handler->display->display_options['relationships']['field_publication_place_tid']['required'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Geolocation */
+  $handler->display->display_options['fields']['field_geolocation']['id'] = 'field_geolocation';
+  $handler->display->display_options['fields']['field_geolocation']['table'] = 'field_data_field_geolocation';
+  $handler->display->display_options['fields']['field_geolocation']['field'] = 'field_geolocation';
+  $handler->display->display_options['fields']['field_geolocation']['relationship'] = 'field_publication_place_tid';
+  $handler->display->display_options['fields']['field_geolocation']['label'] = '';
+  $handler->display->display_options['fields']['field_geolocation']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_geolocation']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_geolocation']['click_sort_column'] = 'lat';
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['relationship'] = 'field_publication_place_tid';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
   $handler->display->display_options['argument_input'] = array(
     'field_publication_place_tid' => array(
       'type' => 'context',
